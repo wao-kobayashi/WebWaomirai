@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+$section-maxwidth: 1200px;
+$section-middlewidth: 800px;
+$cl-bg-eventlp-2025feb: #fff8e0;
+$cl-btn-cta: #f88c6a;
+
+/* width */
+
+@mixin section-maxwidth {
+  max-width: 1200px;
+  padding: 0 30px;
+  @include responsive-style(768px) {
+    padding: 0 20px;
+  }
+}
+
+@mixin section-widewidth {
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+@mixin section-middlewidth {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* fontsize */
+
+@mixin font-size-s {
+  font-size: 12px;
+  @include responsive-style(768px) {
+    font-size: 11.5px;
+  }
+}
+
+@mixin font-size-m {
+  font-size: 17px;
+  @include responsive-style(768px) {
+    font-size: 16px;
+  }
+}
+
+@mixin font-size-ml {
+  font-size: 22px;
+  @include responsive-style(768px) {
+    font-size: 20px;
+  }
+}
+
+@mixin font-size-l {
+  font-size: 27px;
+  @include responsive-style(768px) {
+    font-size: 24px;
+  }
+}
+
+@mixin font-size-xl {
+  font-size: 34px;
+  @include responsive-style(768px) {
+    font-size: 30px;
+  }
+}
