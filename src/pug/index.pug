@@ -72,117 +72,15 @@ html(lang="jp")
 
 
       //- モジュール化されたリスト出力部分
-    mixin moodleList(environment)
-        h2 
-         |#{environment}
-        ul.moodle-list
-              li
-                | moodleログイン
-                ul
-                  li
-                    a(href=`${environment}/signup/page-moodle-login.html`) ログイン
-                  li
-                    a(href=`${environment}/signup/page-moodle-forgot-password.html`) パスワード紛失
-                  li 
-                    a(href=`${environment}/signup/page-moodle-signup-input.html`) 入力画面
-                  li 
-                    a(href=`${environment}/signup/page-moodle-signup-temporary.html`) 仮登録
-                  li 
-                    a(href=`${environment}/signup/page-moodle-signup-complate.html`) 完了
 
-              li 
-                | ホーム
-                ul
-                  li
-                    a(href=`${environment}/index/page-index-guest.html`) ゲスト
-                  li 
-                    a(href=`${environment}/index/page-index-logged-in-purchased.html`) ログイン済
-                  li 
-                    a(href=`${environment}/index/page-index-logged-in-perchaced.html`) 購入済み
 
-              li
-                | ダッシュボード
-                div(style='font-size:87%; margin:20px 0 0 20px;') 
-                    |何も買っていない
-                ul
-                  li
-                    a(href=`${environment}/dashboard/page-single-none.html`) 何も買っていない
-                div(style='font-size:87%; margin:0 0 0 20px;') 
-                    |１科目購入
-                ul
-                  li 
-                    a(href=`${environment}/dashboard/page-single-ph.html`) １科目購入（哲学）
-                  li 
-                    a(href=`${environment}/dashboard/page-single-sc.html`) １科目購入（科学）
-                  li 
-                    a(href=`${environment}/dashboard/page-single-ec.html`) １科目購入（経済）
-                  li 
-                    a(href=`${environment}/dashboard/page-single-en.html`) １科目購入（英語）
-                  li 
-                    a(href=`${environment}/dashboard/page-single-pr.html`) １科目購入（プログラミング）
-                  li 
-                    a(href=`${environment}/dashboard/page-single-two.html`) １科目購入（2科目パック）
-                  li 
-                    a(href=`${environment}/dashboard/page-single-three.html`) １科目購入（3科目パック）
-                div(style='font-size:87%; margin:20px 0 0 20px;') 
-                    |サブ科目購入
-                ul
-                  li 
-                    a(href=`${environment}/dashboard/page-multi-sc-sc2.html`) 科学＋科学L2
-                  li 
-                    a(href=`${environment}/dashboard/page-multi-sc-sc2-en.html`) 科学＋科学L2＋英語
-                  li 
-                    a(href=`${environment}/dashboard/page-multi-sc-sc2-ec.html`) 科学＋科学L2＋経済
-                  li 
-                    a(href=`${environment}/dashboard/page-multi-two-sc2-ec2.html`) ２科目＋科学L2＋経済L2
-                  li 
-                    a(href=`${environment}/dashboard/page-multi-three-sc3-ec3-ph3.html`) ３科目＋哲学L3＋科学L3＋経済L3
-              li
-                | 科目購入
-                ul
-                  li
-                    a(href=`${environment}/course/page-course-payment.html`) 哲学
-                  li 
-                    a(href=`${environment}/course/page-course-payment-science.html`) 科学
-                  li 
-                    a(href=`${environment}/course/page-course-payment-economiy.html`) 経済
-                  li 
-                    a(href=`${environment}/course/page-course-payment-economiy-l1-226.html`) 経済L1
-              li
-                | 科目詳細
-                ul
-                  li
-                    a(href=`${environment}/course/page-course-member.html`)  科目詳細
-
-              li
-                | 授業参加
-                ul
-                  li
-                    a(href=`${environment}/lesson/page-course-lesson.html`) 授業参加（動画）
-                  li 
-                    a(href=`${environment}/lesson/page-course-lesson-question.html`) 授業参加（動画）＋回答
-
-              li
-                |講座の受講ヘルプページ
-                ul
-                  li
-                    a(href=`${environment}/help/page-howto-attend-lesson.html`)  授業参加（動画）
-              li
-                | 設定関連
-                ul
-                  li
-                    a(href=`${environment}/setting/page-mypage.html`) マイページ
-                  li 
-                    a(href=`${environment}/setting/page-user-setting.html`) ユーザ設定
-    div(style="display:flex;width:calc(70% + 40px); margin:0 auto;display: grid;grid-template-columns: repeat(2, 1fr);grid-template-rows: 1fr;grid-column-gap: 30px;")
-      div(style="padding:10px 20px 30px; box-shadow:0 5px 10px #ccc;")
-        block content
-          +moodleList('moodle-stg')
-      div(style="padding:10px 20px 30px; box-shadow:0 5px 10px #ccc;")
-        block content
-          +moodleList('moodle-lms')
     div(style="width:70%; margin:30px auto 30px; padding:40px 20px 60px; box-shadow:0 5px 10px #ccc;")
       ul(style="margin:10px auto 0;")
+          | ├ イベントLP2月
+          br
+          |<span style="padding:0 0 0 20px;">├</span>
+          a(href="07_event-lp-2025feb/event-lp-2025feb.html") イベントLP2月
+          br
           | ├ 英語LP
           br
           |<span style="padding:0 0 0 20px;">├</span>
