@@ -1,0 +1,52 @@
+
+//- .modal.modal-level-select(style='display:none;')
+//-   .modal-wrapper 
+//-     .modal-wrapper-close 
+//-      .modal-wrapper-close-icon.modal-close
+//-     //- .modal-wrapper-head.level-1
+//-     //-    | 【LEVEL 1】平日コース
+//-     .modal-wrapper-content
+//-         .modal-wrapper-content-text-select
+//-             |レッスンは２つのレベルから
+//-             br
+//-             |お選びいただけます。
+//-             br
+//-             |どちらのレベルで受講しますか？
+//-         .modal-level-select
+//-           a(href="https://lms.waomirai.com/course/view.php?id=130",target='_blank') 
+//-             img(src='https://go.waomirai.com/l/1026513/2024-09-05/h2rdx/1026513/1725523683qZzDSua4/button_level_1.png')
+//-           a(href="https://lms.waomirai.com/enrol/index.php?id=138",target='_blank') 
+//-             img(src='https://go.waomirai.com/l/1026513/2024-09-05/h2rf1/1026513/1725523686ro5BJGyc/button_level_2.png')
+//-         .modal-wrapper-content-close.modal-close 
+//-            |閉じる
+
+//- .bg-modal(style='display:none;')
+
+script. 
+    //ModalOpenの関数
+    //- function modalopen() {
+    //- $('.modal,.bg-modal').show();
+    //- }
+    //ModalOpen
+
+    //- $('.form-link').click(function() {
+    //-     $('.modal-level-select').show();
+    //-     $('.bg-modal').show();
+    //- });
+
+    $('.button-level1-weekdays').click(function() {
+        $('.modal-level1-weekdays').show();
+        $('.bg-modal').show();
+    });
+    $('.button-level1-saturday').click(function() {
+        $('.modal-level1-saturday').show();
+        $('.bg-modal').show();
+    });
+    $('.button-level2-weekdays').click(function() {
+        $('.modal-level2-weekdays').show();
+        $('.bg-modal').show();
+    });
+    $('.modal-close').click(function() {
+        $('.modal,.bg-modal').hide();
+        $('.bg-modal').hide();
+    });
