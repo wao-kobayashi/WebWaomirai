@@ -16,6 +16,7 @@ $cl-merit-yellow: #f8d86a;
 @mixin section-maxwidth {
   max-width: 1200px;
   padding: 0 30px;
+  margin: 0 auto;
   @include responsive-style(768px) {
     padding: 0 20px;
   }
@@ -24,11 +25,13 @@ $cl-merit-yellow: #f8d86a;
 @mixin section-widewidth {
   max-width: 1000px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 @mixin section-middlewidth {
   max-width: 800px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 /* box-shadow */

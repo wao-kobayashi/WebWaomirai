@@ -1,8 +1,10 @@
 
-mixin header
-      header 
-           div 
-              img(src="https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg")
+mixin btn-25feb-cta 
+  .c-btn-cta 
+     a(href='https://page.line.me/640lhpfy').pc-image.open-line-modal 
+        |LINEで簡単申込 >
+     a(href='#').sp-image 
+        |LINEで簡単申込 >
 mixin schedule 
   section.schedule
     h3.mincho.fs-s.fw-500.purpleT.textCenter.mb-30 授業コース
@@ -61,14 +63,20 @@ mixin schedule
     .wp-block-spacer(style="height:16px", aria-hidden="true")
     p.has-text-align-right ★翌週用のトレーニング動画配信日
     p.has-text-align-right ※火・木曜配信と土曜配信は同じ内容です
-mixin intro-queestion 
-  section#intro-queestion 
-    div 
-      |「今晩、何食べる？」
-      br
-      |って英語で3秒以内に
-      br
-      |言えますか？
-mixin formcv
-  //- div#cv-pc
-  //- p|フォーム系
+
+-
+  var events = [{
+    id: 'philosophy',
+    date: '2025年2月7日（金）',
+    time: '18:00-18:45',
+    title: '哲学カフェ',
+    subtitle: '親子で語ってお悩み解決！',
+    description: 'うちの子の "友だち関係"…どうなってる？　気にはなっても話題にしにくいこのテーマ、この際、親子でとことん話し合ってみませんか？\n哲学者の視点を借りて思考を深め、新たな気づきが得られる特別イベント、開催です！',
+    merits: [
+      { title: "本音で話して親子の絆を深める！", text: "互いの本音トークが、親子の気持ちを通わせます。" },
+      { title: "哲学の力で問題解決の糸口を探す！", text: "思考技術としての哲学が体験的に学べます。" },
+      { title: "悩むこといっぱい...の実生活に役立つ内容！", text: "判断に迷う場面で、解決のヒントが得られます。" }
+    ]
+  }]
+
+

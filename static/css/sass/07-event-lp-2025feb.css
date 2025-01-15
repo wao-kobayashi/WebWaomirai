@@ -4188,52 +4188,25 @@ select {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.applyBtn {
-  width: 330px !important;
-  background: #005C3F !important;
-  box-shadow: 0 4px 0 #002118;
-  animation: lp-cta__btn 3s infinite;
-  margin: 0 auto 90px;
+#lp-2025feb {
+  background: #fff8e0;
+}
+#lp-2025feb section {
+  margin: 0 auto 75px;
 }
 
-@keyframes lp-cta__btn {
-  0%, 55%, 65%, 70%, 80% {
-    box-shadow: 0 4px 0 #002118;
-    transform: translateY(0);
-  }
-  60%, 75% {
-    box-shadow: none;
-    transform: translateY(4px);
-  }
-}
-.schedule {
-  max-width: 842px;
-  width: 100%;
-  padding: 40px 0;
-}
-@media screen and (max-width: 768px) {
-  .schedule {
-    padding: 40px 0px;
-    width: calc(100% - 48px);
-    margin: 0 auto;
-  }
+.c-btn-cta {
+  margin: 0 auto;
+  text-align: center;
+  margin: 30px 0 0;
 }
 
-figure {
-  margin: 20px auto 0;
-}
-figure table {
-  font-family: "Yu Gothic", 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
-}
-@media screen and (max-width: 768px) {
-  figure table {
-    font-size: 12px;
-  }
+.c-bg-section-white {
+  background: white;
 }
 
 header {
   height: 60px;
-  background: white;
   width: 100%;
   display: flex;
   align-items: center;
@@ -4245,165 +4218,49 @@ header {
     padding: 0 14px;
   }
 }
-@media screen and (max-width: 768px) {
-  header div {
-    width: 146px;
-  }
-}
-header div img {
+header img {
   height: 24px;
   margin: 0 !important;
 }
 @media screen and (max-width: 768px) {
-  header div img {
+  header img {
     width: 146px;
     height: 22px;
   }
 }
 
-#fv-top-sp {
-  background: white;
+.c-lp-25feb-mv {
+  padding: 30px 0;
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
-#fv-top-sp img {
-  width: 100% !important;
-  margin: 0 0 10px !important;
-}
-
-#fv-top-pc {
-  background: #FFDE53;
-  padding: 0px 40px;
-  margin: 0 0 0px;
-  position: relative;
-}
-#fv-top-pc .fv-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 128px 0 30px;
-}
-@media screen and (max-width: 900px) {
-  #fv-top-pc .fv-left {
-    padding: 100px 0 0px;
-  }
-}
-#fv-top-pc .fv-left .fv-left-button {
-  position: relative;
-  z-index: 2;
-}
-@media screen and (max-width: 900px) {
-  #fv-top-pc .fv-left .fv-left-button {
-    transform: scale(0.9);
-    transform-origin: left center;
-  }
-}
-@media screen and (max-width: 750px) {
-  #fv-top-pc .fv-left .fv-left-button {
-    transform: scale(0.8);
-    transform-origin: left center;
-  }
-}
-#fv-top-pc .fv-left img {
-  width: 363px;
-  margin: 0 0 60px;
-  position: relative;
-  z-index: 2;
-}
-@media screen and (max-width: 900px) {
-  #fv-top-pc .fv-left img {
-    width: 300px;
-  }
-}
-@media screen and (max-width: 750px) {
-  #fv-top-pc .fv-left img {
-    width: 275px;
-  }
-}
-#fv-top-pc .fv-left a {
-  position: relative;
-  z-index: 2;
-}
-#fv-top-pc .fv-left svg {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
-  height: 100%;
-}
-#fv-top-pc .fv-right img {
-  position: absolute;
-  right: 26px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 527px;
-}
-@media screen and (max-width: 900px) {
-  #fv-top-pc .fv-right img {
-    width: 450px;
-  }
-}
-@media screen and (max-width: 750px) {
-  #fv-top-pc .fv-right img {
-    width: 375px;
-  }
-}
-#fv-top-pc .fv-pc-b img {
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#fv-top-pc-b {
-  background: #FFDE53;
-  padding: 0px 0px;
-  margin: 0 0 0px;
-  position: relative;
-}
-#fv-top-pc-b .fv-pc-b img {
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#desktopLayouts {
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1000px;
-}
-
-#intro-queestion div {
-  padding: 0px 0 60px;
-  background: #FFDE53;
+.c-lp-25feb-mv .c-lp-25feb-mv-content {
   text-align: center;
-  font-size: 54px;
-  font-family: "Yu Mincho", 游明朝, YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS Ｐ明朝", "MS PMincho", serif;
+}
+
+section.lp-25feb-info .lp-25feb-info-title {
+  text-align: center;
+}
+section.lp-25feb-info .lp-25feb-info-columns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-  #intro-queestion div {
-    font-size: 32px;
-    padding: 35px 25px;
+  section.lp-25feb-info .lp-25feb-info-columns {
+    padding: 0 20px;
   }
 }
 
-.fixed-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content {
+  max-width: 600px;
+  background: white;
+  margin: 0 auto 60px;
 }
-.fixed-button button {
-  transform: scale(0.8);
-  transform-origin: bottom right;
-  animation: none;
-  margin: 0 !important;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-}
-
-#teacher {
-  padding-bottom: 60px;
-}
-
-.has-text-align-right {
-  font-family: "Yu Gothic", 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content img {
+  width: 100px;
 }
