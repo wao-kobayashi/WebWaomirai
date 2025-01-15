@@ -96,6 +96,7 @@ $border-radius-small: 4px;
 $border-radius-middle: 8px;
 $border-radius-big: 12px;
 $border-radius-bigplus: 24px;
+$border-radius-extrabig: 48px;
 $border-radius-full: 10000px;
 
 /* line-height */
@@ -112,17 +113,14 @@ $overlay: rgba(0, 0, 0, 0.7);
 $categories: (
   "philosophy": (
     main-color: $cl-philosophy,
-    pale-color: #ffffff,
-    // 例: テキストカラー
+    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,
   ),
   "science": (
     main-color: $cl-science,
-    pale-color: #000000,
-    // 例: テキストカラー
+    pale-color: $cl-science-pale // 例: テキストカラー,,,
   ),
   "economiy": (
     main-color: $cl-economiy,
-    pale-color: #000000,
-    // 例: テキストカラー
+    pale-color: $cl-economiy-pale // 例: テキストカラー,,,
   ),
 );

@@ -27,9 +27,12 @@
 }
 
 .c-title-25feb-lp {
-  text-align: center;
+  @include font-size-l;
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
   margin: 0 auto 30px;
-  background: $cl-btn-cta;
+  text-align: center;
+  //   text-decoration-style: wavy;
 }
 
 .c-bg-section-white {
@@ -175,10 +178,102 @@ section.lp-25feb-eventdetail {
   @include section-maxwidth;
   .lp-25feb-eventdetail-content {
     width: 100%;
+    border-radius: 0 $border-radius-bigplus $border-radius-bigplus
+      $border-radius-bigplus;
     background: white;
-    margin: 0 auto 60px;
-    img {
-      width: 100px;
+    margin: 0 auto 75px;
+    padding: 36px;
+    &-top {
+      display: flex;
+      gap: 45px;
+      //left
+      &-left {
+        flex: 1;
+        position: relative;
+        &-title {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          background: #000;
+          border-radius: 0 0 $border-radius-bigplus 0;
+          @include font-size-l;
+          width: 320px;
+          padding: 10px 20px;
+          color: white;
+        }
+        img {
+          border-radius: 0 $border-radius-extrabig $border-radius-extrabig
+            $border-radius-extrabig;
+        }
+      }
+      &-right {
+        flex: 1;
+        &-date {
+          @include font-size-ml;
+          margin: 0 auto 30px;
+        }
+        &-title {
+          @include font-size-l;
+          margin: 0 auto 30px;
+        }
+        &-text {
+          @include font-size-m;
+        }
+      }
+    }
+    &-merit {
+      margin: 30px 0 0;
+      border-radius: $border-radius-bigplus;
+      border: 2px solid #000;
+      display: flex;
+      gap: 30px;
+      padding: 30px 20px 20px;
+      &-illust {
+        width: 200px;
+      }
+      &-content {
+        &-box {
+          position: relative;
+          margin: 0 0 20px;
+          padding: 0 0 0 75px;
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            top: 0%;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            border-radius: 50%;
+          }
+          &-title {
+            @include font-size-ml;
+          }
+          &-text {
+            @include font-size-m;
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $category, $values in $categories {
+  ##{$category} {
+    .lp-25feb-eventdetail-content-top-left-title {
+      background: map-get($values, main-color);
+    }
+    .lp-25feb-eventdetail-content-merit {
+      border: 2px solid map-get($values, main-color);
+    }
+    .lp-25feb-eventdetail-content-merit-content-box {
+      color: map-get($values, main-color);
+      &::before {
+        background: map-get($values, pale-color);
+      }
     }
   }
 }
@@ -186,13 +281,26 @@ section.lp-25feb-eventdetail {
 //04 こんなあなたにオススメです！
 section.lp-25feb-recommend {
   .lp-25feb-recommend {
-    @include section-maxwidth;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
+    background: white;
     div {
       flex: 1;
       img {
-        width: 100px;
       }
+    }
+    &-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50%;
+      }
+    }
+    &-right {
+      background: $cl-graylightest;
     }
   }
 }

@@ -155,7 +155,7 @@ body#lp-2025feb
         .lp-25feb-eventdetail-content-top
           .lp-25feb-eventdetail-content-top-left
             .lp-25feb-eventdetail-content-top-left-title
-              != event.eventtitle
+              != event.subjecttitle
             .lp-25feb-eventdetail-content-top-left-img
               img(src=event.subjectimg)
           .lp-25feb-eventdetail-content-top-right
@@ -164,7 +164,7 @@ body#lp-2025feb
               br
               | #{event.time}
             .lp-25feb-eventdetail-content-top-right-title
-              | #{event.title}
+              != event.eventtitle
             .lp-25feb-eventdetail-content-top-right-text
               | #{event.description}
       
