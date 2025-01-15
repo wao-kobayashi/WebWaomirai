@@ -1,19 +1,35 @@
 #lp-2025feb {
   background: $cl-bg-eventlp-2025feb;
+  color: $cl-black;
+  padding: 0 20px;
   section {
     margin: 0 auto 75px;
   }
 }
 
 .c-btn-cta {
-  margin: 0 auto;
   text-align: center;
-  margin: 30px 0 0;
+  a {
+    text-align: center;
+    margin: 0 auto 30px;
+    background: $cl-btn-cta;
+    text-decoration: none;
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    @include font-size-ml;
+    @include section-smallwidth;
+    @include box-shadow-lp;
+  }
 }
 
 .c-title-25feb-lp {
   text-align: center;
   margin: 0 auto 30px;
+  background: $cl-btn-cta;
 }
 
 .c-bg-section-white {
@@ -43,31 +59,122 @@ header {
 
 //01メインビジュアル
 .c-lp-25feb-mv {
-  padding: 30px 0;
-  @include section-middlewidth;
+  width: 100%;
+
+  .c-lp-25feb-mv-img {
+    padding: 30px 0;
+    margin: 0 -20px 30px;
+    img {
+      @include section-smallwidth;
+    }
+  }
   .c-lp-25feb-mv-wrap {
   }
   .c-lp-25feb-mv-content {
     text-align: center;
+    &-text {
+      @include font-size-l;
+      text-decoration: underline wavy;
+      text-decoration-color: $cl-title-underline;
+      margin: 0 auto 30px;
+      //   text-decoration-style: wavy;
+    }
+    &-target {
+      @include section-widewidth;
+      background: $cl-merit-yellow;
+      padding: 16px 0;
+      border-radius: $border-radius-full;
+    }
   }
 }
 //02 EVENT INFOMATION
 section.lp-25feb-info {
   .lp-25feb-info-title {
     text-align: center;
+    color: $cl-graylight;
+    @include font-size-xxl;
+    margin: 0 auto 30px;
   }
   .lp-25feb-info-columns {
     display: flex;
     justify-content: center;
     gap: 30px;
     @include section-maxwidth;
+    margin: 0 auto 60px;
+    &-child {
+      background: white;
+      border-radius: $border-radius-big;
+      padding: 20px 0px 0;
+      @include box-shadow-lp;
+      overflow: hidden;
+      &-head {
+        @include font-size-l;
+        text-align: center;
+        margin: 0 auto 12px;
+      }
+      .lp-25feb-info-columns-child-image {
+        padding: 0 20px;
+        img {
+          border-radius: $border-radius-bigplus;
+        }
+      }
+
+      &-text {
+        &-catch {
+          @include font-size-m;
+          text-align: center;
+          margin: 20px auto;
+        }
+        &-title {
+          @include font-size-ml;
+          text-align: center;
+          margin: 0px auto 30px;
+        }
+        &-date {
+          text-align: center;
+          @include font-size-m;
+          letter-spacing: 1.5px;
+          margin: 0px auto 0px;
+        }
+        &-time {
+          text-align: center;
+          @include font-size-m;
+          margin: 0 0 20px;
+        }
+        span.large {
+          @include font-size-l;
+        }
+      }
+      &-link {
+        width: 100%;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        // background: #000;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // @eachで繰り返し処理
+  @each $category, $values in $categories {
+    .#{$category} {
+      .lp-25feb-info-columns-child-link {
+        background: map-get($values, main-color);
+      }
+    }
   }
 }
 
 //03 イベントの詳細
 section.lp-25feb-eventdetail {
+  @include section-maxwidth;
   .lp-25feb-eventdetail-content {
-    max-width: 600px;
+    width: 100%;
     background: white;
     margin: 0 auto 60px;
     img {

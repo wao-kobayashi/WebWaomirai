@@ -9,6 +9,7 @@ $cl-science-pale: #66cb88;
 $cl-economiy-pale: #67d2e9;
 $cl-bg-eventlp-2025feb: #fff8e0;
 $cl-btn-cta: #f88c6a;
+$cl-title-underline: #febcad;
 $cl-merit-yellow: #f8d86a;
 
 /* width */
@@ -30,6 +31,12 @@ $cl-merit-yellow: #f8d86a;
 
 @mixin section-middlewidth {
   max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@mixin section-smallwidth {
+  max-width: 700px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -76,12 +83,19 @@ $cl-merit-yellow: #f8d86a;
     font-size: 30px;
   }
 }
+@mixin font-size-xxl {
+  font-size: 48px;
+  @include responsive-style(768px) {
+    font-size: 40px;
+  }
+}
 
 /* border-radius */
 
 $border-radius-small: 4px;
 $border-radius-middle: 8px;
 $border-radius-big: 12px;
+$border-radius-bigplus: 24px;
 $border-radius-full: 10000px;
 
 /* line-height */
@@ -94,3 +108,21 @@ $lineheight-relaxed: 1.75;
 /* overray */
 
 $overlay: rgba(0, 0, 0, 0.7);
+
+$categories: (
+  "philosophy": (
+    main-color: $cl-philosophy,
+    pale-color: #ffffff,
+    // 例: テキストカラー
+  ),
+  "science": (
+    main-color: $cl-science,
+    pale-color: #000000,
+    // 例: テキストカラー
+  ),
+  "economiy": (
+    main-color: $cl-economiy,
+    pale-color: #000000,
+    // 例: テキストカラー
+  ),
+);
