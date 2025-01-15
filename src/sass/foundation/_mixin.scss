@@ -1,0 +1,26 @@
+
+// -----------------------------------------------------------------
+// breakpoint
+// -----------------------------------------------------------------
+@mixin responsive-style($breakpoint) {
+  @if $breakpoint==null {
+    @content;
+  }
+  @else {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin min-responsive-style($breakpoint) {
+  @if $breakpoint==null {
+    @content;
+  }
+  @else {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+

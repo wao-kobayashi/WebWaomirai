@@ -1,0 +1,247 @@
+//
+doctype html
+html(lang="jp")
+  head
+  body
+    heads
+      title WAO未来塾関連のページ一覧
+      link(href="../static/css/application.css?undefined", rel="stylesheet")
+      meta(name="viewport", content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+      meta(charset="UTF-8")
+      meta(name="robots", content="noindex,nofollow")
+      meta(name="apple-mobile-web-app-capable", content="yes")
+      meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js")
+      style.
+              /* Moodle Listの基本スタイル */
+        .moodle-list {
+          font-family: Arial, sans-serif;
+          padding-left: 20px;
+          list-style: none;
+        }
+
+        .moodle-list > li {
+          margin-bottom: 10px;
+        }
+
+        /* 階層構造のインデント */
+        .moodle-list li > ul {
+          margin-left: 0px;
+          margin-top:10px;
+        }
+
+        .moodle-list li > ul li {
+          margin-bottom: 5px;
+        }
+
+        /* リンクのスタイル */
+        .moodle-list a {
+          color: #0073e6;
+          text-decoration: none;
+        }
+
+        .moodle-list a:hover {
+          text-decoration: underline;
+        }
+
+        /* セクションごとのスタイル */
+        .moodle-list li > ul > li {
+          font-size: 14px;
+          color: #333;
+        }
+
+        .moodle-list > li > span {
+          font-weight: bold;
+        }
+
+        .moodle-list li > span {
+          font-size: 16px;
+          margin-bottom: 5px;
+          display: block;
+        }
+
+        /* セクションタイトルのスタイル */
+        .moodle-list li > ul > li > a {
+          padding-left: 10px;
+        }
+
+        /* 最後のリストアイテムに余白を追加 */
+        .moodle-list li:last-child {
+          margin-bottom: 20px;
+        }
+
+
+      //- モジュール化されたリスト出力部分
+    mixin moodleList(environment)
+        h2 
+         |#{environment}
+        ul.moodle-list
+              li
+                | moodleログイン
+                ul
+                  li
+                    a(href=`${environment}/signup/page-moodle-login.html`) ログイン
+                  li
+                    a(href=`${environment}/signup/page-moodle-forgot-password.html`) パスワード紛失
+                  li 
+                    a(href=`${environment}/signup/page-moodle-signup-input.html`) 入力画面
+                  li 
+                    a(href=`${environment}/signup/page-moodle-signup-temporary.html`) 仮登録
+                  li 
+                    a(href=`${environment}/signup/page-moodle-signup-complate.html`) 完了
+
+              li 
+                | ホーム
+                ul
+                  li
+                    a(href=`${environment}/index/page-index-guest.html`) ゲスト
+                  li 
+                    a(href=`${environment}/index/page-index-logged-in-purchased.html`) ログイン済
+                  li 
+                    a(href=`${environment}/index/page-index-logged-in-perchaced.html`) 購入済み
+
+              li
+                | ダッシュボード
+                div(style='font-size:87%; margin:20px 0 0 20px;') 
+                    |何も買っていない
+                ul
+                  li
+                    a(href=`${environment}/dashboard/page-single-none.html`) 何も買っていない
+                div(style='font-size:87%; margin:0 0 0 20px;') 
+                    |１科目購入
+                ul
+                  li 
+                    a(href=`${environment}/dashboard/page-single-ph.html`) １科目購入（哲学）
+                  li 
+                    a(href=`${environment}/dashboard/page-single-sc.html`) １科目購入（科学）
+                  li 
+                    a(href=`${environment}/dashboard/page-single-ec.html`) １科目購入（経済）
+                  li 
+                    a(href=`${environment}/dashboard/page-single-en.html`) １科目購入（英語）
+                  li 
+                    a(href=`${environment}/dashboard/page-single-pr.html`) １科目購入（プログラミング）
+                  li 
+                    a(href=`${environment}/dashboard/page-single-two.html`) １科目購入（2科目パック）
+                  li 
+                    a(href=`${environment}/dashboard/page-single-three.html`) １科目購入（3科目パック）
+                div(style='font-size:87%; margin:20px 0 0 20px;') 
+                    |サブ科目購入
+                ul
+                  li 
+                    a(href=`${environment}/dashboard/page-multi-sc-sc2.html`) 科学＋科学L2
+                  li 
+                    a(href=`${environment}/dashboard/page-multi-sc-sc2-en.html`) 科学＋科学L2＋英語
+                  li 
+                    a(href=`${environment}/dashboard/page-multi-sc-sc2-ec.html`) 科学＋科学L2＋経済
+                  li 
+                    a(href=`${environment}/dashboard/page-multi-two-sc2-ec2.html`) ２科目＋科学L2＋経済L2
+                  li 
+                    a(href=`${environment}/dashboard/page-multi-three-sc3-ec3-ph3.html`) ３科目＋哲学L3＋科学L3＋経済L3
+              li
+                | 科目購入
+                ul
+                  li
+                    a(href=`${environment}/course/page-course-payment.html`) 哲学
+                  li 
+                    a(href=`${environment}/course/page-course-payment-science.html`) 科学
+                  li 
+                    a(href=`${environment}/course/page-course-payment-economiy.html`) 経済
+                  li 
+                    a(href=`${environment}/course/page-course-payment-economiy-l1-226.html`) 経済L1
+              li
+                | 科目詳細
+                ul
+                  li
+                    a(href=`${environment}/course/page-course-member.html`)  科目詳細
+
+              li
+                | 授業参加
+                ul
+                  li
+                    a(href=`${environment}/lesson/page-course-lesson.html`) 授業参加（動画）
+                  li 
+                    a(href=`${environment}/lesson/page-course-lesson-question.html`) 授業参加（動画）＋回答
+
+              li
+                |講座の受講ヘルプページ
+                ul
+                  li
+                    a(href=`${environment}/help/page-howto-attend-lesson.html`)  授業参加（動画）
+              li
+                | 設定関連
+                ul
+                  li
+                    a(href=`${environment}/setting/page-mypage.html`) マイページ
+                  li 
+                    a(href=`${environment}/setting/page-user-setting.html`) ユーザ設定
+    div(style="display:flex;width:calc(70% + 40px); margin:0 auto;display: grid;grid-template-columns: repeat(2, 1fr);grid-template-rows: 1fr;grid-column-gap: 30px;")
+      div(style="padding:10px 20px 30px; box-shadow:0 5px 10px #ccc;")
+        block content
+          +moodleList('moodle-stg')
+      div(style="padding:10px 20px 30px; box-shadow:0 5px 10px #ccc;")
+        block content
+          +moodleList('moodle-lms')
+    div(style="width:70%; margin:30px auto 30px; padding:40px 20px 60px; box-shadow:0 5px 10px #ccc;")
+      ul(style="margin:10px auto 0;")
+          | ├ 英語LP
+          br
+          |<span style="padding:0 0 0 20px;">├</span>
+          a(href="english-lp-2nd/english-lp-improved-second.html") 英語LP 改善版2nd
+          br
+          |<span style="padding:0 0 0 20px;">├</span>
+          a(href="english-lp-improved-first.html") 英語LP 改善版1st
+          br
+          |<span style="padding:0 0 0 20px;">├</span>
+          a(href="english-lp.html") 英語LP Original
+          br
+          br
+          | ├ ハピタスLP
+          br
+          |<span style="padding:0 0 0 20px;">├</span>
+          a(href="hapitas/hapitas-lp.html") ハピタスLP
+          br
+          |<span style="padding:0 0 0 20px;">├</span>
+          a(href="hapitas/hapitas-thanks-page.html") ハピタスLP サンクスページ
+          br
+          br
+          | ├ 英語無料体験関連
+          br
+          br
+          |<span style="padding:0 0 0 20px;">├フォーム</span>
+          br
+          |<span style="padding:0 0 0 40px;">├</span>
+          a(href="english-portal-form/202411_marron/english-portal-form-marron.html") 英語無料体験11月生募集
+          br
+          br
+          |<span style="padding:0 0 0 20px;">├英語ポータル</span>
+          br
+          br
+          |<span style="padding:0 0 0 40px;">├</span>
+          a(href="english-portal/english-portal-login.html") ログイン
+          br
+          br
+          |<span style="padding:0 0 0 40px;">├英語チュートリアル</span>
+          br
+          |<span style="padding:0 0 0 60px;">├</span>
+          a(href="english-portal/202410_grape/english-portal-tutorial-2410grape.html") チュートリアル10月
+          br
+          |<span style="padding:0 0 0 60px;">├</span>
+          a(href="english-portal/202411_marron/english-portal-tutorial-2411marron.html") チュートリアル11月
+          br
+          br
+          |<span style="padding:0 0 0 40px;">├英語体験ページ</span>
+          br
+          |<span style="padding:0 0 0 60px;">├</span>
+          a(href="english-portal/202410_grape/english-learn-portal-2410grape.html") 英語体験ページ10月
+          br
+          |<span style="padding:0 0 0 60px;">├</span>
+          a(href="english-portal/202411_marron/english-learn-portal-2411marron.html") 英語体験ページ11月
+          br
+          br
+          |<span style="padding:0 0 0 20px;">├その他</span>
+          br
+          |<span style="padding:0 0 0 40px;">├</span>
+          a(href="english-portal/english-portal-trial-period.html") 無料体験会員終わった際、有料プランへ誘導
+          br
+          |<span style="padding:0 0 0 40px;">├</span>
+          a(href="english-portal/howto-payment.html") 有料会員登録の説明ページ
