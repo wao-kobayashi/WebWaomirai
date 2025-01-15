@@ -219,14 +219,100 @@ body#lp-2025feb
        |カンタン
        span.large|5
        |STEPで参加可能
-       
+    .lp-25feb-howto-img 
+           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
+
+    -
+        var steps = [{
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
+          number: '1.',
+          title: 'LINEで公式アカウントを友だち追加',
+          text: 'まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加はこちらから<br />・LINEが利用できない場合はこちらから'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
+          number: '2.',
+          title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
+          number: '3.',
+          title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
+          number: '4.',
+          title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
+          number: '5.',
+          title: '開催時間になったら届いたイベントURLから参加しましょう！'
+        }]
+    each step in steps
+      .lp-25feb-howto-step 
+        .lp-25feb-howto-step-child 
+          .lp-25feb-howto-step-child-icon 
+            img(src=step.iconimg)
+          .lp-25feb-howto-step-child-number 
+            |#{step.number}
+          .lp-25feb-howto-step-child-title
+            |#{step.title}
+          .lp-25feb-howto-step-child-text 
+            |#{step.text}        
+    //登録するためのアイコン
+
     //CTA
     +btn-25feb-cta
   //07 ワオ未来塾って？
   section.lp-25feb-about
+      .c-title-25feb-lp 
+       |ワオ未来塾って？
+      .lp-25feb-about-box 
+          .lp-25feb-about-box-left 
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+          .lp-25feb-about-box-right
+            |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
+               
   //08 2025年4月開講
   section.lp-25feb-start2025
-    +btn-25feb-cta
+      .lp-25feb-start2025-subtitle 
+        |2025年4月開校！
+      .lp-25feb-start2025-logo 
+        img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+      .lp-25feb-start2025-target 
+        | 〈対象〉小学3〜6年生／中学生／高校生
+      .lp-25feb-start2025-subjects 
+        .pcimage
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
+        .spimage
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
+      .lp-25feb-start2025-feature 
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |新しい５教科
+          .lp-25feb-start2025-feature-box-text 
+             |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |飛び級制
+          .lp-25feb-start2025-feature-box-text 
+             |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |オンラインライブ授業
+          .lp-25feb-start2025-feature-box-text 
+             |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+      +btn-25feb-cta
   //素材シリーズ
   footer 
     ul 
@@ -243,41 +329,18 @@ body#lp-2025feb
       img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
     .footer-copyright
       |© ワオ・コーポレーション All rights reserved.
-  div 
-    //fv
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp5/1026513/1736909815WfjAFBOV/fv_pc_2025feb.svg')   
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnr/1026513/1736909815czfrzGbs/fv_sp_2025feb.svg')
-    
-    //教科のビジュアル
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpr/1026513/1736909817ozByzL7R/img_event_sc.png')
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png')
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png')
-    
-    //登録するためのアイコン
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png')
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png')
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png') 
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.png')
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png')
-
-    //イラスト
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
-    //教科アイコン
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
-    img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
-
-//- .fixed-button(style='display:none;')
-//-           .lp-cv-button 
-//-               a.form-link(href=linkUrl,onclick="gtag('event', 'click', {'event_category': 'click','event_label': 'click-english-lp-button'});",target="_blank")   
-//-                 .english-fv-absolute-cvtop.cv-limit-text
-//-                     |無料期間中のみの受講もOK！
-//-                 .lp-cv-button-main
-//-                   .lp-cv-button-main-free 
-//-                     img(src='https://go.waomirai.com/l/1026513/2024-12-26/hb7cj/1026513/1735195715mm6pE3mm/free_icon.svg')
-//-                   .lp-cv-button-main-text
-//-                     |受講申し込みはこちら
-//-                   .lp-cv-button-main-arrow
-//-               script.
-//-                 var formLink = document.getElementById("form-link"); // IDを使う
+  //- .fixed-button(style='display:none;')
+  //-           .lp-cv-button 
+  //-               a.form-link(href=linkUrl,onclick="gtag('event', 'click', {'event_category': 'click','event_label': 'click-english-lp-button'});",target="_blank")   
+  //-                 .english-fv-absolute-cvtop.cv-limit-text
+  //-                     |無料期間中のみの受講もOK！
+  //-                 .lp-cv-button-main
+  //-                   .lp-cv-button-main-free 
+  //-                     img(src='https://go.waomirai.com/l/1026513/2024-12-26/hb7cj/1026513/1735195715mm6pE3mm/free_icon.svg')
+  //-                   .lp-cv-button-main-text
+  //-                     |受講申し込みはこちら
+  //-                   .lp-cv-button-main-arrow
+  //-               script.
+  //-                 var formLink = document.getElementById("form-link"); // IDを使う
 include _js-event-lp-2025feb
 

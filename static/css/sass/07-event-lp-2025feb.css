@@ -4287,3 +4287,11 @@ section.lp-25feb-recommend .lp-25feb-recommend div {
 section.lp-25feb-recommend .lp-25feb-recommend div img {
   width: 100px;
 }
+
+section.lp-25feb-howto img {
+  width: 100px;
+}
+section.lp-25feb-howto .lp-25feb-howto-step {
+  width: 300px;
+  margin: 0 auto 60px;
+}
