@@ -261,6 +261,7 @@ section.lp-25feb-eventdetail {
   }
 }
 
+//03 イベントの詳細　教科ごとの色付け
 @each $category, $values in $categories {
   ##{$category} {
     .lp-25feb-eventdetail-content-top-left-title {
@@ -281,15 +282,13 @@ section.lp-25feb-eventdetail {
 //04 こんなあなたにオススメです！
 section.lp-25feb-recommend {
   .lp-25feb-recommend {
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     background: white;
     div {
       flex: 1;
-      img {
-      }
     }
     &-left {
       display: flex;
@@ -300,7 +299,38 @@ section.lp-25feb-recommend {
       }
     }
     &-right {
+      position: relative;
       background: $cl-graylightest;
+      padding: 45px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40px;
+        bottom: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent $cl-graylightest transparent transparent;
+        border-width: 82px 52px 82px 0px;
+        z-index: 1;
+      }
+      &-child {
+        &-icon img {
+          height: 75px;
+          margin: 0 auto;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include font-size-ml;
+        }
+      }
     }
   }
 }

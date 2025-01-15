@@ -4576,7 +4576,7 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 }
 
 section.lp-25feb-recommend .lp-25feb-recommend {
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -4594,7 +4594,41 @@ section.lp-25feb-recommend .lp-25feb-recommend-left img {
   width: 50%;
 }
 section.lp-25feb-recommend .lp-25feb-recommend-right {
+  position: relative;
   background: #f0f2f3;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+section.lp-25feb-recommend .lp-25feb-recommend-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #f0f2f3 transparent transparent;
+  border-width: 82px 52px 82px 0px;
+  z-index: 1;
+}
+section.lp-25feb-recommend .lp-25feb-recommend-right-child-icon img {
+  height: 75px;
+  margin: 0 auto;
+}
+section.lp-25feb-recommend .lp-25feb-recommend-right-child-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-recommend .lp-25feb-recommend-right-child-text {
+    font-size: 20px;
+  }
 }
 
 section.lp-25feb-howto img {
