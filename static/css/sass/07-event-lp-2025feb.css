@@ -4059,8 +4059,13 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* color */
 /* width */
+/* box-shadow */
 /* fontsize */
+/* border-radius */
+/* line-height */
+/* overray */
 .modal {
   position: fixed;
   z-index: 1000;

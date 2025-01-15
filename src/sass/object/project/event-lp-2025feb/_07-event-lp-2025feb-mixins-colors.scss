@@ -2,10 +2,14 @@
 @import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-$section-maxwidth: 1200px;
-$section-middlewidth: 800px;
+/* color */
+
+$cl-philosophy-pale: #f4c66d;
+$cl-science-pale: #66cb88;
+$cl-economiy-pale: #67d2e9;
 $cl-bg-eventlp-2025feb: #fff8e0;
 $cl-btn-cta: #f88c6a;
+$cl-merit-yellow: #f8d86a;
 
 /* width */
 
@@ -25,6 +29,12 @@ $cl-btn-cta: #f88c6a;
 @mixin section-middlewidth {
   max-width: 800px;
   padding: 0 20px;
+}
+
+/* box-shadow */
+
+@mixin box-shadow-lp {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
 
 /* fontsize */
@@ -63,3 +73,21 @@ $cl-btn-cta: #f88c6a;
     font-size: 30px;
   }
 }
+
+/* border-radius */
+
+$border-radius-small: 4px;
+$border-radius-middle: 8px;
+$border-radius-big: 12px;
+$border-radius-full: 10000px;
+
+/* line-height */
+
+$lineheight-none: 1;
+$lineheight-tight: 1.25;
+$lineheight-normal: 1.5;
+$lineheight-relaxed: 1.75;
+
+/* overray */
+
+$overlay: rgba(0, 0, 0, 0.7);
