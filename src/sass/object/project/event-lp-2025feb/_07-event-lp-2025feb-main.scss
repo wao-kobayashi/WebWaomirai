@@ -11,6 +11,11 @@
   margin: 30px 0 0;
 }
 
+.c-title-25feb-lp {
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
 .c-bg-section-white {
   background: white;
 }
@@ -73,6 +78,16 @@ section.lp-25feb-eventdetail {
 
 //04 こんなあなたにオススメです！
 section.lp-25feb-recommend {
+  .lp-25feb-recommend {
+    @include section-maxwidth;
+    display: flex;
+    div {
+      flex: 1;
+      img {
+        width: 100px;
+      }
+    }
+  }
 }
 
 //05 授業の特徴

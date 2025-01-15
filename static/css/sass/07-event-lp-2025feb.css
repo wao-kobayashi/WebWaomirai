@@ -4201,6 +4201,11 @@ select {
   margin: 30px 0 0;
 }
 
+.c-title-25feb-lp {
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
 .c-bg-section-white {
   background: white;
 }
@@ -4262,5 +4267,23 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content {
   margin: 0 auto 60px;
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content img {
+  width: 100px;
+}
+
+section.lp-25feb-recommend .lp-25feb-recommend {
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-recommend .lp-25feb-recommend {
+    padding: 0 20px;
+  }
+}
+section.lp-25feb-recommend .lp-25feb-recommend div {
+  flex: 1;
+}
+section.lp-25feb-recommend .lp-25feb-recommend div img {
   width: 100px;
 }
