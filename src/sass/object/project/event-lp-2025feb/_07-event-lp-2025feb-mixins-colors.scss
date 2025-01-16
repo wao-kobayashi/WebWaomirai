@@ -97,6 +97,12 @@ $ctabuttonwidth: 450px;
     font-size: 40px;
   }
 }
+@mixin font-size-xxxl {
+  font-size: 60px;
+  @include responsive-style(768px) {
+    font-size: 48px;
+  }
+}
 
 /* border-radius */
 
@@ -121,15 +127,15 @@ $overlay: rgba(0, 0, 0, 0.7);
 $categories: (
   "philosophy": (
     main-color: $cl-philosophy,
-    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,,,,,,,,,
+    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,,,,,,,,,,,
   ),
   "science": (
     main-color: $cl-science,
-    pale-color: $cl-science-pale // 例: テキストカラー,,,,,,,,,,,
+    pale-color: $cl-science-pale // 例: テキストカラー,,,,,,,,,,,,,
   ),
   "economiy": (
     main-color: $cl-economiy,
-    pale-color: $cl-economiy-pale // 例: テキストカラー,,,,,,,,,,,
+    pale-color: $cl-economiy-pale // 例: テキストカラー,,,,,,,,,,,,,
   ),
 );
 

@@ -1,37 +1,60 @@
-//memoLP:https://go.waomirai.com/event-2025february
 
-
+- var ImgLinemodal = 'https://go.waomirai.com/l/1026513/2025-01-16/hbzcv/1026513/1737012240LbS0p9bZ/linemodal.png'
 //関数読込
-include _mixin-event-lp-2025feb.pug 
 
 body#lp-2025feb
+  include _mixin-event-lp-2025feb.pug 
   //00ヘッダー
   header 
     img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
   //01メインビジュアル
   section.c-lp-25feb-mv 
     .c-lp-25feb-mv-img.c-bg-section-white
-        .pcimage 
+        .c-lp-25feb-mv-img-pc.pcimage 
           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp5/1026513/1736909815WfjAFBOV/fv_pc_2025feb.svg')   
-        .spimage 
-          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnr/1026513/1736909815czfrzGbs/fv_sp_2025feb.svg')
+        .c-lp-25feb-mv-img-sp.spimage 
+          .c-lp-25feb-mv-img-sp-text 
+                img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnr/1026513/1736909815czfrzGbs/fv_sp_2025feb.svg')
+          .c-lp-25feb-mv-img-sp-family
+                img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbzbn/1026513/1737001856m147HUsn/fv_sp_2025feb_family.svg')
     .c-lp-25feb-mv-content
       .c-lp-25feb-mv-content-text 
-        |｜自己肯定感｜科学的視点｜経済の知識｜
-        br
-        |社会で必要になる新しい学びを親子で体験！
+        .pcimage
+          |｜自己肯定感｜科学的視点｜経済の知識｜
+          br
+          |社会で必要になる新しい学びを親子で体験！
+        .spimage
+          |｜自己肯定感｜
+          br
+          |｜科学的視点｜
+          br
+          |｜経済の知識｜
+          br
+          |社会で必要になる新しい
+          br
+          |学びを親子で体験！
       .c-lp-25feb-mv-content-target 
          |対象：小〜中学生とその保護者
   //02 EVENT INFOMATION
   section.lp-25feb-info 
     .lp-25feb-info-title
-       |EVENT INFORMATION
+       .pcimage
+        |EVENT INFORMATION
+       .spimage
+        |EVENT
+        br
+        |INFORMATION
+    .lp-25feb-info-title-slide.spimage 
+      .lp-25feb-info-title-slide-text
+        |スライド
+      .lp-25feb-info-title-slide-arrow
     .lp-25feb-info-columns
       //哲学（思考力）
       .lp-25feb-info-columns-child.philosophy
         .lp-25feb-info-columns-child-head 
             |哲学（思考力）
         .lp-25feb-info-columns-child-image 
+         .lp-25feb-info-columns-child-image-main
             img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png')
         .lp-25feb-info-columns-child-text
             .lp-25feb-info-columns-child-text-catch 
@@ -56,7 +79,10 @@ body#lp-2025feb
         .lp-25feb-info-columns-child-head 
             |科学リテラシー
         .lp-25feb-info-columns-child-image 
-            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbz7r/1026513/17369957662Zc8p67M/img_event_sc.png')
+          .lp-25feb-info-columns-child-image-main
+            img(src='https://go.waomirai.com/l/1026513/2025-01-16/hbzc2/1026513/17370062181533KUM3/event_sci_2.png')
+          .lp-25feb-info-columns-child-image-special
+             img(src='https://go.waomirai.com/l/1026513/2025-01-16/hbzcc/1026513/1737006775QNZETHOS/mikiigarashi_square.png')
         .lp-25feb-info-columns-child-text
             .lp-25feb-info-columns-child-text-catch 
               |五十嵐美樹特別講演会
@@ -73,14 +99,15 @@ body#lp-2025feb
               |日(土)
             .lp-25feb-info-columns-child-text-time
               |①11:00-11:45　②14:00-14:45
-        a.lp-25feb-info-columns-child-link(href="#philosophy")
+        a.lp-25feb-info-columns-child-link(href="#science")
             |詳しくはこちらをclick!
       //経済（お金）
       .lp-25feb-info-columns-child.economiy
         .lp-25feb-info-columns-child-head 
             |経済（お金）
         .lp-25feb-info-columns-child-image 
-            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png')
+            .lp-25feb-info-columns-child-image-main
+              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png')
         .lp-25feb-info-columns-child-text
             .lp-25feb-info-columns-child-text-catch 
               |親子で挑戦！
@@ -97,7 +124,7 @@ body#lp-2025feb
               |日(土)
             .lp-25feb-info-columns-child-text-time
               |13:00-15:00
-        a.lp-25feb-info-columns-child-link(href="#philosophy")
+        a.lp-25feb-info-columns-child-link(href="#economiy")
             |詳しくはこちらをclick!
     //CTA
     +btn-25feb-cta
@@ -122,11 +149,12 @@ body#lp-2025feb
         },
         {
           id: 'science',
-          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-15/hbz7r/1026513/17369957662Zc8p67M/img_event_sc.png',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-16/hbzc2/1026513/17370062181533KUM3/event_sci_2.png',
+          spcialimg: 'https://go.waomirai.com/l/1026513/2025-01-16/hbzcc/1026513/1737006775QNZETHOS/mikiigarashi_square.png',
           subjecttitle: '科学リテラシー',
           date: '2025年<span class="large">2</span>月<span class="large">15</span>日（土）',
           time: '①11:00-11:45 ②14:00-14:45',
-          eventtitle: '「好き」を見つけて育てよう！<br />サイエンス エンターテイナーが語る夢と仕事のつながり',
+          eventtitle: '「好き」を見つけて育てよう！<br class="pcimage">サイエンス エンターテイナーが語る夢と仕事のつながり',
           description: '子どもたちの「好き」を育てることは、未来の夢や仕事をかたち作る第一歩。このイベントでは、サイエンスエンターテイナーであり東京都市大学准教授の五十嵐美樹が、自らの体験を通じて「好き」と「仕事」のつながりを分かりやすくお話しします。科学の楽しさを感じながら、子どもたちの未来の可能性を広げる貴重な時間を一緒に過ごしましょう！',
           merits: [
             { title: "サイエンスエンターテイナーによる楽しいトーク！", text: "専門知識をわかりやすく伝えるプロフェッショナルから直接学べます" },
@@ -158,6 +186,10 @@ body#lp-2025feb
               != event.subjecttitle
             .lp-25feb-eventdetail-content-top-left-img
               img(src=event.subjectimg)
+            //科学専用
+            if event.spcialimg
+              .lp-25feb-eventdetail-content-top-left-special
+                img(src=event.spcialimg)
           .lp-25feb-eventdetail-content-top-right
             .lp-25feb-eventdetail-content-top-right-date
               != event.date
@@ -180,9 +212,11 @@ body#lp-2025feb
   //04 こんなあなたにオススメです！
   section.lp-25feb-recommend
     .c-title-25feb-lp 
-       |こんなあなたにオススメです！
+       |こんなあなたに
+       br.spimage
+       |オススメです！
     .lp-25feb-recommend
-      .lp-25feb-recommend-left
+      .lp-25feb-recommend-left.pcimage
           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpc/1026513/17369098162NUo6Frk/illust_family_3person.png')
       .lp-25feb-recommend-right
         //親子
@@ -209,18 +243,22 @@ body#lp-2025feb
          |POINT!
        .lp-25feb-point-right
           |ワオ未来塾の授業は推奨学年はありますが、
-          br
+          br.pcimage
           |大人も子どもも楽しめるコンテンツ。
           br
           |授業が終わるころには、
-          br
+          br.pcimage
           |ちょっと世の中の見え方が変わってくる！
   //05 授業の特徴
   section.lp-25feb-feature
     .c-title-25feb-lp 
        |授業の特長
     .lp-25feb-feature-child 
-      |オンライン授業で全国どこからでも参加OK
+      |オンライン授業で
+      br.spimage
+      |全国どこからでも
+      br.spimage
+      |参加OK
     .lp-25feb-feature-child 
       |ライブだからチャットで授業に参加できる!
     .lp-25feb-feature-child 
@@ -232,7 +270,9 @@ body#lp-2025feb
     .lp-25feb-howto-title 
        |カンタン
        span.large|5
-       |STEPで参加可能
+       |STEP
+       br.spimage
+       |で参加可能
     .lp-25feb-howto-img 
            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
 
@@ -292,15 +332,23 @@ body#lp-2025feb
   //08 2025年4月開講
   section.lp-25feb-start2025
       .lp-25feb-start2025-catch 
-        |社会で役立つ学びを、今はじめよう
+        |社会で役立つ学びを、
+        br.spimage
+        |今はじめよう
         br
-        |オンラインで楽しく学ぶ“新5教科”
+        |オンラインで
+        br.spimage
+        |楽しく学ぶ“新5教科”
       .lp-25feb-start2025-subtitle 
         |2025年4月開校！
       .lp-25feb-start2025-logo 
         img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
       .lp-25feb-start2025-target 
-        | 〈対象〉小学3〜6年生／中学生／高校生
+        |〈対象〉
+        br.spimage
+        |小学3〜6年生／
+        br.spimage
+        |中学生／高校生
       .lp-25feb-start2025-subjects 
         .pcimage
             img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')

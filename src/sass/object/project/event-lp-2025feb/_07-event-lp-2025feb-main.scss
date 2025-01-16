@@ -24,6 +24,9 @@
     width: 100%;
     max-width: $ctabuttonwidth;
     position: relative;
+    @include responsive-style(768px) {
+      width: 90%;
+    }
     @include box-shadow-lp;
     .c-btn-cta-top {
       position: absolute;
@@ -62,16 +65,17 @@ header {
   padding: 0 20px;
   max-width: $widewidth;
   margin: 0 auto;
+  justify-content: center;
   @include responsive-style(768px) {
-    height: 42px;
+    height: 56px;
     padding: 0 14px;
   }
   img {
     height: 24px;
     margin: 0 !important;
     @include responsive-style(768px) {
-      width: 146px;
-      height: 22px;
+      width: 70%;
+      height: auto;
     }
   }
 }
@@ -81,28 +85,52 @@ header {
   width: 100%;
 
   .c-lp-25feb-mv-img {
-    padding: 30px 0;
+    padding: 30px 0 20px;
     margin: 0 -20px 30px;
-    img {
-      @include section-smallwidth;
+    @include responsive-style(768px) {
+      padding: 25px 0 20px;
+      margin: 0 0px 30px;
+    }
+    &-pc {
+      img {
+        @include section-smallwidth;
+      }
+    }
+    &-sp {
+      padding: 0 20px;
+      text-align: center;
+      &-text img {
+        width: 100%;
+        margin: 0 auto;
+      }
+      &-family img {
+        width: 60%;
+        margin: 10px auto 0;
+      }
     }
   }
   .c-lp-25feb-mv-wrap {
   }
   .c-lp-25feb-mv-content {
     text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
     &-text {
       @include font-size-l;
       text-decoration: underline wavy;
       text-decoration-color: $cl-title-underline;
       margin: 0 auto 30px;
-      //   text-decoration-style: wavy;
+      @include responsive-style(768px) {
+        line-height: $lineheight-relaxed;
+      }
     }
     &-target {
       @include section-widewidth;
       background: $cl-merit-yellow;
       padding: 16px 0;
       border-radius: $border-radius-full;
+      text-align: center;
+      margin: 0 auto;
     }
   }
 }
@@ -111,8 +139,37 @@ section.lp-25feb-info {
   .lp-25feb-info-title {
     text-align: center;
     color: $cl-graylight;
+    line-height: $lineheight-tight;
     @include font-size-xxl;
     margin: 0 auto 30px;
+    @include responsive-style(768px) {
+      margin: 0 auto 0px;
+    }
+  }
+  .lp-25feb-info-title-slide {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0;
+    color: $cl-graylight;
+    gap: 10px;
+    animation: bounce-swipe 3s infinite;
+    &-arrow {
+      width: 70px;
+      height: 20px;
+      border-bottom: 1.5px solid $cl-graylight;
+      position: relative;
+      &:before {
+        transform: rotate(-45deg);
+        right: 5px;
+        bottom: -3px;
+        content: "";
+        position: absolute;
+        width: 1.5px;
+        height: 14px;
+        background: $cl-graylight;
+        display: block;
+      }
+    }
   }
   .lp-25feb-info-columns {
     display: flex;
@@ -120,12 +177,28 @@ section.lp-25feb-info {
     gap: 30px;
     @include section-maxwidth;
     margin: 0 auto 60px;
+    @include responsive-style(768px) {
+      justify-content: normal;
+      display: block;
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding: 20px 20px 20px;
+      margin: 0 auto 30px;
+    }
     &-child {
       background: white;
       border-radius: $border-radius-big;
       padding: 20px 0px 0;
       @include box-shadow-lp;
       overflow: hidden;
+      @include responsive-style(768px) {
+        width: 300px;
+        margin: 0 20px 0 0;
+        display: inline-block;
+        &:last-child {
+          margin: 0 120px 0 0;
+        }
+      }
       &-head {
         @include font-size-l;
         text-align: center;
@@ -134,8 +207,17 @@ section.lp-25feb-info {
       }
       .lp-25feb-info-columns-child-image {
         padding: 0 20px;
-        img {
+        position: relative;
+        &-main img {
           border-radius: $border-radius-bigplus;
+        }
+        &-special img {
+          position: absolute;
+          right: 5px;
+          bottom: -20px;
+          width: 120px;
+          height: 120px;
+          border-radius: $border-radius-full;
         }
       }
 
@@ -143,7 +225,7 @@ section.lp-25feb-info {
         &-catch {
           @include font-size-m;
           text-align: center;
-          margin: 20px auto;
+          margin: 30px auto 20px;
           letter-spacing: 0.5px;
         }
         &-title {
@@ -211,15 +293,28 @@ section.lp-25feb-eventdetail {
     background: white;
     margin: 0 auto 75px;
     padding: 36px;
+    @include responsive-style(768px) {
+      margin: 0 auto 45px;
+      padding: 0px 0 30px;
+      border-radius: $border-radius-bigplus;
+    }
     &-top {
       display: flex;
-      gap: 40px;
+      gap: 50px;
+      @include responsive-style(768px) {
+        display: block;
+      }
       //left
       &-left {
         flex: 1;
         position: relative;
         &-title {
           position: absolute;
+          @include responsive-style(768px) {
+            position: relative;
+            width: 100%;
+            border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
+          }
           left: 0;
           top: 0;
           z-index: 1;
@@ -231,17 +326,46 @@ section.lp-25feb-eventdetail {
           padding: 10px 20px;
           color: white;
         }
-        img {
-          border-radius: 0 $border-radius-extrabig $border-radius-extrabig
-            $border-radius-extrabig;
+        &-img {
+          img {
+            border-radius: 0 $border-radius-extrabig $border-radius-extrabig
+              $border-radius-extrabig;
+            @include responsive-style(768px) {
+              border-radius: 0;
+            }
+          }
+        }
+        &-special {
+          img {
+            border-radius: $border-radius-full;
+            position: absolute;
+            right: -28px;
+            bottom: -22px;
+            width: 225px;
+            height: 225px;
+            z-index: 9;
+            border: 5px solid $cl-white;
+            @include responsive-style(768px) {
+              width: 150px;
+              height: 150px;
+              right: -15px;
+              bottom: -22px;
+            }
+          }
         }
       }
       &-right {
         flex: 1;
+        @include responsive-style(768px) {
+          padding: 12px 20px;
+        }
         &-date {
           @include font-size-ml;
           margin: 0 auto 20px;
           letter-spacing: 1px;
+          @include responsive-style(768px) {
+            margin: 0 auto 15px;
+          }
           .large {
             @include font-size-xl;
           }
@@ -251,9 +375,15 @@ section.lp-25feb-eventdetail {
           margin: 0 auto 15px;
           font-weight: bold;
           @include title-underline;
+          @include responsive-style(768px) {
+            margin: 0 auto 30px;
+          }
         }
         &-text {
           @include font-size-m;
+          @include responsive-style(768px) {
+            color: $cl-graylight;
+          }
         }
       }
     }
@@ -264,14 +394,25 @@ section.lp-25feb-eventdetail {
       display: flex;
       gap: 35px;
       padding: 30px 20px 20px;
+      @include responsive-style(768px) {
+        border-radius: $border-radius-big;
+        margin: 20px 20px 0px;
+        padding: 20px 20px 0px;
+      }
       &-illust {
         width: 100px;
+        @include responsive-style(768px) {
+          display: none;
+        }
       }
       &-content {
         &-box {
           position: relative;
           margin: 0 0 30px;
           padding: 0 0 0 75px;
+          @include responsive-style(768px) {
+            padding: 0 0 0 35px;
+          }
           &:before {
             content: "";
             position: absolute;
@@ -283,6 +424,12 @@ section.lp-25feb-eventdetail {
             height: 50px;
             background: #000;
             border-radius: 50%;
+            @include responsive-style(768px) {
+              top: 7px;
+              width: 20px;
+              height: 20px;
+              bottom: auto;
+            }
           }
           &-title {
             @include font-size-ml;
@@ -322,7 +469,7 @@ section.lp-25feb-recommend {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    background: white;
+    // background: white;
     div {
       flex: 1;
     }
@@ -330,6 +477,7 @@ section.lp-25feb-recommend {
       display: flex;
       justify-content: center;
       align-items: center;
+      background: $cl-white;
       img {
         width: 50%;
       }
@@ -341,6 +489,12 @@ section.lp-25feb-recommend {
       display: flex;
       flex-direction: column;
       gap: 45px;
+      @include responsive-style(768px) {
+        background: $cl-white;
+        margin: 0 20px;
+        padding: 30px 30px;
+        border-radius: $border-radius-bigplus;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -354,6 +508,9 @@ section.lp-25feb-recommend {
         border-color: transparent $cl-graylightest transparent transparent;
         border-width: 82px 52px 82px 0px;
         z-index: 1;
+        @include responsive-style(768px) {
+          display: none;
+        }
       }
       &-child {
         &-icon img {
@@ -376,7 +533,19 @@ section.lp-25feb-recommend {
     display: flex;
     align-items: center;
     gap: 30px;
+    @include responsive-style(768px) {
+      background: $cl-white;
+      margin: 30px 20px 0;
+      padding: 0px 0px;
+      border-radius: $border-radius-bigplus;
+      display: block;
+    }
     &-left {
+      @include responsive-style(768px) {
+        width: 120px;
+        height: 30px;
+        border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
+      }
       width: 75px;
       height: 75px;
       border-radius: $border-radius-full;
@@ -389,12 +558,21 @@ section.lp-25feb-recommend {
     &-right {
       flex: 1;
       text-align: center;
+      @include responsive-style(768px) {
+        width: 100%;
+        padding: 20px 20px 30px;
+        text-align: left;
+      }
     }
   }
 }
 
 //05 授業の特徴
 section.lp-25feb-feature {
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
   .lp-25feb-feature-child {
     @include font-size-l;
     background: $cl-feature-yellow;
@@ -408,6 +586,12 @@ section.lp-25feb-feature {
     justify-content: center;
     align-items: center;
     text-align: center;
+    @include responsive-style(768px) {
+      // width: 100%;
+      margin: 0 auto 45px;
+      height: auto;
+      padding: 20px;
+    }
   }
 }
 
@@ -420,13 +604,19 @@ section.lp-25feb-howto {
     margin: 0 auto 30px;
     text-align: center;
     letter-spacing: 2px;
+    @include responsive-style(768px) {
+      @include font-size-xl;
+    }
     .large {
       @include font-size-xxl;
+      @include responsive-style(768px) {
+        @include font-size-xxxl;
+      }
     }
   }
   .lp-25feb-howto-img {
     width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
   }
 
   .lp-25feb-howto-step {
@@ -438,15 +628,36 @@ section.lp-25feb-howto {
       grid-template-columns: 100px 30px 1fr;
       grid-column-gap: 20px;
       grid-row-gap: 20px;
+      @include responsive-style(768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto 90px;
+      }
+      &-icon {
+        @include responsive-style(768px) {
+          width: 100px;
+        }
+      }
       &-number {
         @include font-size-xl;
+        @include responsive-style(768px) {
+          @include font-size-xxl;
+        }
       }
       &-text {
+        width: 100%;
+        padding: 0 20px;
         &-title {
           @include font-size-ml;
+          @include responsive-style(768px) {
+            @include font-size-l;
+          }
           margin: 5px 0 15px;
         }
-        &-text {
+        &-detail {
           @include font-size-m;
         }
       }
@@ -463,8 +674,18 @@ section.lp-25feb-about {
     border-radius: $border-radius-extrabig;
     display: flex;
     gap: 45px;
+    @include responsive-style(768px) {
+      flex-direction: column;
+      margin: 0 20px;
+      gap: 30px;
+      padding: 40px 20px 40px;
+    }
     &-left {
       width: 250px;
+      @include responsive-style(768px) {
+        width: 70%;
+        margin: 0 auto 0px;
+      }
     }
     &-right {
       flex: 1;
@@ -507,20 +728,34 @@ section.lp-25feb-about {
     display: flex;
     gap: 45px;
     margin: 0px 0 60px;
+    @include responsive-style(768px) {
+      flex-direction: column;
+      gap: 30px;
+    }
     &-box {
       background: white;
       border-radius: $border-radius-bigplus;
       padding: 30px 20px 20px;
       @include font-size-m;
+      flex: 1;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      @include responsive-style(768px) {
+        padding: 30px 20px 30px;
+      }
       &-title {
         display: flex;
         justify-content: center;
         gap: 15px;
         margin: 0 auto 20px;
+        @include responsive-style(768px) {
+          @include font-size-ml;
+        }
         img {
           width: 30px;
         }
+      }
+      &-text {
+        @include font-size-m;
       }
     }
   }
@@ -534,7 +769,7 @@ footer {
   color: white;
   border-radius: 100px 100px 0 0;
   @include responsive-style(768px) {
-    padding: 100px 0px 0px;
+    padding: 60px 0px 0px;
     border-radius: 50px 50px 0 0;
   }
   ul {
