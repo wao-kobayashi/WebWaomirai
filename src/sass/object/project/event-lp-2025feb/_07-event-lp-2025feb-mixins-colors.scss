@@ -11,8 +11,14 @@ $cl-bg-eventlp-2025feb: #fff8e0;
 $cl-btn-cta: #f88c6a;
 $cl-title-underline: #febcad;
 $cl-merit-yellow: #f8d86a;
+$cl-feature-yellow: #fffb96;
 
 /* width */
+
+$max-width: 1200px;
+$widewidth: 1000px;
+$middlewidth: 800px;
+$smallwidth: 700px;
 
 @mixin section-maxwidth {
   max-width: 1200px;
@@ -113,14 +119,14 @@ $overlay: rgba(0, 0, 0, 0.7);
 $categories: (
   "philosophy": (
     main-color: $cl-philosophy,
-    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,
+    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,,,,
   ),
   "science": (
     main-color: $cl-science,
-    pale-color: $cl-science-pale // 例: テキストカラー,,,
+    pale-color: $cl-science-pale // 例: テキストカラー,,,,,,
   ),
   "economiy": (
     main-color: $cl-economiy,
-    pale-color: $cl-economiy-pale // 例: テキストカラー,,,
+    pale-color: $cl-economiy-pale // 例: テキストカラー,,,,,,
   ),
 );

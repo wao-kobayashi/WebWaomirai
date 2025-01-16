@@ -59,7 +59,7 @@ body#lp-2025feb
             img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpr/1026513/1736909817ozByzL7R/img_event_sc.png')
         .lp-25feb-info-columns-child-text
             .lp-25feb-info-columns-child-text-catch 
-              |親子でホンネトーク 哲学カフェ
+              |五十嵐美樹特別講演会
             .lp-25feb-info-columns-child-text-title
               |好きを見つけて育てよう！
               br
@@ -108,7 +108,7 @@ body#lp-2025feb
     -
         var events = [{
           id: 'philosophy',
-          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpr/1026513/1736909817ozByzL7R/img_event_sc.png',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png',
           subjecttitle: '哲学（思考力）',
           date: '2025年2月8日（土）',
           time: '18:00-18:45',
@@ -270,10 +270,11 @@ body#lp-2025feb
             img(src=step.iconimg)
           .lp-25feb-howto-step-child-number 
             |#{step.number}
-          .lp-25feb-howto-step-child-title
-            |#{step.title}
-          .lp-25feb-howto-step-child-text 
-            |#{step.text}        
+          .lp-25feb-howto-step-child-text
+            .lp-25feb-howto-step-child-text-title
+              != step.title
+            .lp-25feb-howto-step-child-text-detail
+              != step.text        
     //登録するためのアイコン
 
     //CTA
@@ -290,6 +291,10 @@ body#lp-2025feb
                
   //08 2025年4月開講
   section.lp-25feb-start2025
+      .lp-25feb-start2025-catch 
+        |社会で役立つ学びを、今はじめよう
+        br
+        |オンラインで楽しく学ぶ“新5教科”
       .lp-25feb-start2025-subtitle 
         |2025年4月開校！
       .lp-25feb-start2025-logo 

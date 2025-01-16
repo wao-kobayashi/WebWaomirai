@@ -1,7 +1,7 @@
 #lp-2025feb {
   background: $cl-bg-eventlp-2025feb;
   color: $cl-black;
-  padding: 0 20px;
+  // padding: 0 20px;
   section {
     margin: 0 auto 75px;
   }
@@ -11,7 +11,7 @@
   text-align: center;
   a {
     text-align: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 105px;
     background: $cl-btn-cta;
     text-decoration: none;
     height: 60px;
@@ -20,8 +20,9 @@
     justify-content: center;
     align-items: center;
     border-radius: $border-radius-full;
+    width: 100%;
+    max-width: $smallwidth;
     @include font-size-ml;
-    @include section-smallwidth;
     @include box-shadow-lp;
   }
 }
@@ -46,6 +47,8 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
+  max-width: $widewidth;
+  margin: 0 auto;
   @include responsive-style(768px) {
     height: 42px;
     padding: 0 14px;
@@ -166,6 +169,15 @@ section.lp-25feb-info {
   // @eachで繰り返し処理
   @each $category, $values in $categories {
     .#{$category} {
+      .lp-25feb-info-columns-child-text-catch {
+        color: map-get($values, main-color);
+      }
+    }
+  }
+
+  // @eachで繰り返し処理
+  @each $category, $values in $categories {
+    .#{$category} {
       .lp-25feb-info-columns-child-link {
         background: map-get($values, main-color);
       }
@@ -199,6 +211,7 @@ section.lp-25feb-eventdetail {
           border-radius: 0 0 $border-radius-bigplus 0;
           @include font-size-l;
           width: 320px;
+          max-width: 100%;
           padding: 10px 20px;
           color: white;
         }
@@ -333,25 +346,194 @@ section.lp-25feb-recommend {
       }
     }
   }
+  //POINT!
+  .lp-25feb-point {
+    max-width: 450px;
+    margin: 45px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &-left {
+      width: 75px;
+      height: 75px;
+      border-radius: $border-radius-full;
+      background: $cl-gray;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-right {
+      flex: 1;
+      text-align: center;
+    }
+  }
 }
 
 //05 授業の特徴
 section.lp-25feb-feature {
+  .lp-25feb-feature-child {
+    @include font-size-xl;
+    background: $cl-feature-yellow;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 45px;
+    border-radius: $border-radius-full;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 //06 5stepで参加可能
 section.lp-25feb-howto {
-  img {
-    width: 100px;
+  padding: 30px 0;
+  margin: 0 -20px;
+  .lp-25feb-howto-title {
+    @include font-size-l;
+    margin: 0 auto 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    .large {
+      @include font-size-xxl;
+    }
   }
+  .lp-25feb-howto-img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
   .lp-25feb-howto-step {
-    width: 300px;
-    margin: 0 auto 60px;
+    &-child {
+      max-width: $smallwidth;
+      width: 100%;
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: 100px 30px 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      &-number {
+        @include font-size-xl;
+      }
+      &-text {
+        &-title {
+          @include font-size-ml;
+          margin: 5px 0 15px;
+        }
+        &-text {
+          @include font-size-m;
+        }
+      }
+    }
   }
 }
 
 section.lp-25feb-about {
+  .lp-25feb-about-box {
+    background: white;
+    max-width: $widewidth;
+    margin: 0 auto 0px;
+    padding: 48px 36px;
+    border-radius: $border-radius-extrabig;
+    display: flex;
+    gap: 45px;
+    &-left {
+      width: 250px;
+    }
+    &-right {
+      flex: 1;
+      line-height: $lineheight-relaxed;
+      @include font-size-m;
+    }
+  }
 }
 
-section.lp-25feb-start2025 {
+.lp-25feb-start2025 {
+  @include section-maxwidth;
+  &-catch {
+    @include font-size-l;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &-subtitle {
+    background: $cl-main-orange;
+    color: white;
+    @include font-size-xl;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: $border-radius-full;
+  }
+  &-logo {
+    max-width: $middlewidth;
+    margin: 0 auto 30px;
+  }
+  &-target {
+    @include font-size-l;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  &-subjects {
+    max-width: $max-width;
+    margin: 0 auto 45px;
+  }
+  &-feature {
+    display: flex;
+    gap: 45px;
+    margin: 0px 0 60px;
+    &-box {
+      background: white;
+      border-radius: $border-radius-bigplus;
+      padding: 30px 20px 20px;
+      @include font-size-m;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      &-title {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 0 auto 20px;
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 120px 0px 0px;
+  text-align: center;
+  background: $cl-black;
+  color: white;
+  border-radius: 100px 100px 0 0;
+  @include responsive-style(768px) {
+    padding: 100px 0px 0px;
+    border-radius: 50px 50px 0 0;
+  }
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  li {
+    list-style: none;
+    padding: 10px 0;
+    a {
+      color: white;
+      text-decoration: none;
+      @include font-size-m;
+    }
+  }
+  .footer-logo img {
+    width: 170px;
+    margin: 60px auto 45px;
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding: 15px 0 15px;
+  }
 }
