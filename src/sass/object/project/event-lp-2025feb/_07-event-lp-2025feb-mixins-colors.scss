@@ -5,7 +5,8 @@
 /* color */
 
 $cl-philosophy-pale: #f4c66d;
-$cl-science-pale: #66cb88;
+$cl-science-pale: #b6d43e;
+// $cl-science-pale: #66cb88; //figmaから持ってきたが色が違う?
 $cl-economiy-pale: #67d2e9;
 $cl-bg-eventlp-2025feb: #fff8e0;
 $cl-btn-cta: #f88c6a;
@@ -19,6 +20,7 @@ $max-width: 1200px;
 $widewidth: 1000px;
 $middlewidth: 800px;
 $smallwidth: 700px;
+$ctabuttonwidth: 450px;
 
 @mixin section-maxwidth {
   max-width: 1200px;
@@ -119,14 +121,20 @@ $overlay: rgba(0, 0, 0, 0.7);
 $categories: (
   "philosophy": (
     main-color: $cl-philosophy,
-    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,,,,
+    pale-color: $cl-philosophy-pale // 例: テキストカラー,,,,,,,,,,,
   ),
   "science": (
     main-color: $cl-science,
-    pale-color: $cl-science-pale // 例: テキストカラー,,,,,,
+    pale-color: $cl-science-pale // 例: テキストカラー,,,,,,,,,,,
   ),
   "economiy": (
     main-color: $cl-economiy,
-    pale-color: $cl-economiy-pale // 例: テキストカラー,,,,,,
+    pale-color: $cl-economiy-pale // 例: テキストカラー,,,,,,,,,,,
   ),
 );
+
+/* title-underline */
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+}

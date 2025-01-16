@@ -4066,6 +4066,7 @@ select {
 /* border-radius */
 /* line-height */
 /* overray */
+/* title-underline */
 .modal {
   position: fixed;
   z-index: 1000;
@@ -4188,6 +4189,32 @@ select {
   background: rgba(0, 0, 0, 0.7);
 }
 
+@keyframes fuwafuwa-button {
+  0% {
+    scale: 1;
+    transform: scale(1);
+  }
+  8% {
+    scale: 1.04;
+    transform: scale(1.04);
+  }
+  17% {
+    scale: 1;
+    transform: scale(1);
+  }
+  25% {
+    scale: 1.02;
+    transform: scale(1.02);
+  }
+  38% {
+    scale: 1;
+    transform: scale(1);
+  }
+  100% {
+    scale: 1;
+    transform: scale(1);
+  }
+}
 #lp-2025feb {
   background: #fff8e0;
   color: #262626;
@@ -4200,23 +4227,41 @@ select {
   text-align: center;
 }
 .c-btn-cta a {
+  animation: fuwafuwa-button 2s 0s infinite;
   text-align: center;
   margin: 0 auto 105px;
   background: #f88c6a;
   text-decoration: none;
-  height: 60px;
+  height: 80px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10000px;
   width: 100%;
-  max-width: 700px;
-  font-size: 22px;
+  max-width: 450px;
+  position: relative;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
+.c-btn-cta a .c-btn-cta-top {
+  position: absolute;
+  top: 8px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
 @media screen and (max-width: 768px) {
-  .c-btn-cta a {
+  .c-btn-cta a .c-btn-cta-top {
+    font-size: 11.5px;
+  }
+}
+.c-btn-cta a .c-btn-cta-main {
+  position: absolute;
+  margin: 7px 0 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  .c-btn-cta a .c-btn-cta-main {
     font-size: 20px;
   }
 }
@@ -4335,6 +4380,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child-head {
   font-size: 27px;
   text-align: center;
   margin: 0 auto 12px;
+  font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-info .lp-25feb-info-columns-child-head {
@@ -4351,6 +4397,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child-text-catch {
   font-size: 17px;
   text-align: center;
   margin: 20px auto;
+  letter-spacing: 0.5px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-info .lp-25feb-info-columns-child-text-catch {
@@ -4380,6 +4427,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child-text-date {
 }
 section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
   text-align: center;
+  letter-spacing: 0.5px;
   font-size: 17px;
   margin: 0 0 20px;
 }
@@ -4445,7 +4493,7 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content {
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top {
   display: flex;
-  gap: 45px;
+  gap: 40px;
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left {
   flex: 1;
@@ -4477,16 +4525,28 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right {
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date {
   font-size: 22px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date {
     font-size: 20px;
   }
 }
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date .large {
+  font-size: 34px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date .large {
+    font-size: 30px;
+  }
+}
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-title {
   font-size: 27px;
-  margin: 0 auto 30px;
+  margin: 0 auto 15px;
+  font-weight: bold;
+  text-decoration: underline wavy;
+  text-decoration-color: #febcad;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-title {
@@ -4502,19 +4562,19 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-text {
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit {
-  margin: 30px 0 0;
+  margin: 60px 0 0;
   border-radius: 24px;
   border: 2px solid #000;
   display: flex;
-  gap: 30px;
+  gap: 35px;
   padding: 30px 20px 20px;
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-illust {
-  width: 200px;
+  width: 100px;
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box {
   position: relative;
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   padding: 0 0 0 75px;
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box:before {
@@ -4557,6 +4617,7 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 }
 #philosophy .lp-25feb-eventdetail-content-merit-content-box::before {
   background: #f4c66d;
+  opacity: 0.5;
 }
 
 #science .lp-25feb-eventdetail-content-top-left-title {
@@ -4569,7 +4630,8 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
   color: #B6D43E;
 }
 #science .lp-25feb-eventdetail-content-merit-content-box::before {
-  background: #66cb88;
+  background: #b6d43e;
+  opacity: 0.5;
 }
 
 #economiy .lp-25feb-eventdetail-content-top-left-title {
@@ -4583,6 +4645,7 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 }
 #economiy .lp-25feb-eventdetail-content-merit-content-box::before {
   background: #67d2e9;
+  opacity: 0.5;
 }
 
 section.lp-25feb-recommend .lp-25feb-recommend {
@@ -4663,7 +4726,7 @@ section.lp-25feb-recommend .lp-25feb-point-right {
 }
 
 section.lp-25feb-feature .lp-25feb-feature-child {
-  font-size: 34px;
+  font-size: 27px;
   background: #fffb96;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
   max-width: 800px;
@@ -4678,7 +4741,7 @@ section.lp-25feb-feature .lp-25feb-feature-child {
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-feature .lp-25feb-feature-child {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
@@ -4816,7 +4879,7 @@ section.lp-25feb-about .lp-25feb-about-box-right {
   }
 }
 .lp-25feb-start2025-subjects {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto 45px;
 }
 .lp-25feb-start2025-feature {

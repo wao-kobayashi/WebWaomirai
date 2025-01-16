@@ -10,27 +10,40 @@
 .c-btn-cta {
   text-align: center;
   a {
+    animation: fuwafuwa-button 2s 0s infinite;
     text-align: center;
     margin: 0 auto 105px;
     background: $cl-btn-cta;
     text-decoration: none;
-    height: 60px;
+    height: 80px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: $border-radius-full;
     width: 100%;
-    max-width: $smallwidth;
-    @include font-size-ml;
+    max-width: $ctabuttonwidth;
+    position: relative;
     @include box-shadow-lp;
+    .c-btn-cta-top {
+      position: absolute;
+      top: 8px;
+      @include font-size-s;
+      letter-spacing: 1px;
+    }
+    .c-btn-cta-main {
+      position: absolute;
+      // top: 0px;
+      margin: 7px 0 0;
+      @include font-size-ml;
+      letter-spacing: 1px;
+    }
   }
 }
 
 .c-title-25feb-lp {
   @include font-size-l;
-  text-decoration: underline wavy;
-  text-decoration-color: $cl-title-underline;
+  @include title-underline; //下の波線
   margin: 0 auto 30px;
   text-align: center;
   //   text-decoration-style: wavy;
@@ -117,6 +130,7 @@ section.lp-25feb-info {
         @include font-size-l;
         text-align: center;
         margin: 0 auto 12px;
+        font-weight: bold;
       }
       .lp-25feb-info-columns-child-image {
         padding: 0 20px;
@@ -130,6 +144,7 @@ section.lp-25feb-info {
           @include font-size-m;
           text-align: center;
           margin: 20px auto;
+          letter-spacing: 0.5px;
         }
         &-title {
           @include font-size-ml;
@@ -144,6 +159,7 @@ section.lp-25feb-info {
         }
         &-time {
           text-align: center;
+          letter-spacing: 0.5px;
           @include font-size-m;
           margin: 0 0 20px;
         }
@@ -197,7 +213,7 @@ section.lp-25feb-eventdetail {
     padding: 36px;
     &-top {
       display: flex;
-      gap: 45px;
+      gap: 40px;
       //left
       &-left {
         flex: 1;
@@ -224,11 +240,17 @@ section.lp-25feb-eventdetail {
         flex: 1;
         &-date {
           @include font-size-ml;
-          margin: 0 auto 30px;
+          margin: 0 auto 20px;
+          letter-spacing: 1px;
+          .large {
+            @include font-size-xl;
+          }
         }
         &-title {
           @include font-size-l;
-          margin: 0 auto 30px;
+          margin: 0 auto 15px;
+          font-weight: bold;
+          @include title-underline;
         }
         &-text {
           @include font-size-m;
@@ -236,19 +258,19 @@ section.lp-25feb-eventdetail {
       }
     }
     &-merit {
-      margin: 30px 0 0;
+      margin: 60px 0 0;
       border-radius: $border-radius-bigplus;
       border: 2px solid #000;
       display: flex;
-      gap: 30px;
+      gap: 35px;
       padding: 30px 20px 20px;
       &-illust {
-        width: 200px;
+        width: 100px;
       }
       &-content {
         &-box {
           position: relative;
-          margin: 0 0 20px;
+          margin: 0 0 30px;
           padding: 0 0 0 75px;
           &:before {
             content: "";
@@ -287,6 +309,7 @@ section.lp-25feb-eventdetail {
       color: map-get($values, main-color);
       &::before {
         background: map-get($values, pale-color);
+        opacity: 0.5; //強すぎなので薄くする
       }
     }
   }
@@ -373,7 +396,7 @@ section.lp-25feb-recommend {
 //05 授業の特徴
 section.lp-25feb-feature {
   .lp-25feb-feature-child {
-    @include font-size-xl;
+    @include font-size-l;
     background: $cl-feature-yellow;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
     max-width: 800px;
@@ -477,7 +500,7 @@ section.lp-25feb-about {
     text-align: center;
   }
   &-subjects {
-    max-width: $max-width;
+    max-width: $middlewidth;
     margin: 0 auto 45px;
   }
   &-feature {

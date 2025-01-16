@@ -56,7 +56,7 @@ body#lp-2025feb
         .lp-25feb-info-columns-child-head 
             |科学リテラシー
         .lp-25feb-info-columns-child-image 
-            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpr/1026513/1736909817ozByzL7R/img_event_sc.png')
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbz7r/1026513/17369957662Zc8p67M/img_event_sc.png')
         .lp-25feb-info-columns-child-text
             .lp-25feb-info-columns-child-text-catch 
               |五十嵐美樹特別講演会
@@ -110,7 +110,7 @@ body#lp-2025feb
           id: 'philosophy',
           subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png',
           subjecttitle: '哲学（思考力）',
-          date: '2025年2月8日（土）',
+          date: '2025年<span class="large">2</span>月<span class="large">8</span>日（土）',
           time: '18:00-18:45',
           eventtitle: '哲学カフェ<br />親子で語ってお悩み解決！<br />～“友だち”って何？～',
           description: 'うちの子の "友だち関係"…どうなってる？　気にはなっても話題にしにくいこのテーマ、この際、親子でとことん話し合ってみませんか？\n哲学者の視点を借りて思考を深め、新たな気づきが得られる特別イベント、開催です！',
@@ -122,12 +122,12 @@ body#lp-2025feb
         },
         {
           id: 'science',
-          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpr/1026513/1736909817ozByzL7R/img_event_sc.png',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-15/hbz7r/1026513/17369957662Zc8p67M/img_event_sc.png',
           subjecttitle: '科学リテラシー',
-          date: '2025年2月15日（土）',
+          date: '2025年<span class="large">2</span>月<span class="large">15</span>日（土）',
           time: '①11:00-11:45 ②14:00-14:45',
           eventtitle: '「好き」を見つけて育てよう！<br />サイエンス エンターテイナーが語る夢と仕事のつながり',
-          description: 'う子どもたちの「好き」を育てることは、未来の夢や仕事をかたち作る第一歩。このイベントでは、サイエンスエンターテイナーであり東京都市大学准教授の五十嵐美樹が、自らの体験を通じて「好き」と「仕事」のつながりを分かりやすくお話しします。科学の楽しさを感じながら、子どもたちの未来の可能性を広げる貴重な時間を一緒に過ごしましょう！',
+          description: '子どもたちの「好き」を育てることは、未来の夢や仕事をかたち作る第一歩。このイベントでは、サイエンスエンターテイナーであり東京都市大学准教授の五十嵐美樹が、自らの体験を通じて「好き」と「仕事」のつながりを分かりやすくお話しします。科学の楽しさを感じながら、子どもたちの未来の可能性を広げる貴重な時間を一緒に過ごしましょう！',
           merits: [
             { title: "サイエンスエンターテイナーによる楽しいトーク！", text: "専門知識をわかりやすく伝えるプロフェッショナルから直接学べます" },
             { title: "未来の「好き」を見つけるヒントがたくさん！", text: "子どもたちが自分の「好き」を発見し、夢に繋げるきっかけを提供します。" },
@@ -138,7 +138,7 @@ body#lp-2025feb
           id: 'economiy',
           subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png',
           subjecttitle: '経済（お金）',
-          date: '2025年2月22日（土）',
+          date: '2025年<span class="large">2</span>月<span class="large">2</span>日（土）',
           time: '13:00-15:00',
           eventtitle: 'コロッケを<br />高く売れるのは誰だ？！<br />お金を楽しく学ぼう',
           description: '私たちの生活とは切り離せないお金。小学生になると、おこづかいを使う機会が増え、金銭トラブルもちょっと心配。そこで、身近な食べ物「コロッケ」をテーマに、小学生から身に着けておきたい「お金の知識」や「金銭感覚」を親子で楽しく学びましょう。今まで何気なく見ていた商品やサービスを、違った側面から見ることができるようになる、驚きと学びを体験してください！',
@@ -160,7 +160,7 @@ body#lp-2025feb
               img(src=event.subjectimg)
           .lp-25feb-eventdetail-content-top-right
             .lp-25feb-eventdetail-content-top-right-date
-              | #{event.date}
+              != event.date
               br
               | #{event.time}
             .lp-25feb-eventdetail-content-top-right-title
