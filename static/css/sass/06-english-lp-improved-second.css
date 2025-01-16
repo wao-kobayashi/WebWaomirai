@@ -4064,7 +4064,7 @@ select {
 /* animation */
 @keyframes lp-cta__btn {
   0%, 55%, 65%, 70%, 80% {
-    box-shadow: 0 4px 0 #9D4E00;
+    box-shadow: 0 4px 0 #9d4e00;
     transform: translateY(0);
   }
   60%, 75% {
@@ -4148,30 +4148,30 @@ select {
 }
 
 .section-el-second-why {
-  background: #F6E245;
+  background: #f6e245;
 }
 .section-el-second-why .section-el-second-top {
   background: #fff;
 }
 .section-el-second-why .section-el-second-top:before {
-  background: #F6E245;
+  background: #f6e245;
 }
 
 .section-el-second-ability {
-  background: #FAF3CE;
+  background: #faf3ce;
 }
 .section-el-second-ability .section-el-second-top {
   background: #fff;
 }
 .section-el-second-ability .section-el-second-top:before {
-  background: #FAF3CE;
+  background: #faf3ce;
 }
 
 .section-el-second-who {
   background: #fff;
 }
 .section-el-second-who .section-el-second-top {
-  background: #FAF3CE;
+  background: #faf3ce;
 }
 .section-el-second-who .section-el-second-top:before {
   background: #fff;
@@ -4198,20 +4198,20 @@ select {
 }
 
 .section-el-second-voice {
-  background: #FAF3CE;
+  background: #faf3ce;
 }
 .section-el-second-voice .section-el-second-top {
   background: #fff;
 }
 .section-el-second-voice .section-el-second-top:before {
-  background: #FAF3CE;
+  background: #faf3ce;
 }
 
 .section-el-second-price {
   background: #fff;
 }
 .section-el-second-price .section-el-second-top {
-  background: #FAF3CE;
+  background: #faf3ce;
 }
 .section-el-second-price .section-el-second-top:before {
   background: #fff;
@@ -4298,18 +4298,18 @@ select {
 
 /* 過去の */
 .lp-section-bgyellow {
-  background: #F6E245;
+  background: #f6e245;
 }
 
 .lp-section-bgpaleyellow {
-  background: #FCF8EF;
+  background: #fcf8ef;
 }
 .lp-section-bgpaleyellow .lp-section-title-txt {
   color: #fff !important;
 }
 
 .lp-section-bglightgray {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 .lp-section-bglightgray .lp-section-title-txt {
   color: #fff !important;
@@ -5245,7 +5245,7 @@ header div img {
   border-radius: 100px;
 }
 .section-el-second-enjoy .section-el-second-top {
-  background: #F6E245;
+  background: #f6e245;
 }
 .section-el-second-enjoy .section-el-second-top:before {
   background: #f0f2f3;
@@ -5787,7 +5787,7 @@ header div img {
 .section-el-second-price .lp-section-price .lp-section-price-box-left .lp-section-price-box-left-badge-body,
 .section-el-second-price .lp-section-price .lp-section-price-box-left .lp-section-price-box-left-badge-body:before {
   position: absolute;
-  background-color: #F6E245;
+  background-color: #f6e245;
   width: 45px;
   height: 45px;
   top: 0;

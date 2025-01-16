@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
-@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 body {
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -4216,6 +4215,7 @@ select {
 #lp-2025feb {
   background: #fff8e0;
   color: #262626;
+  font-family: "Noto Sans JP", sans-serif;
 }
 #lp-2025feb section {
   margin: 0 auto 75px;
@@ -4230,14 +4230,14 @@ select {
   margin: 0 auto 105px;
   background: #f88c6a;
   text-decoration: none;
-  height: 80px;
+  height: 108px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10000px;
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   position: relative;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
@@ -4248,24 +4248,24 @@ select {
 }
 .c-btn-cta a .c-btn-cta-top {
   position: absolute;
-  top: 8px;
-  font-size: 12px;
+  top: 12px;
+  font-size: 17px;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
   .c-btn-cta a .c-btn-cta-top {
-    font-size: 11.5px;
+    font-size: 16px;
   }
 }
 .c-btn-cta a .c-btn-cta-main {
   position: absolute;
   margin: 7px 0 0;
-  font-size: 22px;
+  font-size: 27px;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
   .c-btn-cta a .c-btn-cta-main {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -4287,7 +4287,7 @@ select {
 }
 
 header {
-  height: 60px;
+  height: 78px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -4303,7 +4303,7 @@ header {
   }
 }
 header img {
-  height: 24px;
+  max-width: 350px;
   margin: 0 !important;
 }
 @media screen and (max-width: 768px) {
@@ -4368,11 +4368,28 @@ header img {
   max-width: 1000px;
   padding: 0 20px;
   margin: 0 auto;
+  font-size: 27px;
   background: #f8d86a;
   padding: 16px 0;
   border-radius: 10000px;
   text-align: center;
   margin: 0 auto;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .c-lp-25feb-mv .c-lp-25feb-mv-content-target {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-lp-25feb-mv .c-lp-25feb-mv-content-target {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .c-lp-25feb-mv .c-lp-25feb-mv-content-target {
+    font-size: 20px;
+  }
 }
 
 section.lp-25feb-info .lp-25feb-info-title {
@@ -4381,6 +4398,8 @@ section.lp-25feb-info .lp-25feb-info-title {
   line-height: 1.25;
   font-size: 48px;
   margin: 0 auto 30px;
+  font-weight: 300;
+  letter-spacing: 3px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-info .lp-25feb-info-title {
@@ -4424,7 +4443,7 @@ section.lp-25feb-info .lp-25feb-info-columns {
   max-width: 1200px;
   padding: 0 30px;
   margin: 0 auto;
-  margin: 0 auto 60px;
+  margin: 0 auto 90px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-info .lp-25feb-info-columns {
@@ -4443,7 +4462,7 @@ section.lp-25feb-info .lp-25feb-info-columns {
 }
 section.lp-25feb-info .lp-25feb-info-columns-child {
   background: white;
-  border-radius: 12px;
+  border-radius: 24px;
   padding: 20px 0px 0;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -4483,6 +4502,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-
   width: 120px;
   height: 120px;
   border-radius: 10000px;
+  border: 3px solid #ffffff;
 }
 section.lp-25feb-info .lp-25feb-info-columns-child-text-catch {
   font-size: 17px;
@@ -4520,7 +4540,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
   text-align: center;
   letter-spacing: 0.5px;
   font-size: 17px;
-  margin: 0 0 20px;
+  margin: 0 0 45px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
@@ -4537,7 +4557,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child-text span.large {
 }
 section.lp-25feb-info .lp-25feb-info-columns-child-link {
   width: 100%;
-  height: 42px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4545,6 +4565,12 @@ section.lp-25feb-info .lp-25feb-info-columns-child-link {
   width: 100%;
   color: white;
   text-decoration: none;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-info .lp-25feb-info-columns-child-link {
+    font-size: 20px;
+  }
 }
 section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-text-catch {
   color: #FCAF17;
@@ -4609,9 +4635,9 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-title {
   z-index: 1;
   background: #000;
   border-radius: 0 0 24px 0;
-  font-size: 27px;
-  width: 320px;
-  max-width: 100%;
+  font-size: 34px;
+  max-width: 300px;
+  width: 100%;
   padding: 10px 20px;
   color: white;
 }
@@ -4624,11 +4650,19 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-title {
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-title {
-    font-size: 24px;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-title {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 24px 24px 0 0;
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-img img {
-  border-radius: 0 48px 48px 48px;
+  border-radius: 0 64px 64px 64px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-img img {
@@ -4951,7 +4985,7 @@ section.lp-25feb-feature .lp-25feb-feature-child {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
   max-width: 800px;
   width: 100%;
-  margin: 0 auto 45px;
+  margin: 0 auto 30px;
   border-radius: 10000px;
   height: 60px;
   display: flex;
@@ -4963,6 +4997,9 @@ section.lp-25feb-feature .lp-25feb-feature-child {
   section.lp-25feb-feature .lp-25feb-feature-child {
     font-size: 24px;
   }
+}
+section.lp-25feb-feature .lp-25feb-feature-child:last-child {
+  margin: 0 auto 90px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-feature .lp-25feb-feature-child {
@@ -5098,7 +5135,7 @@ section.lp-25feb-about .lp-25feb-about-box {
   max-width: 1000px;
   margin: 0 auto 0px;
   padding: 48px 36px;
-  border-radius: 48px;
+  border-radius: 64px;
   display: flex;
   gap: 45px;
 }
