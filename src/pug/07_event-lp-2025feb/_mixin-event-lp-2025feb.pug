@@ -1,10 +1,17 @@
 - var ImgLinemodal = 'https://go.waomirai.com/l/1026513/2025-01-16/hbzh8/1026513/1737014353vO22ZLa6/modal.png'
+- var UrlLineEventFeb = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dIxeLsCQEB&whc=173508808725235'
+
 
 mixin btn-25feb-cta 
   .c-btn-cta 
-     a(href='https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dIxeLsCQEB&whc=173508808725235', target='_blank') 
+     a(href=UrlLineEventFeb, target='_blank') 
        .c-btn-cta-top 
         |定員になり次第募集終了です
+       .c-btn-cta-main 
+        |LINEで簡単申込 >
+mixin btn-25feb-cta-subject
+  .c-btn-cta-subject
+     a(href=UrlLineEventFeb, target='_blank') 
        .c-btn-cta-main 
         |LINEで簡単申込 >
 mixin ModalEntlyLine
