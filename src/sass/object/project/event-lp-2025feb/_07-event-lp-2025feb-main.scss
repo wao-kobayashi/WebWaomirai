@@ -13,6 +13,42 @@ html {
   }
 }
 
+.c-btn-lp {
+  text-align: center;
+  a {
+    text-align: center;
+    margin: 30px auto 120px;
+    // background: $cl-btn-cta;
+    background: $cl-main-orange;
+    text-decoration: none;
+    height: 78px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: $ctabuttonwidth;
+    position: relative;
+    line-height: $lineheight-normal;
+    gap: 12px;
+    @include responsive-style(768px) {
+      width: 100%;
+    }
+    @include box-shadow-lp;
+
+    .c-btn-lp-text {
+      margin: 0px 0 0;
+      @include font-size-ml;
+      letter-spacing: 1px;
+    }
+    .c-btn-lp-icn {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
 .c-btn-cta {
   text-align: center;
   a {
@@ -132,7 +168,7 @@ header {
     padding: 30px 0 20px;
     margin: 0 -20px 30px;
     @include responsive-style(768px) {
-      padding: 15px 0 10px;
+      padding: 0px 0 0px;
       margin: 0 0px 30px;
     }
     &-pc {
@@ -143,14 +179,6 @@ header {
     &-sp {
       // padding: 0 20px;
       text-align: center;
-      &-text img {
-        width: 100%;
-        margin: 0 auto;
-      }
-      &-family img {
-        width: 60%;
-        margin: 10px auto 0;
-      }
     }
   }
   .c-lp-25feb-mv-wrap {
@@ -432,18 +460,47 @@ section.lp-25feb-eventdetail {
       }
       &-right {
         flex: 1;
+        position: relative;
         @include responsive-style(768px) {
           padding: 12px 20px;
+          display: flex;
+          flex-direction: column;
+        }
+        &-online {
+          position: absolute;
+          right: 0;
+          top: 0;
+          text-align: left;
+          margin: 0 0 20px;
+          @include responsive-style(768px) {
+            position: relative;
+            font-weight: bold;
+            margin: 0 0 25px;
+          }
+          &-text {
+            display: inline-block;
+            text-align: left;
+            border: 2px solid $cl-philosophy;
+            color: $cl-philosophy;
+            padding: 6px 8px;
+            border-radius: $border-radius-middle;
+            text-align: center;
+            font-size: 14px;
+            @include responsive-style(768px) {
+              text-align: left;
+            }
+          }
         }
         &-date {
           @include font-size-ml;
-          margin: 0 auto 20px;
+          margin: 20px auto 20px;
           letter-spacing: 1px;
           @include responsive-style(768px) {
-            margin: 0 auto 15px;
+            margin: 0 0 25px;
+            order: -1;
           }
           .large {
-            @include font-size-xl;
+            // @include font-size-xl;
           }
         }
         &-title {
@@ -452,7 +509,7 @@ section.lp-25feb-eventdetail {
           font-weight: bold;
           @include title-underline;
           @include responsive-style(768px) {
-            margin: 0 auto 30px;
+            margin: 0 0 30px;
           }
         }
         &-text {
@@ -525,6 +582,10 @@ section.lp-25feb-eventdetail {
   ##{$category} {
     .lp-25feb-eventdetail-content-top-left-title {
       background: map-get($values, main-color);
+    }
+    .lp-25feb-eventdetail-content-top-right-online-text {
+      color: map-get($values, main-color);
+      border: 2px solid map-get($values, main-color);
     }
     .lp-25feb-eventdetail-content-merit {
       border: 2px solid map-get($values, main-color);

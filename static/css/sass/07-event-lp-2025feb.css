@@ -4226,6 +4226,47 @@ html {
   margin: 0 auto 75px;
 }
 
+.c-btn-lp {
+  text-align: center;
+}
+.c-btn-lp a {
+  text-align: center;
+  margin: 30px auto 120px;
+  background: #ee7a00;
+  text-decoration: none;
+  height: 78px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  line-height: 1.5;
+  gap: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 768px) {
+  .c-btn-lp a {
+    width: 100%;
+  }
+}
+.c-btn-lp a .c-btn-lp-text {
+  margin: 0px 0 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  .c-btn-lp a .c-btn-lp-text {
+    font-size: 20px;
+  }
+}
+.c-btn-lp a .c-btn-lp-icn {
+  width: 17px;
+  height: 17px;
+}
+
 .c-btn-cta {
   text-align: center;
 }
@@ -4365,7 +4406,7 @@ header img {
 }
 @media screen and (max-width: 768px) {
   .c-lp-25feb-mv .c-lp-25feb-mv-img {
-    padding: 15px 0 10px;
+    padding: 0px 0 0px;
     margin: 0 0px 30px;
   }
 }
@@ -4376,14 +4417,6 @@ header img {
 }
 .c-lp-25feb-mv .c-lp-25feb-mv-img-sp {
   text-align: center;
-}
-.c-lp-25feb-mv .c-lp-25feb-mv-img-sp-text img {
-  width: 100%;
-  margin: 0 auto;
-}
-.c-lp-25feb-mv .c-lp-25feb-mv-img-sp-family img {
-  width: 60%;
-  margin: 10px auto 0;
 }
 .c-lp-25feb-mv .c-lp-25feb-mv-content {
   text-align: center;
@@ -4773,15 +4806,47 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-special img 
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right {
   flex: 1;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right {
     padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-online {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: left;
+  margin: 0 0 20px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-online {
+    position: relative;
+    font-weight: bold;
+    margin: 0 0 25px;
+  }
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-online-text {
+  display: inline-block;
+  text-align: left;
+  border: 2px solid #fcaf17;
+  color: #fcaf17;
+  padding: 6px 8px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-online-text {
+    text-align: left;
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date {
   font-size: 22px;
-  margin: 0 auto 20px;
+  margin: 20px auto 20px;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
@@ -4791,15 +4856,8 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date {
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date {
-    margin: 0 auto 15px;
-  }
-}
-section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date .large {
-  font-size: 34px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-date .large {
-    font-size: 30px;
+    margin: 0 0 25px;
+    order: -1;
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-title {
@@ -4816,7 +4874,7 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-title {
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-title {
-    margin: 0 auto 30px;
+    margin: 0 0 30px;
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-text {
@@ -4906,6 +4964,10 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 #philosophy .lp-25feb-eventdetail-content-top-left-title {
   background: #fcaf17;
 }
+#philosophy .lp-25feb-eventdetail-content-top-right-online-text {
+  color: #fcaf17;
+  border: 2px solid #fcaf17;
+}
 #philosophy .lp-25feb-eventdetail-content-merit {
   border: 2px solid #fcaf17;
 }
@@ -4925,6 +4987,10 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 #science .lp-25feb-eventdetail-content-top-left-title {
   background: #00a839;
 }
+#science .lp-25feb-eventdetail-content-top-right-online-text {
+  color: #00a839;
+  border: 2px solid #00a839;
+}
 #science .lp-25feb-eventdetail-content-merit {
   border: 2px solid #00a839;
 }
@@ -4943,6 +5009,10 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 
 #economiy .lp-25feb-eventdetail-content-top-left-title {
   background: #28afe7;
+}
+#economiy .lp-25feb-eventdetail-content-top-right-online-text {
+  color: #28afe7;
+  border: 2px solid #28afe7;
 }
 #economiy .lp-25feb-eventdetail-content-merit {
   border: 2px solid #28afe7;
