@@ -2,30 +2,10 @@
 //- .bg-modal(style='display:none;')
 
 script. 
-    //ModalOpenの関数
-    //- function modalopen() {
-    //- $('.modal,.bg-modal').show();
-    //- }
-    //ModalOpen
+    $('.modal-open-liff-qr').click(function() {
+       $('.modal,.bg-modal').show();
+    });
 
-    //- $('.form-link').click(function() {
-    //-     $('.modal-level-select').show();
-    //-     $('.bg-modal').show();
-    //- });
-
-    $('.button-level1-weekdays').click(function() {
-        $('.modal-level1-weekdays').show();
-        $('.bg-modal').show();
-    });
-    $('.button-level1-saturday').click(function() {
-        $('.modal-level1-saturday').show();
-        $('.bg-modal').show();
-    });
-    $('.button-level2-weekdays').click(function() {
-        $('.modal-level2-weekdays').show();
-        $('.bg-modal').show();
-    });
-    $('.modal-close').click(function() {
+    $('.modal-close,.bg-modal').click(function() {
         $('.modal,.bg-modal').hide();
-        $('.bg-modal').hide();
     });
