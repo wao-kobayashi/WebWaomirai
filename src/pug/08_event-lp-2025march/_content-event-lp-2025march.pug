@@ -2,153 +2,219 @@
 
 body#lp-2025march
 
-  //00ヘッダー
+  //ヘッダー
   header 
-    img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
-  //01メインビジュアル
+    .header-logo 
+      img(src=ImgLogo)
+    .header-right   
+      a(href=UrlLineEventMarch, target='_blank')
+        |LINE公式アカウントから申込
+  //ファーストビジュアル
+  .lp-2025march-fv
+    .lp-2025march-fv-title 
+       |社会で役立つ学びをオンラインで!
+    .lp-2025march-fv-grid
+      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-01
+      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-02
+      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-03
+      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-04
+      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-05
+  //イントロ
+  section.lp-2025march-intro 
+    .lp-2025march-intro-title
+      .lp-2025march-intro-title-top 
+        |2025年4月開講
+      .lp-2025march-intro-title-main
+        |無料体験MONTH
+      .lp-2025march-intro-title-special 
+        |たっぷり無料体験ができるスペシャルな6週間
+    .lp-2025march-intro-text
+      |ワオ未来塾でしか受けられない！
+      br
+      |未来を生きる子どもたちに
+      br
+      |”今”必要な力をつけるオンラインライブ授業
+    .lp-2025march-intro-target
+  section.lp-2025march-feature
+      .lp-2025march-feature-grid
+        .lp-2025march-feature-grid-child
+          .lp-2025march-feature-grid-child-img
+             img(src=ImgFeature01)
+          .lp-2025march-feature-grid-child-text
+            p|FEATURE 1
+          .lp-2025march-feature-grid-child-title 
+              |オンラインで楽しむ
+              br
+              |ライブ配信授業！
+          .lp-2025march-feature-grid-child-text 
+              |全国隅々に、新しい教育を届けたい！オンライン授業なので、日本中・世界中のどこからでもご受講いただけます。
+        .lp-2025march-feature-grid-child
+          .lp-2025march-feature-grid-child-img
+            img(src=ImgFeature02)
+          .lp-2025march-feature-grid-child-text
+            p|FEATURE 2
+          .lp-2025march-feature-grid-child-title 
+              |ここでしか
+              br
+              |体験できない学び！
+          .lp-2025march-feature-grid-child-text 
+              |未来に生きる子どもたちの力となる”新５教科”から「哲学（思考力）」「科学リテラシー」「経済（お金）」の３教科の授業が無料で受講できます。
+        .lp-2025march-feature-grid-child
+          .lp-2025march-feature-grid-child-img
+              img(src=ImgFeature03)
+          .lp-2025march-feature-grid-child-text
+            p|FEATURE 3
+          .lp-2025march-feature-grid-child-title 
+              |24講座
+              br
+              |48コマから選べる！
+          .lp-2025march-feature-grid-child-text 
+              |3教科×4LEVEL×2講座＝計24の講座があります！オンライン授業は火曜日～金曜日に2講座ずつ生配信！気になる講座、参加できる日時から選び放題です♪
+  div.lp-2025march-feature
+    p|FEATURE 3
   //05 5stepで参加可能
-  section.lp-waomirai-howto.c-bg-section-white
-    .lp-waomirai-howto-title 
-       |カンタン
-       span.large|5
-       |STEP
-       br.spimage
-       |で参加可能
-    .lp-waomirai-howto-img 
-           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
+  //- section.lp-waomirai-howto.c-bg-section-white
+  //-   .lp-waomirai-howto-title 
+  //-      |カンタン
+  //-      span.large|5
+  //-      |STEP
+  //-      br.spimage
+  //-      |で参加可能
+  //-   .lp-waomirai-howto-img 
+  //-          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
 
-    -
-        var steps = [{
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
-          number: '1.',
-          title: 'LINEで公式アカウントを友だち追加',
-          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a>から<br />・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
-          number: '2.',
-          title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
-          number: '3.',
-          title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
-          number: '4.',
-          title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
-          number: '5.',
-          title: '開催時間になったら届いたイベントURLから参加しましょう！'
-        }]
-    each step in steps
-      .lp-waomirai-howto-step 
-        .lp-waomirai-howto-step-child 
-          .lp-waomirai-howto-step-child-icon 
-            img(src=step.iconimg)
-          .lp-waomirai-howto-step-child-number 
-            |#{step.number}
-          .lp-waomirai-howto-step-child-text
-            .lp-waomirai-howto-step-child-text-title
-              != step.title
-            .lp-waomirai-howto-step-child-text-detail
-              != step.text        
-    //登録するためのアイコン
+  //-   -
+  //-       var steps = [{
+  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
+  //-         number: '1.',
+  //-         title: 'LINEで公式アカウントを友だち追加',
+  //-         text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a>から<br />・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
+  //-       },
+  //-       {
+  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
+  //-         number: '2.',
+  //-         title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+  //-       },
+  //-       {
+  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
+  //-         number: '3.',
+  //-         title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+  //-       },
+  //-       {
+  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
+  //-         number: '4.',
+  //-         title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+  //-       },
+  //-       {
+  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
+  //-         number: '5.',
+  //-         title: '開催時間になったら届いたイベントURLから参加しましょう！'
+  //-       }]
+  //-   each step in steps
+  //-     .lp-waomirai-howto-step 
+  //-       .lp-waomirai-howto-step-child 
+  //-         .lp-waomirai-howto-step-child-icon 
+  //-           img(src=step.iconimg)
+  //-         .lp-waomirai-howto-step-child-number 
+  //-           |#{step.number}
+  //-         .lp-waomirai-howto-step-child-text
+  //-           .lp-waomirai-howto-step-child-text-title
+  //-             != step.title
+  //-           .lp-waomirai-howto-step-child-text-detail
+  //-             != step.text        
+  //-   //登録するためのアイコン
 
-    //CTA
-    +btn-25march-cta
-  //06 ワオ未来塾って？
-  section.lp-waomirai-about
-      .c-title-25feb-lp 
-       |ワオ未来塾って？
-      .lp-waomirai-about-box 
-          .lp-waomirai-about-box-left 
-            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
-          .lp-waomirai-about-box-right
-            |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
-  //07 授業の特徴
-  section.lp-waomirai-feature
-    .c-title-25feb-lp 
-       |授業の特長
-    div
-      .lp-waomirai-feature-child 
-        i.fa-solid.fa-globe
-        |オンライン授業で
-        br.spimage
-        |全国どこからでも
-        br.spimage
-        |参加OK
-      .lp-waomirai-feature-child 
-        i.fa-regular.fa-comments
-        |ライブだからチャットで授業に参加できる!
-      .lp-waomirai-feature-child 
-        .lp-waomirai-feature-child-icons 
-          i.fa-solid.fa-laptop
-        |必要なのはPCか
-        br.spimage
-        |タブレット端末だけ！
-    //CTA
-    +btn-25march-cta
+  //-   //CTA
+  //-   +btn-25march-cta
+  //- //06 ワオ未来塾って？
+  //- section.lp-waomirai-about
+  //-     .c-title-25feb-lp 
+  //-      |ワオ未来塾って？
+  //-     .lp-waomirai-about-box 
+  //-         .lp-waomirai-about-box-left 
+  //-           img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+  //-         .lp-waomirai-about-box-right
+  //-           |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
+  //- //07 授業の特徴
+  //- section.lp-waomirai-feature
+  //-   .c-title-25feb-lp 
+  //-      |授業の特長
+  //-   div
+  //-     .lp-waomirai-feature-child 
+  //-       i.fa-solid.fa-globe
+  //-       |オンライン授業で
+  //-       br.spimage
+  //-       |全国どこからでも
+  //-       br.spimage
+  //-       |参加OK
+  //-     .lp-waomirai-feature-child 
+  //-       i.fa-regular.fa-comments
+  //-       |ライブだからチャットで授業に参加できる!
+  //-     .lp-waomirai-feature-child 
+  //-       .lp-waomirai-feature-child-icons 
+  //-         i.fa-solid.fa-laptop
+  //-       |必要なのはPCか
+  //-       br.spimage
+  //-       |タブレット端末だけ！
+  //-   //CTA
+  //-   +btn-25march-cta
                
-  //08 2025年4月開講
-  section.lp-waomirai-start2025
-      .lp-waomirai-start2025-catch 
-        |社会で役立つ学びを、
-        br.spimage
-        |今はじめよう
-        br
-        |オンラインで
-        br.spimage
-        |楽しく学ぶ“新5教科”
-      .lp-waomirai-start2025-subtitle 
-        |2025年4月開校！
-      .lp-waomirai-start2025-logo 
-        img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
-      .lp-waomirai-start2025-target 
-        |〈対象〉
-        br.spimage
-        |小学3〜6年生／
-        br.spimage
-        |中学生／高校生
-      .lp-waomirai-start2025-subjects 
-        .pcimage
-            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
-        .spimage
-            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
-      .lp-waomirai-start2025-feature 
-        .lp-waomirai-start2025-feature-box
-          .lp-waomirai-start2025-feature-box-title  
-            .lp-waomirai-start2025-feature-box-title-icon   
-               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-            .lp-waomirai-start2025-feature-box-title-text 
-              |新しい５教科
-          .lp-waomirai-start2025-feature-box-text 
-             |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
-        .lp-waomirai-start2025-feature-box
-          .lp-waomirai-start2025-feature-box-title  
-            .lp-waomirai-start2025-feature-box-title-icon   
-               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-            .lp-waomirai-start2025-feature-box-title-text 
-              |飛び級制
-          .lp-waomirai-start2025-feature-box-text 
-             |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
-        .lp-waomirai-start2025-feature-box
-          .lp-waomirai-start2025-feature-box-title  
-            .lp-waomirai-start2025-feature-box-title-icon   
-               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-            .lp-waomirai-start2025-feature-box-title-text 
-              |オンラインライブ授業
-          .lp-waomirai-start2025-feature-box-text 
-             |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
-      .c-btn-lp
-        a(href='https://waomirai.com/', target='_blank')
-          .c-btn-lp-text 
-            |ワオ未来塾の公式サイトへ     
-          .c-btn-lp-icn 
-             img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
+  //- //08 2025年4月開講
+  //- section.lp-waomirai-start2025
+  //-     .lp-waomirai-start2025-catch 
+  //-       |社会で役立つ学びを、
+  //-       br.spimage
+  //-       |今はじめよう
+  //-       br
+  //-       |オンラインで
+  //-       br.spimage
+  //-       |楽しく学ぶ“新5教科”
+  //-     .lp-waomirai-start2025-subtitle 
+  //-       |2025年4月開校！
+  //-     .lp-waomirai-start2025-logo 
+  //-       img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+  //-     .lp-waomirai-start2025-target 
+  //-       |〈対象〉
+  //-       br.spimage
+  //-       |小学3〜6年生／
+  //-       br.spimage
+  //-       |中学生／高校生
+  //-     .lp-waomirai-start2025-subjects 
+  //-       .pcimage
+  //-           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
+  //-       .spimage
+  //-           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
+  //-     .lp-waomirai-start2025-feature 
+  //-       .lp-waomirai-start2025-feature-box
+  //-         .lp-waomirai-start2025-feature-box-title  
+  //-           .lp-waomirai-start2025-feature-box-title-icon   
+  //-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+  //-           .lp-waomirai-start2025-feature-box-title-text 
+  //-             |新しい５教科
+  //-         .lp-waomirai-start2025-feature-box-text 
+  //-            |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+  //-       .lp-waomirai-start2025-feature-box
+  //-         .lp-waomirai-start2025-feature-box-title  
+  //-           .lp-waomirai-start2025-feature-box-title-icon   
+  //-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+  //-           .lp-waomirai-start2025-feature-box-title-text 
+  //-             |飛び級制
+  //-         .lp-waomirai-start2025-feature-box-text 
+  //-            |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+  //-       .lp-waomirai-start2025-feature-box
+  //-         .lp-waomirai-start2025-feature-box-title  
+  //-           .lp-waomirai-start2025-feature-box-title-icon   
+  //-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+  //-           .lp-waomirai-start2025-feature-box-title-text 
+  //-             |オンラインライブ授業
+  //-         .lp-waomirai-start2025-feature-box-text 
+  //-            |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+  //-     .c-btn-lp
+  //-       a(href='https://waomirai.com/', target='_blank')
+  //-         .c-btn-lp-text 
+  //-           |ワオ未来塾の公式サイトへ     
+  //-         .c-btn-lp-icn 
+  //-            img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
   //素材シリーズ
   footer 
     ul 
