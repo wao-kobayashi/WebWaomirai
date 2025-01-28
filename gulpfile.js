@@ -16,7 +16,7 @@ function compilePug() {
             ext: '.html'
         }))
         .pipe(pug())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 }
 
@@ -33,7 +33,7 @@ function compileAllScss() {
   return gulp.src('src/sass/**/*.scss')
       .pipe(plumber())
       .pipe(sass())
-      .pipe(gulp.dest('./static/css'))
+      .pipe(gulp.dest('./static/css/sass'))
       .pipe(browserSync.stream());
 }
 
@@ -58,7 +58,7 @@ function watchFiles() {
         gulp.src(['src/pug/**/*.pug', '!src/pug/**/_*.pug'])
             .pipe(plumber()) //エラーが発生した場合にGulpのタスクが強制的に停止するのを防止する
             .pipe(pug())
-            .pipe(gulp.dest('dist'))
+            .pipe(gulp.dest('./'))
             .pipe(browserSync.stream());
         done();
     });

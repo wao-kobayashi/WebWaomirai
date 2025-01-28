@@ -1,0 +1,426 @@
+
+
+//関数読込
+
+body#lp-2025feb
+  include _mixin-event-lp-2025feb.pug 
+  //00ヘッダー
+  header 
+    img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+  //01メインビジュアル
+  section.c-lp-25feb-mv 
+    .c-lp-25feb-mv-img.c-bg-section-white
+        .c-lp-25feb-mv-img-pc.pcimage 
+          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp5/1026513/1736909815WfjAFBOV/fv_pc_2025feb.svg')   
+        .c-lp-25feb-mv-img-sp.spimage 
+          img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4fr/1026513/1737344501qIkQZWuF/fv_pc_2025feb.png')   
+    .c-lp-25feb-mv-content
+      .c-lp-25feb-mv-content-text 
+        .pcimage
+          |｜自己肯定感｜科学的視点｜経済の知識｜
+          br
+          |社会で必要になる新しい学びを親子で体験！
+      .c-lp-25feb-mv-content-target 
+         |対象：小〜中学生とその保護者
+  //02 EVENT INFOMATION
+  section.lp-25feb-info 
+    .lp-25feb-info-title
+       .pcimage
+        |EVENT INFORMATION
+       .spimage
+        |EVENT
+        br
+        |INFORMATION
+    .lp-25feb-info-title-slide.spimage 
+      .lp-25feb-info-title-slide-text
+        |スライド
+      .lp-25feb-info-title-slide-arrow
+    .lp-25feb-info-columns
+      //哲学（思考力）
+      .lp-25feb-info-columns-child.philosophy
+        .lp-25feb-info-columns-child-head 
+            |哲学（思考力）
+        .lp-25feb-info-columns-child-image 
+         .lp-25feb-info-columns-child-image-main
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png')
+        .lp-25feb-info-columns-child-text
+            .lp-25feb-info-columns-child-text-catch 
+              |親子でホンネトーク 哲学カフェ
+            .lp-25feb-info-columns-child-text-title
+              |親子で語って
+              br
+              |お悩み解決！
+              br
+              |～“友だち”って何？～
+            .lp-25feb-info-columns-child-text-date
+              span.large|2
+              |月
+              span.large|8
+              |日(土)
+            .lp-25feb-info-columns-child-text-time
+              |17:00-17:45
+        a.lp-25feb-info-columns-child-link(href="#philosophy")
+              |詳しくはこちらをclick!
+      //科学リテラシー
+      .lp-25feb-info-columns-child.science
+        .lp-25feb-info-columns-child-head 
+            |科学リテラシー
+        .lp-25feb-info-columns-child-image 
+          .lp-25feb-info-columns-child-image-main
+            img(src='https://go.waomirai.com/l/1026513/2025-01-16/hbzc2/1026513/17370062181533KUM3/event_sci_2.png')
+          .lp-25feb-info-columns-child-image-special
+             img(src='https://go.waomirai.com/l/1026513/2025-01-16/hbzcc/1026513/1737006775QNZETHOS/mikiigarashi_square.png')
+        .lp-25feb-info-columns-child-text
+            .lp-25feb-info-columns-child-text-catch 
+              |五十嵐美樹先生 特別講演会
+            .lp-25feb-info-columns-child-text-title
+              |好きを見つけて育てよう！
+              br
+              |サイエンス エンターテイナーが
+              br
+              |語る夢と仕事のつながり
+            .lp-25feb-info-columns-child-text-date
+              span.large|2
+              |月
+              span.large|15
+              |日(土)
+            .lp-25feb-info-columns-child-text-time
+              |①11:00-11:45　②14:00-14:45
+        a.lp-25feb-info-columns-child-link(href="#science")
+            |詳しくはこちらをclick!
+      //経済（お金）
+      .lp-25feb-info-columns-child.economiy
+        .lp-25feb-info-columns-child-head 
+            |経済（お金）
+        .lp-25feb-info-columns-child-image 
+            .lp-25feb-info-columns-child-image-main
+              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png')
+        .lp-25feb-info-columns-child-text
+            .lp-25feb-info-columns-child-text-catch 
+              |親子で挑戦！
+            .lp-25feb-info-columns-child-text-title
+              |コロッケを
+              br
+              |高く売れるのは誰だ！？
+              br
+              |お金を楽しく学ぼう！
+            .lp-25feb-info-columns-child-text-date
+              span.large|2
+              |月
+              span.large|22
+              |日(土)
+            .lp-25feb-info-columns-child-text-time
+              |13:00-15:00
+        a.lp-25feb-info-columns-child-link(href="#economiy")
+            |詳しくはこちらをclick!
+    //CTA
+    +btn-25feb-cta
+      
+  //03 イベントの詳細
+  section.lp-25feb-eventdetail 
+    //変数定義
+    -
+        var events = [{
+          id: 'philosophy',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png',
+          subjecttitle: '哲学（思考力）',
+          date: '2025年<span class="large">2</span>月<span class="large">8</span>日（土）',
+          time: '17:00-17:45',
+          eventsubtitle: 'オンラインセミナー<br class="pcimage">(チャット参加)',
+          eventtitle: '哲学カフェ<br />親子で語ってお悩み解決！<br />～“友だち”って何？～',
+          description: 'うちの子の "友だち関係"…どうなってる？　気にはなっても話題にしにくいこのテーマ、この際、親子でとことん話し合ってみませんか？\n哲学者の視点を借りて思考を深め、新たな気づきが得られる特別イベント、開催です！',
+          merits: [
+            { title: "親子の絆を深める！", text: "互いの本音トークが、親子の気持ちを通わせます。" },
+            { title: "哲学の力で問題解決の糸口を探す！", text: "思考技術としての哲学が体験的に学べます。" },
+            { title: "実生活に役立つ内容！", text: "迷う場面での、解決のヒントが得られます。" }
+          ],
+        },
+        {
+          id: 'science',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-16/hbzc2/1026513/17370062181533KUM3/event_sci_2.png',
+          spcialimg: 'https://go.waomirai.com/l/1026513/2025-01-16/hbzcc/1026513/1737006775QNZETHOS/mikiigarashi_square.png',
+          subjecttitle: '科学リテラシー',
+          date: '2025年<span class="large">2</span>月<span class="large">15</span>日（土）',
+          time: '①11:00-11:45  ②14:00-14:45',
+          eventsubtitle: 'オンライン特別講演会<br class="pcimage">(チャット参加)',
+          eventtitle: '「好き」を見つけて育てよう！<br class="pcimage">サイエンス エンターテイナーが語る夢と仕事のつながり',
+          description: '子どもたちの「好き」を育てることは、未来の夢や仕事をかたち作る第一歩。このイベントでは、サイエンスエンターテイナーであり東京都市大学准教授の五十嵐美樹先生が、自らの体験を通じて「好き」と「仕事」のつながりを分かりやすくお話しします。科学の楽しさを感じながら、子どもたちの未来の可能性を広げる貴重な時間を一緒に過ごしましょう！',
+          merits: [
+            { title: "サイエンスエンターテイナーによる楽しいトーク！", text: "専門知識をわかりやすく伝えるプロフェッショナルから直接学べます" },
+            { title: "未来の「好き」を見つけるヒントがたくさん！", text: "子どもたちが自分の「好き」を発見し、夢に繋げるきっかけを提供します。" },
+            { title: "親子で一緒に楽しめる内容！", text: "実験の様子を見ながら、親子で驚きや発見を共有できます。" }
+          ],
+        },
+        {
+          id: 'economiy',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png',
+          subjecttitle: '経済（お金）',
+          date: '2025年<span class="large">2</span>月<span class="large">22</span>日(土)',
+          time: '13:00-15:00',
+          eventsubtitle: 'オンラインワークショップ<br class="pcimage">(チャット参加)',
+          eventtitle: 'コロッケを<br />高く売れるのは誰だ？！<br />お金を楽しく学ぼう',
+          description: '私たちの生活とは切り離せないお金。小学生になると、おこづかいを使う機会が増え、金銭トラブルもちょっと心配。そこで、身近な食べ物「コロッケ」をテーマに、小学生から身につけておきたい「お金の知識」や「金銭感覚」を親子で楽しく学びましょう。今まで何気なく見ていた商品やサービスを、違った側面から見ることができるようになる、驚きと学びを体験してください！',
+          merits: [
+            { title: "ゲーム感覚だから親子で一緒に楽しく学べる！", text: "ゲーム感覚で進めるクイズ形式なので、お子さんも飽きずに楽しめます。" },
+            { title: "実生活にすぐ役立つ学びがたくさん！", text: "モノの値段、お金の価値など、今すぐ役立つ「お金の知識」が身に付きます。" },
+            { title: "自分で考えて表現する楽しさを体験", text: "「コロッケ」を売るための工夫を競い合うことでお子様の論理的な思考力も育みます。" }
+          ],
+        }
+        ]
+    //3教科ループさせる
+    each event in events
+      .lp-25feb-eventdetail-content(id=event.id)
+        .lp-25feb-eventdetail-content-top
+          .lp-25feb-eventdetail-content-top-left
+            .lp-25feb-eventdetail-content-top-left-title
+              != event.subjecttitle
+            .lp-25feb-eventdetail-content-top-left-img
+              img(src=event.subjectimg)
+            //科学専用
+            if event.spcialimg
+              .lp-25feb-eventdetail-content-top-left-special
+                img(src=event.spcialimg)
+          .lp-25feb-eventdetail-content-top-right
+            .lp-25feb-eventdetail-content-top-right-online
+              .lp-25feb-eventdetail-content-top-right-online-text
+                != event.eventsubtitle
+            .lp-25feb-eventdetail-content-top-right-date
+              != event.date
+              br
+              | #{event.time}
+            .lp-25feb-eventdetail-content-top-right-title
+              != event.eventtitle
+            .lp-25feb-eventdetail-content-top-right-text
+              | #{event.description}
+      
+        .lp-25feb-eventdetail-content-merit
+          .lp-25feb-eventdetail-content-merit-illust
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbwzk/1026513/17369213304uAtB0Zf/illust_point_women.png')
+          .lp-25feb-eventdetail-content-merit-content
+            each merit in event.merits
+              .lp-25feb-eventdetail-content-merit-content-box
+                .lp-25feb-eventdetail-content-merit-content-box-title= merit.title
+                .lp-25feb-eventdetail-content-merit-content-box-text= merit.text   
+        .spimage 
+           +btn-25feb-cta-subject
+    .pcimage
+      +btn-25feb-cta
+  //04 こんなあなたにオススメです！
+  section.lp-25feb-recommend
+    .c-title-25feb-lp 
+       |こんなあなたに
+       br.spimage
+       |オススメです！
+    .lp-25feb-recommend
+      .lp-25feb-recommend-left.pcimage
+          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpc/1026513/17369098162NUo6Frk/illust_family_3person.png')
+      .lp-25feb-recommend-right
+        //親子
+        .lp-25feb-recommend-right-child
+           .lp-25feb-recommend-right-child-icon.pcimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbwzg/1026513/1736921312EFe5ObBQ/illust_family_child.png')
+           .lp-25feb-recommend-right-child-icon.spimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2m5/1026513/1737095331S6YzsenA/illust_voice_child.svg')
+           .lp-25feb-recommend-right-child-text
+              div ⚪︎学校の勉強だけじゃものたりない
+              div ⚪︎好奇心がとまらない
+              div ⚪︎総合型選抜も見据えた学びがしたい
+        .lp-25feb-recommend-right-child
+           .lp-25feb-recommend-right-child-icon.pcimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp2/1026513/1736909815p2GIKGjy/illust_family_mom_and_papa.png')
+           .lp-25feb-recommend-right-child-icon.spimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2my/1026513/1737097252oErU5qzj/illust_voice_family.svg')
+           .lp-25feb-recommend-right-child-text
+              div 
+                |⚪︎子どもももちろんだけど、
+                br.pcimage
+                |親だって一緒に学びたい
+              div|⚪︎子どもと話し合えるきっかけがほしい
+              div|⚪︎自立した大人になってほしい
+          
+    .lp-25feb-point
+       .lp-25feb-point-left 
+         |POINT!
+       .lp-25feb-point-right
+          |ワオ未来塾の授業は推奨学年はありますが、
+          br.pcimage
+          |大人も子どもも楽しめるコンテンツ。
+          br
+          |授業が終わるころには、
+          br.pcimage
+          |ちょっと世の中の見え方が変わってくる！
+
+  //05 5stepで参加可能
+  section.lp-25feb-howto.c-bg-section-white
+    .lp-25feb-howto-title 
+       |カンタン
+       span.large|5
+       |STEP
+       br.spimage
+       |で参加可能
+    .lp-25feb-howto-img 
+           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
+
+    -
+        var steps = [{
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
+          number: '1.',
+          title: 'LINEで公式アカウントを友だち追加',
+          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a>から<br />・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
+          number: '2.',
+          title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
+          number: '3.',
+          title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
+          number: '4.',
+          title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
+          number: '5.',
+          title: '開催時間になったら届いたイベントURLから参加しましょう！'
+        }]
+    each step in steps
+      .lp-25feb-howto-step 
+        .lp-25feb-howto-step-child 
+          .lp-25feb-howto-step-child-icon 
+            img(src=step.iconimg)
+          .lp-25feb-howto-step-child-number 
+            |#{step.number}
+          .lp-25feb-howto-step-child-text
+            .lp-25feb-howto-step-child-text-title
+              != step.title
+            .lp-25feb-howto-step-child-text-detail
+              != step.text        
+    //登録するためのアイコン
+
+    //CTA
+    +btn-25feb-cta
+  //06 ワオ未来塾って？
+  section.lp-25feb-about
+      .c-title-25feb-lp 
+       |ワオ未来塾って？
+      .lp-25feb-about-box 
+          .lp-25feb-about-box-left 
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+          .lp-25feb-about-box-right
+            |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
+  //07 授業の特徴
+  section.lp-25feb-feature
+    .c-title-25feb-lp 
+       |授業の特長
+    div
+      .lp-25feb-feature-child 
+        i.fa-solid.fa-globe
+        |オンライン授業で
+        br.spimage
+        |全国どこからでも
+        br.spimage
+        |参加OK
+      .lp-25feb-feature-child 
+        i.fa-regular.fa-comments
+        |ライブだからチャットで授業に参加できる!
+      .lp-25feb-feature-child 
+        .lp-25feb-feature-child-icons 
+          i.fa-solid.fa-laptop
+        |必要なのはPCか
+        br.spimage
+        |タブレット端末だけ！
+    //CTA
+    +btn-25feb-cta
+               
+  //08 2025年4月開講
+  section.lp-25feb-start2025
+      .lp-25feb-start2025-catch 
+        |社会で役立つ学びを、
+        br.spimage
+        |今はじめよう
+        br
+        |オンラインで
+        br.spimage
+        |楽しく学ぶ“新5教科”
+      .lp-25feb-start2025-subtitle 
+        |2025年4月開校！
+      .lp-25feb-start2025-logo 
+        img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+      .lp-25feb-start2025-target 
+        |〈対象〉
+        br.spimage
+        |小学3〜6年生／
+        br.spimage
+        |中学生／高校生
+      .lp-25feb-start2025-subjects 
+        .pcimage
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
+        .spimage
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
+      .lp-25feb-start2025-feature 
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |新しい５教科
+          .lp-25feb-start2025-feature-box-text 
+             |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |飛び級制
+          .lp-25feb-start2025-feature-box-text 
+             |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |オンラインライブ授業
+          .lp-25feb-start2025-feature-box-text 
+             |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+      .c-btn-lp
+        a(href='https://waomirai.com/', target='_blank')
+          .c-btn-lp-text 
+            |ワオ未来塾の公式サイトへ     
+          .c-btn-lp-icn 
+             img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
+  //素材シリーズ
+  footer 
+    ul 
+      li 
+        a(href="https://www.wao-corp.com/", target='_blank')
+          |会社概要
+      li 
+        a(href="https://www.wao-corp.com/kojin/", target='_blank')
+         |プライバシーポリシー
+      li
+        a(href="https://go.waomirai.com/shotororihiki", target='_blank')
+          |特定商取引に基づく表記
+    .footer-logo 
+      img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
+    .footer-copyright
+      |© ワオ・コーポレーション All rights reserved.
+  //- .fixed-button(style='display:none;')
+  //-           .lp-cv-button 
+  //-               a.form-link(href=linkUrl,onclick="gtag('event', 'click', {'event_category': 'click','event_label': 'click-english-lp-button'});",target="_blank")   
+  //-                 .english-fv-absolute-cvtop.cv-limit-text
+  //-                     |無料期間中のみの受講もOK！
+  //-                 .lp-cv-button-main
+  //-                   .lp-cv-button-main-free 
+  //-                     img(src='https://go.waomirai.com/l/1026513/2024-12-26/hb7cj/1026513/1735195715mm6pE3mm/free_icon.svg')
+  //-                   .lp-cv-button-main-text
+  //-                     |受講申し込みはこちら
+  //-                   .lp-cv-button-main-arrow
+  //-               script.
+  //-                 var formLink = document.getElementById("form-link"); // IDを使う
+include _js-event-lp-2025feb
+
