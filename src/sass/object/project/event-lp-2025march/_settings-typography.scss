@@ -50,14 +50,16 @@
   }
 }
 
+/* title */
+
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+}
+
 /* line-height */
 
 $lineheight-none: 1;
 $lineheight-tight: 1.25;
 $lineheight-normal: 1.5;
 $lineheight-relaxed: 1.75;
-
-@mixin title-underline {
-  text-decoration: underline wavy;
-  text-decoration-color: $cl-title-underline;
-}
