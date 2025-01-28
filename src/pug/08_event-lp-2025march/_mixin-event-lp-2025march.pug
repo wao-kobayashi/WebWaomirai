@@ -1,0 +1,50 @@
+
+- var UrlLineEventMarch = '#'
+- var UrlFormEventFeb = '#'
+
+mixin btn-25march-cta 
+  .c-btn-cta 
+     a.modal-open-liff-qr.pcimage
+       .c-btn-cta-top 
+        |定員になり次第募集終了です
+       .c-btn-cta-main 
+        |LINEで簡単申込 >
+     a(href=UrlLineEventMarch, target='_blank').spimage
+       .c-btn-cta-top 
+        |定員になり次第募集終了です
+       .c-btn-cta-main 
+        |LINEで簡単申込 >
+
+mixin btn-25march-cta-subject
+  .c-btn-cta-subject
+     a.modal-open-liff-qr.pcimage
+       .c-btn-cta-main 
+        |LINEで簡単申込 >
+     a(href=UrlLineEventMarch, target='_blank').spimage
+       .c-btn-cta-main 
+        |LINEで簡単申込 >
+
+mixin ModalEntlyLine
+  .modal(style='display:none;')
+    .modal-wrapper 
+      .modal-wrapper-close 
+        .modal-wrapper-close-icon.modal-close
+      .modal-wrapper-content
+         .modal-wrapper-content-main
+            .modal-wrapper-content-main-head
+              .modal-wrapper-content-main-head-img
+                img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png')
+              .modal-wrapper-content-main-head-text 
+                 |スマホで
+                 br
+                 |LINEの友だち追加
+            .modal-wrapper-content-main-qr
+              img(src='qr.jpg') 
+            .modal-wrapper-content-main-text
+              |追加後に申込フォームが
+              br
+              |送信されます
+         .modal-wrapper-content-close.modal-close 
+            |閉じる
+  .bg-modal(style='display:none;')
++ModalEntlyLine
