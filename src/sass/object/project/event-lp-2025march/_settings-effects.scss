@@ -1,0 +1,12 @@
+@mixin box-shadow-lp {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+
+/* border-radius */
+
+$border-radius-small: 4px;
+$border-radius-middle: 8px;
+$border-radius-big: 12px;
+$border-radius-bigplus: 24px;
+$border-radius-extrabig: 64px;
+$border-radius-full: 10000px;

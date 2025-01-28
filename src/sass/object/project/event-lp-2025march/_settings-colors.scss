@@ -1,0 +1,12 @@
+/* color */
+
+$cl-sticky-yellow: #f3dd2a; //追従用の黄色
+$cl-feature-yellow: #fffb96;
+$cl-bg-eventlp: #fff8e0; //イベントLP専用の背景
+$cl-title-underline: #febcad;
+
+$subject-categories: (
+  "philosophy": $cl-philosophy,
+  "science": $cl-science-darken,
+  "economiy": $cl-economiy,
+);
