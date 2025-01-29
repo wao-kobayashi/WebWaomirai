@@ -43,7 +43,7 @@
   }
 }
 @mixin font-size-xxxl {
-  font-size: 60px;
+  font-size: 50px;
   @include responsive-style(768px) {
     font-size: 48px;
   }

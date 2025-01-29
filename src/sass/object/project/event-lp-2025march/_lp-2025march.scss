@@ -52,6 +52,19 @@ header {
       width: 100%;
     }
   }
+  .header-right a {
+    @include font-size-m;
+    background: $cl-brand-line;
+    border-radius: $border-radius-full;
+    color: $cl-white;
+    display: flex;
+    height: 45px;
+
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
 }
 
 //ファーストビジュアル
@@ -64,42 +77,46 @@ header {
     text-align: center;
   }
   .lp-25mar-fv-grid {
-    height: 480px;
-    max-width: $width-xl;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
     display: grid;
-    grid-template-columns: auto repeat(2, 280px);
+    width: 100%;
+    max-width: $width-lg;
+    height: auto;
+    grid-template-columns: 2.1fr repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 30px;
-    grid-row-gap: 30px;
-
+    grid-row-gap: 10px;
+    margin: 0 auto;
     &-child {
       position: relative;
       overflow: hidden; /* 子要素を切り取る */
       background: $cl-graylightest;
-      border-radius: 100px; /* 画像を円形に */
+      border-radius: 80px; /* 画像を円形に */
+
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
-
       &-01 {
+        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
         grid-area: 1 / 1 / 3 / 2;
       }
       &-02 {
+        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
         grid-area: 1 / 2 / 2 / 3;
       }
       &-03 {
+        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
         grid-area: 1 / 3 / 2 / 4;
       }
       &-04 {
+        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
         grid-area: 2 / 2 / 3 / 3;
       }
       &-05 {
+        aspect-ratio: 1 / 1;
         grid-area: 2 / 3 / 3 / 4;
+        border-radius: 10000px; /* 画像を円形に */
       }
     }
   }
@@ -108,19 +125,43 @@ header {
 //イントロ
 .lp-25mar-intro {
   margin: -120px 0 -90px;
-  padding: 180px 0 0;
+  padding: 180px 0 180px;
   text-align: center;
-  height: 500px;
+  // height: 500px;
   // object-fit: cover;
   width: 100%;
   background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png")
     repeat;
   background-size: 1024px;
+  &-title {
+    padding: 0 0 20px;
+    border-bottom: 2px solid $cl-black;
+    display: inline-block;
+    &-top {
+      @include font-size-xxxl;
+      color: $cl-black;
+      margin: 0 auto 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    &-main {
+      @include font-size-xxxl;
+      color: $cl-black;
+      margin: 0 auto 30px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 30px;
+    }
+  }
+  &-text {
+    margin: 25px 0 0;
+    @include font-size-l;
+  }
 }
 
 //特徴
 .lp-25mar-feature {
-  max-width: $width-xl;
+  max-width: $width-lg;
   width: 100%;
   margin: 0 auto 90px;
   &-grid {
