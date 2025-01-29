@@ -2,6 +2,12 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 
 /* fontsize */
+@mixin font-size-ss {
+  font-size: 11px;
+  @include responsive-style(768px) {
+    font-size: 9.5px;
+  }
+}
 
 @mixin font-size-s {
   font-size: 12px;

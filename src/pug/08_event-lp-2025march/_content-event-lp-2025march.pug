@@ -166,29 +166,31 @@ body#lp-2025march
             // 科目とそのレベルを定義する配列
             // 各科目オブジェクトは title（科目名）と levels（レベルID配列）を持つ
             const leftsubjects = [
-                { title: "哲学（思考力）", levels: ["philosophy-l1", "philosophy-l2", "philosophy-l3", "philosophy-l4"] },
-                { title: "科学リテラシー", levels: ["science-l1", "science-l2","science-l3", "science-l4"] },
-                { title: "経済（お金）", levels: ["economy-l1", "economy-l2", "economy-l3", "economy-l4"] },
-                { title: "お申込方法", levels:[] }
-              ]
+              { title: "哲学（思考力）", url: "#philosophy", levels: ["philosophy-l1", "philosophy-l2", "philosophy-l3", "philosophy-l4"] },
+              { title: "科学リテラシー", url: "#science", levels: ["science-l1", "science-l2", "science-l3", "science-l4"] },
+              { title: "経済（お金）", url: "#economy", levels: ["economy-l1", "economy-l2", "economy-l3", "economy-l4"] },
+              { title: "お申込方法", url: "#apply", levels: [] }
+            ]
            .lp-25mar-events-sub-left
               // メニューのメインタイトル
               .lp-25mar-events-sub-left-title 
                   |Index 
               // 各科目をループで処理
-              each subject in leftsubjects
-                      // 科目のコンテナ
-                      .lp-25mar-events-sub-left-subject
-                          // 科目名を表示
-                          .lp-25mar-events-sub-left-subject-title= subject.title
-                          // 科目の各レベルをループで処理
-                          each level, i in subject.levels
-                              // レベルへのリンクを生成
-                              // href属性には各レベルのIDを設定（例：#philosophy-l1）
-                              a(href="#" + level).lp-25mar-events-sub-left-subject-level
-                                  | LEVEL
-                                  // レベル番号を表示（インデックス + 1）
-                                  span.large= i + 1   
+              .lp-25mar-events-sub-left-subject
+                   each subject in leftsubjects
+                        // 科目のコンテナ
+                        .lp-25mar-events-sub-left-subject-wrap
+                            // 科目名を表示
+                            a.lp-25mar-events-sub-left-subject-wrap-title(href=subject.url)= subject.title
+                            // 科目の各レベルをループで処理
+                            each level, i in subject.levels
+                                // レベルへのリンクを生成
+                                // href属性には各レベルのIDを設定（例：#philosophy-l1）
+                                a(href="#" + level).lp-25mar-events-sub-left-subject-wrap-level
+                                   div
+                                    | LEVEL
+                                    // レベル番号を表示（インデックス + 1）
+                                    span.large= i + 1   
                                    
            .lp-25mar-events-sub-right
               .lp-25mar-events-sub-right-speech
