@@ -4478,20 +4478,107 @@ header .header-logo img {
   padding: 0 0 90px;
 }
 .lp-25mar-events-main-section-title {
-  font-size: 22px;
+  font-size: 36px;
   margin: 0 auto 30px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-title {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 .lp-25mar-events-main-section-levels {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  display: flex;
+  gap: 30px;
+  margin: 0 0 30px;
+}
+.lp-25mar-events-main-section-levels-child {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.lp-25mar-events-main-section-levels-child-title {
+  font-size: 17px;
+  text-align: center;
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-title {
+    font-size: 16px;
+  }
+}
+.lp-25mar-events-main-section-levels-child-title:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+.lp-25mar-events-main-section-levels-child-title.philosophy:before {
+  background: #fcaf17;
+}
+.lp-25mar-events-main-section-levels-child-title.science:before {
+  background: #b6d43e;
+}
+.lp-25mar-events-main-section-levels-child-title.economy:before {
+  background: #28afe7;
+}
+.lp-25mar-events-main-section-levels-child-img img {
+  border-radius: 24px;
+  margin: 0 0 20px;
+}
+.lp-25mar-events-main-section-levels-child-description {
+  font-size: 14px;
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+  border-bottom: 1px dashed #999;
+  height: 140px;
+}
+.lp-25mar-events-main-section-levels-child-bottom {
+  display: flex;
+  gap: 40px;
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-category {
+  border-radius: 10000px;
+  font-size: 17px;
+  padding: 4px 8px;
+  margin: 0 0 6px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-category {
+    font-size: 16px;
+  }
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-category.philosophy {
+  background: #fcaf17;
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-category.science {
+  background: #b6d43e;
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-category.economy {
+  background: #28afe7;
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-level {
+  font-size: 22px;
+  color: #262626;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level {
+    font-size: 20px;
+  }
+}
+.lp-25mar-events-main-section-levels-child-bottom-schedule {
+  font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-schedule {
+    font-size: 16px;
+  }
 }
 .lp-25mar-events-sub {
   position: sticky;

@@ -226,15 +226,86 @@ header {
     &-section {
       padding: 0 0 90px;
       &-title {
-        @include font-size-l;
+        @include font-size-xxl;
         margin: 0 auto 30px;
         text-align: center;
       }
       &-levels {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        display: flex;
+        gap: 30px;
+        margin: 0 0 30px;
+        &-child {
+          flex: 1;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          &-title {
+            @include font-size-m;
+            text-align: center;
+            margin: 0 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 13px;
+              height: 13px;
+
+              // margin: 0 0 0 10px;
+            }
+
+            &.philosophy:before {
+              background: $cl-philosophy;
+            }
+            &.science:before {
+              background: $cl-science;
+            }
+            &.economy:before {
+              background: $cl-economiy;
+            }
+          }
+          &-img img {
+            border-radius: $border-radius-bigplus;
+            margin: 0 0 20px;
+          }
+          &-description {
+            font-size: 14px;
+            padding: 0 0 20px;
+            margin: 0 0 20px;
+            border-bottom: 1px dashed $cl-graylight;
+            height: 140px;
+          }
+          &-bottom {
+            display: flex;
+            gap: 40px;
+            &-subject-category {
+              border-radius: $border-radius-full;
+              @include font-size-m;
+              padding: 4px 8px;
+              margin: 0 0 6px;
+              text-align: center;
+              &.philosophy {
+                background: $cl-philosophy;
+              }
+              &.science {
+                background: $cl-science;
+              }
+              &.economy {
+                background: $cl-economiy;
+              }
+            }
+            &-subject-level {
+              @include font-size-l;
+              color: $cl-black;
+              text-align: center;
+            }
+            &-schedule {
+              @include font-size-m;
+            }
+          }
+        }
       }
     }
   }

@@ -148,15 +148,16 @@ body#lp-2025march
                         img(src=course.img)
                       .lp-25mar-events-main-section-levels-child-description= course.description
                       .lp-25mar-events-main-section-levels-child-bottom
-                        .lp-25mar-events-main-section-levels-child-subject
-                          .lp-25mar-events-main-section-levels-child-subject-category
+                        .lp-25mar-events-main-section-levels-child-bottom-subject
+                          .lp-25mar-events-main-section-levels-child-bottom-subject-category(class=category)
                               if course.category === 'philosophy'
                                 | 哲学
                               else if course.category === 'science'
                                 | 科学
                               else if category === 'economy'
                                 | 経済
-                          .lp-25mar-events-main-section-levels-child-subject-level='LEVEL' + course.level
+                          .lp-25mar-events-main-section-levels-child-bottom-subject-level='LEVEL ' + course.level
+                        .lp-25mar-events-main-section-levels-child-bottom-schedule                      
                             != course.schedule.split('\n').join('<br>') 
               div
                 |LINE CTA
