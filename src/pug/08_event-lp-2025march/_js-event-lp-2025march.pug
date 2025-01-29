@@ -11,7 +11,6 @@ script.
     });
 script.
  $(document).ready(function () {
-
       // 各エリアが視界に入った際のアクティブクラスの切り替え
       $(window).on('scroll', function () {
         const scrollPosition = $(window).scrollTop();
@@ -27,4 +26,12 @@ script.
           }
         });
       });
+      $(".lp-25mar-events-main-section-levels-child-img").each(function () {
+        $(this).on("inview", function (event, isInView) {
+          if (isInView) {
+            $(this).addClass("inview");
+          }
+        });
+      });
     });
+

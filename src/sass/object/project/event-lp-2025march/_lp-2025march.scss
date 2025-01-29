@@ -307,9 +307,28 @@ header {
               background: $cl-economiy;
             }
           }
-          &-img img {
+          &-img {
+            position: relative;
+            overflow: hidden;
             border-radius: $border-radius-bigplus;
-            margin: 0 0 20px;
+            &.inview:before {
+              transform: translateY(100%); // 下へスライドして消える
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: $cl-gray; // 黒い膜
+              transition: transform 0.3s ease-in-out;
+              z-index: 1;
+            }
+            img {
+              border-radius: $border-radius-bigplus;
+              margin: 0 0 20px;
+            }
           }
           &-description {
             font-size: 14px;
@@ -353,6 +372,8 @@ header {
   &-sub {
     position: sticky;
     background: $cl-sticky-yellow;
+    // background: $cl-white;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     width: $width-side-sticky;
     padding: 30px 20px 20px 30px;
     max-height: 620px;

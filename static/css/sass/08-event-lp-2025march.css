@@ -4586,6 +4586,25 @@ header .header-right a {
 .lp-25mar-events-main-section-levels-child-title.economy:before {
   background: #28afe7;
 }
+.lp-25mar-events-main-section-levels-child-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.lp-25mar-events-main-section-levels-child-img.inview:before {
+  transform: translateY(100%);
+}
+.lp-25mar-events-main-section-levels-child-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4d4d4d;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
 .lp-25mar-events-main-section-levels-child-img img {
   border-radius: 24px;
   margin: 0 0 20px;
