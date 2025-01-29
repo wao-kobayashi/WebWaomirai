@@ -4714,7 +4714,7 @@ section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-text-catch {
   color: #fcaf17;
 }
 section.lp-25feb-info .science .lp-25feb-info-columns-child-text-catch {
-  color: #00a839;
+  color: #9dc03a;
 }
 section.lp-25feb-info .economiy .lp-25feb-info-columns-child-text-catch {
   color: #28afe7;
@@ -4723,7 +4723,7 @@ section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-link {
   background: #fcaf17;
 }
 section.lp-25feb-info .science .lp-25feb-info-columns-child-link {
-  background: #00a839;
+  background: #9dc03a;
 }
 section.lp-25feb-info .economiy .lp-25feb-info-columns-child-link {
   background: #28afe7;
@@ -5006,21 +5006,21 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
 }
 
 #science .lp-25feb-eventdetail-content-top-left-title {
-  background: #00a839;
+  background: #9dc03a;
 }
 #science .lp-25feb-eventdetail-content-top-right-online-text {
-  color: #00a839;
-  border: 2px solid #00a839;
+  color: #9dc03a;
+  border: 2px solid #9dc03a;
 }
 #science .lp-25feb-eventdetail-content-merit {
-  border: 2px solid #00a839;
+  border: 2px solid #9dc03a;
 }
 #science .lp-25feb-eventdetail-content-merit-content-box {
-  color: #00a839;
+  color: #9dc03a;
 }
 @media screen and (max-width: 768px) {
   #science .lp-25feb-eventdetail-content-merit-content-box {
-    color: #00a839;
+    color: #9dc03a;
   }
 }
 #science .lp-25feb-eventdetail-content-merit-content-box::before {
