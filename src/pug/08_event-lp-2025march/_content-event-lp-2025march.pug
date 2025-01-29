@@ -7,13 +7,7 @@ body#lp-2025march
     .header-right   
       a(href=UrlLineEventMarch, target='_blank')
         |LINE公式アカウントから申込
-  .lp-25mar-events
-        .lp-25mar-events-content-main 
-
-        .lp-25mar-events-content-sub   
-           |サブ要素
-
-  //ファーストビジュアルs
+  //ファーストビジュアル
   div.lp-25mar-fv
     .lp-25mar-fv-title 
        |社会で役立つ学びをオンラインで!
@@ -45,11 +39,11 @@ body#lp-2025march
         .lp-25mar-feature-grid-child
           .lp-25mar-feature-grid-child-img
              img(src=ImgFeature01)
-          .lp-25mar-feature-grid-child-title
-            .lp-25mar-feature-grid-child-title-icon
+          .lp-25mar-feature-grid-child-subtitle
+            .lp-25mar-feature-grid-child-subtitle-icon
               img(src=ImgIconSubject)
-            .lp-25mar-feature-grid-title-text
-              |FEATURE 1
+            .lp-25mar-feature-grid-child-subtitle-text
+              |FEATURE.1
           .lp-25mar-feature-grid-child-title 
               |オンラインで楽しむ
               br
@@ -59,11 +53,11 @@ body#lp-2025march
         .lp-25mar-feature-grid-child
           .lp-25mar-feature-grid-child-img
             img(src=ImgFeature02)
-          .lp-25mar-feature-grid-child-title
-            .lp-25mar-feature-grid-child-title-icon
+          .lp-25mar-feature-grid-child-subtitle
+            .lp-25mar-feature-grid-child-subtitle-icon
               img(src=ImgIconSubject)
-            .lp-25mar-feature-grid-title-text
-              |FEATURE 2
+            .lp-25mar-feature-grid-child-subtitle-text
+              |FEATURE.2
           .lp-25mar-feature-grid-child-title 
               |ここでしか
               br
@@ -73,11 +67,11 @@ body#lp-2025march
         .lp-25mar-feature-grid-child
           .lp-25mar-feature-grid-child-img
               img(src=ImgFeature03)
-          .lp-25mar-feature-grid-child-title
-            .lp-25mar-feature-grid-child-title-icon
+          .lp-25mar-feature-grid-child-subtitle
+            .lp-25mar-feature-grid-child-subtitle-icon
               img(src=ImgIconSubject)
-            .lp-25mar-feature-grid-title-text
-              |FEATURE 3
+            .lp-25mar-feature-grid-child-subtitle-text
+              |FEATURE.3
           .lp-25mar-feature-grid-child-title 
               |24講座
               br
@@ -86,21 +80,24 @@ body#lp-2025march
               |3教科×4LEVEL×2講座＝計24の講座があります！オンライン授業は火曜日～金曜日に2講座ずつ生配信！気になる講座、参加できる日時から選び放題です♪
   
   //講座内容
-  section.lp-25mar-events
-      .lp-25mar-events-head
-        .lp-25mar-events-head-title 
+  section.lp-25mar-eventinfo
+      .lp-25mar-eventinfo-head
+        .lp-25mar-eventinfo-head-title 
           |講座内容
-        .lp-25mar-events-head-text 
-        .lp-25mar-events-head-nav 
-          a.lp-25mar-events-nav-child(href='#philosophy')
+        .lp-25mar-eventinfo-head-text 
+           |受けてみたい教科を選んで講座内容をチェックしよう！
+      .lp-25mar-eventinfo-nav 
+          a.lp-25mar-eventinfo-nav-child.philosophy(href='#philosophy')
             |哲学（思考力）
-          a.lp-25mar-events-nav-child(href='#science')
+          a.lp-25mar-eventinfo-nav-child.science(href='#science')
             |科学リテラシー
-          a.lp-25mar-events-nav-child(href='#economy')
+          a.lp-25mar-eventinfo-nav-child.economy(href='#economy')
             |経済（お金）
-
-      .lp-25mar-events-content 
-        .lp-25mar-events-content-main 
+      .lp-25mar-eventinfo-bottom
+        |クリックすると各科目の先頭にジャンプします♪
+  //メインの講座
+  section.lp-25mar-events
+        .lp-25mar-events-main 
           - 
             //////////////////////////////
             // カテゴリー別表示用の関数定義
@@ -123,192 +120,230 @@ body#lp-2025march
                 }
               })
             }
-          //- each category in ["philosophy", "science", "economy"]
-          //-   //- 3-2. カテゴリーごとのdiv作成
-          //-   div.subject-section(id=category)
-          //-     //- 3-3. レベルごとのグループをループ
-          //-     //- renderCategory関数の戻り値: [
-          //-     //-   { level: 1, courses: [コース1, コース2] },
-          //-     //-   { level: 2, courses: [コース3, コース4] }
-          //-     //- ]
-          //-     h2.subject-section-title
-          //-       if category === 'philosophy'
-          //-         | 哲学（思考力）
-          //-       else if category === 'science'
-          //-         | 科学リテラシー
-          //-       else if category === 'economy'
-          //-         | 経済（お金）
-          //-     each group in renderCategory(category)
-          //-       //- 3-4. レベルごとのセクション作成
-          //-       //- id例: philosophy-l1, philosophy-l2, science-l1...
-          //-       section.subject-section-levels(id=`${category}-l${group.level}`)
-          //-         //- 3-5. 各レベル内のコースをループ
-          //-         each course in group.courses
-          //-           .subject-section-levels-child
-          //-             //- 3-6. コース情報の表示
-          //-             .subject-section-levels-child-title(class=category)= course.title         
-          //-             .subject-section-levels-child-img 
-          //-               img(src=course.img)
-          //-             .subject-section-levels-child-description= course.description
-          //-             .subject-section-levels-child-bottom
-          //-               .subject-section-levels-child-bottom-subject
-          //-                 .subject-section-levels-child-bottom-subject-category
-          //-                     if course.category === 'philosophy'
-          //-                       | 哲学
-          //-                     else if course.category === 'science'
-          //-                       | 科学
-          //-                     else if category === 'economy'
-          //-                     | 経済
-          //-                 .subject-section-levels-child-bottom-subject-level='LEVEL' + course.level
-          //-                   != course.schedule.split('\n').join('<br>') 
-          //-     div
-          //-       |LINE CTA
-        .lp-25mar-events-content-sub   
-           |サブ要素
+          each category in ["philosophy", "science", "economy"]
+            //- 3-2. カテゴリーごとのdiv作成
+            div.lp-25mar-events-main-section(id=category)
+              //- 3-3. レベルごとのグループをループ
+              //- renderCategory関数の戻り値: [
+              //-   { level: 1, courses: [コース1, コース2] },
+              //-   { level: 2, courses: [コース3, コース4] }
+              //- ]
+              h2.lp-25mar-events-main-section-title
+                if category === 'philosophy'
+                  | 哲学（思考力）
+                else if category === 'science'
+                  | 科学リテラシー
+                else if category === 'economy'
+                  | 経済（お金）
+              each group in renderCategory(category)
+                //- 3-4. レベルごとのセクション作成
+                //- id例: philosophy-l1, philosophy-l2, science-l1...
+                section.lp-25mar-events-main-section-levels(id=`${category}-l${group.level}`)
+                  //- 3-5. 各レベル内のコースをループ
+                  each course in group.courses
+                    .lp-25mar-events-main-section-levels-child
+                      //- 3-6. コース情報の表示
+                      .lp-25mar-events-main-section-levels-child-title(class=category)= course.title         
+                      .lp-25mar-events-main-section-levels-child-img 
+                        img(src=course.img)
+                      .lp-25mar-events-main-section-levels-child-description= course.description
+                      .lp-25mar-events-main-section-levels-child-bottom
+                        .lp-25mar-events-main-section-levels-child-subject
+                          .lp-25mar-events-main-section-levels-child-subject-category
+                              if course.category === 'philosophy'
+                                | 哲学
+                              else if course.category === 'science'
+                                | 科学
+                              else if category === 'economy'
+                                | 経済
+                          .lp-25mar-events-main-section-levels-child-subject-level='LEVEL' + course.level
+                            != course.schedule.split('\n').join('<br>') 
+              div
+                |LINE CTA
+        .lp-25mar-events-sub   
+           - 
+            // 科目とそのレベルを定義する配列
+            // 各科目オブジェクトは title（科目名）と levels（レベルID配列）を持つ
+            const leftsubjects = [
+                { title: "哲学（思考力）", levels: ["philosophy-l1", "philosophy-l2", "philosophy-l3", "philosophy-l4"] },
+                { title: "科学リテラシー", levels: ["science-l1", "science-l2","science-l3", "science-l4"] },
+                { title: "経済（お金）", levels: ["economy-l1", "economy-l2", "economy-l3", "economy-l4"] },
+                { title: "お申込方法", levels:[] }
+              ]
+           .lp-25mar-events-sub-left
+              // メニューのメインタイトル
+              .lp-25mar-events-sub-left-title 
+                  |Index 
+              // 各科目をループで処理
+              each subject in leftsubjects
+                      // 科目のコンテナ
+                      .lp-25mar-events-sub-left-subject
+                          // 科目名を表示
+                          .lp-25mar-events-sub-left-subject-title= subject.title
+                          // 科目の各レベルをループで処理
+                          each level, i in subject.levels
+                              // レベルへのリンクを生成
+                              // href属性には各レベルのIDを設定（例：#philosophy-l1）
+                              a(href="#" + level).lp-25mar-events-sub-left-subject-level
+                                  | LEVEL
+                                  // レベル番号を表示（インデックス + 1）
+                                  span.large= i + 1   
+                                   
+           .lp-25mar-events-sub-right
+              .lp-25mar-events-sub-right-speech
+                  |〈受講目安〉
+                  br
+                  |L1は小3から
+                  b
+                  |L2は小5から
+                  b
+                  |L3は中学生
+                  b
+                  |L4は高校生
+              .lp-25mar-events-sub-right-img
+                img(src=ImgStickyPerson)
+           a(href=UrlLineEventMarch,target='_blank').lp-25mar-events-sub-cta 
+              |申し込みはLINEでカンタン
+  section.lp-waomirai-howto.c-bg-section-white
+    .lp-waomirai-howto-title 
+       |カンタン
+       span.large|5
+       |STEP
+       br.spimage
+       |で参加可能
+    .lp-waomirai-howto-img 
+           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
 
-  //- section.lp-waomirai-howto.c-bg-section-white
-  //-   .lp-waomirai-howto-title 
-  //-      |カンタン
-  //-      span.large|5
-  //-      |STEP
-  //-      br.spimage
-  //-      |で参加可能
-  //-   .lp-waomirai-howto-img 
-  //-          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
+    -
+        var steps = [{
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
+          number: '1.',
+          title: 'LINEで公式アカウントを友だち追加',
+          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a>から<br />・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
+          number: '2.',
+          title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
+          number: '3.',
+          title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
+          number: '4.',
+          title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+        },
+        {
+          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
+          number: '5.',
+          title: '開催時間になったら届いたイベントURLから参加しましょう！'
+        }]
+    each step in steps
+      .lp-waomirai-howto-step 
+        .lp-waomirai-howto-step-child 
+          .lp-waomirai-howto-step-child-icon 
+            img(src=step.iconimg)
+          .lp-waomirai-howto-step-child-number 
+            |#{step.number}
+          .lp-waomirai-howto-step-child-text
+            .lp-waomirai-howto-step-child-text-title
+              != step.title
+            .lp-waomirai-howto-step-child-text-detail
+              != step.text        
+    //登録するためのアイコン
 
-  //-   -
-  //-       var steps = [{
-  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
-  //-         number: '1.',
-  //-         title: 'LINEで公式アカウントを友だち追加',
-  //-         text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a>から<br />・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
-  //-       },
-  //-       {
-  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
-  //-         number: '2.',
-  //-         title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
-  //-       },
-  //-       {
-  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
-  //-         number: '3.',
-  //-         title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
-  //-       },
-  //-       {
-  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
-  //-         number: '4.',
-  //-         title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
-  //-       },
-  //-       {
-  //-         iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
-  //-         number: '5.',
-  //-         title: '開催時間になったら届いたイベントURLから参加しましょう！'
-  //-       }]
-  //-   each step in steps
-  //-     .lp-waomirai-howto-step 
-  //-       .lp-waomirai-howto-step-child 
-  //-         .lp-waomirai-howto-step-child-icon 
-  //-           img(src=step.iconimg)
-  //-         .lp-waomirai-howto-step-child-number 
-  //-           |#{step.number}
-  //-         .lp-waomirai-howto-step-child-text
-  //-           .lp-waomirai-howto-step-child-text-title
-  //-             != step.title
-  //-           .lp-waomirai-howto-step-child-text-detail
-  //-             != step.text        
-  //-   //登録するためのアイコン
+  //06 ワオ未来塾って？
+  section.lp-waomirai-about
+      .c-title-25feb-lp 
+       |ワオ未来塾って？
+      .lp-waomirai-about-box 
+          .lp-waomirai-about-box-left 
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+          .lp-waomirai-about-box-right
+            |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
+  //07 授業の特徴
+  section.lp-waomirai-feature
+    .c-title-25feb-lp 
+       |授業の特長
+    div
+      .lp-waomirai-feature-child 
+        i.fa-solid.fa-globe
+        |オンライン授業で
+        br.spimage
+        |全国どこからでも
+        br.spimage
+        |参加OK
+      .lp-waomirai-feature-child 
+        i.fa-regular.fa-comments
+        |ライブだからチャットで授業に参加できる!
+      .lp-waomirai-feature-child 
+        .lp-waomirai-feature-child-icons 
+          i.fa-solid.fa-laptop
+        |必要なのはPCか
+        br.spimage
+        |タブレット端末だけ！
 
-  //-   //CTA
-  //-   +btn-25march-cta
-  //- //06 ワオ未来塾って？
-  //- section.lp-waomirai-about
-  //-     .c-title-25feb-lp 
-  //-      |ワオ未来塾って？
-  //-     .lp-waomirai-about-box 
-  //-         .lp-waomirai-about-box-left 
-  //-           img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
-  //-         .lp-waomirai-about-box-right
-  //-           |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
-  //- //07 授業の特徴
-  //- section.lp-waomirai-feature
-  //-   .c-title-25feb-lp 
-  //-      |授業の特長
-  //-   div
-  //-     .lp-waomirai-feature-child 
-  //-       i.fa-solid.fa-globe
-  //-       |オンライン授業で
-  //-       br.spimage
-  //-       |全国どこからでも
-  //-       br.spimage
-  //-       |参加OK
-  //-     .lp-waomirai-feature-child 
-  //-       i.fa-regular.fa-comments
-  //-       |ライブだからチャットで授業に参加できる!
-  //-     .lp-waomirai-feature-child 
-  //-       .lp-waomirai-feature-child-icons 
-  //-         i.fa-solid.fa-laptop
-  //-       |必要なのはPCか
-  //-       br.spimage
-  //-       |タブレット端末だけ！
-  //-   //CTA
-  //-   +btn-25march-cta
                
-  //- //08 2025年4月開講
-  //- section.lp-waomirai-start2025
-  //-     .lp-waomirai-start2025-catch 
-  //-       |社会で役立つ学びを、
-  //-       br.spimage
-  //-       |今はじめよう
-  //-       br
-  //-       |オンラインで
-  //-       br.spimage
-  //-       |楽しく学ぶ“新5教科”
-  //-     .lp-waomirai-start2025-subtitle 
-  //-       |2025年4月開校！
-  //-     .lp-waomirai-start2025-logo 
-  //-       img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
-  //-     .lp-waomirai-start2025-target 
-  //-       |〈対象〉
-  //-       br.spimage
-  //-       |小学3〜6年生／
-  //-       br.spimage
-  //-       |中学生／高校生
-  //-     .lp-waomirai-start2025-subjects 
-  //-       .pcimage
-  //-           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
-  //-       .spimage
-  //-           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
-  //-     .lp-waomirai-start2025-feature 
-  //-       .lp-waomirai-start2025-feature-box
-  //-         .lp-waomirai-start2025-feature-box-title  
-  //-           .lp-waomirai-start2025-feature-box-title-icon   
-  //-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-  //-           .lp-waomirai-start2025-feature-box-title-text 
-  //-             |新しい５教科
-  //-         .lp-waomirai-start2025-feature-box-text 
-  //-            |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
-  //-       .lp-waomirai-start2025-feature-box
-  //-         .lp-waomirai-start2025-feature-box-title  
-  //-           .lp-waomirai-start2025-feature-box-title-icon   
-  //-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-  //-           .lp-waomirai-start2025-feature-box-title-text 
-  //-             |飛び級制
-  //-         .lp-waomirai-start2025-feature-box-text 
-  //-            |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
-  //-       .lp-waomirai-start2025-feature-box
-  //-         .lp-waomirai-start2025-feature-box-title  
-  //-           .lp-waomirai-start2025-feature-box-title-icon   
-  //-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-  //-           .lp-waomirai-start2025-feature-box-title-text 
-  //-             |オンラインライブ授業
-  //-         .lp-waomirai-start2025-feature-box-text 
-  //-            |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
-  //-     .c-btn-lp
-  //-       a(href='https://waomirai.com/', target='_blank')
-  //-         .c-btn-lp-text 
-  //-           |ワオ未来塾の公式サイトへ     
-  //-         .c-btn-lp-icn 
-  //-            img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
-  //素材シリーズ
+  //08 2025年4月開講
+  section.lp-waomirai-start2025
+      .lp-waomirai-start2025-catch 
+        |社会で役立つ学びを、
+        br.spimage
+        |今はじめよう
+        br
+        |オンラインで
+        br.spimage
+        |楽しく学ぶ“新5教科”
+      .lp-waomirai-start2025-subtitle 
+        |2025年4月開校！
+      .lp-waomirai-start2025-logo 
+        img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+      .lp-waomirai-start2025-target 
+        |〈対象〉
+        br.spimage
+        |小学3〜6年生／
+        br.spimage
+        |中学生／高校生
+      .lp-waomirai-start2025-subjects 
+        .pcimage
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
+        .spimage
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
+      .lp-waomirai-start2025-feature 
+        .lp-waomirai-start2025-feature-box
+          .lp-waomirai-start2025-feature-box-title  
+            .lp-waomirai-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-waomirai-start2025-feature-box-title-text 
+              |新しい５教科
+          .lp-waomirai-start2025-feature-box-text 
+             |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+        .lp-waomirai-start2025-feature-box
+          .lp-waomirai-start2025-feature-box-title  
+            .lp-waomirai-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-waomirai-start2025-feature-box-title-text 
+              |飛び級制
+          .lp-waomirai-start2025-feature-box-text 
+             |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+        .lp-waomirai-start2025-feature-box
+          .lp-waomirai-start2025-feature-box-title  
+            .lp-waomirai-start2025-feature-box-title-icon   
+               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+            .lp-waomirai-start2025-feature-box-title-text 
+              |オンラインライブ授業
+          .lp-waomirai-start2025-feature-box-text 
+             |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+      .c-btn-lp
+        a(href='https://waomirai.com/', target='_blank')
+          .c-btn-lp-text 
+            |ワオ未来塾の公式サイトへ     
+          .c-btn-lp-icn 
+             img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
+
   footer 
     ul 
       li 

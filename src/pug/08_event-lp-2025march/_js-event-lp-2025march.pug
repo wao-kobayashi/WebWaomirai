@@ -9,3 +9,22 @@ script.
     $('.modal-close,.bg-modal').click(function() {
         $('.modal,.bg-modal').hide();
     });
+script.
+ $(document).ready(function () {
+
+      // 各エリアが視界に入った際のアクティブクラスの切り替え
+      $(window).on('scroll', function () {
+        const scrollPosition = $(window).scrollTop();
+        $('.lp-25mar-events-main-section-levels').each(function () {
+          const sectionTop = $(this).offset().top;
+          const sectionHeight = $(this).outerHeight();
+          const sectionId = $(this).attr('id');
+
+          if (scrollPosition >= sectionTop - sectionHeight / 2 &&
+              scrollPosition < sectionTop + sectionHeight / 2) {
+            $('.lp-25mar-events-sub-left-subject-level').removeClass('active');
+            $(`a[href="#${sectionId}"]`).addClass('active');
+          }
+        });
+      });
+    });

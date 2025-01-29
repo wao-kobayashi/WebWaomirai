@@ -17,30 +17,23 @@
   }
 }
 
-@mixin font-size-ml {
+@mixin font-size-l {
   font-size: 22px;
   @include responsive-style(768px) {
     font-size: 20px;
   }
 }
 
-@mixin font-size-l {
+@mixin font-size-xl {
   font-size: 27px;
   @include responsive-style(768px) {
-    font-size: 24px;
-  }
-}
-
-@mixin font-size-xl {
-  font-size: 34px;
-  @include responsive-style(768px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 @mixin font-size-xxl {
-  font-size: 48px;
+  font-size: 36px;
   @include responsive-style(768px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @mixin font-size-xxxl {
