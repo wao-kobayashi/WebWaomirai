@@ -1,12 +1,12 @@
 @import "foundation/_base"; // ベースのCSS、フォントなどの定義
 @import "foundation/_mixin"; // よく使う関数など定義したもの
 @import "foundation/_constant"; // 色などの変数定義
-@import "foundation/_wpstyle"; // WordPressスタイルの定義
-@import "foundation/_reset"; // デフォルトのスタイルをリセットしたもの
+// @import "foundation/_wpstyle"; // WordPressスタイルの定義
+// @import "foundation/_reset"; // デフォルトのスタイルをリセットしたもの
 @import "object/project/event-lp-2025march/_settings-colors.scss"; // イベントLP用の色関連設定
 @import "object/project/event-lp-2025march/_settings-animation.scss"; // イベントLP用のアニメーション設定
 @import "object/project/event-lp-2025march/_settings-typography.scss"; // イベントLP用のタイポグラフィ設定
 @import "object/project/event-lp-2025march/_settings-effects"; // イベントLP用のエフェクト設定
 @import "object/project/event-lp-2025march/_settings-layout.scss"; // イベントLP用のレイアウト設定
 @import "object/project/event-lp-2025march/_parts-modal.scss"; // イベントLP用のモーダルスタイル
-@import "object/project/event-lp-2025march/_lp-2025march"; // イベントLP用のメインスタイル
+// @import "object/project/event-lp-2025march/_lp-2025march"; // イベントLP用のメインスタイル

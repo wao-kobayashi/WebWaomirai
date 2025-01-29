@@ -54,15 +54,16 @@ header {
   }
 }
 
-.lp-2025march-fv {
-  .lp-2025march-fv-title {
+//ファーストビジュアル
+.lp-25mar-fv {
+  .lp-25mar-fv-title {
     @include font-size-xxxl;
     letter-spacing: 1.5px;
     font-weight: bold;
     margin: 20px auto 20px;
     text-align: center;
   }
-  .lp-2025march-fv-grid {
+  .lp-25mar-fv-grid {
     height: 480px;
     max-width: $width-xl;
     width: 100%;
@@ -104,8 +105,9 @@ header {
   }
 }
 
-.lp-2025march-intro {
-  margin: -120px 0 0;
+//イントロ
+.lp-25mar-intro {
+  margin: -120px 0 -90px;
   padding: 180px 0 0;
   text-align: center;
   height: 500px;
@@ -114,6 +116,45 @@ header {
   background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png")
     repeat;
   background-size: 1024px;
+}
+
+//特徴
+.lp-25mar-feature {
+  max-width: $width-xl;
+  width: 100%;
+  margin: 0 auto;
+  &-grid {
+    display: flex;
+    gap: 30px;
+
+    &-child {
+      flex: 1;
+    }
+  }
+}
+
+.lp-25mar-events {
+  display: flex;
+  height: 2000px;
+  &-content {
+    display: flex;
+
+    overflow: auto;
+    &-main {
+      // max-width: $width-main-subject;
+      width: $width-main-subject;
+      border: 1px solid black;
+      background: yellow;
+    }
+    &-sub {
+      position: sticky;
+      width: $width-side-sticky;
+      padding: 10px;
+      height: 30px;
+      border: 1px solid black;
+      top: 0;
+    }
+  }
 }
 
 //04 こんなあなたにオススメです！

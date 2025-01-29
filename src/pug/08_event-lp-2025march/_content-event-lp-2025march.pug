@@ -1,5 +1,3 @@
-
-
 body#lp-2025march
 
   //ヘッダー
@@ -9,18 +7,24 @@ body#lp-2025march
     .header-right   
       a(href=UrlLineEventMarch, target='_blank')
         |LINE公式アカウントから申込
-  //ファーストビジュアル
-  .lp-2025march-fv
-    .lp-2025march-fv-title 
+  .lp-25mar-events
+        .lp-25mar-events-content-main 
+
+        .lp-25mar-events-content-sub   
+           |サブ要素
+
+  //ファーストビジュアルs
+  div.lp-25mar-fv
+    .lp-25mar-fv-title 
        |社会で役立つ学びをオンラインで!
-    .lp-2025march-fv-grid
-      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-01
-      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-02
-      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-03
-      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-04
-      .lp-2025march-fv-grid-child.lp-2025march-fv-grid-child-05
+    .lp-25mar-fv-grid
+      .lp-25mar-fv-grid-child.lp-25mar-fv-grid-child-01
+      .lp-25mar-fv-grid-child.lp-25mar-fv-grid-child-02
+      .lp-25mar-fv-grid-child.lp-25mar-fv-grid-child-03
+      .lp-25mar-fv-grid-child.lp-25mar-fv-grid-child-04
+      .lp-25mar-fv-grid-child.lp-25mar-fv-grid-child-05
   //イントロ
-  section.lp-2025march-intro 
+  section.lp-25mar-intro 
     .lp-2025march-intro-title
       .lp-2025march-intro-title-top 
         |2025年4月開講
@@ -35,44 +39,133 @@ body#lp-2025march
       br
       |”今”必要な力をつけるオンラインライブ授業
     .lp-2025march-intro-target
-  section.lp-2025march-feature
-      .lp-2025march-feature-grid
-        .lp-2025march-feature-grid-child
-          .lp-2025march-feature-grid-child-img
+  //特徴
+  section.lp-25mar-feature
+      .lp-25mar-feature-grid
+        .lp-25mar-feature-grid-child
+          .lp-25mar-feature-grid-child-img
              img(src=ImgFeature01)
-          .lp-2025march-feature-grid-child-text
-            p|FEATURE 1
-          .lp-2025march-feature-grid-child-title 
+          .lp-25mar-feature-grid-child-title
+            .lp-25mar-feature-grid-child-title-icon
+              img(src=ImgIconSubject)
+            .lp-25mar-feature-grid-title-text
+              |FEATURE 1
+          .lp-25mar-feature-grid-child-title 
               |オンラインで楽しむ
               br
               |ライブ配信授業！
-          .lp-2025march-feature-grid-child-text 
+          .lp-25mar-feature-grid-child-text 
               |全国隅々に、新しい教育を届けたい！オンライン授業なので、日本中・世界中のどこからでもご受講いただけます。
-        .lp-2025march-feature-grid-child
-          .lp-2025march-feature-grid-child-img
+        .lp-25mar-feature-grid-child
+          .lp-25mar-feature-grid-child-img
             img(src=ImgFeature02)
-          .lp-2025march-feature-grid-child-text
-            p|FEATURE 2
-          .lp-2025march-feature-grid-child-title 
+          .lp-25mar-feature-grid-child-title
+            .lp-25mar-feature-grid-child-title-icon
+              img(src=ImgIconSubject)
+            .lp-25mar-feature-grid-title-text
+              |FEATURE 2
+          .lp-25mar-feature-grid-child-title 
               |ここでしか
               br
               |体験できない学び！
-          .lp-2025march-feature-grid-child-text 
+          .lp-25mar-feature-grid-child-text 
               |未来に生きる子どもたちの力となる”新５教科”から「哲学（思考力）」「科学リテラシー」「経済（お金）」の３教科の授業が無料で受講できます。
-        .lp-2025march-feature-grid-child
-          .lp-2025march-feature-grid-child-img
+        .lp-25mar-feature-grid-child
+          .lp-25mar-feature-grid-child-img
               img(src=ImgFeature03)
-          .lp-2025march-feature-grid-child-text
-            p|FEATURE 3
-          .lp-2025march-feature-grid-child-title 
+          .lp-25mar-feature-grid-child-title
+            .lp-25mar-feature-grid-child-title-icon
+              img(src=ImgIconSubject)
+            .lp-25mar-feature-grid-title-text
+              |FEATURE 3
+          .lp-25mar-feature-grid-child-title 
               |24講座
               br
               |48コマから選べる！
-          .lp-2025march-feature-grid-child-text 
+          .lp-25mar-feature-grid-child-text 
               |3教科×4LEVEL×2講座＝計24の講座があります！オンライン授業は火曜日～金曜日に2講座ずつ生配信！気になる講座、参加できる日時から選び放題です♪
-  div.lp-2025march-feature
-    p|FEATURE 3
-  //05 5stepで参加可能
+  
+  //講座内容
+  section.lp-25mar-events
+      .lp-25mar-events-head
+        .lp-25mar-events-head-title 
+          |講座内容
+        .lp-25mar-events-head-text 
+        .lp-25mar-events-head-nav 
+          a.lp-25mar-events-nav-child(href='#philosophy')
+            |哲学（思考力）
+          a.lp-25mar-events-nav-child(href='#science')
+            |科学リテラシー
+          a.lp-25mar-events-nav-child(href='#economy')
+            |経済（お金）
+
+      .lp-25mar-events-content 
+        .lp-25mar-events-content-main 
+          - 
+            //////////////////////////////
+            // カテゴリー別表示用の関数定義
+            //////////////////////////////
+            const renderCategory = (category) => {
+              // 2-1. 指定されたカテゴリーのコースだけを抽出
+              const catCourses = courses.filter(c => c.category === category)
+              
+              // 2-2. そのカテゴリーの中から、重複のないレベル一覧を取得
+              // - map(c => c.level): 各コースからレベルだけ取り出す → [1, 1, 2, 2] のような配列ができる
+              // - new Set(): 重複を除去 → Set{1, 2}
+              // - [...Set]: SetをArrayに戻す → [1, 2]
+              const levels = [...new Set(catCourses.map(c => c.level))]
+              
+              // 2-3. レベルごとにコースをグループ化
+              return levels.map(level => {
+                return { 
+                  level,                                              // レベル番号
+                  courses: catCourses.filter(c => c.level === level)  // そのレベルのコース一覧
+                }
+              })
+            }
+          //- each category in ["philosophy", "science", "economy"]
+          //-   //- 3-2. カテゴリーごとのdiv作成
+          //-   div.subject-section(id=category)
+          //-     //- 3-3. レベルごとのグループをループ
+          //-     //- renderCategory関数の戻り値: [
+          //-     //-   { level: 1, courses: [コース1, コース2] },
+          //-     //-   { level: 2, courses: [コース3, コース4] }
+          //-     //- ]
+          //-     h2.subject-section-title
+          //-       if category === 'philosophy'
+          //-         | 哲学（思考力）
+          //-       else if category === 'science'
+          //-         | 科学リテラシー
+          //-       else if category === 'economy'
+          //-         | 経済（お金）
+          //-     each group in renderCategory(category)
+          //-       //- 3-4. レベルごとのセクション作成
+          //-       //- id例: philosophy-l1, philosophy-l2, science-l1...
+          //-       section.subject-section-levels(id=`${category}-l${group.level}`)
+          //-         //- 3-5. 各レベル内のコースをループ
+          //-         each course in group.courses
+          //-           .subject-section-levels-child
+          //-             //- 3-6. コース情報の表示
+          //-             .subject-section-levels-child-title(class=category)= course.title         
+          //-             .subject-section-levels-child-img 
+          //-               img(src=course.img)
+          //-             .subject-section-levels-child-description= course.description
+          //-             .subject-section-levels-child-bottom
+          //-               .subject-section-levels-child-bottom-subject
+          //-                 .subject-section-levels-child-bottom-subject-category
+          //-                     if course.category === 'philosophy'
+          //-                       | 哲学
+          //-                     else if course.category === 'science'
+          //-                       | 科学
+          //-                     else if category === 'economy'
+          //-                     | 経済
+          //-                 .subject-section-levels-child-bottom-subject-level='LEVEL' + course.level
+          //-                   != course.schedule.split('\n').join('<br>') 
+          //-     div
+          //-       |LINE CTA
+        .lp-25mar-events-content-sub   
+           |サブ要素
+
   //- section.lp-waomirai-howto.c-bg-section-white
   //-   .lp-waomirai-howto-title 
   //-      |カンタン
