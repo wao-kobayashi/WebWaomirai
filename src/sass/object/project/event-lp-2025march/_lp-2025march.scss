@@ -311,18 +311,28 @@ header {
             position: relative;
             overflow: hidden;
             border-radius: $border-radius-bigplus;
-            &.inview:before {
-              transform: translateY(100%); // 下へスライドして消える
+            &.philosophy:before {
+              background: $cl-philosophy-palecolor;
             }
+            &.science::before {
+              background: $cl-science-palecolor;
+            }
+            &.economy::before {
+              background: $cl-economiy-palecolor;
+            }
+            &.inview:before {
+              transform: translateX(100%); // 下へスライドして消える
+            }
+
             &::before {
               content: "";
               position: absolute;
               top: 0;
-              left: 0;
-              width: 100%;
+              left: -50px;
+              width: 130%;
               height: 100%;
-              background: $cl-gray; // 黒い膜
-              transition: transform 0.3s ease-in-out;
+              clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+              transition: transform 0.45s ease-in-out;
               z-index: 1;
             }
             img {
