@@ -1,11 +1,11 @@
 doctype html
 html
   // 変数定義
-  include _variables-event-lp-2025march.pug
+  include _event-lp-2025march-variables
   // ミックスイン
-  include _mixin-event-lp-2025march.pug 
+  include _event-lp-2025march-mixins
   // イベントデータ
-  include _data-events.pug
+  include _event-lp-2025march-data
   head
     // Google Tag Manager
     //- script.
@@ -43,6 +43,8 @@ html
     script(src="https://go.waomirai.com/l/1026513/2025-01-29/hd4b2/1026513/1738200566csRKWJ0Z/jquery.inview.min.js")
   // コンテンツをインクルード
   body#lp-2025march
-    include _content-event-lp-2025march
-     // JavaScriptをインクルード
-    include _js-event-lp-2025march
+    include _event-lp-2025march-content.pug
+    // JavaScriptをインクルード
+    include _event-lp-2025march-js.pug
+    // PC申し込みのモーダル
+    +ModalEntlyLine

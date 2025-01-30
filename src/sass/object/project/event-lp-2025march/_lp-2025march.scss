@@ -366,7 +366,6 @@ header {
   &-main {
     // max-width: $width-main-subject;
     width: $width-main-subject;
-
     margin-left: calc((100% - $width-xl) / 2);
     &-section {
       padding: 0 0 150px;
@@ -480,9 +479,16 @@ header {
               }
             }
             &-subject-level {
-              @include font-size-l;
-              color: $cl-black;
-              text-align: center;
+              &-number {
+                @include font-size-l;
+                color: $cl-black;
+                text-align: center;
+              }
+              &-student {
+                @include font-size-s;
+                color: $cl-graylight;
+                text-align: center;
+              }
             }
             &-schedule {
               @include font-size-m;

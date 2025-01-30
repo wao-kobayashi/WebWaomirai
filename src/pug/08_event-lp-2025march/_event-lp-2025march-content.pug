@@ -160,7 +160,17 @@ section.lp-25mar-events
                                 | 科学
                               else if category === 'economy'
                                 | 経済
-                          .lp-25mar-events-main-section-levels-child-bottom-subject-level='LEVEL ' + course.level
+                          .lp-25mar-events-main-section-levels-child-bottom-subject-level
+                            .lp-25mar-events-main-section-levels-child-bottom-subject-level-number='Level.' + course.level
+                            .lp-25mar-events-main-section-levels-child-bottom-subject-level-student
+                              if course.level === 1
+                                |(小学3,4年生)
+                              else if course.level === 2
+                                |(小学5,6年生)
+                              else if course.level === 3
+                                |(中学1,2,3年生)
+                              else if course.level === 4
+                                |(高校1,2,3年生)  
                         .lp-25mar-events-main-section-levels-child-bottom-schedule                      
                             != course.schedule.split('\n').join('<br>') 
               +btn-25march-cta-subject
@@ -191,7 +201,7 @@ section.lp-25mar-events
                                 // href属性には各レベルのIDを設定（例：#philosophy-l1）
                                 a(href="#" + level,class=subject.category).lp-25mar-events-sub-left-subject-wrap-level
                                    div
-                                    | LEVEL
+                                    | Level.
                                     // レベル番号を表示（インデックス + 1）
                                     span.large= i + 1   
                                    
@@ -303,7 +313,6 @@ section.lp-waomirai-howto#lp-waomirai-howto.c-bg-section-white
               != step.title
             .lp-waomirai-howto-step-child-text-detail
               != step.text        
-
 
 //ワオ未来塾って？
 section.lp-waomirai-about

@@ -4862,14 +4862,24 @@ header .header-right a {
 .lp-25mar-events-main-section-levels-child-bottom-subject-category.economy {
   background: #28afe7;
 }
-.lp-25mar-events-main-section-levels-child-bottom-subject-level {
+.lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
   font-size: 22px;
   color: #262626;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  .lp-25mar-events-main-section-levels-child-bottom-subject-level {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
     font-size: 20px;
+  }
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
+    font-size: 11.5px;
   }
 }
 .lp-25mar-events-main-section-levels-child-bottom-schedule {
