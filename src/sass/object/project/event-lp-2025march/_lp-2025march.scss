@@ -30,15 +30,12 @@
     width: 100%;
     max-width: 500px;
     position: relative;
+    @include font-size-l;
+    letter-spacing: 1px;
     @include responsive-style(768px) {
       width: 90%;
     }
     @include box-shadow-lp;
-    .c-btn-cta-main {
-      margin: 0px 0 0;
-      @include font-size-l;
-      letter-spacing: 1px;
-    }
   }
 }
 

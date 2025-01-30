@@ -4250,21 +4250,18 @@ select {
   width: 100%;
   max-width: 500px;
   position: relative;
+  font-size: 22px;
+  letter-spacing: 1px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 768px) {
   .c-btn-cta-subject a {
-    width: 90%;
+    font-size: 20px;
   }
 }
-.c-btn-cta-subject a .c-btn-cta-main {
-  margin: 0px 0 0;
-  font-size: 22px;
-  letter-spacing: 1px;
-}
 @media screen and (max-width: 768px) {
-  .c-btn-cta-subject a .c-btn-cta-main {
-    font-size: 20px;
+  .c-btn-cta-subject a {
+    width: 90%;
   }
 }
 

@@ -3,8 +3,7 @@ header
     .header-logo 
       img(src=ImgLogo)
     .header-right   
-      a(href=UrlLineEventMarch, target='_blank')
-        |LINE公式アカウントから申込
+      +lineEntryButton('LINE公式アカウントから申込')
 //ファーストビジュアル
 div.lp-25mar-fv
     .lp-25mar-fv-title 
@@ -173,7 +172,8 @@ section.lp-25mar-events
                                 |(高校1,2,3年生)  
                         .lp-25mar-events-main-section-levels-child-bottom-schedule                      
                             != course.schedule.split('\n').join('<br>') 
-              +btn-25march-cta-subject
+              .c-btn-cta-subject
+                +lineEntryButton('LINEで簡単申込 >')
         .lp-25mar-events-sub   
            - 
             // 科目とそのレベルを定義する配列
@@ -218,8 +218,8 @@ section.lp-25mar-events
                   |L4は高校生
               .lp-25mar-events-sub-right-img
                 img(src=ImgStickyPerson)
-           a(href=UrlLineEventMarch,target='_blank').lp-25mar-events-sub-cta 
-              |申し込みはLINEでカンタン
+           .lp-25mar-events-sub-cta 
+              +lineEntryButton('申し込みはLINEでカンタン')
 //こんなあなたにオススメです！
 section.lp-waomirai-recommend
     .c-title-25feb-lp 

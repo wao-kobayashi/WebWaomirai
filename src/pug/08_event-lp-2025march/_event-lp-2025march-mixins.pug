@@ -1,20 +1,8 @@
-mixin btn-25march-cta 
-  .c-btn-cta 
-     a.modal-open-liff-qr.pcimage
-       .c-btn-cta-main 
-        |LINEで簡単申込 >
-     a(href=UrlLineEventMarch, target='_blank').spimage
-       .c-btn-cta-main 
-        |LINEで簡単申込 >
-
-mixin btn-25march-cta-subject
-  .c-btn-cta-subject
-     a.modal-open-liff-qr.pcimage
-       .c-btn-cta-main 
-        |LINEで簡単申込 >
-     a(href=UrlLineEventMarch, target='_blank').spimage
-       .c-btn-cta-main 
-        |LINEで簡単申込 >
+mixin lineEntryButton(text)
+  a.pcimage.modal-open-liff-qr
+    | #{text}
+  a.spimage(href=UrlLineEventMarch, target='_blank')
+    | #{text}
 
 mixin ModalEntlyLine
   .modal(style='display:none;')
@@ -25,13 +13,14 @@ mixin ModalEntlyLine
          .modal-wrapper-content-main
             .modal-wrapper-content-main-head
               .modal-wrapper-content-main-head-img
+                //LINEアイコン
                 img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png')
               .modal-wrapper-content-main-head-text 
                  |スマホで
                  br
                  |LINEの友だち追加
             .modal-wrapper-content-main-qr
-              img(src='qr.jpg') 
+              img(src=ImgEnrtyLiffQR) 
             .modal-wrapper-content-main-text
               |追加後に申込フォームが
               br
