@@ -13,20 +13,36 @@ script.
     $(window).on("scroll", function () {
       const scrollPosition = $(window).scrollTop();
 
-      $(".lp-25mar-events-main-section-levels").each(function () {
-        const sectionTop = $(this).offset().top;
-        const sectionHeight = $(this).outerHeight();
-        const sectionId = $(this).attr("id");
+      function handleScrollEvent(sectionSelector, linkSelector) {
+        $(sectionSelector).each(function () {
+          const sectionTop = $(this).offset().top;
+          const sectionHeight = $(this).outerHeight();
+          const sectionId = $(this).attr("id");
 
-        if (
-          scrollPosition >= sectionTop - sectionHeight / 2 &&
-          scrollPosition < sectionTop + sectionHeight / 2
-        ) {
-          $(".lp-25mar-events-sub-left-subject-wrap-level").removeClass("active");
-          $(`a[href="#${sectionId}"]`).addClass("active");
-        }
-      });
+          if (
+            scrollPosition >= sectionTop - sectionHeight / 2 &&
+            scrollPosition < sectionTop + sectionHeight / 2
+          ) {
+            $(linkSelector).removeClass("active");
+            $(`a[href="#${sectionId}"]`).addClass("active");
+          }
+        });
+      }
+
+      // PC用の追従イベントナビゲーション
+      handleScrollEvent(
+        ".lp-25mar-events-main-section-levels",
+        ".lp-25mar-events-sub-left-subject-wrap-level"
+      );
+
+      // スマホ用の追従イベントナビゲーション
+      handleScrollEvent(
+        ".lp-25mar-events-main-section",
+        ".lp-25mar-events-spnavi-child"
+      );
     });
+
+ 
 
     // inview を一括適用
     $(".lp-25mar-feature-grid-child-img, .lp-25mar-events-main-section-levels-child, .lp-25mar-events-main-section-levels-child-img, .lp-25mar-intro-title, .lp-25mar-fv-title, .lp-25mar-fv-grid-child, .lp-25mar-events-sub ")

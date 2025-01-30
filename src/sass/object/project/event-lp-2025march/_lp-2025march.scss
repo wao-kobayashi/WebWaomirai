@@ -6,38 +6,9 @@
   background: $cl-white;
   color: $cl-black;
   font-family: "Noto Sans JP", sans-serif;
-  // overflow-x: hidden;
-  // padding: 0 20px;
-  // section {
-  //   margin: 0 auto 75px;
-  // }
 }
-.c-btn-cta-subject {
-  text-align: center;
-  a {
-    animation: fuwafuwa-button 2s 0s infinite;
-    text-align: center;
-    margin: 75px auto 0px;
-    cursor: pointer;
-    background: $cl-brand-line;
-    text-decoration: none;
-    height: 78px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: $border-radius-full;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    @include font-size-l;
-    letter-spacing: 1px;
-    @include responsive-style(768px) {
-      width: 90%;
-    }
-    @include box-shadow-lp;
-  }
-}
+
+//共通CTA
 .c-btn-cta-main {
   text-align: center;
   a {
@@ -65,16 +36,13 @@
   }
 }
 
+//共通タイトル
 .c-title-25feb-lp {
   @include font-size-xl;
   @include title-underline; //下の波線
   margin: 0 auto 30px;
   text-align: center;
   //   text-decoration-style: wavy;
-}
-
-.c-bg-section-white {
-  background: white;
 }
 
 //00ヘッダー
@@ -84,7 +52,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  max-width: $width-xl;
+  max-width: calc($width-lg + 40px);
   margin: 0 auto;
   justify-content: space-between;
   @include responsive-style(768px) {
@@ -122,7 +90,7 @@ header {
 //ファーストビジュアル
 .lp-25mar-fv {
   .lp-25mar-fv-title {
-    @include font-size-xxxl;
+    @include font-size-xxxxl;
     letter-spacing: 1.5px;
     font-weight: bold;
     margin: 20px auto 20px;
@@ -207,7 +175,9 @@ header {
   width: 100%;
   background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png")
     repeat;
-  background-size: 1024px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  background-size: cover;
   &-title {
     padding: 0 0 30px;
     border-bottom: 2px solid $cl-black;
@@ -261,11 +231,11 @@ header {
   }
   &-text {
     margin: 25px 0 0;
-    @include font-size-l;
+    @include font-size-xl;
   }
   &-target {
-    background: $cl-sticky-yellow;
-    @include font-size-l;
+    background: $cl-merit-yellow;
+    @include font-size-xl;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -315,7 +285,7 @@ header {
       &-title {
         margin: 20px 0 0;
         text-align: center;
-        @include font-size-l;
+        @include font-size-xl;
         color: $cl-black;
         font-weight: bold;
         line-height: $lineheight-normal;
@@ -353,43 +323,77 @@ header {
     display: flex;
     justify-content: center;
     gap: 36px;
-    margin: 30px 0 15px;
+    margin: 45px 0 30px;
     &-child {
       border-radius: $border-radius-full;
       padding: 15px 45px;
       color: $cl-black;
-      background: $cl-graylightest;
+      // background: #d9d9d9;
+      // background: $cl-graylightest;
       display: block;
       text-decoration: none !important;
       @include font-size-m;
-      &.philosophy {
+      background: $cl-white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+
+        // margin: 0 0 0 10px;
+      }
+
+      &.philosophy:before {
         background: $cl-philosophy;
       }
-      &.science {
+      &.science:before {
         background: $cl-science;
       }
-      &.economy {
+      &.economy:before {
         background: $cl-economiy;
       }
+
+      // &.science {
+      //   border: 2px solid $cl-science;
+      //   color: $cl-science;
+      //   font-weight: bold;
+      // }
+      // &.economy {
+      //   border: 2px solid $cl-economiy;
+      //   color: $cl-economiy;
+      //   font-weight: bold;
+      // }
     }
   }
   &-bottom {
     @include font-size-m;
     text-align: center;
     margin: 15px 0 0;
+    color: $cl-graylight;
   }
 }
 
 //メインの講座
 .lp-25mar-events {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+
   //メイン講座
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+  }
   &-main {
     // max-width: $width-main-subject;
     width: $width-main-subject;
     margin-left: calc((100% - $width-xl) / 2);
+    @include responsive-style(768px) {
+      margin: 0 !important;
+    }
     &-section {
       padding: 0 0 150px;
       &-title {
@@ -484,12 +488,12 @@ header {
           }
           &-bottom {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             &-subject-category {
               border-radius: $border-radius-full;
               @include font-size-m;
               padding: 4px 8px;
-              margin: 0 0 6px;
+              margin: 0 0 3px;
               text-align: center;
               &.philosophy {
                 background: $cl-philosophy;
@@ -506,6 +510,11 @@ header {
                 @include font-size-l;
                 color: $cl-black;
                 text-align: center;
+                font-weight: 300;
+                span {
+                  @include font-size-xl;
+                  font-weight: 500;
+                }
               }
               &-student {
                 @include font-size-s;
@@ -515,8 +524,38 @@ header {
             }
             &-schedule {
               @include font-size-m;
+              span {
+                font-size: 12.5px;
+                margin: 0 6px 0 0;
+              }
             }
           }
+        }
+      }
+      &-cta {
+        text-align: center;
+        a {
+          animation: fuwafuwa-button 2s 0s infinite;
+          text-align: center;
+          margin: 75px auto 0px;
+          cursor: pointer;
+          background: $cl-brand-line;
+          text-decoration: none;
+          height: 78px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: $border-radius-full;
+          width: 100%;
+          max-width: 500px;
+          position: relative;
+          @include font-size-l;
+          letter-spacing: 1px;
+          @include responsive-style(768px) {
+            width: 90%;
+          }
+          @include box-shadow-lp;
         }
       }
     }
@@ -524,26 +563,23 @@ header {
   //追従ナビゲーション
   &-sub {
     position: sticky;
-    // background: $cl-sticky-yellow;
-    // background: $cl-graylightest;
     background: $cl-white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    width: $width-side-sticky;
-    padding: 30px 20px 20px 30px;
+    padding: 30px 10px 20px 20px;
     max-height: 620px;
     border-radius: 48px 0 0 48px;
     top: 20px;
     right: 0;
     display: grid;
-    grid-template-columns: 1fr 0.7fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
+    grid-template-columns: 1fr 0.4fr;
+    grid-column-gap: 10px;
     grid-row-gap: 0px;
-    // transition: all 1.1s ease; //何秒かけてアニメーションを行うか
-    // transform: translateX(70%);
-    // &.inview {
-    //   transform: translateX(0);
-    // }
+    max-width: $width-side-sticky;
+    @include responsive-style(1300px) {
+      padding: 30px 15px 20px 20px;
+      border-radius: 36px 0 0 36px;
+    }
+
     &-left {
       grid-area: 1 / 1 / 2 / 2;
       padding: 0 0 0 5px;
@@ -577,10 +613,13 @@ header {
             padding: 0 0 0 20px;
             margin: 5px 0 5px 0;
             line-height: $lineheight-none;
-            font-size: 14px;
             font-weight: 500;
             text-decoration: none;
             color: $cl-black;
+            font-size: 14px;
+            @include responsive-style(1300px) {
+              font-size: 16px;
+            }
             &:hover {
               opacity: 0.7;
             }
@@ -606,8 +645,10 @@ header {
             text-decoration: none;
             margin: 0 0 -2px;
             line-height: $lineheight-none;
-            // display: flex;
-            // flex-direction: column;
+            @include responsive-style(1300px) {
+              letter-spacing: 1px;
+            }
+
             &:hover {
               opacity: 0.7;
             }
@@ -682,15 +723,18 @@ header {
       }
     }
     &-right {
+      @include responsive-style(1300px) {
+        display: none;
+      }
       align-self: self-end;
-      align-content: center;
+      align-content: flex-end;
       grid-area: 1 / 2 / 2 / 3;
       &-speech {
         background: $cl-white;
         border-radius: $border-radius-full;
-        @include font-size-s;
-        width: 120px;
-        height: 120px;
+        font-size: 10px;
+        width: 100px;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -718,8 +762,9 @@ header {
         }
       }
       &-img img {
-        height: 270px;
-        margin: 0 auto 20px;
+        // height: 270px;
+        margin: 0 20px 24px auto;
+        width: 60%;
       }
     }
     &-cta {
@@ -730,12 +775,53 @@ header {
       color: $cl-white;
       display: flex;
       height: 45px;
-      margin: 7px 0 0;
+      margin: 0px 0 0;
       padding: 10px 0;
       justify-content: center;
       align-items: center;
       text-decoration: none;
       animation: fuwafuwa-button 1.8s 0s infinite;
+      @include responsive-style(1300px) {
+        font-size: 14px;
+        padding: 10px 10px;
+      }
+    }
+  }
+  &-spnavi {
+    top: 0px;
+    left: 0px;
+    position: sticky;
+    width: 100%;
+    background: white;
+    height: 50px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    a {
+      color: $cl-gray;
+      display: flex;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      padding: 4px 20px;
+      border-radius: $border-radius-full;
+      background: $cl-graylightest;
+      &.philosophy.active {
+        color: $cl-white;
+        background: $cl-philosophy;
+      }
+      &.science.active {
+        color: $cl-white;
+        background: $cl-science;
+      }
+      &.economy.active {
+        color: $cl-white;
+        background: $cl-economiy;
+      }
     }
   }
 }

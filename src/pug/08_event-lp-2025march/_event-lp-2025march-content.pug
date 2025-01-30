@@ -82,7 +82,7 @@ section.lp-25mar-feature
               |48コマから選べる！
           .lp-25mar-feature-grid-child-text 
               |3教科×4LEVEL×2講座＝計24の講座があります！オンライン授業は火曜日～金曜日に2講座ずつ生配信！気になる講座、参加できる日時から選び放題です♪
-//講座内容
+//講座内容のナビゲーション
 section.lp-25mar-eventinfo
       .lp-25mar-eventinfo-head
         .lp-25mar-eventinfo-head-title 
@@ -100,126 +100,138 @@ section.lp-25mar-eventinfo
         |クリックすると各科目の先頭にジャンプします♪
 //メインの講座
 section.lp-25mar-events
-        .lp-25mar-events-main 
-          - 
-            //////////////////////////////
-            // カテゴリー別表示用の関数定義
-            //////////////////////////////
-            const renderCategory = (category) => {
-              // 2-1. 指定されたカテゴリーのコースだけを抽出
-              const catCourses = courses.filter(c => c.category === category)
-              
-              // 2-2. そのカテゴリーの中から、重複のないレベル一覧を取得
-              // - map(c => c.level): 各コースからレベルだけ取り出す → [1, 1, 2, 2] のような配列ができる
-              // - new Set(): 重複を除去 → Set{1, 2}
-              // - [...Set]: SetをArrayに戻す → [1, 2]
-              const levels = [...new Set(catCourses.map(c => c.level))]
-              
-              // 2-3. レベルごとにコースをグループ化
-              return levels.map(level => {
-                return { 
-                  level,                                              // レベル番号
-                  courses: catCourses.filter(c => c.level === level)  // そのレベルのコース一覧
-                }
-              })
-            }
-          each category in ["philosophy", "science", "economy"]
-            //- 3-2. カテゴリーごとのdiv作成
-            div.lp-25mar-events-main-section(id=category)
-              //- 3-3. レベルごとのグループをループ
-              //- renderCategory関数の戻り値: [
-              //-   { level: 1, courses: [コース1, コース2] },
-              //-   { level: 2, courses: [コース3, コース4] }
-              //- ]
-              h2.lp-25mar-events-main-section-title
-                if category === 'philosophy'
-                  | 哲学（思考力）
-                else if category === 'science'
-                  | 科学リテラシー
-                else if category === 'economy'
-                  | 経済（お金）
-              each group in renderCategory(category)
-                //- 3-4. レベルごとのセクション作成
-                //- id例: philosophy-l1, philosophy-l2, science-l1...
-                section.lp-25mar-events-main-section-levels(id=`${category}-l${group.level}`)
-                  //- 3-5. 各レベル内のコースをループ
-                  each course in group.courses
-                    .lp-25mar-events-main-section-levels-child
-                      //- 3-6. コース情報の表示
-                      .lp-25mar-events-main-section-levels-child-title(class=category)= course.title         
-                      .lp-25mar-events-main-section-levels-child-img(class=category) 
-                        img(src=course.img)
-                      .lp-25mar-events-main-section-levels-child-description= course.description
-                      .lp-25mar-events-main-section-levels-child-bottom
-                        .lp-25mar-events-main-section-levels-child-bottom-subject
-                          .lp-25mar-events-main-section-levels-child-bottom-subject-category(class=category)
-                              if course.category === 'philosophy'
-                                | 哲学
-                              else if course.category === 'science'
-                                | 科学
-                              else if category === 'economy'
-                                | 経済
-                          .lp-25mar-events-main-section-levels-child-bottom-subject-level
-                            .lp-25mar-events-main-section-levels-child-bottom-subject-level-number='Level.' + course.level
-                            .lp-25mar-events-main-section-levels-child-bottom-subject-level-student
-                              if course.level === 1
-                                |(小学3,4年生)
-                              else if course.level === 2
-                                |(小学5,6年生)
-                              else if course.level === 3
-                                |(中学1,2,3年生)
-                              else if course.level === 4
-                                |(高校1,2,3年生)  
-                        .lp-25mar-events-main-section-levels-child-bottom-schedule                      
-                            != course.schedule.split('\n').join('<br>') 
-              .c-btn-cta-subject
-                +lineEntryButton('LINEで簡単申込 >')
-        .lp-25mar-events-sub.pcimage
-           - 
-            // 科目とそのレベルを定義する配列
-            // 各科目オブジェクトは title（科目名）と levels（レベルID配列）を持つ
-            const leftsubjects = [
-              { title: "哲学（思考力）", url: "#philosophy", levels: ["philosophy-l1", "philosophy-l2", "philosophy-l3", "philosophy-l4"], category: "philosophy" },
-              { title: "科学リテラシー", url: "#science", levels: ["science-l1", "science-l2", "science-l3", "science-l4"], category: "science" },
-              { title: "経済（お金）", url: "#economy", levels: ["economy-l1", "economy-l2", "economy-l3", "economy-l4"], category: "economy" },
-              { title: "お申込方法", url: "#lp-waomirai-howto", levels: [], category: "other" }
-            ];
-           .lp-25mar-events-sub-left
-              // メニューのメインタイトル
-              .lp-25mar-events-sub-left-title 
-                  |Index 
-              // 各科目をループで処理
-              .lp-25mar-events-sub-left-subject
-                   each subject in leftsubjects
-                        // 科目のコンテナ
-                        .lp-25mar-events-sub-left-subject-wrap
-                            // 科目名を表示
-                            a.lp-25mar-events-sub-left-subject-wrap-title(href=subject.url)= subject.title
-                            // 科目の各レベルをループで処理
-                            each level, i in subject.levels
-                                // レベルへのリンクを生成
-                                // href属性には各レベルのIDを設定（例：#philosophy-l1）
-                                a(href="#" + level,class=subject.category).lp-25mar-events-sub-left-subject-wrap-level
-                                   div
-                                    | Level.
-                                    // レベル番号を表示（インデックス + 1）
-                                    span.large= i + 1   
-                                   
-           .lp-25mar-events-sub-right
-              .lp-25mar-events-sub-right-speech
-                  |〈受講目安〉
-                  br
-                  |L1は小3から
-                  b
-                  |L2は小5から
-                  b
-                  |L3は中学生
-                  b
-                  |L4は高校生
-              .lp-25mar-events-sub-right-img
-                img(src=ImgStickyPerson)
-           .lp-25mar-events-sub-cta 
-              +lineEntryButton('申し込みはLINEでカンタン')
+        .lp-25mar-events-spnavi
+          a.lp-25mar-events-spnavi-child.philosophy(href='#philosophy')
+            |哲学
+          a.lp-25mar-events-spnavi-child.science(href='#science')
+            |科学
+          a.lp-25mar-events-spnavi-child.economy(href='#economy')
+            |経済
+        .lp-25mar-events-flex
+          .lp-25mar-events-main 
+            - 
+              //////////////////////////////
+              // カテゴリー別表示用の関数定義
+              //////////////////////////////
+              const renderCategory = (category) => {
+                // 2-1. 指定されたカテゴリーのコースだけを抽出
+                const catCourses = courses.filter(c => c.category === category)
+                
+                // 2-2. そのカテゴリーの中から、重複のないレベル一覧を取得
+                // - map(c => c.level): 各コースからレベルだけ取り出す → [1, 1, 2, 2] のような配列ができる
+                // - new Set(): 重複を除去 → Set{1, 2}
+                // - [...Set]: SetをArrayに戻す → [1, 2]
+                const levels = [...new Set(catCourses.map(c => c.level))]
+                
+                // 2-3. レベルごとにコースをグループ化
+                return levels.map(level => {
+                  return { 
+                    level,                                              // レベル番号
+                    courses: catCourses.filter(c => c.level === level)  // そのレベルのコース一覧
+                  }
+                })
+              }
+            each category in ["philosophy", "science", "economy"]
+              //- 3-2. カテゴリーごとのdiv作成
+              div.lp-25mar-events-main-section(id=category)
+                //- 3-3. レベルごとのグループをループ
+                //- renderCategory関数の戻り値: [
+                //-   { level: 1, courses: [コース1, コース2] },
+                //-   { level: 2, courses: [コース3, コース4] }
+                //- ]
+                h2.lp-25mar-events-main-section-title
+                  if category === 'philosophy'
+                    | 哲学（思考力）
+                  else if category === 'science'
+                    | 科学リテラシー
+                  else if category === 'economy'
+                    | 経済（お金）
+                each group in renderCategory(category)
+                  //- 3-4. レベルごとのセクション作成
+                  //- id例: philosophy-l1, philosophy-l2, science-l1...
+                  section.lp-25mar-events-main-section-levels(id=`${category}-l${group.level}`)
+                    //- 3-5. 各レベル内のコースをループ
+                    each course in group.courses
+                      .lp-25mar-events-main-section-levels-child
+                        //- 3-6. コース情報の表示
+                        .lp-25mar-events-main-section-levels-child-title(class=category)= course.title         
+                        .lp-25mar-events-main-section-levels-child-img(class=category) 
+                          img(src=course.img)
+                        .lp-25mar-events-main-section-levels-child-description= course.description
+                        .lp-25mar-events-main-section-levels-child-bottom
+                          .lp-25mar-events-main-section-levels-child-bottom-subject
+                            .lp-25mar-events-main-section-levels-child-bottom-subject-category(class=category)
+                                if course.category === 'philosophy'
+                                  | 哲学
+                                else if course.category === 'science'
+                                  | 科学
+                                else if category === 'economy'
+                                  | 経済
+                            .lp-25mar-events-main-section-levels-child-bottom-subject-level
+                              .lp-25mar-events-main-section-levels-child-bottom-subject-level-number
+                                |Level.
+                                span=course.level
+                              .lp-25mar-events-main-section-levels-child-bottom-subject-level-student
+                                if course.level === 1
+                                  |(小学3,4年生)
+                                else if course.level === 2
+                                  |(小学5,6年生)
+                                else if course.level === 3
+                                  |(中学1,2,3年生)
+                                else if course.level === 4
+                                  |(高校1,2,3年生)  
+                          .lp-25mar-events-main-section-levels-child-bottom-schedule                      
+                              != course.schedule.split('\n').join('<br>') 
+                .lp-25mar-events-main-section-cta
+                  +lineEntryButton('LINEで簡単申込 >')
+          .lp-25mar-events-sub.pcimage
+            - 
+              // 科目とそのレベルを定義する配列
+              // 各科目オブジェクトは title（科目名）と levels（レベルID配列）を持つ
+              const leftsubjects = [
+                { title: "哲学（思考力）", url: "#philosophy", levels: ["philosophy-l1", "philosophy-l2", "philosophy-l3", "philosophy-l4"], category: "philosophy" },
+                { title: "科学リテラシー", url: "#science", levels: ["science-l1", "science-l2", "science-l3", "science-l4"], category: "science" },
+                { title: "経済（お金）", url: "#economy", levels: ["economy-l1", "economy-l2", "economy-l3", "economy-l4"], category: "economy" },
+                { title: "お申込方法", url: "#lp-waomirai-howto", levels: [], category: "other" }
+              ];
+            .lp-25mar-events-sub-left
+                // メニューのメインタイトル
+                .lp-25mar-events-sub-left-title 
+                    |Index 
+                // 各科目をループで処理
+                .lp-25mar-events-sub-left-subject
+                    each subject in leftsubjects
+                          // 科目のコンテナ
+                          .lp-25mar-events-sub-left-subject-wrap
+                              // 科目名を表示
+                              a.lp-25mar-events-sub-left-subject-wrap-title(href=subject.url)= subject.title
+                              // 科目の各レベルをループで処理
+                              each level, i in subject.levels
+                                  // レベルへのリンクを生成
+                                  // href属性には各レベルのIDを設定（例：#philosophy-l1）
+                                  a(href="#" + level,class=subject.category).lp-25mar-events-sub-left-subject-wrap-level
+                                    div
+                                      | Level.
+                                      // レベル番号を表示（インデックス + 1）
+                                      span.large= i + 1   
+                                    
+            .lp-25mar-events-sub-right
+                .lp-25mar-events-sub-right-speech
+                    |〈受講目安〉
+                    br
+                    |L1は小3から
+                    b
+                    |L2は小5から
+                    b
+                    |L3は中学生
+                    b
+                    |L4は高校生
+                .lp-25mar-events-sub-right-img
+                  img(src=ImgStickyPerson)
+            .lp-25mar-events-sub-cta 
+                +lineEntryButton('申し込みはLINEでカンタン')
+
+
 //こんなあなたにオススメです！
 section.lp-waomirai-recommend
     .c-title-25feb-lp 

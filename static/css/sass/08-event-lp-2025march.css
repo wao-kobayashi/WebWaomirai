@@ -4231,40 +4231,6 @@ select {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.c-btn-cta-subject {
-  text-align: center;
-}
-.c-btn-cta-subject a {
-  animation: fuwafuwa-button 2s 0s infinite;
-  text-align: center;
-  margin: 75px auto 0px;
-  cursor: pointer;
-  background: #00b900;
-  text-decoration: none;
-  height: 78px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10000px;
-  width: 100%;
-  max-width: 500px;
-  position: relative;
-  font-size: 22px;
-  letter-spacing: 1px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-}
-@media screen and (max-width: 768px) {
-  .c-btn-cta-subject a {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .c-btn-cta-subject a {
-    width: 90%;
-  }
-}
-
 .c-btn-cta-main {
   text-align: center;
 }
@@ -4312,17 +4278,13 @@ select {
   }
 }
 
-.c-bg-section-white {
-  background: white;
-}
-
 header {
   height: 78px;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 20px;
-  max-width: 1200px;
+  max-width: 1090px;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -4365,7 +4327,7 @@ header .header-right a {
 }
 
 .lp-25mar-fv .lp-25mar-fv-title {
-  font-size: 50px;
+  font-size: 58px;
   letter-spacing: 1.5px;
   font-weight: bold;
   margin: 20px auto 20px;
@@ -4373,11 +4335,6 @@ header .header-right a {
   overflow: hidden;
   display: flex;
   justify-content: center;
-}
-@media screen and (max-width: 768px) {
-  .lp-25mar-fv .lp-25mar-fv-title {
-    font-size: 48px;
-  }
 }
 .lp-25mar-fv .lp-25mar-fv-title.inview span {
   transform: translate(0, 0);
@@ -4504,7 +4461,9 @@ header .header-right a {
   text-align: center;
   width: 100%;
   background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png") repeat;
-  background-size: 1024px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  background-size: cover;
 }
 .lp-25mar-intro-title {
   padding: 0 0 30px;
@@ -4601,16 +4560,16 @@ header .header-right a {
 }
 .lp-25mar-intro-text {
   margin: 25px 0 0;
-  font-size: 22px;
+  font-size: 27px;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-intro-text {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .lp-25mar-intro-target {
-  background: #f3dd2a;
-  font-size: 22px;
+  background: #ffda71;
+  font-size: 27px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -4620,7 +4579,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-intro-target {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -4670,14 +4629,14 @@ header .header-right a {
 .lp-25mar-feature-grid-child-title {
   margin: 20px 0 0;
   text-align: center;
-  font-size: 22px;
+  font-size: 27px;
   color: #262626;
   font-weight: bold;
   line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-feature-grid-child-title {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .lp-25mar-feature-grid-child-text {
@@ -4723,35 +4682,46 @@ header .header-right a {
   display: flex;
   justify-content: center;
   gap: 36px;
-  margin: 30px 0 15px;
+  margin: 45px 0 30px;
 }
 .lp-25mar-eventinfo-nav-child {
   border-radius: 10000px;
   padding: 15px 45px;
   color: #262626;
-  background: #f0f2f3;
   display: block;
   text-decoration: none !important;
   font-size: 17px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-eventinfo-nav-child {
     font-size: 16px;
   }
 }
-.lp-25mar-eventinfo-nav-child.philosophy {
+.lp-25mar-eventinfo-nav-child:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+.lp-25mar-eventinfo-nav-child.philosophy:before {
   background: #fcaf17;
 }
-.lp-25mar-eventinfo-nav-child.science {
+.lp-25mar-eventinfo-nav-child.science:before {
   background: #b6d43e;
 }
-.lp-25mar-eventinfo-nav-child.economy {
+.lp-25mar-eventinfo-nav-child.economy:before {
   background: #28afe7;
 }
 .lp-25mar-eventinfo-bottom {
   font-size: 17px;
   text-align: center;
   margin: 15px 0 0;
+  color: #999;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-eventinfo-bottom {
@@ -4761,12 +4731,19 @@ header .header-right a {
 
 .lp-25mar-events {
   width: 100%;
+}
+.lp-25mar-events-flex {
   display: flex;
   justify-content: space-between;
 }
 .lp-25mar-events-main {
   width: 920px;
   margin-left: calc((100% - 1200px) / 2);
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main {
+    margin: 0 !important;
+  }
 }
 .lp-25mar-events-main-section {
   padding: 0 0 150px;
@@ -4870,13 +4847,13 @@ header .header-right a {
 }
 .lp-25mar-events-main-section-levels-child-bottom {
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 .lp-25mar-events-main-section-levels-child-bottom-subject-category {
   border-radius: 10000px;
   font-size: 17px;
   padding: 4px 8px;
-  margin: 0 0 6px;
+  margin: 0 0 3px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -4897,10 +4874,20 @@ header .header-right a {
   font-size: 22px;
   color: #262626;
   text-align: center;
+  font-weight: 300;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
     font-size: 20px;
+  }
+}
+.lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
+  font-size: 27px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
+    font-size: 25px;
   }
 }
 .lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
@@ -4921,21 +4908,63 @@ header .header-right a {
     font-size: 16px;
   }
 }
+.lp-25mar-events-main-section-levels-child-bottom-schedule span {
+  font-size: 12.5px;
+  margin: 0 6px 0 0;
+}
+.lp-25mar-events-main-section-cta {
+  text-align: center;
+}
+.lp-25mar-events-main-section-cta a {
+  animation: fuwafuwa-button 2s 0s infinite;
+  text-align: center;
+  margin: 75px auto 0px;
+  cursor: pointer;
+  background: #00b900;
+  text-decoration: none;
+  height: 78px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  font-size: 22px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-cta a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-cta a {
+    width: 90%;
+  }
+}
 .lp-25mar-events-sub {
   position: sticky;
   background: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  width: 320px;
-  padding: 30px 20px 20px 30px;
+  padding: 30px 10px 20px 20px;
   max-height: 620px;
   border-radius: 48px 0 0 48px;
   top: 20px;
   right: 0;
   display: grid;
-  grid-template-columns: 1fr 0.7fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
+  grid-template-columns: 1fr 0.4fr;
+  grid-column-gap: 10px;
   grid-row-gap: 0px;
+  max-width: 280px;
+}
+@media screen and (max-width: 1300px) {
+  .lp-25mar-events-sub {
+    padding: 30px 15px 20px 20px;
+    border-radius: 36px 0 0 36px;
+  }
 }
 .lp-25mar-events-sub-left {
   grid-area: 1/1/2/2;
@@ -4972,10 +5001,15 @@ header .header-right a {
   padding: 0 0 0 20px;
   margin: 5px 0 5px 0;
   line-height: 1;
-  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   color: #262626;
+  font-size: 14px;
+}
+@media screen and (max-width: 1300px) {
+  .lp-25mar-events-sub-left-subject-wrap-title {
+    font-size: 16px;
+  }
 }
 .lp-25mar-events-sub-left-subject-wrap-title:hover {
   opacity: 0.7;
@@ -5005,6 +5039,11 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-25mar-events-sub-left-subject-wrap-level {
     font-size: 11.5px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .lp-25mar-events-sub-left-subject-wrap-level {
+    letter-spacing: 1px;
   }
 }
 .lp-25mar-events-sub-left-subject-wrap-level:hover {
@@ -5086,15 +5125,20 @@ header .header-right a {
 }
 .lp-25mar-events-sub-right {
   align-self: self-end;
-  align-content: center;
+  align-content: flex-end;
   grid-area: 1/2/2/3;
+}
+@media screen and (max-width: 1300px) {
+  .lp-25mar-events-sub-right {
+    display: none;
+  }
 }
 .lp-25mar-events-sub-right-speech {
   background: #ffffff;
   border-radius: 10000px;
-  font-size: 12px;
-  width: 120px;
-  height: 120px;
+  font-size: 10px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5103,11 +5147,6 @@ header .header-right a {
   margin: 0 0 20px;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-@media screen and (max-width: 768px) {
-  .lp-25mar-events-sub-right-speech {
-    font-size: 11.5px;
-  }
 }
 .lp-25mar-events-sub-right-speech::before {
   content: "";
@@ -5126,8 +5165,8 @@ header .header-right a {
   z-index: 1;
 }
 .lp-25mar-events-sub-right-img img {
-  height: 270px;
-  margin: 0 auto 20px;
+  margin: 0 20px 24px auto;
+  width: 60%;
 }
 .lp-25mar-events-sub-cta {
   grid-area: 2/1/3/3;
@@ -5137,7 +5176,7 @@ header .header-right a {
   color: #ffffff;
   display: flex;
   height: 45px;
-  margin: 7px 0 0;
+  margin: 0px 0 0;
   padding: 10px 0;
   justify-content: center;
   align-items: center;
@@ -5148,6 +5187,49 @@ header .header-right a {
   .lp-25mar-events-sub-cta {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 1300px) {
+  .lp-25mar-events-sub-cta {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+}
+.lp-25mar-events-spnavi {
+  top: 0px;
+  left: 0px;
+  position: sticky;
+  width: 100%;
+  background: white;
+  height: 50px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.lp-25mar-events-spnavi a {
+  color: #4d4d4d;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 4px 20px;
+  border-radius: 10000px;
+  background: #f0f2f3;
+}
+.lp-25mar-events-spnavi a.philosophy.active {
+  color: #ffffff;
+  background: #fcaf17;
+}
+.lp-25mar-events-spnavi a.science.active {
+  color: #ffffff;
+  background: #b6d43e;
+}
+.lp-25mar-events-spnavi a.economy.active {
+  color: #ffffff;
+  background: #28afe7;
 }
 
 section.lp-waomirai-recommend {
