@@ -1,18 +1,24 @@
+script.
+  // モーダルを開くボタンのクリックイベント
+  $('.modal-open-liff-qr').click(function() {
+    $('.modal,.bg-modal').show();
+  });
 
-script. 
-    $('.modal-open-liff-qr').click(function() {
-       $('.modal,.bg-modal').show();
-    });
+  // モーダルを閉じるボタンと背景のクリックイベント
+  $('.modal-close,.bg-modal').click(function() {
+    $('.modal,.bg-modal').hide();
+  });
 
-    $('.modal-close,.bg-modal').click(function() {
-        $('.modal,.bg-modal').hide();
-    });
 script.
   $(document).ready(function () {
-    // 各エリアが視界に入った際のアクティブクラスの切り替え
+    // スクロールイベントで固定CTAボタンの表示を制御
     $(window).on("scroll", function () {
-      const scrollPosition = $(window).scrollTop();
+      const scrollPosition = $(window).scrollTop();    
+      if (scrollPosition > 500) {
+        $('.fixed-cta-button').fadeIn();
+      } 
 
+      // 各セクションが視界に入った際のアクティブクラスの切り替え関数
       function handleScrollEvent(sectionSelector, linkSelector) {
         $(sectionSelector).each(function () {
           const sectionTop = $(this).offset().top;
@@ -42,15 +48,11 @@ script.
       );
     });
 
- 
-
     // inview を一括適用
-    $(".lp-25mar-feature-grid-child-img, .lp-25mar-events-main-section-levels-child, .lp-25mar-events-main-section-levels-child-img, .lp-25mar-intro-title, .lp-25mar-fv-title, .lp-25mar-fv-grid-child, .lp-25mar-events-sub ")
+    $(".lp-25mar-feature-grid-child-img, .lp-25mar-events-main-section-levels-child, .lp-25mar-events-main-section-levels-child-img, .lp-25mar-intro-title, .lp-25mar-fv-title, .lp-25mar-fv-grid-child, .lp-25mar-events-sub")
       .on("inview", function (event, isInView) {
         if (isInView) {
           $(this).addClass("inview");
         }
       });
   });
-
-

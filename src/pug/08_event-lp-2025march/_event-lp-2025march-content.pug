@@ -2,10 +2,10 @@
 header 
     .header-logo 
       img(src=ImgLogo)
-    .header-right   
+    .header-right.pcimage
       +lineEntryButton('LINE公式アカウントから申込')
 //ファーストビジュアル
-div.lp-25mar-fv
+div.lp-25mar-fv.pcimage
     .lp-25mar-fv-title 
         |社会で役立つ学びをオンラインで!
 
@@ -24,11 +24,16 @@ div.lp-25mar-fv
 section.lp-25mar-intro 
     .lp-25mar-intro-title
       .lp-25mar-intro-title-top 
-        |ワオ未来塾　開講直前
+        span|ワオ未来塾
+        span|開講直前
       .lp-25mar-intro-title-main
-        |無料体験MONTH
+        |無料体験
+        br.spimage
+        |MONTH
       .lp-25mar-intro-title-special 
-        |たっぷり無料体験ができるスペシャルな6週間
+        |たっぷり無料体験ができる
+        br.spimage
+        |スペシャルな6週間
     .lp-25mar-intro-text
       |ワオ未来塾でしか受けられない！
       br
@@ -88,8 +93,10 @@ section.lp-25mar-eventinfo
         .lp-25mar-eventinfo-head-title 
           |講座内容
         .lp-25mar-eventinfo-head-text 
-           |受けてみたい教科を選んで講座内容をチェックしよう！
-      .lp-25mar-eventinfo-nav 
+           |受けてみたい教科を選んで
+           br.spimage
+           |講座内容をチェックしよう！
+      .lp-25mar-eventinfo-nav.pcimage
           a.lp-25mar-eventinfo-nav-child.philosophy(href='#philosophy')
             |哲学（思考力）
           a.lp-25mar-eventinfo-nav-child.science(href='#science')
@@ -435,3 +442,10 @@ section.bg-lp-creamyellow
         img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
       .footer-copyright
         |© ワオ・コーポレーション All rights reserved.
+
+// PCでの申込みのモーダル
++ModalEntlyLine
+
+// SPのCTA
+.fixed-cta-button(style='display:none;')
+   +lineEntryButton('無料体験イベントにお申込み')

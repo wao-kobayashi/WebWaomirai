@@ -7,6 +7,27 @@
   color: $cl-black;
   font-family: "Noto Sans JP", sans-serif;
 }
+.fixed-cta-button a {
+  @include min-responsive-style(769px) {
+    display: none;
+  }
+  background: $cl-brand-line;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: $border-radius-full;
+  text-decoration: none;
+  bottom: 20px;
+  font-size: 16px;
+  color: $cl-white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
 
 //共通CTA
 .c-btn-cta-main {
@@ -182,20 +203,8 @@ header {
     padding: 0 0 30px;
     border-bottom: 2px solid $cl-black;
     display: inline-block;
-    &-main,
-    &-top {
-      span {
-        display: block;
-        transform: translate(0, 105%);
-        transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-        @for $i from 1 through 13 {
-          &:nth-child(#{$i + 1}) {
-            $delay: $i * 0.15 + s;
-            transition-delay: $delay;
-          }
-        }
-      }
-    }
+    margin: 0 auto;
+    width: 100%;
     &-top {
       @include font-size-xxxl;
       color: $cl-black;
@@ -205,11 +214,9 @@ header {
       overflow: hidden;
       display: flex;
       justify-content: center;
-    }
-    &.inview {
-      .lp-25mar-intro-title-main span,
-      .lp-25mar-intro-title-top span {
-        transform: translate(0, 0);
+      @include responsive-style(768px) {
+        // display: inline-block;
+        @include font-size-xxl;
       }
     }
 
@@ -220,8 +227,10 @@ header {
       text-align: center;
       font-weight: bold;
       letter-spacing: 30px;
-      overflow: hidden;
-      display: flex;
+      width: 100%;
+      @include responsive-style(768px) {
+        margin: 0 auto 14px;
+      }
     }
     &-special {
       @include font-size-m;
@@ -232,16 +241,23 @@ header {
   &-text {
     margin: 25px 0 0;
     @include font-size-xl;
+    @include responsive-style(768px) {
+      @include font-size-m;
+    }
   }
   &-target {
     background: $cl-merit-yellow;
-    @include font-size-xl;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: $border-radius-full;
     padding: 8px 20px;
     margin: 20px 0 0;
+    @include font-size-xl;
+    @include responsive-style(768px) {
+      @include font-size-l;
+    }
   }
 }
 
@@ -250,10 +266,15 @@ header {
   max-width: $width-lg;
   width: 100%;
   margin: 0 auto 90px;
+  @include responsive-style(768px) {
+    padding: 0 20px;
+  }
   &-grid {
     display: flex;
     gap: 45px;
-
+    @include responsive-style(768px) {
+      flex-direction: column;
+    }
     &-child {
       flex: 1;
       &-img {
@@ -306,6 +327,11 @@ header {
   max-width: $width-xl;
   margin: 0 auto 60px;
   border-bottom: 2px solid $cl-black;
+  @include responsive-style(768px) {
+    border-bottom: none;
+    padding: 0 0 0px;
+    margin: 0 auto 15px;
+  }
   &-head {
     &-title {
       @include font-size-xxl;
@@ -324,6 +350,9 @@ header {
     justify-content: center;
     gap: 36px;
     margin: 45px 0 30px;
+    @include responsive-style(768px) {
+      gap: 10px;
+    }
     &-child {
       border-radius: $border-radius-full;
       padding: 15px 45px;
@@ -338,8 +367,14 @@ header {
       align-items: center;
       gap: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-
+      @include responsive-style(768px) {
+        padding: 10px 10px;
+        @include font-size-s;
+      }
       &:before {
+        @include responsive-style(768px) {
+          display: none;
+        }
         content: "";
         display: inline-block;
         width: 13px;
@@ -357,24 +392,17 @@ header {
       &.economy:before {
         background: $cl-economiy;
       }
-
-      // &.science {
-      //   border: 2px solid $cl-science;
-      //   color: $cl-science;
-      //   font-weight: bold;
-      // }
-      // &.economy {
-      //   border: 2px solid $cl-economiy;
-      //   color: $cl-economiy;
-      //   font-weight: bold;
-      // }
     }
   }
   &-bottom {
+    border-top: 2px solid $cl-black;
     @include font-size-m;
     text-align: center;
-    margin: 15px 0 0;
+    padding: 15px 0 0;
     color: $cl-graylight;
+    @include responsive-style(768px) {
+      margin: 15px 0 0;
+    }
   }
 }
 
@@ -405,6 +433,10 @@ header {
         display: flex;
         gap: 30px;
         margin: 0 0 30px;
+        @include responsive-style(768px) {
+          display: block;
+          padding: 0 20px;
+        }
         &-child {
           flex: 1;
           padding: 20px;
@@ -413,6 +445,10 @@ header {
           opacity: 0;
           visibility: hidden;
           transform: translateY(100px);
+          @include responsive-style(768px) {
+            margin: 0 auto 30px;
+            padding: 15px;
+          }
           &.inview {
             opacity: 1;
             visibility: visible;
@@ -489,12 +525,19 @@ header {
           &-bottom {
             display: flex;
             gap: 30px;
+            @include responsive-style(768px) {
+              gap: 15px;
+            }
             &-subject-category {
               border-radius: $border-radius-full;
-              @include font-size-m;
+
               padding: 4px 8px;
               margin: 0 0 3px;
               text-align: center;
+              @include font-size-m;
+              @include responsive-style(768px) {
+                @include font-size-s;
+              }
               &.philosophy {
                 background: $cl-philosophy;
               }
@@ -507,25 +550,41 @@ header {
             }
             &-subject-level {
               &-number {
-                @include font-size-l;
                 color: $cl-black;
                 text-align: center;
                 font-weight: 300;
+                @include font-size-l;
+                @include responsive-style(768px) {
+                  font-size: 14px;
+                  line-height: $lineheight-none;
+                }
                 span {
                   @include font-size-xl;
                   font-weight: 500;
+                  @include responsive-style(768px) {
+                    @include font-size-l;
+                  }
                 }
               }
               &-student {
                 @include font-size-s;
                 color: $cl-graylight;
                 text-align: center;
+                @include responsive-style(768px) {
+                  font-size: 10px;
+                }
               }
             }
             &-schedule {
               @include font-size-m;
+              @include responsive-style(768px) {
+                font-size: 14.2px;
+              }
               span {
                 font-size: 12.5px;
+                @include responsive-style(768px) {
+                  font-size: 11px;
+                }
                 margin: 0 6px 0 0;
               }
             }
@@ -799,7 +858,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 30px;
     a {
       color: $cl-gray;
       display: flex;

@@ -4231,6 +4231,30 @@ select {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.fixed-cta-button a {
+  background: #00b900;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10000px;
+  text-decoration: none;
+  bottom: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 769px) {
+  .fixed-cta-button a {
+    display: none;
+  }
+}
+
 .c-btn-cta-main {
   text-align: center;
 }
@@ -4469,50 +4493,8 @@ header .header-right a {
   padding: 0 0 30px;
   border-bottom: 2px solid #262626;
   display: inline-block;
-}
-.lp-25mar-intro-title-main span, .lp-25mar-intro-title-top span {
-  display: block;
-  transform: translate(0, 105%);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-}
-.lp-25mar-intro-title-main span:nth-child(2), .lp-25mar-intro-title-top span:nth-child(2) {
-  transition-delay: 0.15s;
-}
-.lp-25mar-intro-title-main span:nth-child(3), .lp-25mar-intro-title-top span:nth-child(3) {
-  transition-delay: 0.3s;
-}
-.lp-25mar-intro-title-main span:nth-child(4), .lp-25mar-intro-title-top span:nth-child(4) {
-  transition-delay: 0.45s;
-}
-.lp-25mar-intro-title-main span:nth-child(5), .lp-25mar-intro-title-top span:nth-child(5) {
-  transition-delay: 0.6s;
-}
-.lp-25mar-intro-title-main span:nth-child(6), .lp-25mar-intro-title-top span:nth-child(6) {
-  transition-delay: 0.75s;
-}
-.lp-25mar-intro-title-main span:nth-child(7), .lp-25mar-intro-title-top span:nth-child(7) {
-  transition-delay: 0.9s;
-}
-.lp-25mar-intro-title-main span:nth-child(8), .lp-25mar-intro-title-top span:nth-child(8) {
-  transition-delay: 1.05s;
-}
-.lp-25mar-intro-title-main span:nth-child(9), .lp-25mar-intro-title-top span:nth-child(9) {
-  transition-delay: 1.2s;
-}
-.lp-25mar-intro-title-main span:nth-child(10), .lp-25mar-intro-title-top span:nth-child(10) {
-  transition-delay: 1.35s;
-}
-.lp-25mar-intro-title-main span:nth-child(11), .lp-25mar-intro-title-top span:nth-child(11) {
-  transition-delay: 1.5s;
-}
-.lp-25mar-intro-title-main span:nth-child(12), .lp-25mar-intro-title-top span:nth-child(12) {
-  transition-delay: 1.65s;
-}
-.lp-25mar-intro-title-main span:nth-child(13), .lp-25mar-intro-title-top span:nth-child(13) {
-  transition-delay: 1.8s;
-}
-.lp-25mar-intro-title-main span:nth-child(14), .lp-25mar-intro-title-top span:nth-child(14) {
-  transition-delay: 1.95s;
+  margin: 0 auto;
+  width: 100%;
 }
 .lp-25mar-intro-title-top {
   font-size: 50px;
@@ -4529,9 +4511,15 @@ header .header-right a {
     font-size: 48px;
   }
 }
-.lp-25mar-intro-title.inview .lp-25mar-intro-title-main span,
-.lp-25mar-intro-title.inview .lp-25mar-intro-title-top span {
-  transform: translate(0, 0);
+@media screen and (max-width: 768px) {
+  .lp-25mar-intro-title-top {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-25mar-intro-title-top {
+    font-size: 30px;
+  }
 }
 .lp-25mar-intro-title-main {
   font-size: 50px;
@@ -4540,12 +4528,16 @@ header .header-right a {
   text-align: center;
   font-weight: bold;
   letter-spacing: 30px;
-  overflow: hidden;
-  display: flex;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-intro-title-main {
     font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-intro-title-main {
+    margin: 0 auto 14px;
   }
 }
 .lp-25mar-intro-title-special {
@@ -4567,19 +4559,39 @@ header .header-right a {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-intro-text {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-25mar-intro-text {
+    font-size: 16px;
+  }
+}
 .lp-25mar-intro-target {
   background: #ffda71;
-  font-size: 27px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 10000px;
   padding: 8px 20px;
   margin: 20px 0 0;
+  font-size: 27px;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-intro-target {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-intro-target {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-25mar-intro-target {
+    font-size: 20px;
   }
 }
 
@@ -4588,9 +4600,19 @@ header .header-right a {
   width: 100%;
   margin: 0 auto 90px;
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-feature {
+    padding: 0 20px;
+  }
+}
 .lp-25mar-feature-grid {
   display: flex;
   gap: 45px;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-feature-grid {
+    flex-direction: column;
+  }
 }
 .lp-25mar-feature-grid-child {
   flex: 1;
@@ -4658,6 +4680,13 @@ header .header-right a {
   margin: 0 auto 60px;
   border-bottom: 2px solid #262626;
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-eventinfo {
+    border-bottom: none;
+    padding: 0 0 0px;
+    margin: 0 auto 15px;
+  }
+}
 .lp-25mar-eventinfo-head-title {
   font-size: 36px;
   text-align: center;
@@ -4684,6 +4713,11 @@ header .header-right a {
   gap: 36px;
   margin: 45px 0 30px;
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-eventinfo-nav {
+    gap: 10px;
+  }
+}
 .lp-25mar-eventinfo-nav-child {
   border-radius: 10000px;
   padding: 15px 45px;
@@ -4702,11 +4736,27 @@ header .header-right a {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-eventinfo-nav-child {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-25mar-eventinfo-nav-child {
+    font-size: 11.5px;
+  }
+}
 .lp-25mar-eventinfo-nav-child:before {
   content: "";
   display: inline-block;
   width: 13px;
   height: 13px;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-eventinfo-nav-child:before {
+    display: none;
+  }
 }
 .lp-25mar-eventinfo-nav-child.philosophy:before {
   background: #fcaf17;
@@ -4718,14 +4768,20 @@ header .header-right a {
   background: #28afe7;
 }
 .lp-25mar-eventinfo-bottom {
+  border-top: 2px solid #262626;
   font-size: 17px;
   text-align: center;
-  margin: 15px 0 0;
+  padding: 15px 0 0;
   color: #999;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-eventinfo-bottom {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-eventinfo-bottom {
+    margin: 15px 0 0;
   }
 }
 
@@ -4763,6 +4819,12 @@ header .header-right a {
   gap: 30px;
   margin: 0 0 30px;
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels {
+    display: block;
+    padding: 0 20px;
+  }
+}
 .lp-25mar-events-main-section-levels-child {
   flex: 1;
   padding: 20px;
@@ -4771,6 +4833,12 @@ header .header-right a {
   opacity: 0;
   visibility: hidden;
   transform: translateY(100px);
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child {
+    margin: 0 auto 30px;
+    padding: 15px;
+  }
 }
 .lp-25mar-events-main-section-levels-child.inview {
   opacity: 1;
@@ -4849,16 +4917,31 @@ header .header-right a {
   display: flex;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom {
+    gap: 15px;
+  }
+}
 .lp-25mar-events-main-section-levels-child-bottom-subject-category {
   border-radius: 10000px;
-  font-size: 17px;
   padding: 4px 8px;
   margin: 0 0 3px;
   text-align: center;
+  font-size: 17px;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-category {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-category {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-category {
+    font-size: 11.5px;
   }
 }
 .lp-25mar-events-main-section-levels-child-bottom-subject-category.philosophy {
@@ -4871,14 +4954,20 @@ header .header-right a {
   background: #28afe7;
 }
 .lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
-  font-size: 22px;
   color: #262626;
   text-align: center;
   font-weight: 300;
+  font-size: 22px;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
+    font-size: 14px;
+    line-height: 1;
   }
 }
 .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
@@ -4888,6 +4977,16 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
+    font-size: 20px;
   }
 }
 .lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
@@ -4900,6 +4999,11 @@ header .header-right a {
     font-size: 11.5px;
   }
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
+    font-size: 10px;
+  }
+}
 .lp-25mar-events-main-section-levels-child-bottom-schedule {
   font-size: 17px;
 }
@@ -4908,9 +5012,19 @@ header .header-right a {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-schedule {
+    font-size: 14.2px;
+  }
+}
 .lp-25mar-events-main-section-levels-child-bottom-schedule span {
   font-size: 12.5px;
   margin: 0 6px 0 0;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-schedule span {
+    font-size: 11px;
+  }
 }
 .lp-25mar-events-main-section-cta {
   text-align: center;
@@ -5206,7 +5320,7 @@ header .header-right a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 30px;
 }
 .lp-25mar-events-spnavi a {
   color: #4d4d4d;
