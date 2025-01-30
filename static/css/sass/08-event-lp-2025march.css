@@ -4265,6 +4265,40 @@ select {
   }
 }
 
+.c-btn-cta-main {
+  text-align: center;
+}
+.c-btn-cta-main a {
+  animation: fuwafuwa-button 2s 0s infinite;
+  text-align: center;
+  margin: 0px auto 0px;
+  cursor: pointer;
+  background: #00b900;
+  text-decoration: none;
+  height: 78px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  font-size: 22px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 768px) {
+  .c-btn-cta-main a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-btn-cta-main a {
+    width: 90%;
+  }
+}
+
 .c-title-25feb-lp {
   font-size: 27px;
   text-decoration: underline wavy;
@@ -5292,14 +5326,191 @@ section.lp-waomirai-recommend .lp-waomirai-point-right {
   }
 }
 
-section.lp-waomirai-feature {
-  padding: 75px 20px 75px;
-  margin: 0 auto;
+.lp-waomirai-howto {
+  padding: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto {
+    margin: 0 0px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-title {
+  font-size: 27px;
+  margin: 0 auto 30px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-title {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-title {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-title {
+    font-size: 25px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-title .large {
+  font-size: 50px;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-title .large {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-title .large {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-title .large {
+    font-size: 48px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-img {
+  width: 200px;
+  margin: 0 auto 60px;
+}
+.lp-waomirai-howto .lp-waomirai-howto-step-child {
+  max-width: 700px;
   width: 100%;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 100px 10px 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto 90px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-icon {
+    width: 100px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-step-child-number {
+  font-size: 27px;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-number {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-number {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-number {
+    font-size: 30px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-step-child-text {
+  width: 100%;
+  padding: 0 20px;
+}
+.lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
+  font-size: 22px;
+  margin: 5px 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
+    font-size: 20px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail {
+  font-size: 17px;
+  line-height: 1.75;
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail {
+    font-size: 16px;
+  }
+}
+.lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail a {
+  color: #262626;
+}
+
+.bg-lp-creamyellow {
+  background: #fff8e0;
+  width: 100%;
+  margin: 0 auto;
+}
+.bg-lp-creamyellow .lp-waomirai-about {
+  background: #fff8e0;
+  padding: 75px 0 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box {
+  background: white;
+  max-width: 1050px;
+  margin: 0 auto 0px;
+  padding: 48px 36px;
+  border-radius: 64px;
+  display: flex;
+  gap: 45px;
+}
+@media screen and (max-width: 768px) {
+  .bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box {
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 30px;
+    padding: 40px 20px 40px;
+    border-radius: 24px;
+  }
+}
+.bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box-left {
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  .bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box-left {
+    width: 70%;
+    margin: 0 auto 0px;
+  }
+}
+.bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box-right {
+  flex: 1;
+  line-height: 1.75;
+  font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+  .bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box-right {
+    font-size: 16px;
+  }
+}
+.bg-lp-creamyellow .lp-waomirai-feature {
+  padding: 75px 20px 105px;
+  margin: 0 auto;
+  max-width: 1200px;
   text-align: center;
   background: #fff8e0;
 }
-section.lp-waomirai-feature .lp-waomirai-feature-child {
+.bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child {
   font-size: 22px;
   background: #fffb96;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -5315,19 +5526,19 @@ section.lp-waomirai-feature .lp-waomirai-feature-child {
   gap: 20px;
 }
 @media screen and (max-width: 768px) {
-  section.lp-waomirai-feature .lp-waomirai-feature-child {
+  .bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child {
     font-size: 20px;
   }
 }
-section.lp-waomirai-feature .lp-waomirai-feature-child:last-child {
+.bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child:last-child {
   margin: 0 auto 90px;
 }
-section.lp-waomirai-feature .lp-waomirai-feature-child-icons {
+.bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child-icons {
   display: flex;
   gap: 10px;
 }
 @media screen and (max-width: 768px) {
-  section.lp-waomirai-feature .lp-waomirai-feature-child {
+  .bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child {
     margin: 0 auto 45px;
     height: auto;
     padding: 20px;
@@ -5336,188 +5547,28 @@ section.lp-waomirai-feature .lp-waomirai-feature-child-icons {
     border-radius: 24px;
   }
 }
-
-section.lp-waomirai-howto {
-  padding: 30px 0;
-  margin: 0 -20px;
-}
-section.lp-waomirai-howto .lp-waomirai-howto-title {
-  font-size: 27px;
-  margin: 0 auto 30px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-title {
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-title {
-    font-size: 27px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-title {
-    font-size: 25px;
-  }
-}
-section.lp-waomirai-howto .lp-waomirai-howto-title .large {
-  font-size: 50px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 48px;
-  }
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 50px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 48px;
-  }
-}
-section.lp-waomirai-howto .lp-waomirai-howto-img {
-  width: 200px;
-  margin: 0 auto 60px;
-}
-section.lp-waomirai-howto .lp-waomirai-howto-step-child {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto 60px;
-  display: grid;
-  grid-template-columns: 100px 10px 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto 90px;
-  }
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-icon {
-    width: 100px;
-  }
-}
-section.lp-waomirai-howto .lp-waomirai-howto-step-child-number {
-  font-size: 27px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-number {
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-number {
-    font-size: 36px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-number {
-    font-size: 30px;
-  }
-}
-section.lp-waomirai-howto .lp-waomirai-howto-step-child-text {
-  width: 100%;
-  padding: 0 20px;
-}
-section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
-  font-size: 22px;
-  margin: 5px 0 15px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
-    font-size: 22px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-title {
-    font-size: 20px;
-  }
-}
-section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail {
-  font-size: 17px;
-  line-height: 1.75;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail {
-    font-size: 16px;
-  }
-}
-section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail a {
-  color: #262626;
-}
-
-section.lp-waomirai-about {
+.bg-lp-creamyellow .lp-waomirai-start2025 {
   background: #fff8e0;
-  padding: 75px 0 0;
-}
-section.lp-waomirai-about .lp-waomirai-about-box {
-  background: white;
-  max-width: 1050px;
-  margin: 0 auto 0px;
-  padding: 48px 36px;
-  border-radius: 64px;
-  display: flex;
-  gap: 45px;
+  padding: 0 0px 120px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-  section.lp-waomirai-about .lp-waomirai-about-box {
-    flex-direction: column;
+  .bg-lp-creamyellow .lp-waomirai-start2025 {
     margin: 0 20px;
-    gap: 30px;
-    padding: 40px 20px 40px;
-    border-radius: 24px;
   }
 }
-section.lp-waomirai-about .lp-waomirai-about-box-left {
-  width: 250px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-about .lp-waomirai-about-box-left {
-    width: 70%;
-    margin: 0 auto 0px;
-  }
-}
-section.lp-waomirai-about .lp-waomirai-about-box-right {
-  flex: 1;
-  line-height: 1.75;
-  font-size: 17px;
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-about .lp-waomirai-about-box-right {
-    font-size: 16px;
-  }
-}
-
-.lp-waomirai-start2025 {
-  background: #fff8e0;
-}
-.lp-waomirai-start2025-catch {
+.bg-lp-creamyellow .lp-waomirai-start2025-catch {
   font-size: 22px;
   margin: 0 auto;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-catch {
+  .bg-lp-creamyellow .lp-waomirai-start2025-catch {
     font-size: 20px;
   }
 }
-.lp-waomirai-start2025-subtitle {
+.bg-lp-creamyellow .lp-waomirai-start2025-subtitle {
   background: #ee7a00;
   color: white;
   font-size: 27px;
@@ -5527,40 +5578,40 @@ section.lp-waomirai-about .lp-waomirai-about-box-right {
   border-radius: 10000px;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-subtitle {
+  .bg-lp-creamyellow .lp-waomirai-start2025-subtitle {
     font-size: 25px;
   }
 }
-.lp-waomirai-start2025-logo {
+.bg-lp-creamyellow .lp-waomirai-start2025-logo {
   max-width: 800px;
   margin: 0 auto 30px;
 }
-.lp-waomirai-start2025-target {
+.bg-lp-creamyellow .lp-waomirai-start2025-target {
   font-size: 22px;
   margin: 0 auto 30px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-target {
+  .bg-lp-creamyellow .lp-waomirai-start2025-target {
     font-size: 20px;
   }
 }
-.lp-waomirai-start2025-subjects {
+.bg-lp-creamyellow .lp-waomirai-start2025-subjects {
   max-width: 800px;
   margin: 0 auto 45px;
 }
-.lp-waomirai-start2025-feature {
+.bg-lp-creamyellow .lp-waomirai-start2025-feature {
   display: flex;
   gap: 45px;
   margin: 0px 0 60px;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-feature {
+  .bg-lp-creamyellow .lp-waomirai-start2025-feature {
     flex-direction: column;
     gap: 30px;
   }
 }
-.lp-waomirai-start2025-feature-box {
+.bg-lp-creamyellow .lp-waomirai-start2025-feature-box {
   background: white;
   border-radius: 24px;
   padding: 30px 20px 20px;
@@ -5569,44 +5620,83 @@ section.lp-waomirai-about .lp-waomirai-about-box-right {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-feature-box {
+  .bg-lp-creamyellow .lp-waomirai-start2025-feature-box {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-feature-box {
+  .bg-lp-creamyellow .lp-waomirai-start2025-feature-box {
     padding: 30px 20px 30px;
   }
 }
-.lp-waomirai-start2025-feature-box-title {
+.bg-lp-creamyellow .lp-waomirai-start2025-feature-box-title {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin: 0 auto 20px;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-feature-box-title {
+  .bg-lp-creamyellow .lp-waomirai-start2025-feature-box-title {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
-  .lp-waomirai-start2025-feature-box-title {
+  .bg-lp-creamyellow .lp-waomirai-start2025-feature-box-title {
     font-size: 20px;
   }
 }
-.lp-waomirai-start2025-feature-box-title img {
+.bg-lp-creamyellow .lp-waomirai-start2025-feature-box-title img {
   width: 30px;
 }
-.lp-waomirai-start2025-feature-box-text {
+.bg-lp-creamyellow .lp-waomirai-start2025-feature-box-text {
   font-size: 17px;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-feature-box-text {
+  .bg-lp-creamyellow .lp-waomirai-start2025-feature-box-text {
     font-size: 16px;
   }
 }
-
-footer {
+.bg-lp-creamyellow .lp-waomirai-start2025-btn {
+  text-align: center;
+}
+.bg-lp-creamyellow .lp-waomirai-start2025-btn a {
+  text-align: center;
+  margin: 30px auto 0px;
+  background: #ee7a00;
+  text-decoration: none;
+  height: 78px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  line-height: 1.5;
+  gap: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 768px) {
+  .bg-lp-creamyellow .lp-waomirai-start2025-btn a {
+    width: 100%;
+  }
+}
+.bg-lp-creamyellow .lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-text {
+  margin: 0px 0 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  .bg-lp-creamyellow .lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-text {
+    font-size: 20px;
+  }
+}
+.bg-lp-creamyellow .lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-icn {
+  width: 17px;
+  height: 17px;
+}
+.bg-lp-creamyellow footer {
   width: 100%;
   padding: 120px 0px 0px;
   text-align: center;
@@ -5615,39 +5705,39 @@ footer {
   border-radius: 100px 100px 0 0;
 }
 @media screen and (max-width: 768px) {
-  footer {
+  .bg-lp-creamyellow footer {
     padding: 60px 0px 60px;
     border-radius: 50px 50px 0 0;
   }
 }
-footer ul {
+.bg-lp-creamyellow footer ul {
   margin: 0 !important;
   padding: 0 !important;
 }
-footer li {
+.bg-lp-creamyellow footer li {
   list-style: none;
   padding: 10px 0;
 }
-footer li a {
+.bg-lp-creamyellow footer li a {
   color: white;
   text-decoration: none;
   font-size: 17px;
 }
 @media screen and (max-width: 768px) {
-  footer li a {
+  .bg-lp-creamyellow footer li a {
     font-size: 16px;
   }
 }
-footer .footer-logo img {
+.bg-lp-creamyellow footer .footer-logo img {
   width: 170px;
   margin: 120px auto 45px;
 }
 @media screen and (max-width: 768px) {
-  footer .footer-logo img {
+  .bg-lp-creamyellow footer .footer-logo img {
     margin: 60px auto 45px;
   }
 }
-footer .footer-copyright {
+.bg-lp-creamyellow footer .footer-copyright {
   width: 100%;
   border-top: 1px solid #fff;
   padding: 15px 0 15px;

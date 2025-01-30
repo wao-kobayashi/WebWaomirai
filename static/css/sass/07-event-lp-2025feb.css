@@ -4245,10 +4245,10 @@ html {
   margin: 0 auto 75px;
 }
 
-.c-btn-lp {
+.lp-waomirai-start2025-btn {
   text-align: center;
 }
-.c-btn-lp a {
+.lp-waomirai-start2025-btn a {
   text-align: center;
   margin: 30px auto 120px;
   background: #ee7a00;
@@ -4267,21 +4267,21 @@ html {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 768px) {
-  .c-btn-lp a {
+  .lp-waomirai-start2025-btn a {
     width: 100%;
   }
 }
-.c-btn-lp a .c-btn-lp-text {
+.lp-waomirai-start2025-btn a-text {
   margin: 0px 0 0;
   font-size: 22px;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
-  .c-btn-lp a .c-btn-lp-text {
+  .lp-waomirai-start2025-btn a-text {
     font-size: 20px;
   }
 }
-.c-btn-lp a .c-btn-lp-icn {
+.lp-waomirai-start2025-btn a-icn {
   width: 17px;
   height: 17px;
 }

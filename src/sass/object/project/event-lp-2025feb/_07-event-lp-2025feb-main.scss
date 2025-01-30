@@ -13,7 +13,7 @@ html {
   }
 }
 
-.c-btn-lp {
+.lp-waomirai-start2025-btn {
   text-align: center;
   a {
     text-align: center;
@@ -37,12 +37,12 @@ html {
     }
     @include box-shadow-lp;
 
-    .c-btn-lp-text {
+    &-text {
       margin: 0px 0 0;
       @include font-size-ml;
       letter-spacing: 1px;
     }
-    .c-btn-lp-icn {
+    &-icn {
       width: 17px;
       height: 17px;
     }
