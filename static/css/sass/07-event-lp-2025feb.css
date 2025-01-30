@@ -4929,7 +4929,7 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-text {
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive {
-  margin: 20px 0 0;
+  margin: 28px 0 0;
   display: flex;
   align-items: center;
 }
@@ -4942,6 +4942,17 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i {
+    font-size: 34px;
+    margin: 0 14px 0 0;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i {
+    font-size: 30px;
+  }
+}
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i.philosophy {
   color: #fcaf17;
 }
@@ -4949,11 +4960,22 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i.s
   color: #b6d43e;
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive-text {
-  font-size: 17px;
+  font-size: 16px;
+  color: #999;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive-text {
-    font-size: 16px;
+    display: inline-block;
+    line-height: 1.25;
+  }
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive-text span {
+  font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive-text span {
+    display: inline-block;
+    line-height: 1;
   }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit {
