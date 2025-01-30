@@ -4656,7 +4656,7 @@ section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
   text-align: center;
   letter-spacing: 0.5px;
   font-size: 22px;
-  margin: 0 0 45px;
+  margin: 0 0 20px;
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
@@ -4673,6 +4673,18 @@ section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
   section.lp-25feb-info .lp-25feb-info-columns-child-text-time {
     font-size: 16px;
   }
+}
+section.lp-25feb-info .lp-25feb-info-columns-child-text-archive {
+  margin: 0 0 40px;
+  text-align: center;
+  height: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+section.lp-25feb-info .lp-25feb-info-columns-child-text-archive i {
+  font-size: 20px;
 }
 section.lp-25feb-info .lp-25feb-info-columns-child-text span.large {
   font-size: 27px;
@@ -4713,10 +4725,19 @@ section.lp-25feb-info .lp-25feb-info-columns-child-link {
 section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-text-catch {
   color: #fcaf17;
 }
+section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-text-archive-icon {
+  color: #fcaf17;
+}
 section.lp-25feb-info .science .lp-25feb-info-columns-child-text-catch {
   color: #9dc03a;
 }
+section.lp-25feb-info .science .lp-25feb-info-columns-child-text-archive-icon {
+  color: #9dc03a;
+}
 section.lp-25feb-info .economiy .lp-25feb-info-columns-child-text-catch {
+  color: #28afe7;
+}
+section.lp-25feb-info .economiy .lp-25feb-info-columns-child-text-archive-icon {
   color: #28afe7;
 }
 section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-link {
@@ -4904,6 +4925,34 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-text {
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-text {
+    font-size: 16px;
+  }
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive {
+  margin: 20px 0 0;
+  display: flex;
+  align-items: center;
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i {
+  font-size: 22px;
+  margin: 0 10px 0 0;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i {
+    font-size: 20px;
+  }
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i.philosophy {
+  color: #fcaf17;
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive i.science {
+  color: #b6d43e;
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive-text {
+  font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-right-archive-text {
     font-size: 16px;
   }
 }

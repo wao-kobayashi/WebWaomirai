@@ -12,9 +12,38 @@
   //   margin: 0 auto 75px;
   // }
 }
+.c-btn-cta-subject {
+  text-align: center;
+  a {
+    animation: fuwafuwa-button 2s 0s infinite;
+    text-align: center;
+    margin: 75px auto 0px;
+    cursor: pointer;
+    background: $cl-brand-line;
+    text-decoration: none;
+    height: 78px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    @include responsive-style(768px) {
+      width: 90%;
+    }
+    @include box-shadow-lp;
+    .c-btn-cta-main {
+      margin: 0px 0 0;
+      @include font-size-l;
+      letter-spacing: 1px;
+    }
+  }
+}
 
 .c-title-25feb-lp {
-  @include font-size-l;
+  @include font-size-xl;
   @include title-underline; //下の波線
   margin: 0 auto 30px;
   text-align: center;
@@ -148,7 +177,7 @@ header {
 //イントロ
 .lp-25mar-intro {
   margin: -120px 0 -90px;
-  padding: 180px 0 180px;
+  padding: 180px 0 150px;
   text-align: center;
   // height: 500px;
   // object-fit: cover;
@@ -157,7 +186,7 @@ header {
     repeat;
   background-size: 1024px;
   &-title {
-    padding: 0 0 20px;
+    padding: 0 0 30px;
     border-bottom: 2px solid $cl-black;
     display: inline-block;
     &-main,
@@ -194,17 +223,32 @@ header {
     &-main {
       @include font-size-xxxl;
       color: $cl-black;
-      margin: 0 auto 30px;
+      margin: 0 auto 20px;
       text-align: center;
       font-weight: bold;
       letter-spacing: 30px;
       overflow: hidden;
       display: flex;
     }
+    &-special {
+      @include font-size-m;
+      color: $cl-lp-red;
+      margin: 0 auto 0px;
+    }
   }
   &-text {
     margin: 25px 0 0;
     @include font-size-l;
+  }
+  &-target {
+    background: $cl-sticky-yellow;
+    @include font-size-l;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    padding: 8px 20px;
+    margin: 20px 0 0;
   }
 }
 
@@ -250,6 +294,7 @@ header {
         text-align: center;
         @include font-size-l;
         color: $cl-black;
+        font-weight: bold;
         line-height: $lineheight-normal;
       }
       &-text {
@@ -317,14 +362,14 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-
+  //メイン講座
   &-main {
     // max-width: $width-main-subject;
     width: $width-main-subject;
 
     margin-left: calc((100% - $width-xl) / 2);
     &-section {
-      padding: 0 0 90px;
+      padding: 0 0 150px;
       &-title {
         @include font-size-xxl;
         margin: 0 auto 30px;
@@ -447,6 +492,7 @@ header {
       }
     }
   }
+  //追従ナビゲーション
   &-sub {
     position: sticky;
     // background: $cl-sticky-yellow;
@@ -623,19 +669,23 @@ header {
         line-height: $lineheight-normal;
         margin: 0 0 20px;
         position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         &::before {
           content: "";
-          display: block;
-          width: 0;
-          height: 0;
-          border-left: 12px solid transparent;
-          border-right: 12px solid transparent;
-          border-top: 18px solid $cl-white;
+          background-color: transparent;
+          width: 10px;
+          height: 30px;
+          border-right: 9px solid transparent;
+          border-top: 18px solid #fff;
+          border-left: 9px solid transparent;
+          // background: $cl-white;
           position: absolute;
-          bottom: -10px;
+          bottom: -22px;
           left: 0;
           right: 0;
           margin: auto;
+          filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.15));
+          z-index: 1;
         }
       }
       &-img img {
@@ -663,6 +713,9 @@ header {
 
 //04 こんなあなたにオススメです！
 section.lp-waomirai-recommend {
+  background: $cl-bg-eventlp;
+  padding: 75px 0;
+  margin: 75px 0 0;
   .lp-waomirai-recommend {
     max-width: 1000px;
     width: 100%;
@@ -817,10 +870,11 @@ section.lp-waomirai-recommend {
 
 //05 授業の特徴
 section.lp-waomirai-feature {
-  padding: 0 20px;
+  padding: 75px 20px 75px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  background: $cl-bg-eventlp;
   .lp-waomirai-feature-child {
     @include font-size-l;
     background: $cl-feature-yellow;
@@ -859,7 +913,7 @@ section.lp-waomirai-howto {
   padding: 30px 0;
   margin: 0 -20px;
   .lp-waomirai-howto-title {
-    @include font-size-l;
+    @include font-size-xl;
     margin: 0 auto 30px;
     text-align: center;
     letter-spacing: 2px;
@@ -867,7 +921,7 @@ section.lp-waomirai-howto {
       @include font-size-xl;
     }
     .large {
-      @include font-size-xxl;
+      @include font-size-xxxl;
       @include responsive-style(768px) {
         @include font-size-xxxl;
       }
@@ -929,6 +983,8 @@ section.lp-waomirai-howto {
 }
 
 section.lp-waomirai-about {
+  background: $cl-bg-eventlp;
+  padding: 75px 0 0;
   .lp-waomirai-about-box {
     background: white;
     max-width: $width-lg;
@@ -960,7 +1016,7 @@ section.lp-waomirai-about {
 }
 
 .lp-waomirai-start2025 {
-  @include section-maxwidth;
+  background: $cl-bg-eventlp;
   &-catch {
     @include font-size-l;
     margin: 0 auto;

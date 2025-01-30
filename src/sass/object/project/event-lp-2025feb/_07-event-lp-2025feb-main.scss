@@ -332,10 +332,22 @@ section.lp-25feb-info {
           text-align: center;
           letter-spacing: 0.5px;
           @include font-size-ml;
-          margin: 0 0 45px;
+          margin: 0 0 20px;
           @include responsive-style(768px) {
             margin: 0 0 25px;
             @include font-size-m;
+          }
+        }
+        &-archive {
+          margin: 0 0 40px;
+          text-align: center;
+          height: 20px;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          i {
+            font-size: 20px;
           }
         }
         span.large {
@@ -366,6 +378,9 @@ section.lp-25feb-info {
   @each $category, $values in $categories {
     .#{$category} {
       .lp-25feb-info-columns-child-text-catch {
+        color: map-get($values, main-color);
+      }
+      .lp-25feb-info-columns-child-text-archive-icon {
         color: map-get($values, main-color);
       }
     }
@@ -515,6 +530,24 @@ section.lp-25feb-eventdetail {
         &-text {
           @include font-size-m;
           line-height: $lineheight-relaxed;
+        }
+        &-archive {
+          margin: 20px 0 0;
+          display: flex;
+          align-items: center;
+          i {
+            @include font-size-ml;
+            margin: 0 10px 0 0;
+            &.philosophy {
+              color: $cl-philosophy;
+            }
+            &.science {
+              color: $cl-science;
+            }
+          }
+          &-text {
+            @include font-size-m;
+          }
         }
       }
     }

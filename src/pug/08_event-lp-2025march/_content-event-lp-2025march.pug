@@ -1,3 +1,6 @@
+
+  
+
 body#lp-2025march
 
   //ヘッダー
@@ -9,23 +12,6 @@ body#lp-2025march
         |LINE公式アカウントから申込
   //ファーストビジュアル
   div.lp-25mar-fv
-    //- .lp-25mar-fv-title 
-    //-   span|社
-    //-   span|会
-    //-   span|で
-    //-   span|役
-    //-   span|立
-    //-   span|つ
-    //-   span|学
-    //-   span|び
-    //-   span|を
-    //-   span|オ
-    //-   span|ン
-    //-   span|ラ
-    //-   span|イ
-    //-   span|ン
-    //-   span|で
-    //-   span|!
     .lp-25mar-fv-title 
         |社会で役立つ学びをオンラインで!
 
@@ -44,26 +30,9 @@ body#lp-2025march
   section.lp-25mar-intro 
     .lp-25mar-intro-title
       .lp-25mar-intro-title-top 
-        span|ワ
-        span|オ
-        span|未
-        span|来
-        span|塾
-        span|　
-        span|開
-        span|講
-        span|直
-        span|前
+        |ワオ未来塾　開講直前
       .lp-25mar-intro-title-main
-        span|無
-        span|料
-        span|体
-        span|験
-        span|M
-        span|O
-        span|N
-        span|T
-        span|H
+        |無料体験MONTH
       .lp-25mar-intro-title-special 
         |たっぷり無料体験ができるスペシャルな6週間
     .lp-25mar-intro-text
@@ -73,6 +42,7 @@ body#lp-2025march
       br
       |”今”必要な力をつけるオンラインライブ授業
     .lp-25mar-intro-target
+     |対象：小３生～高校生
   //特徴
   section.lp-25mar-feature
       .lp-25mar-feature-grid
@@ -199,8 +169,7 @@ body#lp-2025march
                           .lp-25mar-events-main-section-levels-child-bottom-subject-level='LEVEL ' + course.level
                         .lp-25mar-events-main-section-levels-child-bottom-schedule                      
                             != course.schedule.split('\n').join('<br>') 
-              div
-                |LINE CTA
+              +btn-25march-cta-subject
         .lp-25mar-events-sub   
            - 
             // 科目とそのレベルを定義する配列
@@ -209,7 +178,7 @@ body#lp-2025march
               { title: "哲学（思考力）", url: "#philosophy", levels: ["philosophy-l1", "philosophy-l2", "philosophy-l3", "philosophy-l4"], category: "philosophy" },
               { title: "科学リテラシー", url: "#science", levels: ["science-l1", "science-l2", "science-l3", "science-l4"], category: "science" },
               { title: "経済（お金）", url: "#economy", levels: ["economy-l1", "economy-l2", "economy-l3", "economy-l4"], category: "economy" },
-              { title: "お申込方法", url: "#apply", levels: [], category: "other" }
+              { title: "お申込方法", url: "#lp-waomirai-howto", levels: [], category: "other" }
             ];
            .lp-25mar-events-sub-left
               // メニューのメインタイトル
@@ -247,7 +216,51 @@ body#lp-2025march
                 img(src=ImgStickyPerson)
            a(href=UrlLineEventMarch,target='_blank').lp-25mar-events-sub-cta 
               |申し込みはLINEでカンタン
-  section.lp-waomirai-howto.c-bg-section-white
+  //04 こんなあなたにオススメです！
+  section.lp-waomirai-recommend
+    .c-title-25feb-lp 
+       |こんなあなたに
+       br.spimage
+       |オススメです！
+    .lp-waomirai-recommend
+      .lp-waomirai-recommend-left.pcimage
+          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpc/1026513/17369098162NUo6Frk/illust_family_3person.png')
+      .lp-waomirai-recommend-right
+        //親子
+        .lp-waomirai-recommend-right-child
+           .lp-waomirai-recommend-right-child-icon.pcimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbwzg/1026513/1736921312EFe5ObBQ/illust_family_child.png')
+           .lp-waomirai-recommend-right-child-icon.spimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2m5/1026513/1737095331S6YzsenA/illust_voice_child.svg')
+           .lp-waomirai-recommend-right-child-text
+              div ⚪︎学校の勉強だけじゃものたりない
+              div ⚪︎好奇心がとまらない
+              div ⚪︎総合型選抜も見据えた学びがしたい
+        .lp-waomirai-recommend-right-child
+           .lp-waomirai-recommend-right-child-icon.pcimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp2/1026513/1736909815p2GIKGjy/illust_family_mom_and_papa.png')
+           .lp-waomirai-recommend-right-child-icon.spimage
+              img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2my/1026513/1737097252oErU5qzj/illust_voice_family.svg')
+           .lp-waomirai-recommend-right-child-text
+              div 
+                |⚪︎子どもももちろんだけど、
+                br.pcimage
+                |親だって一緒に学びたい
+              div|⚪︎子どもと話し合えるきっかけがほしい
+              div|⚪︎自立した大人になってほしい
+          
+    .lp-waomirai-point
+       .lp-waomirai-point-left 
+         |POINT!
+       .lp-waomirai-point-right
+          |ワオ未来塾の授業は推奨学年はありますが、
+          br.pcimage
+          |大人も子どもも楽しめるコンテンツ。
+          br
+          |授業が終わるころには、
+          br.pcimage
+          |ちょっと世の中の見え方が変わってくる！
+  section.lp-waomirai-howto#lp-waomirai-howto.c-bg-section-white
     .lp-waomirai-howto-title 
        |カンタン
        span.large|5

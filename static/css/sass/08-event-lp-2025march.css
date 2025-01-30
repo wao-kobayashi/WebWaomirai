@@ -4231,8 +4231,45 @@ select {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.c-title-25feb-lp {
+.c-btn-cta-subject {
+  text-align: center;
+}
+.c-btn-cta-subject a {
+  animation: fuwafuwa-button 2s 0s infinite;
+  text-align: center;
+  margin: 75px auto 0px;
+  cursor: pointer;
+  background: #00b900;
+  text-decoration: none;
+  height: 78px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 768px) {
+  .c-btn-cta-subject a {
+    width: 90%;
+  }
+}
+.c-btn-cta-subject a .c-btn-cta-main {
+  margin: 0px 0 0;
   font-size: 22px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  .c-btn-cta-subject a .c-btn-cta-main {
+    font-size: 20px;
+  }
+}
+
+.c-title-25feb-lp {
+  font-size: 27px;
   text-decoration: underline wavy;
   text-decoration-color: #febcad;
   margin: 0 auto 30px;
@@ -4240,7 +4277,7 @@ select {
 }
 @media screen and (max-width: 768px) {
   .c-title-25feb-lp {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -4382,7 +4419,7 @@ header .header-right a {
 .lp-25mar-fv .lp-25mar-fv-grid {
   display: grid;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1050px;
   height: auto;
   grid-template-columns: 2.1fr repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -4432,14 +4469,14 @@ header .header-right a {
 
 .lp-25mar-intro {
   margin: -120px 0 -90px;
-  padding: 180px 0 180px;
+  padding: 180px 0 150px;
   text-align: center;
   width: 100%;
   background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png") repeat;
   background-size: 1024px;
 }
 .lp-25mar-intro-title {
-  padding: 0 0 20px;
+  padding: 0 0 30px;
   border-bottom: 2px solid #262626;
   display: inline-block;
 }
@@ -4509,7 +4546,7 @@ header .header-right a {
 .lp-25mar-intro-title-main {
   font-size: 50px;
   color: #262626;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   text-align: center;
   font-weight: bold;
   letter-spacing: 30px;
@@ -4521,6 +4558,16 @@ header .header-right a {
     font-size: 48px;
   }
 }
+.lp-25mar-intro-title-special {
+  font-size: 17px;
+  color: #ee242c;
+  margin: 0 auto 0px;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-intro-title-special {
+    font-size: 16px;
+  }
+}
 .lp-25mar-intro-text {
   margin: 25px 0 0;
   font-size: 22px;
@@ -4530,9 +4577,24 @@ header .header-right a {
     font-size: 20px;
   }
 }
+.lp-25mar-intro-target {
+  background: #f3dd2a;
+  font-size: 22px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  padding: 8px 20px;
+  margin: 20px 0 0;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-intro-target {
+    font-size: 20px;
+  }
+}
 
 .lp-25mar-feature {
-  max-width: 1000px;
+  max-width: 1050px;
   width: 100%;
   margin: 0 auto 90px;
 }
@@ -4579,6 +4641,7 @@ header .header-right a {
   text-align: center;
   font-size: 22px;
   color: #262626;
+  font-weight: bold;
   line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
@@ -4675,7 +4738,7 @@ header .header-right a {
   margin-left: calc((100% - 1200px) / 2);
 }
 .lp-25mar-events-main-section {
-  padding: 0 0 90px;
+  padding: 0 0 150px;
 }
 .lp-25mar-events-main-section-title {
   font-size: 36px;
@@ -4998,6 +5061,7 @@ header .header-right a {
   line-height: 1.5;
   margin: 0 0 20px;
   position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-sub-right-speech {
@@ -5006,17 +5070,19 @@ header .header-right a {
 }
 .lp-25mar-events-sub-right-speech::before {
   content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 18px solid #ffffff;
+  background-color: transparent;
+  width: 10px;
+  height: 30px;
+  border-right: 9px solid transparent;
+  border-top: 18px solid #fff;
+  border-left: 9px solid transparent;
   position: absolute;
-  bottom: -10px;
+  bottom: -22px;
   left: 0;
   right: 0;
   margin: auto;
+  filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.15));
+  z-index: 1;
 }
 .lp-25mar-events-sub-right-img img {
   height: 270px;
@@ -5043,6 +5109,11 @@ header .header-right a {
   }
 }
 
+section.lp-waomirai-recommend {
+  background: #fff8e0;
+  padding: 75px 0;
+  margin: 75px 0 0;
+}
 section.lp-waomirai-recommend .lp-waomirai-recommend {
   max-width: 1000px;
   width: 100%;
@@ -5215,10 +5286,11 @@ section.lp-waomirai-recommend .lp-waomirai-point-right {
 }
 
 section.lp-waomirai-feature {
-  padding: 0 20px;
+  padding: 75px 20px 75px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  background: #fff8e0;
 }
 section.lp-waomirai-feature .lp-waomirai-feature-child {
   font-size: 22px;
@@ -5263,14 +5335,14 @@ section.lp-waomirai-howto {
   margin: 0 -20px;
 }
 section.lp-waomirai-howto .lp-waomirai-howto-title {
-  font-size: 22px;
+  font-size: 27px;
   margin: 0 auto 30px;
   text-align: center;
   letter-spacing: 2px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-howto .lp-waomirai-howto-title {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5284,11 +5356,11 @@ section.lp-waomirai-howto .lp-waomirai-howto-title {
   }
 }
 section.lp-waomirai-howto .lp-waomirai-howto-title .large {
-  font-size: 36px;
+  font-size: 50px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 30px;
+    font-size: 48px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5383,9 +5455,13 @@ section.lp-waomirai-howto .lp-waomirai-howto-step-child-text-detail a {
   color: #262626;
 }
 
+section.lp-waomirai-about {
+  background: #fff8e0;
+  padding: 75px 0 0;
+}
 section.lp-waomirai-about .lp-waomirai-about-box {
   background: white;
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto 0px;
   padding: 48px 36px;
   border-radius: 64px;
@@ -5422,14 +5498,7 @@ section.lp-waomirai-about .lp-waomirai-about-box-right {
 }
 
 .lp-waomirai-start2025 {
-  max-width: 1200px;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  .lp-waomirai-start2025 {
-    padding: 0 20px;
-  }
+  background: #fff8e0;
 }
 .lp-waomirai-start2025-catch {
   font-size: 22px;
