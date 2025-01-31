@@ -493,7 +493,7 @@ header {
         background: $cl-science;
       }
       &.economy:before {
-        background: $cl-economiy;
+        background: $cl-economy;
       }
     }
   }
@@ -599,7 +599,7 @@ header {
               background: $cl-science;
             }
             &.economy:before {
-              background: $cl-economiy;
+              background: $cl-economy;
             }
           }
           &-img {
@@ -613,7 +613,7 @@ header {
               background: $cl-science-palecolor;
             }
             &.economy::before {
-              background: $cl-economiy-palecolor;
+              background: $cl-economy-palecolor;
             }
             &.inview:before {
               transform: translateX(100%); // 下へスライドして消える
@@ -671,7 +671,7 @@ header {
                 background: $cl-science;
               }
               &.economy {
-                background: $cl-economiy;
+                background: $cl-economy;
               }
             }
             &-subject-level {
@@ -867,12 +867,12 @@ header {
               }
             }
             &.economy.active {
-              color: $cl-economiy !important;
+              color: $cl-economy !important;
               span {
-                color: $cl-economiy-darken !important;
+                color: $cl-economy-darken !important;
               }
               &::before {
-                background: $cl-economiy;
+                background: $cl-economy;
               }
             }
             &.active {
@@ -1017,7 +1017,7 @@ header {
       }
       &.economy.active {
         color: $cl-white;
-        background: $cl-economiy;
+        background: $cl-economy;
       }
     }
   }
