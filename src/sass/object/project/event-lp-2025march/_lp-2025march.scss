@@ -1,12 +1,9 @@
-// html {
-//   overflow-x: hidden;
-// }
-
 #lp-2025march {
   background: $cl-white;
   color: $cl-black;
   font-family: "Noto Sans JP", sans-serif;
 }
+//追従CTA(スマホのみ)
 .fixed-cta-button a {
   @include min-responsive-style(769px) {
     display: none;
@@ -104,6 +101,7 @@ header {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
   }
 }
 
@@ -515,11 +513,11 @@ header {
 .lp-25mar-events {
   width: 100%;
 
-  //メイン講座
   &-flex {
     display: flex;
     justify-content: space-between;
   }
+  //メイン講座
   &-main {
     // max-width: $width-main-subject;
     max-width: $width-main-subject;
@@ -757,7 +755,7 @@ header {
       }
     }
   }
-  //追従ナビゲーション
+  //追従ナビゲーション(PCのみ)
   &-sub {
     position: sticky;
     background: $cl-white;
@@ -965,7 +963,7 @@ header {
         width: 60%;
       }
     }
-    &-cta {
+    &-cta a {
       grid-area: 2 / 1 / 3 / 3;
       @include font-size-m;
       background: $cl-brand-line;
@@ -979,6 +977,7 @@ header {
       align-items: center;
       text-decoration: none;
       animation: fuwafuwa-button 1.8s 0s infinite;
+      cursor: pointer;
       @include responsive-style(1300px) {
         font-size: 14px;
         padding: 10px 10px;
@@ -1257,6 +1256,10 @@ section.lp-waomirai-recommend {
   }
 }
 
+//以下
+//ワオ未来塾って？
+//授業の特徴
+//2025年4月開講
 .bg-lp-creamyellow {
   background: $cl-bg-eventlp;
   width: 100%;
