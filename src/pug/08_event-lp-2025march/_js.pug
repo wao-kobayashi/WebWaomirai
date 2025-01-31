@@ -10,11 +10,47 @@ script.
   });
 
 script.
+  // 関数: 各セクション内の .lp-25mar-events-main-section-levels-child-description の高さを揃える
+  function setEqualHeight() {
+    // .lp-25mar-events-main-section-levels が複数あるので、それぞれ処理を行う
+    $('.lp-25mar-events-main-section-levels').each(function() {
+      // 現在のセクション内の .lp-25mar-events-main-section-levels-child-description を取得
+      const descriptions = $(this).find('.lp-25mar-events-main-section-levels-child-description');
+      
+      // 高さをリセットして、リサイズ時のレイアウト崩れを防ぐ
+      descriptions.height('auto');
+
+      // 各 .lp-25mar-events-main-section-levels-child-description の高さを取得し、最大値を計算
+      const maxHeight = Math.max(...descriptions.map(function() {
+        return $(this).outerHeight(); // padding & border を含む高さを取得
+      }).get());
+
+      // 取得した最大値をすべての .lp-25mar-events-main-section-levels-child-description に適用
+      descriptions.height(maxHeight);
+    });
+  }
+
+    // ページの読み込みが完了したら高さを揃える
+  $(document).ready(setEqualHeight);
+
+  // ウィンドウのサイズ変更時に高さを再計算し、適用する
+  $(window).on('resize', setEqualHeight);
+  
   $(document).ready(function () {
     // モーダルを閉じるボタンと背景のクリックイベント
     $('.modal-close,.bg-modal').click(function() {
       $('.modal,.bg-modal').hide();
     });
+  $('.lp-25mar-events-main-section-levels').each(function() {
+    // 各 .lp-25mar-events-main-section-levels 内の .lp-25mar-events-main-section-levels-child-description の最大高さを求める
+    const maxHeight = Math.max(...$(this).find('.lp-25mar-events-main-section-levels-child-description').map(function() {
+      return $(this).outerHeight();
+    }).get());
+
+    // 各 .lp-25mar-events-main-section-levels 内の .lp-25mar-events-main-section-levels-child-description に最大高さを適用
+    $(this).find('.lp-25mar-events-main-section-levels-child-description').height(maxHeight);
+  });
+
 
     // スクロールイベントで固定CTAボタンの表示を制御
     $(window).on("scroll", function () {
@@ -54,7 +90,17 @@ script.
     });
 
     // inview を一括適用
-    const inviewElements = $(".lp-25mar-feature-grid-child-img, .lp-25mar-events-main-section-levels-child, .lp-25mar-events-main-section-levels-child-img, .lp-25mar-intro-title, .lp-25mar-fv-title, .lp-25mar-fv-grid-child, .lp-25mar-events-sub");
+   const inviewElements = $(".lp-25mar-feature-grid-child-img, \
+  .lp-25mar-events-main-section-levels-child, \
+  .lp-25mar-events-main-section-levels-child-img, \
+  .lp-25mar-intro-title, \
+  .lp-25mar-fv-title, \
+  .lp-25mar-fvpc-grid-child, \
+  .lp-25mar-events-sub, \
+  .lp-25mar-fvsp-title-img img, \
+  .lp-25mar-intro-title-top-sp,\
+  .lp-25mar-fvsp-title-img, \
+  .lp-25mar-intro-title-main-sp");
     inviewElements.on("inview", function (event, isInView) {
       if (isInView) {
         $(this).addClass("inview");

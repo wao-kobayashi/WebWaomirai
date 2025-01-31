@@ -66,7 +66,7 @@
   //   text-decoration-style: wavy;
 }
 
-//00ヘッダー
+//ヘッダー
 header {
   height: 78px;
   width: 100%;
@@ -86,7 +86,7 @@ header {
     max-width: 350px;
     margin: 0 !important;
     @include responsive-style(768px) {
-      width: 60%;
+      width: 70%;
       height: auto;
     }
     img {
@@ -109,6 +109,7 @@ header {
 
 //ファーストビジュアルPC
 .lp-25mar-fvpc {
+  padding: 0 20px;
   .lp-25mar-fvpc-title {
     @include font-size-xxxxl;
     letter-spacing: 1.5px;
@@ -194,13 +195,13 @@ header {
   .lp-25mar-fvsp-title {
     position: relative;
     width: 80%;
-    margin: 23px auto 0;
+    margin: 30px auto 0;
 
     &-img img {
-      width: 105px;
-      height: 105px;
+      width: 100px;
+      height: 100px;
       position: absolute;
-      right: 0;
+      right: 5px;
       top: -60px;
       border-radius: $border-radius-full;
       transform: scale(0.2);
@@ -211,9 +212,7 @@ header {
       }
     }
     &-text {
-      font-size: 38px; // 特大フォントサイズのミックスインを適用
-      font-weight: bold;
-      letter-spacing: 8px;
+      width: 100%;
     }
   }
 
@@ -228,7 +227,7 @@ header {
         flex-wrap: nowrap; // 折り返しを無効にする
         gap: 0 var(--scroll-gap); // 要素間のギャップを設定
         &-child {
-          width: 38vw; // 幅をビューポートの33%に設定
+          width: 42vw; // 幅をビューポートの33%に設定
           img {
             object-fit: cover; // 画像をカバーするように表示
             width: 100%; // 幅を100%に設定
@@ -257,7 +256,7 @@ header {
   @include responsive-style(768px) {
     // display: inline-block;
     margin: -250px 0 -90px;
-    padding: 350px 0 150px;
+    padding: 320px 0 150px;
   }
   &-title {
     padding: 0 0 30px;
@@ -373,9 +372,8 @@ header {
   max-width: $width-lg;
   width: 100%;
   margin: 0 auto 90px;
-  @include responsive-style(768px) {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
+
   &-grid {
     display: flex;
     gap: 45px;
@@ -502,12 +500,12 @@ header {
     }
   }
   &-bottom {
-    border-top: 2px solid $cl-black;
     @include font-size-m;
     text-align: center;
     padding: 15px 0 0;
     color: $cl-graylight;
     @include responsive-style(768px) {
+      border-top: 2px solid $cl-black;
       margin: 15px 0 0;
     }
   }
@@ -524,10 +522,19 @@ header {
   }
   &-main {
     // max-width: $width-main-subject;
-    width: $width-main-subject;
+    max-width: $width-main-subject;
+    width: 100%;
     margin-left: calc((100% - $width-xl) / 2);
+    @include responsive-style(1300px) {
+      // max-width: calc((100% - 1300px) + $width-main-subject);
+      $responsive-width: calc(((100vw - 1300px)) + $width-main-subject + 0px);
+      // margin-left: calc((100% - ($width-main-subject + 220px)) / 2);
+      margin-left: calc((100% - ($responsive-width + $width-side-sticky)) / 2);
+      max-width: calc($responsive-width + 40px);
+    }
     @include responsive-style(768px) {
       margin: 0 !important;
+      max-width: 100%;
     }
     &-section {
       padding: 0 0 150px;
@@ -540,6 +547,7 @@ header {
         display: flex;
         gap: 30px;
         margin: 0 0 30px;
+
         @include responsive-style(768px) {
           display: block;
           padding: 0 20px;
@@ -572,7 +580,11 @@ header {
             justify-content: center;
             align-items: center;
             gap: 12px;
-
+            height: 30px;
+            @include responsive-style(1000px) {
+              font-size: 14px;
+              gap: 10px;
+            }
             &:before {
               content: "";
               display: inline-block;
@@ -627,17 +639,20 @@ header {
           }
           &-description {
             font-size: 14px;
-            padding: 0 0 20px;
+            padding: 0 0 12px;
             margin: 0 0 20px;
             border-bottom: 1px dashed $cl-graylight;
-            height: 140px;
+            // height: 140px;
           }
           &-bottom {
             display: flex;
             gap: 30px;
-            @include responsive-style(768px) {
+            @include responsive-style(1000px) {
               gap: 15px;
             }
+            &-subject {
+            }
+
             &-subject-category {
               border-radius: $border-radius-full;
 
@@ -645,6 +660,9 @@ header {
               margin: 0 0 3px;
               text-align: center;
               @include font-size-m;
+              @include responsive-style(1000px) {
+                @include font-size-s;
+              }
               @include responsive-style(768px) {
                 @include font-size-s;
               }
@@ -664,14 +682,14 @@ header {
                 text-align: center;
                 font-weight: 300;
                 @include font-size-l;
-                @include responsive-style(768px) {
+                @include responsive-style(1000px) {
                   font-size: 14px;
                   line-height: $lineheight-none;
                 }
                 span {
                   @include font-size-xl;
                   font-weight: 500;
-                  @include responsive-style(768px) {
+                  @include responsive-style(1000px) {
                     @include font-size-l;
                   }
                 }
@@ -680,20 +698,30 @@ header {
                 @include font-size-s;
                 color: $cl-graylight;
                 text-align: center;
-                @include responsive-style(768px) {
+                margin: 3px 0 0;
+                white-space: nowrap;
+                @include responsive-style(1000px) {
                   font-size: 10px;
                 }
               }
             }
             &-schedule {
               @include font-size-m;
-              @include responsive-style(768px) {
+              @include responsive-style(1000px) {
                 font-size: 14.2px;
+              }
+              @include responsive-style(768px) {
+                font-size: 13.7px;
               }
               span {
                 font-size: 12.5px;
+                @include responsive-style(1000px) {
+                  display: none;
+                  margin: 0 3px 0 0;
+                }
                 @include responsive-style(768px) {
                   font-size: 11px;
+                  display: inline;
                 }
                 margin: 0 6px 0 0;
               }
@@ -747,6 +775,7 @@ header {
     @include responsive-style(1300px) {
       padding: 30px 15px 20px 20px;
       border-radius: 36px 0 0 36px;
+      display: block;
     }
 
     &-left {
@@ -1235,7 +1264,7 @@ section.lp-waomirai-recommend {
   //ワオ未来塾って？
   .lp-waomirai-about {
     background: $cl-bg-eventlp;
-    padding: 75px 0 0;
+    padding: 75px 20px 0;
     max-width: $width-xl;
     margin: 0 auto;
     .lp-waomirai-about-box {
@@ -1248,7 +1277,7 @@ section.lp-waomirai-recommend {
       gap: 45px;
       @include responsive-style(768px) {
         flex-direction: column;
-        margin: 0 20px;
+
         gap: 30px;
         padding: 40px 20px 40px;
         border-radius: $border-radius-bigplus;
@@ -1310,13 +1339,10 @@ section.lp-waomirai-recommend {
   //2025年4月開講
   .lp-waomirai-start2025 {
     background: $cl-bg-eventlp;
-    padding: 0 0px 120px;
+    padding: 0 20px 120px;
     max-width: $width-xl;
     margin: 0 auto;
 
-    @include responsive-style(768px) {
-      margin: 0 20px;
-    }
     &-catch {
       @include font-size-l;
       margin: 0 auto;

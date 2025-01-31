@@ -4333,7 +4333,7 @@ header .header-logo {
 }
 @media screen and (max-width: 768px) {
   header .header-logo {
-    width: 60%;
+    width: 70%;
     height: auto;
   }
 }
@@ -4358,6 +4358,9 @@ header .header-right a {
   }
 }
 
+.lp-25mar-fvpc {
+  padding: 0 20px;
+}
 .lp-25mar-fvpc .lp-25mar-fvpc-title {
   font-size: 58px;
   letter-spacing: 1.5px;
@@ -4494,13 +4497,13 @@ header .header-right a {
 .lp-25mar-fvsp .lp-25mar-fvsp-title {
   position: relative;
   width: 80%;
-  margin: 23px auto 0;
+  margin: 30px auto 0;
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-title-img img {
-  width: 105px;
-  height: 105px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: -60px;
   border-radius: 10000px;
   transform: scale(0.2);
@@ -4511,9 +4514,7 @@ header .header-right a {
   transform: scale(1);
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-title-text {
-  font-size: 38px;
-  font-weight: bold;
-  letter-spacing: 8px;
+  width: 100%;
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-grid {
   width: 100%;
@@ -4529,7 +4530,7 @@ header .header-right a {
   gap: 0 var(--scroll-gap);
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-grid-track-inner-child {
-  width: 38vw;
+  width: 42vw;
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-grid-track-inner-child img {
   object-fit: cover;
@@ -4552,7 +4553,7 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-25mar-intro {
     margin: -250px 0 -90px;
-    padding: 350px 0 150px;
+    padding: 320px 0 150px;
   }
 }
 .lp-25mar-intro-title {
@@ -4774,11 +4775,7 @@ header .header-right a {
   max-width: 1050px;
   width: 100%;
   margin: 0 auto 90px;
-}
-@media screen and (max-width: 768px) {
-  .lp-25mar-feature {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 }
 .lp-25mar-feature-grid {
   display: flex;
@@ -4943,7 +4940,6 @@ header .header-right a {
   background: #28afe7;
 }
 .lp-25mar-eventinfo-bottom {
-  border-top: 2px solid #262626;
   font-size: 17px;
   text-align: center;
   padding: 15px 0 0;
@@ -4956,6 +4952,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-eventinfo-bottom {
+    border-top: 2px solid #262626;
     margin: 15px 0 0;
   }
 }
@@ -4968,12 +4965,20 @@ header .header-right a {
   justify-content: space-between;
 }
 .lp-25mar-events-main {
-  width: 920px;
+  max-width: 920px;
+  width: 100%;
   margin-left: calc((100% - 1200px) / 2);
+}
+@media screen and (max-width: 1300px) {
+  .lp-25mar-events-main {
+    margin-left: calc((100% - (100vw - 1300px + 920px + 0px + 280px)) / 2);
+    max-width: calc(100vw - 1300px + 920px + 0px + 40px);
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main {
     margin: 0 !important;
+    max-width: 100%;
   }
 }
 .lp-25mar-events-main-section {
@@ -5028,10 +5033,17 @@ header .header-right a {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  height: 30px;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-title {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .lp-25mar-events-main-section-levels-child-title {
+    font-size: 14px;
+    gap: 10px;
   }
 }
 .lp-25mar-events-main-section-levels-child-title:before {
@@ -5083,16 +5095,15 @@ header .header-right a {
 }
 .lp-25mar-events-main-section-levels-child-description {
   font-size: 14px;
-  padding: 0 0 20px;
+  padding: 0 0 12px;
   margin: 0 0 20px;
   border-bottom: 1px dashed #999;
-  height: 140px;
 }
 .lp-25mar-events-main-section-levels-child-bottom {
   display: flex;
   gap: 30px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .lp-25mar-events-main-section-levels-child-bottom {
     gap: 15px;
   }
@@ -5107,6 +5118,16 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-category {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-category {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-subject-category {
+    font-size: 11.5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5139,7 +5160,7 @@ header .header-right a {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-number {
     font-size: 14px;
     line-height: 1;
@@ -5154,12 +5175,12 @@ header .header-right a {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
     font-size: 22px;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 768px) {
+@media screen and (max-width: 1000px) and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-number span {
     font-size: 20px;
   }
@@ -5168,13 +5189,15 @@ header .header-right a {
   font-size: 12px;
   color: #999;
   text-align: center;
+  margin: 3px 0 0;
+  white-space: nowrap;
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
     font-size: 11.5px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .lp-25mar-events-main-section-levels-child-bottom-subject-level-student {
     font-size: 10px;
   }
@@ -5187,18 +5210,30 @@ header .header-right a {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .lp-25mar-events-main-section-levels-child-bottom-schedule {
     font-size: 14.2px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-events-main-section-levels-child-bottom-schedule {
+    font-size: 13.7px;
   }
 }
 .lp-25mar-events-main-section-levels-child-bottom-schedule span {
   font-size: 12.5px;
   margin: 0 6px 0 0;
 }
+@media screen and (max-width: 1000px) {
+  .lp-25mar-events-main-section-levels-child-bottom-schedule span {
+    display: none;
+    margin: 0 3px 0 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child-bottom-schedule span {
     font-size: 11px;
+    display: inline;
   }
 }
 .lp-25mar-events-main-section-cta {
@@ -5253,6 +5288,7 @@ header .header-right a {
   .lp-25mar-events-sub {
     padding: 30px 15px 20px 20px;
     border-radius: 36px 0 0 36px;
+    display: block;
   }
 }
 .lp-25mar-events-sub-left {
@@ -5833,7 +5869,7 @@ section.lp-waomirai-recommend .lp-waomirai-point-right {
 }
 .bg-lp-creamyellow .lp-waomirai-about {
   background: #fff8e0;
-  padding: 75px 0 0;
+  padding: 75px 20px 0;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -5849,7 +5885,6 @@ section.lp-waomirai-recommend .lp-waomirai-point-right {
 @media screen and (max-width: 768px) {
   .bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box {
     flex-direction: column;
-    margin: 0 20px;
     gap: 30px;
     padding: 40px 20px 40px;
     border-radius: 24px;
@@ -5920,14 +5955,9 @@ section.lp-waomirai-recommend .lp-waomirai-point-right {
 }
 .bg-lp-creamyellow .lp-waomirai-start2025 {
   background: #fff8e0;
-  padding: 0 0px 120px;
+  padding: 0 20px 120px;
   max-width: 1200px;
   margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  .bg-lp-creamyellow .lp-waomirai-start2025 {
-    margin: 0 20px;
-  }
 }
 .bg-lp-creamyellow .lp-waomirai-start2025-catch {
   font-size: 22px;
