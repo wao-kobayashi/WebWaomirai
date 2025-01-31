@@ -4513,7 +4513,7 @@ header .header-right a {
   opacity: 1;
   transform: scale(1);
 }
-.lp-25mar-fvsp .lp-25mar-fvsp-title-text {
+.lp-25mar-fvsp .lp-25mar-fvsp-title-text img {
   width: 100%;
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-grid {
@@ -5101,7 +5101,7 @@ header .header-right a {
 }
 .lp-25mar-events-main-section-levels-child-bottom {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 @media screen and (max-width: 1000px) {
   .lp-25mar-events-main-section-levels-child-bottom {

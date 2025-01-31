@@ -211,7 +211,7 @@ header {
         transform: scale(1);
       }
     }
-    &-text {
+    &-text img {
       width: 100%;
     }
   }
@@ -646,7 +646,7 @@ header {
           }
           &-bottom {
             display: flex;
-            gap: 30px;
+            gap: 20px;
             @include responsive-style(1000px) {
               gap: 15px;
             }
