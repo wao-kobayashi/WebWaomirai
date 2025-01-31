@@ -77,16 +77,16 @@ header {
   margin: 0 auto;
   justify-content: space-between;
   @include responsive-style(768px) {
-    height: 48px;
+    height: 78px;
     padding: 0 18px;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .header-logo {
     max-width: 350px;
     margin: 0 !important;
     @include responsive-style(768px) {
-      width: 50%;
+      width: 60%;
       height: auto;
     }
     img {
@@ -100,7 +100,6 @@ header {
     color: $cl-white;
     display: flex;
     height: 45px;
-
     padding: 10px 22px;
     justify-content: center;
     align-items: center;
@@ -108,9 +107,9 @@ header {
   }
 }
 
-//ファーストビジュアル
-.lp-25mar-fv {
-  .lp-25mar-fv-title {
+//ファーストビジュアルPC
+.lp-25mar-fvpc {
+  .lp-25mar-fvpc-title {
     @include font-size-xxxxl;
     letter-spacing: 1.5px;
     font-weight: bold;
@@ -134,7 +133,7 @@ header {
       }
     }
   }
-  .lp-25mar-fv-grid {
+  .lp-25mar-fvpc-grid {
     display: grid;
     width: 100%;
     max-width: $width-lg;
@@ -186,6 +185,62 @@ header {
   }
 }
 
+//ファーストビジュアルSP
+:root {
+  --scroll-gap: 20px;
+}
+
+.lp-25mar-fvsp {
+  .lp-25mar-fvsp-title {
+    position: relative;
+    width: 80%;
+    margin: 23px auto 0;
+
+    &-img img {
+      width: 105px;
+      height: 105px;
+      position: absolute;
+      right: 0;
+      top: -60px;
+      border-radius: $border-radius-full;
+      transform: scale(0.2);
+      transition: opacity 0.3s ease, transform 0.65s ease;
+      &.inview {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    &-text {
+      font-size: 38px; // 特大フォントサイズのミックスインを適用
+      font-weight: bold;
+      letter-spacing: 8px;
+    }
+  }
+
+  .lp-25mar-fvsp-grid {
+    width: 100%; // 幅を100%に設定
+    overflow: hidden; // オーバーフローを隠す
+    &-track {
+      width: max-content; // コンテンツの幅に合わせる
+      animation: infiniteScroll 28s linear infinite; // 無限スクロールのアニメーションを適用
+      &-inner {
+        display: flex; // フレックスボックスを使用
+        flex-wrap: nowrap; // 折り返しを無効にする
+        gap: 0 var(--scroll-gap); // 要素間のギャップを設定
+        &-child {
+          width: 38vw; // 幅をビューポートの33%に設定
+          img {
+            object-fit: cover; // 画像をカバーするように表示
+            width: 100%; // 幅を100%に設定
+            height: 100%; // 高さを100%に設定
+            aspect-ratio: 1 / 1; // アスペクト比を1:1に設定
+            border-radius: $border-radius-bigplus; // 角を丸くする
+          }
+        }
+      }
+    }
+  }
+}
 //イントロ
 .lp-25mar-intro {
   margin: -120px 0 -90px;
@@ -199,6 +254,11 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   background-blend-mode: lighten;
   background-size: cover;
+  @include responsive-style(768px) {
+    // display: inline-block;
+    margin: -250px 0 -90px;
+    padding: 350px 0 150px;
+  }
   &-title {
     padding: 0 0 30px;
     border-bottom: 2px solid $cl-black;
@@ -216,7 +276,9 @@ header {
       justify-content: center;
       @include responsive-style(768px) {
         // display: inline-block;
-        @include font-size-xxl;
+        font-weight: normal;
+        @include font-size-xl;
+        letter-spacing: 2px;
       }
     }
 
@@ -230,6 +292,15 @@ header {
       width: 100%;
       @include responsive-style(768px) {
         margin: 0 auto 14px;
+      }
+      &-sp {
+        display: flex;
+        justify-content: center;
+        letter-spacing: 0px;
+        gap: 30px;
+        line-height: $lineheight-tight;
+        span {
+        }
       }
     }
     &-special {

@@ -43,3 +43,12 @@
     transform: translateX(15px);
   }
 }
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - var(--scroll-gap) / 2));
+  }
+}
