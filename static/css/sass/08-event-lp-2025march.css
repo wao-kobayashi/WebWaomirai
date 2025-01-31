@@ -4589,6 +4589,58 @@ header .header-right a {
     font-size: 25px;
   }
 }
+.lp-25mar-intro-title-top-sp {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.lp-25mar-intro-title-top-sp.inview span {
+  transform: translate(0, 0);
+}
+.lp-25mar-intro-title-top-sp span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(5) {
+  transition-delay: 0.6s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(6) {
+  transition-delay: 0.75s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(7) {
+  transition-delay: 0.9s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(8) {
+  transition-delay: 1.05s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(9) {
+  transition-delay: 1.2s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(10) {
+  transition-delay: 1.35s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(11) {
+  transition-delay: 1.5s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(12) {
+  transition-delay: 1.65s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(13) {
+  transition-delay: 1.8s;
+}
+.lp-25mar-intro-title-top-sp span:nth-child(14) {
+  transition-delay: 1.95s;
+}
 .lp-25mar-intro-title-main {
   font-size: 50px;
   color: #262626;
@@ -4614,6 +4666,54 @@ header .header-right a {
   letter-spacing: 0px;
   gap: 30px;
   line-height: 1.25;
+  overflow: hidden;
+}
+.lp-25mar-intro-title-main-sp.inview span {
+  transform: translate(0, 0);
+}
+.lp-25mar-intro-title-main-sp span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(5) {
+  transition-delay: 0.6s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(6) {
+  transition-delay: 0.75s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(7) {
+  transition-delay: 0.9s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(8) {
+  transition-delay: 1.05s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(9) {
+  transition-delay: 1.2s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(10) {
+  transition-delay: 1.35s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(11) {
+  transition-delay: 1.5s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(12) {
+  transition-delay: 1.65s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(13) {
+  transition-delay: 1.8s;
+}
+.lp-25mar-intro-title-main-sp span:nth-child(14) {
+  transition-delay: 1.95s;
 }
 .lp-25mar-intro-title-special {
   font-size: 17px;
@@ -4905,9 +5005,9 @@ header .header-right a {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   transition: all 1.2s ease;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(100px);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 @media screen and (max-width: 768px) {
   .lp-25mar-events-main-section-levels-child {
