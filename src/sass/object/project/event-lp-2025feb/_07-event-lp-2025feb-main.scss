@@ -18,7 +18,7 @@ html {
   a {
     text-align: center;
     margin: 30px auto 120px;
-    // background: $cl-btn-cta;
+    background: $cl-btn-cta;
     background: $cl-main-orange;
     text-decoration: none;
     height: 78px;
@@ -37,12 +37,12 @@ html {
     }
     @include box-shadow-lp;
 
-    &-text {
+    .lp-waomirai-start2025-btn-text {
       margin: 0px 0 0;
       @include font-size-ml;
       letter-spacing: 1px;
     }
-    &-icn {
+    .lp-waomirai-start2025-btn-icn {
       width: 17px;
       height: 17px;
     }

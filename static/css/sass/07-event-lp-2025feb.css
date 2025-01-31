@@ -4251,6 +4251,7 @@ html {
 .lp-waomirai-start2025-btn a {
   text-align: center;
   margin: 30px auto 120px;
+  background: #f88c6a;
   background: #ee7a00;
   text-decoration: none;
   height: 78px;
@@ -4271,17 +4272,17 @@ html {
     width: 100%;
   }
 }
-.lp-waomirai-start2025-btn a-text {
+.lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-text {
   margin: 0px 0 0;
   font-size: 22px;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
-  .lp-waomirai-start2025-btn a-text {
+  .lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-text {
     font-size: 20px;
   }
 }
-.lp-waomirai-start2025-btn a-icn {
+.lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-icn {
   width: 17px;
   height: 17px;
 }
@@ -4734,10 +4735,10 @@ section.lp-25feb-info .science .lp-25feb-info-columns-child-text-catch {
 section.lp-25feb-info .science .lp-25feb-info-columns-child-text-archive-icon {
   color: #9dc03a;
 }
-section.lp-25feb-info .economiy .lp-25feb-info-columns-child-text-catch {
+section.lp-25feb-info .economy .lp-25feb-info-columns-child-text-catch {
   color: #28afe7;
 }
-section.lp-25feb-info .economiy .lp-25feb-info-columns-child-text-archive-icon {
+section.lp-25feb-info .economy .lp-25feb-info-columns-child-text-archive-icon {
   color: #28afe7;
 }
 section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-link {
@@ -4746,7 +4747,7 @@ section.lp-25feb-info .philosophy .lp-25feb-info-columns-child-link {
 section.lp-25feb-info .science .lp-25feb-info-columns-child-link {
   background: #9dc03a;
 }
-section.lp-25feb-info .economiy .lp-25feb-info-columns-child-link {
+section.lp-25feb-info .economy .lp-25feb-info-columns-child-link {
   background: #28afe7;
 }
 
@@ -5099,25 +5100,25 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-merit-content-box-tex
   opacity: 0.5;
 }
 
-#economiy .lp-25feb-eventdetail-content-top-left-title {
+#economy .lp-25feb-eventdetail-content-top-left-title {
   background: #28afe7;
 }
-#economiy .lp-25feb-eventdetail-content-top-right-online-text {
+#economy .lp-25feb-eventdetail-content-top-right-online-text {
   color: #28afe7;
   border: 2px solid #28afe7;
 }
-#economiy .lp-25feb-eventdetail-content-merit {
+#economy .lp-25feb-eventdetail-content-merit {
   border: 2px solid #28afe7;
 }
-#economiy .lp-25feb-eventdetail-content-merit-content-box {
+#economy .lp-25feb-eventdetail-content-merit-content-box {
   color: #28afe7;
 }
 @media screen and (max-width: 768px) {
-  #economiy .lp-25feb-eventdetail-content-merit-content-box {
+  #economy .lp-25feb-eventdetail-content-merit-content-box {
     color: #28afe7;
   }
 }
-#economiy .lp-25feb-eventdetail-content-merit-content-box::before {
+#economy .lp-25feb-eventdetail-content-merit-content-box::before {
   background: #67d2e9;
   opacity: 0.5;
 }
