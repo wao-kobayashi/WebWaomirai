@@ -4322,7 +4322,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   header {
-    height: 78px;
+    height: 72px;
     padding: 0 18px;
     justify-content: center;
   }
@@ -4333,7 +4333,7 @@ header .header-logo {
 }
 @media screen and (max-width: 768px) {
   header .header-logo {
-    width: 70%;
+    width: 60%;
     height: auto;
   }
 }
@@ -4492,7 +4492,7 @@ header .header-right a {
 }
 
 :root {
-  --scroll-gap: 20px;
+  --scroll-gap: 15px;
 }
 
 .lp-25mar-fvsp .lp-25mar-fvsp-title {
@@ -4501,11 +4501,11 @@ header .header-right a {
   margin: 30px auto 0;
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-title-img img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   position: absolute;
-  right: 5px;
-  top: -60px;
+  right: -10px;
+  top: -80px;
   border-radius: 10000px;
   transform: scale(0.2);
   transition: opacity 0.3s ease, transform 0.65s ease;
@@ -4531,7 +4531,7 @@ header .header-right a {
   gap: 0 var(--scroll-gap);
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-grid-track-inner-child {
-  width: 42vw;
+  width: 52vw;
 }
 .lp-25mar-fvsp .lp-25mar-fvsp-grid-track-inner-child img {
   object-fit: cover;

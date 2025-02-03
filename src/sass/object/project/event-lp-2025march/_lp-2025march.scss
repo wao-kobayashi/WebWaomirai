@@ -74,7 +74,7 @@ header {
   margin: 0 auto;
   justify-content: space-between;
   @include responsive-style(768px) {
-    height: 78px;
+    height: 72px;
     padding: 0 18px;
     justify-content: center;
   }
@@ -83,7 +83,7 @@ header {
     max-width: 350px;
     margin: 0 !important;
     @include responsive-style(768px) {
-      width: 70%;
+      width: 60%;
       height: auto;
     }
     img {
@@ -186,7 +186,7 @@ header {
 
 //ファーストビジュアルSP
 :root {
-  --scroll-gap: 20px;
+  --scroll-gap: 15px;
 }
 
 .lp-25mar-fvsp {
@@ -196,11 +196,11 @@ header {
     margin: 30px auto 0;
 
     &-img img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       position: absolute;
-      right: 5px;
-      top: -60px;
+      right: -10px;
+      top: -80px;
       border-radius: $border-radius-full;
       transform: scale(0.2);
       transition: opacity 0.3s ease, transform 0.65s ease;
@@ -225,7 +225,7 @@ header {
         flex-wrap: nowrap; // 折り返しを無効にする
         gap: 0 var(--scroll-gap); // 要素間のギャップを設定
         &-child {
-          width: 42vw; // 幅をビューポートの33%に設定
+          width: 52vw; // 幅をビューポートの33%に設定
           img {
             object-fit: cover; // 画像をカバーするように表示
             width: 100%; // 幅を100%に設定
