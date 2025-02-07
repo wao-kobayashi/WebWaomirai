@@ -36,31 +36,7 @@ body#lp-2025feb
         |スライド
       .lp-25feb-info-title-slide-arrow
     .lp-25feb-info-columns
-      //哲学（思考力）
-      .lp-25feb-info-columns-child.philosophy
-        .lp-25feb-info-columns-child-head 
-            |哲学（思考力）
-        .lp-25feb-info-columns-child-image 
-         .lp-25feb-info-columns-child-image-main
-            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png')
-        .lp-25feb-info-columns-child-text
-            .lp-25feb-info-columns-child-text-catch 
-              |親子でホンネトーク 哲学カフェ
-            .lp-25feb-info-columns-child-text-title
-              |親子で語って
-              br
-              |お悩み解決！
-              br
-              |～“友だち”って何？～
-            .lp-25feb-info-columns-child-text-date
-              span.large|2
-              |月
-              span.large|8
-              |日(土)
-            .lp-25feb-info-columns-child-text-time
-              |17:00-17:45
-        a.lp-25feb-info-columns-child-link(href="#philosophy")
-              |詳しくはこちらをclick!
+
       //科学リテラシー
       .lp-25feb-info-columns-child.science
         .lp-25feb-info-columns-child-head 
@@ -89,7 +65,7 @@ body#lp-2025feb
         a.lp-25feb-info-columns-child-link(href="#science")
             |詳しくはこちらをclick!
       //経済（お金）
-      .lp-25feb-info-columns-child.economiy
+      .lp-25feb-info-columns-child.economy
         .lp-25feb-info-columns-child-head 
             |経済（お金）
         .lp-25feb-info-columns-child-image 
@@ -101,7 +77,7 @@ body#lp-2025feb
             .lp-25feb-info-columns-child-text-title
               |コロッケを
               br
-              |高く売れるのは誰だ！？
+              |高く売れるのは誰だ？！
               br
               |お金を楽しく学ぼう！
             .lp-25feb-info-columns-child-text-date
@@ -111,8 +87,36 @@ body#lp-2025feb
               |日(土)
             .lp-25feb-info-columns-child-text-time
               |13:00-15:00
-        a.lp-25feb-info-columns-child-link(href="#economiy")
+
+        a.lp-25feb-info-columns-child-link(href="#economy")
             |詳しくはこちらをclick!
+      //哲学（思考力）
+      .lp-25feb-info-columns-child.philosophy
+        .lp-25feb-info-columns-child-head 
+            |哲学（思考力）
+        .lp-25feb-info-columns-child-image
+         .lp-25feb-info-columns-child-image-overray 
+           |募集は終了しました 
+         .lp-25feb-info-columns-child-image-main
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png')
+        .lp-25feb-info-columns-child-text
+            .lp-25feb-info-columns-child-text-catch 
+              |親子でホンネトーク 哲学カフェ
+            .lp-25feb-info-columns-child-text-title
+              |親子で語って
+              br
+              |お悩み解決！
+              br
+              |～“友だち”って何？～
+            .lp-25feb-info-columns-child-text-date
+              span.large|2
+              |月
+              span.large|8
+              |日(土)
+            .lp-25feb-info-columns-child-text-time
+              |17:00-17:45
+        a.lp-25feb-info-columns-child-link(href="#philosophy")
+              |詳しくはこちらをclick!
     //CTA
     +btn-25feb-cta
       
@@ -120,21 +124,7 @@ body#lp-2025feb
   section.lp-25feb-eventdetail 
     //変数定義
     -
-        var events = [{
-          id: 'philosophy',
-          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png',
-          subjecttitle: '哲学（思考力）',
-          date: '2025年<span class="large">2</span>月<span class="large">8</span>日（土）',
-          time: '17:00-17:45',
-          eventsubtitle: 'オンラインセミナー<br class="pcimage">(チャット参加)',
-          eventtitle: '哲学カフェ<br />親子で語ってお悩み解決！<br />～“友だち”って何？～',
-          description: 'うちの子の "友だち関係"…どうなってる？　気にはなっても話題にしにくいこのテーマ、この際、親子でとことん話し合ってみませんか？\n哲学者の視点を借りて思考を深め、新たな気づきが得られる特別イベント、開催です！',
-          merits: [
-            { title: "親子の絆を深める！", text: "互いの本音トークが、親子の気持ちを通わせます。" },
-            { title: "哲学の力で問題解決の糸口を探す！", text: "思考技術としての哲学が体験的に学べます。" },
-            { title: "実生活に役立つ内容！", text: "迷う場面での、解決のヒントが得られます。" }
-          ],
-        },
+        var events = [
         {
           id: 'science',
           subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-16/hbzc2/1026513/17370062181533KUM3/event_sci_2.png',
@@ -152,7 +142,7 @@ body#lp-2025feb
           ],
         },
         {
-          id: 'economiy',
+          id: 'economy',
           subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png',
           subjecttitle: '経済（お金）',
           date: '2025年<span class="large">2</span>月<span class="large">22</span>日(土)',
@@ -165,6 +155,20 @@ body#lp-2025feb
             { title: "実生活にすぐ役立つ学びがたくさん！", text: "モノの値段、お金の価値など、今すぐ役立つ「お金の知識」が身に付きます。" },
             { title: "自分で考えて表現する楽しさを体験", text: "「コロッケ」を売るための工夫を競い合うことでお子様の論理的な思考力も育みます。" }
           ],
+        },{
+          id: 'philosophy',
+          subjectimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpv/1026513/17369098174MiQVDys/img_event_ph.png',
+          subjecttitle: '哲学（思考力）',
+          date: '2025年<span class="large">2</span>月<span class="large">8</span>日（土）',
+          time: '17:00-17:45',
+          eventsubtitle: 'オンラインセミナー<br class="pcimage">(チャット参加)',
+          eventtitle: '哲学カフェ<br />親子で語ってお悩み解決！<br />～“友だち”って何？～',
+          description: 'うちの子の "友だち関係"…どうなってる？　気にはなっても話題にしにくいこのテーマ、この際、親子でとことん話し合ってみませんか？\n哲学者の視点を借りて思考を深め、新たな気づきが得られる特別イベント、開催です！',
+          merits: [
+            { title: "親子の絆を深める！", text: "互いの本音トークが、親子の気持ちを通わせます。" },
+            { title: "哲学の力で問題解決の糸口を探す！", text: "思考技術としての哲学が体験的に学べます。" },
+            { title: "実生活に役立つ内容！", text: "迷う場面での、解決のヒントが得られます。" }
+          ],
         }
         ]
     //3教科ループさせる
@@ -172,6 +176,9 @@ body#lp-2025feb
       .lp-25feb-eventdetail-content(id=event.id)
         .lp-25feb-eventdetail-content-top
           .lp-25feb-eventdetail-content-top-left
+            if event.id == 'philosophy'
+              .lp-25feb-eventdetail-content-top-left-overray 
+                |募集は終了しました
             .lp-25feb-eventdetail-content-top-left-title
               != event.subjecttitle
             .lp-25feb-eventdetail-content-top-left-img
@@ -192,7 +199,14 @@ body#lp-2025feb
               != event.eventtitle
             .lp-25feb-eventdetail-content-top-right-text
               | #{event.description}
-      
+            if event.id == 'philosophy' || event.id == 'science'
+              .lp-25feb-eventdetail-content-top-right-archive
+                 .lp-25feb-eventdetail-content-top-right-archive-icon
+                   i.fa-regular.fa-file-video(class=event.id)
+                 .lp-25feb-eventdetail-content-top-right-archive-text 
+                    |後日アーカイブ視聴も可能！
+                    span|※参加申込の方のみ。期間限定です。
+            .lp-25feb-eventdetail-content-top-right-archive
         .lp-25feb-eventdetail-content-merit
           .lp-25feb-eventdetail-content-merit-illust
             img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbwzk/1026513/17369213304uAtB0Zf/illust_point_women.png')
@@ -266,7 +280,7 @@ body#lp-2025feb
           iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
           number: '1.',
           title: 'LINEで公式アカウントを友だち追加',
-          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a>から<br />・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
+          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a></span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
         },
         {
           iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
@@ -387,11 +401,11 @@ body#lp-2025feb
               |オンラインライブ授業
           .lp-25feb-start2025-feature-box-text 
              |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
-      .c-btn-lp
+      .lp-waomirai-start2025-btn
         a(href='https://waomirai.com/', target='_blank')
-          .c-btn-lp-text 
+          .lp-waomirai-start2025-btn-text 
             |ワオ未来塾の公式サイトへ     
-          .c-btn-lp-icn 
+          .lp-waomirai-start2025-btn-icn 
              img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
   //素材シリーズ
   footer 

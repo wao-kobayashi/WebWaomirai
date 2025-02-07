@@ -13,12 +13,12 @@ html {
   }
 }
 
-.c-btn-lp {
+.lp-waomirai-start2025-btn {
   text-align: center;
   a {
     text-align: center;
     margin: 30px auto 120px;
-    // background: $cl-btn-cta;
+    background: $cl-btn-cta;
     background: $cl-main-orange;
     text-decoration: none;
     height: 78px;
@@ -37,12 +37,12 @@ html {
     }
     @include box-shadow-lp;
 
-    .c-btn-lp-text {
+    .lp-waomirai-start2025-btn-text {
       margin: 0px 0 0;
       @include font-size-ml;
       letter-spacing: 1px;
     }
-    .c-btn-lp-icn {
+    .lp-waomirai-start2025-btn-icn {
       width: 17px;
       height: 17px;
     }
@@ -285,10 +285,26 @@ section.lp-25feb-info {
         font-weight: bold;
       }
       .lp-25feb-info-columns-child-image {
-        padding: 0 20px;
+        margin: 0 20px;
         position: relative;
-        &-main img {
+        &-overray {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          color: $cl-white;
+          @include font-size-l;
+          background: rgba(0, 0, 0, 0.55);
           border-radius: $border-radius-bigplus;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &-main {
+          img {
+            border-radius: $border-radius-bigplus;
+          }
         }
         &-special img {
           position: absolute;
@@ -332,10 +348,22 @@ section.lp-25feb-info {
           text-align: center;
           letter-spacing: 0.5px;
           @include font-size-ml;
-          margin: 0 0 45px;
+          margin: 0 0 20px;
           @include responsive-style(768px) {
             margin: 0 0 25px;
             @include font-size-m;
+          }
+        }
+        &-archive {
+          margin: 0 0 40px;
+          text-align: center;
+          height: 20px;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          i {
+            font-size: 20px;
           }
         }
         span.large {
@@ -366,6 +394,9 @@ section.lp-25feb-info {
   @each $category, $values in $categories {
     .#{$category} {
       .lp-25feb-info-columns-child-text-catch {
+        color: map-get($values, main-color);
+      }
+      .lp-25feb-info-columns-child-text-archive-icon {
         color: map-get($values, main-color);
       }
     }
@@ -406,6 +437,22 @@ section.lp-25feb-eventdetail {
       &-left {
         flex: 1;
         position: relative;
+        &-overray {
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 0 $border-radius-extrabig $border-radius-extrabig
+            $border-radius-extrabig;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.55);
+          color: $cl-white;
+          @include font-size-l;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         &-title {
           position: absolute;
           @include responsive-style(768px) {
@@ -515,6 +562,40 @@ section.lp-25feb-eventdetail {
         &-text {
           @include font-size-m;
           line-height: $lineheight-relaxed;
+        }
+        &-archive {
+          margin: 28px 0 0;
+          display: flex;
+          align-items: center;
+          i {
+            @include font-size-ml;
+            margin: 0 10px 0 0;
+            @include responsive-style(768px) {
+              @include font-size-xl;
+              margin: 0 14px 0 0;
+            }
+            &.philosophy {
+              color: $cl-philosophy;
+            }
+            &.science {
+              color: $cl-science;
+            }
+          }
+          &-text {
+            font-size: 16px;
+            color: $cl-graylight;
+            @include responsive-style(768px) {
+              display: inline-block;
+              line-height: 1.25;
+            }
+            span {
+              font-size: 12px;
+              @include responsive-style(768px) {
+                display: inline-block;
+                line-height: 1;
+              }
+            }
+          }
         }
       }
     }

@@ -604,8 +604,7 @@ mixin faqItem(title, text)
     .lp-section-faq-right   
       .lp-section-faq-right-title 
         | #{title}
-      .lp-section-faq-right-txt 
-        | #{text}
+      .lp-section-faq-right-txt!=text
 section.section-el-second.section-el-second-faq
   .section-el-second-top
     .section-el-second-top-text
@@ -622,7 +621,29 @@ section.section-el-second.section-el-second-faq
       +faqItem('オンラインなので、子どもが楽しく続けることができるか心配です。', '指導は子どもが大好きで元気な日本語の通じるネイティブ講師＆日本人講師が行います。アクションをつけながらリズムに合わせて発音したり、クイズ形式で得点を競ったり、お子様が楽しく参加できる工夫がたくさんあります。')
       +faqItem('大人しい性格なので、みんなが参加するオンラインレッスンで会話できるのか不安です。', 'オンラインレッスンのカメラ映像は先生にだけ表示され他の方には見えません。またチャットやスタンプでの参加もできますので、お子様に合った形でご参加いただけます。')     
       +faqItem('英検に挑戦したいと考えています。対策になりますか？', 'グローバル英語のレッスンは英検の「リスニング問題」の対策に有効です。英語が聞き取れない原因は単語と単語をつなげて発音する「リエゾン」に慣れていないことが原因です。グローバル英語ではこの単語と単語のカタマリを音（リエゾン）で練習しますので、英語特有の発音も聞き取れるようになります。またレッスンは音から英語を習得する”喋る練習”を中心に進めますが、音が体にしみこむ最終段階ではフレーズをアルファベットで表示します。これによって音と文字がつながり、アルファベットで表記された英語も読むことができるよう設計された教材を使用しています。')              
-
+      +faqItem('受講を始めるのはいつが最適ですか？', 'どの月から初めていただいても、その月内でテーマとなるフレーズが完結するように教材を作成していますが、２ヶ月ごとにプレゼンター、インタビュアー、レポーター、とシーンがかわりますので、しいていうならば偶数月スタートをおすすめしています。<br />とはいえ『思い立ったが吉日』！お子様の「やってみよう！」「がんばろう！」という気持ちが合うタイミングでスタートしていただくのが一番です。')    
+      .lp-section-faq
+        .lp-section-faq-left 
+          |Q
+        .lp-section-faq-right   
+          .lp-section-faq-right-title 
+            |受講レベルを検討するための指標を教えてください。
+          .lp-section-faq-right-txt   
+            |レベル１は、小学校高学年～中学１年で習う基礎フレーズがメインです。
+            br
+            |「Do you like ~ / I want to~」などはもちろん、スピーキング力UPに力点をおいていますので
+            |「Let me tell you～ / I especially like～ / This place looks～」など、実践会話で頻出表現も多く習得できます。これらの表現は英検では４級～３級レベルとなります。あくまでも、理解を目指すだけではなく、話せる＆通じる英語を目指しているため、簡単な英語でも、運用できるまで練習します。音のつながり（リエゾン）や、英語をカタマリで捉え、それらを運用レベルにあげるパターン練習を、最初から海外で通用するスピードで聞く話すを鍛えます。簡単なフレーズでも手応えがあるトレーニング内容です。
+            br
+            br
+            |レベル２は、中学２・３年～高校１年で習う英語がメインとなります。
+            br
+            |「Japanese people enjoy～ / Okonomiyaki is not only～  How have you been～」
+            |など、日常会話だけではなく、簡単な日本の文化の説明などができるレベルを目指し、英検では３級～準２級で頻出フレーズを実際に使える運用レベルまであげていきます。
+            br
+            |一見、大人から見ると難しい構文でも、ワオ未来塾では英語をリズムとパターンで覚える為
+            |算数の公式を覚える感覚で、１つの英語パターンを習得することで応用がスムーズになります。
+      +faqItem('年度の途中での入会をしても授業についていけますか？', '1年を通して様々なフレーズを学ぶので、どの月から受講いただいても問題ありません。')   
+      +faqItem('平日と土曜を組み合わせて受講することはできませんか？', '授業開始時に「受講レベル」を選択いただきます。選択したレベルの授業は平日・土曜いずれも受講可能です。<br />ただし火曜日と土曜日前半／木曜日と土曜日後半は同じレッスンを実施していますので、平日と土曜で別のレッスンを受講できるようご参加日時をご調整ください。')   
 section.section-el-second.section-el-second-contact
     .section-el-second-contact-left.pcimage
       .section-el-second-contact-left-img
@@ -637,12 +658,13 @@ section.section-el-second.section-el-second-contact
         |グローバル英語のレッスンや受講に関しての
         br.pcimage
         |お悩み・ご相談にお答えいたします！
-      .section-el-second-contact-right-button 
-        a(href="https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dIxgHw6kuz&whc=173508808725235", target='_blank')
-           span.section-el-second-contact-right-button-img
-             img(src='https://go.waomirai.com/l/1026513/2024-10-17/h5vq5/1026513/17291425927q4BfIZG/icn_line.svg')   
-           span.section-el-second-contact-right-button-txt
-             |LINEでお問い合わせ
+      .section-el-second-contact-right-button.
+        <a href="https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dIxgHw6kuz&whc=173508808725235" target="_blank"><span class="section-el-second-contact-right-button-img"
+                  ><img
+                    src="https://go.waomirai.com/l/1026513/2024-10-17/h5vq5/1026513/17291425927q4BfIZG/icn_line.svg" /></span
+                ><span class="section-el-second-contact-right-button-txt"
+                  >LINEでお問い合わせ</span
+                ></a>
 footer 
   ul 
    li 

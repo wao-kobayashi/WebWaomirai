@@ -6,7 +6,7 @@
 $cl-philosophy-pale: #f4c66d;
 // $cl-science-pale: #b6d43e;
 $cl-science-pale: #66cb88; //figmaから持ってきたが色が違う?
-$cl-economiy-pale: #67d2e9;
+$cl-economy-pale: #67d2e9;
 $cl-bg-eventlp-2025feb: #fff8e0;
 $cl-btn-cta: #f88c6a;
 $cl-title-underline: #febcad;
@@ -134,10 +134,10 @@ $categories: (
     sp-main-color: $cl-science-darken,
     pale-color: $cl-science-pale,
   ),
-  "economiy": (
-    main-color: $cl-economiy,
-    sp-main-color: $cl-economiy,
-    pale-color: $cl-economiy-pale // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,
+  "economy": (
+    main-color: $cl-economy,
+    sp-main-color: $cl-economy,
+    pale-color: $cl-economy-pale // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
