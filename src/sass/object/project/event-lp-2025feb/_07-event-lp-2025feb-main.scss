@@ -285,10 +285,26 @@ section.lp-25feb-info {
         font-weight: bold;
       }
       .lp-25feb-info-columns-child-image {
-        padding: 0 20px;
+        margin: 0 20px;
         position: relative;
-        &-main img {
+        &-overray {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          color: $cl-white;
+          @include font-size-l;
+          background: rgba(0, 0, 0, 0.55);
           border-radius: $border-radius-bigplus;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &-main {
+          img {
+            border-radius: $border-radius-bigplus;
+          }
         }
         &-special img {
           position: absolute;
@@ -421,6 +437,22 @@ section.lp-25feb-eventdetail {
       &-left {
         flex: 1;
         position: relative;
+        &-overray {
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 0 $border-radius-extrabig $border-radius-extrabig
+            $border-radius-extrabig;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.55);
+          color: $cl-white;
+          @include font-size-l;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         &-title {
           position: absolute;
           @include responsive-style(768px) {

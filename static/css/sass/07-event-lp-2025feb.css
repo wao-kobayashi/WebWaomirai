@@ -4586,8 +4586,27 @@ section.lp-25feb-info .lp-25feb-info-columns-child-head {
   }
 }
 section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image {
-  padding: 0 20px;
+  margin: 0 20px;
   position: relative;
+}
+section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-overray {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #ffffff;
+  font-size: 27px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-overray {
+    font-size: 24px;
+  }
 }
 section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-main img {
   border-radius: 24px;
@@ -4787,6 +4806,26 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top {
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left {
   flex: 1;
   position: relative;
+}
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-overray {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0 64px 64px 64px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-overray {
+    font-size: 24px;
+  }
 }
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-title {
   position: absolute;
