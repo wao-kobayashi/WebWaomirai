@@ -4611,6 +4611,23 @@ section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-
 section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-main img {
   border-radius: 24px;
 }
+section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-special::before {
+  position: absolute;
+  right: 5px;
+  bottom: -20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 10000px;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+  content: "";
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-special::before {
+    width: 80px;
+    height: 80px;
+  }
+}
 section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-special img {
   position: absolute;
   right: 5px;
@@ -4619,6 +4636,12 @@ section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-
   height: 120px;
   border-radius: 10000px;
   border: 3px solid #ffffff;
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-info .lp-25feb-info-columns-child .lp-25feb-info-columns-child-image-special img {
+    width: 80px;
+    height: 80px;
+  }
 }
 section.lp-25feb-info .lp-25feb-info-columns-child-text-catch {
   font-size: 17px;
@@ -4874,6 +4897,25 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-img img {
     border-radius: 0;
   }
 }
+section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-special::before {
+  position: absolute;
+  right: -28px;
+  bottom: -22px;
+  width: 225px;
+  height: 225px;
+  border-radius: 10000px;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 10;
+  content: "";
+}
+@media screen and (max-width: 768px) {
+  section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-special::before {
+    width: 120px;
+    height: 120px;
+    right: -15px;
+    bottom: -22px;
+  }
+}
 section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-special img {
   border-radius: 10000px;
   position: absolute;
@@ -4886,8 +4928,8 @@ section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-special img 
 }
 @media screen and (max-width: 768px) {
   section.lp-25feb-eventdetail .lp-25feb-eventdetail-content-top-left-special img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     right: -15px;
     bottom: -22px;
   }
