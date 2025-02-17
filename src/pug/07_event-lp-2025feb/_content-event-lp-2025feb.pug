@@ -42,6 +42,8 @@ body#lp-2025feb
         .lp-25feb-info-columns-child-head 
             |経済（お金）
         .lp-25feb-info-columns-child-image 
+            .lp-25feb-info-columns-child-image-overray 
+              |募集は終了しました
             .lp-25feb-info-columns-child-image-main
               img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpn/1026513/1736909816yLVFmV8C/img_event_ec.png')
         .lp-25feb-info-columns-child-text
@@ -179,8 +181,7 @@ body#lp-2025feb
       .lp-25feb-eventdetail-content(id=event.id)
         .lp-25feb-eventdetail-content-top
           .lp-25feb-eventdetail-content-top-left
-            if event.id == 'philosophy' || event.id == 'science'
-              .lp-25feb-eventdetail-content-top-left-overray 
+            .lp-25feb-eventdetail-content-top-left-overray 
                 |募集は終了しました
             .lp-25feb-eventdetail-content-top-left-title
               != event.subjecttitle
@@ -283,7 +284,7 @@ body#lp-2025feb
           iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
           number: '1.',
           title: 'LINEで公式アカウントを友だち追加',
-          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a href="${UrlLineEventFeb}" target="_blank">こちら</a></span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>・LINEが利用できない場合は<a href="${UrlFormEventFeb}" target="_blank">こちら</a>から`
+          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a class="modal-open-liff-qr">こちら</a></span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>・LINEが利用できない場合は<a href="#" class="modal-open-liff-qr">こちら</a>から`
         },
         {
           iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',

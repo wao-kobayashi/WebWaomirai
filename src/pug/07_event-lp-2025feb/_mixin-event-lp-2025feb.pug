@@ -9,7 +9,7 @@ mixin btn-25feb-cta
         |定員になり次第募集終了です
        .c-btn-cta-main 
         |LINEで簡単申込 >
-     a(href=UrlLineEventFeb, target='_blank').spimage
+     a.modal-open-liff-qr.spimage
        .c-btn-cta-top 
         |定員になり次第募集終了です
        .c-btn-cta-main 
@@ -20,7 +20,7 @@ mixin btn-25feb-cta-subject
      a.modal-open-liff-qr.pcimage
        .c-btn-cta-main 
         |LINEで簡単申込 >
-     a(href=UrlLineEventFeb, target='_blank').spimage
+     a.modal-open-liff-qr.spimage
        .c-btn-cta-main 
         |LINEで簡単申込 >
 
@@ -32,18 +32,30 @@ mixin ModalEntlyLine
       .modal-wrapper-content
          .modal-wrapper-content-main
             .modal-wrapper-content-main-head
-              .modal-wrapper-content-main-head-img
-                img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png')
-              .modal-wrapper-content-main-head-text 
-                 |スマホで
-                 br
-                 |LINEの友だち追加
-            .modal-wrapper-content-main-qr
-              img(src='https://go.waomirai.com/l/1026513/2025-01-21/hc9hg/1026513/1737507524MLv6wYCS/liffqr.png')
+            //-   .modal-wrapper-content-main-head-img
+            //-     img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png')
+            //-   .modal-wrapper-content-main-head-text 
+            //-      |スマホで
+            //-      br
+            //-      |LINEの友だち追加
+            //- .modal-wrapper-content-main-qr
+            //-   img(src='https://go.waomirai.com/l/1026513/2025-01-21/hc9hg/1026513/1737507524MLv6wYCS/liffqr.png')
             .modal-wrapper-content-main-text
-              |追加後に申込フォームが
-              br
-              |送信されます
+                b(style='font-size:121%')|2月開催(2/7~2/25)の
+                  br
+                  |無料親子セミナーの
+                  br
+                  |募集は全て終了しました
+                br
+                br
+                |第2弾のイベントとして
+                br
+                |2025/2/25〜4/4 の間で未来塾の
+                br
+                |講座がたっぷり体験できる
+                br
+                a(href='https://go.waomirai.com/event-2025march', target='_blank')|無料体験MONTH
+                |を開催しています
          .modal-wrapper-content-close.modal-close 
             |閉じる
   .bg-modal(style='display:none;')
