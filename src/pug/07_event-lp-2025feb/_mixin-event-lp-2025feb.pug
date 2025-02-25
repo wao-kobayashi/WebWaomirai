@@ -25,10 +25,8 @@ mixin btn-25feb-cta-subject
         |LINEで簡単申込 >
 
 mixin ModalEntlyLine
-  .modal(style='display:none;')
+  .modal
     .modal-wrapper 
-      .modal-wrapper-close 
-        .modal-wrapper-close-icon.modal-close
       .modal-wrapper-content
          .modal-wrapper-content-main
             .modal-wrapper-content-main-head
@@ -40,23 +38,25 @@ mixin ModalEntlyLine
             //-      |LINEの友だち追加
             //- .modal-wrapper-content-main-qr
             //-   img(src='https://go.waomirai.com/l/1026513/2025-01-21/hc9hg/1026513/1737507524MLv6wYCS/liffqr.png')
+
             .modal-wrapper-content-main-text
                 b(style='font-size:121%')|2月開催(2/7~2/25)の
                   br
                   |無料親子セミナーの
                   br
                   |募集は全て終了しました
+            div(style='margin:20px auto; width:90%;')
+              img(src='https://go.waomirai.com/l/1026513/2025-02-06/hdwyn/1026513/17388262836jtk0vGp/ogp2025march.png' style='border-radius:8px;')
+            .modal-wrapper-content-main-text
+                |第2弾のイベントとして2025/2/25〜4/4
                 br
+                |の間で未来塾の講座がたっぷり体験できる
                 br
-                |第2弾のイベントとして
+                |無料体験MONTHを開催しています
                 br
-                |2025/2/25〜4/4 の間で未来塾の
-                br
-                |講座がたっぷり体験できる
-                br
-                a(href='https://go.waomirai.com/event-2025march', target='_blank')|無料体験MONTH
-                |を開催しています
-         .modal-wrapper-content-close.modal-close 
-            |閉じる
-  .bg-modal(style='display:none;')
+                |
+      .lp-waomirai-start2025-btn
+        a(href='https://go.waomirai.com/event-2025march', target='_blank', style='width:80%; height:58px; margin: 30px auto 30px; background:#F88C6A;')
+            |詳しく見る      
+  .bg-modal
 +ModalEntlyLine
