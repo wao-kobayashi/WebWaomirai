@@ -306,14 +306,36 @@ section.lp-25feb-info {
             border-radius: $border-radius-bigplus;
           }
         }
-        &-special img {
-          position: absolute;
-          right: 5px;
-          bottom: -20px;
-          width: 120px;
-          height: 120px;
-          border-radius: $border-radius-full;
-          border: 3px solid $cl-white;
+        &-special {
+          // position: relative;
+          &::before {
+            position: absolute;
+            right: 5px;
+            bottom: -20px;
+            width: 120px;
+            height: 120px;
+            border-radius: $border-radius-full;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+            content: "";
+            @include responsive-style(768px) {
+              width: 80px;
+              height: 80px;
+            }
+          }
+          img {
+            position: absolute;
+            right: 5px;
+            bottom: -20px;
+            width: 120px;
+            height: 120px;
+            border-radius: $border-radius-full;
+            border: 3px solid $cl-white;
+            @include responsive-style(768px) {
+              width: 80px;
+              height: 80px;
+            }
+          }
         }
       }
 
@@ -491,6 +513,23 @@ section.lp-25feb-eventdetail {
           }
         }
         &-special {
+          &::before {
+            position: absolute;
+            right: -28px;
+            bottom: -22px;
+            width: 225px;
+            height: 225px;
+            border-radius: $border-radius-full;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 10;
+            content: "";
+            @include responsive-style(768px) {
+              width: 120px;
+              height: 120px;
+              right: -15px;
+              bottom: -22px;
+            }
+          }
           img {
             border-radius: $border-radius-full;
             position: absolute;
@@ -501,8 +540,8 @@ section.lp-25feb-eventdetail {
             z-index: 9;
             border: 5px solid $cl-white;
             @include responsive-style(768px) {
-              width: 150px;
-              height: 150px;
+              width: 120px;
+              height: 120px;
               right: -15px;
               bottom: -22px;
             }
