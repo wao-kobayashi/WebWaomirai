@@ -1,0 +1,14 @@
+/* color */
+
+$cl-bg-skyblue: #2e9eda; //空の青
+$cl-bg-leafgreen: #7bd94f; //草原の緑
+$cl-bg-leafgreen-darken: #44b60e; //濃い草原の緑
+$cl-bg-leafgreen-darkendeep: #3f871d; //さらに濃い草原の緑
+$cl-bg-eventlp: #fff8e0; //イベントLP専用の背景
+$cl-title-underline: #febcad;
+
+$subject-categories: (
+  "philosophy": $cl-philosophy,
+  "science": $cl-science-darken,
+  "economiy": $cl-economy,
+);
