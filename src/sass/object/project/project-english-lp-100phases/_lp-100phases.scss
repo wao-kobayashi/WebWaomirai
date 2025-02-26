@@ -1,0 +1,13 @@
+.eng-phase-main {
+  background: $cl-bg-skyblue;
+  text-align: center;
+  .eng-phase-main-section img {
+    width: 90%;
+    margin: 0 auto 60px;
+    border-radius: $border-radius-bigplus;
+  }
+}
+
+.eng-phase-bg-green {
+  background: $cl-bg-leafgreen;
+}
