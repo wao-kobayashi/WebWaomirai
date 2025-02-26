@@ -4200,7 +4200,7 @@ body#eng-phase {
   border-left: 10px solid #ffffff;
   border-top: 10px solid #ffffff;
   border-right: 10px solid #ffffff;
-  border-radius: 60px 60px 0 0;
+  border-radius: 80px 80px 0 0;
   overflow: hidden;
 }
 @media screen and (max-width: 980px) {

@@ -8,7 +8,8 @@ $z-indexes: (
   @return map-get($z-indexes, $layer);
 }
 
-.modal {
+.modal,
+.modal-hoshimi {
   position: fixed;
   z-index: z("modal");
   top: 0%;

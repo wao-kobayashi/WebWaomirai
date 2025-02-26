@@ -7,9 +7,13 @@ script.
     $('.modal,.bg-modal').show();
   });
 
+  $('.modal-open-liff-qr-hoshimi').click(function() {
+    $('.modal-hoshimi,.bg-modal').show();
+  });
+
   // モーダルウィンドウを閉じる処理（閉じるボタンまたは背景クリック時）
   $('.modal-close,.bg-modal').click(function() {
-    $('.modal,.bg-modal').hide();
+    $('.modal,.bg-modal,.modal-hoshimi').hide();
   });
 
   // 高さ調整関連の処理

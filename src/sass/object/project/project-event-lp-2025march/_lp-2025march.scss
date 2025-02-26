@@ -424,6 +424,91 @@ header {
     }
   }
 }
+.lp-25mar-hoshimi {
+  width: 100%;
+  background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png")
+    repeat;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  background-size: cover;
+  padding: 75px 0;
+  margin: 0 auto 75px;
+  .lp-25mar-hoshimi-wrap {
+    display: flex;
+    max-width: $width-lg;
+    margin: 0 auto;
+    align-items: center;
+    gap: 60px;
+    padding: 0 20px;
+    @include responsive-style(768px) {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    .lp-25mar-wrap-hoshimi-left {
+      flex: 3.5;
+      .lp-25mar-wrap-hoshimi-left-spcialtitle {
+        @include font-size-xl;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 auto 12px;
+        letter-spacing: 8px;
+        padding: 0 0 12px;
+        border-bottom: 2px solid $cl-black;
+      }
+      .lp-25mar-wrap-hoshimi-left-title {
+        @include font-size-xl;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 auto 16px;
+        color: $cl-black;
+        line-height: $lineheight-tight;
+      }
+      .lp-25mar-wrap-hoshimi-left-date {
+        @include font-size-m;
+        text-align: left;
+        margin: 0 auto 12px;
+        color: $cl-black;
+        font-weight: bold;
+      }
+      .lp-25mar-wrap-hoshimi-left-text {
+        // @include font-size-m;
+        text-align: left;
+        margin: 0 auto 24px;
+        color: $cl-black;
+
+        @include responsive-style(768px) {
+          margin: 0 auto 32px;
+        }
+      }
+      .lp-25mar-wrap-hoshimi-left-button {
+        a {
+          color: $cl-white;
+          text-decoration: none;
+          background: $cl-brand-line;
+          border-radius: $border-radius-full;
+          width: 100%;
+          height: 55px;
+          color: $cl-white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+          animation: fuwafuwa-button 2s 0s infinite;
+          @include font-size-l;
+        }
+      }
+    }
+    .lp-25mar-wrap-hoshimi-right {
+      flex: 6.5;
+      img {
+        border-radius: $border-radius-bigplus;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
 //講座内容
 .lp-25mar-eventinfo {
   padding: 0 0 30px;
