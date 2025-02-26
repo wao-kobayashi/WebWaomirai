@@ -1,3 +1,31 @@
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(200px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(-200px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
+@keyframes cloud-move2 {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(-200px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(200px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
 @keyframes fuwafuwa-button {
   0% {
     scale: 1;
