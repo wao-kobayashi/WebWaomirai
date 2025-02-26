@@ -10,7 +10,10 @@
 
 .eng-phase-bg-green {
   background: $cl-bg-leafgreen;
+  padding: 0 0 75px;
 }
+
+$shadow-height: 45px;
 
 .eng-phase-main-cv-humans {
   position: relative;
@@ -23,12 +26,17 @@
   .eng-phase-main-cv-humans-area {
     position: absolute;
     width: $width-main-content;
-    top: 60%;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
     z-index: 3;
+    &.eng-phase-main-cv-humans-area-blue {
+      top: 60%;
+    }
+    &.eng-phase-main-cv-humans-area-green {
+      top: 50%;
+    }
     .eng-phase-main-cv-humans-area-top {
       background: $cl-white;
       border: 3px solid $cl-bg-leafgreen-darkendeep;
@@ -47,7 +55,7 @@
     }
     .eng-phase-main-cv-humans-area-bottom {
       width: 100%;
-      height: 45px;
+      height: $shadow-height;
       z-index: 0;
       border: 3px solid $cl-bg-leafgreen-darkendeep;
       background: $cl-bg-leafgreen-darken;
@@ -62,28 +70,37 @@
     }
   }
 }
+
+@mixin sectionGreen {
+  background: $cl-white;
+  border: 3px solid $cl-bg-leafgreen-darkendeep;
+  border-radius: $border-radius-bigplus;
+  position: relative;
+  z-index: 1;
+  width: $width-main-content;
+  margin: 0 auto;
+}
+@mixin sectionGreenShadow {
+  display: block;
+  content: "";
+  width: $width-main-content;
+  height: $shadow-height;
+  z-index: 0;
+  border: 3px solid $cl-bg-leafgreen-darkendeep;
+  background: $cl-bg-leafgreen-darken;
+  margin: -20px auto 0;
+  border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+}
 .eng-phase-main-section-green {
-  margin: 0 auto 120px;
+  &.eng-phase-main-section-green-rapport {
+    margin: 0 auto 150px;
+  }
   &::after {
-    display: block;
-    content: "";
-    width: $width-main-content;
-    height: 45px;
-    z-index: 0;
-    border: 3px solid $cl-bg-leafgreen-darkendeep;
-    background: $cl-bg-leafgreen-darken;
-    margin: -20px auto 0;
-    border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+    @include sectionGreenShadow;
   }
   .eng-phase-main-section-green-wrap {
-    background: $cl-white;
-    border: 3px solid $cl-bg-leafgreen-darkendeep;
-    border-radius: $border-radius-bigplus;
-    position: relative;
-    z-index: 1;
-    padding: 60px 30px 45px;
-    width: $width-main-content;
-    margin: 0 auto;
+    @include sectionGreen;
+    padding: 30px 30px 40px;
   }
 
   .eng-phase-main-section-green-wrap-title {
@@ -91,7 +108,6 @@
     position: absolute;
     left: 20px;
     top: -100px;
-    // margin: -80px 0 0 12px;
     img {
       width: 100%;
     }
@@ -106,5 +122,84 @@
   }
   .eng-phase-main-section-green-wrap-banner a img {
     width: 100%;
+  }
+}
+
+//5step
+.eng-phase-main-section-5steps {
+  .eng-phase-main-section-5steps-title img {
+    width: 100%;
+  }
+  .eng-phase-main-section-5steps-box {
+    margin: 0 auto 45px;
+    &::after {
+      @include sectionGreenShadow;
+    }
+    .eng-phase-main-section-5steps-box-wrap {
+      @include sectionGreen;
+      padding: 30px 30px 30px;
+    }
+    .eng-phase-main-section-5steps-box-wrap-head {
+      display: flex;
+      margin: 0 auto 20px;
+      > div {
+        flex: 1;
+      }
+      .eng-phase-main-section-5steps-box-wrap-head-step {
+        @include font-size-l;
+        line-height: $lineheight-tight;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 60px;
+          background: $cl-black;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          margin: auto;
+        }
+        span {
+          display: block;
+          @include font-size-xxxl;
+        }
+      }
+      .eng-phase-main-section-5steps-box-wrap-head-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 80px;
+        }
+      }
+    }
+    .eng-phase-main-section-5steps-box-wrap-title {
+      @include font-size-xl;
+      font-weight: bold;
+      margin: 0 0 20px;
+    }
+    .eng-phase-main-section-5steps-box-wrap-text {
+      @include font-size-l;
+      text-align: left;
+      font-weight: normal;
+      margin: 0;
+    }
+    .eng-phase-main-section-5steps-box {
+      .eng-phase-main-section-5steps-box-wrap {
+        @include sectionGreen;
+        padding: 30px 30px 30px;
+      }
+      &::after {
+        @include sectionGreenShadow;
+      }
+    }
+  }
+  .eng-phase-main-section-5steps-cv {
+    img {
+      margin: 0 auto 0px;
+    }
   }
 }
