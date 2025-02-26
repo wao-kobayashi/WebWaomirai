@@ -4,12 +4,22 @@
   //-     |ここワオのロゴ
   //-   .eng-phase-main-fv-img 
   //-     |ここにキービジュアル
-  //- section.eng-phase-main-cv-crowds 
-  //-   .eng-phase-main-cv-crowds-img
-  //-     |雲
-  //-   .eng-phase-main-cv-crowds-btn
-  //-     a.js-btn-cv
-  //-       img(src=ImgBtnCv)
+  section.eng-phase-main-cv-crowds 
+    .eng-phase-main-cv-crowds-img
+      img(src=ImgBgCrowdsCv)
+    .eng-phase-main-cv-crowds-btn
+      a.js-btn-cv
+        img(src=ImgBtnCv)
+  section.eng-phase-main-section-blue
+    img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
+  section.eng-phase-main-section-blue
+    img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
+  section.eng-phase-main-cv-crowds 
+    .eng-phase-main-cv-crowds-img
+      img(src=ImgBgCrowdsCv)
+    .eng-phase-main-cv-crowds-btn
+      a.js-btn-cv
+        img(src=ImgBtnCv)
   //- section.eng-phase-main-section-blue
   //-   img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
   //- section.eng-phase-main-section-blue
@@ -20,10 +30,10 @@
   //-   .eng-phase-main-cv-crowds-btn
   //-     a.js-btn-cv
   //-       img(src=ImgBtnCv)
-  //- section.eng-phase-main-section-blue
-  //-   img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
-  //- section.eng-phase-main-section-blue
-  //-   img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
+  section.eng-phase-main-section-blue
+    img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
+  section.eng-phase-main-section-blue
+    img(src='https://www.mldsupportuk.org.uk/wp-content/uploads/2013/01/sample-img.png')
   section.eng-phase-main-cv-humans
     .eng-phase-main-cv-humans-img 
         img(src=ImgBgCvBlue)
@@ -74,6 +84,7 @@
     .eng-phase-main-section-green-wrap
      .eng-phase-main-section-green-wrap-title
         img(src=ImgTitlePrice)
+        
   //CV
   section.eng-phase-main-cv-humans
     .eng-phase-main-cv-humans-img 
@@ -107,9 +118,8 @@
                 br
                 |友だち追加
           .eng-phase-main-section-5steps-box-wrap-text 
-                |まず、右のボタンから公式アカウントを友だちに追加してください。
-                br
-                |・LINEが利用できない場合はこちらから
+                |まず公式アカウントを友だちに追加してください。
+                //- |・LINEが利用できない場合はこちらから
                 br
                 |・友だち追加はこちらから
 
@@ -128,12 +138,6 @@
                 |画面に送られる申し込み
                 br
                 |フォームをタップ！
-          .eng-phase-main-section-5steps-box-wrap-text 
-                |まず、右のボタンから公式アカウントを友だちに追加してください。
-                br
-                |・LINEが利用できない場合はこちらから
-                br
-                |・友だち追加はこちらから
       
       //step3
       .eng-phase-main-section-5steps-box
@@ -175,6 +179,13 @@
             .eng-phase-main-section-5steps-box-wrap-head-img
                 img(src=Img5Steps05)
           .eng-phase-main-section-5steps-box-wrap-title 
+                |[前日]
+                br
+                |イベント専用コミュニティ
+                br
+                span.small|（LINEオープンチャット）
+                |に参加
+          .eng-phase-main-section-5steps-box-wrap-text 
                 |オンラインレッスンのお知らせや、課題の取り組み方、先生からのアドバイスはすべてこのコミュニティで共有しますので、必ず参加してください。
       //step2
       .eng-phase-main-section-5steps-box
@@ -203,52 +214,29 @@ section.bg-lp-creamyellow
               img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
             .lp-waomirai-about-box-right
               |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
-  //授業の特徴
-  .lp-waomirai-feature
-      .c-title-25feb-lp 
-        |授業の特長
-      div
-        .lp-waomirai-feature-child 
-          i.fa-solid.fa-globe
-          |オンライン授業で
-          br.spimage
-          |全国どこからでも
-          br.spimage
-          |参加OK
-        .lp-waomirai-feature-child 
-          i.fa-regular.fa-comments
-          |ライブだからチャットで授業に参加できる!
-        .lp-waomirai-feature-child 
-          .lp-waomirai-feature-child-icons 
-            i.fa-solid.fa-laptop
-          |必要なのはPCか
-          br.spimage
-          |タブレット端末だけ！
+
                 
   //2025年4月開講
   .lp-waomirai-start2025
         .lp-waomirai-start2025-catch 
-          |社会で役立つ学びを、
-          br.spimage
+          |社会で役立つ学びを
+          br
           |今はじめよう
           br
           |オンラインで
-          br.spimage
+          br
           |楽しく学ぶ“新5教科”
-        .lp-waomirai-start2025-subtitle 
-          |2025年4月開校！
+        //- .lp-waomirai-start2025-subtitle 
+        //-   |2025年4月開校！
         .lp-waomirai-start2025-logo 
           img(src=ImgLogoWaoMirai)
         .lp-waomirai-start2025-target 
           |〈対象〉
-          br.spimage
+          br
           |小学3〜6年生／
-          br.spimage
+          br
           |中学生／高校生
         .lp-waomirai-start2025-subjects 
-          .pcimage
-              img(src=Img5SubjectsPc)
-          .spimage
               img(src=Img5SubjectsSp) 
         .lp-waomirai-start2025-feature 
           .lp-waomirai-start2025-feature-box
@@ -289,7 +277,7 @@ section.bg-lp-creamyellow
             |会社概要
         li 
           a(href="https://www.wao-corp.com/kojin/", target='_blank')
-          |プライバシーポリシー
+            |プライバシーポリシー
         li
           a(href="https://go.waomirai.com/shotororihiki", target='_blank')
             |特定商取引に基づく表記

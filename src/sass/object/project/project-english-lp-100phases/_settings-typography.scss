@@ -26,14 +26,14 @@
 @mixin font-size-l {
   font-size: 22px;
   @include responsive-style(768px) {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 
 @mixin font-size-xl {
   font-size: 27px;
   @include responsive-style(768px) {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 @mixin font-size-xxl {
@@ -45,7 +45,7 @@
 @mixin font-size-xxxl {
   font-size: 50px;
   @include responsive-style(768px) {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 @mixin font-size-xxxxl {
