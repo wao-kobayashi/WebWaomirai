@@ -4895,7 +4895,7 @@ header .header-right a {
   font-size: 27px;
   font-weight: bold;
   text-align: left;
-  margin: 0 auto 12px;
+  margin: 0 auto 16px;
   letter-spacing: 8px;
   padding: 0 0 12px;
   border-bottom: 2px solid #262626;
@@ -4906,22 +4906,17 @@ header .header-right a {
   }
 }
 .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-title {
-  font-size: 27px;
+  font-size: 24px;
   font-weight: bold;
   text-align: left;
-  margin: 0 auto 16px;
+  margin: 0 auto 8px;
   color: #262626;
   line-height: 1.25;
-}
-@media screen and (max-width: 768px) {
-  .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-title {
-    font-size: 25px;
-  }
 }
 .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-date {
   font-size: 17px;
   text-align: left;
-  margin: 0 auto 12px;
+  margin: 0 auto 8px;
   color: #262626;
   font-weight: bold;
 }
@@ -4932,7 +4927,7 @@ header .header-right a {
 }
 .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-text {
   text-align: left;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
   color: #262626;
 }
 @media screen and (max-width: 768px) {
@@ -4943,7 +4938,7 @@ header .header-right a {
 .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-button a {
   color: #ffffff;
   text-decoration: none;
-  background: #00b900;
+  background: #f06b6b;
   border-radius: 10000px;
   width: 100%;
   height: 55px;
