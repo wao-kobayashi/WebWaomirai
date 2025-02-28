@@ -55,8 +55,8 @@
 
 .inview-hide {
   opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
 }
 
 .inview {

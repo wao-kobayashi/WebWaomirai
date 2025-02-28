@@ -1,6 +1,10 @@
 $shadow-height: 45px;
 $shadow-height-sp: 38px;
 
+.eng-phase-main-fv {
+  position: relative;
+  z-index: 10;
+}
 .eng-phase-main {
   //   background: $cl-bg-skyblue;
   text-align: center;
@@ -11,10 +15,15 @@ $shadow-height-sp: 38px;
   //   }
 }
 
+.eng-phase-main-section-blue-last {
+  margin: 0 auto 0px !important;
+}
 .eng-phase-main-section-blue {
   width: $width-main-content;
   margin: 0 auto 60px;
   border-radius: $border-radius-bigplus;
+  position: relative;
+  z-index: 10;
   &::after {
     content: "";
     width: 100%;
@@ -25,11 +34,21 @@ $shadow-height-sp: 38px;
     background: $cl-bg-skyblue-darken;
     margin: -20px 0 0;
     border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+    @include responsive-style(768px) {
+      border: 3px solid $cl-bg-skyblue-darkendeep;
+      height: $shadow-height-sp;
+      border-radius: 0 0 $border-radius-big $border-radius-big;
+    }
   }
 }
 
 .eng-phase-main-cv-crowds {
+  margin: -30px 0 0;
   position: relative;
+  .eng-phase-main-cv-crowds-img {
+    position: relative;
+    z-index: 0;
+  }
   .eng-phase-main-cv-crowds-btn img {
     position: absolute;
     top: 30%;
@@ -48,9 +67,14 @@ $shadow-height-sp: 38px;
   background: $cl-bg-leafgreen;
   padding: 0 0 75px;
 }
+.eng-phase-main-cv-humans-blue {
+  margin: -30px auto 0;
+}
 
 .eng-phase-main-cv-humans {
+  margin: 0px auto 30px;
   position: relative;
+
   .eng-phase-main-cv-humans-img {
     img {
       position: relative;
@@ -66,7 +90,7 @@ $shadow-height-sp: 38px;
     text-align: center;
     z-index: 3;
     &.eng-phase-main-cv-humans-area-blue {
-      top: 60%;
+      top: 56%;
     }
     &.eng-phase-main-cv-humans-area-green {
       top: 50%;
@@ -78,6 +102,9 @@ $shadow-height-sp: 38px;
       position: relative;
       z-index: 1;
       padding: 45px 0 45px;
+      @include responsive-style(768px) {
+        border: 3px solid $cl-bg-leafgreen-darkendeep;
+      }
       .eng-phase-main-cv-humans-area-top-text {
         @include font-size-xl;
         margin: 0 auto 20px;
@@ -95,6 +122,9 @@ $shadow-height-sp: 38px;
       background: $cl-bg-leafgreen-darken;
       margin: -20px 0 0;
       border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+      @include responsive-style(768px) {
+        border: 3px solid $cl-bg-leafgreen-darkendeep;
+      }
     }
     .eng-phase-main-cv-humans-area-button {
       margin: 0 auto 20px;
@@ -113,6 +143,9 @@ $shadow-height-sp: 38px;
   z-index: 1;
   width: $width-main-content;
   margin: 0 auto;
+  @include responsive-style(768px) {
+    border: 3px solid $cl-bg-leafgreen-darkendeep;
+  }
 }
 @mixin sectionGreenShadow {
   display: block;
@@ -126,30 +159,80 @@ $shadow-height-sp: 38px;
   border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
   @include responsive-style(768px) {
     height: $shadow-height-sp;
+    border: 3px solid $cl-bg-leafgreen-darkendeep;
   }
 }
 
 //グリーンエリアのセクション
 .eng-phase-main-section-green {
   &.eng-phase-main-section-green-rapport {
-    margin: 0 auto 150px;
+    margin: 0 auto 90px;
   }
+
   &::after {
     @include sectionGreenShadow;
   }
   .eng-phase-main-section-green-wrap {
     @include sectionGreen;
-    padding: 30px 30px 40px;
+    padding: 30px 23px 40px;
     @include responsive-style(768px) {
       padding: 20px 20px 30px;
     }
+    .eng-phase-main-section-green-wrap-faq {
+      padding: 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .eng-phase-main-section-green-wrap-faq-box {
+        padding: 0 0 45px;
+
+        &:not(:last-child) {
+          border-bottom: 3px dashed $cl-graylight;
+        }
+        .eng-phase-main-section-green-wrap-faq-box-title {
+          display: flex;
+          gap: 10px;
+          .eng-phase-main-section-green-wrap-faq-box-title-icon {
+            @include font-size-xl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $cl-english;
+            width: 45px;
+            height: 45px;
+            border-radius: $border-radius-full;
+            line-height: $lineheight-none;
+            padding: 0 0 4px;
+            color: $cl-white;
+            margin: 5px 0 0;
+          }
+          .eng-phase-main-section-green-wrap-faq-box-title-text {
+            text-align: left;
+            @include font-size-l;
+            font-weight: bold;
+            flex: 1;
+          }
+        }
+        .eng-phase-main-section-green-wrap-faq-box-content {
+          margin: 10px 0 0;
+          @include font-size-l;
+          text-align: left;
+        }
+      }
+    }
   }
 
+  .eng-phase-main-section-5steps-title-price {
+    top: -60px !important;
+  }
   .eng-phase-main-section-green-wrap-title {
     width: $width-cv-btn;
     position: absolute;
     left: 20px;
-    top: -100px;
+    top: -80px;
+    @include responsive-style(768px) {
+      top: -60px;
+    }
     img {
       width: 100%;
     }
@@ -175,6 +258,9 @@ $shadow-height-sp: 38px;
   }
   .eng-phase-main-section-5steps-box {
     margin: 0 auto 45px;
+    @include responsive-style(768px) {
+      margin: 0 auto 30px;
+    }
     &::after {
       @include sectionGreenShadow;
     }
@@ -243,10 +329,12 @@ $shadow-height-sp: 38px;
       }
     }
   }
-  .eng-phase-main-section-5steps-cv {
-    img {
-      margin: 0 auto 0px;
-    }
+}
+.eng-phase-main-section-5steps-cv {
+  margin: 0 auto 105px;
+  img {
+    margin: 0 auto 0px;
+    width: $width-cv-btn;
   }
 }
 
