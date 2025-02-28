@@ -1,1 +1,22 @@
 script.
+  // モーダル関連の処理
+  // -----------------------------
+  // QRコードを表示するモーダルウィンドウを開く処理
+  $('.modal-open-liff-qr').click(function() {
+    $('.modal,.bg-modal').show();
+  });
+  // モーダルウィンドウを閉じる処理（閉じるボタンまたは背景クリック時）
+  $('.modal-close,.bg-modal').click(function() {
+    $('.modal,.bg-modal').hide();
+  });
+  // DOM読み込み完了後の初期化処理
+  // -----------------------------
+  $(document).ready(function () {
+
+    // 要素が画面内に表示されたときに'inview'クラスを追加
+    $('.inview-triger').on("inview", function (event, isInView) {
+      if (isInView) {
+        $(this).addClass("inview");
+      }
+    });
+  });

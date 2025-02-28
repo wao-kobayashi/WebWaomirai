@@ -1,3 +1,6 @@
+$shadow-height: 45px;
+$shadow-height-sp: 38px;
+
 .eng-phase-main {
   //   background: $cl-bg-skyblue;
   text-align: center;
@@ -12,6 +15,17 @@
   width: $width-main-content;
   margin: 0 auto 60px;
   border-radius: $border-radius-bigplus;
+  &::after {
+    content: "";
+    width: 100%;
+    height: $shadow-height;
+    z-index: 0;
+    display: block;
+    border: 5px solid $cl-bg-skyblue-darkendeep;
+    background: $cl-bg-skyblue-darken;
+    margin: -20px 0 0;
+    border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+  }
 }
 
 .eng-phase-main-cv-crowds {
@@ -34,9 +48,6 @@
   background: $cl-bg-leafgreen;
   padding: 0 0 75px;
 }
-
-$shadow-height: 45px;
-$shadow-height-sp: 38px;
 
 .eng-phase-main-cv-humans {
   position: relative;
@@ -62,7 +73,7 @@ $shadow-height-sp: 38px;
     }
     .eng-phase-main-cv-humans-area-top {
       background: $cl-white;
-      border: 3px solid $cl-bg-leafgreen-darkendeep;
+      border: 5px solid $cl-bg-leafgreen-darkendeep;
       border-radius: $border-radius-bigplus;
       position: relative;
       z-index: 1;
@@ -80,7 +91,7 @@ $shadow-height-sp: 38px;
       width: 100%;
       height: $shadow-height;
       z-index: 0;
-      border: 3px solid $cl-bg-leafgreen-darkendeep;
+      border: 5px solid $cl-bg-leafgreen-darkendeep;
       background: $cl-bg-leafgreen-darken;
       margin: -20px 0 0;
       border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
@@ -96,7 +107,7 @@ $shadow-height-sp: 38px;
 
 @mixin sectionGreen {
   background: $cl-white;
-  border: 3px solid $cl-bg-leafgreen-darkendeep;
+  border: 5px solid $cl-bg-leafgreen-darkendeep;
   border-radius: $border-radius-bigplus;
   position: relative;
   z-index: 1;
@@ -109,7 +120,7 @@ $shadow-height-sp: 38px;
   width: $width-main-content;
   height: $shadow-height;
   z-index: 0;
-  border: 3px solid $cl-bg-leafgreen-darkendeep;
+  border: 5px solid $cl-bg-leafgreen-darkendeep;
   background: $cl-bg-leafgreen-darken;
   margin: -20px auto 0;
   border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;

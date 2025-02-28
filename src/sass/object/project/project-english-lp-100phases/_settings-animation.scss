@@ -53,30 +53,13 @@
   }
 }
 
-@keyframes bounce-swipe {
-  0%,
-  30%,
-  60%,
-  80%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  15% {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-  }
-  45% {
-    -webkit-transform: translateX(15px);
-    transform: translateX(15px);
-  }
+.inview-hide {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
-@keyframes infiniteScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - var(--scroll-gap) / 2));
-  }
+.inview {
+  opacity: 1;
+  transform: translateY(0);
 }
