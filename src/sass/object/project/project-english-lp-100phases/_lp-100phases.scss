@@ -1,9 +1,16 @@
 $shadow-height: 45px;
 $shadow-height-sp: 38px;
 
+//////////////////////
+//ブルーエリアのセクション
+//////////////////////
+
 .eng-phase-main-fv {
   position: relative;
   z-index: 10;
+  overflow: hidden;
+  .eng-phase-main-fv-img img {
+  }
 }
 .eng-phase-main {
   //   background: $cl-bg-skyblue;
@@ -24,6 +31,7 @@ $shadow-height-sp: 38px;
   border-radius: $border-radius-bigplus;
   position: relative;
   z-index: 10;
+
   &::after {
     content: "";
     width: 100%;
@@ -62,17 +70,77 @@ $shadow-height-sp: 38px;
 .eng-phase-bg-blue {
   background: $cl-bg-skyblue;
   padding: 0 0 0px;
+  @include min-responsive-style(768px) {
+    border-radius: 80px 80px 0 0;
+  }
 }
-.eng-phase-bg-green {
-  background: $cl-bg-leafgreen;
-  padding: 0 0 75px;
+
+.eng-phase-main-section-blue-wrap-content-static {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
 }
+
+.eng-phase-main-section-blue-flow-wrap {
+  background-image: url("https://go.waomirai.com/l/1026513/2025-03-02/hgtr5/1026513/1740971200jWyA77Q6/bg_section_middle.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  width: 100%;
+  padding: 10px 0 0;
+}
+.eng-phase-main-section-blue-static {
+  .eng-phase-main-section-blue-wrap-title-first {
+    background-image: url("https://go.waomirai.com/l/1026513/2025-03-02/hgtr5/1026513/1740971200jWyA77Q6/bg_section_middle.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+  }
+  .eng-phase-main-section-blue-wrap-title {
+    padding: 0 0 20px;
+    position: relative;
+    z-index: 10;
+  }
+  .eng-phase-main-section-blue-wrap-content {
+    width: 80%;
+    margin: 0 auto 0;
+    padding: 0 0 45px;
+    position: relative;
+    display: block;
+  }
+}
+.eng-phase-main-section-blue-flow {
+  .eng-phase-main-section-blue-wrap-title-first {
+    background-image: url("https://go.waomirai.com/l/1026513/2025-03-02/hgtr5/1026513/1740971200jWyA77Q6/bg_section_middle.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+  }
+  .eng-phase-main-section-blue-wrap-title {
+    padding: 0 0 480px;
+    position: relative;
+    z-index: 100;
+    img {
+      position: relative;
+      z-index: 100;
+    }
+  }
+  .eng-phase-main-section-blue-wrap-content {
+    width: 80%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    display: block;
+    z-index: 0;
+  }
+}
+
 .eng-phase-main-cv-humans-blue {
   margin: -30px auto 0;
 }
 
 .eng-phase-main-cv-humans {
-  margin: 0px auto 30px;
+  margin: 0px auto 0px;
   position: relative;
 
   .eng-phase-main-cv-humans-img {
@@ -163,7 +231,14 @@ $shadow-height-sp: 38px;
   }
 }
 
+//////////////////////
 //グリーンエリアのセクション
+//////////////////////
+.eng-phase-bg-green {
+  background: $cl-bg-leafgreen;
+  padding: 0 0 75px;
+}
+
 .eng-phase-main-section-green {
   &.eng-phase-main-section-green-rapport {
     margin: 0 auto 90px;
@@ -177,6 +252,9 @@ $shadow-height-sp: 38px;
     padding: 30px 23px 40px;
     @include responsive-style(768px) {
       padding: 20px 20px 30px;
+    }
+    .eng-phase-main-section-green-wrap-content {
+      margin: 20px -20px -10px;
     }
     .eng-phase-main-section-green-wrap-faq {
       padding: 20px 0 0;
@@ -337,8 +415,9 @@ $shadow-height-sp: 38px;
     width: $width-cv-btn;
   }
 }
-
+//////////////////////
 //ワオ未来塾って?
+//////////////////////
 .bg-lp-creamyellow {
   background: $cl-bg-eventlp;
   width: 100%;

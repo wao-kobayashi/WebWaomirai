@@ -1,7 +1,11 @@
+//////////////////////
+// ブルーエリア（FV〜プログラム流れ)
+//////////////////////
 .eng-phase-bg-blue
+  //blue01 FV
   .eng-phase-main-fv 
-    .eng-phase-main-fv-logo 
-      |ここワオのロゴ
+    //- .eng-phase-main-fv-logo 
+    //-   |ここワオのロゴ
     .eng-phase-main-fv-img 
        img(src=ImgSectionBlue01)
   section.eng-phase-main-cv-crowds
@@ -10,18 +14,61 @@
     .eng-phase-main-cv-crowds-btn
       a.js-btn-cv
         img(src=ImgBtnCv)
+  
+  //blue02 100フレーズクリアで英語の自信がつく!
   section.eng-phase-main-section-blue.inview-triger.inview-hide
        img(src=ImgSectionBlue02)
+  //blue03 こんなお子様におすすめ
   section.eng-phase-main-section-blue.inview-triger.inview-hide
        img(src=ImgSectionBlue03)
+  //blue04 「カタマリ」で学べば英語は簡単に話せる
   section.eng-phase-main-cv-crowds
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
       a.js-btn-cv
         img(src=ImgBtnCv)
-  section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.inview-triger.inview-hide
-       img(src=ImgSectionBlue04)
+  //blue05 100フレーズチャレンジ 10日間プログラム流れ
+  - var flow = 'sticky'
+  case flow 
+    //追従バージョン
+    when 'sticky'
+      section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.eng-phase-main-section-blue-flow
+        div 
+          img(src=ImgSectionBlue05Title)
+        .eng-phase-main-section-blue-wrap-title-first
+              img(src=ImgSectionBlue05DayTitle01)
+        .eng-phase-main-section-blue-flow-wrap 
+          .eng-phase-main-section-blue-wrap-content 
+              img(src=ImgSectionBlue05ContentMain) 
+          .eng-phase-main-section-blue-wrap-title
+                img(src=ImgSectionBlue05DayTitle02)   
+          .eng-phase-main-section-blue-wrap-title 
+              img(src=ImgSectionBlue05DayTitle03)
+        div 
+            img(src=ImgSectionBlue05ContentDay10)  
+    //追従しないバージョン
+    when 'normal' 
+      section.eng-phase-main-section-blue
+        .eng-phase-main-section-blue-flow.eng-phase-main-section-blue-last.eng-phase-main-section-blue-static
+          div 
+            img(src=ImgSectionBlue05Title)
+          .eng-phase-main-section-blue-wrap-title-first
+                img(src=ImgSectionBlue05DayTitle01)
+          .eng-phase-main-section-blue-flow-wrap 
+            .eng-phase-main-section-blue-wrap-content
+                img(src=ImgSectionBlue05ContentMain) 
+ 
+            .eng-phase-main-section-blue-wrap-title 
+                img(src=ImgSectionBlue05DayTitle02)  
+            .eng-phase-main-section-blue-wrap-content
+                img(src=ImgSectionBlue05ContentMain)   
+            .eng-phase-main-section-blue-wrap-title 
+                img(src=ImgSectionBlue05DayTitle03)
+            .eng-phase-main-section-blue-wrap-content
+                img(src=ImgSectionBlue05ContentMain) 
+        div 
+            img(src=ImgSectionBlue05ContentDay10)  
   section.eng-phase-main-cv-humans
     .eng-phase-main-cv-humans-img 
         img(src=ImgBgCvBlue)
@@ -74,7 +121,8 @@
     .eng-phase-main-section-green-wrap
      .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
         img(src=ImgTitlePrice)
-        
+     .eng-phase-main-section-green-wrap-content 
+        img(src=ImgPrice)
   //CV
   section.eng-phase-main-cv-humans
     .eng-phase-main-cv-humans-img 
