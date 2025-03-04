@@ -4376,6 +4376,13 @@ body#eng-phase {
   background: rgba(0, 0, 0, 0.7);
 }
 
+.js-btn-cv {
+  cursor: pointer;
+}
+.js-btn-cv:hover {
+  opacity: 0.9;
+}
+
 .eng-phase-main-fv {
   position: relative;
   z-index: 10;
@@ -4523,7 +4530,7 @@ body#eng-phase {
   height: 45px;
   z-index: 0;
   display: block;
-  border: 5px solid #185b7f;
+  border: 4px solid #185b7f;
   background: #1e709d;
   margin: -20px 0 0;
   border-radius: 0 0 24px 24px;
@@ -4623,7 +4630,7 @@ body#eng-phase {
 }
 
 .eng-phase-main-cv-humans-blue {
-  margin: -30px auto 0;
+  margin: 0px auto 0;
 }
 
 .eng-phase-main-cv-humans {
@@ -4636,23 +4643,24 @@ body#eng-phase {
   z-index: 1;
 }
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area {
-  position: absolute;
   width: 93%;
+}
+.eng-phase-main-cv-humans .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-blue {
+  position: absolute;
+  top: 61.5%;
   left: 0;
   right: 0;
   margin: auto;
   text-align: center;
   z-index: 3;
 }
-.eng-phase-main-cv-humans .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-blue {
-  top: 56%;
-}
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green {
-  top: 50%;
+  position: relative;
+  margin: -35px auto 0;
 }
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top {
   background: #ffffff;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   border-radius: 24px;
   position: relative;
   z-index: 1;
@@ -4681,7 +4689,7 @@ body#eng-phase {
   width: 100%;
   height: 45px;
   z-index: 0;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   background: #44b60e;
   margin: -20px 0 0;
   border-radius: 0 0 24px 24px;
@@ -4689,6 +4697,7 @@ body#eng-phase {
 @media screen and (max-width: 768px) {
   .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-bottom {
     border: 3px solid #3f871d;
+    height: 38px;
   }
 }
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-button {
@@ -4701,7 +4710,7 @@ body#eng-phase {
 
 .eng-phase-bg-green {
   background: #7bd94f;
-  padding: 60px 0 75px;
+  padding: 0px 0 75px;
 }
 
 .eng-phase-main-section-green.eng-phase-main-section-green-rapport {
@@ -4713,7 +4722,7 @@ body#eng-phase {
   width: 93%;
   height: 45px;
   z-index: 0;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   background: #44b60e;
   margin: -20px auto 0;
   border-radius: 0 0 24px 24px;
@@ -4726,7 +4735,7 @@ body#eng-phase {
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap {
   background: #ffffff;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   border-radius: 24px;
   position: relative;
   z-index: 1;
@@ -4748,7 +4757,7 @@ body#eng-phase {
   margin: 20px -20px -10px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq {
-  padding: 20px 0 0;
+  padding: 40px 0 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -4826,7 +4835,7 @@ body#eng-phase {
   width: 100%;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap-img {
-  margin: 0 0 30px;
+  margin: 30px 0 30px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap-text {
   font-size: 22px;
@@ -4868,7 +4877,7 @@ body#eng-phase {
   width: 93%;
   height: 45px;
   z-index: 0;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   background: #44b60e;
   margin: -20px auto 0;
   border-radius: 0 0 24px 24px;
@@ -4881,7 +4890,7 @@ body#eng-phase {
 }
 .eng-phase-main-section-5steps .eng-phase-main-section-5steps-box .eng-phase-main-section-5steps-box-wrap {
   background: #ffffff;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   border-radius: 24px;
   position: relative;
   z-index: 1;
@@ -4971,10 +4980,11 @@ body#eng-phase {
 }
 .eng-phase-main-section-5steps .eng-phase-main-section-5steps-box .eng-phase-main-section-5steps-box-wrap-text a {
   text-decoration: underline;
+  color: #262626;
 }
 .eng-phase-main-section-5steps .eng-phase-main-section-5steps-box .eng-phase-main-section-5steps-box .eng-phase-main-section-5steps-box-wrap {
   background: #ffffff;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   border-radius: 24px;
   position: relative;
   z-index: 1;
@@ -4993,7 +5003,7 @@ body#eng-phase {
   width: 93%;
   height: 45px;
   z-index: 0;
-  border: 5px solid #3f871d;
+  border: 4px solid #3f871d;
   background: #44b60e;
   margin: -20px auto 0;
   border-radius: 0 0 24px 24px;

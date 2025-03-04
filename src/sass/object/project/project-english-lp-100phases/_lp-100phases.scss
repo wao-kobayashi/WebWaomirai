@@ -11,6 +11,13 @@ $fvCharacter: 60px;
 $fvlogotopSp: 160px;
 $fvCharacterSp: 110px;
 
+.js-btn-cv {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 .eng-phase-main-fv {
   position: relative;
   z-index: 10;
@@ -150,7 +157,7 @@ $fvCharacterSp: 110px;
     height: $shadow-height;
     z-index: 0;
     display: block;
-    border: 5px solid $cl-bg-skyblue-darkendeep;
+    border: 4px solid $cl-bg-skyblue-darkendeep;
     background: $cl-bg-skyblue-darken;
     margin: -20px 0 0;
     border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
@@ -249,7 +256,7 @@ $fvCharacterSp: 110px;
 }
 
 .eng-phase-main-cv-humans-blue {
-  margin: -30px auto 0;
+  margin: 0px auto 0;
 }
 
 .eng-phase-main-cv-humans {
@@ -263,22 +270,24 @@ $fvCharacterSp: 110px;
     }
   }
   .eng-phase-main-cv-humans-area {
-    position: absolute;
     width: $width-main-content;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    z-index: 3;
+
     &.eng-phase-main-cv-humans-area-blue {
-      top: 56%;
+      position: absolute;
+      top: 61.5%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      z-index: 3;
     }
     &.eng-phase-main-cv-humans-area-green {
-      top: 50%;
+      position: relative;
+      margin: -35px auto 0;
     }
     .eng-phase-main-cv-humans-area-top {
       background: $cl-white;
-      border: 5px solid $cl-bg-leafgreen-darkendeep;
+      border: 4px solid $cl-bg-leafgreen-darkendeep;
       border-radius: $border-radius-bigplus;
       position: relative;
       z-index: 1;
@@ -300,13 +309,14 @@ $fvCharacterSp: 110px;
       width: 100%;
       height: $shadow-height;
       z-index: 0;
-      border: 5px solid $cl-bg-leafgreen-darkendeep;
+      border: 4px solid $cl-bg-leafgreen-darkendeep;
       background: $cl-bg-leafgreen-darken;
       margin: -20px 0 0;
       border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
 
       @include responsive-style(768px) {
         border: 3px solid $cl-bg-leafgreen-darkendeep;
+        height: $shadow-height-sp;
       }
     }
     .eng-phase-main-cv-humans-area-button {
@@ -321,7 +331,7 @@ $fvCharacterSp: 110px;
 
 @mixin sectionGreen {
   background: $cl-white;
-  border: 5px solid $cl-bg-leafgreen-darkendeep;
+  border: 4px solid $cl-bg-leafgreen-darkendeep;
   border-radius: $border-radius-bigplus;
   position: relative;
   z-index: 1;
@@ -337,7 +347,7 @@ $fvCharacterSp: 110px;
   width: $width-main-content;
   height: $shadow-height;
   z-index: 0;
-  border: 5px solid $cl-bg-leafgreen-darkendeep;
+  border: 4px solid $cl-bg-leafgreen-darkendeep;
   background: $cl-bg-leafgreen-darken;
   margin: -20px auto 0;
   border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
@@ -352,7 +362,7 @@ $fvCharacterSp: 110px;
 //////////////////////
 .eng-phase-bg-green {
   background: $cl-bg-leafgreen;
-  padding: 60px 0 75px;
+  padding: 0px 0 75px;
 }
 
 .eng-phase-main-section-green {
@@ -373,7 +383,7 @@ $fvCharacterSp: 110px;
       margin: 20px -20px -10px;
     }
     .eng-phase-main-section-green-wrap-faq {
-      padding: 20px 0 0;
+      padding: 40px 0 0;
       display: flex;
       flex-direction: column;
       gap: 40px;
@@ -435,7 +445,7 @@ $fvCharacterSp: 110px;
     }
   }
   .eng-phase-main-section-green-wrap-img {
-    margin: 0 0 30px;
+    margin: 30px 0 30px;
   }
   .eng-phase-main-section-green-wrap-text {
     @include font-size-l;
@@ -530,6 +540,7 @@ $fvCharacterSp: 110px;
       margin: 0;
       a {
         text-decoration: underline;
+        color: $cl-black;
       }
     }
     .eng-phase-main-section-5steps-box {
