@@ -5707,7 +5707,7 @@ header div img {
 .section-el-second-price .lp-section-price {
   max-width: 800px;
   padding: 0 20px;
-  margin: 30px auto 18px;
+  margin: 60px auto 18px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -5992,19 +5992,19 @@ header div img {
 }
 
 .section-el-cv {
-  padding: 0px 0 105px;
+  padding: 0px 0 0px;
   text-align: center;
   max-width: 1200px;
   width: 90%;
   border-radius: 100px;
-  margin: 120px auto 150px;
+  margin: 60px auto 60px;
   display: grid;
 }
 @media screen and (max-width: 768px) {
   .section-el-cv {
     width: 95%;
     border-radius: 40px;
-    margin: 60px auto 90px;
+    margin: 60px auto 0px;
     padding: 60px 0 75px;
   }
 }
