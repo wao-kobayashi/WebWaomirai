@@ -4389,6 +4389,26 @@ body#eng-phase {
   height: 700px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .eng-phase-main-fv {
+    height: 1160px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .eng-phase-main-fv {
+    height: 950px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .eng-phase-main-fv {
+    height: 880px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .eng-phase-main-fv {
+    height: 800px;
+  }
+}
 @media screen and (max-width: 450px) {
   .eng-phase-main-fv {
     height: 700px;
@@ -4448,7 +4468,7 @@ body#eng-phase {
 @media screen and (max-width: 768px) {
   .eng-phase-main-fv .eng-phase-main-fv-logo {
     width: 90%;
-    top: 270px;
+    top: 43%;
   }
 }
 .eng-phase-main-fv .eng-phase-main-fv-text {
@@ -4461,7 +4481,12 @@ body#eng-phase {
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-fv .eng-phase-main-fv-text {
-    top: 510px;
+    top: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .eng-phase-main-fv .eng-phase-main-fv-text {
+    top: 80%;
   }
 }
 .eng-phase-main-fv .eng-phase-main-fv-persons img {
@@ -4474,7 +4499,7 @@ body#eng-phase {
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-fv .eng-phase-main-fv-persons img {
-    top: 110px;
+    top: 17%;
   }
 }
 .eng-phase-main-fv .eng-phase-main-fv-crowds01 {
@@ -4493,7 +4518,6 @@ body#eng-phase {
 }
 .eng-phase-main-fv .eng-phase-main-fv-shine {
   position: absolute;
-  top: 100px;
   left: -60px;
   right: 0;
   z-index: 1;
@@ -4501,6 +4525,12 @@ body#eng-phase {
   margin: auto;
   opacity: 0.7;
   animation: rotate 80s linear infinite;
+  top: 14%;
+}
+@media screen and (max-width: 768px) {
+  .eng-phase-main-fv .eng-phase-main-fv-shine {
+    top: 17%;
+  }
 }
 
 .eng-phase-main {
@@ -4754,7 +4784,7 @@ body#eng-phase {
   }
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-content {
-  margin: 20px -20px -10px;
+  margin: 30px -20px -10px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq {
   padding: 40px 0 0;

@@ -8,8 +8,9 @@ $shadow-height-sp: 38px;
 $fvlogotop: 210px;
 $fvCharacter: 60px;
 
-$fvlogotopSp: 160px;
-$fvCharacterSp: 110px;
+$fvlogotopSp: 26%;
+$fvCharacterSp: 17%;
+$fvTextSp: 37%;
 
 .js-btn-cv {
   cursor: pointer;
@@ -23,6 +24,18 @@ $fvCharacterSp: 110px;
   z-index: 10;
   height: 700px;
   width: 100%;
+  @include responsive-style(768px) {
+    height: 1160px;
+  }
+  @include responsive-style(700px) {
+    height: 950px;
+  }
+  @include responsive-style(600px) {
+    height: 880px;
+  }
+  @include responsive-style(500px) {
+    height: 800px;
+  }
 
   @include responsive-style(450px) {
     height: 700px;
@@ -85,7 +98,10 @@ $fvCharacterSp: 110px;
     z-index: 2;
     // animation: FvfadeInUp 0.3s ease-out;
     @include responsive-style(768px) {
-      top: calc($fvCharacterSp + $fvlogotopSp + 240px);
+      top: calc($fvCharacterSp + $fvlogotopSp + $fvTextSp + 5%);
+    }
+    @include responsive-style(600px) {
+      top: calc($fvCharacterSp + $fvlogotopSp + $fvTextSp);
     }
   }
   .eng-phase-main-fv-persons img {
@@ -116,7 +132,7 @@ $fvCharacterSp: 110px;
   }
   .eng-phase-main-fv-shine {
     position: absolute;
-    top: 100px;
+
     left: -60px;
     right: 0;
     z-index: 1;
@@ -124,6 +140,10 @@ $fvCharacterSp: 110px;
     margin: auto;
     opacity: 0.7;
     animation: rotate 80s linear infinite;
+    top: 14%;
+    @include responsive-style(768px) {
+      top: 17%;
+    }
   }
 }
 .eng-phase-main {
@@ -380,7 +400,7 @@ $fvCharacterSp: 110px;
       padding: 20px 20px 30px;
     }
     .eng-phase-main-section-green-wrap-content {
-      margin: 20px -20px -10px;
+      margin: 30px -20px -10px;
     }
     .eng-phase-main-section-green-wrap-faq {
       padding: 40px 0 0;
