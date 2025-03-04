@@ -6,9 +6,25 @@
   .eng-phase-main-fv 
     //- .eng-phase-main-fv-logo 
     //-   |ここワオのロゴ
-    .eng-phase-main-fv-img 
-       img(src=ImgSectionBlue01)
-  section.eng-phase-main-cv-crowds
+    .eng-phase-main-fv-waologo.spimage 
+       img(src=ImgLogoWaoMirai)
+    .eng-phase-main-fv-persons
+       img(src=ImgFvPersons)
+    .eng-phase-main-fv-target 
+       img(src=ImgFvTarget)   
+    .eng-phase-main-fv-text
+       img(src=ImgFvtext )
+    .eng-phase-main-fv-logo 
+       img(src=ImgFvLogo)
+
+    .eng-phase-main-fv-overflow-hidden 
+      .eng-phase-main-fv-shine
+        img(src=ImgFvBgShine)
+      .eng-phase-main-fv-crowds01
+          img(src=ImgFvCrowds01)
+      .eng-phase-main-fv-crowds02
+          img(src=ImgFvCrowds02)
+  section.eng-phase-main-cv-crowds.inview-triger.inview-hide
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
@@ -16,20 +32,20 @@
         img(src=ImgBtnCv)
   
   //blue02 100フレーズクリアで英語の自信がつく!
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
+  section.eng-phase-main-section-blue.eng-phase-main-section-blue-first.inview-triger.inview-hide
        img(src=ImgSectionBlue02)
   //blue03 こんなお子様におすすめ
   section.eng-phase-main-section-blue.inview-triger.inview-hide
        img(src=ImgSectionBlue03)
   //blue04 「カタマリ」で学べば英語は簡単に話せる
-  section.eng-phase-main-cv-crowds
+  section.eng-phase-main-cv-crowds.inview-triger.inview-hide
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
       a.js-btn-cv
         img(src=ImgBtnCv)
   //blue05 100フレーズチャレンジ 10日間プログラム流れ
-  - var flow = 'sticky'
+  - var flow = 'sticky' //normal or sticky
   case flow 
     //追従バージョン
     when 'sticky'
@@ -49,8 +65,7 @@
             img(src=ImgSectionBlue05ContentDay10)  
     //追従しないバージョン
     when 'normal' 
-      section.eng-phase-main-section-blue
-        .eng-phase-main-section-blue-flow.eng-phase-main-section-blue-last.eng-phase-main-section-blue-static
+      section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.eng-phase-main-section-blue-static
           div 
             img(src=ImgSectionBlue05Title)
           .eng-phase-main-section-blue-wrap-title-first
@@ -67,9 +82,9 @@
                 img(src=ImgSectionBlue05DayTitle03)
             .eng-phase-main-section-blue-wrap-content
                 img(src=ImgSectionBlue05ContentMain) 
-        div 
+          div 
             img(src=ImgSectionBlue05ContentDay10)  
-  section.eng-phase-main-cv-humans
+  section.eng-phase-main-cv-humans.inview-triger.inview-hide
     .eng-phase-main-cv-humans-img 
         img(src=ImgBgCvBlue)
     .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-blue
@@ -86,7 +101,7 @@
 // グリーンエリア（ラポール〜FAQ)
 //////////////////////
 .eng-phase-bg-green
-  div 
+  .inview-triger.inview-hide
     img(src=ImgBgRapport)
   //レッスン担当ラポール22
   section.eng-phase-main-section-green.eng-phase-main-section-green-rapport.inview-hide.inview-triger
@@ -124,7 +139,7 @@
      .eng-phase-main-section-green-wrap-content 
         img(src=ImgPrice)
   //CV
-  section.eng-phase-main-cv-humans
+  section.eng-phase-main-cv-humans.inview-triger.inview-hide
     .eng-phase-main-cv-humans-img 
         img(src=ImgBgCvGreen)
     .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
@@ -138,7 +153,7 @@
 
   //かんたん5ステップ
   section.eng-phase-main-section-5steps 
-      .eng-phase-main-section-5steps-title 
+      .eng-phase-main-section-5steps-title.inview-triger.inview-hide 
         img(src=ImgTitle5steps)
       //step1
       .eng-phase-main-section-5steps-box.inview-hide.inview-triger
@@ -157,7 +172,9 @@
                 |まず公式アカウントを友だちに追加してください。
                 //- |・LINEが利用できない場合はこちらから
                 br
-                |・友だち追加はこちらから
+                |・友だち追加は
+                a.js-btn-cv|こちら
+                |から
 
       //step2
       .eng-phase-main-section-5steps-box.inview-hide.inview-triger
@@ -188,14 +205,14 @@
                 |必要な情報を入力して
                 br
                 |「申込」をタップ
-      //step5
+      //step4
       .eng-phase-main-section-5steps-box.inview-hide.inview-triger
         .eng-phase-main-section-5steps-box-wrap
           .eng-phase-main-section-5steps-box-wrap-head 
             .eng-phase-main-section-5steps-box-wrap-head-step
                 |STEP 
                 span|4
-            .eng-phase-main-section-5steps-box-wrap-head-img
+            .eng-phase-main-section-5steps-box-wrap-head-img.step4
                 img(src=Img5Steps04)
           .eng-phase-main-section-5steps-box-wrap-title 
                 |申し込みタップ後に、
@@ -230,10 +247,10 @@
           .eng-phase-main-section-5steps-box-wrap-title 
                 |スタート！
           .eng-phase-main-section-5steps-box-wrap-text 
-                |コミュニティの案内に従いイベント専用コミュニティの案内に従ってレッスン＆トレーニング開始！
+                |イベント専用コミュニティの案内に従ってレッスン＆トレーニング開始！
                 br
                 br
-  section.eng-phase-main-section-5steps-cv 
+  section.eng-phase-main-section-5steps-cv.inview-triger.inview-hide
         a.js-btn-cv
             img(src=ImgBtnCv)
 
