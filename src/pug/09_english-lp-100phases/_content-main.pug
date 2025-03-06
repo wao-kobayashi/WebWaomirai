@@ -47,45 +47,25 @@
       a.js-btn-cv(href=UrlLine100Phases)
         img(src=ImgBtnCv)
   //blue05 100フレーズチャレンジ 10日間プログラム流れ
-  - var flow = 'normal' //normal or sticky
-  case flow 
-    //追従バージョン
-    when 'sticky'
-      section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.eng-phase-main-section-blue-flow
-        div 
-          img(src=ImgSectionBlue05Title)
-        .eng-phase-main-section-blue-wrap-title-first
-              img(src=ImgSectionBlue05DayTitle01)
-        .eng-phase-main-section-blue-flow-wrap 
-          .eng-phase-main-section-blue-wrap-content 
-              img(src=ImgSectionBlue05ContentMain) 
-          .eng-phase-main-section-blue-wrap-title
-                img(src=ImgSectionBlue05DayTitle02)   
-          .eng-phase-main-section-blue-wrap-title 
-              img(src=ImgSectionBlue05DayTitle03)
-        div 
-            img(src=ImgSectionBlue05ContentDay10)  
-    //追従しないバージョン
-    when 'normal' 
-      section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.eng-phase-main-section-blue-static
-          div 
-            img(src=ImgSectionBlue05Title)
-          .eng-phase-main-section-blue-wrap-title-first
-                img(src=ImgSectionBlue05DayTitle01)
-          .eng-phase-main-section-blue-flow-wrap 
-            .eng-phase-main-section-blue-wrap-content
-                img(src=ImgSectionBlue05ContentMain) 
- 
-            .eng-phase-main-section-blue-wrap-title 
-                img(src=ImgSectionBlue05DayTitle02)  
-            .eng-phase-main-section-blue-wrap-content
-                img(src=ImgSectionBlue05ContentMain)   
-            .eng-phase-main-section-blue-wrap-title 
-                img(src=ImgSectionBlue05DayTitle03)
-            .eng-phase-main-section-blue-wrap-content
-                img(src=ImgSectionBlue05ContentMain) 
-          div 
-            img(src=ImgSectionBlue05ContentDay10)  
+  section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.eng-phase-main-section-blue-static
+      div 
+        img(src=ImgSectionBlue05Title)
+      .eng-phase-main-section-blue-wrap-title-first
+            img(src=ImgSectionBlue05DayTitle01)
+      .eng-phase-main-section-blue-flow-wrap 
+        .eng-phase-main-section-blue-wrap-content
+            img(src=ImgSectionBlue05ContentMain) 
+
+        .eng-phase-main-section-blue-wrap-title 
+            img(src=ImgSectionBlue05DayTitle02)  
+        .eng-phase-main-section-blue-wrap-content
+            img(src=ImgSectionBlue05ContentMain)   
+        .eng-phase-main-section-blue-wrap-title 
+            img(src=ImgSectionBlue05DayTitle03)
+        .eng-phase-main-section-blue-wrap-content
+            img(src=ImgSectionBlue05ContentMain) 
+      div 
+        img(src=ImgSectionBlue05ContentDay10)  
   section.eng-phase-main-cv-humans.inview-triger.inview-hide
     .eng-phase-main-cv-humans-img 
         img(src=ImgBgCvBlue)
@@ -257,36 +237,65 @@
               img(src=ImgBtnCv)
 
 
+  mixin faqBox(question, answer)
+    .eng-phase-main-section-green-wrap-faq-box
+      .eng-phase-main-section-green-wrap-faq-box-title 
+        .eng-phase-main-section-green-wrap-faq-box-title-icon
+          |Q 
+        .eng-phase-main-section-green-wrap-faq-box-title-text
+          |#{question}
+      .eng-phase-main-section-green-wrap-faq-box-content 
+        != answer
+
+  //- 最初のFAQ項目
+
+
   //よくある質問
   section.eng-phase-main-section-green.eng-phase-main-section-green-price.inview-hide.inview-triger
     .eng-phase-main-section-green-wrap
      .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
         img(src=ImgTitleFaq)
      .eng-phase-main-section-green-wrap-faq
-       .eng-phase-main-section-green-wrap-faq-box
-        .eng-phase-main-section-green-wrap-faq-box-title 
-          .eng-phase-main-section-green-wrap-faq-box-title-icon
-            |Q 
-          .eng-phase-main-section-green-wrap-faq-box-title-text
-            |タイトルタイトルタイトルタイトルタイトル
-        .eng-phase-main-section-green-wrap-faq-box-content 
-            |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-       .eng-phase-main-section-green-wrap-faq-box
-        .eng-phase-main-section-green-wrap-faq-box-title 
-          .eng-phase-main-section-green-wrap-faq-box-title-icon
-            |Q 
-          .eng-phase-main-section-green-wrap-faq-box-title-text
-            |タイトルタイトルタイトルタイトルタイトル
-        .eng-phase-main-section-green-wrap-faq-box-content 
-            |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-       .eng-phase-main-section-green-wrap-faq-box
-        .eng-phase-main-section-green-wrap-faq-box-title 
-          .eng-phase-main-section-green-wrap-faq-box-title-icon
-            |Q 
-          .eng-phase-main-section-green-wrap-faq-box-title-text
-            |タイトルタイトルタイトルタイトルタイトル
-        .eng-phase-main-section-green-wrap-faq-box-content 
-            |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        //- 全てのFAQ項目を流し込み
+        +faqBox(
+          "10日で本当に話せるようになるのですか？", 
+          "<b>はい、話せるようになります！</b> 日本人が英語を話せない最大の理由は、「ネイティブのように話す」という遠すぎる目標を持ってしまうことです。しかし、このプログラムでは <b>たった8種類のフレーズ × 16種類の動作</b> を組み合わせることで、英作文をする必要なく100フレーズが口から出るようになります。<br /><br />一般的な学習法のように「単語を覚える → 文法を学ぶ → 英作文をする」という遠回りをせず、「英語のカタマリを組み合わせる」トレーニング（パーツSwitch）だからこそ、<b>10日で英語が話せる実感が得られるのです！</b><br /><br />「ネイティブのように流暢に」ではなく、<b>30フレーズでも50フレーズでも話せたら、それは立派な'話せる'</b> ということ。お子様が英語を楽しく話せるようになることが、このプログラムのゴールです。"
+        )
+
+        +faqBox(
+          "英語を習ったことがなく、単語もほとんど知りませんが、大丈夫ですか？", 
+          "<b>大丈夫です！</b> <br />このプログラムでは、<b>単語単位ではなく、英語をカタマリ単位の音で練習</b>します。<br /><br />たとえば、「What's your name?」を初めて聞いたとき、文法やスペルを考えずに「ワッチュアネーム？」と音で覚えましたよね？これと同じように、<b>音から学ぶことで、単語を知らなくても自然に文が組み立てられます。</b><br /><br />また、独自の「ひらがなEnglish」メソッドを使い、「shopping」を「ショッピング」ではなく<b>「しゃぁぴん」</b>のように、<b>ネイティブに通じる音</b>で練習。カタカナ英語ではなく、<b>実際に通じる英語</b>を身につけられるので、単語を知らないお子様でも安心して参加できます。"
+        )
+
+        +faqBox(
+          "文法を勉強しなくても大丈夫ですか？", 
+          "<b>まずは「話せる」を優先！</b><br /><br />赤ちゃんが言葉を覚えるとき、まず<b>音を真似て簡単なフレーズを話す</b>ところから始めますよね？その後、自然とルールを理解していきます。<br /><br />このプログラムも同じです。文法を学ぶ前に<b>英語をカタマリで覚えることで、「in だっけ？ at だっけ？」と悩まずに話せるようになります。</b> そして、話せるようになってから文法を学ぶと、「なるほど！」と理解できるようになります。"
+        )
+
+        +faqBox(
+          "人前で話すのが苦手ですが、オンラインレッスンで大丈夫ですか？", 
+          "<b>お子様のペースに合わせて参加できます！</b> オンラインレッスンの映像は<b>先生にだけ表示</b>され、他の参加者には見えません。さらに、画面オフで<b>チャットやスタンプのみでの参加</b>もOK！<br /><br />一般的なオンライン英会話は「海外の先生と英語で話すこと」が目的ですが、<b>このプログラムはトレーニング型</b>なので、性格に関係なく楽しく取り組めます。リズムに合わせて繰り返し発話するので、<b>25分間、口が疲れるほど英語を話し続けることができます！</b><br /><br />10日後には「英語が話せた！」という自信がつき、人前で話すことが楽しくなります。"
+        )
+
+        +faqBox(
+          "人前で話すのが苦手ですが、オンラインレッスンで大丈夫ですか？", 
+          "<b>はい、大丈夫です！このプログラムなら、プレッシャーなく安心して話せます。</b><br /><br />一般のオンライン英会話では、「相手に伝わるように英語で話さなきゃいけない」というプレッシャーがあり、「上手く発音できなかったらどうしよう」と緊張して言えないこともあります。しかし、このプログラムではそれがありません。レッスン中は 生徒側の音声がミュート になっているため、<b>人の目を気にせず たくさん話すトレーニングができます。</b><br /><br />さらに、<b>録音した音声をあとで先生がチェック</b>するので、発音やフレーズの定着をしっかり確認でき、通常のオンライン英会話以上の効果が期待できます。<br /><br />また、画面オフでの参加もOK！ 移動中や外出先でも受講できるので、スキマ時間を活用可能。もちろん、<b>画面オンなら先生が口の動きや発音をチェック</b>できるので、より効果的に学べます。"
+        )
+
+        +faqBox(
+          "1日どのくらい勉強すればいいですか？", 
+          "<b>1日2～4回、英語を口に出すことが理想！</b><br />英語は<b>スポーツやピアノと同じで、練習量が大切</b>です。<br /><br /><b>【理想のスケジュール</b>】<br /> ✅ <b>朝・昼・夜・寝る前の4回、30分ずつ練習（計2時間）</b> <br />✅ 最低でも<b>朝と寝る前の2回</b>は口に出す習慣をつける<b>寝る前の練習は特に重要！</b><br /><br />睡眠中に脳が情報を整理し、学んだフレーズがしっかり定着します。また、<b>朝に英語を口にすると、その日1日ふとした瞬間に思い出しやすくなり、自然と口ずさむ機会が増えます。</b>動画レッスンは<b>1回20～30分</b>なので、1日2回でもOK！また、<b>5～10分に分割した動画</b>もあるので、短い時間でも毎日続けることが大切です。"
+        )
+
+        +faqBox(
+          "録音した英語は他の参加者に公開されますか？", 
+          "<b>一般公開はされません！</b><br />録音した英語は<b>担当の先生がチェック</b>し、みんなの苦手なポイントをまとめた<b>アドバイス動画をLINEグループ内</b>で配信します。<br /><br />また、最後の発表会で受賞したお子様の録音は、<b>事前の許可を得た場合のみ</b>使用しますので、ご安心ください。"
+        )
+
+        +faqBox(
+          "100フレーズを覚えただけで、英語が話せるとは言えませんよね？", 
+          "<b>実は、会話に必要なフレーズは意外と少ない！</b> 旅行で必要な基本フレーズは<b>10種類ほど</b>。それでも旅行は楽しめます。<br /><br />日本の英語教育では「何でも英語に訳せること」を目標にしがちですが、<b>実際の会話は「日本語を訳す」のではなく「場面に合う英語を選ぶ」ことが大切。</b><br /><br />例えば、「お疲れ様でした」を英語に訳そうとすると難しいですが、<b>「会社帰りの挨拶」＝ \"See you tomorrow!\"</b> と考えれば、すぐに英語が出てきますよね？<br /><br />この「場面から英語を選ぶ力（フレーズChoice）」を鍛えることで、<b>100フレーズでも十分に英語が使える場面が広がります！</b><br /><br />もちろん、さらに100フレーズ、200フレーズと増やしていけば、もっと話せる幅が広がりますが、<b>まずは100フレーズを使いこなすことが大切</b>です。"
+        )
 //////////////////////
 // waoエリア(ワオ未来塾って？〜footer)
 //////////////////////

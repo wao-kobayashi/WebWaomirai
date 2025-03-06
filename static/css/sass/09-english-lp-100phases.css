@@ -4834,12 +4834,17 @@ body#eng-phase {
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-content {
   margin: 10px 0 0;
-  font-size: 22px;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #4d4d4d;
   text-align: left;
+}
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-content b {
+  color: #262626 !important;
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-content {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 .eng-phase-main-section-green .eng-phase-main-section-5steps-title-price {

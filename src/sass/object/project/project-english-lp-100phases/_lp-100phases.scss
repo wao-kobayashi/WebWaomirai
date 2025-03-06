@@ -439,7 +439,15 @@ $fvTextSp: 37%;
         }
         .eng-phase-main-section-green-wrap-faq-box-content {
           margin: 10px 0 0;
-          @include font-size-l;
+          font-size: 19px;
+          line-height: $lineheight-normal;
+          color: $cl-gray;
+          b {
+            color: $cl-black !important;
+          }
+          @include responsive-style(768px) {
+            font-size: 18px;
+          }
           text-align: left;
         }
       }
