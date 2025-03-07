@@ -58,13 +58,8 @@ script.
       });
     }
 
-    /**
-    * モーダルを閉じる処理
-    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
-    */
-    $('.modal-close, .bg-modal').click(function() {
-      $('.modal, .bg-modal').hide();
-    });
+
+
 
     /**
     * 画面サイズ変更対応
@@ -72,4 +67,33 @@ script.
     * これによりPC/スマホの表示切替時に適切な動作になる
     */
     $(window).on('load resize', updateButtonBehavior);
+
+    var iframe = document.getElementById('vimeoPlayer');
+    var player = new Vimeo.Player(iframe);
+    
+    // 再生ボタンがクリックされたときの処理
+    $('#playButton').on('click', function() {
+         $('.modal-vimeo, .bg-modal').show();
+        setTimeout(function() {
+              player.play().then(function() {
+                  console.log('動画が再生されました');
+              }).catch(function(error) {
+                  console.error('再生エラー:', error);
+              });
+          }, 1500); // 1.5秒後に再生
+    });
+    
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+        player.pause().then(function() {
+          console.log('動画が停止しました');
+      }).catch(function(error) {
+          console.error('停止エラー:', error);
+      });
+    });
+
   });

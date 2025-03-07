@@ -1,3 +1,14 @@
+mixin modal-vimeo
+    .modal-vimeo(style='display:none;')
+        .modal-vimeo-content.
+            <iframe id="vimeoPlayer" src="https://player.vimeo.com/video/930561537?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    id="vimeoPlayer"
+                    title="3分でわかる！新感覚英会話レッスン ワオ未来塾 グローバル英語">
+            </iframe>
+        .modal-vimeo-close.modal-close 
+             |閉じる
 mixin modal
     .modal(style='display:none;')
         .modal-wrapper 
