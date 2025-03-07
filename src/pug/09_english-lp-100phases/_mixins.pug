@@ -33,3 +33,23 @@ mixin modal
             .modal-wrapper-content-close.modal-close 
                 |閉じる
     .bg-modal(style='display:none;')
+mixin cvgreen 
+  section.eng-phase-main-cv-humans.inview-triger.inview-hide
+    .eng-phase-main-cv-humans-img 
+        img(src=ImgBgCvGreen)
+    .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
+      .eng-phase-main-cv-humans-area-top
+          .eng-phase-main-cv-humans-area-top-text 
+            |＼🕒 定員わずか！／
+          .eng-phase-main-cv-humans-area-top-button    
+            a.js-btn-cv(href=UrlLine100Phases)
+              img(src=ImgBtnCv)
+      .eng-phase-main-cv-humans-area-bottom
+  mixin faqBox(question, answer)
+    .eng-phase-main-section-green-wrap-faq-box
+      .eng-phase-main-section-green-wrap-faq-box-title 
+        .eng-phase-main-section-green-wrap-faq-box-title-text
+          |#{question}
+        .eng-phase-main-section-green-wrap-faq-box-title-icon
+      .eng-phase-main-section-green-wrap-faq-box-content 
+        != answer

@@ -4405,7 +4405,6 @@ body#eng-phase {
   padding-bottom: 56.25%;
   height: 0px;
   overflow: hidden;
-  border-radius: 24px;
 }
 .modal-vimeo .modal-vimeo-content iframe {
   position: absolute;
@@ -4413,7 +4412,6 @@ body#eng-phase {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 24px;
 }
 .modal-vimeo .modal-vimeo-close {
   color: #ffffff;
@@ -4802,7 +4800,7 @@ body#eng-phase {
 
 .eng-phase-main-section-movie {
   width: 100%;
-  margin: 0 auto 60px;
+  margin: 0 auto 90px;
   border-radius: 24px;
   position: relative;
   z-index: 10;
@@ -4830,6 +4828,8 @@ body#eng-phase {
 }
 .eng-phase-main-section-movie .eng-phase-main-section-movie-content .eng-phase-main-section-movie-content-btn img {
   width: 100%;
+  z-index: 9;
+  position: relative;
 }
 .eng-phase-main-section-movie .eng-phase-main-section-movie-content .eng-phase-main-section-movie-content-btn::before,
 .eng-phase-main-section-movie .eng-phase-main-section-movie-content .eng-phase-main-section-movie-content-btn ::after {
@@ -4841,6 +4841,7 @@ body#eng-phase {
   border: 2px solid white;
   background: white;
   animation: ripple-animation 2.3s infinite;
+  z-index: 1;
 }
 .eng-phase-main-section-movie .eng-phase-main-section-movie-content .eng-phase-main-section-movie-content-btn::after {
   animation-delay: 1s;
@@ -4881,7 +4882,7 @@ body#eng-phase {
 
 .eng-phase-bg-green {
   background: #7bd94f;
-  padding: 0px 0 75px;
+  padding: 40px 0 75px;
 }
 
 .eng-phase-main-section-green.eng-phase-main-section-green-rapport {
@@ -4931,53 +4932,87 @@ body#eng-phase {
   padding: 40px 0 0;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box {
-  padding: 0 0 45px;
-}
-.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box:not(:last-child) {
-  border-bottom: 3px dashed #999;
+  padding: 0 0 0px;
+  border: 3px solid #262626;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title {
+  color: #262626;
   display: flex;
   gap: 10px;
+  padding: 10px 12px 10px 15px;
+  background: #ffffff;
+  align-items: center;
+  cursor: pointer;
+}
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title.active {
+  color: #ffffff;
+  background: #aa68aa;
+}
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title.active .eng-phase-main-section-green-wrap-faq-box-title-icon {
+  background: #ffffff;
+  transform: rotate(180deg);
+}
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title.active .eng-phase-main-section-green-wrap-faq-box-title-icon::before, .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title.active .eng-phase-main-section-green-wrap-faq-box-title-icon::after {
+  background-color: #aa68aa;
+  top: 10px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-icon {
   font-size: 27px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #aa68aa;
   width: 45px;
   height: 45px;
   border-radius: 10000px;
-  line-height: 1;
-  padding: 0 0 4px;
-  color: #ffffff;
-  margin: 5px 0 0;
+  border: 3px solid #262626;
+  position: relative;
+  background: #aa68aa;
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-icon {
     font-size: 22px;
   }
 }
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-icon::before, .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17px;
+  right: 0;
+  top: 12px;
+  width: 3.5px;
+  height: 16px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  transform-origin: 50% calc(100% - 1px);
+}
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-icon::before {
+  transform: rotate(45deg);
+}
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-icon::after {
+  transform: rotate(-45deg);
+}
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-text {
   text-align: left;
-  font-size: 22px;
   font-weight: bold;
   flex: 1;
+  font-size: 19px;
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-title .eng-phase-main-section-green-wrap-faq-box-title-text {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-content {
-  margin: 10px 0 0;
-  font-size: 19px;
+  padding: 20px 15px 30px 15px;
+  font-weight: 500;
   line-height: 1.5;
   color: #4d4d4d;
+  display: none;
+  font-size: 17px;
   text-align: left;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-content b {
@@ -4985,7 +5020,7 @@ body#eng-phase {
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq .eng-phase-main-section-green-wrap-faq-box .eng-phase-main-section-green-wrap-faq-box-content {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 .eng-phase-main-section-green .eng-phase-main-section-5steps-title-price {
@@ -5013,6 +5048,11 @@ body#eng-phase {
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap-img {
   margin: 30px 0 30px;
 }
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap-voiceimg {
+  margin: 30px 0 15px;
+  padding: 0 0 15px;
+  border-bottom: 2px dashed #999;
+}
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap-text {
   font-size: 22px;
   text-align: left;
@@ -5033,6 +5073,10 @@ body#eng-phase {
 }
 
 .eng-phase-main-section-green-voice {
+  margin: 0 auto 20px;
+}
+
+.eng-phase-main-section-green-faq {
   margin: 0 auto 20px;
 }
 

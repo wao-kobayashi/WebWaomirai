@@ -95,5 +95,15 @@ script.
           console.error('停止エラー:', error);
       });
     });
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.eng-phase-main-section-green-wrap-faq-box-title').click(function() {
+        // クリックされたヘッダーの次のコンテンツを開閉
+        $(this).toggleClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
 
+        // 他の開いているコンテンツを閉じる
+        $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
+    });
   });

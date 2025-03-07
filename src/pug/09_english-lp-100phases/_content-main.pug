@@ -135,7 +135,7 @@
     .eng-phase-main-section-green-wrap
       .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
         img(src=ImgTitleVoice)
-      .eng-phase-main-section-green-wrap-img
+      .eng-phase-main-section-green-wrap-voiceimg
         img(src=ImgVoice)
       .eng-phase-main-section-green-wrap-text
           |英語を学んでほしいが、どのように学習の入口のハードルを下げるかが課題でした。入会してみると、遊びの延長のような感覚で楽しく英語に触れることができています。また英語が耳にきちんと残っているようで、実際に先日、外国のスポーツ選手のインタビューに反応し、「レッスンでならったnot only（なろぉんりぃ）や！」ととても嬉しそうでした。
@@ -143,17 +143,7 @@
           br
           |「ノット　オンリー」で覚えていたらきっと聞き取れなかったと思います。ワオ未来塾の「発音（ひらがな）で覚えて話す」練習をしていたことが、リスリングの力になっていました。このままどこまで力が伸びるか、傍で見ていて非常に楽しみです。
   //CV
-  section.eng-phase-main-cv-humans.inview-triger.inview-hide
-    .eng-phase-main-cv-humans-img 
-        img(src=ImgBgCvGreen)
-    .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
-      .eng-phase-main-cv-humans-area-top
-          .eng-phase-main-cv-humans-area-top-text 
-            |＼🕒 定員わずか！／
-          .eng-phase-main-cv-humans-area-top-button    
-            a.js-btn-cv(href=UrlLine100Phases)
-              img(src=ImgBtnCv)
-      .eng-phase-main-cv-humans-area-bottom
+  +cvgreen 
 
   //かんたん5ステップ
   section.eng-phase-main-section-5steps 
@@ -258,22 +248,8 @@
           a.js-btn-cv(href=UrlLine100Phases)
               img(src=ImgBtnCv)
 
-
-  mixin faqBox(question, answer)
-    .eng-phase-main-section-green-wrap-faq-box
-      .eng-phase-main-section-green-wrap-faq-box-title 
-        .eng-phase-main-section-green-wrap-faq-box-title-icon
-          |Q 
-        .eng-phase-main-section-green-wrap-faq-box-title-text
-          |#{question}
-      .eng-phase-main-section-green-wrap-faq-box-content 
-        != answer
-
-  //- 最初のFAQ項目
-
-
   //よくある質問
-  section.eng-phase-main-section-green.eng-phase-main-section-green-price.inview-hide.inview-triger
+  section.eng-phase-main-section-green.eng-phase-main-section-green-faq.inview-hide.inview-triger
     .eng-phase-main-section-green-wrap
      .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
         img(src=ImgTitleFaq)
@@ -296,11 +272,6 @@
 
         +faqBox(
           "人前で話すのが苦手ですが、オンラインレッスンで大丈夫ですか？", 
-          "<b>お子様のペースに合わせて参加できます！</b> オンラインレッスンの映像は<b>先生にだけ表示</b>され、他の参加者には見えません。さらに、画面オフで<b>チャットやスタンプのみでの参加</b>もOK！<br /><br />一般的なオンライン英会話は「海外の先生と英語で話すこと」が目的ですが、<b>このプログラムはトレーニング型</b>なので、性格に関係なく楽しく取り組めます。リズムに合わせて繰り返し発話するので、<b>25分間、口が疲れるほど英語を話し続けることができます！</b><br /><br />10日後には「英語が話せた！」という自信がつき、人前で話すことが楽しくなります。"
-        )
-
-        +faqBox(
-          "人前で話すのが苦手ですが、オンラインレッスンで大丈夫ですか？", 
           "<b>はい、大丈夫です！このプログラムなら、プレッシャーなく安心して話せます。</b><br /><br />一般のオンライン英会話では、「相手に伝わるように英語で話さなきゃいけない」というプレッシャーがあり、「上手く発音できなかったらどうしよう」と緊張して言えないこともあります。しかし、このプログラムではそれがありません。レッスン中は 生徒側の音声がミュート になっているため、<b>人の目を気にせず たくさん話すトレーニングができます。</b><br /><br />さらに、<b>録音した音声をあとで先生がチェック</b>するので、発音やフレーズの定着をしっかり確認でき、通常のオンライン英会話以上の効果が期待できます。<br /><br />また、画面オフでの参加もOK！ 移動中や外出先でも受講できるので、スキマ時間を活用可能。もちろん、<b>画面オンなら先生が口の動きや発音をチェック</b>できるので、より効果的に学べます。"
         )
 
@@ -318,6 +289,8 @@
           "100フレーズを覚えただけで、英語が話せるとは言えませんよね？", 
           "<b>実は、会話に必要なフレーズは意外と少ない！</b> 旅行で必要な基本フレーズは<b>10種類ほど</b>。それでも旅行は楽しめます。<br /><br />日本の英語教育では「何でも英語に訳せること」を目標にしがちですが、<b>実際の会話は「日本語を訳す」のではなく「場面に合う英語を選ぶ」ことが大切。</b><br /><br />例えば、「お疲れ様でした」を英語に訳そうとすると難しいですが、<b>「会社帰りの挨拶」＝ \"See you tomorrow!\"</b> と考えれば、すぐに英語が出てきますよね？<br /><br />この「場面から英語を選ぶ力（フレーズChoice）」を鍛えることで、<b>100フレーズでも十分に英語が使える場面が広がります！</b><br /><br />もちろん、さらに100フレーズ、200フレーズと増やしていけば、もっと話せる幅が広がりますが、<b>まずは100フレーズを使いこなすことが大切</b>です。"
         )
+  //CV
+  +cvgreen 
 //////////////////////
 // waoエリア(ワオ未来塾って？〜footer)
 //////////////////////
