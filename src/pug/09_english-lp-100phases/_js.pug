@@ -1,1 +1,109 @@
 script.
+  /**
+  * jQuery Document Ready
+  * ドキュメントの読み込みが完了した時点で実行されるメイン処理
+  */
+  $(document).ready(function() {
+    /**
+    * 画面内表示検出処理
+    * 要素が画面内に入ったときに'inview'クラスを追加して
+    * CSSアニメーションなどのトリガーとする
+    */
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        // 要素が画面内に表示されたらinviewクラスを追加
+        $(this).addClass('inview');
+      }
+    });
+
+    /**
+    * モーダルウィンドウを開く関数
+    * モーダルと背景を表示する
+    */
+    function modalOpen() {
+      $('.modal, .bg-modal').show();
+    }
+
+    /**
+    * ボタン動作の更新関数
+    * 画面幅に応じてボタンの動作を切り替える
+    * PC: モーダルを開く動作
+    * スマホ: 通常のリンク動作
+    */
+    function updateButtonBehavior() {
+      // 769px以上をPC表示とみなす
+      var isWideScreen = $(window).width() >= 769;
+
+      // 全てのCVボタンに対して処理
+      $('.js-btn-cv').each(function() {
+        var $button = $(this);
+        
+        if (isWideScreen) {
+          // PC表示の場合
+          if ($button.attr('href')) {
+            // href属性を一時的にdata属性に退避し、通常のリンク動作を無効化
+            $button.data('href', $button.attr('href')).removeAttr('href');
+          }
+          // クリックイベントを一旦解除し、モーダルを開く処理を割り当て
+          $button.off('click').on('click', modalOpen);
+        } else {
+          // スマホ表示の場合
+          if ($button.data('href')) {
+            // 保存しておいたURLを元のhref属性に戻し、通常のリンク動作を有効化
+            $button.attr('href', $button.data('href')).removeData('href');
+          }
+          // クリックイベントを解除してデフォルトのリンク動作に戻す
+          $button.off('click');
+        }
+      });
+    }
+
+
+
+
+    /**
+    * 画面サイズ変更対応
+    * ページ読み込み時とリサイズ時にボタン動作を更新する
+    * これによりPC/スマホの表示切替時に適切な動作になる
+    */
+    $(window).on('load resize', updateButtonBehavior);
+
+    var iframe = document.getElementById('vimeoPlayer');
+    var player = new Vimeo.Player(iframe);
+    
+    // 再生ボタンがクリックされたときの処理
+    $('#playButton').on('click', function() {
+         $('.modal-vimeo, .bg-modal').show();
+        setTimeout(function() {
+              player.play().then(function() {
+                  console.log('動画が再生されました');
+              }).catch(function(error) {
+                  console.error('再生エラー:', error);
+              });
+          }, 1500); // 1.5秒後に再生
+    });
+    
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+        player.pause().then(function() {
+          console.log('動画が停止しました');
+      }).catch(function(error) {
+          console.error('停止エラー:', error);
+      });
+    });
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.eng-phase-main-section-green-wrap-faq-box-title').click(function() {
+        // クリックされたヘッダーの次のコンテンツを開閉
+        $(this).toggleClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
+
+        // 他の開いているコンテンツを閉じる
+        $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
+    });
+  });

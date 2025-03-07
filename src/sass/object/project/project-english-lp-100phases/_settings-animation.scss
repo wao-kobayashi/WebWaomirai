@@ -1,3 +1,62 @@
+@keyframes FvfadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(200px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(-200px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
+@keyframes cloud-move2 {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(-200px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(200px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
 @keyframes fuwafuwa-button {
   0% {
     scale: 1;
@@ -25,30 +84,13 @@
   }
 }
 
-@keyframes bounce-swipe {
-  0%,
-  30%,
-  60%,
-  80%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  15% {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-  }
-  45% {
-    -webkit-transform: translateX(15px);
-    transform: translateX(15px);
-  }
+.inview-hide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
 }
 
-@keyframes infiniteScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - var(--scroll-gap) / 2));
-  }
+.inview {
+  opacity: 1;
+  transform: translateY(0);
 }

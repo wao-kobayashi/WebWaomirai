@@ -248,7 +248,7 @@ body {
           padding: 5px 0px 2px;
           display: block;
           width: 240px;
-          @include  english-mixin.font-size-s;
+          @include english-mixin.font-size-s;
           justify-content: center;
         }
         .lp-cv-button-main {
@@ -427,7 +427,7 @@ header {
         padding: 8px 13px 5px;
         display: table;
         line-height: 1;
-        @include  english-mixin.font-size-s;
+        @include english-mixin.font-size-s;
       }
 
       .lp-cv-button-main {
@@ -664,7 +664,7 @@ header {
     }
   }
   .section-el-second-top {
-    background:  english-mixin.$english-yellow;
+    background: english-mixin.$english-yellow;
     &:before {
       background: constant.$cl-graylightest;
     }
@@ -1067,7 +1067,7 @@ header {
 .section-el-second-price {
   .lp-section-price {
     @include english-mixin.section-middlewidth;
-    margin: 30px auto 18px;
+    margin: 60px auto 18px;
     position: relative;
     @include mixin.responsive-style(768px) {
       margin: 30px auto 18px;
@@ -1134,7 +1134,7 @@ header {
       .lp-section-price-box-left-badge-body,
       .lp-section-price-box-left-badge-body:before {
         position: absolute;
-        background-color:  english-mixin.$english-yellow;
+        background-color: english-mixin.$english-yellow;
         width: 45px;
         height: 45px;
         // left: 0;
@@ -1187,7 +1187,7 @@ header {
     color: constant.$cl-graylight;
     line-height: 1.8;
     text-align: right;
-    @include  english-mixin.font-size-s;
+    @include english-mixin.font-size-s;
     @include mixin.responsive-style(768px) {
       text-align: center;
     }
@@ -1247,7 +1247,7 @@ header {
         margin: 0 0 10px;
       }
       span {
-        color:constant.$cl-brand-line;
+        color: constant.$cl-brand-line;
       }
     }
     .section-el-second-contact-right-text {
@@ -1297,17 +1297,17 @@ header {
 
 .section-el-cv {
   // background: #FAF3CE;
-  padding: 0px 0 105px;
+  padding: 0px 0 0px;
   text-align: center;
   max-width: 1200px;
   width: 90%;
   border-radius: 100px;
-  margin: 120px auto 150px;
+  margin: 60px auto 60px;
   display: grid;
   @include mixin.responsive-style(768px) {
     width: 95%;
     border-radius: 40px;
-    margin: 60px auto 90px;
+    margin: 60px auto 0px;
     padding: 60px 0 75px;
     // padding: 200px 0 205px;
   }
@@ -1718,7 +1718,7 @@ footer {
     line-height: 1.3;
   }
   .lp-cv-title-note {
-    @include  english-mixin.font-size-s;
+    @include english-mixin.font-size-s;
     text-align: center;
     color: white;
     margin: 5px 0 0;

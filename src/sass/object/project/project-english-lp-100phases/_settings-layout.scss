@@ -1,5 +1,7 @@
 /* width */
-$width-main: 620px; // メインの幅
+$width-main: 500px; // メインの幅
+$width-main-content: 93%; // メインの幅
+$width-cv-btn: 70%;
 $breakpoint-layout: 980px; //レスポンシブの切り替え
 
 body#eng-phase {
@@ -64,6 +66,7 @@ body#eng-phase {
     z-index: 0;
     opacity: 0.7;
     width: 100%;
+    animation: cloud-move 80s ease-in-out infinite;
   }
   .eng-phase-bg-crowds2 img {
     left: -150px;
@@ -73,6 +76,7 @@ body#eng-phase {
     z-index: 0;
     opacity: 0.7;
     transform: scale(1, 1);
+    animation: cloud-move2 65s ease-in-out infinite;
   }
 }
 
@@ -86,8 +90,9 @@ body#eng-phase {
   border-top: 10px solid $cl-white;
   border-right: 10px solid $cl-white;
   border-radius: 80px 80px 0 0;
-  overflow: hidden;
+  // overflow: hidden;
 
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
   @include responsive-style($breakpoint-layout) {
     margin: 30px auto 0 !important;
   }
