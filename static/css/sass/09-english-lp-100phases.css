@@ -4214,8 +4214,12 @@ body#eng-phase {
   margin: 0 auto 15px;
 }
 .eng-phase-left .eng-phase-left-wrap .eng-phase-left-wrap-btn {
-  width: 90%;
-  margin: 0 0 0 11px;
+  width: 95%;
+  margin: 0 0 0 4px;
+}
+.eng-phase-left .eng-phase-left-wrap .eng-phase-left-wrap-btn img {
+  padding: 0 10px;
+  background: #ec3f42;
 }
 
 .eng-phase-bg .eng-phase-bg-crowds1 img {
@@ -4436,10 +4440,23 @@ body#eng-phase {
   background: rgba(0, 0, 0, 0.7);
 }
 
+.js-btn-cv-img img {
+  box-shadow: 0 9px 0px #000000;
+  border: 3.5px solid #000;
+  border-radius: 10000px;
+  background: #ec3f42;
+}
+@media screen and (max-width: 768px) {
+  .js-btn-cv-img img {
+    border: 3px solid #000 !important;
+    box-shadow: 0 7px 0px rgb(0, 0, 0);
+  }
+}
+
 .js-btn-cv {
   cursor: pointer;
 }
-.js-btn-cv:hover {
+.js-btn-cv img:hover {
   opacity: 0.9;
 }
 
@@ -4647,7 +4664,7 @@ body#eng-phase {
   left: 0;
   right: 0;
   margin: auto;
-  width: 70%;
+  width: 78%;
   animation: fuwafuwa-button 2s 0s infinite;
 }
 
@@ -4754,24 +4771,37 @@ body#eng-phase {
   border-radius: 24px;
   position: relative;
   z-index: 1;
-  padding: 45px 0 45px;
+  padding: 45px 0 60px;
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top {
     border: 3px solid #3f871d;
   }
 }
+.eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top .eng-phase-main-cv-humans-area-top-price {
+  font-size: 27px;
+  margin: 0 auto 15px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top .eng-phase-main-cv-humans-area-top-price {
+    font-size: 22px;
+  }
+}
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top .eng-phase-main-cv-humans-area-top-text {
   font-size: 27px;
-  margin: 0 auto 20px;
+  margin: 0 auto 25px;
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top .eng-phase-main-cv-humans-area-top-text {
     font-size: 22px;
   }
 }
+.eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top .eng-phase-main-cv-humans-area-top-button div {
+  background: #ec3f42;
+}
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-area .eng-phase-main-cv-humans-area-top .eng-phase-main-cv-humans-area-top-button img {
-  width: 70%;
+  width: 78%;
   margin: 0 auto;
   animation: fuwafuwa-button 2s 0s infinite;
 }
@@ -4882,7 +4912,7 @@ body#eng-phase {
 
 .eng-phase-bg-green {
   background: #7bd94f;
-  padding: 40px 0 75px;
+  padding: 70px 0 75px;
 }
 
 .eng-phase-main-section-green.eng-phase-main-section-green-rapport {
@@ -5032,7 +5062,7 @@ body#eng-phase {
   }
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap-title {
-  width: 70%;
+  width: 78%;
   position: absolute;
   left: 20px;
   top: -80px;
@@ -5244,7 +5274,7 @@ body#eng-phase {
 }
 .eng-phase-main-section-5steps-cv img {
   margin: 0 auto 0px;
-  width: 70%;
+  width: 78%;
   animation: fuwafuwa-button 2s 0s infinite;
 }
 
