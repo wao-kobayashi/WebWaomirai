@@ -4955,8 +4955,9 @@ body#eng-phase {
     padding: 20px 20px 30px;
   }
 }
-.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-content {
-  margin: 30px -20px -10px;
+.eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-content img {
+  width: 95%;
+  margin: 45px auto 10px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq {
   padding: 40px 0 0;
