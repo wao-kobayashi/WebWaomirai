@@ -1,7 +1,7 @@
 /* width */
 $width-main: 500px; // メインの幅
 $width-main-content: 93%; // メインの幅
-$width-cv-btn: 70%;
+$width-cv-btn: 78%;
 $breakpoint-layout: 980px; //レスポンシブの切り替え
 
 body#eng-phase {
@@ -52,8 +52,12 @@ body#eng-phase {
       margin: 0 auto 15px;
     }
     .eng-phase-left-wrap-btn {
-      width: 90%;
-      margin: 0 0 0 11px;
+      width: 95%;
+      margin: 0 0 0 4px;
+      img {
+        padding: 0 10px;
+        background: #ec3f42;
+      }
     }
   }
 }

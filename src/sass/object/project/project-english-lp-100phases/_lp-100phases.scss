@@ -11,11 +11,23 @@ $fvCharacter: 60px;
 $fvlogotopSp: 26%;
 $fvCharacterSp: 17%;
 $fvTextSp: 37%;
+.js-btn-cv-img img {
+  box-shadow: 0 9px 0px #000000;
+  border: 3.5px solid #000;
+  border-radius: $border-radius-full;
+  background: #ec3f42;
+  @include responsive-style(768px) {
+    border: 3px solid #000 !important;
+    box-shadow: 0 7px 0px rgba(0, 0, 0, 1);
+  }
+}
 
 .js-btn-cv {
   cursor: pointer;
-  &:hover {
-    opacity: 0.9;
+  img {
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 
@@ -311,18 +323,28 @@ $fvTextSp: 37%;
       border-radius: $border-radius-bigplus;
       position: relative;
       z-index: 1;
-      padding: 45px 0 45px;
+      padding: 45px 0 60px;
       @include responsive-style(768px) {
         border: 3px solid $cl-bg-leafgreen-darkendeep;
       }
+      .eng-phase-main-cv-humans-area-top-price {
+        @include font-size-xl;
+        margin: 0 auto 15px;
+        font-weight: bold;
+      }
       .eng-phase-main-cv-humans-area-top-text {
         @include font-size-xl;
-        margin: 0 auto 20px;
+        margin: 0 auto 25px;
       }
-      .eng-phase-main-cv-humans-area-top-button img {
-        width: $width-cv-btn;
-        margin: 0 auto;
-        animation: fuwafuwa-button 2s 0s infinite;
+      .eng-phase-main-cv-humans-area-top-button {
+        div {
+          background: #ec3f42;
+        }
+        img {
+          width: $width-cv-btn;
+          margin: 0 auto;
+          animation: fuwafuwa-button 2s 0s infinite;
+        }
       }
     }
     .eng-phase-main-cv-humans-area-bottom {
@@ -466,7 +488,7 @@ $fvTextSp: 37%;
 //////////////////////
 .eng-phase-bg-green {
   background: $cl-bg-leafgreen;
-  padding: 40px 0 75px;
+  padding: 70px 0 75px;
 }
 
 .eng-phase-main-section-green {
