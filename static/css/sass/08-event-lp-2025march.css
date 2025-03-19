@@ -4930,6 +4930,9 @@ header .header-right a {
   margin: 0 auto 20px;
   color: #262626;
 }
+.lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-text span {
+  color: #f35053;
+}
 @media screen and (max-width: 768px) {
   .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-left .lp-25mar-wrap-hoshimi-left-text {
     margin: 0 auto 32px;
@@ -4958,10 +4961,32 @@ header .header-right a {
 }
 .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-right {
   flex: 6.5;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-right .lp-25mar-wrap-hoshimi-right-closetext {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 27px;
+}
+@media screen and (max-width: 768px) {
+  .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-right .lp-25mar-wrap-hoshimi-right-closetext {
+    font-size: 25px;
+  }
 }
 .lp-25mar-hoshimi .lp-25mar-hoshimi-wrap .lp-25mar-wrap-hoshimi-right img {
   border-radius: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .lp-25mar-eventinfo {
