@@ -5997,7 +5997,7 @@ header div img {
   max-width: 1200px;
   width: 90%;
   border-radius: 100px;
-  margin: 60px auto 60px;
+  margin: 0px auto 180px;
   display: grid;
 }
 @media screen and (max-width: 768px) {
@@ -6005,7 +6005,7 @@ header div img {
     width: 95%;
     border-radius: 40px;
     margin: 60px auto 0px;
-    padding: 60px 0 75px;
+    padding: 60px 0 90px;
   }
 }
 .section-el-cv .lp-cv-title-text {

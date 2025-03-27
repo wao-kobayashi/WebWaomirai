@@ -1302,13 +1302,13 @@ header {
   max-width: 1200px;
   width: 90%;
   border-radius: 100px;
-  margin: 60px auto 60px;
+  margin: 0px auto 180px;
   display: grid;
   @include mixin.responsive-style(768px) {
     width: 95%;
     border-radius: 40px;
     margin: 60px auto 0px;
-    padding: 60px 0 75px;
+    padding: 60px 0 90px;
     // padding: 200px 0 205px;
   }
   .lp-cv-title-text {
