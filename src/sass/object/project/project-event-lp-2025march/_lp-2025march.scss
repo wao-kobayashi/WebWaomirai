@@ -475,7 +475,9 @@ header {
         text-align: left;
         margin: 0 auto 20px;
         color: $cl-black;
-
+        span {
+          color: $cl-alert;
+        }
         @include responsive-style(768px) {
           margin: 0 auto 32px;
         }
@@ -501,9 +503,26 @@ header {
     }
     .lp-25mar-wrap-hoshimi-right {
       flex: 6.5;
+      border-radius: $border-radius-bigplus;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      .lp-25mar-wrap-hoshimi-right-closetext {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        color: $cl-white;
+        @include font-size-xl;
+      }
       img {
         border-radius: $border-radius-bigplus;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
       }
     }
   }

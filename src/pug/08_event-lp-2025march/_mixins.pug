@@ -3,6 +3,29 @@ mixin lineEntryButton(text)
     | #{text}
   a.spimage(href=UrlLineEventMarch, target='_blank')
     | #{text}
+mixin ModalCampaignEnd
+  .modal
+    .modal-wrapper 
+      .modal-wrapper-content
+         .modal-wrapper-content-main
+            .modal-wrapper-content-main-mv
+              img(src=ImgModalMvCampaignEnd)
+            .modal-wrapper-content-main-head
+                |ワオ未来塾の授業が体験できる
+                br
+                |無料体験MONTH(2/25-4/4)は
+                br
+                |終了しました
+
+            .modal-wrapper-content-main-text
+              |ワオ未来塾のサービス詳細/入会は
+              br
+              |公式サイトでご確認いただけます
+            .modal-wrapper-content-main-button 
+              a(href=UrlWaoServiceSite, target='_blank')
+                |ワオ未来塾の公式サイトへ
+  .bg-modal
+
 
 mixin ModalEntlyLine
   .modal(style='display:none;')
