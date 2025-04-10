@@ -4120,13 +4120,13 @@ select {
   left: 0%;
   right: 0%;
   bottom: 0%;
-  max-width: 360px;
+  max-width: 390px;
   width: 90%;
   display: inline-table;
   height: auto;
   margin: auto;
   background: white;
-  padding: 0 0 0px;
+  padding: 0 20px 0px;
   border-radius: 20px;
 }
 .modal-wrapper,
@@ -4176,19 +4176,26 @@ select {
   border-radius: 20px 20px 0 0;
   padding: 20px 0 0;
 }
+.modal-wrapper-content-main-mv img,
+.modal-hoshimi-wrapper-content-main-mv img {
+  width: 100%;
+  margin: 0 auto 20px;
+}
 .modal-wrapper-content-main-head,
 .modal-hoshimi-wrapper-content-main-head {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #262626;
+  text-align: center !important;
   font-size: 22px;
   font-weight: 300;
-  margin: 0px auto 0;
+  margin: 0px auto 15px;
   text-align: center;
   line-height: 1.5;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   gap: 20px;
+  font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   .modal-wrapper-content-main-head,
@@ -4225,12 +4232,40 @@ select {
 .modal-hoshimi-wrapper-content-main-text {
   font-size: 17px;
   text-align: center;
+  margin: 0 auto 20px;
 }
 @media screen and (max-width: 768px) {
   .modal-wrapper-content-main-text,
   .modal-hoshimi-wrapper-content-main-text {
     font-size: 16px;
   }
+}
+.modal-wrapper-content-main-button,
+.modal-hoshimi-wrapper-content-main-button {
+  text-align: center;
+  margin: 0 auto 40px;
+}
+.modal-wrapper-content-main-button a,
+.modal-hoshimi-wrapper-content-main-button a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  background-color: #005c3f;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .modal-wrapper-content-main-button a,
+  .modal-hoshimi-wrapper-content-main-button a {
+    font-size: 16px;
+  }
+}
+.modal-wrapper-content-main-button a:hover,
+.modal-hoshimi-wrapper-content-main-button a:hover {
+  opacity: 0.8;
 }
 .modal-wrapper-content-close,
 .modal-hoshimi-wrapper-content-close {

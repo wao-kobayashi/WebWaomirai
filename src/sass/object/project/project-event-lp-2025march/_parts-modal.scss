@@ -16,13 +16,13 @@ $z-indexes: (
   left: 0%;
   right: 0%;
   bottom: 0%;
-  max-width: 360px;
+  max-width: 390px;
   width: 90%;
   display: inline-table;
   height: auto;
   margin: auto;
   background: white;
-  padding: 0 0 0px;
+  padding: 0 20px 0px;
   border-radius: 20px;
   // overflow: hidden;
   &-wrapper {
@@ -65,19 +65,24 @@ $z-indexes: (
         position: relative;
         border-radius: 20px 20px 0 0;
         padding: 20px 0 0;
-
+        &-mv img {
+          width: 100%;
+          margin: 0 auto 20px;
+        }
         &-head {
           display: flex;
           align-items: center;
           justify-content: center;
           color: $cl-black;
+          text-align: center !important;
           @include font-size-l;
           font-weight: 300;
-          margin: 0px auto 0;
+          margin: 0px auto 15px;
           text-align: center;
           line-height: $lineheight-normal;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           gap: 20px;
+          font-weight: bold;
           &-img {
             text-align: center;
             img {
@@ -102,8 +107,28 @@ $z-indexes: (
         &-text {
           @include font-size-m;
           text-align: center;
+          margin: 0 auto 20px;
+        }
+        &-button {
+          text-align: center;
+          margin: 0 auto 40px;
+          a {
+            @include font-size-m;
+            text-decoration: none;
+            color: $cl-white;
+            display: inline-block;
+            background-color: $cl-waogreen;
+            padding: 12px 30px;
+            border-radius: $border-radius-big;
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
         }
       }
+
       &-close {
         text-align: center;
         margin: 20px auto 25px;
