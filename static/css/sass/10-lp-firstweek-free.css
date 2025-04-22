@@ -5140,18 +5140,11 @@ header .header-right a {
 }
 .lp-firstweek-free-events-flex {
   display: flex;
-  justify-content: space-between;
 }
 .lp-firstweek-free-events-main {
   max-width: 920px;
   width: 100%;
-  margin-left: calc((100% - 1200px) / 2);
-}
-@media screen and (max-width: 1300px) {
-  .lp-firstweek-free-events-main {
-    margin-left: calc((100% - (100vw - 1300px + 920px + 0px + 280px)) / 2);
-    max-width: calc(100vw - 1300px + 920px + 0px + 40px);
-  }
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events-main {

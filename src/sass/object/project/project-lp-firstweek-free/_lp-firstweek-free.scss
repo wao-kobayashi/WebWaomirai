@@ -619,20 +619,20 @@ header {
 
   &-flex {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
   //メイン講座
   &-main {
     // max-width: $width-main-subject;
     max-width: $width-main-subject;
     width: 100%;
-    margin-left: calc((100% - $width-xl) / 2);
+    margin: 0 auto;
     @include responsive-style(1300px) {
       // max-width: calc((100% - 1300px) + $width-main-subject);
-      $responsive-width: calc(((100vw - 1300px)) + $width-main-subject + 0px);
+      // $responsive-width: calc(((100vw - 1300px)) + $width-main-subject + 0px);
       // margin-left: calc((100% - ($width-main-subject + 220px)) / 2);
-      margin-left: calc((100% - ($responsive-width + $width-side-sticky)) / 2);
-      max-width: calc($responsive-width + 40px);
+      // margin-left: calc((100% - ($responsive-width + $width-side-sticky)) / 2);
+      // max-width: calc($responsive-width + 40px);
     }
     @include responsive-style(768px) {
       margin: 0 !important;
