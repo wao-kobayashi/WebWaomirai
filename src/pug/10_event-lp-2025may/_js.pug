@@ -1,0 +1,147 @@
+
+script.
+  // モーダル関連の処理
+  // -----------------------------
+  // QRコードを表示するモーダルウィンドウを開く処理
+  $('.modal-open-liff-qr').click(function() {
+    $('.modal,.bg-modal').show();
+  });
+
+  $('.modal-open-liff-qr-hoshimi').click(function() {
+    $('.modal-hoshimi,.bg-modal').show();
+  });
+
+  // モーダルウィンドウを閉じる処理（閉じるボタンまたは背景クリック時）
+  $('.modal-close,.bg-modal').click(function() {
+    $('.modal,.bg-modal,.modal-hoshimi').hide();
+  });
+
+  // 高さ調整関連の処理
+  // -----------------------------
+  /**
+  * 各セクション内の説明文の高さを揃える関数
+  * セクションごとに子要素の高さを計算し、最も高い要素に合わせて他の要素の高さを調整
+  */
+  function setEqualHeight() {
+    $('.lp-25may-events-main-section-levels').each(function() {
+      const descriptions = $(this).find('.lp-25may-events-main-section-levels-child-description');
+      
+      // レスポンシブ対応のため、まず高さをリセット
+      descriptions.height('auto');
+
+      // 最大の高さを計算（padding と border を含む）
+      const maxHeight = Math.max(...descriptions.map(function() {
+        return $(this).outerHeight();
+      }).get());
+
+      // すべての説明文の高さを最大値に統一
+      descriptions.height(maxHeight);
+    });
+  }
+
+  // ページロード時とウィンドウリサイズ時に高さ調整を実行
+  $(document).ready(setEqualHeight);
+  $(window).on('resize', setEqualHeight);
+
+  // DOM読み込み完了後の初期化処理
+  // -----------------------------
+  $(document).ready(function () {
+    // モーダルウィンドウの閉じる処理（重複しているため削除推奨）
+    $('.modal-close,.bg-modal').click(function() {
+      $('.modal,.bg-modal').hide();
+    });
+
+    // セクション内の説明文の高さ調整（setEqualHeight関数と重複しているため削除推奨）
+    $('.lp-25may-events-main-section-levels').each(function() {
+      const maxHeight = Math.max(...$(this).find('.lp-25may-events-main-section-levels-child-description').map(function() {
+        return $(this).outerHeight();
+      }).get());
+
+      $(this).find('.lp-25may-events-main-section-levels-child-description').height(maxHeight);
+    });
+
+    // スクロール連動の UI 制御
+    // -----------------------------
+    $(window).on("scroll", function () {
+      const scrollPosition = $(window).scrollTop();
+
+      // スクロール位置が500px以上の場合、固定CTAボタンを表示
+      if (scrollPosition > 500) {
+        $('.fixed-cta-button').fadeIn();
+      } else {
+        $('.fixed-cta-button').fadeOut();
+      }
+
+      /**
+      * スクロール位置に応じてナビゲーションの現在地を更新する関数
+      * @param {string} sectionSelector - セクションを特定するセレクタ
+      * @param {string} linkSelector - ナビゲーションリンクを特定するセレクタ
+      */
+      function handleScrollEvent(sectionSelector, linkSelector) {
+        const sections = $(sectionSelector);
+        const links = $(linkSelector);
+
+        // 現在表示中のセクションを特定してナビゲーションを更新
+        function updateActiveLink() {
+          const scrollTop = $(window).scrollTop();
+          const windowHeight = $(window).height();
+          const scrollBottom = scrollTop + windowHeight;
+
+          let activeSection = null;
+
+          // 画面内に表示されているセクションを特定
+          sections.each(function () {
+            const $section = $(this);
+            const sectionTop = $section.offset().top;
+            const sectionBottom = sectionTop + $section.outerHeight();
+
+            if (sectionBottom > scrollTop && sectionTop < scrollBottom) {
+              activeSection = $section.attr("id");
+              return false;
+            }
+          });
+
+          // 対応するナビゲーションリンクをアクティブ化
+          if (activeSection) {
+            links.removeClass("active");
+            $(`${linkSelector}[href="#${activeSection}"]`).addClass("active");
+          }
+        }
+
+        // パフォーマンス最適化のため、アニメーションフレームを使用
+        $(window).on("scroll", function () {
+          requestAnimationFrame(updateActiveLink);
+        });
+
+        updateActiveLink();
+      }
+
+      // PC用とスマホ用それぞれのナビゲーションを初期化
+      handleScrollEvent(".lp-25may-events-main-section-levels", ".lp-25may-events-sub-left-subject-wrap-level");
+      handleScrollEvent(".lp-25may-events-main-section", ".lp-25may-events-spnavi-child");
+    });
+
+    // アニメーション効果の適用
+    // -----------------------------
+    // 要素が画面内に表示されたときのアニメーション効果を設定
+    const inviewElements = $(
+      ".lp-25may-feature-grid-child-img, \
+      .lp-25may-events-main-section-levels-child, \
+      .lp-25may-events-main-section-levels-child-img, \
+      .lp-25may-intro-title, \
+      .lp-25may-fv-title, \
+      .lp-25may-fvpc-grid-child, \
+      .lp-25may-events-sub, \
+      .lp-25may-fvsp-title-img img, \
+      .lp-25may-intro-title-top-sp,\
+      .lp-25may-fvsp-title-img, \
+      .lp-25may-intro-title-main-sp"
+    );
+
+    // 要素が画面内に表示されたときに'inview'クラスを追加
+    inviewElements.on("inview", function (event, isInView) {
+      if (isInView) {
+        $(this).addClass("inview");
+      }
+    });
+  });

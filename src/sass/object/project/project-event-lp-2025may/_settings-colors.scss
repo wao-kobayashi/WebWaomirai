@@ -1,0 +1,15 @@
+/* color */
+
+$cl-lp-red: #ee242c;
+$cl-lp-cvred: #f06b6b;
+$cl-merit-yellow: #ffda71;
+$cl-feature-yellow: #fffb96;
+$cl-bg-eventlp: #fff8e0; //イベントLP専用の背景
+$cl-title-underline: #febcad;
+$cl-navigation-glay: #d9d9d9;
+
+$subject-categories: (
+  "philosophy": $cl-philosophy,
+  "science": $cl-science-darken,
+  "economiy": $cl-economy,
+);
