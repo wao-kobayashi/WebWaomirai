@@ -142,7 +142,28 @@ header {
     grid-column-gap: 30px;
     grid-row-gap: 10px;
     margin: 0 auto;
-    &-child {
+    .lp-firstweek-free-fvpc-grid-child-01 {
+      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    .lp-firstweek-free-fvpc-grid-child-02 {
+      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .lp-firstweek-free-fvpc-grid-child-03 {
+      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .lp-firstweek-free-fvpc-grid-child-04 {
+      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .lp-firstweek-free-fvpc-grid-child-05 {
+      aspect-ratio: 1 / 1;
+      grid-area: 2 / 3 / 3 / 4;
+      border-radius: 10000px; /* 画像を円形に */
+    }
+    .lp-firstweek-free-fvpc-grid-child {
       position: relative;
       overflow: hidden; /* 子要素を切り取る */
       background: $cl-graylightest;
@@ -159,27 +180,6 @@ header {
         height: 100%;
         object-fit: cover;
       }
-      &-01 {
-        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-        grid-area: 1 / 1 / 3 / 2;
-      }
-      &-02 {
-        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-        grid-area: 1 / 2 / 2 / 3;
-      }
-      &-03 {
-        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-        grid-area: 1 / 3 / 2 / 4;
-      }
-      &-04 {
-        aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-        grid-area: 2 / 2 / 3 / 3;
-      }
-      &-05 {
-        aspect-ratio: 1 / 1;
-        grid-area: 2 / 3 / 3 / 4;
-        border-radius: 10000px; /* 画像を円形に */
-      }
     }
   }
 }
@@ -195,7 +195,7 @@ header {
     width: 80%;
     margin: 30px auto 0;
 
-    &-img img {
+    .lp-firstweek-free-fvsp-title-img img {
       width: 120px;
       height: 120px;
       position: absolute;
@@ -209,7 +209,7 @@ header {
         transform: scale(1);
       }
     }
-    &-text img {
+    .lp-firstweek-free-fvsp-title-text img {
       width: 100%;
     }
   }
@@ -217,14 +217,14 @@ header {
   .lp-firstweek-free-fvsp-grid {
     width: 100%; // 幅を100%に設定
     overflow: hidden; // オーバーフローを隠す
-    &-track {
+    .lp-firstweek-free-fvsp-grid-track {
       width: max-content; // コンテンツの幅に合わせる
       animation: infiniteScroll 28s linear infinite; // 無限スクロールのアニメーションを適用
-      &-inner {
+      .lp-firstweek-free-fvsp-grid-track-inner {
         display: flex; // フレックスボックスを使用
         flex-wrap: nowrap; // 折り返しを無効にする
         gap: 0 var(--scroll-gap); // 要素間のギャップを設定
-        &-child {
+        .lp-firstweek-free-fvsp-grid-track-inner-child {
           width: 52vw; // 幅をビューポートの33%に設定
           img {
             object-fit: cover; // 画像をカバーするように表示
@@ -256,13 +256,13 @@ header {
     margin: -250px 0 -90px;
     padding: 320px 0 150px;
   }
-  &-title {
+  .lp-firstweek-free-intro-title {
     padding: 0 0 30px;
     border-bottom: 2px solid $cl-black;
     display: inline-block;
     margin: 0 auto;
     width: 100%;
-    &-top {
+    .lp-firstweek-free-intro-title-top {
       @include font-size-xxxl;
       color: $cl-black;
       margin: 0 auto 10px;
@@ -277,7 +277,7 @@ header {
         @include font-size-xl;
         letter-spacing: 2px;
       }
-      &-sp {
+      .lp-firstweek-free-intro-title-top-sp {
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -291,7 +291,7 @@ header {
           transform: translate(0, 105%);
           transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
           @for $i from 1 through 13 {
-            &:nth-child(#{$i + 1}) {
+            span:nth-child(#{$i + 1}) {
               $delay: $i * 0.15 + s;
               transition-delay: $delay;
             }
@@ -300,7 +300,7 @@ header {
       }
     }
 
-    &-main {
+    .lp-firstweek-free-intro-title-main {
       @include font-size-xxxl;
       color: $cl-black;
       margin: 0 auto 20px;
@@ -311,7 +311,7 @@ header {
       @include responsive-style(768px) {
         margin: 0 auto 14px;
       }
-      &-sp {
+      .lp-firstweek-free-intro-main-sp {
         display: flex;
         justify-content: center;
         letter-spacing: 0px;
@@ -328,7 +328,7 @@ header {
           transform: translate(0, 105%);
           transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
           @for $i from 1 through 13 {
-            &:nth-child(#{$i + 1}) {
+            span:nth-child(#{$i + 1}) {
               $delay: $i * 0.15 + s;
               transition-delay: $delay;
             }
@@ -336,20 +336,20 @@ header {
         }
       }
     }
-    &-special {
+    .lp-firstweek-free-intro-title-special {
       @include font-size-m;
       color: $cl-lp-red;
       margin: 0 auto 0px;
     }
   }
-  &-text {
+  .lp-firstweek-free-intro-text {
     margin: 25px 0 0;
     @include font-size-xl;
     @include responsive-style(768px) {
       @include font-size-m;
     }
   }
-  &-target {
+  .lp-firstweek-free-intro-target {
     background: $cl-merit-yellow;
 
     display: inline-flex;
@@ -372,15 +372,15 @@ header {
   margin: 0 auto 90px;
   padding: 0 20px;
 
-  &-grid {
+  .lp-firstweek-free-feature-grid {
     display: flex;
     gap: 45px;
     @include responsive-style(768px) {
       flex-direction: column;
     }
-    &-child {
+    .lp-firstweek-free-feature-grid-child {
       flex: 1;
-      &-img {
+      .lp-firstweek-free-feature-grid-child-img {
         opacity: 0;
         transform: scale(0.5);
         transition: opacity 0.3s ease, transform 0.7s ease;
@@ -392,21 +392,21 @@ header {
           border-radius: $border-radius-extrabigplus;
         }
       }
-      &-subtitle {
+      .lp-firstweek-free-feature-grid-child-subtitle {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 20px 0 0;
-        &-icon {
+        .lp-firstweek-free-feature-grid-child-subtitle-icon {
           width: 30px;
           margin: 0 5px 0 0;
         }
-        &-text {
+        .lp-firstweek-free-feature-grid-child-subtitle-text {
           @include font-size-l;
           color: $cl-graylight;
         }
       }
-      &-title {
+      .lp-firstweek-free-feature-grid-child-title {
         margin: 20px 0 0;
         text-align: center;
         @include font-size-xl;
@@ -414,7 +414,7 @@ header {
         font-weight: bold;
         line-height: $lineheight-normal;
       }
-      &-text {
+      .lp-firstweek-free-feature-grid-child-text {
         margin: 20px 0 0;
         text-align: left;
         @include font-size-m;
@@ -539,20 +539,20 @@ header {
     padding: 0 0 0px;
     margin: 0 auto 15px;
   }
-  &-head {
-    &-title {
+  .lp-firstweek-free-eventinfo-head {
+    .lp-firstweek-free-eventinfo-head-title {
       @include font-size-xxl;
       text-align: center;
       font-weight: bold;
     }
 
-    &-text {
+    .lp-firstweek-free-eventinfo-head-text {
       @include font-size-m;
       text-align: center;
       margin: 10px 0 0;
     }
   }
-  &-nav {
+  .lp-firstweek-free-eventinfo-nav {
     display: flex;
     justify-content: center;
     gap: 36px;
@@ -560,7 +560,7 @@ header {
     @include responsive-style(768px) {
       gap: 10px;
     }
-    &-child {
+    .lp-firstweek-free-eventinfo-nav-child {
       border-radius: $border-radius-full;
       padding: 15px 45px;
       color: $cl-black;
@@ -578,7 +578,7 @@ header {
         padding: 10px 10px;
         @include font-size-s;
       }
-      &:before {
+      .lp-firstweek-free-eventinfo-nav-child:before {
         @include responsive-style(768px) {
           display: none;
         }
@@ -601,7 +601,7 @@ header {
       }
     }
   }
-  &-bottom {
+  .lp-firstweek-free-eventinfo-bottom {
     @include font-size-m;
     text-align: center;
     padding: 15px 0 0;
@@ -617,12 +617,12 @@ header {
 .lp-firstweek-free-events {
   width: 100%;
 
-  &-flex {
+  .lp-firstweek-free-events-flex {
     display: flex;
     // justify-content: space-between;
   }
   //メイン講座
-  &-main {
+  .lp-firstweek-free-events-main {
     // max-width: $width-main-subject;
     max-width: $width-main-subject;
     width: 100%;
@@ -638,14 +638,14 @@ header {
       margin: 0 !important;
       max-width: 100%;
     }
-    &-section {
+    .lp-firstweek-free-events-main-section {
       padding: 0 0 150px;
-      &-title {
+      .lp-firstweek-free-events-main-section-title {
         @include font-size-xxl;
         margin: 0 auto 30px;
         text-align: center;
       }
-      &-levels {
+      .lp-firstweek-free-events-main-section-levels {
         display: flex;
         gap: 30px;
         margin: 0 0 30px;
@@ -654,7 +654,7 @@ header {
           display: block;
           padding: 0 20px;
         }
-        &-child {
+        .lp-firstweek-free-events-main-section-levels-child {
           flex: 1;
           padding: 20px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -674,7 +674,7 @@ header {
             visibility: visible;
             transform: translateY(0px);
           }
-          &-title {
+          .lp-firstweek-free-events-main-section-levels-child-title {
             @include font-size-m;
             text-align: center;
             margin: 0 0 20px;
@@ -687,7 +687,7 @@ header {
               font-size: 14px;
               gap: 10px;
             }
-            &:before {
+            .lp-firstweek-free-events-main-section-levels-child-title:before {
               content: "";
               display: inline-block;
               width: 13px;
@@ -706,7 +706,7 @@ header {
               background: $cl-economy;
             }
           }
-          &-img {
+          .lp-firstweek-free-events-main-section-levels-child-img {
             position: relative;
             overflow: hidden;
             border-radius: $border-radius-bigplus;
@@ -723,7 +723,7 @@ header {
               transform: translateX(100%); // 下へスライドして消える
             }
 
-            &::before {
+            .lp-firstweek-free-events-main-section-levels-child-img::before {
               content: "";
               position: absolute;
               top: 0;
@@ -739,23 +739,23 @@ header {
               margin: 0 0 20px;
             }
           }
-          &-description {
+          .lp-firstweek-free-events-main-section-levels-child-description {
             font-size: 14px;
             padding: 0 0 12px;
             margin: 0 0 20px;
             border-bottom: 1px dashed $cl-graylight;
             // height: 140px;
           }
-          &-bottom {
+          .lp-firstweek-free-events-main-section-levels-child-bottom {
             display: flex;
             gap: 20px;
             @include responsive-style(1000px) {
               gap: 15px;
             }
-            &-subject {
+            .lp-firstweek-free-events-main-section-levels-child-bottom-subject {
             }
 
-            &-subject-category {
+            .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
               border-radius: $border-radius-full;
 
               padding: 4px 8px;
@@ -778,8 +778,8 @@ header {
                 background: $cl-economy;
               }
             }
-            &-subject-level {
-              &-number {
+            .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level {
+              .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number {
                 color: $cl-black;
                 text-align: center;
                 font-weight: 300;
@@ -796,7 +796,7 @@ header {
                   }
                 }
               }
-              &-student {
+              .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-student {
                 @include font-size-s;
                 color: $cl-graylight;
                 text-align: center;
@@ -807,7 +807,7 @@ header {
                 }
               }
             }
-            &-schedule {
+            .lp-firstweek-free-events-main-section-levels-child-bottom-schedule {
               @include font-size-m;
               @include responsive-style(1000px) {
                 font-size: 14.2px;
@@ -831,7 +831,7 @@ header {
           }
         }
       }
-      &-cta {
+      .lp-firstweek-free-events-main-section-cta {
         text-align: center;
         a {
           animation: fuwafuwa-button 2s 0s infinite;
@@ -860,7 +860,7 @@ header {
     }
   }
   //追従ナビゲーション(PCのみ)
-  &-sub {
+  .lp-firstweek-free-events-sub {
     position: sticky;
     background: $cl-white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -880,17 +880,17 @@ header {
       display: block;
     }
 
-    &-left {
+    .lp-firstweek-free-events-sub-left {
       grid-area: 1 / 1 / 2 / 2;
       padding: 0 0 0 5px;
-      &-title {
+      .lp-firstweek-free-events-sub-left-title {
         font-size: 16px;
         margin: 0 0 10px -2px;
         font-weight: bold;
       }
-      &-subject {
+      .lp-firstweek-free-events-sub-left-subject {
         position: relative;
-        &::before {
+        .lp-firstweek-free-events-sub-left-subject::before {
           content: "";
           display: block;
           position: absolute;
@@ -902,13 +902,13 @@ header {
           height: calc(100% - 16px);
           background: $cl-graylight;
         }
-        &-wrap {
+        .lp-firstweek-free-events-sub-left-subject-wrap {
           display: flex;
           flex-direction: column;
           gap: 10px;
           margin: 0 0 18px;
 
-          &-title {
+          .lp-firstweek-free-events-sub-left-subject-wrap-title {
             position: relative;
             padding: 0 0 0 20px;
             margin: 5px 0 5px 0;
@@ -923,7 +923,7 @@ header {
             &:hover {
               opacity: 0.7;
             }
-            &::before {
+            .lp-firstweek-free-events-sub-left-subject-wrap-title::before {
               content: "";
               display: block;
               position: absolute;
@@ -937,7 +937,7 @@ header {
               background: $cl-graylight;
             }
           }
-          &-level {
+          .lp-firstweek-free-events-sub-left-subject-wrap-level {
             position: relative;
             padding: 0 0 0 20px;
             color: $cl-gray;
@@ -957,7 +957,7 @@ header {
               span {
                 color: $cl-philosophy-darken !important;
               }
-              &::before {
+              &.philosophy.active::before {
                 background: $cl-philosophy;
               }
             }
@@ -966,7 +966,7 @@ header {
               span {
                 color: $cl-science-darken !important;
               }
-              &::before {
+              &.science.active::before {
                 background: $cl-science;
               }
             }
@@ -975,7 +975,7 @@ header {
               span {
                 color: $cl-economy-darken !important;
               }
-              &::before {
+              &.economy.active::before {
                 background: $cl-economy;
               }
             }
@@ -991,7 +991,7 @@ header {
               span {
                 @include font-size-l;
               }
-              &::before {
+              &.active::before {
                 background: $cl-black;
                 transform: scale(1.45); // 拡大する
                 transition: transform 0.1s ease, color 0.1s ease;
@@ -1005,7 +1005,7 @@ header {
               font-weight: 500;
             }
 
-            &::before {
+            .lp-firstweek-free-events-sub-left-subject-wrap-level::before {
               content: "";
               display: block;
               position: absolute;
@@ -1022,14 +1022,14 @@ header {
         }
       }
     }
-    &-right {
+    .lp-firstweek-free-events-sub-right {
       @include responsive-style(1300px) {
         display: none;
       }
       align-self: self-end;
       align-content: flex-end;
       grid-area: 1 / 2 / 2 / 3;
-      &-speech {
+      .lp-firstweek-free-events-sub-right-speech {
         background: $cl-white;
         border-radius: $border-radius-full;
         font-size: 10px;
@@ -1043,7 +1043,7 @@ header {
         margin: 0 0 20px;
         position: relative;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        &::before {
+        .lp-firstweek-free-events-sub-right-speech::before {
           content: "";
           background-color: transparent;
           width: 10px;
@@ -1061,13 +1061,13 @@ header {
           z-index: 1;
         }
       }
-      &-img img {
+      .lp-firstweek-free-events-sub-right-img img {
         // height: 270px;
         margin: 0 20px 24px auto;
         width: 60%;
       }
     }
-    &-cta {
+    .lp-firstweek-free-events-sub-cta {
       grid-area: 2 / 1 / 3 / 3;
       a {
         @include font-size-m;
@@ -1090,7 +1090,7 @@ header {
       }
     }
   }
-  &-spnavi {
+  .lp-firstweek-free-events-spnavi {
     top: 0px;
     left: 0px;
     position: sticky;
@@ -1145,7 +1145,7 @@ section.lp-waomirai-recommend {
         flex: 1;
       }
     }
-    &-left {
+    .lp-waomirai-recommend-left {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1154,7 +1154,7 @@ section.lp-waomirai-recommend {
         width: 50%;
       }
     }
-    &-right {
+    .lp-waomirai-recommend-right {
       position: relative;
       background: $cl-graylightest;
       padding: 45px 30px;
@@ -1168,7 +1168,7 @@ section.lp-waomirai-recommend {
         border-radius: $border-radius-bigplus;
         gap: 30px;
       }
-      &::before {
+      .lp-waomirai-recommend-right::before {
         content: "";
         position: absolute;
         top: 0;
@@ -1185,12 +1185,12 @@ section.lp-waomirai-recommend {
           display: none;
         }
       }
-      &-child {
+      .lp-waomirai-recommend-right-child {
         @include responsive-style(768px) {
           display: flex;
           gap: 20px;
         }
-        &:last-child {
+        .lp-waomirai-recommend-right-child:last-child {
           flex-direction: row-reverse;
           .lp-waomirai-recommend-right-child-text:before {
             right: -15px !important;
@@ -1204,7 +1204,7 @@ section.lp-waomirai-recommend {
             }
           }
         }
-        &-icon {
+        .lp-waomirai-recommend-right-child-icon {
           img {
             height: 75px;
             margin: 0 auto;
@@ -1214,7 +1214,7 @@ section.lp-waomirai-recommend {
             margin: 0;
           }
         }
-        &-text {
+        .lp-waomirai-recommend-right-child-text {
           display: flex;
           flex-direction: column;
           gap: 20px;
@@ -1226,7 +1226,7 @@ section.lp-waomirai-recommend {
             padding: 16px;
             border-radius: $border-radius-big;
           }
-          &::before {
+          .lp-waomirai-recommend-right-child-text::before {
             @include responsive-style(768px) {
               content: "";
               position: absolute;
@@ -1259,7 +1259,7 @@ section.lp-waomirai-recommend {
       border-radius: $border-radius-bigplus;
       display: block;
     }
-    &-left {
+    .lp-waomirai-point-left {
       @include responsive-style(768px) {
         width: 120px;
         height: 30px;
@@ -1274,7 +1274,7 @@ section.lp-waomirai-recommend {
       justify-content: center;
       align-items: center;
     }
-    &-right {
+    .lp-waomirai-point-right {
       flex: 1;
       text-align: center;
       @include responsive-style(768px) {
@@ -1313,7 +1313,7 @@ section.lp-waomirai-recommend {
   }
 
   .lp-waomirai-howto-step {
-    &-child {
+    .lp-waomirai-howto-step-child {
       max-width: $width-sm;
       width: 100%;
       margin: 0 auto 60px;
@@ -1329,28 +1329,28 @@ section.lp-waomirai-recommend {
         gap: 10px;
         margin: 0 auto 90px;
       }
-      &-icon {
+      .lp-waomirai-howto-step-child-icon {
         @include responsive-style(768px) {
           width: 100px;
         }
       }
-      &-number {
+      .lp-waomirai-howto-step-child-number {
         @include font-size-xl;
         @include responsive-style(768px) {
           @include font-size-xxl;
         }
       }
-      &-text {
+      .lp-waomirai-howto-step-child-text {
         width: 100%;
         padding: 0 20px;
-        &-title {
+        .lp-waomirai-howto-step-child-text-title {
           @include font-size-l;
           @include responsive-style(768px) {
             @include font-size-l;
           }
           margin: 5px 0 15px;
         }
-        &-detail {
+        .lp-waomirai-howto-step-child-text-detail {
           @include font-size-m;
           line-height: $lineheight-relaxed;
           a {
@@ -1391,14 +1391,14 @@ section.lp-waomirai-recommend {
         padding: 40px 20px 40px;
         border-radius: $border-radius-bigplus;
       }
-      &-left {
+      .lp-waomirai-about-box-left {
         width: 250px;
         @include responsive-style(768px) {
           width: 70%;
           margin: 0 auto 0px;
         }
       }
-      &-right {
+      .lp-waomirai-about-box-right {
         flex: 1;
         line-height: $lineheight-relaxed;
         @include font-size-m;
@@ -1427,10 +1427,10 @@ section.lp-waomirai-recommend {
       align-items: center;
       text-align: center;
       gap: 20px;
-      &:last-child {
+      .lp-waomirai-feature-child:last-child {
         margin: 0 auto 90px;
       }
-      &-icons {
+      .lp-waomirai-feature-child-icons {
         display: flex;
         gap: 10px;
       }
@@ -1452,12 +1452,12 @@ section.lp-waomirai-recommend {
     max-width: $width-xl;
     margin: 0 auto;
 
-    &-catch {
+    .lp-waomirai-start2025-catch {
       @include font-size-l;
       margin: 0 auto;
       text-align: center;
     }
-    &-subtitle {
+    .lp-waomirai-start2025-subtitle {
       background: $cl-main-orange;
       color: white;
       @include font-size-xl;
@@ -1466,20 +1466,20 @@ section.lp-waomirai-recommend {
       text-align: center;
       border-radius: $border-radius-full;
     }
-    &-logo {
+    .lp-waomirai-start2025-logo {
       max-width: $width-md;
       margin: 0 auto 30px;
     }
-    &-target {
+    .lp-waomirai-start2025-target {
       @include font-size-l;
       margin: 0 auto 30px;
       text-align: center;
     }
-    &-subjects {
+    .lp-waomirai-start2025-subjects {
       max-width: $width-md;
       margin: 0 auto 45px;
     }
-    &-feature {
+    .lp-waomirai-start2025-feature {
       display: flex;
       gap: 45px;
       margin: 0px 0 60px;
@@ -1487,7 +1487,7 @@ section.lp-waomirai-recommend {
         flex-direction: column;
         gap: 30px;
       }
-      &-box {
+      .lp-waomirai-start2025-feature-box {
         background: white;
         border-radius: $border-radius-bigplus;
         padding: 30px 20px 20px;
@@ -1497,7 +1497,7 @@ section.lp-waomirai-recommend {
         @include responsive-style(768px) {
           padding: 30px 20px 30px;
         }
-        &-title {
+        .lp-waomirai-start2025-feature-box-title {
           display: flex;
           justify-content: center;
           gap: 15px;
@@ -1509,12 +1509,12 @@ section.lp-waomirai-recommend {
             width: 30px;
           }
         }
-        &-text {
+        .lp-waomirai-start2025-feature-box-text {
           @include font-size-m;
         }
       }
     }
-    &-btn {
+    .lp-waomirai-start2025-btn {
       text-align: center;
       a {
         text-align: center;
