@@ -23,8 +23,8 @@ script.
   * セクションごとに子要素の高さを計算し、最も高い要素に合わせて他の要素の高さを調整
   */
   function setEqualHeight() {
-    $('.lp-25may-events-main-section-levels').each(function() {
-      const descriptions = $(this).find('.lp-25may-events-main-section-levels-child-description');
+    $('.lp-firstweek-free-events-main-section-levels').each(function() {
+      const descriptions = $(this).find('.lp-firstweek-free-events-main-section-levels-child-description');
       
       // レスポンシブ対応のため、まず高さをリセット
       descriptions.height('auto');
@@ -52,12 +52,12 @@ script.
     });
 
     // セクション内の説明文の高さ調整（setEqualHeight関数と重複しているため削除推奨）
-    $('.lp-25may-events-main-section-levels').each(function() {
-      const maxHeight = Math.max(...$(this).find('.lp-25may-events-main-section-levels-child-description').map(function() {
+    $('.lp-firstweek-free-events-main-section-levels').each(function() {
+      const maxHeight = Math.max(...$(this).find('.lp-firstweek-free-events-main-section-levels-child-description').map(function() {
         return $(this).outerHeight();
       }).get());
 
-      $(this).find('.lp-25may-events-main-section-levels-child-description').height(maxHeight);
+      $(this).find('.lp-firstweek-free-events-main-section-levels-child-description').height(maxHeight);
     });
 
     // スクロール連動の UI 制御
@@ -117,25 +117,25 @@ script.
       }
 
       // PC用とスマホ用それぞれのナビゲーションを初期化
-      handleScrollEvent(".lp-25may-events-main-section-levels", ".lp-25may-events-sub-left-subject-wrap-level");
-      handleScrollEvent(".lp-25may-events-main-section", ".lp-25may-events-spnavi-child");
+      handleScrollEvent(".lp-firstweek-free-events-main-section-levels", ".lp-firstweek-free-events-sub-left-subject-wrap-level");
+      handleScrollEvent(".lp-firstweek-free-events-main-section", ".lp-firstweek-free-events-spnavi-child");
     });
 
     // アニメーション効果の適用
     // -----------------------------
     // 要素が画面内に表示されたときのアニメーション効果を設定
     const inviewElements = $(
-      ".lp-25may-feature-grid-child-img, \
-      .lp-25may-events-main-section-levels-child, \
-      .lp-25may-events-main-section-levels-child-img, \
-      .lp-25may-intro-title, \
-      .lp-25may-fv-title, \
-      .lp-25may-fvpc-grid-child, \
-      .lp-25may-events-sub, \
-      .lp-25may-fvsp-title-img img, \
-      .lp-25may-intro-title-top-sp,\
-      .lp-25may-fvsp-title-img, \
-      .lp-25may-intro-title-main-sp"
+      ".lp-firstweek-free-feature-grid-child-img, \
+      .lp-firstweek-free-events-main-section-levels-child, \
+      .lp-firstweek-free-events-main-section-levels-child-img, \
+      .lp-firstweek-free-intro-title, \
+      .lp-firstweek-free-fv-title, \
+      .lp-firstweek-free-fvpc-grid-child, \
+      .lp-firstweek-free-events-sub, \
+      .lp-firstweek-free-fvsp-title-img img, \
+      .lp-firstweek-free-intro-title-top-sp,\
+      .lp-firstweek-free-fvsp-title-img, \
+      .lp-firstweek-free-intro-title-main-sp"
     );
 
     // 要素が画面内に表示されたときに'inview'クラスを追加
