@@ -4425,7 +4425,7 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-title {
-  font-size: 50px;
+  font-size: 48px;
   letter-spacing: 6px;
   font-weight: bold;
   text-align: center;
@@ -4434,7 +4434,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-title {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4464,11 +4464,12 @@ header .header-right a {
 .lp-firstweek-free-fv-main-image {
   width: 49.167%;
   position: absolute;
+  object-fit: cover;
   top: 0;
   left: 0;
   border-radius: 100px;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 25px;
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.3s ease, transform 1s ease;
@@ -4665,9 +4666,9 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main-text-title-02 {
-  font-size: 74px;
-  letter-spacing: 20px;
-  margin-top: 5px;
+  font-size: 80px;
+  letter-spacing: 34px;
+  margin-top: 3px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-text-title-02 {
@@ -4683,7 +4684,7 @@ header .header-right a {
 .lp-firstweek-free-fv-main-text-title-03 {
   font-size: 84px;
   letter-spacing: 1px;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-text-title-03 {
@@ -4705,7 +4706,7 @@ header .header-right a {
   font-size: 27px;
   background: #ffda71;
   border-radius: 29px;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-text-subject {
@@ -4717,7 +4718,6 @@ header .header-right a {
     width: 100%;
     border-radius: 26px;
     height: 52px;
-    margin-top: 20px;
     order: 3;
   }
 }
@@ -4750,20 +4750,28 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main-text-date {
-  font-size: 50px;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-top: 10px;
   text-align: center;
   color: #fd6161;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-text-date {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-text-date {
-    margin-top: 25px;
+    font-size: 36px;
+    margin-top: 35px;
     order: 2;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-date {
+    font-size: 28px;
   }
 }
 
@@ -4833,15 +4841,120 @@ header .header-right a {
   }
 }
 
+.lp-firstweek-free-intro-contents {
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 100px auto 0;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents {
+    display: block;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+}
+
+.lp-firstweek-free-intro-contents-image {
+  width: 48.334%;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 1s ease;
+}
+.lp-firstweek-free-intro-contents-image.inview {
+  opacity: 1;
+  transform: scale(1);
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-image {
+    width: 100%;
+  }
+}
+
+.lp-firstweek-free-intro-contents-main {
+  width: 46.75%;
+  flex-shrink: 0;
+  min-width: 506px;
+  padding-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-main {
+    width: 100%;
+    min-width: auto;
+    margin-top: 23px;
+    padding-left: 0;
+  }
+}
+
+.lp-firstweek-free-intro-contents-main-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #f06b6b;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-main-title {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-main-title {
+    letter-spacing: 1px;
+  }
+}
+
+.lp-firstweek-free-intro-contents-main-text {
+  font-size: 20px;
+  line-height: 1.75;
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-main-text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-main-text {
+    margin-top: 23px;
+  }
+}
+
+.lp-firstweek-free-intro-contents-main-text-paragraph:nth-child(n+2) {
+  margin-top: 20px;
+}
+
+.lp-firstweek-free-intro-arrow {
+  display: block;
+  width: 80px;
+  margin: 37px auto 0;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-intro-arrow {
+    width: 72px;
+    margin-top: 22px;
+  }
+}
+
 .lp-firstweek-free-feature {
   max-width: 1240px;
   width: 100%;
-  margin: 0 auto 90px;
+  margin: 60px auto 0;
   padding: 0 20px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-feature {
+    margin-top: 45px;
+  }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid {
   display: flex;
-  gap: 45px;
+  justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-feature .lp-firstweek-free-feature-grid {
@@ -4849,7 +4962,21 @@ header .header-right a {
   }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child {
-  flex: 1;
+  width: 31.6666666667%;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child {
+    width: 100%;
+  }
+}
+.lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child:nth-child(n+2) {
+  width: 31.7083333333%;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child:nth-child(n+2) {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-img {
   opacity: 0;
@@ -4898,7 +5025,7 @@ header .header-right a {
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-text {
   margin: 20px 0 0;
   text-align: left;
-  font-size: 17px;
+  font-size: 20px;
   color: #262626;
   line-height: 1.75;
 }
@@ -4907,129 +5034,13 @@ header .header-right a {
     font-size: 16px;
   }
 }
-
-.lp-firstweek-free-hoshimi {
-  width: 100%;
-  background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png") repeat;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-blend-mode: lighten;
-  background-size: cover;
-  padding: 75px 0;
-  margin: 0 auto 75px;
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap {
-  display: flex;
-  max-width: 1240px;
-  margin: 0 auto;
-  align-items: center;
-  gap: 60px;
-  padding: 0 20px;
+.lp-firstweek-free-feature .lp-firstweek-free-feature-line {
+  margin-top: 72px;
 }
 @media screen and (max-width: 768px) {
-  .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap {
-    flex-direction: column-reverse;
-    gap: 30px;
+  .lp-firstweek-free-feature .lp-firstweek-free-feature-line {
+    display: none;
   }
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left {
-  flex: 3.5;
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-spcialtitle {
-  font-size: 27px;
-  font-weight: bold;
-  text-align: left;
-  margin: 0 auto 16px;
-  letter-spacing: 8px;
-  padding: 0 0 12px;
-  border-bottom: 2px solid #262626;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-spcialtitle {
-    font-size: 25px;
-  }
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-  margin: 0 auto 8px;
-  color: #262626;
-  line-height: 1.25;
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-date {
-  font-size: 17px;
-  text-align: left;
-  margin: 0 auto 8px;
-  color: #262626;
-  font-weight: bold;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-date {
-    font-size: 16px;
-  }
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-text {
-  text-align: left;
-  margin: 0 auto 20px;
-  color: #262626;
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-text span {
-  color: #f35053;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-text {
-    margin: 0 auto 32px;
-  }
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-button a {
-  color: #ffffff;
-  text-decoration: none;
-  background: #f06b6b;
-  border-radius: 10000px;
-  width: 100%;
-  height: 55px;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  animation: fuwafuwa-button 2s 0s infinite;
-  font-size: 22px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-button a {
-    font-size: 21px;
-  }
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-right {
-  flex: 6.5;
-  border-radius: 24px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-right .lp-firstweek-free-wrap-hoshimi-right-closetext {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  font-size: 27px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-right .lp-firstweek-free-wrap-hoshimi-right-closetext {
-    font-size: 25px;
-  }
-}
-.lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-right img {
-  border-radius: 24px;
 }
 
 .lp-firstweek-free-eventinfo {
@@ -5052,7 +5063,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-title {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-text {
@@ -5170,7 +5181,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-title {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels {
@@ -5945,21 +5956,21 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
   }
 }
 .lp-waomirai-howto .lp-waomirai-howto-title .large {
-  font-size: 50px;
+  font-size: 48px;
 }
 @media screen and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 50px;
+    font-size: 48px;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 .lp-waomirai-howto .lp-waomirai-howto-img {
@@ -6005,7 +6016,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-step .lp-waomirai-howto-step-child .lp-waomirai-howto-step-child-number {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 .lp-waomirai-howto .lp-waomirai-howto-step .lp-waomirai-howto-step-child .lp-waomirai-howto-step-child-text {
