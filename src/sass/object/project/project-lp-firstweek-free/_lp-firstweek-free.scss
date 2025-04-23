@@ -70,7 +70,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  max-width: calc($width-lg + 40px);
+  max-width: calc($width-xl + 40px);
   margin: 0 auto;
   justify-content: space-between;
   @include responsive-style(768px) {
@@ -105,139 +105,187 @@ header {
   }
 }
 
-//ファーストビジュアルPC
-.lp-firstweek-free-fvpc {
+// ファーストビュー
+.lp-firstweek-free-fv{
   padding: 0 20px;
-  .lp-firstweek-free-fvpc-title {
-    @include font-size-xxxxl;
-    letter-spacing: 1.5px;
-    font-weight: bold;
-    margin: 20px auto 20px;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    &.inview span {
-      transform: translate(0, 0);
-    }
-    span {
-      display: block;
-      transform: translate(0, 105%);
-      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-      @for $i from 1 through 20 {
-        &:nth-child(#{$i + 1}) {
-          $delay: $i * 0.05 + s;
-          transition-delay: $delay;
-        }
-      }
-    }
-  }
-  .lp-firstweek-free-fvpc-grid {
-    display: grid;
-    width: 100%;
-    max-width: $width-lg;
-    height: auto;
-    grid-template-columns: 2.1fr repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 10px;
-    margin: 0 auto;
-    .lp-firstweek-free-fvpc-grid-child-01 {
-      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-      grid-area: 1 / 1 / 3 / 2;
-    }
-    .lp-firstweek-free-fvpc-grid-child-02 {
-      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-      grid-area: 1 / 2 / 2 / 3;
-    }
-    .lp-firstweek-free-fvpc-grid-child-03 {
-      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-      grid-area: 1 / 3 / 2 / 4;
-    }
-    .lp-firstweek-free-fvpc-grid-child-04 {
-      aspect-ratio: 1 / 0.95; /* アスペクト比を1:1に */
-      grid-area: 2 / 2 / 3 / 3;
-    }
-    .lp-firstweek-free-fvpc-grid-child-05 {
-      aspect-ratio: 1 / 1;
-      grid-area: 2 / 3 / 3 / 4;
-      border-radius: 10000px; /* 画像を円形に */
-    }
-    .lp-firstweek-free-fvpc-grid-child {
-      position: relative;
-      overflow: hidden; /* 子要素を切り取る */
-      background: $cl-graylightest;
-      border-radius: 80px; /* 画像を円形に */
-      opacity: 0;
-      transform: scale(0.5);
-      transition: opacity 0.3s ease, transform 1s ease;
-      &.inview {
-        opacity: 1;
-        transform: scale(1);
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
+  width: 100%;
+  max-width: calc($width-xl + 40px);
+  margin: 0 auto;
 }
-
-//ファーストビジュアルSP
-:root {
-  --scroll-gap: 15px;
-}
-
-.lp-firstweek-free-fvsp {
-  .lp-firstweek-free-fvsp-title {
+.lp-firstweek-free-fv-title{
+  @include font-size-xxxl;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 70px;
+  white-space: nowrap;
+  @include responsive-style(768px) {
+    line-height: 1.2;
+    margin-top: 10px;
+    letter-spacing: 2px;
     position: relative;
-    width: 80%;
-    margin: 30px auto 0;
-
-    .lp-firstweek-free-fvsp-title-img img {
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      right: -10px;
-      top: -80px;
-      border-radius: $border-radius-full;
-      transform: scale(0.2);
-      transition: opacity 0.3s ease, transform 0.65s ease;
-      &.inview {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    .lp-firstweek-free-fvsp-title-text img {
-      width: 100%;
-    }
-  }
-
-  .lp-firstweek-free-fvsp-grid {
-    width: 100%; // 幅を100%に設定
-    overflow: hidden; // オーバーフローを隠す
-    .lp-firstweek-free-fvsp-grid-track {
-      width: max-content; // コンテンツの幅に合わせる
-      animation: infiniteScroll 28s linear infinite; // 無限スクロールのアニメーションを適用
-      .lp-firstweek-free-fvsp-grid-track-inner {
-        display: flex; // フレックスボックスを使用
-        flex-wrap: nowrap; // 折り返しを無効にする
-        gap: 0 var(--scroll-gap); // 要素間のギャップを設定
-        .lp-firstweek-free-fvsp-grid-track-inner-child {
-          width: 52vw; // 幅をビューポートの33%に設定
-          img {
-            object-fit: cover; // 画像をカバーするように表示
-            width: 100%; // 幅を100%に設定
-            height: 100%; // 高さを100%に設定
-            aspect-ratio: 1 / 1; // アスペクト比を1:1に設定
-            border-radius: $border-radius-bigplus; // 角を丸くする
-          }
-        }
-      }
-    }
+    z-index: 10;
   }
 }
+.lp-firstweek-free-fv-main{
+  position: relative;
+  margin-top: 35px;
+  @include responsive-style(768px) {
+    height: auto;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.lp-firstweek-free-fv-main-image{
+  width: 49.167%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 20px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 1s ease;
+  &.inview {
+    opacity: 1;
+    transform: scale(1);
+  }
+  @include responsive-style(1220px) {
+    width: 590px;
+    position: static;
+    margin: 0 auto;
+  }
+  @include responsive-style(768px) {
+    width: 100%;
+    position: static;
+    order: 1;
+  }
+}
+.lp-firstweek-free-fv-main-text{
+  position: relative;
+  z-index: 10;
+  margin-right: -40px;
+  padding-left: 42%;
+  @include responsive-style(1220px) {
+    margin: 26px 0 0;
+    padding-left: 0;
+  }
+  @include responsive-style(768px) {
+    margin: 13px 0 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    order: 3;
+  }
+}
+.lp-firstweek-free-fv-main-text-title{
+  color: $cl-lp-red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  position: relative;
+  @include responsive-style(768px) {
+    order: 1;
+  }
+}
+.lp-firstweek-free-fv-main-text-title-01{
+  @include font-size-xxxxxxxl;
+  letter-spacing: 55px;
+  @include responsive-style(768px) {
+    letter-spacing: 13px;
+  }
+}
+.lp-firstweek-free-fv-main-text-title-02{
+  @include font-size-xxxxxl;
+  letter-spacing: 20px;
+  margin-top: 5px;
+  @include responsive-style(768px) {
+    letter-spacing: 7px;
+  }
+}
+.lp-firstweek-free-fv-main-text-title-03{
+  @include font-size-xxxxxxl;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  @include responsive-style(768px) {
+    letter-spacing: 3px;
+  }
+}
+.lp-firstweek-free-fv-main-text-subject{
+  width: 328px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font-size-xl;
+  background: $cl-merit-yellow;
+  border-radius: 29px;
+  margin: 30px auto 0;
+  @include responsive-style(768px) {
+    width: 100%;
+    border-radius: 26px;
+    height: 52px;
+    margin-top: 20px;
+    order: 3;
+  }
+}
+.lp-firstweek-free-fv-main-text-explain{
+  text-align: center;
+  @include font-size-xl;
+  line-height: 1.3;
+  margin-top: 13px;
+  letter-spacing: 4px;
+  @include responsive-style(768px) {
+    @include font-size-l;
+    letter-spacing: 0;
+    line-height: 1.35;
+    margin-top: 25px;
+    order: 4;
+  }
+}
+.lp-firstweek-free-fv-main-text-date{
+  @include font-size-xxxl;
+  text-align: center;
+  color: $cl-lp-red;
+  font-weight: bold;
+  @include responsive-style(768px) {
+    margin-top: 25px;
+    order: 2;
+  }
+}
+.lp-firstweek-free-fv-main-small-image{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+  @include responsive-style(768px) {
+    order: 2;
+    margin-top: 20px;
+    gap: 18px;
+  }
+}
+.lp-firstweek-free-fv-main-small-image-item{
+  aspect-ratio: 1 / 0.9474;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 1s ease;
+  &.inview {
+    opacity: 1;
+    transform: scale(1);
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 //イントロ
 .lp-firstweek-free-intro {
   margin: -120px 0 -90px;
@@ -367,7 +415,7 @@ header {
 
 //特徴
 .lp-firstweek-free-feature {
-  max-width: $width-lg;
+  max-width: $width-xl;
   width: 100%;
   margin: 0 auto 90px;
   padding: 0 20px;
@@ -435,7 +483,7 @@ header {
   margin: 0 auto 75px;
   .lp-firstweek-free-hoshimi-wrap {
     display: flex;
-    max-width: $width-lg;
+    max-width: $width-xl;
     margin: 0 auto;
     align-items: center;
     gap: 60px;
@@ -1378,7 +1426,7 @@ section.lp-waomirai-recommend {
     margin: 0 auto;
     .lp-waomirai-about-box {
       background: white;
-      max-width: $width-lg;
+      max-width: $width-xl;
       margin: 0 auto 0px;
       padding: 48px 36px;
       border-radius: $border-radius-extrabig;

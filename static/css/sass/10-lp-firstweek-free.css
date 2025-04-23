@@ -4200,7 +4200,7 @@ select {
 @media screen and (max-width: 768px) {
   .modal-wrapper-content-main-head,
   .modal-hoshimi-wrapper-content-main-head {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .modal-wrapper-content-main-head-img,
@@ -4341,7 +4341,7 @@ select {
 }
 @media screen and (max-width: 768px) {
   .c-btn-cta-main a {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4369,7 +4369,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  max-width: 1090px;
+  max-width: 1240px;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -4412,186 +4412,265 @@ header .header-right a {
   }
 }
 
-.lp-firstweek-free-fvpc {
+.lp-firstweek-free-fv {
   padding: 0 20px;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title {
-  font-size: 58px;
-  letter-spacing: 1.5px;
-  font-weight: bold;
-  margin: 20px auto 20px;
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title.inview span {
-  transform: translate(0, 0);
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span {
-  display: block;
-  transform: translate(0, 105%);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(2) {
-  transition-delay: 0.05s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(3) {
-  transition-delay: 0.1s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(4) {
-  transition-delay: 0.15s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(5) {
-  transition-delay: 0.2s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(6) {
-  transition-delay: 0.25s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(7) {
-  transition-delay: 0.3s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(8) {
-  transition-delay: 0.35s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(9) {
-  transition-delay: 0.4s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(10) {
-  transition-delay: 0.45s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(11) {
-  transition-delay: 0.5s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(12) {
-  transition-delay: 0.55s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(13) {
-  transition-delay: 0.6s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(14) {
-  transition-delay: 0.65s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(15) {
-  transition-delay: 0.7s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(16) {
-  transition-delay: 0.75s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(17) {
-  transition-delay: 0.8s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(18) {
-  transition-delay: 0.85s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(19) {
-  transition-delay: 0.9s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(20) {
-  transition-delay: 0.95s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-title span:nth-child(21) {
-  transition-delay: 1s;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid {
-  display: grid;
   width: 100%;
-  max-width: 1050px;
-  height: auto;
-  grid-template-columns: 2.1fr repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 10px;
+  max-width: 1240px;
   margin: 0 auto;
 }
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child-01 {
-  aspect-ratio: 1/0.95; /* アスペクト比を1:1に */
-  grid-area: 1/1/3/2;
+
+.lp-firstweek-free-fv-title {
+  font-size: 50px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 70px;
+  white-space: nowrap;
 }
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child-02 {
-  aspect-ratio: 1/0.95; /* アスペクト比を1:1に */
-  grid-area: 1/2/2/3;
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-title {
+    font-size: 28px;
+  }
 }
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child-03 {
-  aspect-ratio: 1/0.95; /* アスペクト比を1:1に */
-  grid-area: 1/3/2/4;
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-title {
+    line-height: 1.2;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 10;
+  }
 }
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child-04 {
-  aspect-ratio: 1/0.95; /* アスペクト比を1:1に */
-  grid-area: 2/2/3/3;
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child-05 {
-  aspect-ratio: 1/1;
-  grid-area: 2/3/3/4;
-  border-radius: 10000px; /* 画像を円形に */
-}
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child {
+
+.lp-firstweek-free-fv-main {
   position: relative;
-  overflow: hidden; /* 子要素を切り取る */
-  background: #f0f2f3;
-  border-radius: 80px; /* 画像を円形に */
+  margin-top: 35px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main {
+    height: auto;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.lp-firstweek-free-fv-main-image {
+  width: 49.167%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 20px;
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.3s ease, transform 1s ease;
 }
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child.inview {
+.lp-firstweek-free-fv-main-image.inview {
   opacity: 1;
   transform: scale(1);
 }
-.lp-firstweek-free-fvpc .lp-firstweek-free-fvpc-grid .lp-firstweek-free-fvpc-grid-child img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media screen and (max-width: 1220px) {
+  .lp-firstweek-free-fv-main-image {
+    width: 590px;
+    position: static;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-image {
+    width: 100%;
+    position: static;
+    order: 1;
+  }
 }
 
-:root {
-  --scroll-gap: 15px;
-}
-
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-title {
+.lp-firstweek-free-fv-main-text {
   position: relative;
-  width: 80%;
+  z-index: 10;
+  margin-right: -40px;
+  padding-left: 42%;
+}
+@media screen and (max-width: 1220px) {
+  .lp-firstweek-free-fv-main-text {
+    margin: 26px 0 0;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text {
+    margin: 13px 0 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    order: 3;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-title {
+  color: #fd6161;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title {
+    order: 1;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-title-01 {
+  font-size: 131px;
+  letter-spacing: 55px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title-01 {
+    font-size: 65px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title-01 {
+    letter-spacing: 13px;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-title-02 {
+  font-size: 74px;
+  letter-spacing: 20px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title-02 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title-02 {
+    letter-spacing: 7px;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-title-03 {
+  font-size: 84px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title-03 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-title-03 {
+    letter-spacing: 3px;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-subject {
+  width: 328px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  background: #ffda71;
+  border-radius: 29px;
   margin: 30px auto 0;
 }
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-title .lp-firstweek-free-fvsp-title-img img {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  right: -10px;
-  top: -80px;
-  border-radius: 10000px;
-  transform: scale(0.2);
-  transition: opacity 0.3s ease, transform 0.65s ease;
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-subject {
+    font-size: 25px;
+  }
 }
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-title .lp-firstweek-free-fvsp-title-img img.inview {
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-subject {
+    width: 100%;
+    border-radius: 26px;
+    height: 52px;
+    margin-top: 20px;
+    order: 3;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-explain {
+  text-align: center;
+  font-size: 27px;
+  line-height: 1.3;
+  margin-top: 13px;
+  letter-spacing: 4px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-explain {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-explain {
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.35;
+    margin-top: 25px;
+    order: 4;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-explain {
+    font-size: 21px;
+  }
+}
+
+.lp-firstweek-free-fv-main-text-date {
+  font-size: 50px;
+  text-align: center;
+  color: #fd6161;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-date {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-text-date {
+    margin-top: 25px;
+    order: 2;
+  }
+}
+
+.lp-firstweek-free-fv-main-small-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-small-image {
+    order: 2;
+    margin-top: 20px;
+    gap: 18px;
+  }
+}
+
+.lp-firstweek-free-fv-main-small-image-item {
+  aspect-ratio: 1/0.9474;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 1s ease;
+}
+.lp-firstweek-free-fv-main-small-image-item.inview {
   opacity: 1;
   transform: scale(1);
 }
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-title .lp-firstweek-free-fvsp-title-text img {
-  width: 100%;
-}
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-grid {
-  width: 100%;
-  overflow: hidden;
-}
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-grid .lp-firstweek-free-fvsp-grid-track {
-  width: max-content;
-  animation: infiniteScroll 28s linear infinite;
-}
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-grid .lp-firstweek-free-fvsp-grid-track .lp-firstweek-free-fvsp-grid-track-inner {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0 var(--scroll-gap);
-}
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-grid .lp-firstweek-free-fvsp-grid-track .lp-firstweek-free-fvsp-grid-track-inner .lp-firstweek-free-fvsp-grid-track-inner-child {
-  width: 52vw;
-}
-.lp-firstweek-free-fvsp .lp-firstweek-free-fvsp-grid .lp-firstweek-free-fvsp-grid-track .lp-firstweek-free-fvsp-grid-track-inner .lp-firstweek-free-fvsp-grid-track-inner-child img {
-  object-fit: cover;
+.lp-firstweek-free-fv-main-small-image-item img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 24px;
+  object-fit: cover;
 }
 
 .lp-firstweek-free-intro {
@@ -4629,7 +4708,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro .lp-firstweek-free-intro-title .lp-firstweek-free-intro-title-top {
-    font-size: 48px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4707,7 +4786,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro .lp-firstweek-free-intro-title .lp-firstweek-free-intro-title-main {
-    font-size: 48px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4772,7 +4851,7 @@ header .header-right a {
 }
 .lp-firstweek-free-intro .lp-firstweek-free-intro-title .lp-firstweek-free-intro-title-special {
   font-size: 17px;
-  color: #ee242c;
+  color: #fd6161;
   margin: 0 auto 0px;
 }
 @media screen and (max-width: 768px) {
@@ -4821,12 +4900,12 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-firstweek-free-intro .lp-firstweek-free-intro-target {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 
 .lp-firstweek-free-feature {
-  max-width: 1050px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto 90px;
   padding: 0 20px;
@@ -4871,7 +4950,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-subtitle .lp-firstweek-free-feature-grid-child-subtitle-text {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-title {
@@ -4911,7 +4990,7 @@ header .header-right a {
 }
 .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap {
   display: flex;
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 0 auto;
   align-items: center;
   gap: 60px;
@@ -4991,7 +5070,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-left .lp-firstweek-free-wrap-hoshimi-left-button a {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .lp-firstweek-free-hoshimi .lp-firstweek-free-hoshimi-wrap .lp-firstweek-free-wrap-hoshimi-right {
@@ -5328,7 +5407,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -5353,7 +5432,7 @@ header .header-right a {
 }
 @media screen and (max-width: 1000px) and (max-width: 768px) {
   .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number span {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-student {
@@ -5432,7 +5511,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-cta a {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5586,7 +5665,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active span {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active.active::before {
@@ -5831,7 +5910,7 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-righ
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5941,7 +6020,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 48px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5951,7 +6030,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 48px;
+    font-size: 28px;
   }
 }
 .lp-waomirai-howto .lp-waomirai-howto-img {
@@ -6010,7 +6089,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-step .lp-waomirai-howto-step-child .lp-waomirai-howto-step-child-text .lp-waomirai-howto-step-child-text-title {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -6020,7 +6099,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-step .lp-waomirai-howto-step-child .lp-waomirai-howto-step-child-text .lp-waomirai-howto-step-child-text-title {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .lp-waomirai-howto .lp-waomirai-howto-step .lp-waomirai-howto-step-child .lp-waomirai-howto-step-child-text .lp-waomirai-howto-step-child-text-detail {
@@ -6049,7 +6128,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 .bg-lp-creamyellow .lp-waomirai-about .lp-waomirai-about-box {
   background: white;
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 0 auto 0px;
   padding: 48px 36px;
   border-radius: 64px;
@@ -6107,7 +6186,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .bg-lp-creamyellow .lp-waomirai-feature .lp-waomirai-feature-child .lp-waomirai-feature-child:last-child {
@@ -6140,7 +6219,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-catch {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-subtitle {
@@ -6168,7 +6247,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-target {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-subjects {
@@ -6217,7 +6296,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-feature .lp-waomirai-start2025-feature-box .lp-waomirai-start2025-feature-box-title {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-feature .lp-waomirai-start2025-feature-box .lp-waomirai-start2025-feature-box-title img {
@@ -6264,7 +6343,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-text {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 .bg-lp-creamyellow .lp-waomirai-start2025 .lp-waomirai-start2025-btn a .lp-waomirai-start2025-btn-icn {
