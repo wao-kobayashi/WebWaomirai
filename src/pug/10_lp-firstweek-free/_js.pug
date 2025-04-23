@@ -19,8 +19,8 @@ script.
   * セクションごとに子要素の高さを計算し、最も高い要素に合わせて他の要素の高さを調整
   */
   function setEqualHeight() {
-    $('.lp-firstweek-free-events-main-section-levels').each(function() {
-      const descriptions = $(this).find('.lp-firstweek-free-events-main-section-levels-child-description');
+    $('.lp-firstweek-free-events-main-levels').each(function() {
+      const descriptions = $(this).find('.lp-firstweek-free-events-main-levels-child-description');
       
       // レスポンシブ対応のため、まず高さをリセット
       descriptions.height('auto');
@@ -48,12 +48,12 @@ script.
     });
 
     // セクション内の説明文の高さ調整（setEqualHeight関数と重複しているため削除推奨）
-    $('.lp-firstweek-free-events-main-section-levels').each(function() {
-      const maxHeight = Math.max(...$(this).find('.lp-firstweek-free-events-main-section-levels-child-description').map(function() {
+    $('.lp-firstweek-free-events-main-levels').each(function() {
+      const maxHeight = Math.max(...$(this).find('.lp-firstweek-free-events-main-levels-child-description').map(function() {
         return $(this).outerHeight();
       }).get());
 
-      $(this).find('.lp-firstweek-free-events-main-section-levels-child-description').height(maxHeight);
+      $(this).find('.lp-firstweek-free-events-main-levels-child-description').height(maxHeight);
     });
 
     // スクロール連動の UI 制御
@@ -79,7 +79,7 @@ script.
 
         // 現在表示中のセクションを特定してナビゲーションを更新
         function updateActiveLink() {
-          const scrollTop = $(window).scrollTop();
+          const scrollTop = $(window).scrollTop() + $('.lp-firstweek-free-events-spnavi').height();
           const windowHeight = $(window).height();
           const scrollBottom = scrollTop + windowHeight;
 
@@ -113,8 +113,8 @@ script.
       }
 
       // PC用とスマホ用それぞれのナビゲーションを初期化
-      handleScrollEvent(".lp-firstweek-free-events-main-section-levels", ".lp-firstweek-free-events-sub-left-subject-wrap-level");
-      handleScrollEvent(".lp-firstweek-free-events-main-section", ".lp-firstweek-free-events-spnavi-child");
+      handleScrollEvent(".lp-firstweek-free-events-main-levels", ".lp-firstweek-free-events-sub-left-subject-wrap-level");
+      handleScrollEvent(".lp-firstweek-free-events-main", ".lp-firstweek-free-events-spnavi-child");
     });
 
     // アニメーション効果の適用
@@ -122,8 +122,8 @@ script.
     // 要素が画面内に表示されたときのアニメーション効果を設定
     const inviewElements = $(
       ".lp-firstweek-free-feature-grid-child-img, \
-      .lp-firstweek-free-events-main-section-levels-child, \
-      .lp-firstweek-free-events-main-section-levels-child-img, \
+      .lp-firstweek-free-events-main-levels-child, \
+      .lp-firstweek-free-events-main-levels-child-img, \
       .lp-firstweek-free-fv-main-text-title-01, \
       .lp-firstweek-free-fv-main-text-title-02, \
       .lp-firstweek-free-fv-main-text-title-03, \

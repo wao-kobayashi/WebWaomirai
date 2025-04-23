@@ -4815,7 +4815,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-line {
-    display: none;
+    margin-top: 40px;
   }
 }
 
@@ -5039,35 +5039,42 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-feature .lp-firstweek-free-feature-line {
-    display: none;
+    margin-top: 36px;
   }
 }
 
 .lp-firstweek-free-eventinfo {
   padding: 0 0 30px;
   max-width: 1240px;
-  margin: 0 auto 60px;
+  margin: 110px auto 0;
   border-bottom: 2px solid #262626;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-eventinfo {
     border-bottom: none;
-    padding: 0 0 0px;
-    margin: 0 auto 15px;
+    padding: 0;
+    margin: 75px auto 0;
   }
 }
 .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-title {
-  font-size: 36px;
+  font-size: 48px;
   text-align: center;
   font-weight: bold;
+  color: #f06b6b;
+  letter-spacing: 2px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-title {
-    font-size: 28px;
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-title {
+    letter-spacing: 1px;
   }
 }
 .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-text {
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
   margin: 10px 0 0;
 }
@@ -5116,14 +5123,14 @@ header .header-right a {
     font-size: 11.5px;
   }
 }
-.lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-nav .lp-firstweek-free-eventinfo-nav-child .lp-firstweek-free-eventinfo-nav-child:before {
+.lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-nav .lp-firstweek-free-eventinfo-nav-child:before {
   content: "";
   display: inline-block;
   width: 13px;
   height: 13px;
 }
 @media screen and (max-width: 768px) {
-  .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-nav .lp-firstweek-free-eventinfo-nav-child .lp-firstweek-free-eventinfo-nav-child:before {
+  .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-nav .lp-firstweek-free-eventinfo-nav-child:before {
     display: none;
   }
 }
@@ -5154,565 +5161,7 @@ header .header-right a {
   }
 }
 
-.lp-firstweek-free-events {
-  width: 100%;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-flex {
-  display: flex;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main {
-  max-width: 920px;
-  width: 100%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main {
-    margin: 0 !important;
-    max-width: 100%;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section {
-  padding: 0 0 150px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-title {
-  font-size: 36px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-title {
-    font-size: 28px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels {
-  display: flex;
-  gap: 30px;
-  margin: 0 0 30px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels {
-    display: block;
-    padding: 0 20px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child {
-  flex: 1;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  transition: all 1.2s ease;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0px);
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child {
-    margin: 0 auto 30px;
-    padding: 15px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child.inview {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0px);
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title {
-  font-size: 17px;
-  text-align: center;
-  margin: 0 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  height: 30px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title {
-    font-size: 14px;
-    gap: 10px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title .lp-firstweek-free-events-main-section-levels-child-title:before {
-  content: "";
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title.philosophy:before {
-  background: #fcaf17;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title.science:before {
-  background: #b6d43e;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-title.economy:before {
-  background: #28afe7;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img.philosophy:before {
-  background: #ffe3ac;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img.science::before {
-  background: #66cb88;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img.economy::before {
-  background: #67d2e9;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img.inview:before {
-  transform: translateX(100%);
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img .lp-firstweek-free-events-main-section-levels-child-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50px;
-  width: 130%;
-  height: 100%;
-  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-  transition: transform 0.45s ease-in-out;
-  z-index: 1;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-img img {
-  border-radius: 24px;
-  margin: 0 0 20px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-description {
-  font-size: 14px;
-  padding: 0 0 12px;
-  margin: 0 0 20px;
-  border-bottom: 1px dashed #999;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom {
-  display: flex;
-  gap: 20px;
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom {
-    gap: 15px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
-  border-radius: 10000px;
-  padding: 4px 8px;
-  margin: 0 0 3px;
-  text-align: center;
-  font-size: 17px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 1000px) and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
-    font-size: 11.5px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category {
-    font-size: 11.5px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category.philosophy {
-  background: #fcaf17;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category.science {
-  background: #b6d43e;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-category.economy {
-  background: #28afe7;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number {
-  color: #262626;
-  text-align: center;
-  font-weight: 300;
-  font-size: 22px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number {
-    font-size: 21px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number {
-    font-size: 14px;
-    line-height: 1;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number span {
-  font-size: 27px;
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number span {
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number span {
-    font-size: 22px;
-  }
-}
-@media screen and (max-width: 1000px) and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-number span {
-    font-size: 21px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-student {
-  font-size: 12px;
-  color: #999;
-  text-align: center;
-  margin: 3px 0 0;
-  white-space: nowrap;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-student {
-    font-size: 11.5px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level .lp-firstweek-free-events-main-section-levels-child-bottom-subject-level-student {
-    font-size: 10px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule {
-  font-size: 17px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule {
-    font-size: 14.2px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule {
-    font-size: 13.7px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule span {
-  font-size: 12.5px;
-  margin: 0 6px 0 0;
-}
-@media screen and (max-width: 1000px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule span {
-    display: none;
-    margin: 0 3px 0 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-levels .lp-firstweek-free-events-main-section-levels-child .lp-firstweek-free-events-main-section-levels-child-bottom .lp-firstweek-free-events-main-section-levels-child-bottom-schedule span {
-    font-size: 11px;
-    display: inline;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-cta {
-  text-align: center;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-cta a {
-  animation: fuwafuwa-button 2s 0s infinite;
-  text-align: center;
-  margin: 75px auto 0px;
-  cursor: pointer;
-  background: #00b900;
-  text-decoration: none;
-  height: 78px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10000px;
-  width: 100%;
-  max-width: 500px;
-  position: relative;
-  font-size: 22px;
-  letter-spacing: 1px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-cta a {
-    font-size: 21px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-main .lp-firstweek-free-events-main-section .lp-firstweek-free-events-main-section-cta a {
-    width: 90%;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub {
-  position: sticky;
-  background: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  padding: 30px 10px 20px 20px;
-  max-height: 620px;
-  border-radius: 48px 0 0 48px;
-  top: 20px;
-  right: 0;
-  display: grid;
-  grid-template-columns: 1fr 0.4fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 0px;
-  max-width: 280px;
-}
-@media screen and (max-width: 1300px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub {
-    padding: 30px 15px 20px 20px;
-    border-radius: 36px 0 0 36px;
-    display: block;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left {
-  grid-area: 1/1/2/2;
-  padding: 0 0 0 5px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-title {
-  font-size: 16px;
-  margin: 0 0 10px -2px;
-  font-weight: bold;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject {
-  position: relative;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 4.3px;
-  top: 4px;
-  bottom: 0;
-  margin: auto;
-  width: 2px;
-  height: calc(100% - 16px);
-  background: #999;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0 0 18px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-title {
-  position: relative;
-  padding: 0 0 0 20px;
-  margin: 5px 0 5px 0;
-  line-height: 1;
-  font-weight: 500;
-  text-decoration: none;
-  color: #262626;
-  font-size: 14px;
-}
-@media screen and (max-width: 1300px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-title {
-    font-size: 16px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-title:hover {
-  opacity: 0.7;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-title .lp-firstweek-free-events-sub-left-subject-wrap-title::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -0.3px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 12px;
-  height: 12px;
-  border-radius: 10000px;
-  background: #999;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level {
-  position: relative;
-  padding: 0 0 0 20px;
-  color: #4d4d4d;
-  font-size: 12px;
-  text-decoration: none;
-  margin: 0 0 -2px;
-  line-height: 1;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level {
-    font-size: 11.5px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level {
-    letter-spacing: 1px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level:hover {
-  opacity: 0.7;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.philosophy.active {
-  color: #fcaf17 !important;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.philosophy.active span {
-  color: #e8810f !important;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.philosophy.active.philosophy.active::before {
-  background: #fcaf17;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.science.active {
-  color: #b6d43e !important;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.science.active span {
-  color: #9dc03a !important;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.science.active.science.active::before {
-  background: #b6d43e;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.economy.active {
-  color: #28afe7 !important;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.economy.active span {
-  color: #0097c4 !important;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.economy.active.economy.active::before {
-  background: #28afe7;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active {
-  color: #262626;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active div {
-  font-weight: bold;
-  transform-origin: left bottom;
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active span {
-  font-size: 22px;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active span {
-    font-size: 21px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level.active.active::before {
-  background: #262626;
-  transform: scale(1.45);
-  transition: transform 0.1s ease, color 0.1s ease;
-  left: 2px;
-  top: 6px;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level span {
-  font-size: 17px;
-  margin: 0 0 0 4px;
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level span {
-    font-size: 16px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-left .lp-firstweek-free-events-sub-left-subject .lp-firstweek-free-events-sub-left-subject-wrap .lp-firstweek-free-events-sub-left-subject-wrap-level .lp-firstweek-free-events-sub-left-subject-wrap-level::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 2px;
-  top: 3px;
-  bottom: 0;
-  margin: auto;
-  width: 7px;
-  height: 7px;
-  border-radius: 10000px;
-  background: #999;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-right {
-  align-self: self-end;
-  align-content: flex-end;
-  grid-area: 1/2/2/3;
-}
-@media screen and (max-width: 1300px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-right {
-    display: none;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-right .lp-firstweek-free-events-sub-right-speech {
-  background: #ffffff;
-  border-radius: 10000px;
-  font-size: 10px;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  line-height: 1.5;
-  margin: 0 0 20px;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-right .lp-firstweek-free-events-sub-right-speech .lp-firstweek-free-events-sub-right-speech::before {
-  content: "";
-  background-color: transparent;
-  width: 10px;
-  height: 30px;
-  border-right: 9px solid transparent;
-  border-top: 18px solid #fff;
-  border-left: 9px solid transparent;
-  position: absolute;
-  bottom: -22px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.15));
-  z-index: 1;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-right .lp-firstweek-free-events-sub-right-img img {
-  margin: 0 20px 24px auto;
-  width: 60%;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-cta {
-  grid-area: 2/1/3/3;
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-cta a {
-  font-size: 17px;
-  background: #00b900;
-  border-radius: 10000px;
-  color: #ffffff;
-  display: flex;
-  height: 45px;
-  margin: 0px 0 0;
-  padding: 10px 0;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  animation: fuwafuwa-button 1.8s 0s infinite;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-cta a {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .lp-firstweek-free-events .lp-firstweek-free-events-sub .lp-firstweek-free-events-sub-cta a {
-    font-size: 14px;
-    padding: 10px 10px;
-  }
-}
-.lp-firstweek-free-events .lp-firstweek-free-events-spnavi {
+.lp-firstweek-free-events-spnavi {
   top: 0px;
   left: 0px;
   position: sticky;
@@ -5724,9 +5173,9 @@ header .header-right a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 0 auto 30px;
+  margin: 0 auto -21px;
 }
-.lp-firstweek-free-events .lp-firstweek-free-events-spnavi a {
+.lp-firstweek-free-events-spnavi a {
   color: #4d4d4d;
   display: flex;
   height: 30px;
@@ -5737,17 +5186,57 @@ header .header-right a {
   border-radius: 10000px;
   background: #f0f2f3;
 }
-.lp-firstweek-free-events .lp-firstweek-free-events-spnavi a.philosophy.active {
+.lp-firstweek-free-events-spnavi a.philosophy.active {
   color: #ffffff;
   background: #fcaf17;
 }
-.lp-firstweek-free-events .lp-firstweek-free-events-spnavi a.science.active {
+.lp-firstweek-free-events-spnavi a.science.active {
   color: #ffffff;
   background: #b6d43e;
 }
-.lp-firstweek-free-events .lp-firstweek-free-events-spnavi a.economy.active {
+.lp-firstweek-free-events-spnavi a.economy.active {
   color: #ffffff;
   background: #28afe7;
+}
+
+.lp-firstweek-free-events-main-title {
+  text-align: center;
+  font-size: 36px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-events-main-title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-events-main-title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-firstweek-free-events-main-title {
+    font-size: 34px;
+  }
+}
+
+.lp-firstweek-free-events-main {
+  margin-top: 105px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-events-main {
+    margin-top: 11px;
+    padding-top: 51px;
+  }
+}
+
+.lp-firstweek-free-events-spnavi + .lp-firstweek-free-events-main {
+  margin-top: 53px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-events-spnavi + .lp-firstweek-free-events-main {
+    margin-top: 0;
+    padding-top: 51px;
+  }
 }
 
 section.lp-waomirai-recommend {
