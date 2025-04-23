@@ -109,8 +109,11 @@ header {
 .lp-firstweek-free-fv{
   padding: 0 20px;
   width: 100%;
-  max-width: calc($width-xl + 40px);
+  max-width: $width-xl;
   margin: 0 auto;
+  @include responsive-style(768px) {
+    padding-bottom: 122px;
+  }
 }
 .lp-firstweek-free-fv-title{
   @include font-size-xxxl;
@@ -124,11 +127,12 @@ header {
     margin-top: 10px;
     letter-spacing: 2px;
     position: relative;
-    z-index: 10;
+    z-index: 100;
   }
 }
 .lp-firstweek-free-fv-main{
   position: relative;
+  z-index: 10;
   margin-top: 35px;
   @include responsive-style(768px) {
     height: auto;
@@ -307,130 +311,32 @@ header {
     object-fit: cover;
   }
 }
+.lp-firstweek-free-fv-line{
+  margin-top: 80px;
+  position: relative;
+  z-index: 10;
+  @include responsive-style(768px) {
+    display: none;
+  }
+}
 
 //イントロ
 .lp-firstweek-free-intro {
-  margin: -120px 0 -90px;
-  padding: 180px 0 150px;
-  text-align: center;
-  // height: 500px;
-  // object-fit: cover;
-  width: 100%;
-  background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png")
-    repeat;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-blend-mode: lighten;
-  background-size: cover;
-  @include responsive-style(768px) {
-    // display: inline-block;
-    margin: -250px 0 -90px;
-    padding: 320px 0 150px;
-  }
-  .lp-firstweek-free-intro-title {
-    padding: 0 0 30px;
-    border-bottom: 2px solid $cl-black;
-    display: inline-block;
-    margin: 0 auto;
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
     width: 100%;
-    .lp-firstweek-free-intro-title-top {
-      @include font-size-xxxl;
-      color: $cl-black;
-      margin: 0 auto 10px;
-      text-align: center;
-      font-weight: bold;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      @include responsive-style(768px) {
-        // display: inline-block;
-        font-weight: normal;
-        @include font-size-xl;
-        letter-spacing: 2px;
-      }
-      .lp-firstweek-free-intro-title-top-sp {
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        &.inview {
-          span {
-            transform: translate(0, 0);
-          }
-        }
-        span {
-          display: block;
-          transform: translate(0, 105%);
-          transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-          @for $i from 1 through 13 {
-            span:nth-child(#{$i + 1}) {
-              $delay: $i * 0.15 + s;
-              transition-delay: $delay;
-            }
-          }
-        }
-      }
-    }
-
-    .lp-firstweek-free-intro-title-main {
-      @include font-size-xxxl;
-      color: $cl-black;
-      margin: 0 auto 20px;
-      text-align: center;
-      font-weight: bold;
-      letter-spacing: 30px;
-      width: 100%;
-      @include responsive-style(768px) {
-        margin: 0 auto 14px;
-      }
-      .lp-firstweek-free-intro-main-sp {
-        display: flex;
-        justify-content: center;
-        letter-spacing: 0px;
-        gap: 30px;
-        line-height: $lineheight-tight;
-        overflow: hidden;
-        &.inview {
-          span {
-            transform: translate(0, 0);
-          }
-        }
-        span {
-          display: block;
-          transform: translate(0, 105%);
-          transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-          @for $i from 1 through 13 {
-            span:nth-child(#{$i + 1}) {
-              $delay: $i * 0.15 + s;
-              transition-delay: $delay;
-            }
-          }
-        }
-      }
-    }
-    .lp-firstweek-free-intro-title-special {
-      @include font-size-m;
-      color: $cl-lp-red;
-      margin: 0 auto 0px;
-    }
-  }
-  .lp-firstweek-free-intro-text {
-    margin: 25px 0 0;
-    @include font-size-xl;
+    height: 880px;
+    background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png") repeat;
+    background-blend-mode: lighten;
+    background-size: cover;
+    position: absolute;
+    top: -713px;
+    left: 0;
     @include responsive-style(768px) {
-      @include font-size-m;
-    }
-  }
-  .lp-firstweek-free-intro-target {
-    background: $cl-merit-yellow;
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: $border-radius-full;
-    padding: 8px 20px;
-    margin: 20px 0 0;
-    @include font-size-xl;
-    @include responsive-style(768px) {
-      @include font-size-l;
+      height: 220vw;
+      top: -220vw;
     }
   }
 }
