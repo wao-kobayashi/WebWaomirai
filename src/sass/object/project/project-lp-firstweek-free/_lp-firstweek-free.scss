@@ -191,6 +191,28 @@ header {
     order: 1;
   }
 }
+.lp-firstweek-free-fv-main-text-title-01,
+.lp-firstweek-free-fv-main-text-title-02,
+.lp-firstweek-free-fv-main-text-title-03{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  span{
+    display: block;
+    transform: translate(0, 105%);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  }
+  &.inview span{
+    transform: none;
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i + 1}) {
+        $delay: $i * 0.05 + s;
+        transition-delay: $delay;
+      }
+    }
+  }
+}
 .lp-firstweek-free-fv-main-text-title-01{
   @include font-size-xxxxxxxl;
   letter-spacing: 55px;

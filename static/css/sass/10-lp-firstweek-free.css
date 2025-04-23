@@ -4522,6 +4522,127 @@ header .header-right a {
   }
 }
 
+.lp-firstweek-free-fv-main-text-title-01,
+.lp-firstweek-free-fv-main-text-title-02,
+.lp-firstweek-free-fv-main-text-title-03 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.lp-firstweek-free-fv-main-text-title-01 span,
+.lp-firstweek-free-fv-main-text-title-02 span,
+.lp-firstweek-free-fv-main-text-title-03 span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span,
+.lp-firstweek-free-fv-main-text-title-02.inview span,
+.lp-firstweek-free-fv-main-text-title-03.inview span {
+  transform: none;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(2),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(2),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(2) {
+  transition-delay: 0.05s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(3),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(3),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(3) {
+  transition-delay: 0.1s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(4),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(4),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(4) {
+  transition-delay: 0.15s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(5),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(5),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(5) {
+  transition-delay: 0.2s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(6),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(6),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(6) {
+  transition-delay: 0.25s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(7),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(7),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(7) {
+  transition-delay: 0.3s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(8),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(8),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(8) {
+  transition-delay: 0.35s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(9),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(9),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(9) {
+  transition-delay: 0.4s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(10),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(10),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(10) {
+  transition-delay: 0.45s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(11),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(11),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(11) {
+  transition-delay: 0.5s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(12),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(12),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(12) {
+  transition-delay: 0.55s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(13),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(13),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(13) {
+  transition-delay: 0.6s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(14),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(14),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(14) {
+  transition-delay: 0.65s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(15),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(15),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(15) {
+  transition-delay: 0.7s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(16),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(16),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(16) {
+  transition-delay: 0.75s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(17),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(17),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(17) {
+  transition-delay: 0.8s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(18),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(18),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(18) {
+  transition-delay: 0.85s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(19),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(19),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(19) {
+  transition-delay: 0.9s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(20),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(20),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(20) {
+  transition-delay: 0.95s;
+}
+.lp-firstweek-free-fv-main-text-title-01.inview span:nth-child(21),
+.lp-firstweek-free-fv-main-text-title-02.inview span:nth-child(21),
+.lp-firstweek-free-fv-main-text-title-03.inview span:nth-child(21) {
+  transition-delay: 1s;
+}
+
 .lp-firstweek-free-fv-main-text-title-01 {
   font-size: 131px;
   letter-spacing: 55px;
