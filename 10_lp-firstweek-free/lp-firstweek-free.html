@@ -23,48 +23,12 @@ $('.modal-close,.bg-modal').click(function() {
   $('.modal,.bg-modal').hide();
 });
 
-// 高さ調整関連の処理
-// -----------------------------
-/**
-* 各セクション内の説明文の高さを揃える関数
-* セクションごとに子要素の高さを計算し、最も高い要素に合わせて他の要素の高さを調整
-*/
-function setEqualHeight() {
-  $('.lp-firstweek-free-events-main-levels').each(function() {
-    const descriptions = $(this).find('.lp-firstweek-free-events-main-levels-child-description');
-    
-    // レスポンシブ対応のため、まず高さをリセット
-    descriptions.height('auto');
-
-    // 最大の高さを計算（padding と border を含む）
-    const maxHeight = Math.max(...descriptions.map(function() {
-      return $(this).outerHeight();
-    }).get());
-
-    // すべての説明文の高さを最大値に統一
-    descriptions.height(maxHeight);
-  });
-}
-
-// ページロード時とウィンドウリサイズ時に高さ調整を実行
-$(document).ready(setEqualHeight);
-$(window).on('resize', setEqualHeight);
-
 // DOM読み込み完了後の初期化処理
 // -----------------------------
 $(document).ready(function () {
   // モーダルウィンドウの閉じる処理（重複しているため削除推奨）
   $('.modal-close,.bg-modal').click(function() {
     $('.modal,.bg-modal').hide();
-  });
-
-  // セクション内の説明文の高さ調整（setEqualHeight関数と重複しているため削除推奨）
-  $('.lp-firstweek-free-events-main-levels').each(function() {
-    const maxHeight = Math.max(...$(this).find('.lp-firstweek-free-events-main-levels-child-description').map(function() {
-      return $(this).outerHeight();
-    }).get());
-
-    $(this).find('.lp-firstweek-free-events-main-levels-child-description').height(maxHeight);
   });
 
   // スクロール連動の UI 制御
@@ -123,7 +87,7 @@ $(document).ready(function () {
       updateActiveLink();
     }
 
-    // PC用とスマホ用それぞれのナビゲーションを初期化
+    // スマホ用のナビゲーションを初期化
     handleScrollEvent(".lp-firstweek-free-events-main-levels", ".lp-firstweek-free-events-sub-left-subject-wrap-level");
     handleScrollEvent(".lp-firstweek-free-events-main", ".lp-firstweek-free-events-spnavi-child");
   });
