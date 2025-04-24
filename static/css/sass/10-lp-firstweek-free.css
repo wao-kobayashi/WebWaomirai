@@ -4307,6 +4307,7 @@ select {
   text-decoration: none;
   bottom: 20px;
   font-size: 16px;
+  z-index: 10000;
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -4350,16 +4351,27 @@ select {
   }
 }
 
-.c-title-25feb-lp {
-  font-size: 27px;
+.c-title-lp {
+  font-size: 48px;
   text-decoration: underline wavy;
   text-decoration-color: #febcad;
-  margin: 0 auto 30px;
+  text-underline-offset: 8px;
+  margin: 0 auto 50px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  .c-title-25feb-lp {
-    font-size: 25px;
+  .c-title-lp {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-title-lp {
+    text-underline-offset: 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-title-lp {
+    margin-bottom: 35px;
   }
 }
 
@@ -4434,7 +4446,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4759,7 +4771,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-text-date {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4900,7 +4912,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-main-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5079,7 +5091,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-eventinfo .lp-firstweek-free-eventinfo-head .lp-firstweek-free-eventinfo-head-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5229,7 +5241,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-firstweek-free-events-main-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -5268,11 +5280,11 @@ header .header-right a {
 }
 
 .lp-firstweek-free-events-main-list-item {
-  width: 48.917%;
-  margin: 2.166% 2.166% 0 0;
-  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 48%;
+  margin: 4% 4% 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 24px 0px;
   border-radius: 40px;
-  padding: 23px 23px 28px;
+  padding: 33px 33px 38px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events-main-list-item {
@@ -5452,7 +5464,7 @@ header .header-right a {
 
 .lp-firstweek-free-events-main-list-item-title01 {
   font-size: 22px;
-  margin-top: 7px;
+  margin-top: 8px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -5498,7 +5510,7 @@ header .header-right a {
 
 .lp-firstweek-free-events-main-list-item-text {
   font-size: 14px;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events-main-list-item-text {
@@ -5521,70 +5533,88 @@ header .header-right a {
 }
 
 section.lp-waomirai-recommend {
-  background: #fff8e0;
-  padding: 75px 0;
-  margin: 75px 0 0;
+  margin-top: 140px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend {
+    margin-top: 82px;
+  }
 }
 section.lp-waomirai-recommend .lp-waomirai-recommend {
-  max-width: 1000px;
+  max-width: 1050px;
   width: 100%;
   margin: 0 auto;
   display: flex;
 }
-@media screen and (min-width: 768px) {
-  section.lp-waomirai-recommend .lp-waomirai-recommend div {
-    flex: 1;
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-recommend {
+    flex-direction: column-reverse;
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-left {
   display: flex;
-  justify-content: center;
   align-items: center;
   background: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-left {
+    width: 215px;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+}
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-left img {
-  width: 50%;
+  width: 67.567%;
+}
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-left img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right {
+  width: 57.143%;
+  flex-shrink: 0;
   position: relative;
-  background: #f0f2f3;
+  background: #f0edec;
   padding: 45px 30px;
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 17px;
+  border-radius: 100px;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right {
-    background: transparent;
-    margin: 0 20px;
-    padding: 0px 0px 30px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 20px 0;
     border-radius: 24px;
-    gap: 30px;
+    gap: 12px;
   }
 }
-section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right::before {
+section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -40px;
-  bottom: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent #f0f2f3 transparent transparent;
-  border-width: 82px 52px 82px 0px;
+  top: calc(50% - 60px);
+  left: -59px;
+  width: 60px;
+  height: 120px;
+  background: #f0edec;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
-  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right::before {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child {
-    display: flex;
-    gap: 20px;
+  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right::before {
+    top: 100%;
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 45px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child:last-child {
@@ -5602,33 +5632,43 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-righ
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-icon img {
-  height: 75px;
+  height: 110px;
   margin: 0 auto;
+}
+section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-icon.mom img {
+  height: 140px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-icon {
-    width: 88px;
-    margin: 0;
+    width: 50px;
+    margin: 0 auto;
+  }
+  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-icon img, section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-icon.mom img {
+    height: auto;
+  }
+  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-icon.mom {
+    width: 120px;
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 22px;
+  font-size: 27px;
+  margin-top: 10px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text {
-    font-size: 21px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text {
     font-size: 17px;
-    background: #ffffff;
-    padding: 16px;
-    border-radius: 12px;
+    gap: 6px;
+    margin-top: 1px;
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
@@ -5636,20 +5676,15 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-righ
     font-size: 16px;
   }
 }
-@media screen and (max-width: 768px) {
-  section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text .lp-waomirai-recommend-right-child-text::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: -15px;
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent #ffffff transparent transparent;
-    border-width: 15px 15px 15px 0px;
-    z-index: 1;
-  }
+section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text-item {
+  position: relative;
+  padding-left: 1em;
+}
+section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right .lp-waomirai-recommend-right-child .lp-waomirai-recommend-right-child-text-item::before {
+  content: "○";
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 section.lp-waomirai-recommend .lp-waomirai-point {
   max-width: 450px;
@@ -5730,7 +5765,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5740,7 +5775,7 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-waomirai-howto .lp-waomirai-howto-title .large {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 .lp-waomirai-howto .lp-waomirai-howto-img {

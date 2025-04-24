@@ -22,6 +22,7 @@
   text-decoration: none;
   bottom: 20px;
   font-size: 16px;
+  z-index: 10000;
   color: $cl-white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -55,12 +56,14 @@
 }
 
 //共通タイトル
-.c-title-25feb-lp {
-  @include font-size-xl;
+.c-title-lp {
+  @include font-size-xxxl;
   @include title-underline; //下の波線
-  margin: 0 auto 30px;
+  margin: 0 auto 50px;
   text-align: center;
-  //   text-decoration-style: wavy;
+  @include responsive-style(768px) {
+    margin-bottom: 35px;
+  }
 }
 
 //ヘッダー
@@ -668,11 +671,11 @@ header {
   }
 }
 .lp-firstweek-free-events-main-list-item{
-  width: 48.917%;
-  margin: 2.166% 2.166% 0 0;
-  box-shadow: 0px 0px 24px 0px #00000040;
+  width: 48%;
+  margin: 4% 4% 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 24px 0px;
   border-radius: 40px;
-  padding: 23px 23px 28px;
+  padding: 33px 33px 38px;
   @include responsive-style(768px) {
     width: 100%;
     box-shadow: none;
@@ -807,7 +810,7 @@ header {
 }
 .lp-firstweek-free-events-main-list-item-title01{
   @include font-size-l;
-  margin-top: 7px;
+  margin-top: 8px;
   position: relative;
   &::before{
     content: "■";
@@ -837,7 +840,7 @@ header {
 }
 .lp-firstweek-free-events-main-list-item-text{
   @include font-size-xs;
-  margin-top: 7px;
+  margin-top: 8px;
   @include responsive-style(768px) {
     margin-top: 12px;
   }
@@ -851,65 +854,76 @@ header {
 
 //こんなあなたにオススメです！
 section.lp-waomirai-recommend {
-  background: $cl-bg-eventlp;
-  padding: 75px 0;
-  margin: 75px 0 0;
+  margin-top: 140px;
+  @include responsive-style(768px) {
+    margin-top: 82px;
+  }
   .lp-waomirai-recommend {
-    max-width: 1000px;
+    max-width: 1050px;
     width: 100%;
     margin: 0 auto;
     display: flex;
-    // background: white;
-    div {
-      @include min-responsive-style(768px) {
-        flex: 1;
-      }
+    @include responsive-style(768px) {
+      flex-direction: column-reverse;
     }
     .lp-waomirai-recommend-left {
       display: flex;
-      justify-content: center;
       align-items: center;
       background: $cl-white;
+      @include responsive-style(768px) {
+        width: 215px;
+        height: 160px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+      }
       img {
-        width: 50%;
+        width: 67.567%;
+        @include responsive-style(768px) {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
     }
     .lp-waomirai-recommend-right {
+      width: 57.143%;
+      flex-shrink: 0;
       position: relative;
-      background: $cl-graylightest;
+      background: $cl-bg-recommend;
       padding: 45px 30px;
       display: flex;
       flex-direction: column;
-      gap: 45px;
+      gap: 17px;
+      border-radius: 100px;
+      position: relative;
       @include responsive-style(768px) {
-        background: transparent;
-        margin: 0 20px;
-        padding: 0px 0px 30px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 20px 0;
         border-radius: $border-radius-bigplus;
-        gap: 30px;
+        gap: 12px;
       }
-      .lp-waomirai-recommend-right::before {
+      &::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: -40px;
-        bottom: 0;
-        margin: auto;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: transparent $cl-graylightest transparent transparent;
-        border-width: 82px 52px 82px 0px;
+        top: calc(50% - 60px);
+        left: -59px;
+        width: 60px;
+        height: 120px;
+        background: $cl-bg-recommend;
+        clip-path: polygon(100% 0, 100% 100%, 0 50%);
         z-index: 1;
         @include responsive-style(768px) {
-          display: none;
+          top: 100%;
+          left: calc(50% - 45px);
+          width: 90px;
+          height: 45px;
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
         }
       }
       .lp-waomirai-recommend-right-child {
-        @include responsive-style(768px) {
-          display: flex;
-          gap: 20px;
-        }
         .lp-waomirai-recommend-right-child:last-child {
           flex-direction: row-reverse;
           .lp-waomirai-recommend-right-child-text:before {
@@ -926,40 +940,46 @@ section.lp-waomirai-recommend {
         }
         .lp-waomirai-recommend-right-child-icon {
           img {
-            height: 75px;
+            height: 110px;
             margin: 0 auto;
           }
+          &.mom img{
+            height: 140px;
+          }
           @include responsive-style(768px) {
-            width: 88px;
-            margin: 0;
+            width: 50px;
+            margin: 0 auto;
+            img,
+            &.mom img{
+              height: auto;
+            }
+            &.mom{
+              width: 120px;
+            }
           }
         }
         .lp-waomirai-recommend-right-child-text {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          @include font-size-l;
+          @include font-size-xl;
+          margin-top: 10px;
           position: relative;
           @include responsive-style(768px) {
             @include font-size-m;
-            background: $cl-white;
-            padding: 16px;
-            border-radius: $border-radius-big;
+            gap: 6px;
+            margin-top: 1px;
+            padding: 0 20px;
           }
-          .lp-waomirai-recommend-right-child-text::before {
-            @include responsive-style(768px) {
-              content: "";
-              position: absolute;
-              top: 30px;
-              left: -15px;
-              margin: auto;
-              width: 0;
-              height: 0;
-              border-style: solid;
-              border-color: transparent $cl-white transparent transparent;
-              border-width: 15px 15px 15px 0px;
-              z-index: 1;
-            }
+        }
+        .lp-waomirai-recommend-right-child-text-item{
+          position: relative;
+          padding-left: 1em;
+          &::before{
+            content: "○";
+            position: absolute;
+            top: 0;
+            left: 0;
           }
         }
       }

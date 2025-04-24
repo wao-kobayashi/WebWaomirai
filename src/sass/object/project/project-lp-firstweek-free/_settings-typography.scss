@@ -59,7 +59,7 @@
 @mixin font-size-xxxl {
   font-size: 48px;
   @include responsive-style(768px) {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @mixin font-size-xxxxl {
@@ -89,6 +89,10 @@
 @mixin title-underline {
   text-decoration: underline wavy;
   text-decoration-color: $cl-title-underline;
+  text-underline-offset: 8px;
+  @include responsive-style(768px) {
+    text-underline-offset: 6px;
+  }
 }
 
 /* line-height */
