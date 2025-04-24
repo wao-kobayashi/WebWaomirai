@@ -149,7 +149,7 @@ section.lp-firstweek-free-eventinfo
             |経済（お金）
       .lp-firstweek-free-eventinfo-bottom
         |クリックすると各科目の先頭にジャンプします♪
-//メインの講座
+//講座内容のメイン部分
 section.lp-firstweek-free-events
       .lp-firstweek-free-events-spnavi.spimage
         a.lp-firstweek-free-events-spnavi-child.philosophy(href='#philosophy')
@@ -161,6 +161,29 @@ section.lp-firstweek-free-events
       .lp-firstweek-free-events-main#philosophy
         h3.lp-firstweek-free-events-main-title
           |哲学（思考力）
+        ul.lp-firstweek-free-events-main-list
+          each cource, i in coursePhilosophy
+            li.lp-firstweek-free-events-main-list-item
+              .lp-firstweek-free-events-main-list-item-head
+                p.lp-firstweek-free-events-main-list-item-head-subject.philosophy
+                  |哲学
+                p.lp-firstweek-free-events-main-list-item-head-level
+                  = cource.level
+                p.lp-firstweek-free-events-main-list-item-head-recommend
+                  = cource.recommend
+              ul.lp-firstweek-free-events-main-list-item-timelist
+                li.lp-firstweek-free-events-main-list-item-timelist-item 
+                  = cource.time01
+                li.lp-firstweek-free-events-main-list-item-timelist-item 
+                  = cource.time02
+              .lp-firstweek-free-events-main-list-item-image.philosophy
+                img(src=cource.img)
+              h4.lp-firstweek-free-events-main-list-item-title01.philosophy
+                = cource.title01
+              p.lp-firstweek-free-events-main-list-item-title02
+                = cource.title02
+              p.lp-firstweek-free-events-main-list-item-text
+              = cource.text
         .lp-firstweek-free-events-main-cta
           .c-btn-cta-main
             +lineEntryButton('LINEで簡単申込 >')

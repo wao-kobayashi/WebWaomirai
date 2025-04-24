@@ -16,6 +16,13 @@
   }
 }
 
+@mixin font-size-xs {
+  font-size: 14px;
+  @include responsive-style(768px) {
+    font-size: 13px;
+  }
+}
+
 @mixin font-size-m {
   font-size: 17px;
   @include responsive-style(768px) {

@@ -495,14 +495,26 @@ header {
 
 //講座内容（メニュー部分）
 .lp-firstweek-free-eventinfo {
-  padding: 0 0 30px;
+  padding: 0 0 32px;
   max-width: $width-xl;
   margin: 110px auto 0;
-  border-bottom: 2px solid $cl-black;
+  position: relative;
   @include responsive-style(768px) {
-    border-bottom: none;
     padding: 0;
     margin: 75px auto 0;
+  }
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: $cl-black;
+    @include responsive-style(768px) {
+      display: none;
+    }
   }
   .lp-firstweek-free-eventinfo-head {
     .lp-firstweek-free-eventinfo-head-title {
@@ -631,10 +643,13 @@ header {
   }
 }
 .lp-firstweek-free-events-main{
-  margin-top: 105px;
+  margin: 105px auto 0;
+  max-width: $width-xl;
+  padding: 0 20px;
   @include responsive-style(768px) {
     margin-top: 11px;
     padding-top: 51px;
+    padding: 0;
   }
 }
 .lp-firstweek-free-events-spnavi + .lp-firstweek-free-events-main{
@@ -642,6 +657,195 @@ header {
   @include responsive-style(768px) {
     margin-top: 0;
     padding-top: 51px;
+  }
+}
+.lp-firstweek-free-events-main-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px !important;
+  @include responsive-style(768px) {
+    margin-top: 30px !important;
+  }
+}
+.lp-firstweek-free-events-main-list-item{
+  width: 48.917%;
+  margin: 2.166% 2.166% 0 0;
+  box-shadow: 0px 0px 24px 0px #00000040;
+  border-radius: 40px;
+  padding: 23px 23px 28px;
+  @include responsive-style(768px) {
+    width: 100%;
+    box-shadow: none;
+    padding: 0 20px;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+.lp-firstweek-free-events-main-list-item:nth-child(-n+2){
+  margin-top: 0;
+}
+.lp-firstweek-free-events-main-list-item:nth-child(2n){
+  margin-right: 0;
+}
+@include responsive-style(768px) {
+  .lp-firstweek-free-events-main-list-item:nth-child(n+2){
+    padding-top: 45px;
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      width: calc(100% - 40px);
+      position: absolute;
+      top: 22.5px;
+      left: 20px;
+    }
+  }
+}
+.lp-firstweek-free-events-main-list-item-head{
+  display: flex;
+  align-items: center;
+}
+.lp-firstweek-free-events-main-list-item-head-subject{
+  width: 60px;
+  height: 27px;
+  border-radius: 14px;
+  @include font-size-m;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.philosophy{
+    background: $cl-philosophy;
+  }
+  &.science{
+    background: $cl-science;
+  }
+  &.economy{
+    background: $cl-economy;
+  }
+  @include responsive-style(768px) {
+    width: 55px;
+    height: 25px;
+  }
+}
+.lp-firstweek-free-events-main-list-item-head-level{
+  @include font-size-l;
+  margin-left: 13px;
+  letter-spacing: 1px;
+  @include responsive-style(768px) {
+    margin-left: 8px;
+    letter-spacing: 0;
+  }
+}
+.lp-firstweek-free-events-main-list-item-head-recommend{
+  @include font-size-m;
+  margin-left: 14px;
+  letter-spacing: 1px;
+  @include responsive-style(768px) {
+    margin-left: 8px;
+    letter-spacing: 0;
+  }
+}
+.lp-firstweek-free-events-main-list-item-timelist{
+  display: flex;
+  margin-top: 7px !important;
+  @include responsive-style(768px) {
+    margin-top: 3px !important;
+  }
+}
+.lp-firstweek-free-events-main-list-item-timelist-item{
+  background: $cl-events-time-glay;
+  border-radius: 8px;
+  @include font-size-m;
+  display: inline-block;
+  padding: 2px 10px;
+  &:nth-child(n+2){
+    margin-left: 10px;
+  }
+  @include responsive-style(768px) {
+    font-size: 13px;
+    padding: 2px 7px;
+  }
+}
+.lp-firstweek-free-events-main-list-item-image{
+  margin-top: 18px;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  @include responsive-style(768px) {
+    border-radius: 40px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 130%;
+    height: 100%;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    transition: transform 0.45s ease-in-out;
+    z-index: 1;
+  }
+  &.philosophy:before {
+    background: $cl-philosophy;
+  }
+  &.science::before {
+    background: $cl-science;
+  }
+  &.economy::before {
+    background: $cl-economy;
+  }
+  &.inview:before {
+    transform: translateX(100%);
+  }
+}
+.lp-firstweek-free-events-main-list-item-title01,
+.lp-firstweek-free-events-main-list-item-title02{
+  padding-left: 32px;
+}
+.lp-firstweek-free-events-main-list-item-title01{
+  @include font-size-l;
+  margin-top: 7px;
+  position: relative;
+  &::before{
+    content: "■";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &.philosophy::before{
+    color: $cl-philosophy;
+  }
+  &.science::before{
+    color: $cl-science;
+  }
+  &.economy::before{
+    color: $cl-economy;
+  }
+  @include responsive-style(768px) {
+    margin-top: 12px;
+  }
+}
+.lp-firstweek-free-events-main-list-item-title02{
+  @include font-size-xm;
+  @include responsive-style(768px) {
+    padding-left: 0;
+    margin-left: -9px;
+  }
+}
+.lp-firstweek-free-events-main-list-item-text{
+  @include font-size-xs;
+  margin-top: 7px;
+  @include responsive-style(768px) {
+    margin-top: 12px;
+  }
+}
+.lp-firstweek-free-events-main-cta{
+  margin-top: 113px;
+  @include responsive-style(768px) {
+    margin-top: 50px;
   }
 }
 
