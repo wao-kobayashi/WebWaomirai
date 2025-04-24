@@ -223,94 +223,101 @@ section.lp-waomirai-recommend
           br.pcimage
           |ちょっと世の中の見え方が変わってくる！
 
+//授業の特徴
+section.lp-waomirai-feature
+    h2.c-title-lp 
+      |授業の特長
+    ul.lp-waomirai-feature-list
+      li.lp-waomirai-feature-list-child 
+        i.fa-solid.fa-globe
+        |オンライン授業で
+        br.spimage
+        |全国どこからでも
+        br.spimage
+        |参加OK
+      li.lp-waomirai-feature-list-child 
+        i.fa-regular.fa-comments
+        |ライブだから
+        br.spimage
+        |チャットで授業に
+        br.spimage
+        |参加できる!
+      li.lp-waomirai-feature-list-child 
+        .lp-waomirai-feature-list-child-icons 
+          i.fa-solid.fa-laptop
+        |必要なのはPCか
+        br.spimage
+        |タブレット端末だけ！
+    .c-btn-cta-main
+        +lineEntryButton('LINEで簡単申込 >')
+  
 //5stepで参加可能
-section.lp-waomirai-howto#lp-waomirai-howto.c-bg-section-white
-    .lp-waomirai-howto-title 
-       |カンタン
-       span.large|5
-       |STEP
-       br.spimage
-       |で参加可能
-    .lp-waomirai-howto-img 
-           img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
+section.lp-waomirai-howto#lp-waomirai-howto
+    .lp-waomirai-howto-main
+      h2.lp-waomirai-howto-main-title 
+        |カンタン
+        span.large|5
+        |STEP
+        br.spimage
+        |で参加可能！
+      .lp-waomirai-howto-main-img 
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
 
-    -
-        var steps = [{
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
-          number: '1.',
-          title: 'LINEで公式アカウントを友だち追加',
-          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a href="${UrlLineEventMarch}" target="_blank">こちら</a>から</span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>`
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
-          number: '2.',
-          title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
-          number: '3.',
-          title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
-          number: '4.',
-          title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
-        },
-        {
-          iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
-          number: '5.',
-          title: '開催時間になったら届いたイベントURLから参加しましょう！'
-        }]
-    each step in steps
-      .lp-waomirai-howto-step 
-        .lp-waomirai-howto-step-child 
-          .lp-waomirai-howto-step-child-icon 
-            img(src=step.iconimg)
-          .lp-waomirai-howto-step-child-number 
-            |#{step.number}
-          .lp-waomirai-howto-step-child-text
-            .lp-waomirai-howto-step-child-text-title
-              != step.title
-            .lp-waomirai-howto-step-child-text-detail
-              != step.text        
+      -
+          var steps = [{
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
+            number: '1.',
+            title: 'LINEで公式アカウントを友だち追加',
+            text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a href="${UrlLineEventMarch}" target="_blank">こちら</a>から</span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>・LINEが利用できない場合は<a href="${UrlFormEventMarch}" target="_blank">こちら</a>から`
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
+            number: '2.',
+            title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
+            number: '3.',
+            title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
+            number: '4.',
+            title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
+            number: '5.',
+            title: '開催時間になったら届いたイベントURLから参加しましょう！'
+          }]
+      each step in steps
+        .lp-waomirai-howto-main-step 
+          .lp-waomirai-howto-main-step-child 
+            .lp-waomirai-howto-main-step-child-icon 
+              img(src=step.iconimg)
+            .lp-waomirai-howto-main-step-child-text
+              p.lp-waomirai-howto-main-step-child-text-title
+                span.lp-waomirai-howto-main-step-child-text-title-number
+                  |#{step.number}
+                != step.title
+              p.lp-waomirai-howto-main-step-child-text-detail
+                != step.text        
+    .c-btn-cta-main
+      +lineEntryButton('LINEで簡単申込 >')
 
-//以下クリームイエロー背景のセクション
-section.bg-lp-creamyellow
-  //ワオ未来塾って？
-  .lp-waomirai-about
-        .c-title-lp 
-          |ワオ未来塾って？
-        .lp-waomirai-about-box 
-            .lp-waomirai-about-box-left 
-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
-            .lp-waomirai-about-box-right
-              |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
-  //授業の特徴
-  .lp-waomirai-feature
-      .c-title-lp 
-        |授業の特長
-      div
-        .lp-waomirai-feature-child 
-          i.fa-solid.fa-globe
-          |オンライン授業で
-          br.spimage
-          |全国どこからでも
-          br.spimage
-          |参加OK
-        .lp-waomirai-feature-child 
-          i.fa-regular.fa-comments
-          |ライブだからチャットで授業に参加できる!
-        .lp-waomirai-feature-child 
-          .lp-waomirai-feature-child-icons 
-            i.fa-solid.fa-laptop
-          |必要なのはPCか
-          br.spimage
-          |タブレット端末だけ！
-      .c-btn-cta-main
-          +lineEntryButton('LINEで簡単申込 >')
+
+//ワオ未来塾って？
+.lp-waomirai-about
+    .c-title-lp 
+      |ワオ未来塾って？
+    .lp-waomirai-about-box 
+        .lp-waomirai-about-box-left 
+          img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+        .lp-waomirai-about-box-right
+          |全国で「能開センター」「個別指導Axis」の展開や、アニメ制作、知育アプリ「ワオっち」の配信を手がけるワオ・コーポレーションが提供する、新しい学びです。21世紀に入り、世界の変化はどんどん加速しています。この後10数年内には、AIによって今ある仕事の50％が取って変わられるとも予想されています。このような全く新しい未来を生きる子どもたちには、今こそ「新しい学び・学び方が必要だ」と考えました。そして、これまでにない新しい学びのカタチを提供する『ワオ未来塾』を2025年4月に開校します。
                 
-  //2025年4月開講
-  .lp-waomirai-start2025
+//2025年4月開講
+.lp-waomirai-start2025
         .lp-waomirai-start2025-catch 
           |社会で役立つ学びを、
           br.spimage
@@ -366,21 +373,21 @@ section.bg-lp-creamyellow
             .lp-waomirai-start2025-btn-icn
               img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
 
-  footer 
-      ul 
-        li 
-          a(href="https://www.wao-corp.com/", target='_blank')
-            |会社概要
-        li 
-          a(href="https://www.wao-corp.com/kojin/", target='_blank')
-          |プライバシーポリシー
-        li
-          a(href="https://go.waomirai.com/shotororihiki", target='_blank')
-            |特定商取引に基づく表記
-      .footer-logo 
-        img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
-      .footer-copyright
-        |© ワオ・コーポレーション All rights reserved.
+footer 
+    ul 
+      li 
+        a(href="https://www.wao-corp.com/", target='_blank')
+          |会社概要
+      li 
+        a(href="https://www.wao-corp.com/kojin/", target='_blank')
+        |プライバシーポリシー
+      li
+        a(href="https://go.waomirai.com/shotororihiki", target='_blank')
+          |特定商取引に基づく表記
+    .footer-logo 
+      img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
+    .footer-copyright
+      |© ワオ・コーポレーション All rights reserved.
 
 // PCでの申込みのモーダル
 +ModalEntlyLine
