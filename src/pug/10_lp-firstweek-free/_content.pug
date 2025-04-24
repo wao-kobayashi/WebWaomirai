@@ -162,34 +162,15 @@ section.lp-firstweek-free-events
         h3.lp-firstweek-free-events-main-title
           |哲学（思考力）
         ul.lp-firstweek-free-events-main-list
-          each cource, i in coursePhilosophy
-            li.lp-firstweek-free-events-main-list-item
-              .lp-firstweek-free-events-main-list-item-head
-                p.lp-firstweek-free-events-main-list-item-head-subject.philosophy
-                  |哲学
-                p.lp-firstweek-free-events-main-list-item-head-level
-                  = cource.level
-                p.lp-firstweek-free-events-main-list-item-head-recommend
-                  = cource.recommend
-              ul.lp-firstweek-free-events-main-list-item-timelist
-                li.lp-firstweek-free-events-main-list-item-timelist-item 
-                  = cource.time01
-                li.lp-firstweek-free-events-main-list-item-timelist-item 
-                  = cource.time02
-              .lp-firstweek-free-events-main-list-item-image.philosophy
-                img(src=cource.img)
-              h4.lp-firstweek-free-events-main-list-item-title01.philosophy
-                = cource.title01
-              p.lp-firstweek-free-events-main-list-item-title02
-                = cource.title02
-              p.lp-firstweek-free-events-main-list-item-text
-              = cource.text
+          +courseList('philosophy', '哲学')
         .lp-firstweek-free-events-main-cta
           .c-btn-cta-main
             +lineEntryButton('LINEで簡単申込 >')
       .lp-firstweek-free-events-main#science
         h3.lp-firstweek-free-events-main-title
           |科学リテラシー
+        ul.lp-firstweek-free-events-main-list
+          +courseList('science', '科学')
         .lp-firstweek-free-events-main-cta
           .c-btn-cta-main
             +lineEntryButton('LINEで簡単申込 >')

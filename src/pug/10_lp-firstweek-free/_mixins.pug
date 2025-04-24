@@ -74,3 +74,26 @@ mixin ModalEntlyLine
             |閉じる
   .bg-modal(style='display:none;')
 
+mixin courseList(subjectKey, subjectLabel)
+  each course in courses[subjectKey]
+    li.lp-firstweek-free-events-main-list-item
+      .lp-firstweek-free-events-main-list-item-head
+        p.lp-firstweek-free-events-main-list-item-head-subject(class=subjectKey)
+          | #{subjectLabel}
+        p.lp-firstweek-free-events-main-list-item-head-level
+          = course.level
+        p.lp-firstweek-free-events-main-list-item-head-recommend
+          = course.recommend
+      ul.lp-firstweek-free-events-main-list-item-timelist
+        li.lp-firstweek-free-events-main-list-item-timelist-item 
+          = course.time01
+        li.lp-firstweek-free-events-main-list-item-timelist-item 
+          = course.time02
+      .lp-firstweek-free-events-main-list-item-image(class=subjectKey)
+        img(src=course.img)
+      h4.lp-firstweek-free-events-main-list-item-title01(class=subjectKey)
+        = course.title01
+      p.lp-firstweek-free-events-main-list-item-title02
+        = course.title02
+      p.lp-firstweek-free-events-main-list-item-text
+        = course.text
