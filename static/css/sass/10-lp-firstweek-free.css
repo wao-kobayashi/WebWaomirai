@@ -4357,6 +4357,7 @@ select {
   text-decoration-color: #febcad;
   text-underline-offset: 8px;
   margin: 0 auto 50px;
+  font-weight: normal;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -5561,7 +5562,7 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-left
     width: 215px;
     height: 160px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 10px auto 0;
     position: relative;
   }
 }
@@ -5687,11 +5688,11 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-righ
   left: 0;
 }
 section.lp-waomirai-recommend .lp-waomirai-point {
-  max-width: 450px;
   margin: 45px auto 0;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 50px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-point {
@@ -5703,31 +5704,56 @@ section.lp-waomirai-recommend .lp-waomirai-point {
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
-  width: 75px;
-  height: 75px;
+  width: 88px;
+  height: 88px;
   border-radius: 10000px;
   background: #4d4d4d;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 22px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
-    width: 120px;
-    height: 30px;
-    border-radius: 24px 0 24px 0;
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
+    width: 80px;
+    height: 80px;
+    font-size: 17px;
+    margin: 37px auto 0;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
+    font-size: 16px;
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
-  flex: 1;
+  font-size: 22px;
+  letter-spacing: 2px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
+    font-size: 17px;
     width: 100%;
-    padding: 20px 20px 30px;
+    letter-spacing: 0;
+    padding: 20px 0 0;
     text-align: left;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
+    font-size: 16px;
   }
 }
 

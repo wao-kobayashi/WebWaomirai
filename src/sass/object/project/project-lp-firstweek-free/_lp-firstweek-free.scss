@@ -60,6 +60,7 @@
   @include font-size-xxxl;
   @include title-underline; //下の波線
   margin: 0 auto 50px;
+  font-weight: normal;
   text-align: center;
   @include responsive-style(768px) {
     margin-bottom: 35px;
@@ -874,7 +875,7 @@ section.lp-waomirai-recommend {
         width: 215px;
         height: 160px;
         overflow: hidden;
-        margin: 0 auto;
+        margin: 10px auto 0;
         position: relative;
       }
       img {
@@ -987,11 +988,11 @@ section.lp-waomirai-recommend {
   }
   //POINT!
   .lp-waomirai-point {
-    max-width: 450px;
     margin: 45px auto 0;
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 50px;
     @include responsive-style(768px) {
       background: $cl-white;
       margin: 0px 20px 0;
@@ -1000,26 +1001,31 @@ section.lp-waomirai-recommend {
       display: block;
     }
     .lp-waomirai-point-left {
-      @include responsive-style(768px) {
-        width: 120px;
-        height: 30px;
-        border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
-      }
-      width: 75px;
-      height: 75px;
+      width: 88px;
+      height: 88px;
       border-radius: $border-radius-full;
       background: $cl-gray;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
+      @include font-size-l;
+      @include responsive-style(768px) {
+        width: 80px;
+        height: 80px;
+        @include font-size-m;
+        margin: 37px auto 0;
+      }
     }
     .lp-waomirai-point-right {
-      flex: 1;
+      @include font-size-l;
+      letter-spacing: 2px;
       text-align: center;
       @include responsive-style(768px) {
+        @include font-size-m;
         width: 100%;
-        padding: 20px 20px 30px;
+        letter-spacing: 0;
+        padding: 20px 0 0;
         text-align: left;
       }
     }
