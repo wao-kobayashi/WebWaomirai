@@ -1048,6 +1048,11 @@ section.lp-waomirai-feature {
 }
 .lp-waomirai-feature-list{
   padding-left: 0;
+  max-width: calc(100% - 40px);
+  margin: 0 auto !important;
+  @include responsive-style(768px) {
+    max-width: none;
+  }
 }
 .lp-waomirai-feature-list-child {
   @include font-size-xxl;
@@ -1228,30 +1233,50 @@ section.lp-waomirai-feature {
 //ワオ未来塾詳細
 .lp-waomirai-details {
   max-width: $width-xl;
-  margin: 0 auto;
-
+  margin: 160px auto 120px;
+  @include responsive-style(768px) {
+    margin-top: 100px;
+  }
   .lp-waomirai-details-catch {
-    @include font-size-l;
-    margin: 0 auto;
+    @include font-size-xxl;
+    margin: 0 auto 40px;
     text-align: center;
+    @include responsive-style(768px) {
+      @include font-size-xxl;
+      margin-bottom: 30px;
+    }
   }
   .lp-waomirai-details-logo {
-    max-width: $width-md;
-    margin: 0 auto 30px;
+    width: 867px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 44px;
+    @include responsive-style(768px) {
+      margin-bottom: 30px;
+    }
   }
   .lp-waomirai-details-target {
-    @include font-size-l;
-    margin: 0 auto 30px;
+    @include font-size-xl;
+    margin: 0 auto 50px;
     text-align: center;
+    @include responsive-style(768px) {
+      @include font-size-xxl;
+      margin-bottom: 30px;
+    }
   }
   .lp-waomirai-details-subjects {
-    max-width: $width-md;
-    margin: 0 auto 45px;
+    width: 1135px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 60px;
+    @include responsive-style(768px) {
+      margin-bottom: 45px;
+    }
   }
   .lp-waomirai-details-feature {
     display: flex;
-    gap: 45px;
-    margin: 0px 0 60px;
+    width: 1100px;
+    max-width: calc(100% - 40px);
+    gap: 35px;
+    margin: 0 auto 60px;
     @include responsive-style(768px) {
       flex-direction: column;
       gap: 30px;
@@ -1259,7 +1284,7 @@ section.lp-waomirai-feature {
     .lp-waomirai-details-feature-box {
       background: white;
       border-radius: $border-radius-bigplus;
-      padding: 30px 20px 20px;
+      padding: 38px 20px;
       @include font-size-m;
       flex: 1;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -1270,16 +1295,22 @@ section.lp-waomirai-feature {
         display: flex;
         justify-content: center;
         gap: 15px;
-        margin: 0 auto 20px;
+        margin: 0 auto 30px;
         @include responsive-style(768px) {
           @include font-size-l;
+          margin-bottom: 20px;
         }
         img {
           width: 30px;
         }
       }
+      .lp-waomirai-details-feature-box-title-text{
+        font-weight: normal;
+        @include font-size-l;
+      }
       .lp-waomirai-details-feature-box-text {
         @include font-size-m;
+        line-height: $lineheight-relaxed;
       }
     }
   }
@@ -1302,7 +1333,7 @@ section.lp-waomirai-feature {
       line-height: $lineheight-normal;
       gap: 12px;
       @include responsive-style(768px) {
-        width: 100%;
+        width: calc(100% - 40px);
       }
       @include box-shadow-lp;
 
