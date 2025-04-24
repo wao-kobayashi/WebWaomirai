@@ -400,7 +400,7 @@ header {
 }
 .lp-firstweek-free-intro-contents-main-text{
   @include font-size-xm;
-  line-height: 1.75;
+  line-height: $lineheight-relaxed;
   margin-top: 30px;
   @include responsive-style(768px) {
     margin-top: 23px;
@@ -1193,69 +1193,62 @@ section.lp-waomirai-feature {
 
 //ワオ未来塾って？
 .lp-waomirai-about {
-  max-width: $width-xl;
-  margin: 0 auto;
-  .lp-waomirai-about-box {
-    max-width: $width-xl;
-    margin: 0 auto 0px;
-    padding: 48px 36px;
-    border-radius: $border-radius-extrabig;
-    display: flex;
-    gap: 45px;
-    @include responsive-style(768px) {
-      flex-direction: column;
-
-      gap: 30px;
-      padding: 40px 20px 40px;
-      border-radius: $border-radius-bigplus;
-    }
-    .lp-waomirai-about-box-left {
-      width: 250px;
-      @include responsive-style(768px) {
-        width: 70%;
-        margin: 0 auto 0px;
-      }
-    }
-    .lp-waomirai-about-box-right {
-      flex: 1;
-      line-height: $lineheight-relaxed;
-      @include font-size-m;
-    }
+  max-width: $width-md;
+  padding: 0 20px;
+  margin: 120px auto 0;
+  @include responsive-style(768px) {
+    padding: 0;
+    margin-top: 60px;
   }
 }
+.lp-waomirai-about-box {
+  border-radius: $border-radius-extrabig;
+  display: flex;
+  gap: 120px;
+  @include responsive-style(768px) {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    border-radius: $border-radius-bigplus;
+  }
+}
+.lp-waomirai-about-box-left {
+  width: 306px;
+  @include responsive-style(768px) {
+    width: 70%;
+    margin: 0 auto 0px;
+  }
+}
+.lp-waomirai-about-box-right {
+  flex: 1;
+  line-height: $lineheight-relaxed;
+  @include font-size-m;
+}
 
-//2025年4月開講
-.lp-waomirai-start2025 {
+//ワオ未来塾詳細
+.lp-waomirai-details {
   max-width: $width-xl;
   margin: 0 auto;
 
-  .lp-waomirai-start2025-catch {
+  .lp-waomirai-details-catch {
     @include font-size-l;
     margin: 0 auto;
     text-align: center;
   }
-  .lp-waomirai-start2025-subtitle {
-    background: $cl-main-orange;
-    @include font-size-xl;
-    max-width: 400px;
-    margin: 30px auto;
-    text-align: center;
-    border-radius: $border-radius-full;
-  }
-  .lp-waomirai-start2025-logo {
+  .lp-waomirai-details-logo {
     max-width: $width-md;
     margin: 0 auto 30px;
   }
-  .lp-waomirai-start2025-target {
+  .lp-waomirai-details-target {
     @include font-size-l;
     margin: 0 auto 30px;
     text-align: center;
   }
-  .lp-waomirai-start2025-subjects {
+  .lp-waomirai-details-subjects {
     max-width: $width-md;
     margin: 0 auto 45px;
   }
-  .lp-waomirai-start2025-feature {
+  .lp-waomirai-details-feature {
     display: flex;
     gap: 45px;
     margin: 0px 0 60px;
@@ -1263,7 +1256,7 @@ section.lp-waomirai-feature {
       flex-direction: column;
       gap: 30px;
     }
-    .lp-waomirai-start2025-feature-box {
+    .lp-waomirai-details-feature-box {
       background: white;
       border-radius: $border-radius-bigplus;
       padding: 30px 20px 20px;
@@ -1273,7 +1266,7 @@ section.lp-waomirai-feature {
       @include responsive-style(768px) {
         padding: 30px 20px 30px;
       }
-      .lp-waomirai-start2025-feature-box-title {
+      .lp-waomirai-details-feature-box-title {
         display: flex;
         justify-content: center;
         gap: 15px;
@@ -1285,12 +1278,12 @@ section.lp-waomirai-feature {
           width: 30px;
         }
       }
-      .lp-waomirai-start2025-feature-box-text {
+      .lp-waomirai-details-feature-box-text {
         @include font-size-m;
       }
     }
   }
-  .lp-waomirai-start2025-btn {
+  .lp-waomirai-details-btn {
     text-align: center;
     a {
       text-align: center;
@@ -1313,12 +1306,12 @@ section.lp-waomirai-feature {
       }
       @include box-shadow-lp;
 
-      .lp-waomirai-start2025-btn-text {
+      .lp-waomirai-details-btn-text {
         margin: 0px 0 0;
         @include font-size-l;
         letter-spacing: 1px;
       }
-      .lp-waomirai-start2025-btn-icn {
+      .lp-waomirai-details-btn-icn {
         width: 17px;
         height: 17px;
       }
