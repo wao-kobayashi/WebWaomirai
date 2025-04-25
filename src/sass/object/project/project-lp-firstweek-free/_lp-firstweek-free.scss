@@ -57,10 +57,10 @@
 
 //共通タイトル
 .c-title-lp {
-  @include font-size-xxxl;
+  @include font-size-xl;
   @include title-underline; //下の波線
   margin: 0 auto 50px;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   @include responsive-style(768px) {
     margin-bottom: 35px;
@@ -74,7 +74,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  max-width: calc($width-xl + 40px);
+  max-width: $width-lg;
   margin: 0 auto;
   justify-content: space-between;
   @include responsive-style(768px) {
@@ -116,10 +116,10 @@ header {
 .lp-firstweek-free-fv{
   padding: 0 20px;
   width: 100%;
-  max-width: $width-xl;
+  max-width: $width-lg;
   margin: 0 auto;
   @include responsive-style(768px) {
-    padding-bottom: 122px;
+    padding-bottom: 75px;
   }
 }
 .lp-firstweek-free-fv-title{
@@ -254,7 +254,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  @include font-size-xl;
+  @include font-size-l;
   background: $cl-merit-yellow;
   border-radius: 29px;
   margin: 20px auto 0;
@@ -267,7 +267,7 @@ header {
 }
 .lp-firstweek-free-fv-main-text-explain{
   text-align: center;
-  @include font-size-xl;
+  @include font-size-l;
   line-height: $lineheight-tight;
   margin-top: 13px;
   letter-spacing: 4px;
@@ -353,7 +353,7 @@ header {
 .lp-firstweek-free-intro-contents{
   padding: 0 20px;
   width: 100%;
-  max-width: $width-xl;
+  max-width: $width-lg;
   margin: 100px auto 0;
   position: relative;
   z-index: 10;
@@ -424,7 +424,7 @@ header {
 
 //特徴
 .lp-firstweek-free-feature {
-  max-width: $width-xl;
+  max-width: $width-lg;
   width: 100%;
   margin: 60px auto 0;
   padding: 0 20px;
@@ -433,17 +433,16 @@ header {
   }
   .lp-firstweek-free-feature-grid {
     display: flex;
-    justify-content: space-between;
+    gap: 45px;
     @include responsive-style(768px) {
       flex-direction: column;
     }
     .lp-firstweek-free-feature-grid-child {
-      width: calc((760 / 2 / 1200) * 100%);
+      flex: 1;
       @include responsive-style(768px) {
         width: 100%;
       }
       &:nth-child(n+2){
-        width: calc((761 / 2 / 1200) * 100%);
         @include responsive-style(768px) {
           width: 100%;
           margin-top: 30px;
@@ -486,7 +485,7 @@ header {
       .lp-firstweek-free-feature-grid-child-text {
         margin: 20px 0 0;
         text-align: left;
-        @include font-size-xm;
+        @include font-size-m;
         color: $cl-black;
         line-height: $lineheight-relaxed;
       }
@@ -503,7 +502,7 @@ header {
 //講座内容（メニュー部分）
 .lp-firstweek-free-eventinfo {
   padding: 0 0 32px;
-  max-width: $width-xl;
+  max-width: $width-lg;
   margin: 110px auto 0;
   position: relative;
   @include responsive-style(768px) {
@@ -651,7 +650,7 @@ header {
 }
 .lp-firstweek-free-events-main{
   margin: 105px auto 0;
-  max-width: $width-xl;
+  max-width: $width-lg;
   padding: 0 20px;
   @include responsive-style(768px) {
     margin-top: 11px;
@@ -676,8 +675,8 @@ header {
 .lp-firstweek-free-events-main-list-item{
   width: 48%;
   margin: 4% 4% 0px 0px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 24px 0px;
-  border-radius: 40px;
+  @include box-shadow-lp;
+  border-radius: 20px;
   padding: 33px 33px 38px;
   @include responsive-style(1080px) {
     width: 100%;
@@ -857,7 +856,7 @@ header {
   }
 }
 .lp-firstweek-free-events-main-cta{
-  margin-top: 113px;
+  margin-top: 100px;
   @include responsive-style(768px) {
     margin-top: 50px;
   }
@@ -910,7 +909,7 @@ section.lp-waomirai-recommend {
       border-radius: 100px;
       position: relative;
       @include responsive-style(768px) {
-        width: calc(100% - 40px);
+        width: 100%;
         margin: 0 auto;
         padding: 20px 0;
         border-radius: $border-radius-bigplus;
@@ -944,18 +943,15 @@ section.lp-waomirai-recommend {
           }
           .lp-waomirai-recommend-right-child-icon {
             @include responsive-style(768px) {
-              width: 102px;
+              width: 82px;
               margin: 0;
             }
           }
         }
         .lp-waomirai-recommend-right-child-icon {
           img {
-            height: 110px;
+            height: 88px;
             margin: 0 auto;
-          }
-          &.mom img{
-            height: 140px;
           }
           @include responsive-style(768px) {
             width: 50px;
@@ -973,7 +969,7 @@ section.lp-waomirai-recommend {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          @include font-size-xl;
+          @include font-size-l;
           margin-top: 10px;
           position: relative;
           @include responsive-style(768px) {
@@ -1011,15 +1007,15 @@ section.lp-waomirai-recommend {
       display: block;
     }
     .lp-waomirai-point-left {
-      width: 88px;
-      height: 88px;
+      width: 75px;
+      height: 75px;
       border-radius: $border-radius-full;
       background: $cl-gray;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      @include font-size-l;
+      @include font-size-m;
       @include responsive-style(768px) {
         width: 80px;
         height: 80px;
@@ -1028,8 +1024,8 @@ section.lp-waomirai-recommend {
       }
     }
     .lp-waomirai-point-right {
-      @include font-size-l;
-      letter-spacing: 2px;
+      @include font-size-m;
+      letter-spacing: 1px;
       text-align: center;
       @include responsive-style(768px) {
         @include font-size-m;
@@ -1045,7 +1041,7 @@ section.lp-waomirai-recommend {
 // 授業の特長
 section.lp-waomirai-feature {
   margin: 100px auto 0;
-  max-width: $width-xl;
+  max-width: $width-lg;
   text-align: center;
   @include responsive-style(768px) {
     padding: 0 20px;
@@ -1065,14 +1061,14 @@ section.lp-waomirai-feature {
   }
 }
 .lp-waomirai-feature-list-child {
-  @include font-size-xxl;
+  @include font-size-l;
   background: $cl-feature-yellow;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
   border-radius: $border-radius-full;
-  height: 100px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1088,7 +1084,7 @@ section.lp-waomirai-feature {
     margin-bottom: 30px;
   }
   &:last-child {
-    margin: 0 auto 110px;
+    margin: 0 auto 90px;
     @include responsive-style(768px) {
       margin-bottom: 50px;
     }
@@ -1096,12 +1092,6 @@ section.lp-waomirai-feature {
   i{
     display: inline-block;
     margin-top: 6px;
-    @include responsive-style(900px) {
-      display: none;
-    }
-    @include responsive-style(767px) {
-      display: inline-block;
-    }
   }
 }
 .lp-waomirai-feature-list-child-icons {
@@ -1113,45 +1103,37 @@ section.lp-waomirai-feature {
 .lp-waomirai-howto {
   margin-top: 120px;
   @include responsive-style(768px) {
-    margin-top: 130px;
+    margin-top: 60px;
   }
 }
 .lp-waomirai-howto-main {
-  padding: 90px 0 55px;
+  padding: 80px 0 45px;
   background: $cl-bg-eventlp;
   margin-bottom: 115px;
   @include responsive-style(768px) {
-    padding: 160px 0 25px;
+    padding: 40px 0 5px;
     position: relative;
     margin-bottom: 50px;
   }
   .lp-waomirai-howto-main-title {
-    @include font-size-xxxl;
+    @include font-size-xl;
+    font-weight: normal;
     margin: 0 auto 30px;
-    font-weight: bold;
     text-align: center;
     letter-spacing: 2px;
     @include responsive-style(768px) {
-      @include font-size-xxxxxl;
-      line-height: $lineheight-tight;
-      position: absolute;
-      top: -45px;
-      left: 0;
       width: 100%;
     }
     .large {
-      @include font-size-xxxxxxl;
+      @include font-size-xxxl;
       @include responsive-style(768px) {
-        @include font-size-xxxxxxxxl;
+        @include font-size-xxxxxxl;
       }
     }
   }
   .lp-waomirai-howto-main-img {
-    width: 280px;
+    width: 200px;
     margin: 0 auto 40px;
-    @include responsive-style(768px) {
-      width: 250px;
-    }
   }
 
   .lp-waomirai-howto-main-step {
@@ -1169,7 +1151,7 @@ section.lp-waomirai-feature {
         margin: 0 auto 70px;
       }
       .lp-waomirai-howto-main-step-child-icon {
-        width: 120px;
+        width: 100px;
         margin-right: 20px;
         flex-shrink: 0;
         @include responsive-style(768px) {
@@ -1181,7 +1163,7 @@ section.lp-waomirai-feature {
         width: 100%;
         padding: 0 20px;
         .lp-waomirai-howto-main-step-child-text-title {
-          @include font-size-xl;
+          @include font-size-l;
           padding-left: 1em;
           position: relative;
           @include responsive-style(768px) {
@@ -1215,18 +1197,18 @@ section.lp-waomirai-feature {
 
 //ワオ未来塾って？
 .lp-waomirai-about {
-  max-width: $width-md;
+  max-width: $width-lg;
   padding: 0 20px;
-  margin: 120px auto 0;
+  margin: 100px auto 0;
   @include responsive-style(768px) {
     padding: 0;
-    margin-top: 60px;
+    margin-top: 75px;
   }
 }
 .lp-waomirai-about-box {
   border-radius: $border-radius-extrabig;
   display: flex;
-  gap: 120px;
+  gap: 45px;
   @include responsive-style(768px) {
     flex-direction: column;
     gap: 30px;
@@ -1235,7 +1217,7 @@ section.lp-waomirai-feature {
   }
 }
 .lp-waomirai-about-box-left {
-  width: 306px;
+  width: 250px;
   @include responsive-style(768px) {
     width: 70%;
     margin: 0 auto 0px;
@@ -1250,58 +1232,53 @@ section.lp-waomirai-feature {
 //ワオ未来塾詳細
 .lp-waomirai-details {
   max-width: $width-xl;
-  margin: 160px auto 120px;
+  padding: 0 20px;
+  margin: 100px auto 120px;
   @include responsive-style(768px) {
-    margin-top: 100px;
+    margin-top: 75px;
   }
   .lp-waomirai-details-catch {
-    @include font-size-xxl;
+    @include font-size-l;
     margin: 0 auto 40px;
     text-align: center;
     @include responsive-style(768px) {
-      @include font-size-xxl;
       margin-bottom: 30px;
     }
   }
   .lp-waomirai-details-logo {
-    width: 867px;
-    max-width: calc(100% - 40px);
-    margin: 0 auto 44px;
+    max-width: 800px;
+    margin: 0 auto 34px;
     @include responsive-style(768px) {
       margin-bottom: 30px;
     }
   }
   .lp-waomirai-details-target {
-    @include font-size-xl;
-    margin: 0 auto 50px;
+    @include font-size-l;
+    margin: 0 auto 40px;
     text-align: center;
     @include responsive-style(768px) {
-      @include font-size-xxl;
       margin-bottom: 30px;
     }
   }
   .lp-waomirai-details-subjects {
-    width: 1135px;
-    max-width: calc(100% - 40px);
-    margin: 0 auto 60px;
+    max-width: 800px;
+    margin: 0 auto 50px;
     @include responsive-style(768px) {
-      margin-bottom: 45px;
+      margin-bottom: 35px;
     }
   }
   .lp-waomirai-details-feature {
     display: flex;
-    width: 1100px;
-    max-width: calc(100% - 40px);
     gap: 35px;
     margin: 0 auto 60px;
     @include responsive-style(768px) {
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
     }
     .lp-waomirai-details-feature-box {
       background: white;
       border-radius: $border-radius-bigplus;
-      padding: 38px 20px;
+      padding: 30px 20px;
       @include font-size-m;
       flex: 1;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -1311,8 +1288,8 @@ section.lp-waomirai-feature {
       .lp-waomirai-details-feature-box-title {
         display: flex;
         justify-content: center;
-        gap: 15px;
-        margin: 0 auto 30px;
+        gap: 10px;
+        margin: 0 auto 20px;
         @include responsive-style(768px) {
           @include font-size-l;
           margin-bottom: 20px;
@@ -1323,11 +1300,14 @@ section.lp-waomirai-feature {
       }
       .lp-waomirai-details-feature-box-title-text{
         font-weight: normal;
-        @include font-size-l;
+        @include font-size-xm;
+        @include responsive-style(768px) {
+          @include font-size-l;
+        }
       }
       .lp-waomirai-details-feature-box-text {
         @include font-size-m;
-        line-height: $lineheight-relaxed;
+        line-height: $lineheight-normal;
       }
     }
   }
@@ -1349,9 +1329,6 @@ section.lp-waomirai-feature {
       position: relative;
       line-height: $lineheight-normal;
       gap: 12px;
-      @include responsive-style(768px) {
-        width: calc(100% - 40px);
-      }
       @include box-shadow-lp;
 
       .lp-waomirai-details-btn-text {
