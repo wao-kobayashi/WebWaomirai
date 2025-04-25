@@ -5542,182 +5542,6 @@ header .header-right a {
   }
 }
 
-/*
-section.lp-waomirai-recommend {
-  margin-top: 140px;
-  @include responsive-style(768px) {
-    margin-top: 82px;
-  }
-  .lp-waomirai-recommend {
-    max-width: 1050px;
-    width: calc(100% - 40px);
-    margin: 0 auto;
-    display: flex;
-    @include responsive-style(768px) {
-      flex-direction: column-reverse;
-    }
-    .lp-waomirai-recommend-left {
-      display: flex;
-      align-items: center;
-      background: $cl-white;
-      @include responsive-style(768px) {
-        width: 215px;
-        height: 160px;
-        overflow: hidden;
-        margin: 10px auto 0;
-        position: relative;
-      }
-      img {
-        width: 67.567%;
-        @include responsive-style(768px) {
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      }
-    }
-    .lp-waomirai-recommend-right {
-      width: 57.143%;
-      flex-shrink: 0;
-      position: relative;
-      background: $cl-bg-recommend;
-      padding: 45px 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 17px;
-      border-radius: 100px;
-      position: relative;
-      @include responsive-style(768px) {
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px 0;
-        border-radius: $border-radius-bigplus;
-        gap: 12px;
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: calc(50% - 60px);
-        left: -59px;
-        width: 60px;
-        height: 120px;
-        background: $cl-bg-recommend;
-        clip-path: polygon(100% 0, 100% 100%, 0 50%);
-        z-index: 1;
-        @include responsive-style(768px) {
-          top: calc(100% - 1px);
-          left: calc(50% - 45px);
-          width: 90px;
-          height: 45px;
-          clip-path: polygon(0 0, 100% 0, 50% 100%);
-        }
-      }
-      .lp-waomirai-recommend-right-child {
-        .lp-waomirai-recommend-right-child:last-child {
-          flex-direction: row-reverse;
-          .lp-waomirai-recommend-right-child-text:before {
-            right: -15px !important;
-            left: auto !important;
-            transform: rotate(180deg);
-          }
-          .lp-waomirai-recommend-right-child-icon {
-            @include responsive-style(768px) {
-              width: 82px;
-              margin: 0;
-            }
-          }
-        }
-        .lp-waomirai-recommend-right-child-icon {
-          img {
-            height: 88px;
-            margin: 0 auto;
-          }
-          @include responsive-style(768px) {
-            width: 50px;
-            margin: 0 auto;
-            img,
-            &.mom img{
-              height: auto;
-            }
-            &.mom{
-              width: 120px;
-            }
-          }
-        }
-        .lp-waomirai-recommend-right-child-text {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          @include font-size-l;
-          margin-top: 10px;
-          position: relative;
-          @include responsive-style(768px) {
-            @include font-size-m;
-            gap: 6px;
-            margin-top: 1px;
-            padding: 0 20px;
-          }
-        }
-        .lp-waomirai-recommend-right-child-text-item{
-          position: relative;
-          padding-left: 1em;
-          &::before{
-            content: "○";
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
-        }
-      }
-    }
-  }
-  //POINT!
-  .lp-waomirai-point {
-    margin: 45px auto 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    @include responsive-style(768px) {
-      background: $cl-white;
-      margin: 0px 20px 0;
-      padding: 0px 0px;
-      border-radius: $border-radius-bigplus;
-      display: block;
-    }
-    .lp-waomirai-point-left {
-      width: 75px;
-      height: 75px;
-      border-radius: $border-radius-full;
-      background: $cl-gray;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include font-size-m;
-      @include responsive-style(768px) {
-        width: 80px;
-        height: 80px;
-        @include font-size-m;
-        margin: 37px auto 0;
-      }
-    }
-    .lp-waomirai-point-right {
-      @include font-size-m;
-      letter-spacing: 1px;
-      text-align: center;
-      @include responsive-style(768px) {
-        @include font-size-m;
-        width: 100%;
-        letter-spacing: 0;
-        padding: 20px 0 0;
-        text-align: left;
-      }
-    }
-  }
-}
-  */
 section.lp-waomirai-recommend {
   margin: 75px 0 0;
 }
@@ -5744,11 +5568,11 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-left
 section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right {
   position: relative;
   background: #f0f2f3;
-  padding: 45px 30px;
+  padding: 45px;
   display: flex;
   flex-direction: column;
   gap: 45px;
-  border-radius: 100px;
+  border-radius: 45px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-right {
@@ -5849,7 +5673,7 @@ section.lp-waomirai-recommend .lp-waomirai-recommend .lp-waomirai-recommend-righ
   transform: rotate(-180deg);
 }
 section.lp-waomirai-recommend .lp-waomirai-point {
-  max-width: 450px;
+  max-width: 520px;
   margin: 45px auto 0;
   display: flex;
   align-items: center;
@@ -5865,14 +5689,15 @@ section.lp-waomirai-recommend .lp-waomirai-point {
   }
 }
 section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
   border-radius: 10000px;
   background: #4d4d4d;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
@@ -5881,9 +5706,20 @@ section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
     border-radius: 32px 0 32px 0;
   }
 }
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-left {
+    font-size: 16px;
+  }
+}
 section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
   flex: 1;
   text-align: center;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 768px) {
   section.lp-waomirai-recommend .lp-waomirai-point .lp-waomirai-point-right {
