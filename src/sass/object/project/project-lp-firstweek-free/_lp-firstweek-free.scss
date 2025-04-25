@@ -863,6 +863,7 @@ header {
 }
 
 //こんなあなたにオススメです！
+/*
 section.lp-waomirai-recommend {
   margin-top: 140px;
   @include responsive-style(768px) {
@@ -1037,6 +1038,164 @@ section.lp-waomirai-recommend {
     }
   }
 }
+  */
+
+//こんなあなたにオススメです！
+section.lp-waomirai-recommend {
+  margin: 75px 0 0;
+  .lp-waomirai-recommend {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    // background: white;
+    div {
+      @include min-responsive-style(768px) {
+        flex: 1;
+      }
+    }
+    .lp-waomirai-recommend-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $cl-white;
+      img {
+        width: 50%;
+      }
+    }
+    .lp-waomirai-recommend-right {
+      position: relative;
+      background: $cl-graylightest;
+      padding: 45px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      border-radius: 100px;
+      @include responsive-style(768px) {
+        background: transparent;
+        margin: 0 20px;
+        padding: 0px 0px 30px;
+        border-radius: 0;
+        gap: 30px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40px;
+        bottom: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent $cl-graylightest transparent transparent;
+        border-width: 82px 52px 82px 0px;
+        z-index: 1;
+        @include responsive-style(768px) {
+          display: none;
+        }
+      }
+      .lp-waomirai-recommend-right-child {
+        @include responsive-style(768px) {
+          display: flex;
+          gap: 20px;
+        }
+        &:last-child {
+          flex-direction: row-reverse;
+        }
+        .lp-waomirai-recommend-right-child-icon {
+          @include responsive-style(768px) {
+            width: 102px;
+            margin: 0;
+          }
+        }
+        .lp-waomirai-recommend-right-child-icon {
+          img {
+            height: 75px;
+            margin: 0 auto;
+          }
+          @include responsive-style(768px) {
+            width: 88px;
+            margin: 0;
+          }
+        }
+        .lp-waomirai-recommend-right-child-text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include font-size-l;
+          position: relative;
+          @include responsive-style(768px) {
+            background: $cl-graylightest;
+            @include font-size-m;
+            padding: 16px;
+            border-radius: $border-radius-big;
+          }
+          &::before {
+            @include responsive-style(768px) {
+              content: "";
+              position: absolute;
+              top: 30px;
+              left: -15px;
+              margin: auto;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent $cl-graylightest transparent transparent;
+              border-width: 15px 15px 15px 0px;
+              z-index: 1;
+            }
+          }
+        }
+        &:last-child .lp-waomirai-recommend-right-child-text::before{
+          left: auto;
+          right: -15px;
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  //POINT!
+  .lp-waomirai-point {
+    max-width: 450px;
+    margin: 45px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include responsive-style(768px) {
+      background: $cl-graylightest;
+      margin: 0px 20px 0;
+      padding: 0px 0px;
+      border-radius: $border-radius-big;
+      display: block;
+    }
+    .lp-waomirai-point-left {
+      @include responsive-style(768px) {
+        width: 120px;
+        height: 30px;
+        border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
+      }
+      width: 75px;
+      height: 75px;
+      border-radius: $border-radius-full;
+      background: $cl-gray;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .lp-waomirai-point-right {
+      flex: 1;
+      text-align: center;
+      @include responsive-style(768px) {
+        width: 100%;
+        padding: 20px 20px 30px;
+        text-align: left;
+      }
+    }
+  }
+}
+
 
 // 授業の特長
 section.lp-waomirai-feature {
