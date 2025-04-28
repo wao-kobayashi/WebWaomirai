@@ -69,7 +69,7 @@
 
 //ヘッダー
 header {
-  height: 78px;
+  height: 118px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -77,13 +77,15 @@ header {
   max-width: $width-lg;
   margin: 0 auto;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
   @include responsive-style(768px) {
     height: 72px;
     padding: 0 18px;
     justify-content: center;
-    background: $cl-lp-white;
-    position: relative;
-    z-index: 100;
   }
 
   .header-logo {
@@ -114,225 +116,157 @@ header {
 
 // ファーストビュー
 .lp-firstweek-free-fv{
-  padding: 0 20px;
-  width: 100%;
-  max-width: $width-lg;
-  margin: 0 auto;
-  @include responsive-style(768px) {
-    padding-bottom: 75px;
-  }
-}
-.lp-firstweek-free-fv-title{
-  @include font-size-xxxl;
-  letter-spacing: 6px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 70px;
-  white-space: nowrap;
-  @include responsive-style(768px) {
-    line-height: $lineheight-tight;
-    margin-top: 10px;
-    letter-spacing: 2px;
-    position: relative;
-    z-index: 100;
-  }
-}
-.lp-firstweek-free-fv-main{
+  height: min(900px, calc(900 / 1060) * 100vw);
+  padding-top: 190px;
   position: relative;
-  z-index: 10;
-  margin-top: 35px;
-  @include responsive-style(768px) {
-    height: auto;
-    margin-top: -10px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-.lp-firstweek-free-fv-main-image{
-  width: 49.167%;
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  border-radius: 100px;
   overflow: hidden;
-  margin-top: 22px;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.3s ease, transform 1s ease;
-  &.inview {
-    opacity: 1;
-    transform: scale(1);
-  }
-  @include responsive-style(1220px) {
-    width: 590px;
-    position: static;
-    margin: 0 auto;
-  }
   @include responsive-style(768px) {
     width: 100%;
+    height: auto;
+    padding: 80px 0 60px;
+  }
+}
+.lp-firstweek-free-fv-main-contents{
+  padding: 0 80px;
+  width: calc($width-lg + 120px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  @include responsive-style(768px) {
+    width: 100%;
+    padding: 0;
+  }
+}
+.lp-firstweek-free-fv-main-contents-title{
+  width: min(541px, calc(541 / 1250) * 100vw);
+  margin-left: -20px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+  @include responsive-style(768px) {
+    width: 90%;
+    margin: 0 auto 0 7%;
+  }
+}
+.lp-firstweek-free-fv-main-contents-text{
+  font-size: min(22px, calc(22 / 1400) * 100vw);
+  line-height: $lineheight-relaxed;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  @include responsive-style(768px) {
+    width: 80%;
+    margin: 17px auto 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+}
+.lp-firstweek-free-fv-main-contents-image{
+  width: min(754px, calc(754 / 1350) * 100vw);
+  min-width: 600px;
+  position: absolute;
+  left: min(615px, calc(615 / 1200) * 100vw);
+  top: 48%;
+  transform: translateY(-50%);
+  z-index: 1;
+  @include responsive-style(768px) {
     position: static;
-    order: 1;
-  }
-}
-.lp-firstweek-free-fv-main-text{
-  position: relative;
-  z-index: 10;
-  margin-right: -40px;
-  padding-left: 42%;
-  @include responsive-style(1220px) {
-    margin: 26px 0 0;
-    padding-left: 0;
-  }
-  @include responsive-style(768px) {
-    margin: 13px 0 0;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    order: 3;
-  }
-}
-.lp-firstweek-free-fv-main-text-title{
-  color: $cl-lp-red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1;
-  position: relative;
-  @include responsive-style(768px) {
-    order: 1;
-  }
-}
-.lp-firstweek-free-fv-main-text-title-01,
-.lp-firstweek-free-fv-main-text-title-02,
-.lp-firstweek-free-fv-main-text-title-03{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  span{
-    display: block;
-    transform: translate(0, 105%);
-    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-  }
-  &.inview span{
     transform: none;
-    @for $i from 1 through 20 {
-      &:nth-child(#{$i + 1}) {
-        $delay: $i * 0.05 + s;
-        transition-delay: $delay;
+    width: 98%;
+    margin: 0 -5% 0 auto;
+  }
+  img{
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 1s ease;
+    &.inview {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+@for $i from 1 through 5 {
+  .lp-firstweek-free-fv-main-deco#{"0#{$i}"}-pc {
+    position: absolute;
+    @include responsive-style(768px) {
+      display: none;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+@for $i from 1 through 4 {
+  .lp-firstweek-free-fv-main-deco#{"0#{$i}"}-sp {
+    display: none;
+    @include responsive-style(768px) {
+      display: block;
+      position: absolute;
+      img{
+        width: 100%;
+        height: auto;
       }
     }
   }
 }
-.lp-firstweek-free-fv-main-text-title-01{
-  @include font-size-xxxxxxxl;
-  letter-spacing: 55px;
-  @include responsive-style(768px) {
-    letter-spacing: 13px;
-  }
+.lp-firstweek-free-fv-main-deco01-pc{
+  width: min(664px, (664 / 1300) * 100%);
+  top: 0;
+  left: 0;
 }
-.lp-firstweek-free-fv-main-text-title-02{
-  @include font-size-xxxxxl;
-  letter-spacing: 34px;
-  margin-top: 3px;
-  @include responsive-style(768px) {
-    letter-spacing: 7px;
-  }
+.lp-firstweek-free-fv-main-deco02-pc{
+  width: min(312px, (312 / 1300) * 100%);
+  bottom: -25px;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 323px, 0 323px);
 }
-.lp-firstweek-free-fv-main-text-title-03{
-  @include font-size-xxxxxxl;
-  letter-spacing: 1px;
-  margin-top: 3px;
-  @include responsive-style(768px) {
-    letter-spacing: 3px;
-  }
+.lp-firstweek-free-fv-main-deco03-pc{
+  width: min(358px, (358 / 1300) * 100%);
+  top: 0;
+  right: 0;
 }
-.lp-firstweek-free-fv-main-text-subject{
-  width: 328px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include font-size-l;
-  background: $cl-merit-yellow;
-  border-radius: 29px;
-  margin: 20px auto 0;
-  @include responsive-style(768px) {
+.lp-firstweek-free-fv-main-deco04-pc{
+  width: min(89px, (89 / 1300) * 100%);
+  top: 140px;
+  right: 0;
+  z-index: 2;
+}
+.lp-firstweek-free-fv-main-deco05-pc{
+  width: min(329px, (329 / 1300) * 100%);
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+@include responsive-style(768px) {
+  .lp-firstweek-free-fv-main-deco01-sp{
+    width: calc((200 / 360)* 100%);
+    top: -20px;
+    left: -20px;
+  }
+  .lp-firstweek-free-fv-main-deco02-sp{
+    width: calc((90 / 360)* 100%);
+    top: 80px;
+    left: 0;
+    z-index: 2;
+  }
+  .lp-firstweek-free-fv-main-deco03-sp{
+    width: calc((50 / 360)* 100%);
+    top: 77vw;
+    right: 0;
+    z-index: 2;
+  }
+  .lp-firstweek-free-fv-main-deco04-sp{
     width: 100%;
-    border-radius: 26px;
-    height: 52px;
-    order: 3;
-  }
-}
-.lp-firstweek-free-fv-main-text-explain{
-  text-align: center;
-  @include font-size-l;
-  line-height: $lineheight-tight;
-  margin-top: 13px;
-  letter-spacing: 4px;
-  @include responsive-style(768px) {
-    @include font-size-l;
-    letter-spacing: 0;
-    line-height: $lineheight-normal;
-    margin-top: 25px;
-    order: 4;
-  }
-}
-.lp-firstweek-free-fv-main-text-date{
-  @include font-size-xxxl;
-  line-height: $lineheight-tight;
-  margin-top: 10px;
-  text-align: center;
-  color: $cl-lp-red;
-  font-weight: bold;
-  @include responsive-style(768px) {
-    @include font-size-xxl;
-    margin-top: 35px;
-    order: 2;
-  }
-}
-.lp-firstweek-free-fv-main-small-image{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-  @include responsive-style(768px) {
-    order: 2;
-    margin-top: 20px;
-    gap: 18px;
-  }
-}
-.lp-firstweek-free-fv-main-small-image-item{
-  aspect-ratio: 1 / 0.9474;
-  border-radius: 100px;
-  overflow: hidden;
-  position: relative;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.3s ease, transform 1s ease;
-  &.inview {
-    opacity: 1;
-    transform: scale(1);
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-.lp-firstweek-free-fv-line{
-  margin-top: 80px;
-  position: relative;
-  z-index: 10;
-  @include responsive-style(768px) {
-    margin-top: 40px;
+    bottom: 0;
+    right: 0;
   }
 }
 
 //イントロ
 .lp-firstweek-free-intro {
   position: relative;
+  padding-top: 200px;
   &::before{
     content: "";
     display: block;
@@ -342,11 +276,11 @@ header {
     background-blend-mode: lighten;
     background-size: cover;
     position: absolute;
-    top: -713px;
+    top: 0;
     left: 0;
     @include responsive-style(768px) {
       height: 220vw;
-      top: -220vw;
+      top: 0;
     }
   }
 }
@@ -678,7 +612,7 @@ header {
   @include box-shadow-lp;
   border-radius: 20px;
   padding: 33px 33px 38px;
-  @include responsive-style(1080px) {
+  @include responsive-style(1060px) {
     width: 100%;
     margin: 0;
   }
@@ -694,7 +628,7 @@ header {
 .lp-firstweek-free-events-main-list-item:nth-child(2n){
   margin-right: 0;
 }
-@include responsive-style(1080px) {
+@include responsive-style(1060px) {
   .lp-firstweek-free-events-main-list-item:nth-child(n+2){
     margin-top: 45px;
   }
