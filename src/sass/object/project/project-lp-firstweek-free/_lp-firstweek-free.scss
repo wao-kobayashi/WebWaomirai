@@ -116,6 +116,9 @@ header {
 
 // ファーストビュー
 .lp-firstweek-free-fv{
+  position: relative;
+}
+.lp-firstweek-free-fv-main{
   height: min(900px, calc(900 / 1060) * 100vw);
   padding-top: 190px;
   position: relative;
@@ -262,11 +265,82 @@ header {
     right: 0;
   }
 }
+.lp-firstweek-free-fv-details{
+  position: absolute;
+  top: calc(100% - 70px);
+  left: calc(50% - calc($width-lg / 2));
+  z-index: 10;
+  width: calc($width-lg - 40px);
+  background: $cl-lp-white;
+  @include box-shadow-lp;
+  border-radius: 40px;
+  padding: 60px 40px;
+  @include responsive-style($width-lg) {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+  @include responsive-style(768px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+.lp-firstweek-free-fv-details-list{
+  display: flex;
+  justify-content: space-between;
+  @include responsive-style(768px) {
+    display: block;
+  }
+}
+.lp-firstweek-free-fv-details-list-item{
+  width: calc(50% - 23px);
+  background: $cl-bg-fv-details-list;
+  @include font-size-xl;
+  font-weight: bold;
+  text-align: center;
+  height: 80px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+  @include responsive-style($width-lg) {
+    letter-spacing: 1px; 
+  }
+  @include responsive-style(768px) {
+    width: 100%;
+    background: $cl-lp-white;
+    &:nth-child(n+2){
+      margin-top: 22px;
+    }
+  }
+}
+.lp-firstweek-free-fv-details-cta{
+  margin-top: 40px;
+  @include responsive-style(768px) {
+    margin-top: 22px;
+  }
+  a{
+    width: 100%;
+    max-width: none;
+  }
+}
 
 //イントロ
 .lp-firstweek-free-intro {
   position: relative;
-  padding-top: 200px;
+  padding-top: 395px;
+  @include responsive-style(768px) {
+    padding-top: 90px;
+  }
   &::before{
     content: "";
     display: block;
@@ -279,8 +353,8 @@ header {
     top: 0;
     left: 0;
     @include responsive-style(768px) {
-      height: 220vw;
-      top: 0;
+      height: calc(100% + 322px + 90px);
+      top: -322px;
     }
   }
 }
@@ -288,7 +362,7 @@ header {
   padding: 0 20px;
   width: 100%;
   max-width: $width-lg;
-  margin: 100px auto 0;
+  margin: 0 auto;
   position: relative;
   z-index: 10;
   display: flex;
