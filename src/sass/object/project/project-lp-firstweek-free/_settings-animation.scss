@@ -24,6 +24,17 @@
     transform: scale(1);
   }
 }
+@keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
 
 @keyframes bounce-swipe {
   0%,
@@ -50,5 +61,43 @@
   }
   100% {
     transform: translateX(calc(-50% - var(--scroll-gap) / 2));
+  }
+}
+
+@keyframes rotate01 {
+  0% {
+    transform: rotate(5deg) translate(-20px, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+@keyframes rotate02 {
+  0% {
+    transform: rotate(-5deg) translate(-20px, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+
+@keyframes rotate03 {
+  0% {
+    transform: rotate(5deg) translate(20px, 20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
   }
 }
