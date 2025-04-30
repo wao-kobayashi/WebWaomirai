@@ -4488,7 +4488,7 @@ header .header-right a {
     width: 80%;
     margin: 17px auto 0;
     font-size: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -4506,6 +4506,7 @@ header .header-right a {
     position: static;
     transform: none;
     width: 98%;
+    min-width: auto;
     margin: 0 -5% 0 auto;
   }
 }
@@ -4788,19 +4789,19 @@ header .header-right a {
 
 .lp-firstweek-free-intro {
   position: relative;
-  padding-top: 395px;
+  padding-top: 348px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro {
-    padding-top: 90px;
+    padding-top: 80px;
   }
 }
 .lp-firstweek-free-intro::before {
   content: "";
   display: block;
   width: 100%;
-  height: 880px;
-  background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png") repeat;
+  height: 1075px;
+  background: url("https://go.waomirai.com/l/1026513/2025-04-29/hlgtj/1026513/1745980779toj25fov/bg_lp_firstweek_free.png") repeat;
   background-blend-mode: lighten;
   background-size: cover;
   position: absolute;
@@ -4809,7 +4810,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro::before {
-    height: calc(100% + 322px + 90px);
+    height: calc(100% + 322px + 50px);
     top: -322px;
   }
 }
@@ -4829,19 +4830,26 @@ header .header-right a {
   .lp-firstweek-free-intro-contents {
     display: block;
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 0;
   }
 }
 
 .lp-firstweek-free-intro-contents-image {
-  width: 48.334%;
+  width: 53.961%;
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.3s ease, transform 1s ease;
+  border-radius: 100px;
+  overflow: hidden;
 }
 .lp-firstweek-free-intro-contents-image.inview {
   opacity: 1;
   transform: scale(1);
+}
+@media screen and (max-width: 1000px) {
+  .lp-firstweek-free-intro-contents-image {
+    border-radius: 50px;
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-image {
@@ -4850,42 +4858,49 @@ header .header-right a {
 }
 
 .lp-firstweek-free-intro-contents-main {
-  width: 46.75%;
+  width: 46.039%;
+  min-width: 460px;
   flex-shrink: 0;
-  min-width: 506px;
-  padding-left: 30px;
+  padding-left: 80px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-main {
     width: 100%;
     min-width: auto;
-    margin-top: 23px;
+    margin-top: 18px;
     padding-left: 0;
   }
 }
 
 .lp-firstweek-free-intro-contents-main-title {
-  font-size: 50px;
+  font-size: 36px;
   font-weight: bold;
-  color: #f06b6b;
-  letter-spacing: 2px;
-  line-height: 1.25;
+  letter-spacing: 5px;
+  line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-main-title {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-main-title {
+    font-size: 27px;
     letter-spacing: 1px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .lp-firstweek-free-intro-contents-main-title {
+    font-size: 25px;
   }
 }
 
 .lp-firstweek-free-intro-contents-main-text {
   font-size: 20px;
   line-height: 1.75;
-  margin-top: 30px;
+  margin-top: 27px;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-main-text {
@@ -4894,35 +4909,29 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-main-text {
-    margin-top: 23px;
+    margin-top: 13px;
+    letter-spacing: 0.5px;
   }
 }
 
 .lp-firstweek-free-intro-contents-main-text-paragraph:nth-child(n+2) {
-  margin-top: 20px;
-}
-
-.lp-firstweek-free-intro-arrow {
-  display: block;
-  width: 80px;
-  margin: 37px auto 0;
+  margin-top: 27px;
 }
 @media screen and (max-width: 768px) {
-  .lp-firstweek-free-intro-arrow {
-    width: 72px;
-    margin-top: 22px;
+  .lp-firstweek-free-intro-contents-main-text-paragraph:nth-child(n+2) {
+    margin-top: 13px;
   }
 }
 
 .lp-firstweek-free-feature {
   max-width: 1050px;
   width: 100%;
-  margin: 60px auto 0;
+  margin: 100px auto 0;
   padding: 0 20px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-feature {
-    margin-top: 45px;
+    margin-top: 100px;
   }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid {
@@ -5002,6 +5011,11 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-text {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-text {
+    letter-spacing: 0.5px;
   }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-line {
@@ -5910,6 +5924,11 @@ section.lp-waomirai-feature {
 .lp-waomirai-howto-main .lp-waomirai-howto-main-step .lp-waomirai-howto-main-step-child .lp-waomirai-howto-main-step-child-text .lp-waomirai-howto-main-step-child-text-detail a {
   color: #262626;
 }
+@media screen and (max-width: 768px) {
+  .lp-waomirai-howto-main .lp-waomirai-howto-main-step .lp-waomirai-howto-main-step-child .lp-waomirai-howto-main-step-child-text .lp-waomirai-howto-main-step-child-text-detail {
+    letter-spacing: 0.5px;
+  }
+}
 
 .lp-waomirai-about {
   max-width: 1050px;
@@ -5955,6 +5974,11 @@ section.lp-waomirai-feature {
 @media screen and (max-width: 768px) {
   .lp-waomirai-about-box-right {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-waomirai-about-box-right {
+    letter-spacing: 0.5px;
   }
 }
 

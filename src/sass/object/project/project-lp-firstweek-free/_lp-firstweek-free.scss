@@ -161,7 +161,7 @@ header {
     width: 80%;
     margin: 17px auto 0;
     font-size: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
 }
 .lp-firstweek-free-fv-main-contents-image{
@@ -176,6 +176,7 @@ header {
     position: static;
     transform: none;
     width: 98%;
+    min-width: auto;
     margin: 0 -5% 0 auto;
   }
   img{
@@ -337,23 +338,23 @@ header {
 //イントロ
 .lp-firstweek-free-intro {
   position: relative;
-  padding-top: 395px;
+  padding-top: 348px;
   @include responsive-style(768px) {
-    padding-top: 90px;
+    padding-top: 80px;
   }
   &::before{
     content: "";
     display: block;
     width: 100%;
-    height: 880px;
-    background: url("https://go.waomirai.com/l/1026513/2025-01-28/hcw2y/1026513/1738049259rks9ifJW/bg_lp_2025march.png") repeat;
+    height: 1075px;
+    background: url("https://go.waomirai.com/l/1026513/2025-04-29/hlgtj/1026513/1745980779toj25fov/bg_lp_firstweek_free.png") repeat;
     background-blend-mode: lighten;
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     @include responsive-style(768px) {
-      height: calc(100% + 322px + 90px);
+      height: calc(100% + 322px + 50px);
       top: -322px;
     }
   }
@@ -371,62 +372,64 @@ header {
   @include responsive-style(768px) {
     display: block;
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 0;
   }
 }
 .lp-firstweek-free-intro-contents-image{
-  width: 48.334%;
+  width: 53.961%;
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.3s ease, transform 1s ease;
+  border-radius: 100px;
+  overflow: hidden;
   &.inview {
     opacity: 1;
     transform: scale(1);
+  }
+  @include responsive-style(1000px) {
+    border-radius: 50px;
   }
   @include responsive-style(768px) {
     width: 100%;
   }
 }
 .lp-firstweek-free-intro-contents-main{
-  width: 46.75%;
+  width: 46.039%;
+  min-width: 460px;
   flex-shrink: 0;
-  min-width: 506px;
-  padding-left: 30px;
+  padding-left: 80px;
   @include responsive-style(768px) {
     width: 100%;
     min-width: auto;
-    margin-top: 23px;
+    margin-top: 18px;
     padding-left: 0;
   }
 }
 .lp-firstweek-free-intro-contents-main-title{
-  @include font-size-xxxl;
+  @include font-size-xxl;
   font-weight: bold;
-  color: $cl-lp-cvred;
-  letter-spacing: 2px;
-  line-height: $lineheight-tight;
+  letter-spacing: 5px;
+  line-height: $lineheight-normal;
   @include responsive-style(768px) {
+    @include font-size-xl;
     letter-spacing: 1px;
+    text-align: center;
   }
 }
 .lp-firstweek-free-intro-contents-main-text{
   @include font-size-xm;
   line-height: $lineheight-relaxed;
-  margin-top: 30px;
+  margin-top: 27px;
+  letter-spacing: 1px;
   @include responsive-style(768px) {
-    margin-top: 23px;
+    margin-top: 13px;
+    letter-spacing: 0.5px;
   }
 }
 .lp-firstweek-free-intro-contents-main-text-paragraph:nth-child(n+2){
-  margin-top: 20px;
-}
-.lp-firstweek-free-intro-arrow{
-  display: block;
-  width: 80px;
-  margin: 37px auto 0;
+  margin-top: 27px;
   @include responsive-style(768px) {
-    width: 72px;
-    margin-top: 22px;
+    margin-top: 13px;
   }
 }
 
@@ -434,10 +437,10 @@ header {
 .lp-firstweek-free-feature {
   max-width: $width-lg;
   width: 100%;
-  margin: 60px auto 0;
+  margin: 100px auto 0;
   padding: 0 20px;
   @include responsive-style(768px) {
-    margin-top: 45px;
+    margin-top: 100px;
   }
   .lp-firstweek-free-feature-grid {
     display: flex;
@@ -496,6 +499,9 @@ header {
         @include font-size-m;
         color: $cl-black;
         line-height: $lineheight-relaxed;
+        @include responsive-style(768px) {
+          letter-spacing: 0.5px;
+        }
       }
     }
   }
@@ -1180,6 +1186,9 @@ section.lp-waomirai-feature {
           a {
             color: $cl-black;
           }
+          @include responsive-style(768px) {
+            letter-spacing: 0.5px;
+          }
         }
       }
     }
@@ -1218,6 +1227,9 @@ section.lp-waomirai-feature {
   flex: 1;
   line-height: $lineheight-relaxed;
   @include font-size-m;
+  @include responsive-style(768px) {
+    letter-spacing: 0.5px;
+  }
 }
 
 //ワオ未来塾詳細
