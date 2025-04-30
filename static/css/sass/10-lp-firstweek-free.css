@@ -4377,12 +4377,11 @@ select {
 }
 
 header {
-  height: 118px;
+  height: 100px;
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  max-width: 1050px;
+  padding: 0 30px;
   margin: 0 auto;
   justify-content: space-between;
   position: absolute;
@@ -4399,7 +4398,7 @@ header {
   }
 }
 header .header-logo {
-  max-width: 350px;
+  max-width: 270px;
   margin: 0 !important;
 }
 @media screen and (max-width: 768px) {
@@ -4435,8 +4434,8 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main {
-  height: min(900px, 84.9056603774vw);
-  padding-top: 190px;
+  height: min(860px, 84.9056603774vw);
+  padding-top: 150px;
   position: relative;
   overflow: hidden;
 }
@@ -4449,7 +4448,7 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main-contents {
-  padding: 0 80px;
+  padding: 0 40px;
   width: 1170px;
   margin: 0 auto;
   position: relative;
@@ -4463,7 +4462,7 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main-contents-title {
-  width: min(541px, 43.28vw);
+  width: min(500px, 43.28vw);
   margin-left: -20px;
 }
 .lp-firstweek-free-fv-main-contents-title img {
@@ -4478,10 +4477,10 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main-contents-text {
-  font-size: min(22px, 1.5714285714vw);
+  font-size: min(18px, 1.5714285714vw);
   line-height: 1.75;
   letter-spacing: 2px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-contents-text {
@@ -4493,11 +4492,11 @@ header .header-right a {
 }
 
 .lp-firstweek-free-fv-main-contents-image {
-  width: min(754px, 55.8518518519vw);
-  min-width: 600px;
+  width: min(720px, 53.3333333333vw);
+  min-width: 560px;
   position: absolute;
-  left: min(615px, 51.25vw);
-  top: 48%;
+  left: min(640px, 51.25vw);
+  top: 58%;
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -4649,8 +4648,8 @@ header .header-right a {
 
 .lp-firstweek-free-fv-main-deco02-pc {
   width: min(312px, 24%);
-  bottom: -25px;
-  left: 0;
+  bottom: -65px;
+  left: -20px;
   clip-path: polygon(0 0, 100% 0, 100% 323px, 0 323px);
 }
 
@@ -4662,15 +4661,15 @@ header .header-right a {
 
 .lp-firstweek-free-fv-main-deco04-pc {
   width: min(89px, 6.8461538462%);
-  top: 140px;
-  right: 0;
+  top: 160px;
+  right: -30px;
   z-index: 2;
 }
 
 .lp-firstweek-free-fv-main-deco05-pc {
   width: min(329px, 25.3076923077%);
-  bottom: 0;
-  right: 0;
+  bottom: -50px;
+  right: -30px;
   z-index: 2;
 }
 
@@ -4701,7 +4700,9 @@ header .header-right a {
 .lp-firstweek-free-fv-details {
   position: absolute;
   top: calc(100% - 70px);
-  left: calc(50% - 525px);
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 10;
   width: 1010px;
   background: #fff;
