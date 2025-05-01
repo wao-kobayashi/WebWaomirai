@@ -143,15 +143,23 @@ header {
 .lp-firstweek-free-fv-main-contents-title {
   width: min(480px, calc(541 / 1250) * 100vw);
   margin-left: 0px;
-
   img {
     width: 100%;
     height: auto;
+    @include responsive-style(768px) {
+      display: block;
+      width: 115%;
+      max-width: none;
+      margin-left: -1%;
+    }
   }
   @include responsive-style(768px) {
-    width: 90%;
-    margin: 0 auto 0 7%;
+    width: 82%;
+    margin: 0 10% 0 8%;
   }
+}
+.lp-firstweek-free-fv-main-contents-title-sp{
+  overflow: hidden;
 }
 .lp-firstweek-free-fv-main-contents-text {
   font-size: min(18px, calc(22 / 1400) * 100vw);
@@ -161,7 +169,7 @@ header {
   margin-left: 16px;
   @include responsive-style(768px) {
     width: 80%;
-    margin: 17px auto 0;
+    margin: 12px auto 0;
     font-size: 15px;
     letter-spacing: 0.5px;
   }
@@ -339,7 +347,9 @@ header {
   justify-content: center;
   letter-spacing: 3px;
   @include responsive-style($width-lg) {
-    letter-spacing: 1px;
+    width: calc(50% - 12px);
+    @include font-size-l;
+    letter-spacing: 1.5px;
   }
   @include responsive-style(768px) {
     width: 100%;
@@ -693,7 +703,7 @@ header {
   max-width: $width-lg;
   padding: 0 20px;
   @include responsive-style(768px) {
-    margin-top: 11px;
+    margin-top: 99px;
     padding: 51px 0 0;
   }
 }

@@ -4517,10 +4517,22 @@ header .header-right a {
   height: auto;
 }
 @media screen and (max-width: 768px) {
-  .lp-firstweek-free-fv-main-contents-title {
-    width: 90%;
-    margin: 0 auto 0 7%;
+  .lp-firstweek-free-fv-main-contents-title img {
+    display: block;
+    width: 115%;
+    max-width: none;
+    margin-left: -1%;
   }
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-fv-main-contents-title {
+    width: 82%;
+    margin: 0 10% 0 8%;
+  }
+}
+
+.lp-firstweek-free-fv-main-contents-title-sp {
+  overflow: hidden;
 }
 
 .lp-firstweek-free-fv-main-contents-text {
@@ -4533,7 +4545,7 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-fv-main-contents-text {
     width: 80%;
-    margin: 17px auto 0;
+    margin: 12px auto 0;
     font-size: 15px;
     letter-spacing: 0.5px;
   }
@@ -4820,7 +4832,14 @@ header .header-right a {
 }
 @media screen and (max-width: 1050px) {
   .lp-firstweek-free-fv-details-list-item {
-    letter-spacing: 1px;
+    width: calc(50% - 12px);
+    font-size: 22px;
+    letter-spacing: 1.5px;
+  }
+}
+@media screen and (max-width: 1050px) and (max-width: 768px) {
+  .lp-firstweek-free-fv-details-list-item {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5283,7 +5302,7 @@ header .header-right a {
 }
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events-main {
-    margin-top: 11px;
+    margin-top: 99px;
     padding: 51px 0 0;
   }
 }
