@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+/* fontsize */
+@mixin font-size-ss {
+  font-size: 11px;
+}
+
+@mixin font-size-s {
+  font-size: 12px;
+}
+@mixin font-size-xs {
+  font-size: 14px;
+}
+@mixin font-size-m {
+  font-size: 17px;
+}
+
+@mixin font-size-xm {
+  font-size: 20px;
+}
+@mixin font-size-l {
+  font-size: 22px;
+}
+
+@mixin font-size-xl {
+  font-size: 27px;
+  @include responsive-style(768px) {
+    font-size: 25px;
+  }
+}
+@mixin font-size-xxl {
+  font-size: 36px;
+  @include responsive-style(768px) {
+    font-size: 30px;
+  }
+}
+@mixin font-size-xxxl {
+  font-size: 50px;
+  @include responsive-style(768px) {
+    font-size: 28px;
+  }
+}
+@mixin font-size-xxxxl {
+  font-size: 58px;
+  @include responsive-style(768px) {
+    font-size: 37px;
+  }
+}
+@mixin font-size-xxxxxl {
+  font-size: 64px;
+  @include responsive-style(768px) {
+    font-size: 40px;
+  }
+}
+@mixin font-size-xxxxxxl {
+  font-size: 67px;
+  @include responsive-style(768px) {
+    font-size: 45px;
+  }
+}
+@mixin font-size-xxxxxxxl {
+  font-size: 105px;
+  @include responsive-style(768px) {
+    font-size: 65px;
+  }
+}
+@mixin font-size-xxxxxxxxl {
+  @include responsive-style(768px) {
+    font-size: 80px;
+  }
+}
+
+/* title */
+
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+  text-underline-offset: 8px;
+  @include responsive-style(768px) {
+    text-underline-offset: 6px;
+  }
+}
+
+/* line-height */
+
+$lineheight-none: 1;
+$lineheight-tight: 1.25;
+$lineheight-normal: 1.5;
+$lineheight-relaxed: 1.75;
