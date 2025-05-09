@@ -1,72 +1,93 @@
-section.section-bg-lightgray
-  .section-top
-  .section-content
-    h2|ワオ未来塾とは
-    p.section-content-text 
-      |自分らしく生きるうえで必要になる自己肯定感を養う「哲学（思考力）」、正しく物事を見る目を育む「科学リテラシー」、社会を支える仕組みを学ぶ「経済（お金）」、世界共通言語とも言える 「英語」と「プログラミング」を身につけます。
-    .section-content-img
-      img(src='https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg')
-section.section-bg-white
-  div.section-top
-  .section-content
-    h2|授業の流れ
-    .section-content-img
-      img(src='https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg')
-  .section-content
-    h2|年間のカリキュラム
-    p.section-content-text 
-      |基本的には月ごとのテーマ設定となっていますので、何月に入会しても授業を楽しむことができます。
-    .section-content-img
-      img(src='https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg')    
-    .section-content-button  
-       |カリキュラム表を見る
-  .section-content
-    h2|グローバル英語について
-    p.section-content-text 
-      |グローバル英語についてはコチラのページから確認できます
-    div 
-      |英語リンク
-section.section-bg-lightgray
-  .section-top
-  .section-content
-    h2|時間割
-    p.section-content-text 
-      |年間を通じてライブ授業が平日の夜を中心に配信されます。当日受講が難しくても、録画授業をアーカイブで視聴可能。学校の予定や他の習いごとに合わせて柔軟に受講することができます。
-    .section-content-img
-      img(src='https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg')   
-    .section-content-note 
-      |※各授業は同じ内容を週に2回配信します。どちらかをご受講ください。
-section.section-bg-white
-  div.section-top
-  .section-content
-    h2|受講費用について
-    .section-content-img
-      img(src='https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg')
-    .section-content-note 
-      |※グローバル英語／クリエイティブ・プログラミングの受講費用はセット割引対象外です。
-section.section-bg-lightgray
-  .section-top
-  .section-content
-    h2|入会について
-    p.section-content-text 
-      |テキストテキストテキストテキストテキストテキスト
-    .section-content-flow 
-       .section-content-flow-title 
-          span.section-content-flow-title-number
-            |1. 
-          span.section-content-flow-title-text 
-            |会員情報を登録しましょう
-       .section-content-flow-text 
-           |「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。会員登録するだけでは費用は発生しませんので、ご安心ください。
-    .section-content-flow 
-       .section-content-flow-title 
-          span.section-content-flow-title-number
-            |2. 
-          span.section-content-flow-title-text 
-            |受けたい授業を申し込みましょう
-       .section-content-flow-text 
-            |会員専用の学習ページで、受講したい科目に申し込むことができます。「今すぐ無料トライアル」ボタンを押して、決済情報を入力する画面に移動します。※登録初月は無料となりますので、費用は発生しません。
-footer 
-   div.footer-top
-   p.p-footer-text 
-      |© ワオ・コーポレーション All rights reserved.
+.fixed-button(style='display:none;')
+   a(href="#cv")
+      |本入会の詳細を見る 
+.wrapper
+  .fv 
+    img(src=ImgFv)
+  section.section-bg-lightgray
+    //- .section-top
+    .section-content
+      h2|ワオ未来塾とは
+      p.section-content-text 
+        |自分らしく生きるうえで必要になる自己肯定感を養う「哲学（思考力）」、正しく物事を見る目を育む「科学リテラシー」、社会を支える仕組みを学ぶ「経済（お金）」、世界共通言語とも言える 「英語」と「プログラミング」を身につけます。
+      .section-content-img
+        img(src=ImgSubject)
+  section.section-bg-white
+    div.section-top
+    .section-content
+      h2|授業の流れ
+      p.section-content-text 
+        |ひとつのテーマをじっくり3週間かけて深掘りし、次の月には新しいテーマがスタートします。毎月、新しい発見と驚きが待っています！
+      .section-content-img
+        img(src=ImgFlowLesson)
+    .section-content
+      h2|年間のカリキュラム
+      p.section-content-text 
+        |基本的には月ごとのテーマ設定となっていますので、何月に入会しても授業を楽しむことができます。
+      .section-content-img
+        img(src=ImgCurriculum)    
+      .common-button.common-button-green    
+        a(href=PdfCurriculumn, target='_blank')
+          div
+            |カリキュラム表を見る
+          div.img-pdf
+            img(src=IcnPdf)
+    .section-content
+      h2|グローバル英語について
+      p.section-content-text 
+        |グローバル英語についてはコチラのページから確認できます
+      div 
+        a(href=UrlLpGlobalEnglish, target='_blank')
+          img.img-globalenglish(src=ImgEnglish)
+  section.section-bg-lightgray
+    .section-top
+    .section-content
+      h2|時間割
+      p.section-content-text 
+        |年間を通じてライブ授業が平日の夜を中心に配信されます。当日受講が難しくても、録画授業をアーカイブで視聴可能。学校の予定や他の習いごとに合わせて柔軟に受講することができます。
+      .section-content-img
+        img.img-register(src=ImgSchedule)   
+      .section-content-note 
+        |※各授業は同じ内容を週に2回配信します。どちらかをご受講ください。
+  section.section-bg-white
+    div.section-top
+    .section-content
+      h2|受講費用について
+      .section-content-img
+        img.img-price(src=ImgPrice)
+      .section-content-note 
+        |※グローバル英語／クリエイティブ・プログラミングの受講費用はセット割引対象外です。
+  section.section-bg-lightgray#cv
+    .section-top
+    .section-content
+      h2|入会について
+      p.section-content-text 
+        |体験期間中申し込むと、2週目からの授業に間に合います。さらに当月内は無料で受講いただけます。
+      .section-content-flow 
+        .section-content-flow-title 
+            span.section-content-flow-title-number
+              |1. 
+            span.section-content-flow-title-text 
+              |会員情報を登録しましょう
+        .section-content-flow-text 
+            |「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。会員登録するだけでは費用は発生しませんので、ご安心ください。
+        .common-button.common-button-green
+          a(href=UrlMoodleRegister, target='_blank')  
+            .common-button-text 
+              |無料会員登録
+            .common-button-img.img-blank 
+              img(src=IcnBlank)
+      .section-content-flow 
+        .section-content-flow-title 
+            span.section-content-flow-title-number
+              |2. 
+            span.section-content-flow-title-text 
+              |受けたい授業を申し込みましょう
+        .section-content-flow-text 
+              |会員専用の学習ページで、受講したい科目に申し込むことができます。「今すぐ無料トライアル」ボタンを押して、決済情報を入力する画面に移動します。※登録初月は無料となりますので、費用は発生しません。
+        .section-content-flow-img 
+            img.img-register(src=ImgRegister) 
+  footer 
+    div.footer-top
+    p.p-footer-text 
+        |© ワオ・コーポレーション All rights reserved.

@@ -1,19 +1,4 @@
-body {
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto;
-  color: $cl-gray;
-}
-
-h2 {
-  @include font-size-l;
-  line-height: $lineheight-normal;
-  text-align: center;
-  margin: 0 auto 20px;
-  color: $cl-black;
-  letter-spacing: 2px;
-}
-$border-height: 42px;
+$border-height: 55px;
 
 @mixin section-style($bg-color, $top-bg-color) {
   background: $bg-color;
@@ -33,6 +18,86 @@ $border-height: 42px;
   }
 }
 
+.fixed-button {
+  a {
+    position: fixed;
+    width: 88%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $cl-waogreen;
+    color: $cl-white;
+    text-decoration: none;
+    @include font-size-m;
+    border-radius: $border-radius-full;
+    margin: 0 auto 20px;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    z-index: 999;
+  }
+}
+
+.common-button {
+  a {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $cl-waogreen;
+    color: $cl-white;
+    text-decoration: none;
+    @include font-size-m;
+    border-radius: $border-radius-full;
+    gap: 10px;
+    margin: 0 auto 20px;
+    .img-pdf img {
+      height: 30px;
+    }
+    .img-blank img {
+      height: 15px;
+    }
+  }
+}
+
+body {
+  color: $cl-gray;
+}
+
+.wrapper {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.12);
+}
+
+.fv {
+  position: relative;
+  &::before {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    height: $border-height;
+    width: 100%;
+    display: block;
+    background: $cl-graylightest;
+    border-radius: $border-radius-extrabigplus $border-radius-extrabigplus 0 0;
+  }
+}
+
+h2 {
+  @include font-size-l;
+  line-height: $lineheight-normal;
+  text-align: center;
+  margin: 0 auto 22px;
+  color: $cl-black;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 section.section-bg-lightgray {
   @include section-style($cl-graylightest, white);
 }
@@ -43,9 +108,12 @@ section.section-bg-white {
 
 section {
   .section-content-text {
-    margin: 0 auto 20px;
+    margin: 0 auto 26px;
     line-height: $lineheight-relaxed;
     @include font-size-xs;
+  }
+  .section-content-img img {
+    margin: 0 auto 30px;
   }
   .section-content-note {
     @include font-size-s;
@@ -55,8 +123,9 @@ section {
   .section-content {
     width: calc(100% - 50px);
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
+
   .section-content-flow {
     background: $cl-white;
     padding: 20px 24px;
@@ -72,14 +141,29 @@ section {
       }
       span.section-content-flow-title-text {
         @include font-size-xm;
+        font-weight: bold;
         // margin: 0 8px 0 0;
       }
     }
     .section-content-flow-text {
       @include font-size-xs;
       line-height: $lineheight-relaxed;
+      margin: 0 auto 15px;
     }
   }
+}
+
+img.img-globalenglish {
+  border-radius: $border-radius-big;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 12px 0px;
+}
+img.img-price {
+  border-radius: $border-radius-big;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 12px 0px;
+}
+
+img.img-register {
+  border-radius: $border-radius-middle;
 }
 
 footer {
@@ -88,7 +172,7 @@ footer {
   text-align: center;
   background: $cl-black;
   color: white;
-  // border-radius: 100px 100px 0 0;
+  @include font-size-ss;
   .footer-top {
     width: 100%;
     height: $border-height;
