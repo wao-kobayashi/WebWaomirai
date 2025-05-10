@@ -4318,6 +4318,7 @@ select {
 .fixed-button a {
   position: fixed;
   width: 88%;
+  max-width: 420px;
   height: 54px;
   display: flex;
   justify-content: center;
