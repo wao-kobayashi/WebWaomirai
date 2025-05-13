@@ -194,3 +194,74 @@ footer {
 }
 
 //ここからかこの
+
+// 横向き表示オーバーレイ
+#rotate-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 88%;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+
+  .rotate-icon {
+    font-size: 80px;
+    margin-bottom: 0px;
+    animation: rotateAnimation 8s infinite ease-in-out;
+
+    img {
+      width: 90px;
+      margin: 10px 20px 0 0;
+      text-align: center;
+    }
+  }
+
+  .rotate-text {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .rotate-subtext {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotateAnimation {
+  10% {
+    transform: rotate(90deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #rotate-overlay {
+    display: flex;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #rotate-overlay {
+    display: none !important;
+  }
+}

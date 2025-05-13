@@ -1,0 +1,209 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 横向き表示を促すオーバーレイ
+
+    style.
+      /* スタイル部分は変更なし */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+  
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .modal-content {
+        background-color: white;
+        padding: 45px 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 80%;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+  
+      .modal-message {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+  
+      .non-closable {
+        pointer-events: none;
+      }
+  
+      .main-content {
+        padding: 20px;
+        text-align: center;
+      }
+  
+      .valid-message {
+        font-size: 18px;
+        color: #27ae60;
+        margin: 20px 0;
+      }
+      #rotate-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right:0;
+      bottom:0;
+      margin:auto;
+      width: 88%;
+      height: 250px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius:20px;
+      }
+      
+      .rotate-icon {
+      font-size: 80px;
+      margin-bottom: 0px;
+      animation: rotateAnimation 8s infinite ease-in-out;
+      
+      }
+      img{
+      width:90px;
+      margin:10px 20px 0 0;
+      text-align:center;
+      
+      }
+      
+      .rotate-text {
+      font-size: 19px;
+      margin-bottom: 10px;
+      }
+      
+      .rotate-subtext {
+      font-size: 16px;
+      opacity: 0.8;
+      }
+      
+      @keyframes rotateAnimation {
+      10% {
+      transform: rotate(90deg);
+      }
+      30% {
+      transform: rotate(0deg);
+      }
+      50% {
+      transform: rotate(0deg);
+      }
+      70% {
+      transform: rotate(90deg);
+      }
+      }
+      
+      @media screen and (orientation: portrait) {
+      #rotate-overlay {
+      display: flex;
+      }
+      }
+      
+      @media screen and (orientation: landscape) {
+      #rotate-overlay {
+      display: none !important;
+      }
+      }
+    script(src="https://code.jquery.com/jquery-3.7.1.min.js")
+  body
+    // メインコンテンツ
+    #content.
+       %%content%%
+    #rotate-overlay(style='display:none;')
+      .rotate-icon
+        img(src="https://go.waomirai.com/l/1026513/2025-05-10/hm35q/1026513/1746864879A2rbr0FR/icn_sp.svg")
+      .rotate-text 
+        |スマホを横向きにすると
+        br
+        |快適に授業が受けられます。
+    #expiredModal.modal
+      .modal-content
+        .modal-message このコンテンツの視聴期限は終了しています。
+    #noParamModal.modal
+      .modal-content
+        .modal-message 正しいリンクを使用してください
+    script.
+
+      $(document).ready(function() {
+          
+          const deadlineDates = {
+            '2025_may_cheery': new Date(2025, 4, 18, 23, 59),
+            '2025_june_sunny': new Date(2025, 5, 8, 23, 59)
+          };
+          const currentDate = new Date();
+          const monthParam = new URLSearchParams(window.location.search).get('key'); // "key"パラメータの値を取得
+          // パラメータが無い、または無効な場合はエラーモーダル表示
+          if (!monthParam || !deadlineDates[monthParam]) {
+            $('#noParamModal').css('display', 'flex');
+            return;
+          }
+          // 期限切れの場合のみモーダル表示
+          if (currentDate > deadlineDates[monthParam]) {
+            $('#expiredModal').css('display', 'flex');
+          }
+      });
+    script.
+      
+      $(function() {
+        // オーバーレイの表示状態を管理するフラグ
+        let shown = false;
+
+        // オーバーレイ表示の条件チェックと表示制御を行う関数
+        function showOverlayIfNeeded() {
+          // 画面の向きを判定（縦向きかどうか）
+          const isPortrait = window.innerHeight > window.innerWidth;
+          
+          // 画面幅がモバイルサイズ（450px以下）かどうか
+          const isMobileWidth = window.innerWidth <= 450;
+          
+          // モバイルデバイスかどうかを判定（UserAgentで判定）
+          const isMobileDevice = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+
+          // 以下の条件が全て満たされた場合にオーバーレイを表示
+          // 1. 画面が縦向き
+          // 2. 画面幅が450px以下
+          // 3. モバイルデバイス
+          // 4. まだオーバーレイが表示されていない
+          if (isPortrait && isMobileWidth && isMobileDevice && !shown) {
+            // オーバーレイを表示
+            $('#rotate-overlay').show();
+            
+            // 2秒後に
+            setTimeout(() => {
+              // オーバーレイを500msかけてフェードアウト
+              $('#rotate-overlay').fadeOut(500);
+            }, 2000);
+            
+            // 表示済みフラグを立てる（二度と表示されないように）
+            shown = true;
+          }
+        }
+
+        // 以下のイベントが発生したときにオーバーレイ表示をチェック
+        // - load: ページ読み込み時
+        // - resize: ウィンドウサイズ変更時
+        // - orientationchange: デバイスの向きが変わった時
+        $(window).on('load resize orientationchange', showOverlayIfNeeded);
+      });
