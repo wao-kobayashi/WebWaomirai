@@ -189,6 +189,7 @@ header {
     width: 98%;
     min-width: auto;
     margin: 0 -5% 0 auto;
+    aspect-ratio: 367.5 / 308.52;
   }
   // img {
   //   opacity: 0;
@@ -427,6 +428,7 @@ header {
   }
   @include responsive-style(768px) {
     width: 100%;
+    aspect-ratio: 335 / 279.67;
   }
 }
 .lp-firstweek-free-intro-contents-main {
@@ -505,6 +507,9 @@ header {
         }
         img {
           border-radius: $border-radius-extrabigplus;
+        }
+        @include responsive-style(768px) {
+          aspect-ratio: 335 / 317.36;
         }
       }
       .lp-firstweek-free-feature-grid-child-subtitle {
@@ -839,6 +844,7 @@ header {
   position: relative;
   @include responsive-style(768px) {
     border-radius: 40px;
+    aspect-ratio: 335 / 188.44;
   }
   &::before {
     content: "";

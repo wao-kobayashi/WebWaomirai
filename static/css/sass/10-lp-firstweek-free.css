@@ -4567,6 +4567,7 @@ header .header-right a {
     width: 98%;
     min-width: auto;
     margin: 0 -5% 0 auto;
+    aspect-ratio: 367.5/308.52;
   }
 }
 
@@ -4932,6 +4933,7 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-intro-contents-image {
     width: 100%;
+    aspect-ratio: 335/279.67;
   }
 }
 
@@ -5046,6 +5048,11 @@ header .header-right a {
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-image img {
   border-radius: 100px;
+}
+@media screen and (max-width: 768px) {
+  .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-image {
+    aspect-ratio: 335/317.36;
+  }
 }
 .lp-firstweek-free-feature .lp-firstweek-free-feature-grid .lp-firstweek-free-feature-grid-child .lp-firstweek-free-feature-grid-child-subtitle {
   display: flex;
@@ -5490,6 +5497,7 @@ header .header-right a {
 @media screen and (max-width: 768px) {
   .lp-firstweek-free-events-main-list-item-image {
     border-radius: 40px;
+    aspect-ratio: 335/188.44;
   }
 }
 .lp-firstweek-free-events-main-list-item-image::before {
