@@ -1,0 +1,95 @@
+style.
+    .fv-scroll img{
+    transition: opacity 0.5s ease-in-out; /* 0.5秒かけて変化 */
+    opacity: 1; /* 初期値 */
+    }
+
+script.
+  $(function() {
+    // スクロールに応じて画像をフェードアウト/イン
+    // - flag: フェード状態を管理するフラグ
+    // - scroll: フェード対象の画像要素
+    var flag = false,
+        scroll = $('.fv-scroll img');
+    
+    // 初期状態で画像を表示
+    scroll.css('opacity', 1);
+
+    // スクロールイベントの監視
+    $(window).on('scroll', function() {
+      // スクロール位置が250pxを超えた場合
+      if ($(this).scrollTop() > 250) {
+        if (!flag) {
+          flag = true;
+          // 画像をフェードアウト（透明度0）
+          scroll.css('opacity', 0);
+        }
+      } else {
+        if (flag) {
+          flag = false;
+          // 画像をフェードイン（透明度1）
+          scroll.css('opacity', 1);
+        }
+      }
+    });
+  });
+
+script. 
+    // モーダルウィンドウの表示制御
+    // - 各レベル（平日/土曜）のボタンクリックで対応するモーダルを表示
+    // - 背景オーバーレイも同時に表示
+    
+    // 平日レベル1のモーダル表示
+    $('.button-level1-weekdays').click(function() {
+        $('.modal-level1-weekdays').show();
+        $('.bg-modal').show();
+    });
+    
+    // 土曜レベル1のモーダル表示
+    $('.button-level1-saturday').click(function() {
+        $('.modal-level1-saturday').show();
+        $('.bg-modal').show();
+    });
+    
+    // 平日レベル2のモーダル表示
+    $('.button-level2-weekdays').click(function() {
+        $('.modal-level2-weekdays').show();
+        $('.bg-modal').show();
+    });
+    
+    // モーダル閉じるボタンの処理
+    // - モーダルと背景オーバーレイを非表示
+    $('.modal-close').click(function() {
+        $('.modal,.bg-modal').hide();
+        $('.bg-modal').hide();
+    });
+
+script.
+    // スクロールに応じて固定ボタンを表示/非表示
+    // - スクロール位置が250pxを超えたら表示
+    // - 250px未満に戻ったら非表示
+    $(function () {
+        var pagetop = $('.fixed-button'); // 固定ボタン要素のキャッシュ
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 250) {
+                pagetop.fadeIn(); // フェードインで表示
+            } else {
+                pagetop.fadeOut(); // フェードアウトで非表示
+            }
+        });
+    });
+
+script.
+    // 横スクロールに応じて矢印を表示/非表示
+    // - 横スクロールが50pxを超えたら矢印を非表示
+    // - 50px未満に戻ったら矢印を表示
+    $(function () {            
+        $(".section-el-second-content-process").on("scroll", function () {
+            if ($(this).scrollLeft() > 50) {
+                $(".lp-section-scroll img").fadeOut(); // 矢印をフェードアウト
+            } else {
+                $(".lp-section-scroll img").fadeIn(); // 矢印をフェードイン
+            }
+        });
+    });
+

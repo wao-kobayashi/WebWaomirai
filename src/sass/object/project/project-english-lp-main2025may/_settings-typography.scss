@@ -1,0 +1,48 @@
+/* fontsize */
+
+body {
+  font-family: "Avenir LT Pro", "Jost", "Noto Sans JP", sans-serif;
+  color: $cl-black;
+}
+.font-notosans-jp {
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont,
+    /* macOS/iOS */ "Hiragino Sans", /* macOS */ "Yu Gothic", Meiryo,
+    /* Windows */ "Noto Sans JP", /* Android & web-font */ sans-serif; /* fallback */
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+    Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+@mixin font-size-s {
+  font-size: 12px;
+  @include responsive-style(768px) {
+    font-size: 11.5px;
+  }
+}
+
+@mixin font-size-m {
+  font-size: 17px;
+  @include responsive-style(768px) {
+    font-size: 16px;
+  }
+}
+
+@mixin font-size-ml {
+  font-size: 22px;
+  @include responsive-style(768px) {
+    font-size: 20px;
+  }
+}
+
+@mixin font-size-l {
+  font-size: 27px;
+  @include responsive-style(768px) {
+    font-size: 24px;
+  }
+}
+
+@mixin font-size-xl {
+  font-size: 34px;
+  @include responsive-style(768px) {
+    font-size: 30px;
+  }
+}
