@@ -4,6 +4,13 @@ body {
   font-family: "Avenir LT Pro", "Jost", "Noto Sans JP", sans-serif;
   color: $cl-black;
 }
+.font-notosans-jp {
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont,
+    /* macOS/iOS */ "Hiragino Sans", /* macOS */ "Yu Gothic", Meiryo,
+    /* Windows */ "Noto Sans JP", /* Android & web-font */ sans-serif; /* fallback */
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+    Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
 
 @mixin font-size-s {
   font-size: 12px;

@@ -101,6 +101,10 @@
 
 //料金
 .section-el-second-price {
+  padding: 0 0 0px;
+  @include responsive-style(768px) {
+    padding: 0 0 60px;
+  }
   @include section-styles($cl-white, $english-yellowpale, $cl-white);
 }
 

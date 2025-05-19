@@ -2,6 +2,109 @@ body {
   overflow-x: hidden;
 }
 
+.fixed-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  @include responsive-style(768px) {
+    width: 340px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+  }
+  .lp-cv-button {
+    a {
+      padding: 10px 10px;
+      background: $cl-main-orange !important;
+      display: inline-flex;
+      margin: 0 auto;
+      border-radius: 6px;
+      flex-direction: row;
+      text-decoration: none;
+      position: relative;
+      justify-content: center;
+      width: 400px;
+      @include responsive-style(768px) {
+        width: 340px;
+        padding: 10px 10px;
+      }
+      .english-fv-absolute-cvtop {
+        position: absolute;
+        // left: 0;
+        // right: 0;
+        margin: auto;
+        top: -14px;
+        background: $cl-white;
+        border: 1px solid $cl-main-orange;
+        border-radius: 100px;
+        color: $cl-main-orange;
+        text-align: center;
+        padding: 8px 13px 5px;
+        display: table;
+        line-height: 1;
+        @include font-size-s;
+      }
+
+      .lp-cv-button-main {
+        color: $cl-white;
+        font-weight: 500;
+        padding: 3px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 19px;
+        @include responsive-style(768px) {
+          font-size: 17px;
+        }
+        position: relative;
+        .lp-cv-button-main-text {
+          position: absolute;
+          left: 0;
+          right: 0;
+          text-align: center;
+        }
+        .lp-cv-button-main-free {
+          @include responsive-style(768px) {
+            width: 45px;
+          }
+        }
+        .lp-cv-button-main-arrow {
+          position: relative;
+          display: inline-block;
+          padding: 0 0 0 16px;
+          color: #000;
+          vertical-align: middle;
+          text-decoration: none;
+          font-size: 15px;
+          &::before {
+            left: 3px;
+            top: -1px;
+            width: 12px;
+            height: 12px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          &::before,
+          &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            content: "";
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
+
 .lp-section-text {
   width: 100%;
   // max-width: $section-maxwidth;
@@ -350,108 +453,6 @@ body {
     }
   }
 }
-.fixed-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 99;
-  @include responsive-style(768px) {
-    width: 340px;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    margin: auto;
-  }
-  .lp-cv-button {
-    a {
-      padding: 10px 10px;
-      background: $cl-main-orange !important;
-      display: inline-flex;
-      margin: 0 auto;
-      border-radius: 6px;
-      flex-direction: row;
-      text-decoration: none;
-      position: relative;
-      justify-content: center;
-      width: 400px;
-      @include responsive-style(768px) {
-        width: 340px;
-        padding: 10px 10px;
-      }
-      .english-fv-absolute-cvtop {
-        position: absolute;
-        // left: 0;
-        // right: 0;
-        margin: auto;
-        top: -14px;
-        background: $cl-white;
-        border: 1px solid $cl-main-orange;
-        border-radius: 100px;
-        color: $cl-main-orange;
-        text-align: center;
-        padding: 8px 13px 5px;
-        display: table;
-        line-height: 1;
-        @include font-size-s;
-      }
-
-      .lp-cv-button-main {
-        color: $cl-white;
-        font-weight: 500;
-        padding: 3px 0 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        font-size: 19px;
-        @include responsive-style(768px) {
-          font-size: 17px;
-        }
-        position: relative;
-        .lp-cv-button-main-text {
-          position: absolute;
-          left: 0;
-          right: 0;
-          text-align: center;
-        }
-        .lp-cv-button-main-free {
-          @include responsive-style(768px) {
-            width: 45px;
-          }
-        }
-        .lp-cv-button-main-arrow {
-          position: relative;
-          display: inline-block;
-          padding: 0 0 0 16px;
-          color: #000;
-          vertical-align: middle;
-          text-decoration: none;
-          font-size: 15px;
-          &::before {
-            left: 3px;
-            top: -1px;
-            width: 12px;
-            height: 12px;
-            border-top: 2px solid #fff;
-            border-right: 2px solid #fff;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-          }
-          &::before,
-          &::after {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            content: "";
-            vertical-align: middle;
-          }
-        }
-      }
-    }
-  }
-}
 
 // なぜグローバル英語を選ぶのか
 // - 理由の説明
@@ -506,10 +507,10 @@ section.section-el-second-why {
       @include font-size-m;
       line-height: 1.75;
       margin: 10px 0 0px;
-      color: $cl-waogray;
+      color: $cl-black;
       font-weight: 400;
       strong {
-        color: $cl-gray;
+        color: $cl-black;
         font-weight: 700;
       }
       @include responsive-style(768px) {
@@ -813,7 +814,7 @@ section.section-el-second-ability {
       @include font-size-m;
       line-height: 1.6;
       font-weight: 400;
-      color: $cl-waogray;
+      color: $cl-black;
       @include responsive-style(768px) {
         margin: 0 0 20px;
       }
@@ -890,7 +891,7 @@ section.section-el-second-coarce {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 10px;
+        grid-row-gap: 20px;
       }
       img {
         border-radius: 20px;
@@ -1081,7 +1082,7 @@ section.section-el-second-price {
       display: flex;
       align-items: center;
       flex: 1;
-      padding: 0px 0 0 0px;
+      padding: 7px 0 0 0px;
       height: 150px;
       @include responsive-style(768px) {
         height: 90px;
@@ -1162,6 +1163,7 @@ section.section-el-second-price {
       @include font-size-xl;
       font-weight: 600;
       line-height: 0.7;
+      padding: 7px 0 0 0px;
       @include responsive-style(768px) {
         padding: 30px 0;
       }
@@ -1175,7 +1177,7 @@ section.section-el-second-price {
     margin: 0 auto;
     color: $cl-graylight;
     line-height: 1.8;
-    text-align: right;
+    text-align: center;
     @include font-size-s;
     @include responsive-style(768px) {
       text-align: center;
@@ -1295,18 +1297,18 @@ section.section-el-second-contact {
 // - 背景色：白
 section.section-el-cv {
   // background: #FAF3CE;
-  padding: 0px 0 105px;
+  padding: 0px 0 150px;
   text-align: center;
   max-width: 1200px;
   width: 90%;
   border-radius: 100px;
-  margin: 120px auto 150px;
+  margin: 30px auto 90px;
   display: grid;
   @include responsive-style(768px) {
     width: 95%;
     border-radius: 40px;
-    margin: 60px auto 90px;
-    padding: 60px 0 75px;
+    margin: 0px auto 90px;
+    padding: 0px 0 75px;
     // padding: 200px 0 205px;
   }
   .lp-cv-title-text {
@@ -1624,42 +1626,6 @@ section.section-el-cv {
     }
   }
 }
-
-footer {
-  width: 100%;
-  padding: 120px 0px 0px;
-  text-align: center;
-  background: $cl-black;
-  color: $cl-white;
-  border-radius: 100px 100px 0 0;
-  @include responsive-style(768px) {
-    padding: 100px 0px 0px;
-    border-radius: 50px 50px 0 0;
-  }
-  ul {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  li {
-    list-style: none;
-    padding: 10px 0;
-    a {
-      color: $cl-white;
-      text-decoration: none;
-      @include font-size-m;
-    }
-  }
-  .footer-logo img {
-    width: 170px;
-    margin: 60px auto 45px;
-  }
-  .footer-copyright {
-    width: 100%;
-    border-top: 1px solid #fff;
-    padding: 15px 0 15px;
-  }
-}
-
 .lp-section-faq-wrapper {
   margin: 15px auto 0;
 }
@@ -1694,5 +1660,40 @@ footer {
       @include font-size-m;
       margin: 10px 0 0;
     }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 120px 0px 0px;
+  text-align: center;
+  background: $cl-black;
+  color: $cl-white;
+  border-radius: 100px 100px 0 0;
+  @include responsive-style(768px) {
+    padding: 100px 0px 0px;
+    border-radius: 50px 50px 0 0;
+  }
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  li {
+    list-style: none;
+    padding: 10px 0;
+    a {
+      color: $cl-white;
+      text-decoration: none;
+      @include font-size-m;
+    }
+  }
+  .footer-logo img {
+    width: 170px;
+    margin: 60px auto 45px;
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding: 15px 0 15px;
   }
 }

@@ -4065,6 +4065,11 @@ body {
   color: #262626;
 }
 
+.font-notosans-jp {
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif; /* fallback */
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
 /* animation */
 @keyframes lp-cta__btn {
   0%, 55%, 65%, 70%, 80% {
@@ -4224,7 +4229,13 @@ body {
 }
 
 .section-el-second-price {
+  padding: 0 0 0px;
   background: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .section-el-second-price {
+    padding: 0 0 60px;
+  }
 }
 .section-el-second-price .section-el-second-top {
   background: #faf3ce;
@@ -4511,6 +4522,114 @@ body {
 
 body {
   overflow-x: hidden;
+}
+
+.fixed-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+}
+@media screen and (max-width: 768px) {
+  .fixed-button {
+    width: 340px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+  }
+}
+.fixed-button .lp-cv-button a {
+  padding: 10px 10px;
+  background: #ee7a00 !important;
+  display: inline-flex;
+  margin: 0 auto;
+  border-radius: 6px;
+  flex-direction: row;
+  text-decoration: none;
+  position: relative;
+  justify-content: center;
+  width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .fixed-button .lp-cv-button a {
+    width: 340px;
+    padding: 10px 10px;
+  }
+}
+.fixed-button .lp-cv-button a .english-fv-absolute-cvtop {
+  position: absolute;
+  margin: auto;
+  top: -14px;
+  background: #ffffff;
+  border: 1px solid #ee7a00;
+  border-radius: 100px;
+  color: #ee7a00;
+  text-align: center;
+  padding: 8px 13px 5px;
+  display: table;
+  line-height: 1;
+  font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  .fixed-button .lp-cv-button a .english-fv-absolute-cvtop {
+    font-size: 11.5px;
+  }
+}
+.fixed-button .lp-cv-button a .lp-cv-button-main {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 3px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 19px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .fixed-button .lp-cv-button a .lp-cv-button-main {
+    font-size: 17px;
+  }
+}
+.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-free {
+    width: 45px;
+  }
+}
+.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 16px;
+  color: #000;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+}
+.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow::before {
+  left: 3px;
+  top: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow::before, .fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
 }
 
 .lp-section-text {
@@ -4887,114 +5006,6 @@ body {
   margin: 0 0 0 8px;
 }
 
-.fixed-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 99;
-}
-@media screen and (max-width: 768px) {
-  .fixed-button {
-    width: 340px;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    margin: auto;
-  }
-}
-.fixed-button .lp-cv-button a {
-  padding: 10px 10px;
-  background: #ee7a00 !important;
-  display: inline-flex;
-  margin: 0 auto;
-  border-radius: 6px;
-  flex-direction: row;
-  text-decoration: none;
-  position: relative;
-  justify-content: center;
-  width: 400px;
-}
-@media screen and (max-width: 768px) {
-  .fixed-button .lp-cv-button a {
-    width: 340px;
-    padding: 10px 10px;
-  }
-}
-.fixed-button .lp-cv-button a .english-fv-absolute-cvtop {
-  position: absolute;
-  margin: auto;
-  top: -14px;
-  background: #ffffff;
-  border: 1px solid #ee7a00;
-  border-radius: 100px;
-  color: #ee7a00;
-  text-align: center;
-  padding: 8px 13px 5px;
-  display: table;
-  line-height: 1;
-  font-size: 12px;
-}
-@media screen and (max-width: 768px) {
-  .fixed-button .lp-cv-button a .english-fv-absolute-cvtop {
-    font-size: 11.5px;
-  }
-}
-.fixed-button .lp-cv-button a .lp-cv-button-main {
-  color: #ffffff;
-  font-weight: 500;
-  padding: 3px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-size: 19px;
-  position: relative;
-}
-@media screen and (max-width: 768px) {
-  .fixed-button .lp-cv-button a .lp-cv-button-main {
-    font-size: 17px;
-  }
-}
-.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-free {
-    width: 45px;
-  }
-}
-.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow {
-  position: relative;
-  display: inline-block;
-  padding: 0 0 0 16px;
-  color: #000;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: 15px;
-}
-.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow::before {
-  left: 3px;
-  top: -1px;
-  width: 12px;
-  height: 12px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow::before, .fixed-button .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arrow::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  content: "";
-  vertical-align: middle;
-}
-
 @media screen and (min-width: 768px) {
   section.section-el-second-why {
     margin: 160px auto 0px;
@@ -5061,7 +5072,7 @@ section.section-el-second-why .section-el-second-content-detail .section-el-seco
   font-size: 17px;
   line-height: 1.75;
   margin: 10px 0 0px;
-  color: #4d4d4d;
+  color: #262626;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
@@ -5070,7 +5081,7 @@ section.section-el-second-why .section-el-second-content-detail .section-el-seco
   }
 }
 section.section-el-second-why .section-el-second-content-detail .section-el-second-content-detail-text strong {
-  color: #4d4d4d;
+  color: #262626;
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
@@ -5432,7 +5443,7 @@ section.section-el-second-ability .section-el-second-content-ability-box .sectio
   font-size: 17px;
   line-height: 1.6;
   font-weight: 400;
-  color: #4d4d4d;
+  color: #262626;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-ability .section-el-second-content-ability-box .section-el-second-content-ability-box-right-txt {
@@ -5521,7 +5532,7 @@ section.section-el-second-coarce .section-el-second-content-coarce .lp-section-c
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 10px;
+    grid-row-gap: 20px;
   }
 }
 section.section-el-second-coarce .section-el-second-content-coarce .lp-section-course-box img {
@@ -5707,7 +5718,7 @@ section.section-el-second-price .lp-section-price .lp-section-price-box-left {
   display: flex;
   align-items: center;
   flex: 1;
-  padding: 0px 0 0 0px;
+  padding: 7px 0 0 0px;
   height: 150px;
 }
 @media screen and (max-width: 768px) {
@@ -5794,6 +5805,7 @@ section.section-el-second-price .lp-section-price .lp-section-price-box-right {
   font-size: 34px;
   font-weight: 600;
   line-height: 0.7;
+  padding: 7px 0 0 0px;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-price .lp-section-price .lp-section-price-box-right {
@@ -5819,7 +5831,7 @@ section.section-el-second-price .lp-section-price-note {
   margin: 0 auto;
   color: #999;
   line-height: 1.8;
-  text-align: right;
+  text-align: center;
   font-size: 12px;
 }
 @media screen and (max-width: 768px) {
@@ -5962,20 +5974,20 @@ section.section-el-second-contact .section-el-second-contact-right .section-el-s
 }
 
 section.section-el-cv {
-  padding: 0px 0 105px;
+  padding: 0px 0 150px;
   text-align: center;
   max-width: 1200px;
   width: 90%;
   border-radius: 100px;
-  margin: 120px auto 150px;
+  margin: 30px auto 90px;
   display: grid;
 }
 @media screen and (max-width: 768px) {
   section.section-el-cv {
     width: 95%;
     border-radius: 40px;
-    margin: 60px auto 90px;
-    padding: 60px 0 75px;
+    margin: 0px auto 90px;
+    padding: 0px 0 75px;
   }
 }
 section.section-el-cv .lp-cv-title-text {
@@ -6331,48 +6343,6 @@ section.section-el-cv .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arro
   vertical-align: middle;
 }
 
-footer {
-  width: 100%;
-  padding: 120px 0px 0px;
-  text-align: center;
-  background: #262626;
-  color: #ffffff;
-  border-radius: 100px 100px 0 0;
-}
-@media screen and (max-width: 768px) {
-  footer {
-    padding: 100px 0px 0px;
-    border-radius: 50px 50px 0 0;
-  }
-}
-footer ul {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-footer li {
-  list-style: none;
-  padding: 10px 0;
-}
-footer li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 17px;
-}
-@media screen and (max-width: 768px) {
-  footer li a {
-    font-size: 16px;
-  }
-}
-footer .footer-logo img {
-  width: 170px;
-  margin: 60px auto 45px;
-}
-footer .footer-copyright {
-  width: 100%;
-  border-top: 1px solid #fff;
-  padding: 15px 0 15px;
-}
-
 .lp-section-faq-wrapper {
   margin: 15px auto 0;
 }
@@ -6428,4 +6398,46 @@ footer .footer-copyright {
   .lp-section-faq .lp-section-faq-right .lp-section-faq-right-txt {
     font-size: 16px;
   }
+}
+
+footer {
+  width: 100%;
+  padding: 120px 0px 0px;
+  text-align: center;
+  background: #262626;
+  color: #ffffff;
+  border-radius: 100px 100px 0 0;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 100px 0px 0px;
+    border-radius: 50px 50px 0 0;
+  }
+}
+footer ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+footer li {
+  list-style: none;
+  padding: 10px 0;
+}
+footer li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+  footer li a {
+    font-size: 16px;
+  }
+}
+footer .footer-logo img {
+  width: 170px;
+  margin: 60px auto 45px;
+}
+footer .footer-copyright {
+  width: 100%;
+  border-top: 1px solid #fff;
+  padding: 15px 0 15px;
 }
