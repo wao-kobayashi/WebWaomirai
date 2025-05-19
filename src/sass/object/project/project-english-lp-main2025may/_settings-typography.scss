@@ -1,5 +1,10 @@
 /* fontsize */
 
+body {
+  font-family: "Avenir LT Pro", "Jost", "Noto Sans JP", sans-serif;
+  color: $cl-black;
+}
+
 @mixin font-size-s {
   font-size: 12px;
   @include responsive-style(768px) {

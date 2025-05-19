@@ -20,7 +20,7 @@ $z-indexes: (
   display: inline-table;
   height: auto;
   margin: auto;
-  background: white;
+  background: $cl-white;
   padding: 0 0 0px;
   border-radius: 20px;
   // overflow: hidden;
@@ -51,7 +51,7 @@ $z-indexes: (
         width: 20px;
         height: 4px;
         border-radius: 2px;
-        background: #fff;
+        background: $cl-white;
         transform-origin: center;
         transform: translate(-50%, -50%) rotate(45deg);
       }
@@ -64,7 +64,7 @@ $z-indexes: (
     padding: 20px 0 10px;
     text-align: center;
     background: $cl-waogreen;
-    color: white;
+    color: $cl-white;
     @include font-size-ml;
     font-weight: bold;
     letter-spacing: 1px;

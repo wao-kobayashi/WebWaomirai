@@ -4060,6 +4060,11 @@ select {
   }
 }
 /* fontsize */
+body {
+  font-family: "Avenir LT Pro", "Jost", "Noto Sans JP", sans-serif;
+  color: #262626;
+}
+
 /* animation */
 @keyframes lp-cta__btn {
   0%, 55%, 65%, 70%, 80% {
@@ -4162,7 +4167,7 @@ select {
   background: #f6e245;
 }
 .section-el-second-why .section-el-second-top {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-why .section-el-second-top:before {
   background: #f6e245;
@@ -4172,67 +4177,67 @@ select {
   background: #faf3ce;
 }
 .section-el-second-ability .section-el-second-top {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-ability .section-el-second-top:before {
   background: #faf3ce;
 }
 
 .section-el-second-who {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-who .section-el-second-top {
   background: #faf3ce;
 }
 .section-el-second-who .section-el-second-top:before {
-  background: #fff;
+  background: #ffffff;
 }
 
 .section-el-second-coarce {
   background: #faebff;
 }
 .section-el-second-coarce .section-el-second-top {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-coarce .section-el-second-top:before {
   background: #faebff;
 }
 
 .section-el-second-process {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-process .section-el-second-top {
   background: #faebff;
 }
 .section-el-second-process .section-el-second-top:before {
-  background: #fff;
+  background: #ffffff;
 }
 
 .section-el-second-voice {
   background: #faf3ce;
 }
 .section-el-second-voice .section-el-second-top {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-voice .section-el-second-top:before {
   background: #faf3ce;
 }
 
 .section-el-second-price {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-price .section-el-second-top {
   background: #faf3ce;
 }
 .section-el-second-price .section-el-second-top:before {
-  background: #fff;
+  background: #ffffff;
 }
 
 .section-el-second-try {
   background: #f0f2f3;
 }
 .section-el-second-try .section-el-second-top {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-try .section-el-second-top:before {
   background: #f0f2f3;
@@ -4243,7 +4248,7 @@ select {
   border-radius: 0px 0px 100px 100px;
 }
 .section-el-second-faq .section-el-second-top {
-  background: #fff;
+  background: #ffffff;
 }
 .section-el-second-faq .section-el-second-top:before {
   background: #f0f2f3;
@@ -4315,18 +4320,18 @@ select {
   background: #fcf8ef;
 }
 .lp-section-bgpaleyellow .lp-section-title-txt {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 .lp-section-bglightgray {
   background: #f5f5f5;
 }
 .lp-section-bglightgray .lp-section-title-txt {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 .lp-section-bgwhite {
-  background: white;
+  background: #ffffff;
 }
 
 .lp-section-title-bgdecoration {
@@ -4394,7 +4399,7 @@ select {
   display: inline-table;
   height: auto;
   margin: auto;
-  background: white;
+  background: #ffffff;
   padding: 0 0 0px;
   border-radius: 20px;
 }
@@ -4426,7 +4431,7 @@ select {
   width: 20px;
   height: 4px;
   border-radius: 2px;
-  background: #fff;
+  background: #ffffff;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -4437,7 +4442,7 @@ select {
   padding: 20px 0 10px;
   text-align: center;
   background: #005c3f;
-  color: white;
+  color: #ffffff;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -4505,11 +4510,6 @@ select {
 }
 
 body {
-  font-family: "Avenir LT Pro", "Jost", "Noto Sans JP", sans-serif;
-  color: #262626;
-}
-
-#english-lp-improved-second {
   overflow-x: hidden;
 }
 
@@ -4592,7 +4592,7 @@ body {
 }
 .fvpc .fvpc-left a .lp-cv-button-main {
   font-size: 20px;
-  color: white;
+  color: #ffffff;
   font-weight: 500;
   padding: 3px 0 0;
   display: flex;
@@ -4721,7 +4721,7 @@ body {
 .fvsp .fvsp-left {
   width: 92%;
   margin: 220px 0 40px;
-  background: white;
+  background: #ffffff;
   z-index: 10;
   position: relative;
   padding: 20px 20px 30px;
@@ -4763,7 +4763,7 @@ body {
   right: 0;
   margin: auto;
   top: -14px;
-  background: white;
+  background: #ffffff;
   border: 1px solid #ee7a00;
   border-radius: 100px;
   color: #ee7a00;
@@ -4781,7 +4781,7 @@ body {
 }
 .fvsp .fvsp-left .lp-cv-button a .lp-cv-button-main {
   font-size: 17px;
-  color: white;
+  color: #ffffff;
   font-weight: 500;
   padding: 6px 0 0;
   text-align: center;
@@ -4870,7 +4870,7 @@ body {
   display: inline-flex;
   width: 33px;
   height: 33px;
-  color: white;
+  color: #ffffff;
   align-items: center;
   justify-content: center;
   background: #aa68aa;
@@ -4924,7 +4924,7 @@ body {
   position: absolute;
   margin: auto;
   top: -14px;
-  background: white;
+  background: #ffffff;
   border: 1px solid #ee7a00;
   border-radius: 100px;
   color: #ee7a00;
@@ -4940,7 +4940,7 @@ body {
   }
 }
 .fixed-button .lp-cv-button a .lp-cv-button-main {
-  color: white;
+  color: #ffffff;
   font-weight: 500;
   padding: 3px 0 0;
   display: flex;
@@ -5005,7 +5005,7 @@ section.section-el-second-why .section-el-second-content-title .section-el-secon
 }
 section.section-el-second-why .section-el-second-content-detail {
   max-width: 800px;
-  background: white;
+  background: #ffffff;
   margin: 45px auto 0;
   min-height: 500px;
   border-radius: 50px;
@@ -5028,7 +5028,7 @@ section.section-el-second-why .section-el-second-content-detail .section-el-seco
   font-size: 27px;
   border-radius: 100px;
   line-height: 1;
-  color: white;
+  color: #ffffff;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-why .section-el-second-content-detail .section-el-second-content-detail-reason {
@@ -5361,7 +5361,7 @@ section.section-el-second-ability .section-el-second-content-ability-box {
   max-width: 800px;
   padding: 0 20px;
   margin: 30px auto 0;
-  background: white;
+  background: #ffffff;
   display: grid;
   grid-template-columns: 210px 1fr;
   grid-column-gap: 30px;
@@ -5534,10 +5534,10 @@ section.section-el-second-coarce .lp-section-schedule {
   padding: 0 20px;
 }
 section.section-el-second-coarce .lp-section-schedule table {
-  background: white;
+  background: #ffffff;
 }
 
-section.section-el-second-process .section-el-second-content-process {
+.section-el-second-process .section-el-second-content-process {
   width: 100%;
   /* ビューポート幅いっぱいに広げる */
   overflow-x: scroll;
@@ -5549,42 +5549,42 @@ section.section-el-second-process .section-el-second-content-process {
   height: 340px;
 }
 @media screen and (max-width: 768px) {
-  section.section-el-second-process .section-el-second-content-process {
+  .section-el-second-process .section-el-second-content-process {
     margin: 30px 0 0;
   }
 }
-section.section-el-second-process .section-el-second-content-process div:first-child {
+.section-el-second-process .section-el-second-content-process div:first-child {
   margin: 0 0 0 60px;
 }
-section.section-el-second-process .section-el-second-content-process div:last-child {
+.section-el-second-process .section-el-second-content-process div:last-child {
   margin: 0 400px 0 0px;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img {
   display: inline-block;
   /* 横並びにするための設定 */
   width: 200px;
   height: 300px;
   text-align: center;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img img {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img img {
   box-shadow: 0 0 30px rgba(50, 50, 70, 0.15);
   border-radius: 10px;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-noshadow {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-noshadow {
   box-shadow: none !important;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-noshadow img {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-noshadow img {
   box-shadow: none !important;
   border-radius: 0px;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-arrow {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-arrow {
   width: 15px;
   height: 300px;
   display: inline-block;
   position: relative;
   margin: 0 20px 0 20px;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-arrow:before {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-arrow:before {
   content: "";
   top: 120px;
   position: absolute;
@@ -5593,14 +5593,14 @@ section.section-el-second-process .section-el-second-content-process .lp-section
   border-width: 14px 0 14px 14px;
   border-color: transparent transparent transparent #aa68aa;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-nagare {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-nagare {
   display: inline-flex;
   width: 105px;
   justify-content: center;
   height: 300px;
   position: relative;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-nagare img {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-nagare img {
   position: absolute;
   width: 100%;
   top: 0;
@@ -5609,14 +5609,14 @@ section.section-el-second-process .section-el-second-content-process .lp-section
   box-shadow: 0 0 30px rgba(50, 50, 70, 0.15);
   border-radius: 10px;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-close {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-close {
   display: inline-flex;
   width: 160px;
   justify-content: center;
   height: 300px;
   position: relative;
 }
-section.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-close img {
+.section-el-second-process .section-el-second-content-process .lp-section-study-process-img-close img {
   position: absolute;
   width: 160px;
   height: 160px;
@@ -5624,11 +5624,11 @@ section.section-el-second-process .section-el-second-content-process .lp-section
   bottom: 0;
   margin: auto;
 }
-section.section-el-second-process .lp-section-scroll {
+.section-el-second-process .lp-section-scroll {
   height: 50px;
   margin: 15px auto 15px;
 }
-section.section-el-second-process .lp-section-scroll img {
+.section-el-second-process .lp-section-scroll img {
   text-align: center;
   width: 120px;
   margin: 0px auto 0;
@@ -5641,7 +5641,7 @@ section.section-el-second-voice .lp-section-voice-box {
   grid-column-gap: 30px;
   width: 100%;
   margin: 30px auto 0;
-  background: white;
+  background: #ffffff;
   padding: 30px 45px !important;
   border-radius: 50px;
   max-width: 800px;
@@ -5691,7 +5691,7 @@ section.section-el-second-price .lp-section-price .lp-section-price-box {
   align-items: center;
   height: 150px;
   position: relative;
-  background: white;
+  background: #ffffff;
   border-radius: 50px;
   overflow: hidden;
 }
@@ -5719,7 +5719,7 @@ section.section-el-second-price .lp-section-price .lp-section-price-box-left .lp
   padding: 0 0 0 0px;
   width: calc(100% - 0px);
   text-align: center;
-  color: white;
+  color: #ffffff;
   font-size: 27px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -5790,7 +5790,7 @@ section.section-el-second-price .lp-section-price .lp-section-price-box-right {
   justify-content: center;
   align-items: flex-end;
   color: #aa68aa;
-  background: white;
+  background: #ffffff;
   font-size: 34px;
   font-weight: 600;
   line-height: 0.7;
@@ -6015,7 +6015,7 @@ section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper {
   }
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block {
-  background: white;
+  background: #ffffff;
   width: 80%;
   border-radius: 20px;
   overflow: hidden;
@@ -6051,7 +6051,7 @@ section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-les
   }
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-lessonday-wrapper-block-head {
-  color: white;
+  color: #ffffff;
   background: #005c3f;
   display: flex;
   padding: 10px 10px 3px 10px;
@@ -6136,7 +6136,7 @@ section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-les
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-lessonday-wrapper-block-button button:hover {
   background: #005c3f;
-  color: white;
+  color: #ffffff;
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-lessonday-wrapper-block-button button.button-level2-weekdays {
   border: 1px solid #aa68aa !important;
@@ -6144,7 +6144,7 @@ section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-les
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block .lp-cv-lessonday-wrapper-block-button button.button-level2-weekdays:hover {
   background: #aa68aa;
-  color: white !important;
+  color: #ffffff !important;
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-wrapper-block-or {
   text-align: center;
@@ -6198,7 +6198,7 @@ section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-time {
 }
 section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-time-day {
   font-size: 60px;
-  color: white;
+  color: #ffffff;
   line-height: 0.7;
 }
 @media screen and (max-width: 768px) {
@@ -6216,7 +6216,7 @@ section.section-el-cv .lp-cv-lessonday .lp-cv-lessonday-time-hourrange {
   font-size: 40px;
   font-weight: 600;
   line-height: 0.8;
-  color: white;
+  color: #ffffff;
   margin: 0 0 0 8px;
 }
 @media screen and (max-width: 768px) {
@@ -6253,7 +6253,7 @@ section.section-el-cv .lp-cv-button a .english-fv-absolute-cvtop {
   right: 0;
   margin: auto;
   top: -14px;
-  background: white;
+  background: #ffffff;
   border: 1px solid #ee7a00;
   border-radius: 100px;
   color: #ee7a00;
@@ -6277,11 +6277,11 @@ section.section-el-cv .lp-cv-button a .lp-cv-button-sub {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffffff;
   line-height: 1;
 }
 section.section-el-cv .lp-cv-button a .lp-cv-button-main {
-  color: white;
+  color: #ffffff;
   font-weight: 500;
   margin: 0 10px 0 10px;
   font-size: 22px;
@@ -6336,7 +6336,7 @@ footer {
   padding: 120px 0px 0px;
   text-align: center;
   background: #262626;
-  color: white;
+  color: #ffffff;
   border-radius: 100px 100px 0 0;
 }
 @media screen and (max-width: 768px) {
@@ -6354,7 +6354,7 @@ footer li {
   padding: 10px 0;
 }
 footer li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 17px;
 }

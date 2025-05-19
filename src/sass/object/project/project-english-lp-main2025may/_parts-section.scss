@@ -72,46 +72,46 @@
 }
 
 .section-el-second-why {
-  @include section-styles($english-yellow, #fff, $english-yellow);
+  @include section-styles($english-yellow, $cl-white, $english-yellow);
 }
 
 .section-el-second-ability {
-  @include section-styles($english-yellowpale, #fff, $english-yellowpale);
+  @include section-styles($english-yellowpale, $cl-white, $english-yellowpale);
 }
 
 //ラポール22
 .section-el-second-who {
-  @include section-styles(#fff, $english-yellowpale, #fff);
+  @include section-styles($cl-white, $english-yellowpale, $cl-white);
 }
 
 //授業コース
 .section-el-second-coarce {
-  @include section-styles($cl-english-pale, #fff, $cl-english-pale);
+  @include section-styles($cl-english-pale, $cl-white, $cl-english-pale);
 }
 
 //授業の流れ
 .section-el-second-process {
-  @include section-styles(#fff, $cl-english-pale, #fff);
+  @include section-styles($cl-white, $cl-english-pale, $cl-white);
 }
 
 //お客様からの声
 .section-el-second-voice {
-  @include section-styles($english-yellowpale, #fff, $english-yellowpale);
+  @include section-styles($english-yellowpale, $cl-white, $english-yellowpale);
 }
 
 //料金
 .section-el-second-price {
-  @include section-styles(#fff, $english-yellowpale, #fff);
+  @include section-styles($cl-white, $english-yellowpale, $cl-white);
 }
 
 //無料体験レッスンまでの流れ
 .section-el-second-try {
-  @include section-styles($cl-graylightest, #fff, $cl-graylightest);
+  @include section-styles($cl-graylightest, $cl-white, $cl-graylightest);
 }
 
 //よくある質問
 .section-el-second-faq {
-  @include section-styles($cl-graylightest, #fff, $cl-graylightest);
+  @include section-styles($cl-graylightest, $cl-white, $cl-graylightest);
   border-radius: 0px 0px 100px 100px;
   @include responsive-style(768px) {
     padding: 0 0 30px;
@@ -196,19 +196,19 @@
 .lp-section-bgpaleyellow {
   background: #fcf8ef;
   .lp-section-title-txt {
-    color: #fff !important;
+    color: $cl-white !important;
   }
 }
 
 .lp-section-bglightgray {
   background: #f5f5f5;
   .lp-section-title-txt {
-    color: #fff !important;
+    color: $cl-white !important;
   }
 }
 
 .lp-section-bgwhite {
-  background: white;
+  background: $cl-white;
 }
 
 .lp-section-title-bgdecoration {
