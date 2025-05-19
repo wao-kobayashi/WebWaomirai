@@ -215,6 +215,7 @@ body {
       margin: 3px 0 0;
     }
     .lp-cv-button {
+      position: relative;
       margin: 6px auto 32px;
       text-align: center;
       a {
@@ -354,33 +355,6 @@ body {
     }
   }
 }
-
-header {
-  height: 60px;
-  background: white;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  @include responsive-style(768px) {
-    height: 42px;
-    padding: 0 14px;
-  }
-  div {
-    @include responsive-style(768px) {
-      width: 146px;
-    }
-    img {
-      height: 24px;
-      margin: 0 !important;
-      @include responsive-style(768px) {
-        width: 146px;
-        height: 22px;
-      }
-    }
-  }
-}
-
 .fixed-button {
   position: fixed;
   right: 20px;
@@ -484,7 +458,10 @@ header {
   }
 }
 
-.section-el-second-why {
+// なぜグローバル英語を選ぶのか
+// - 理由の説明
+// - 背景色：白
+section.section-el-second-why {
   @include min-responsive-style(768px) {
     margin: 160px auto 0px;
   }
@@ -560,8 +537,10 @@ header {
   }
 }
 
-//グローバル英語は楽しむ仕組みがいっぱい
-.section-el-second-enjoy {
+// グローバル英語は楽しむ仕組みがいっぱい
+// - 楽しさの要素を説明
+// - 背景色：ライトグレー
+section.section-el-second-enjoy {
   border-radius: 0px 0px 100px 100px;
   background: $cl-graylightest;
   padding: 0 0 100px;
@@ -732,7 +711,10 @@ header {
   }
 }
 
-.section-el-second-movie {
+// グローバル英語の動画セクション
+// - 動画コンテンツ
+// - 背景色：パレイエロー
+section.section-el-second-movie {
   padding: 75px 75px;
   background: $cl-english-pale;
   max-width: 1200px;
@@ -775,8 +757,10 @@ header {
   }
 }
 
-//英語を学んで目指すもの
-.section-el-second-ability {
+// 英語を学んで目指すもの
+// - 学習目標の説明
+// - 背景色：白
+section.section-el-second-ability {
   .section-el-second-content-ability-box {
     @include section-middlewidth;
     margin: 30px auto 0;
@@ -846,7 +830,10 @@ header {
   }
 }
 
-.section-el-second-who {
+// こんなお子様におすすめ
+// - 対象者の説明
+// - 背景色：ライトグレー
+section.section-el-second-who {
   padding: 0 0 0px !important;
   img {
   }
@@ -886,8 +873,10 @@ header {
   }
 }
 
-//コース
-.section-el-second-coarce {
+// 授業コース
+// - コース内容の説明
+// - 背景色：パレイエロー
+section.section-el-second-coarce {
   .section-el-second-content > div:not(:last-child) {
     margin: 0 auto 90px;
   }
@@ -923,7 +912,10 @@ header {
   }
 }
 
-.section-el-second-process {
+// 授業の流れ
+// - 学習プロセスの説明
+// - 背景色：白
+section.section-el-second-process {
   .section-el-second-content-process {
     width: 100%;
     /* ビューポート幅いっぱいに広げる */
@@ -1022,7 +1014,10 @@ header {
   }
 }
 
-.section-el-second-voice {
+// お客様からの声
+// - 体験談の表示
+// - 背景色：パレイエロー
+section.section-el-second-voice {
   .lp-section-voice-box {
     display: grid;
     grid-template-columns: 180px 1fr;
@@ -1060,7 +1055,10 @@ header {
   }
 }
 
-.section-el-second-price {
+// 料金
+// - 料金プランの説明
+// - 背景色：白
+section.section-el-second-price {
   .lp-section-price {
     @include section-middlewidth;
     margin: 30px auto 18px;
@@ -1190,7 +1188,10 @@ header {
   }
 }
 
-.section-el-second-try {
+// 無料体験レッスンまでの流れ
+// - 申し込みプロセスの説明
+// - 背景色：ライトグレー
+section.section-el-second-try {
   padding: 0 0 120px !important;
   border-radius: 0px 0px 100px 100px;
   @include responsive-style(768px) {
@@ -1206,7 +1207,10 @@ header {
   }
 }
 
-.section-el-second-contact {
+// お問い合わせ
+// - 問い合わせフォーム
+// - 背景色：パレイエロー
+section.section-el-second-contact {
   padding: 75px 100px;
   background: #ecffea;
   max-width: 1200px;
@@ -1291,7 +1295,10 @@ header {
   }
 }
 
-.section-el-cv {
+// 申し込みセクション
+// - 申し込みボタン
+// - 背景色：白
+section.section-el-cv {
   // background: #FAF3CE;
   padding: 0px 0 105px;
   text-align: center;
@@ -1524,6 +1531,7 @@ header {
     }
   }
   .lp-cv-button {
+    position: relative;
     margin: 40px auto 0;
     a {
       padding: 17px 10px 14px;
