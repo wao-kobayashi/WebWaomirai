@@ -18,6 +18,11 @@
   padding: 0 20px;
 }
 
+@mixin section-narrowwidth {
+  max-width: 640px;
+  padding: 0 20px;
+}
+
 .section-el-second {
   // height: 300px;
   width: 100%;

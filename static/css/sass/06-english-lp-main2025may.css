@@ -5646,43 +5646,67 @@ section.section-el-second-coarce .lp-section-schedule table {
   animation: bounce-swipe 3s infinite;
 }
 
-section.section-el-second-voice .lp-section-voice-box {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  grid-column-gap: 30px;
-  width: 100%;
-  margin: 30px auto 0;
-  background: #ffffff;
-  padding: 30px 45px !important;
-  border-radius: 50px;
-  max-width: 800px;
+section.section-el-second-voice .lp-section-voice-box-image {
+  width: 226px;
+  margin: 43px auto 0;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-voice .lp-section-voice-box-image {
+    margin-top: 17px;
+  }
+}
+section.section-el-second-voice .lp-section-voice-box-name {
+  text-align: center;
+  color: #aa68aa;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 17px;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-voice .lp-section-voice-box-name {
+    font-size: 16px;
+  }
+}
+section.section-el-second-voice .lp-section-voice-box-title {
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-voice .lp-section-voice-box-title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-voice .lp-section-voice-box-title {
+    margin-top: 21px;
+  }
+}
+section.section-el-second-voice .lp-section-voice-box-text {
+  max-width: 640px;
   padding: 0 20px;
-  place-content: center;
-  align-items: center;
+  margin: 33px auto 0;
+  font-size: 17px;
+  line-height: 1.6;
 }
 @media screen and (max-width: 768px) {
-  section.section-el-second-voice .lp-section-voice-box {
-    margin: 0px auto 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 30px;
-    background: transparent;
-    padding: 30px 20px !important;
-    display: block;
+  section.section-el-second-voice .lp-section-voice-box-text {
+    font-size: 16px;
   }
-}
-section.section-el-second-voice .lp-section-voice-box .lp-section-voice-box-image img {
-  border-radius: 100px;
 }
 @media screen and (max-width: 768px) {
-  section.section-el-second-voice .lp-section-voice-box .lp-section-voice-box-image img {
-    width: 60%;
-    margin: 0 auto 30px;
+  section.section-el-second-voice .lp-section-voice-box-text {
+    margin-top: 25px;
   }
 }
-section.section-el-second-voice .lp-section-voice-box .lp-section-voice-box-text {
-  place-items: center;
+section.section-el-second-voice .lp-section-voice-box-text + .lp-section-voice-box-text {
+  margin-top: 28px;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-voice .lp-section-voice-box-text + .lp-section-voice-box-text {
+    margin-top: 30px;
+  }
 }
 
 section.section-el-second-price .lp-section-price {

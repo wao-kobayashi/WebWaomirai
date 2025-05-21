@@ -1014,39 +1014,42 @@ section.section-el-second-coarce {
 // - 体験談の表示
 // - 背景色：パレイエロー
 section.section-el-second-voice {
-  .lp-section-voice-box {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    grid-column-gap: 30px;
-    width: 100%;
-    margin: 30px auto 0;
-    background: $cl-white;
-    padding: 30px 45px !important;
-    border-radius: 50px;
-    @include section-middlewidth;
-    place-content: center;
-    align-items: center;
+  .lp-section-voice-box-image{
+    width: 226px;
+    margin: 43px auto 0;
     @include responsive-style(768px) {
-      margin: 0px auto 0;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 30px;
-      background: transparent;
-      padding: 30px 20px !important;
-      display: block;
+      margin-top: 17px;
     }
-    .lp-section-voice-box-image img {
-      // width: 80px;
-      // height: 80px;
-      border-radius: 100px;
-      @include responsive-style(768px) {
-        width: 60%;
-        margin: 0 auto 30px;
-      }
+  }
+  .lp-section-voice-box-name{
+    text-align: center;
+    color: $cl-english;
+    @include font-size-m;
+    font-weight: bold;
+    margin-top: 17px;
+  }
+  .lp-section-voice-box-title{
+    @include font-size-l;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    @include responsive-style(768px) {
+      margin-top: 21px;
     }
-    .lp-section-voice-box-text {
-      place-items: center;
+  }
+  .lp-section-voice-box-text{
+    @include section-narrowwidth;
+    margin: 33px auto 0;
+    @include font-size-m;
+    line-height: 1.6;
+    @include responsive-style(768px) {
+      margin-top: 25px;
+    }
+  }
+  .lp-section-voice-box-text + .lp-section-voice-box-text{
+    margin-top: 28px;
+    @include responsive-style(768px) {
+      margin-top: 30px;
     }
   }
 }
