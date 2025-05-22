@@ -93,3 +93,21 @@ script.
         });
     });
 
+script.
+    $(function () {
+        // ビデオのモーダルを開く
+        $('.modal-video-trigger').on('click', function () {
+            // 動画のURLを指定
+            $('.modal-video-iframe').attr('src',$(this).attr('data-video'));
+            // フェードイン
+            $('.bg-modal, .modal-video').fadeIn();
+        });
+
+        // ビデオのモーダルを閉じる
+        $('.modal-video-close').on('click', function () {
+            // フェードアウト
+            $('.bg-modal, .modal-video').fadeOut();
+            // 動画のURLを空にする
+            $('.modal-video-iframe').attr('src','');
+        });
+    }); 

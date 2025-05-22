@@ -911,102 +911,109 @@ section.section-el-second-coarce {
 // 授業の流れ
 // - 学習プロセスの説明
 // - 背景色：白
-.section-el-second-process {
-  .section-el-second-content-process {
-    width: 100%;
-    /* ビューポート幅いっぱいに広げる */
-    overflow-x: scroll;
-    /* 横方向にスクロール可能にする */
-    white-space: nowrap;
-    /* 子要素を横並びにする */
+section.section-el-second-process {
+  .section-el-second-content-text{
+    text-align: center !important;
+  }
+  .section-el-second-process-movie-head{
+    @include section-middlewidth;
+    margin: 28px auto 95px;
     position: relative;
-    margin: 60px 0 0;
-    height: 340px;
+    font-size: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    iframe{
+      aspect-ratio: 16 / 9;
+    }
+    &:hover{
+      opacity: 0.8;
+    }
+    &::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
     @include responsive-style(768px) {
-      margin: 30px 0 0;
+      width: calc(100% - 40px);
+      margin-bottom: 85px;
     }
-    div:first-child {
-      margin: 0 0 0 60px;
+  }
+  .section-el-second-process-movie-head-button{
+    position: absolute;
+    top: calc(50% - 69.5px);
+    left: calc(50% - 69.5px);
+    @include responsive-style(768px) {
+      top: calc(50% - 32px);
+      left: calc(50% - 32px);
     }
-    div:last-child {
-      margin: 0 400px 0 0px;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: #fff;
+      animation: ripple-animation 2.3s infinite;
+      z-index: 1;
     }
-    .lp-section-study-process-img {
-      display: inline-block;
-      /* 横並びにするための設定 */
-      width: 200px;
-      height: 300px;
-      // margin: 0 10px;
-      text-align: center;
-      img {
-        box-shadow: 0 0 30px rgba(50, 50, 70, 0.15);
-        border-radius: 10px;
-      }
+  }
+  .section-el-second-process-movie-head-button-inner{
+    width: 139px;
+    height: 139px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 69.5px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    @include responsive-style(768px) {
+      width: 64px;
+      height: 64px;
     }
-    .lp-section-study-process-img-noshadow {
-      box-shadow: none !important;
-      img {
-        box-shadow: none !important;
-        border-radius: 0px;
-      }
-    }
-    .lp-section-study-process-arrow {
-      width: 15px;
-      height: 300px;
-      display: inline-block;
-      position: relative;
-      margin: 0 20px 0 20px;
-      &:before {
-        content: "";
-        top: 120px;
-        position: absolute;
-        display: inline-block;
-        border-style: solid;
-        border-width: 14px 0 14px 14px;
-        border-color: transparent transparent transparent $cl-english;
-      }
-    }
-    .lp-section-study-process-img-nagare {
-      display: inline-flex;
-      width: 105px;
-      justify-content: center;
-      height: 300px;
-      position: relative;
-      img {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        box-shadow: 0 0 30px rgba(50, 50, 70, 0.15);
-        border-radius: 10px;
-      }
-    }
-    .lp-section-study-process-img-close {
-      display: inline-flex;
-      width: 160px;
-      justify-content: center;
-      height: 300px;
-      position: relative;
-      img {
-        position: absolute;
-        width: 160px;
-        height: 160px;
-        top: -20px;
-        bottom: 0;
-        margin: auto;
+    &::after{
+      content: "";
+      width: 47px;
+      height: 54px;
+      background: #fff;
+      position: absolute;
+      top: calc(50% - 23.5px);
+      left: calc(50% - 17px);
+      z-index: 1;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      @include responsive-style(768px) {
+        width: 22px;
+        height: 25px;
+        top: calc(50% - 12.5px);
+        left: calc(50% - 8px);
       }
     }
   }
-  .lp-section-scroll {
-    height: 50px;
-    margin: 15px auto 15px;
-    img {
-      text-align: center;
-      width: 120px;
-      margin: 0px auto 0;
-      animation: bounce-swipe 3s infinite;
-    }
+}
+@keyframes ripple-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.section-el-second-process-head{
+  @include section-middlewidth;
+  margin: 25px auto 0;
+  padding: 0;
+  @include responsive-style(768px) {
+    margin-top: 10px;
   }
 }
 
@@ -1699,4 +1706,55 @@ footer {
     border-top: 1px solid #fff;
     padding: 15px 0 15px;
   }
+}
+
+// ビデオのモーダル
+.modal-video{
+  display: none;
+}
+.modal-video-wrapper{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include responsive-style(768px) {
+    width: 95%;
+    left: 2.5%;
+    aspect-ratio: 16 / 12;
+    max-width: 414px;
+  }
+}
+.modal-video-wrapper-content {
+  position: relative;
+  max-width: 650px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  iframe{
+    aspect-ratio: 16 / 9;
+  }
+}
+.modal-video-close{
+    width: 100%;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    @include responsive-style(768px) {
+      font-size: 17px;
+    }
 }

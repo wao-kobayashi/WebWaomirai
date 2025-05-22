@@ -45,4 +45,7 @@ body {
   @include responsive-style(768px) {
     font-size: 30px;
   }
+  @include responsive-style(374px) {
+    font-size: 29px;
+  }
 }
