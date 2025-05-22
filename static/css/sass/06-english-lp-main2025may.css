@@ -5968,6 +5968,135 @@ section.section-el-second-process .section-el-second-content-flow-details-item-t
     min-height: auto;
   }
 }
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-head {
+  color: #aa68aa;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 44px;
+    margin: -13px 0 -40px;
+    position: relative;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-english:first-child {
+    margin-left: -13px;
+  }
+}
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-english::before {
+  content: " ";
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-english::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-number {
+    font-size: 104px;
+    margin-right: 7px;
+  }
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-english-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-box {
+  background: #faebff;
+  border-radius: 12px;
+  padding: 35px;
+  height: 215px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 660px;
+  margin: 10px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box {
+    height: auto;
+    padding: 46px 20px 212px;
+  }
+}
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-box::before {
+  content: "";
+  width: 205px;
+  height: 100%;
+  background: #E9B6E3;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(45px 0, 100% 0, 100% 100%, 0 100%);
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box::before {
+    width: 100%;
+    height: 160px;
+    clip-path: none;
+  }
+}
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-title br {
+    display: none;
+  }
+}
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-text {
+  font-size: 14px;
+  margin-top: 12px;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-text {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-text {
+    font-size: 15px;
+    line-height: 1.73;
+    margin-top: 14px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-text {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-text br {
+    display: none;
+  }
+}
+section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-image {
+  width: 206px;
+  position: absolute;
+  right: 35px;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-box-image {
+    right: calc(50% - 103px);
+  }
+}
 
 section.section-el-second-voice .lp-section-voice-box-image {
   width: 226px;
