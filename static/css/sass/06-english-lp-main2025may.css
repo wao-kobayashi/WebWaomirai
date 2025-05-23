@@ -6221,9 +6221,9 @@ section.section-el-second-process .section-el-second-content-crclm-tab-contents:
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-head {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: 2px solid #d9d9d9;
-  padding-bottom: 7px;
+  padding-bottom: 12px;
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-head-level {
   width: 130px;
@@ -6261,7 +6261,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-head-stag
 section.section-el-second-process .section-el-second-content-crclm-tab-head-title {
   font-size: 24px;
   font-weight: bold;
-  margin-top: 5px;
+  margin: 2px 0 -3px;
   letter-spacing: 2px;
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-image {
@@ -6283,6 +6283,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-t
   padding-left: 17px;
   line-height: 1.24;
   position: relative;
+  padding-top: 2px;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-crclm-tab-details-title {
@@ -6347,7 +6348,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-m
   font-size: 12px;
   text-align: center;
   margin-top: 3px;
-  padding: 2px 0;
+  padding: 4px 0 2px;
   border: 1px solid #aa68aa;
 }
 @media screen and (max-width: 768px) {

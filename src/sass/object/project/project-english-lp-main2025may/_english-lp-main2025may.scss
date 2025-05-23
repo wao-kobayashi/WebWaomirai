@@ -1429,9 +1429,9 @@ section.section-el-second-process {
   }
   .section-el-second-content-crclm-tab-head{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     border-bottom: 2px solid $cl-crclm-bordergray;
-    padding-bottom: 7px;
+    padding-bottom: 12px;
   }
   .section-el-second-content-crclm-tab-head-level{
     width: 130px;
@@ -1469,7 +1469,7 @@ section.section-el-second-process {
   .section-el-second-content-crclm-tab-head-title{
     @include font-size-xlm;
     font-weight: bold;
-    margin-top: 5px;
+    margin: 2px 0 -3px;
     letter-spacing: 2px;
   }
   .section-el-second-content-crclm-tab-image{
@@ -1491,6 +1491,7 @@ section.section-el-second-process {
     padding-left: 17px;
     line-height: 1.24;
     position: relative;
+    padding-top: 2px;
     &::before{
       content: "";
       width: 4px;
@@ -1545,7 +1546,7 @@ section.section-el-second-process {
     @include font-size-s;
     text-align: center;
     margin-top: 3px;
-    padding: 2px 0;
+    padding: 4px 0 2px;
     border: 1px solid $cl-english;
   }
   @supports (-webkit-touch-callout: none) {
