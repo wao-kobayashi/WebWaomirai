@@ -5733,9 +5733,9 @@ section.section-el-second-process .section-el-second-content-flow::before {
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-flow::before {
-    top: 8px;
+    top: 9px;
     left: 0;
-    height: 100%;
+    height: calc(100% - 5px);
   }
 }
 section.section-el-second-process .section-el-second-content-flow::after {
@@ -5776,15 +5776,19 @@ section.section-el-second-process .section-el-second-content-flow-list-item-week
   border-radius: 4px;
   width: 217px;
   height: 31px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding-top: 4px;
   font-size: 17px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-flow-list-item-week {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-week {
+    padding-top: 5px;
   }
 }
 section.section-el-second-process .section-el-second-content-flow-list-item-week:not(.is-end)::before {
@@ -5922,7 +5926,8 @@ section.section-el-second-process .section-el-second-content-flow-details-item-n
   font-size: 12px;
   margin-top: 16px;
   letter-spacing: 0.5px;
-  padding: 3px 9px;
+  padding: 7px 9px 5px;
+  line-height: 1;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-flow-details-item-name {
@@ -5982,7 +5987,7 @@ section.section-el-second-process .section-el-second-content-flow-list-item-fini
     justify-content: center;
     line-height: 1;
     font-size: 44px;
-    margin: -13px 0 -40px;
+    margin: -13px 0 -35px;
     position: relative;
     z-index: 1;
   }
@@ -6004,10 +6009,16 @@ section.section-el-second-process .section-el-second-content-flow-list-item-fini
   section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-number {
     font-size: 104px;
     margin-right: 7px;
+    line-height: 0.75;
   }
   section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-english-wrap {
     display: flex;
     flex-direction: column;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  section.section-el-second-process .section-el-second-content-flow-list-item-finish-head-number {
+    padding-top: 13px;
   }
 }
 section.section-el-second-process .section-el-second-content-flow-list-item-finish-box {
