@@ -118,4 +118,10 @@ script.
             $('.section-el-second-content-crclm-tab-contents').hide();
             $('.section-el-second-content-crclm-tab-contents').eq($('.section-el-second-content-crclm-tab-item').index($(this))).show();
         });
+
+        // カリキュラムの説明動画が読み込み完了したらクラスを付ける
+        const player = new Vimeo.Player($('.section-el-second-process-movie-head iframe')[0]);
+        player.on('play', function () {
+            $('.section-el-second-process-movie-head').addClass('is-loaded');
+        });
     }); 
