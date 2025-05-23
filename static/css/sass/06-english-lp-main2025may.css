@@ -6199,6 +6199,173 @@ section.section-el-second-process .section-el-second-content-crclm-tab-item:firs
 section.section-el-second-process .section-el-second-content-crclm-tab-item:last-child {
   border-radius: 0 10px 10px 0;
 }
+section.section-el-second-process .section-el-second-content-crclm-tab-contents {
+  background: #f9f9f9;
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 25px auto 0;
+  padding: 47px 30px 50px;
+  border-radius: 12px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #d9d9d9;
+  padding-bottom: 7px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head-level {
+  width: 130px;
+  font-size: 25px;
+  line-height: 0.91;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  padding-right: 2px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head-level::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-image: repeating-linear-gradient(to bottom, #d9d9d9 0 2px, #fff 2px 4px);
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head-level-num {
+  font-size: 55px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head-main {
+  padding-left: 20px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head-name {
+  display: inline-block;
+  color: #aa68aa;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #aa68aa;
+  font-size: 10px;
+  padding: 1px 8px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-head-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-image {
+  width: 630px;
+  margin: 23px 14px 0 auto;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 5px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-title {
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 17px;
+  line-height: 1.24;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-crclm-tab-details-title {
+    font-size: 16px;
+  }
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-title::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: #aa68aa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-list {
+  margin-top: 13px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month {
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  padding: 8px 0;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title {
+  width: 79px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1;
+  position: relative;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-image: repeating-linear-gradient(to bottom, #d9d9d9 0 2px, #fff 2px 4px);
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-month-number {
+  font-size: 24px;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-month-unit {
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-month-unit {
+    font-size: 12px;
+  }
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-half {
+  width: 43px;
+  height: 17px;
+  background: #aa68aa;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 2px;
+  border: 1px solid #aa68aa;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-half {
+    font-size: 11.5px;
+  }
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month:nth-child(2n) .section-el-second-content-crclm-tab-details-month-title-half {
+  background: #fff;
+  color: #aa68aa;
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-text {
+  width: calc((100% - 79px) / 3);
+  font-size: 12px;
+  line-height: 1.34;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  section.section-el-second-process .section-el-second-content-crclm-tab-details-month-text {
+    font-size: 11.5px;
+  }
+}
+section.section-el-second-process .section-el-second-content-crclm-tab-details-month-text:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-image: repeating-linear-gradient(to bottom, #d9d9d9 0 2px, #fff 2px 4px);
+}
 
 section.section-el-second-voice .lp-section-voice-box-image {
   width: 226px;

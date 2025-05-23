@@ -1410,6 +1410,154 @@ section.section-el-second-process {
       border-radius: 0 10px 10px 0;
     }
   }
+  .section-el-second-content-crclm-tab-contents{
+    background: $cl-crclmgray;
+    @include section-middlewidth;
+    margin: 25px auto 0;
+    padding: 47px 30px 50px;
+    border-radius: 12px;
+  }
+  .section-el-second-content-crclm-tab-head{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $cl-crclm-bordergray;
+    padding-bottom: 7px;
+  }
+  .section-el-second-content-crclm-tab-head-level{
+    width: 130px;
+    @include font-size-pc25;
+    line-height: 0.91;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-right: 2px;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background-image: repeating-linear-gradient(to bottom, $cl-crclm-bordergray 0 2px, #fff 2px 4px);
+    }
+  }
+  .section-el-second-content-crclm-tab-head-level-num{
+    @include font-size-pc55;
+  }
+  .section-el-second-content-crclm-tab-head-main{
+    padding-left: 20px;
+  }
+  .section-el-second-content-crclm-tab-head-name{
+    display: inline-block;
+    color: $cl-english;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid $cl-english;
+    @include font-size-pc10;
+    padding: 1px 8px;
+  }
+  .section-el-second-content-crclm-tab-head-title{
+    @include font-size-pc24;
+    font-weight: bold;
+    margin-top: 5px;
+    letter-spacing: 2px;
+  }
+  .section-el-second-content-crclm-tab-image{
+    width: 630px;
+    margin: 23px 14px 0 auto;
+  }
+  .section-el-second-content-crclm-tab-details{
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 5px;
+  }
+  .section-el-second-content-crclm-tab-details-title{
+    @include font-size-m;
+    font-weight: bold;
+    padding-left: 17px;
+    line-height: 1.24;
+    position: relative;
+    &::before{
+      content: "";
+      width: 4px;
+      height: 100%;
+      background: $cl-english;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 2px;
+    }
+  }
+  .section-el-second-content-crclm-tab-details-month-list{
+    margin-top: 13px;
+  }
+  .section-el-second-content-crclm-tab-details-month{
+    border-top: 1px solid $cl-crclm-bordergray;
+    display: flex;
+    padding: 8px 0;
+  }
+  .section-el-second-content-crclm-tab-details-month-title{
+    width: 79px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-image: repeating-linear-gradient(to bottom, #d9d9d9 0 2px, #fff 2px 4px);
+    }
+  }
+  .section-el-second-content-crclm-tab-details-month-title-month-number{
+    @include font-size-pc24;
+  }
+  .section-el-second-content-crclm-tab-details-month-title-month-unit{
+    @include font-size-xs;
+  }
+  .section-el-second-content-crclm-tab-details-month-title-half{
+    width: 43px;
+    height: 17px;
+    background: $cl-english;
+    color: #fff;
+    border-radius: 4px;
+    @include font-size-s;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 2px;
+    border: 1px solid $cl-english;
+  }
+  .section-el-second-content-crclm-tab-details-month:nth-child(2n){
+    .section-el-second-content-crclm-tab-details-month-title-half{
+      background: #fff;
+      color: $cl-english;
+    }
+  }
+  .section-el-second-content-crclm-tab-details-month-text{
+    width: calc((100% - 79px) / 3);
+    @include font-size-s;
+    line-height: 1.34;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+  }
+  .section-el-second-content-crclm-tab-details-month-text:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-image: repeating-linear-gradient(to bottom, #d9d9d9 0 2px, #fff 2px 4px);
+  }
 }
 
 // お客様からの声
