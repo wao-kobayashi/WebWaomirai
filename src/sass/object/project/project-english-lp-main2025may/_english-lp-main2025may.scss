@@ -963,7 +963,6 @@ section.section-el-second-process {
       border-radius: 50%;
       border: 2px solid #fff;
       background: #fff;
-      animation: ripple-animation 2.3s infinite;
       z-index: 1;
     }
   }
@@ -995,16 +994,6 @@ section.section-el-second-process {
         top: calc(50% - 12.5px);
         left: calc(50% - 8px);
       }
-    }
-  }
-  @keyframes ripple-animation {
-    0% {
-      transform: scale(1);
-      opacity: 0.3;
-    }
-    100% {
-      transform: scale(2);
-      opacity: 0;
     }
   }
   .section-el-second-process-head{
@@ -1172,7 +1161,6 @@ section.section-el-second-process {
       border-radius: 50%;
       border: 2px solid #fff;
       background: #fff;
-      animation: ripple-animation 2.3s infinite;
       z-index: 1;
     }
   }
@@ -1390,14 +1378,13 @@ section.section-el-second-process {
     @include font-size-xs;
     width: 50%;
     font-weight: bold;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    line-height: 1;
+    text-align: center;
     border: 2px solid $cl-english;
     color: $cl-english;
     cursor: pointer;
     position: relative;
+    padding: 18px 0 14px;
     &.is-active{
       background: $cl-english;
       color: #fff;
@@ -1541,15 +1528,19 @@ section.section-el-second-process {
   }
   .section-el-second-content-crclm-tab-details-month-title-half{
     width: 43px;
-    height: 17px;
     background: $cl-english;
     color: #fff;
     border-radius: 4px;
     @include font-size-s;
     text-align: center;
     margin-top: 3px;
-    padding-top: 2px;
+    padding: 2px 0;
     border: 1px solid $cl-english;
+  }
+  @supports (-webkit-touch-callout: none) {
+   .section-el-second-content-crclm-tab-details-month-title-half{
+      padding: 3px 0 1px;
+    }
   }
   .section-el-second-content-crclm-tab-details-month:nth-child(2n){
     .section-el-second-content-crclm-tab-details-month-title-half{

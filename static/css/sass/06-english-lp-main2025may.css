@@ -4592,7 +4592,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .fixed-button .lp-cv-button a .english-fv-absolute-cvtop {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 .fixed-button .lp-cv-button a .lp-cv-button-main {
@@ -4914,7 +4914,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .fvsp .fvsp-left .lp-cv-button a .english-fv-absolute-cvtop {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 .fvsp .fvsp-left .lp-cv-button a .lp-cv-button-main {
@@ -5649,7 +5649,6 @@ section.section-el-second-process .section-el-second-process-movie-head-button::
   border-radius: 50%;
   border: 2px solid #fff;
   background: #fff;
-  animation: ripple-animation 2.3s infinite;
   z-index: 1;
 }
 section.section-el-second-process .section-el-second-process-movie-head-button-inner {
@@ -5684,16 +5683,6 @@ section.section-el-second-process .section-el-second-process-movie-head-button-i
     height: 25px;
     top: calc(50% - 12.5px);
     left: calc(50% - 8px);
-  }
-}
-@keyframes ripple-animation {
-  0% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
   }
 }
 section.section-el-second-process .section-el-second-process-head {
@@ -5894,7 +5883,6 @@ section.section-el-second-process .section-el-second-content-flow-details-item-i
   border-radius: 50%;
   border: 2px solid #fff;
   background: #fff;
-  animation: ripple-animation 2.3s infinite;
   z-index: 1;
 }
 section.section-el-second-process .section-el-second-content-flow-details-item-img-button-inner {
@@ -5931,7 +5919,7 @@ section.section-el-second-process .section-el-second-content-flow-details-item-n
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-flow-details-item-name {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -6176,14 +6164,13 @@ section.section-el-second-process .section-el-second-content-crclm-tab-item {
   font-size: 14px;
   width: 50%;
   font-weight: bold;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 1;
+  text-align: center;
   border: 2px solid #aa68aa;
   color: #aa68aa;
   cursor: pointer;
   position: relative;
+  padding: 18px 0 14px;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-crclm-tab-item {
@@ -6343,19 +6330,23 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-m
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-half {
   width: 43px;
-  height: 17px;
   background: #aa68aa;
   color: #fff;
   border-radius: 4px;
   font-size: 12px;
   text-align: center;
   margin-top: 3px;
-  padding-top: 2px;
+  padding: 2px 0;
   border: 1px solid #aa68aa;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-half {
-    font-size: 11.5px;
+    font-size: 12px;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-half {
+    padding: 3px 0 1px;
   }
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-details-month:nth-child(2n) .section-el-second-content-crclm-tab-details-month-title-half {
@@ -6373,7 +6364,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-m
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-crclm-tab-details-month-text {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-details-month-text:not(:last-child)::after {
@@ -6605,7 +6596,7 @@ section.section-el-second-price .lp-section-price-note {
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-price .lp-section-price-note {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -6777,7 +6768,7 @@ section.section-el-cv .lp-cv-title-note {
 }
 @media screen and (max-width: 768px) {
   section.section-el-cv .lp-cv-title-note {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 section.section-el-cv .lp-cv-lessonday {
@@ -7047,7 +7038,7 @@ section.section-el-cv .lp-cv-button a .english-fv-absolute-cvtop {
 }
 @media screen and (max-width: 768px) {
   section.section-el-cv .lp-cv-button a .english-fv-absolute-cvtop {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 section.section-el-cv .lp-cv-button a .lp-cv-button-sub {

@@ -19,7 +19,7 @@ body {
 @mixin font-size-s {
   font-size: 12px;
   @include responsive-style(768px) {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 
