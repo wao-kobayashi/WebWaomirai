@@ -110,4 +110,12 @@ script.
             // 動画のURLを空にする
             $('.modal-video-iframe').attr('src','');
         });
+
+        // 年間の授業カリキュラムのタブ切り替え
+        $('.section-el-second-content-crclm-tab-item').on('click', function () {
+            $('.section-el-second-content-crclm-tab-item').removeClass('is-active');
+            $(this).addClass('is-active');
+            $('.section-el-second-content-crclm-tab-contents').hide();
+            $('.section-el-second-content-crclm-tab-contents').eq($('.section-el-second-content-crclm-tab-item').index($(this))).show();
+        });
     }); 

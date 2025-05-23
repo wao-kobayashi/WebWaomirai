@@ -548,43 +548,42 @@ section.section-el-second.section-el-second-process
             |レベル1：英語初挑戦の方
           p.section-el-second-content-crclm-tab-item
             |レベル2：英語が少し話せる方
-        .section-el-second-content-crclm-tab-contents-list 
-          .section-el-second-content-crclm-tab-contents
-            .section-el-second-content-crclm-tab-head
-              p.section-el-second-content-crclm-tab-head-level レベル
-                span.section-el-second-content-crclm-tab-head-level-num 1
-              .section-el-second-content-crclm-tab-head-main
-                p.section-el-second-content-crclm-tab-head-name
-                  |ローカルSTAGE 
-                p.section-el-second-content-crclm-tab-head-title 
-                  |自分の身近な世界を英語で表現！
-            .section-el-second-content-crclm-tab-image
-              img(src=imgCrclm)
-            .section-el-second-content-crclm-tab-details-list
-              each item in level1_data
-                .section-el-second-content-crclm-tab-details
-                  p.section-el-second-content-crclm-tab-details-title= item.title
-                  .section-el-second-content-crclm-tab-details-month-list
-                    .section-el-second-content-crclm-tab-details-month
-                      .section-el-second-content-crclm-tab-details-month-title 
-                        p.section-el-second-content-crclm-tab-details-month-title-month
-                          span.section-el-second-content-crclm-tab-details-month-title-month-number= item.month1
-                          span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
-                        p.section-el-second-content-crclm-tab-details-month-title-half 
-                          |前半
-                      p.section-el-second-content-crclm-tab-details-month-text= item.month1_title1
-                      p.section-el-second-content-crclm-tab-details-month-text= item.month1_title2
-                      p.section-el-second-content-crclm-tab-details-month-text= item.month1_title3
-                    .section-el-second-content-crclm-tab-details-month
-                      .section-el-second-content-crclm-tab-details-month-title 
-                        p.section-el-second-content-crclm-tab-details-month-title-month
-                          span.section-el-second-content-crclm-tab-details-month-title-month-number= item.month2
-                          span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
-                        p.section-el-second-content-crclm-tab-details-month-title-half 
-                          |後半
-                      p.section-el-second-content-crclm-tab-details-month-text= item.month2_title1
-                      p.section-el-second-content-crclm-tab-details-month-text= item.month2_title2
-                      p.section-el-second-content-crclm-tab-details-month-text= item.month2_title3
+        .section-el-second-content-crclm-tab-contents-list
+          each level_item in level_data
+            .section-el-second-content-crclm-tab-contents
+              .section-el-second-content-crclm-tab-head
+                p.section-el-second-content-crclm-tab-head-level レベル
+                  span.section-el-second-content-crclm-tab-head-level-num= level_item.level
+                .section-el-second-content-crclm-tab-head-main
+                  p.section-el-second-content-crclm-tab-head-stage= level_item.stage
+                  p.section-el-second-content-crclm-tab-head-title= level_item.title
+              .section-el-second-content-crclm-tab-image
+                img(src=imgCrclm)
+              .section-el-second-content-crclm-tab-details-list
+                each item in level_item.projects
+                  .section-el-second-content-crclm-tab-details
+                    p.section-el-second-content-crclm-tab-details-title= item.title
+                    .section-el-second-content-crclm-tab-details-month-list
+                      .section-el-second-content-crclm-tab-details-month
+                        .section-el-second-content-crclm-tab-details-month-title 
+                          p.section-el-second-content-crclm-tab-details-month-title-month
+                            span.section-el-second-content-crclm-tab-details-month-title-month-number= item.month1
+                            span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
+                          p.section-el-second-content-crclm-tab-details-month-title-half 
+                            |前半
+                        p.section-el-second-content-crclm-tab-details-month-text!= item.month1_title1
+                        p.section-el-second-content-crclm-tab-details-month-text!= item.month1_title2
+                        p.section-el-second-content-crclm-tab-details-month-text!= item.month1_title3
+                      .section-el-second-content-crclm-tab-details-month
+                        .section-el-second-content-crclm-tab-details-month-title 
+                          p.section-el-second-content-crclm-tab-details-month-title-month
+                            span.section-el-second-content-crclm-tab-details-month-title-month-number= item.month2
+                            span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
+                          p.section-el-second-content-crclm-tab-details-month-title-half 
+                            |後半
+                        p.section-el-second-content-crclm-tab-details-month-text!= item.month2_title1
+                        p.section-el-second-content-crclm-tab-details-month-text!= item.month2_title2
+                        p.section-el-second-content-crclm-tab-details-month-text!= item.month2_title3
 
    
 //お客さまからの声

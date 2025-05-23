@@ -6207,6 +6207,9 @@ section.section-el-second-process .section-el-second-content-crclm-tab-contents 
   padding: 47px 30px 50px;
   border-radius: 12px;
 }
+section.section-el-second-process .section-el-second-content-crclm-tab-contents:nth-child(n+2) {
+  display: none;
+}
 section.section-el-second-process .section-el-second-content-crclm-tab-head {
   display: flex;
   align-items: center;
@@ -6237,14 +6240,14 @@ section.section-el-second-process .section-el-second-content-crclm-tab-head-leve
 section.section-el-second-process .section-el-second-content-crclm-tab-head-main {
   padding-left: 20px;
 }
-section.section-el-second-process .section-el-second-content-crclm-tab-head-name {
+section.section-el-second-process .section-el-second-content-crclm-tab-head-stage {
   display: inline-block;
   color: #aa68aa;
   border-radius: 4px;
   background: #fff;
   border: 1px solid #aa68aa;
   font-size: 10px;
-  padding: 1px 8px;
+  padding: 2px 8px 0;
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-head-title {
   font-size: 24px;
@@ -6259,7 +6262,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-image {
 section.section-el-second-process .section-el-second-content-crclm-tab-details {
   background: #fff;
   border-radius: 12px;
-  padding: 16px;
+  padding: 16px 16px 0;
   margin-top: 5px;
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-details + .section-el-second-content-crclm-tab-details {
@@ -6319,6 +6322,8 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-m
 }
 section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-month-unit {
   font-size: 14px;
+  margin-left: 2px;
+  vertical-align: 1px;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-crclm-tab-details-month-title-month-unit {
@@ -6333,7 +6338,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-m
   border-radius: 4px;
   font-size: 12px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 3px;
   padding-top: 2px;
   border: 1px solid #aa68aa;
 }

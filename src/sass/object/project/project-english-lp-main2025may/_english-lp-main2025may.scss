@@ -1417,6 +1417,9 @@ section.section-el-second-process {
     padding: 47px 30px 50px;
     border-radius: 12px;
   }
+  .section-el-second-content-crclm-tab-contents:nth-child(n+2){
+    display: none;
+  }
   .section-el-second-content-crclm-tab-head{
     display: flex;
     align-items: center;
@@ -1447,14 +1450,14 @@ section.section-el-second-process {
   .section-el-second-content-crclm-tab-head-main{
     padding-left: 20px;
   }
-  .section-el-second-content-crclm-tab-head-name{
+  .section-el-second-content-crclm-tab-head-stage{
     display: inline-block;
     color: $cl-english;
     border-radius: 4px;
     background: #fff;
     border: 1px solid $cl-english;
     @include font-size-pc10;
-    padding: 1px 8px;
+    padding: 2px 8px 0;
   }
   .section-el-second-content-crclm-tab-head-title{
     @include font-size-pc24;
@@ -1469,7 +1472,7 @@ section.section-el-second-process {
   .section-el-second-content-crclm-tab-details{
     background: #fff;
     border-radius: 12px;
-    padding: 16px;
+    padding: 16px 16px 0;
     margin-top: 5px;
   }
   .section-el-second-content-crclm-tab-details + .section-el-second-content-crclm-tab-details{
@@ -1524,6 +1527,8 @@ section.section-el-second-process {
   }
   .section-el-second-content-crclm-tab-details-month-title-month-unit{
     @include font-size-xs;
+    margin-left: 2px;
+    vertical-align: 1px;
   }
   .section-el-second-content-crclm-tab-details-month-title-half{
     width: 43px;
@@ -1533,7 +1538,7 @@ section.section-el-second-process {
     border-radius: 4px;
     @include font-size-s;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 3px;
     padding-top: 2px;
     border: 1px solid $cl-english;
   }
