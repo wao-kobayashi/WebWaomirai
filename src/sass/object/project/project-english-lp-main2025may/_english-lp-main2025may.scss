@@ -1367,6 +1367,48 @@ section.section-el-second-process {
         margin-left: 5px;
       }
     }
+    .section-el-second-content-crclm-pc{
+      display: none;
+    }
+  }
+  .section-el-second-content-crclm-tab-list{
+    @include section-middlewidth;
+    padding: 0 30px;
+    margin: 36px auto 0;
+    display: flex;
+  }
+  .section-el-second-content-crclm-tab-item{
+    @include font-size-xs;
+    width: 50%;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $cl-english;
+    color: $cl-english;
+    cursor: pointer;
+    position: relative;
+    &.is-active{
+      background: $cl-english;
+      color: #fff;
+      &::after{
+        content: "";
+        width: 12px;
+        height: 11px;
+        background: $cl-english;
+        position: absolute;
+        left: calc(50% - 6px);
+        bottom: -12px;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+      }
+    }
+    &:first-child{
+      border-radius: 10px 0 0 10px;
+    }
+    &:last-child{
+      border-radius: 0 10px 10px 0;
+    }
   }
 }
 
