@@ -6262,6 +6262,9 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details {
   padding: 16px;
   margin-top: 5px;
 }
+section.section-el-second-process .section-el-second-content-crclm-tab-details + .section-el-second-content-crclm-tab-details {
+  margin-top: 24px;
+}
 section.section-el-second-process .section-el-second-content-crclm-tab-details-title {
   font-size: 17px;
   font-weight: bold;

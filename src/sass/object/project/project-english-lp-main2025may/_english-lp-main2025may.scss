@@ -1472,6 +1472,9 @@ section.section-el-second-process {
     padding: 16px;
     margin-top: 5px;
   }
+  .section-el-second-content-crclm-tab-details + .section-el-second-content-crclm-tab-details{
+    margin-top: 24px;
+  }
   .section-el-second-content-crclm-tab-details-title{
     @include font-size-m;
     font-weight: bold;

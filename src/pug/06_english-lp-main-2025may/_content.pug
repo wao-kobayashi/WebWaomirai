@@ -561,36 +561,30 @@ section.section-el-second.section-el-second-process
             .section-el-second-content-crclm-tab-image
               img(src=imgCrclm)
             .section-el-second-content-crclm-tab-details-list
-              .section-el-second-content-crclm-tab-details
-                p.section-el-second-content-crclm-tab-details-title
-                  |自分の欲しいものを英語でプレゼン
-                .section-el-second-content-crclm-tab-details-month-list
-                  .section-el-second-content-crclm-tab-details-month
-                    .section-el-second-content-crclm-tab-details-month-title 
-                      p.section-el-second-content-crclm-tab-details-month-title-month
-                        span.section-el-second-content-crclm-tab-details-month-title-month-number 4
-                        span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
-                      p.section-el-second-content-crclm-tab-details-month-title-half 
-                        |前半
-                    p.section-el-second-content-crclm-tab-details-month-text 
-                      |Letの発音は“レット”じゃダメ！ 音を止める練習をしよう
-                    p.section-el-second-content-crclm-tab-details-month-text 
-                      |「家で」は at か in かどちらを使う？ カタマリで覚えればもう悩まない！
-                    p.section-el-second-content-crclm-tab-details-month-text 
-                      |プレゼンター： 「欲しいもの」をプレゼン！ 欲しくなったきっかけを伝えよう！
-                  .section-el-second-content-crclm-tab-details-month
-                    .section-el-second-content-crclm-tab-details-month-title 
-                      p.section-el-second-content-crclm-tab-details-month-title-month
-                        span.section-el-second-content-crclm-tab-details-month-title-month-number 5
-                        span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
-                      p.section-el-second-content-crclm-tab-details-month-title-half 
-                        |後半
-                    p.section-el-second-content-crclm-tab-details-month-text 
-                      |Letの発音は“レット”じゃダメ！ 音を止める練習をしよう
-                    p.section-el-second-content-crclm-tab-details-month-text 
-                      |「家で」は at か in かどちらを使う？ カタマリで覚えればもう悩まない！
-                    p.section-el-second-content-crclm-tab-details-month-text 
-                      |プレゼンター： 「欲しいもの」をプレゼン！ 欲しくなったきっかけを伝えよう！
+              each item in level1_data
+                .section-el-second-content-crclm-tab-details
+                  p.section-el-second-content-crclm-tab-details-title= item.title
+                  .section-el-second-content-crclm-tab-details-month-list
+                    .section-el-second-content-crclm-tab-details-month
+                      .section-el-second-content-crclm-tab-details-month-title 
+                        p.section-el-second-content-crclm-tab-details-month-title-month
+                          span.section-el-second-content-crclm-tab-details-month-title-month-number= item.month1
+                          span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
+                        p.section-el-second-content-crclm-tab-details-month-title-half 
+                          |前半
+                      p.section-el-second-content-crclm-tab-details-month-text= item.month1_title1
+                      p.section-el-second-content-crclm-tab-details-month-text= item.month1_title2
+                      p.section-el-second-content-crclm-tab-details-month-text= item.month1_title3
+                    .section-el-second-content-crclm-tab-details-month
+                      .section-el-second-content-crclm-tab-details-month-title 
+                        p.section-el-second-content-crclm-tab-details-month-title-month
+                          span.section-el-second-content-crclm-tab-details-month-title-month-number= item.month2
+                          span.section-el-second-content-crclm-tab-details-month-title-month-unit 月
+                        p.section-el-second-content-crclm-tab-details-month-title-half 
+                          |後半
+                      p.section-el-second-content-crclm-tab-details-month-text= item.month2_title1
+                      p.section-el-second-content-crclm-tab-details-month-text= item.month2_title2
+                      p.section-el-second-content-crclm-tab-details-month-text= item.month2_title3
 
    
 //お客さまからの声
