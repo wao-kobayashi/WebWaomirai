@@ -12,7 +12,7 @@ body {
     Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
-@mixin font-size-pc10 {
+@mixin font-size-ss {
   font-size: 10px;
 }
 
@@ -58,11 +58,11 @@ body {
   }
 }
 
-@mixin font-size-pc24 {
+@mixin font-size-xlm {
   font-size: 24px;
 }
 
-@mixin font-size-pc25 {
+@mixin font-size-lm {
   font-size: 25px;
 }
 
@@ -83,6 +83,6 @@ body {
   }
 }
 
-@mixin font-size-pc55 {
+@mixin font-size-xxl {
   font-size: 55px;
 }

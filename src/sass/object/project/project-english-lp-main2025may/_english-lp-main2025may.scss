@@ -1437,7 +1437,7 @@ section.section-el-second-process {
   }
   .section-el-second-content-crclm-tab-head-level{
     width: 130px;
-    @include font-size-pc25;
+    @include font-size-lm;
     line-height: 0.91;
     font-weight: bold;
     text-align: center;
@@ -1454,7 +1454,7 @@ section.section-el-second-process {
     }
   }
   .section-el-second-content-crclm-tab-head-level-num{
-    @include font-size-pc55;
+    @include font-size-xxl;
   }
   .section-el-second-content-crclm-tab-head-main{
     padding-left: 20px;
@@ -1465,11 +1465,11 @@ section.section-el-second-process {
     border-radius: 4px;
     background: #fff;
     border: 1px solid $cl-english;
-    @include font-size-pc10;
+    @include font-size-ss;
     padding: 2px 8px 0;
   }
   .section-el-second-content-crclm-tab-head-title{
-    @include font-size-pc24;
+    @include font-size-xlm;
     font-weight: bold;
     margin-top: 5px;
     letter-spacing: 2px;
@@ -1532,7 +1532,7 @@ section.section-el-second-process {
     }
   }
   .section-el-second-content-crclm-tab-details-month-title-month-number{
-    @include font-size-pc24;
+    @include font-size-xlm;
   }
   .section-el-second-content-crclm-tab-details-month-title-month-unit{
     @include font-size-xs;
