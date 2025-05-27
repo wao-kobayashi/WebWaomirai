@@ -147,20 +147,20 @@ html(lang="ja")
     script.
 
       $(document).ready(function() {
-          
-          // 期限切れになる日時
+      
+          // 期限切れになる日（時間は0:00）
           const deadlineDates = {
-            '2025_may_cheery': new Date(2025, 4, 19, 0, 0), 
-            '2025_june_sunny': new Date(2025, 5, 9, 0, 0),
-            '2025_july_holiday': new Date(2025, 7, 7, 0, 0),
-            '2025_august_ocean': new Date(2025, 8, 10, 0, 0),
-            '2025_september_moon': new Date(2025, 9, 15, 0, 0),
-            '2025_october_maple': new Date(2025, 10, 13, 0, 0),
-            '2025_november_harvest': new Date(2025, 11, 10, 0, 0),
-            '2025_december_snowbell': new Date(2025, 12, 8, 0, 0),
-            '2026_january_kadomatsu': new Date(2026, 1, 12, 0, 0),
-            '2026_february_plum': new Date(2026, 2, 9, 0, 0),
-            '2026_march_breeze': new Date(2026, 3, 9, 0, 0),
+            '2025_may_cheery': new Date('2025-05-19'), 
+            '2025_june_sunny': new Date('2025-06-09'),
+            '2025_july_holiday': new Date('2025-07-07'),
+            '2025_august_ocean': new Date('2025-08-10'),
+            '2025_september_moon': new Date('2025-09-15'),
+            '2025_october_maple': new Date('2025-10-13'),
+            '2025_november_harvest': new Date('2025-11-10'),
+            '2025_december_snowbell': new Date('2025-12-08'),
+            '2026_january_kadomatsu': new Date('2026-01-12'),
+            '2026_february_plum': new Date('2026-02-09'),
+            '2026_march_breeze': new Date('2026-03-09'),
           };
           const localCurrentDate = new Date();
           const currentDate = new Date(localCurrentDate.getTime() + (9 * 60 * 60 * 1000));  // UTCを取得してJSTとの時差を加える（JSTはUTC+9時間）
