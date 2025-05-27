@@ -5944,6 +5944,7 @@ section.section-el-second-process .section-el-second-content-flow-details-item-t
   font-size: 20px;
   letter-spacing: -0.25px;
   margin-top: 7px;
+  font-family: "Noto Sans JP", sans-serif !important;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-flow-details-item-title {
@@ -5960,6 +5961,7 @@ section.section-el-second-process .section-el-second-content-flow-details-item-t
   margin-top: 2px;
   min-height: 59px;
   line-height: 1.4;
+  font-family: "Noto Sans JP", sans-serif !important;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-flow-details-item-text {
@@ -6373,6 +6375,7 @@ section.section-el-second-process .section-el-second-content-crclm-tab-details-m
   align-items: center;
   padding: 0 10px;
   position: relative;
+  font-family: "Noto Sans JP", sans-serif !important;
 }
 @media screen and (max-width: 768px) {
   section.section-el-second-process .section-el-second-content-crclm-tab-details-month-text {
@@ -7170,6 +7173,7 @@ section.section-el-cv .lp-cv-button a .lp-cv-button-main .lp-cv-button-main-arro
 .lp-section-faq .lp-section-faq-right .lp-section-faq-right-txt {
   font-size: 17px;
   margin: 10px 0 0;
+  font-family: "Noto Sans JP", sans-serif !important;
 }
 @media screen and (max-width: 768px) {
   .lp-section-faq .lp-section-faq-right .lp-section-faq-right-txt {
