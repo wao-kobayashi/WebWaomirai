@@ -165,13 +165,15 @@ html(lang="ja")
           const localCurrentDate = new Date();
           const currentDate = new Date(localCurrentDate.getTime() + (9 * 60 * 60 * 1000));  // UTCを取得してJSTとの時差を加える（JSTはUTC+9時間）
           const monthParam = new URLSearchParams(window.location.search).get('key'); // "key"パラメータの値を取得
-          // パラメータが無い、または無効な場合はエラーモーダル表示
+          // パラメータが無い、または無効な場合は動画を消してエラーモーダル表示
           if (!monthParam || !deadlineDates[monthParam]) {
+            $('iframe').remove();
             $('#noParamModal').css('display', 'flex');
             return;
           }
-          // 期限切れの場合のみモーダル表示
+          // 期限切れの場合は動画を消してモーダル表示
           if (currentDate >= deadlineDates[monthParam]) {
+            $('iframe').remove();
             $('#expiredModal').css('display', 'flex');
           }
       });
