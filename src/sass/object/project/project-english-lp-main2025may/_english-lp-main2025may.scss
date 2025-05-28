@@ -2337,7 +2337,7 @@ footer {
   text-decoration: underline;
   cursor: pointer;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   text-align: center;
   @include responsive-style(768px) {
