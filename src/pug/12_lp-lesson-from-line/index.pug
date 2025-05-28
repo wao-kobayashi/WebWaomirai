@@ -147,20 +147,33 @@ html(lang="ja")
     script.
 
       $(document).ready(function() {
-          
+      
+          // 期限切れになる日（時間は0:00）
           const deadlineDates = {
-            '2025_may_cheery': new Date(2025, 4, 18, 23, 59),
-            '2025_june_sunny': new Date(2025, 5, 8, 23, 59)
+            '2025_may_cheery': new Date('2025-05-19'), 
+            '2025_june_sunny': new Date('2025-06-09'),
+            '2025_july_holiday': new Date('2025-07-07'),
+            '2025_august_ocean': new Date('2025-08-10'),
+            '2025_september_moon': new Date('2025-09-15'),
+            '2025_october_maple': new Date('2025-10-13'),
+            '2025_november_harvest': new Date('2025-11-10'),
+            '2025_december_snowbell': new Date('2025-12-08'),
+            '2026_january_kadomatsu': new Date('2026-01-12'),
+            '2026_february_plum': new Date('2026-02-09'),
+            '2026_march_breeze': new Date('2026-03-09'),
           };
-          const currentDate = new Date();
+          const localCurrentDate = new Date();
+          const currentDate = new Date(localCurrentDate.getTime() + (9 * 60 * 60 * 1000));  // UTCを取得してJSTとの時差を加える（JSTはUTC+9時間）
           const monthParam = new URLSearchParams(window.location.search).get('key'); // "key"パラメータの値を取得
-          // パラメータが無い、または無効な場合はエラーモーダル表示
+          // パラメータが無い、または無効な場合は動画を消してエラーモーダル表示
           if (!monthParam || !deadlineDates[monthParam]) {
+            $('iframe').remove();
             $('#noParamModal').css('display', 'flex');
             return;
           }
-          // 期限切れの場合のみモーダル表示
-          if (currentDate > deadlineDates[monthParam]) {
+          // 期限切れの場合は動画を消してモーダル表示
+          if (currentDate >= deadlineDates[monthParam]) {
+            $('iframe').remove();
             $('#expiredModal').css('display', 'flex');
           }
       });
