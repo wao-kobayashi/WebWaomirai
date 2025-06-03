@@ -93,3 +93,35 @@ script.
         });
     });
 
+script.
+    $(function () {
+        // ビデオのモーダルを開く
+        $('.modal-video-trigger').on('click', function () {
+            // 動画のURLを指定
+            $('.modal-video-iframe').attr('src',$(this).attr('data-video'));
+            // フェードイン
+            $('.bg-modal, .modal-video').fadeIn();
+        });
+
+        // ビデオのモーダルを閉じる
+        $('.modal-video-close').on('click', function () {
+            // フェードアウト
+            $('.bg-modal, .modal-video').fadeOut();
+            // 動画のURLを空にする
+            $('.modal-video-iframe').attr('src','');
+        });
+
+        // 年間の授業カリキュラムのタブ切り替え
+        $('.section-el-second-content-crclm-tab-item').on('click', function () {
+            $('.section-el-second-content-crclm-tab-item').removeClass('is-active');
+            $(this).addClass('is-active');
+            $('.section-el-second-content-crclm-tab-contents').hide();
+            $('.section-el-second-content-crclm-tab-contents').eq($('.section-el-second-content-crclm-tab-item').index($(this))).show();
+        });
+
+        // カリキュラムの説明動画が読み込み完了したらクラスを付ける
+        const player = new Vimeo.Player($('.section-el-second-process-movie-head iframe')[0]);
+        player.on('play', function () {
+            $('.section-el-second-process-movie-head').addClass('is-loaded');
+        });
+    }); 

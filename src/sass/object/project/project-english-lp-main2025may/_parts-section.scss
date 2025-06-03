@@ -18,6 +18,11 @@
   padding: 0 20px;
 }
 
+@mixin section-narrowwidth {
+  max-width: 640px;
+  padding: 0 20px;
+}
+
 .section-el-second {
   // height: 300px;
   width: 100%;
@@ -41,6 +46,13 @@
       width: 90%;
       @include responsive-style(768px) {
         text-align: left;
+        letter-spacing: 0;
+      }
+    }
+    .section-el-second-content-text-sp-br{
+      display: none;
+      @include responsive-style(768px) {
+        display: inline;
       }
     }
     .section-el-second-content-text {

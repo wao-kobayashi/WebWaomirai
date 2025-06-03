@@ -12,10 +12,28 @@ body {
     Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
+@mixin font-size-ss {
+  font-size: 10px;
+}
+
 @mixin font-size-s {
   font-size: 12px;
   @include responsive-style(768px) {
-    font-size: 11.5px;
+    font-size: 12px;
+  }
+}
+
+@mixin font-size-xs {
+  font-size: 14px;
+  @include responsive-style(768px) {
+    font-size: 12px;
+  }
+}
+
+@mixin font-size-xxs {
+  font-size: 15px;
+  @include responsive-style(768px) {
+    font-size: 13px;
   }
 }
 
@@ -26,11 +44,26 @@ body {
   }
 }
 
+@mixin font-size-xm {
+  font-size: 20px;
+  @include responsive-style(768px) {
+    font-size: 18px;
+  }
+}
+
 @mixin font-size-ml {
   font-size: 22px;
   @include responsive-style(768px) {
     font-size: 20px;
   }
+}
+
+@mixin font-size-xlm {
+  font-size: 24px;
+}
+
+@mixin font-size-lm {
+  font-size: 25px;
 }
 
 @mixin font-size-l {
@@ -45,4 +78,11 @@ body {
   @include responsive-style(768px) {
     font-size: 30px;
   }
+  @include responsive-style(374px) {
+    font-size: 29px;
+  }
+}
+
+@mixin font-size-xxl {
+  font-size: 55px;
 }
