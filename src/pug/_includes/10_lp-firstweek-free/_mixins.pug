@@ -54,7 +54,7 @@ mixin ModalEntlyLine
 
 mixin courseList(subjectKey, subjectLabel,courses)
   each course in courses[subjectKey]
-    li.lp-firstweek-free-events-main-list-item
+    li.lp-firstweek-free-events-main-list-item(id=course.id)
       .lp-firstweek-free-events-main-list-item-head
         p.lp-firstweek-free-events-main-list-item-head-subject(class=subjectKey)
           | #{subjectLabel}
