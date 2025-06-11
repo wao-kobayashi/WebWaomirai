@@ -106,4 +106,12 @@ script.
         // 他の開いているコンテンツを閉じる
         $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
     });
+
+    // 10日間プログラム流れのタブ切り替え
+    $('.eng-phase-main-flow-tab-item').click(function() {
+        $('.eng-phase-main-flow-tab-item,.eng-phase-main-flow-contents-item').removeClass('is-active');
+        $(this).addClass('is-active');
+        $('.eng-phase-main-flow-contents-item').eq($('.eng-phase-main-flow-tab-item').index(this)).addClass('is-active');
+    });
+  
   });
