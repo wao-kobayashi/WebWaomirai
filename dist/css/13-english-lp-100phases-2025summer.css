@@ -4715,9 +4715,10 @@ body#eng-phase {
 }
 
 .eng-phase-main-cv-humans {
-  margin: 0px auto 0px;
-  position: relative;
-  z-index: 10;
+  margin: -100px auto 0;
+}
+.eng-phase-main-cv-humans.is-green {
+  margin-top: 0;
 }
 .eng-phase-main-cv-humans .eng-phase-main-cv-humans-img img {
   position: relative;
@@ -5197,7 +5198,7 @@ body#eng-phase {
 }
 
 .eng-phase-main-section-green-price {
-  margin: 0 auto 90px;
+  margin: 0 auto;
 }
 
 .eng-phase-main-section-green-voice {
