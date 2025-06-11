@@ -45,9 +45,13 @@ body#eng-phase {
     display: none;
   }
   .eng-phase-left-wrap {
-    max-width: 350px;
+    max-width: 527px;
     margin: 0 auto;
-
+  }
+  .eng-phase-left-wrap-cv{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
     .eng-phase-left-wrap-logo {
       margin: 0 auto 15px;
     }

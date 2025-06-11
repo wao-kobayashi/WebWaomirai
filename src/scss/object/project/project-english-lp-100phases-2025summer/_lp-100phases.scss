@@ -2,6 +2,39 @@ $shadow-height: 45px;
 $shadow-height-sp: 38px;
 
 //////////////////////
+//共通CVボタン
+//////////////////////
+.c-btn-cv{
+  width: 445px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 9px 0px #000000;
+  border: 3.5px solid #000;
+  border-radius: $border-radius-full;
+  background: #ec3f42;
+  &.is-contents{
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 78%;
+    animation: fuwafuwa-button 2s 0s infinite;
+    img{
+      width: auto;
+      height: 30px;
+    }
+    @include responsive-style(768px) {
+      width: 92%;
+      height: 95px;
+    }
+  }
+}
+
+//////////////////////
 //ブルーエリアのセクション
 //////////////////////
 
@@ -207,15 +240,6 @@ $fvTextSp: 37%;
   .eng-phase-main-cv-crowds-img {
     position: relative;
     z-index: 0;
-  }
-  .eng-phase-main-cv-crowds-btn img {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: $width-cv-btn;
-    animation: fuwafuwa-button 2s 0s infinite;
   }
 }
 
