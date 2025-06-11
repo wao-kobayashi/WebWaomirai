@@ -27,7 +27,7 @@ $shadow-height-sp: 38px;
       width: auto;
       height: 30px;
     }
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       width: 92%;
       height: 95px;
     }
@@ -49,7 +49,7 @@ $fvTextSp: 41%;
   border: 3.5px solid #000;
   border-radius: $border-radius-full;
   background: #ec3f42;
-  @include responsive-style(768px) {
+  @include responsive-style(767px) {
     border: 3px solid #000 !important;
     box-shadow: 0 7px 0px rgba(0, 0, 0, 1);
   }
@@ -67,38 +67,15 @@ $fvTextSp: 41%;
 .eng-phase-main-fv {
   position: relative;
   z-index: 10;
-  height: 700px;
   width: 100%;
-  @include responsive-style(768px) {
-    height: 1160px;
-  }
-  @include responsive-style(700px) {
-    height: 950px;
-  }
-  @include responsive-style(600px) {
-    height: 880px;
-  }
-  @include responsive-style(500px) {
-    height: 800px;
-  }
-
-  @include responsive-style(450px) {
-    height: 700px;
-  }
-  @include responsive-style(375px) {
-    height: 650px;
-  }
   .eng-phase-main-fv-overflow-hidden {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 700px;
     width: 100%;
-    @include responsive-style(450px) {
-      height: 700px;
-    }
-    @include responsive-style(375px) {
-      height: 650px;
-    }
     overflow: hidden;
+    z-index: -1;
   }
   .eng-phase-main-fv-waologo {
     position: absolute;
@@ -114,52 +91,31 @@ $fvTextSp: 41%;
     width: 70%;
     z-index: 3;
     // animation: FvfadeInUp 0.65s ease-out;
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       top: 40px;
       left: 10px;
     }
   }
   .eng-phase-main-fv-logo {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    top: calc($fvCharacter + $fvlogotop);
-    width: 80%;
     z-index: 3;
     animation: FvfadeInUp 0.65s ease-out;
-    // opacity: 0;
-    @include responsive-style(768px) {
-      width: 90%;
-      top: calc($fvCharacterSp + $fvlogotopSp);
+    width: 93%;
+    margin: -18.667vw auto 0;
+    @include min-responsive-style(768px) {
+      margin-top: -100px;
     }
   }
   .eng-phase-main-fv-text {
-    position: absolute;
-    top: calc($fvCharacter + $fvlogotop + 260px);
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 2;
-    // animation: FvfadeInUp 0.3s ease-out;
-    @include responsive-style(768px) {
-      width: 92%;
-      top: calc($fvCharacterSp + $fvlogotopSp + $fvTextSp + 5%);
-    }
-    @include responsive-style(600px) {
-      top: calc($fvCharacterSp + $fvlogotopSp + $fvTextSp);
+    width: 92%;
+    margin: -1vw auto 0;
+    @include min-responsive-style(768px) {
+      margin-top: 0;
     }
   }
-  .eng-phase-main-fv-persons img {
-    top: $fvCharacter;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    z-index: 2;
-    // animation: FvfadeInUp 0.3s ease-out;
-    @include responsive-style(768px) {
-      top: $fvCharacterSp;
+  .eng-phase-main-fv-persons{
+    padding-top: 28.53vw;
+    @include min-responsive-style(768px) {
+      padding-top: 65px;
     }
   }
   .eng-phase-main-fv-crowds01 {
@@ -186,10 +142,7 @@ $fvTextSp: 41%;
     margin: auto;
     opacity: 0.7;
     animation: rotate 80s linear infinite;
-    top: 14%;
-    @include responsive-style(768px) {
-      top: 17%;
-    }
+    top: 17%;
   }
 }
 .eng-phase-main {
@@ -203,7 +156,10 @@ $fvTextSp: 41%;
 }
 
 .eng-phase-main-section-blue-first {
-  margin: -20px auto 60px !important;
+  margin: -10px auto 60px !important;
+  @include min-responsive-style(768px) {
+     margin-top: -20px !important;
+  }
 }
 .eng-phase-main-section-blue-last {
   margin: 0 auto -30px !important;
@@ -227,7 +183,7 @@ $fvTextSp: 41%;
     background: $cl-bg-skyblue-darken;
     margin: -20px 0 0;
     border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       border: 3px solid $cl-bg-skyblue-darkendeep;
       height: $shadow-height-sp;
       border-radius: 0 0 $border-radius-big $border-radius-big;
@@ -236,7 +192,7 @@ $fvTextSp: 41%;
 }
 
 .eng-phase-main-cv-crowds {
-  margin: -30px 0 0;
+  margin: -17px 0 0;
   position: relative;
   .eng-phase-main-cv-crowds-img {
     position: relative;
@@ -349,7 +305,7 @@ $fvTextSp: 41%;
       position: relative;
       z-index: 1;
       padding: 45px 0 60px;
-      @include responsive-style(768px) {
+      @include responsive-style(767px) {
         border: 3px solid $cl-bg-leafgreen-darkendeep;
       }
       .eng-phase-main-cv-humans-area-top-price {
@@ -381,7 +337,7 @@ $fvTextSp: 41%;
       margin: -20px 0 0;
       border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
 
-      @include responsive-style(768px) {
+      @include responsive-style(767px) {
         border: 3px solid $cl-bg-leafgreen-darkendeep;
         height: $shadow-height-sp;
       }
@@ -488,7 +444,7 @@ $fvTextSp: 41%;
   z-index: 1;
   width: $width-main-content;
   margin: 0 auto;
-  @include responsive-style(768px) {
+  @include responsive-style(767px) {
     border: 3px solid $cl-bg-leafgreen-darkendeep;
   }
 }
@@ -502,7 +458,7 @@ $fvTextSp: 41%;
   background: $cl-bg-leafgreen-darken;
   margin: -20px auto 0;
   border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
-  @include responsive-style(768px) {
+  @include responsive-style(767px) {
     height: $shadow-height-sp;
     border: 3px solid $cl-bg-leafgreen-darkendeep;
   }
@@ -527,7 +483,7 @@ $fvTextSp: 41%;
   .eng-phase-main-section-green-wrap {
     @include sectionGreen;
     padding: 30px 23px 40px;
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       padding: 20px 20px 30px;
     }
     .eng-phase-main-section-green-wrap-content {
@@ -606,7 +562,7 @@ $fvTextSp: 41%;
             font-weight: bold;
             flex: 1;
             font-size: 19px;
-            @include responsive-style(768px) {
+            @include responsive-style(767px) {
               font-size: 18px;
             }
           }
@@ -621,7 +577,7 @@ $fvTextSp: 41%;
             color: $cl-black !important;
           }
           font-size: 17px;
-          @include responsive-style(768px) {
+          @include responsive-style(767px) {
             font-size: 17px;
           }
           text-align: left;
@@ -632,7 +588,7 @@ $fvTextSp: 41%;
 
   .eng-phase-main-section-5steps-title-price {
     top: -60px !important;
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       top: -40px !important;
     }
   }
@@ -641,7 +597,7 @@ $fvTextSp: 41%;
     position: absolute;
     left: 20px;
     top: -80px;
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       top: -60px;
     }
     img {
@@ -686,7 +642,7 @@ $fvTextSp: 41%;
   .eng-phase-main-section-5steps-box {
     margin: 0 auto 45px;
 
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       margin: 0 auto 30px;
     }
     &:last-child {
@@ -698,7 +654,7 @@ $fvTextSp: 41%;
     .eng-phase-main-section-5steps-box-wrap {
       @include sectionGreen;
       padding: 30px 30px 30px;
-      @include responsive-style(768px) {
+      @include responsive-style(767px) {
         padding: 30px 15px 30px;
       }
     }
@@ -930,7 +886,7 @@ $fvTextSp: 41%;
         position: relative;
         line-height: $lineheight-normal;
         gap: 12px;
-        @include responsive-style(768px) {
+        @include responsive-style(767px) {
           width: 100%;
         }
         @include box-shadow-lp;
@@ -954,7 +910,7 @@ $fvTextSp: 41%;
     background: $cl-black;
     color: white;
     border-radius: $border-radius-extrabig $border-radius-extrabig 0 0;
-    @include responsive-style(768px) {
+    @include responsive-style(767px) {
       border-radius: 48px 48px 0 0;
     }
     ul {

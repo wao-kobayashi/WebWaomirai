@@ -129,7 +129,7 @@ $z-indexes: (
   height: auto;
   margin: auto;
   padding: 0 0 0px;
-  @include responsive-style(768px) {
+  @include responsive-style(767px) {
     width: 95%;
   }
   .modal-vimeo-content {
