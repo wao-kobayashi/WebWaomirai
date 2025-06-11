@@ -14,6 +14,9 @@ $shadow-height-sp: 38px;
   border: 3.5px solid #000;
   border-radius: $border-radius-full;
   background: #ec3f42;
+  &:hover{
+    opacity: 0.9;
+  }
   &.is-contents{
     height: 100px;
     position: absolute;

@@ -4456,6 +4456,9 @@ body#eng-phase {
   border-radius: 10000px;
   background: #ec3f42;
 }
+.c-btn-cv:hover {
+  opacity: 0.9;
+}
 .c-btn-cv.is-contents {
   height: 100px;
   position: absolute;
