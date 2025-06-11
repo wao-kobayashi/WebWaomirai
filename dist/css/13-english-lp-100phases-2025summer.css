@@ -4595,12 +4595,13 @@ body#eng-phase {
 }
 @media screen and (max-width: 768px) {
   .eng-phase-main-fv .eng-phase-main-fv-text {
-    top: 85%;
+    width: 92%;
+    top: 89%;
   }
 }
 @media screen and (max-width: 600px) {
   .eng-phase-main-fv .eng-phase-main-fv-text {
-    top: 80%;
+    top: 84%;
   }
 }
 .eng-phase-main-fv .eng-phase-main-fv-persons img {

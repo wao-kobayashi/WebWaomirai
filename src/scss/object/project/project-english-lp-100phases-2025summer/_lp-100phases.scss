@@ -43,7 +43,7 @@ $fvCharacter: 60px;
 
 $fvlogotopSp: 26%;
 $fvCharacterSp: 17%;
-$fvTextSp: 37%;
+$fvTextSp: 41%;
 .js-btn-cv-img img {
   box-shadow: 0 9px 0px #000000;
   border: 3.5px solid #000;
@@ -143,6 +143,7 @@ $fvTextSp: 37%;
     z-index: 2;
     // animation: FvfadeInUp 0.3s ease-out;
     @include responsive-style(768px) {
+      width: 92%;
       top: calc($fvCharacterSp + $fvlogotopSp + $fvTextSp + 5%);
     }
     @include responsive-style(600px) {
