@@ -5055,6 +5055,7 @@ body#eng-phase {
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-content img {
   width: 95%;
+  max-width: 372px;
   margin: 45px auto 10px;
 }
 .eng-phase-main-section-green .eng-phase-main-section-green-wrap .eng-phase-main-section-green-wrap-faq {
