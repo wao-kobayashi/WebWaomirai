@@ -2,8 +2,17 @@ $shadow-height: 45px;
 $shadow-height-sp: 38px;
 
 //////////////////////
-//共通CVボタン
+//ブルーエリアのセクション
 //////////////////////
+
+$fvlogotop: 210px;
+$fvCharacter: 60px;
+
+$fvlogotopSp: 26%;
+$fvCharacterSp: 17%;
+$fvTextSp: 41%;
+
+// 共通CVボタン（金額記載あり）
 .c-btn-cv{
   width: 445px;
   height: 120px;
@@ -44,16 +53,15 @@ $shadow-height-sp: 38px;
   }
 }
 
-//////////////////////
-//ブルーエリアのセクション
-//////////////////////
-
-$fvlogotop: 210px;
-$fvCharacter: 60px;
-
-$fvlogotopSp: 26%;
-$fvCharacterSp: 17%;
-$fvTextSp: 41%;
+// 共通CVボタン（金額記載無し）
+.js-btn-cv {
+  cursor: pointer;
+  img {
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
 .js-btn-cv-img img {
   box-shadow: 0 9px 0px #000000;
   border: 3.5px solid #000;
@@ -62,15 +70,6 @@ $fvTextSp: 41%;
   @include responsive-style(767px) {
     border: 3px solid #000 !important;
     box-shadow: 0 7px 0px rgba(0, 0, 0, 1);
-  }
-}
-
-.js-btn-cv {
-  cursor: pointer;
-  img {
-    &:hover {
-      opacity: 0.9;
-    }
   }
 }
 
@@ -156,13 +155,7 @@ $fvTextSp: 41%;
   }
 }
 .eng-phase-main {
-  //   background: $cl-bg-skyblue;
   text-align: center;
-  //   .eng-phase-main-section img {
-  //     width: $width-main-content;
-  //     margin: 0 auto 60px;
-  //     border-radius: $border-radius-bigplus;
-  //   }
 }
 
 .eng-phase-main-section-blue-first {

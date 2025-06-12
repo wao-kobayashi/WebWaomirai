@@ -4498,6 +4498,13 @@ body#eng-phase {
   margin: auto;
 }
 
+.js-btn-cv {
+  cursor: pointer;
+}
+.js-btn-cv img:hover {
+  opacity: 0.9;
+}
+
 .js-btn-cv-img img {
   box-shadow: 0 9px 0px #000000;
   border: 3.5px solid #000;
@@ -4509,13 +4516,6 @@ body#eng-phase {
     border: 3px solid #000 !important;
     box-shadow: 0 7px 0px rgb(0, 0, 0);
   }
-}
-
-.js-btn-cv {
-  cursor: pointer;
-}
-.js-btn-cv img:hover {
-  opacity: 0.9;
 }
 
 .eng-phase-main-fv {
