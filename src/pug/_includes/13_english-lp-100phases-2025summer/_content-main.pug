@@ -15,7 +15,10 @@
     .eng-phase-main-fv-logo 
        img(src=ImgFvLogo)
     .eng-phase-main-fv-text
-       img(src=ImgFvtext )
+      if a_finished
+        img(src=ImgFvTextAFinished)
+      else
+        img(src=ImgFvText)
 
     .eng-phase-main-fv-overflow-hidden 
       .eng-phase-main-fv-shine
@@ -43,24 +46,32 @@
   section.eng-phase-main-section-blue.inview-triger.inview-hide
     .eng-phase-main-flow
       .eng-phase-main-flow-title
-        img(src=imgFlowTitle)
+        img(src=ImgSectionBlue05Title)
       .eng-phase-main-flow-wrapper
-        .eng-phase-main-flow-tab
-          .eng-phase-main-flow-tab-item.is-active
-            img(src=ImgFlowBalloon01).image-balloon
+        if ! a_finished
+          .eng-phase-main-flow-text
+            img(src=TextFlow)
+        .eng-phase-main-flow-tab(class=a_finished ? 'is-finished' : '')
+          .eng-phase-main-flow-tab-item(class=!a_finished ? 'is-active' : 'is-finished')
+            if ! a_finished
+              img(src=ImgFlowBalloon01).image-balloon
             img(src=ImgFlowTab01).image-tab
-          .eng-phase-main-flow-tab-item
-            img(src=ImgFlowBalloon02).image-balloon
+            if a_finished
+              img(src=ImgFlowTab01End).img-finished
+          .eng-phase-main-flow-tab-item(class=a_finished ? 'is-active is-finished' : '')
+            if ! a_finished
+              img(src=ImgFlowBalloon02).image-balloon
             img(src=ImgFlowTab02).image-tab
         .eng-phase-main-flow-contents
-          .eng-phase-main-flow-contents-item.is-active
-            .eng-phase-main-flow-about
-              img(src=ImgFlowAbout)
-            .eng-phase-main-flow-schedule
-              img(src=ImgFlowSchedule01)
-            .eng-phase-main-flow-option
-              img(src=ImgFlowOption)
-          .eng-phase-main-flow-contents-item
+          if ! a_finished
+            .eng-phase-main-flow-contents-item(class=!a_finished ? 'is-active' : '')
+              .eng-phase-main-flow-about
+                img(src=ImgFlowAbout)
+              .eng-phase-main-flow-schedule
+                img(src=ImgFlowSchedule01)
+              .eng-phase-main-flow-option
+                img(src=ImgFlowOption)
+          .eng-phase-main-flow-contents-item(class=a_finished ? 'is-active' : '')
             .eng-phase-main-flow-about
               img(src=ImgFlowAbout)
             .eng-phase-main-flow-schedule

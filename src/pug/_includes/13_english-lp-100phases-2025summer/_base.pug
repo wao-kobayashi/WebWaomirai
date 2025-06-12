@@ -1,9 +1,9 @@
 doctype html
 html
   // 変数定義
-  include ../../_includes/13_english-lp-100phases-2025summer/_variables
+  include _variables
   // ミックスイン
-  include ../../_includes/13_english-lp-100phases-2025summer/_mixins
+  include _mixins
   head
     // Google Tag Manager
     //- script.
@@ -18,7 +18,7 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(property="og:image", content="https://go.waomirai.com/image/oggreen")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
-    link(href="../css/13-english-lp-100phases-2025summer.css", rel="stylesheet")
+    link(href="../../css/13-english-lp-100phases-2025summer.css", rel="stylesheet")
     link(rel="shortcut icon", type="image/png", href="https://go.waomirai.com/logo/fabicon")
     title %%title%%
     meta(name="robots", content="noindex")
@@ -43,6 +43,6 @@ html
     script(src="https://player.vimeo.com/api/player.js")
   // コンテンツをインクルード
   body#eng-phase
-    include ../../_includes/13_english-lp-100phases-2025summer/_content.pug
+    include _content.pug
     // JavaScriptをインクルード
-    include ../../_includes/13_english-lp-100phases-2025summer/_js.pug
+    include _js.pug

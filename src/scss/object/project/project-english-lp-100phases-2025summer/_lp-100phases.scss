@@ -377,12 +377,21 @@ $fvTextSp: 41%;
     border-radius: 0 0 12px 12px;
   }
 }
+.eng-phase-main-flow-text{
+  width: 78.483%;
+  margin: 0 auto;
+  padding-top: 10px;
+  max-width: 344px;
+}
 .eng-phase-main-flow-tab{
   width: calc(100% - 40px);
   margin: 0 auto;
   padding-top: 86px;
   display: flex;
   justify-content: space-between;
+  &.is-finished{
+    padding-top: 5px;
+  }
   @include min-responsive-style(768px) {
     padding-top: 120px;
   }
@@ -396,6 +405,32 @@ $fvTextSp: 41%;
   cursor: pointer;
   &:nth-child(2){
     padding: 14px 8px 6px;
+  }
+  &.is-finished{
+    cursor: default;
+  }
+  &:nth-child(1).is-finished::before{
+    content: "";
+    background: rgba(0,0,0,0.8);
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .img-finished{
+    position: relative;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    max-width: calc(100% - 10px);
+    max-height: calc(100% - 10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
   .image-balloon{
     width: 100%;

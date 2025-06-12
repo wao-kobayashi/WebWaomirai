@@ -111,16 +111,19 @@ script.
     * 10日間プログラム流れのタブ切り替え
     */
     $('.eng-phase-main-flow-tab-item').click(function() {
+      if(!$('.eng-phase-main-flow-tab').hasClass('is-finished')){
+        // A日程が終了していない場合のみ、タブ切り替えを実行する
         $('.eng-phase-main-flow-tab-item,.eng-phase-main-flow-contents-item').removeClass('is-active');
         $(this).addClass('is-active');
         $('.eng-phase-main-flow-contents-item').eq($('.eng-phase-main-flow-tab-item').index(this)).addClass('is-active');
+      }
     });
 
     /**
-    * スマホの追従ボタン
+    * スクロールによるスマホの追従ボタンの表示・非表示
     */
     $(window).on('load scroll', function(){
-      if(window.matchMedia('(max-width: 767px)')){
+      if (window.matchMedia('(max-width: 767px)').matches) {
         if($(window).scrollTop() < ($('.fixed-cv-trigger').offset().top - $(window).height())){
           $('#fixed-cv').fadeOut();
         }else{
