@@ -4459,25 +4459,30 @@ body#eng-phase {
 .c-btn-cv:hover {
   opacity: 0.9;
 }
-.c-btn-cv.is-contents {
+.c-btn-cv.is-contents, .c-btn-cv.is-green {
   height: 100px;
+  width: 78%;
+  animation: fuwafuwa-button 2s 0s infinite;
+}
+.c-btn-cv.is-contents img, .c-btn-cv.is-green img {
+  width: auto;
+  height: 29px;
+}
+@media screen and (max-width: 767px) {
+  .c-btn-cv.is-contents, .c-btn-cv.is-green {
+    width: 84%;
+    height: 90px;
+  }
+}
+.c-btn-cv.is-green {
+  margin: 0 auto;
+}
+.c-btn-cv.is-contents {
   position: absolute;
   top: 30%;
   left: 0;
   right: 0;
   margin: auto;
-  width: 78%;
-  animation: fuwafuwa-button 2s 0s infinite;
-}
-.c-btn-cv.is-contents img {
-  width: auto;
-  height: 30px;
-}
-@media screen and (max-width: 767px) {
-  .c-btn-cv.is-contents {
-    width: 92%;
-    height: 90px;
-  }
 }
 
 .js-btn-cv-img img {
@@ -5371,11 +5376,6 @@ body#eng-phase {
 
 .eng-phase-main-section-5steps-cv {
   margin: 0 auto 105px;
-}
-.eng-phase-main-section-5steps-cv img {
-  margin: 0 auto 0px;
-  width: 78%;
-  animation: fuwafuwa-button 2s 0s infinite;
 }
 
 .bg-lp-creamyellow {

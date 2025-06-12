@@ -17,23 +17,29 @@ $shadow-height-sp: 38px;
   &:hover{
     opacity: 0.9;
   }
-  &.is-contents{
+  &.is-contents,
+  &.is-green{
     height: 100px;
+    width: 78%;
+    animation: fuwafuwa-button 2s 0s infinite;
+    img{
+      width: auto;
+      height: 29px;
+    }
+    @include responsive-style(767px) {
+      width: 84%;
+      height: 90px;
+    }
+  }
+  &.is-green{
+    margin: 0 auto;
+  }
+  &.is-contents{
     position: absolute;
     top: 30%;
     left: 0;
     right: 0;
     margin: auto;
-    width: 78%;
-    animation: fuwafuwa-button 2s 0s infinite;
-    img{
-      width: auto;
-      height: 30px;
-    }
-    @include responsive-style(767px) {
-      width: 92%;
-      height: 90px;
-    }
   }
 }
 
@@ -844,11 +850,6 @@ $fvTextSp: 41%;
 }
 .eng-phase-main-section-5steps-cv {
   margin: 0 auto 105px;
-  img {
-    margin: 0 auto 0px;
-    width: $width-cv-btn;
-    animation: fuwafuwa-button 2s 0s infinite;
-  }
 }
 //////////////////////
 //ワオ未来塾って?
