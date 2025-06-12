@@ -4455,6 +4455,7 @@ body#eng-phase {
   border: 3.5px solid #000;
   border-radius: 10000px;
   background: #ec3f42;
+  cursor: pointer;
 }
 .c-btn-cv:hover {
   opacity: 0.9;
