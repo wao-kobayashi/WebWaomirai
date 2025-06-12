@@ -45,7 +45,7 @@ body#eng-phase {
     display: none;
   }
   .eng-phase-left-wrap {
-    max-width: 527px;
+    max-width: 400px;
     margin: 0 auto;
     @include responsive-style(1240px) {
       max-width: 83.65%;
@@ -61,7 +61,7 @@ body#eng-phase {
   .eng-phase-left-wrap-cv{
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 15px;
     .eng-phase-left-wrap-logo {
       margin: 0 auto 15px;
     }

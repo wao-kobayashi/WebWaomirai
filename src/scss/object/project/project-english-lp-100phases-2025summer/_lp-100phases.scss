@@ -14,8 +14,8 @@ $fvTextSp: 41%;
 
 // 共通CVボタン（金額記載あり）
 .c-btn-cv{
-  width: 445px;
-  height: 120px;
+  width: 333px;
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +24,10 @@ $fvTextSp: 41%;
   border-radius: $border-radius-full;
   background: #ec3f42;
   cursor: pointer;
+  img{
+    width: auto;
+    height: 29px;
+  }
   &:hover{
     opacity: 0.9;
   }
@@ -32,10 +36,6 @@ $fvTextSp: 41%;
     height: 100px;
     width: 78%;
     animation: fuwafuwa-button 2s 0s infinite;
-    img{
-      width: auto;
-      height: 29px;
-    }
     @include responsive-style(767px) {
       width: 84%;
       height: 90px;
