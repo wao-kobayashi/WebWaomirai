@@ -35,7 +35,7 @@ script.
       var isWideScreen = $(window).width() >= 769;
 
       // 全てのCVボタンに対して処理
-      $('.js-btn-cv, .c-btn-cv').each(function() {
+      $('.js-btn-cv, .c-btn-cv, .fixed-cv-btn').each(function() {
         var $button = $(this);
         
         if (isWideScreen) {
@@ -107,11 +107,27 @@ script.
         $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
     });
 
-    // 10日間プログラム流れのタブ切り替え
+    /**
+    * 10日間プログラム流れのタブ切り替え
+    */
     $('.eng-phase-main-flow-tab-item').click(function() {
         $('.eng-phase-main-flow-tab-item,.eng-phase-main-flow-contents-item').removeClass('is-active');
         $(this).addClass('is-active');
         $('.eng-phase-main-flow-contents-item').eq($('.eng-phase-main-flow-tab-item').index(this)).addClass('is-active');
     });
+
+    /**
+    * スマホの追従ボタン
+    */
+    $(window).on('load scroll', function(){
+      if(window.matchMedia('(max-width: 767px)')){
+        if($(window).scrollTop() < ($('.fixed-cv-trigger').offset().top - $(window).height())){
+          $('#fixed-cv').fadeOut();
+        }else{
+          $('#fixed-cv').fadeIn();
+        }
+      }
+    });
+
   
   });
