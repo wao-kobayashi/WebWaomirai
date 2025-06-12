@@ -4210,6 +4210,18 @@ body#eng-phase {
   max-width: 527px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1240px) {
+  .eng-phase-left .eng-phase-left-wrap {
+    max-width: 83.65%;
+  }
+  .eng-phase-left .eng-phase-left-wrap .c-btn-cv {
+    height: 9.68vw;
+    min-height: 100px;
+  }
+  .eng-phase-left .eng-phase-left-wrap .c-btn-cv img {
+    max-width: 80%;
+  }
+}
 .eng-phase-left .eng-phase-left-wrap-cv {
   display: flex;
   justify-content: center;

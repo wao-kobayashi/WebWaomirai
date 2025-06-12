@@ -47,6 +47,16 @@ body#eng-phase {
   .eng-phase-left-wrap {
     max-width: 527px;
     margin: 0 auto;
+    @include responsive-style(1240px) {
+      max-width: 83.65%;
+      .c-btn-cv{
+        height: 9.68vw;
+        min-height: 100px;
+        img{
+          max-width: 80%;
+        }
+      }
+    }
   }
   .eng-phase-left-wrap-cv{
     display: flex;
