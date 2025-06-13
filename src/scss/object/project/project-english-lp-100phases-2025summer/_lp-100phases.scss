@@ -81,7 +81,7 @@ $fvTextSp: 41%;
     position: absolute;
     top: 0;
     left: 0;
-    height: 700px;
+    height: 730px;
     width: 100%;
     overflow: hidden;
     z-index: -1;
@@ -150,7 +150,10 @@ $fvTextSp: 41%;
     margin: auto;
     opacity: 0.7;
     animation: rotate 80s linear infinite;
-    top:  28%;
+    top: 28%;
+    @include min-responsive-style(768px) {
+      top: 24%;
+    }
   }
 }
 .eng-phase-main {
@@ -619,7 +622,7 @@ $fvTextSp: 41%;
 //////////////////////
 .eng-phase-bg-green {
   background: $cl-bg-leafgreen;
-  padding: 70px 0 75px;
+  padding: 92px 0 75px;
 }
 
 .eng-phase-main-section-green {
@@ -1106,6 +1109,9 @@ $fvTextSp: 41%;
       border-right: none;
       border-bottom: none;
       border-radius: 25px 0 0 0;
+      img{
+        margin: 0 0 -2px 4px;
+      }
     }
   }
 }
