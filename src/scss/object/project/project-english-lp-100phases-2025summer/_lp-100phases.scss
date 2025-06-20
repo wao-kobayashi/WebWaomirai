@@ -13,7 +13,7 @@ $fvCharacterSp: 17%;
 $fvTextSp: 41%;
 
 // 共通CVボタン（金額記載あり）
-.c-btn-cv{
+.c-btn-cv {
   width: 333px;
   height: 85px;
   display: flex;
@@ -24,27 +24,27 @@ $fvTextSp: 41%;
   border-radius: $border-radius-full;
   background: #ec3f42;
   cursor: pointer;
-  img{
+  img {
     width: auto;
-    height: 29px;
+    height: 26px;
   }
-  &:hover{
+  &:hover {
     opacity: 0.9;
   }
   &.is-contents,
-  &.is-green{
+  &.is-green {
     height: 100px;
     width: 78%;
     animation: fuwafuwa-button 2s 0s infinite;
     @include responsive-style(767px) {
       width: 84%;
-      height: 90px;
+      height: 82px;
     }
   }
-  &.is-green{
+  &.is-green {
     margin: 0 auto;
   }
-  &.is-contents{
+  &.is-contents {
     position: absolute;
     top: 30%;
     left: 0;
@@ -121,7 +121,7 @@ $fvTextSp: 41%;
       margin-top: 0;
     }
   }
-  .eng-phase-main-fv-persons{
+  .eng-phase-main-fv-persons {
     padding-top: 28.53vw;
     @include min-responsive-style(768px) {
       padding-top: 65px;
@@ -163,7 +163,7 @@ $fvTextSp: 41%;
 .eng-phase-main-section-blue-first {
   margin: -10px auto 60px !important;
   @include min-responsive-style(768px) {
-     margin-top: -20px !important;
+    margin-top: -20px !important;
   }
 }
 .eng-phase-main-section-blue-last {
@@ -279,7 +279,7 @@ $fvTextSp: 41%;
 
 .eng-phase-main-cv-humans {
   margin: -100px auto 0;
-  &.is-green{
+  &.is-green {
     margin-top: 0;
   }
   .eng-phase-main-cv-humans-img {
@@ -359,7 +359,7 @@ $fvTextSp: 41%;
 }
 
 // 100フレーズチャレンジ 10日間プログラムの流れ
-.eng-phase-main-flow-wrapper{
+.eng-phase-main-flow-wrapper {
   background: #fff;
   position: relative;
   border: 4px solid #185b7f;
@@ -372,41 +372,41 @@ $fvTextSp: 41%;
     border-radius: 0 0 12px 12px;
   }
 }
-.eng-phase-main-flow-text{
+.eng-phase-main-flow-text {
   width: 78.483%;
   margin: 0 auto;
   padding-top: 10px;
   max-width: 344px;
 }
-.eng-phase-main-flow-tab{
+.eng-phase-main-flow-tab {
   width: calc(100% - 40px);
   margin: 0 auto;
   padding-top: 86px;
   display: flex;
   justify-content: space-between;
-  &.is-finished{
+  &.is-finished {
     padding-top: 5px;
   }
   @include min-responsive-style(768px) {
     padding-top: 120px;
   }
 }
-.eng-phase-main-flow-tab-item{
+.eng-phase-main-flow-tab-item {
   width: calc(50% - 3.5px);
-  background: #A5A3A3;
+  background: #a5a3a3;
   border-radius: 16px 16px 0 0;
   padding: 12px 8px 8px;
   position: relative;
   cursor: pointer;
-  &:nth-child(2){
+  &:nth-child(2) {
     padding: 14px 8px 6px;
   }
-  &.is-finished{
+  &.is-finished {
     cursor: default;
   }
-  &:nth-child(1).is-finished::before{
+  &:nth-child(1).is-finished::before {
     content: "";
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 16px 16px 0 0;
     width: 100%;
     height: 100%;
@@ -415,7 +415,7 @@ $fvTextSp: 41%;
     top: 0;
     left: 0;
   }
-  .img-finished{
+  .img-finished {
     position: relative;
     z-index: 100;
     width: auto;
@@ -427,7 +427,7 @@ $fvTextSp: 41%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
   }
-  .image-balloon{
+  .image-balloon {
     width: 100%;
     position: absolute;
     top: -18.5vw;
@@ -437,19 +437,19 @@ $fvTextSp: 41%;
       top: -95px;
     }
   }
-  .image-tab{
+  .image-tab {
     max-width: 95%;
     height: auto;
     vertical-align: bottom;
     position: relative;
     z-index: 1;
   }
-  &.is-active{
-    background: #C094C0;
-    .image-balloon{
+  &.is-active {
+    background: #c094c0;
+    .image-balloon {
       display: none;
     }
-    &::before{
+    &::before {
       content: "";
       width: calc(100% - 9px);
       height: 3px;
@@ -459,9 +459,9 @@ $fvTextSp: 41%;
       left: 3px;
     }
   }
-  &::after{
+  &::after {
     content: "";
-    background: #E9E9E9;
+    background: #e9e9e9;
     width: calc(100% - 9px);
     height: calc(100% - 3px);
     border-radius: 14px 16px 0 0;
@@ -469,7 +469,7 @@ $fvTextSp: 41%;
     top: 3px;
     left: 3px;
   }
-  &.is-active::after{
+  &.is-active::after {
     background: #fff;
   }
 }
@@ -482,24 +482,24 @@ $fvTextSp: 41%;
   }
 }
 
-.eng-phase-main-flow-contents{
+.eng-phase-main-flow-contents {
   width: 96%;
   margin: 0 auto;
-  border: 3px solid #C094C0;
+  border: 3px solid #c094c0;
   border-radius: 16px;
 }
-.eng-phase-main-flow-contents-item:not(.is-active){
+.eng-phase-main-flow-contents-item:not(.is-active) {
   display: none;
 }
-.eng-phase-main-flow-about{
+.eng-phase-main-flow-about {
   width: 88%;
   margin: 23px auto 0;
 }
-.eng-phase-main-flow-schedule{
+.eng-phase-main-flow-schedule {
   width: 95%;
   margin: 40px auto 0;
 }
-.eng-phase-main-flow-option{
+.eng-phase-main-flow-option {
   width: 95%;
   margin: 0 auto;
   padding: 8px 0 15px;
@@ -1091,15 +1091,15 @@ $fvTextSp: 41%;
 //////////////////////
 //追従バナー
 //////////////////////
-#fixed-cv{
+#fixed-cv {
   display: none;
   @include responsive-style(767px) {
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 100;
-    .fixed-cv-btn{
-      background: #EC3F42;
+    .fixed-cv-btn {
+      background: #ec3f42;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1109,7 +1109,7 @@ $fvTextSp: 41%;
       border-right: none;
       border-bottom: none;
       border-radius: 25px 0 0 0;
-      img{
+      img {
         margin: 0 0 -2px 4px;
       }
     }
