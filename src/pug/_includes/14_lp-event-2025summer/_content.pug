@@ -1,0 +1,30 @@
+// 変数定義
+include _variables
+
+// ミックスイン
+include _mixins
+
+////////////////////////////
+//以下はpcでのみ表示される要素
+////////////////////////////
+.eng-phase-logo 
+   img(src=ImgLogoWaoMirai)
+.eng-phase-bg
+  .eng-phase-bg-crowds1
+    img(src=ImgBgCrowdsPc)
+  .eng-phase-bg-crowds2
+    img(src=ImgBgCrowdsPc)
+.eng-phase-left 
+  .eng-phase-left-wrap
+    .eng-phase-left-wrap-logo
+      img(src=ImgLogoEnglish)
+    .eng-phase-left-wrap-cv
+      a.c-btn-cv(href=UrlLine100Phases)
+        img(src=ImgBtnCvPrice)
+////////////////////////////
+//以下メインコンテンツ(PC/スマホ兼用)
+////////////////////////////
+.eng-phase-main
+  include _content-main.pug
++modal
++modal-vimeo
