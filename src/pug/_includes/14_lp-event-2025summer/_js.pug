@@ -5,18 +5,6 @@ script.
   */
   $(document).ready(function() {
     /**
-    * 画面内表示検出処理
-    * 要素が画面内に入ったときに'inview'クラスを追加して
-    * CSSアニメーションなどのトリガーとする
-    */
-    $('.inview-triger').on('inview', function(event, isInView) {
-      if (isInView) {
-        // 要素が画面内に表示されたらinviewクラスを追加
-        $(this).addClass('inview');
-      }
-    });
-
-    /**
     * モーダルウィンドウを開く関数
     * モーダルと背景を表示する
     */
@@ -35,7 +23,7 @@ script.
       var isWideScreen = $(window).width() >= 769;
 
       // 全てのCVボタンに対して処理
-      $('.js-btn-cv, .c-btn-cv, .fixed-cv-btn').each(function() {
+      $('.c-btn-cv').each(function() {
         var $button = $(this);
         
         if (isWideScreen) {
@@ -58,9 +46,6 @@ script.
       });
     }
 
-
-
-
     /**
     * 画面サイズ変更対応
     * ページ読み込み時とリサイズ時にボタン動作を更新する
@@ -68,20 +53,6 @@ script.
     */
     $(window).on('load resize', updateButtonBehavior);
 
-    var iframe = document.getElementById('vimeoPlayer');
-    var player = new Vimeo.Player(iframe);
-    
-    // 再生ボタンがクリックされたときの処理
-    $('#playButton').on('click', function() {
-         $('.modal-vimeo, .bg-modal').show();
-        setTimeout(function() {
-              player.play().then(function() {
-                  console.log('動画が再生されました');
-              }).catch(function(error) {
-                  console.error('再生エラー:', error);
-              });
-          }, 1500); // 1.5秒後に再生
-    });
     
     /**
     * モーダルを閉じる処理
@@ -106,31 +77,5 @@ script.
         // 他の開いているコンテンツを閉じる
         $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
     });
-
-    /**
-    * 10日間プログラム流れのタブ切り替え
-    */
-    $('.eng-phase-main-flow-tab-item').click(function() {
-      if(!$('.eng-phase-main-flow-tab').hasClass('is-finished')){
-        // A日程が終了していない場合のみ、タブ切り替えを実行する
-        $('.eng-phase-main-flow-tab-item,.eng-phase-main-flow-contents-item').removeClass('is-active');
-        $(this).addClass('is-active');
-        $('.eng-phase-main-flow-contents-item').eq($('.eng-phase-main-flow-tab-item').index(this)).addClass('is-active');
-      }
-    });
-
-    /**
-    * スクロールによるスマホの追従ボタンの表示・非表示
-    */
-    $(window).on('load scroll', function(){
-      if (window.matchMedia('(max-width: 767px)').matches) {
-        if($(window).scrollTop() < ($('.fixed-cv-trigger').offset().top - $(window).height())){
-          $('#fixed-cv').fadeOut();
-        }else{
-          $('#fixed-cv').fadeIn();
-        }
-      }
-    });
-
   
   });
