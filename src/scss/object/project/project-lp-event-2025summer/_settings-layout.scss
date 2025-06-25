@@ -21,9 +21,16 @@ $breakpoint-sp: 768px; // ブレイクポイントの幅
 .l-main{
     width: $width-main;
     margin: 0 auto;
+    position: relative;
 }
 .l-pc-menu{
     background: #eee;
+}
+@include responsive-style($breakpoint-tb) {
+    .l-pc-wrapper,
+    .l-pc-wrapper{
+        display: none;
+    }
 }
 @include responsive-style($breakpoint-sp) {
     .l-pc-logo,

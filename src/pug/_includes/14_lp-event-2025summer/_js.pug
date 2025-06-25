@@ -60,11 +60,6 @@ script.
     */
     $('.modal-close, .bg-modal').click(function() {
       $('.modal-vimeo, .modal, .bg-modal').hide();
-        player.pause().then(function() {
-          console.log('動画が停止しました');
-      }).catch(function(error) {
-          console.error('停止エラー:', error);
-      });
     });
     /**
     * モーダルを閉じる処理

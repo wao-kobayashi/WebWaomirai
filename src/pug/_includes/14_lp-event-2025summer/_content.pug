@@ -4,16 +4,14 @@ include _variables
 //- ミックスイン
 include _mixins
 
-//-//////////////////////////
-//- LINEボタンのサンプル
-//- a.c-btn-cv
-//-   |a
-//-//////////////////////////
-
 .l-pc-logo
-  |ロゴ
+  .l-pc-wrapper
+    |ロゴ
 .l-main
   include _content-main.pug
 .l-pc-menu
-  |メニュー
+  .l-pc-wrapper
+    |メニュー
+    a.c-btn-cv(href=UrlLine)
+      |LINEボタン
 +modal

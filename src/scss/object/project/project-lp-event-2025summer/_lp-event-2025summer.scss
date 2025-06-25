@@ -1,4 +1,37 @@
 //////////////////////
 // メイン部分
 //////////////////////
-
+.p-fv,
+.p-fv-main{
+    position: relative;
+}
+.p-fv-logo{
+    width: 109px;
+    position: absolute;
+    top: 15px;
+    left: 4%;
+    z-index: 1;
+}
+.p-fv-main-title{
+    width: 67.467%;
+    position: absolute;
+    top: 8.5%;
+    left: 15.925%;
+}
+.p-fv-main-button{
+    width: 53.6%;
+    position: absolute;
+    top: 77.3%;
+    left: 22.3%;
+}
+.p-fv-target{
+    @include font-size-m;
+    background: $cl-bg-leafgreen-darken;
+    color: #fff;
+    font-weight: bold;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
