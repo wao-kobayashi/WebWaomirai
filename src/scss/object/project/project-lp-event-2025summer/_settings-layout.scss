@@ -4,6 +4,9 @@ $width-main-content: 92%; // メインの幅
 $breakpoint-tb: 1000px; // ブレイクポイントの幅
 $breakpoint-sp: 768px; // ブレイクポイントの幅
 
+body{
+    background: $cl-bg-leafgreen;;
+}
 .l-pc-logo,
 .l-pc-menu{
     background: #ccc;
