@@ -1,4 +1,36 @@
 /* width */
 $width-main: 450px; // メインの幅
 $width-main-content: 92%; // メインの幅
-$breakpoint-layout: 768px; //レスポンシブの切り替え
+$breakpoint-tb: 1000px; // ブレイクポイントの幅
+$breakpoint-sp: 768px; // ブレイクポイントの幅
+
+.l-pc-logo,
+.l-pc-menu{
+    background: #ccc;
+    width: calc(50% - ($width-main / 2));
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+.l-pc-logo{
+    left: 0;
+}
+.l-pc-menu{
+    right: 0;
+}
+.l-main{
+    width: $width-main;
+    margin: 0 auto;
+}
+.l-pc-menu{
+    background: #eee;
+}
+@include responsive-style($breakpoint-sp) {
+    .l-pc-logo,
+    .l-pc-menu{
+        display: none;
+    }
+    .l-main{
+        width: 100%;
+    }
+}
