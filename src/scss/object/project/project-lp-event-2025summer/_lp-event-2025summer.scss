@@ -257,9 +257,6 @@
     }
 }
 
-.p-tab:has(.p-tab-list.is-fixed){
-    padding-bottom: 63px;
-}
 .p-tab-text{
     @include font-size-xs;
     line-height: $lineheight-relaxed;
@@ -272,16 +269,15 @@
     background: $cl-bg-leafgreen;
     @include box-shadow-tab-list;
     position: relative;
+    top: 0;
+    left: 0;
     z-index: 1000;
-    &.is-fixed{
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transition: all 0.2s ease-in-out;
-        &.is-fixed-hide{
-            transform: translateY(-100%);
-        }
+    transition: all 0.2s ease-in-out;
+    &.is-fixed-hide{
+        transform: translateY(-100%);
+    }
+    @include responsive-style($breakpoint-sp) {
+        position: sticky;
     }
 }
 .p-tab-list-wrapper{
