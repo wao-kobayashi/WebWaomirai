@@ -272,7 +272,7 @@
 
 .p-details-list{
     width: $width-main-content;
-    margin: 60px auto 0 !important;
+    margin: 60px auto !important;
 }
 .p-details-item{
     border-radius: $border-radius-big;
@@ -362,6 +362,17 @@
     margin-top: 30px;
     border-radius: $border-radius-middle;
     position: relative;
+    &.is-more-false{
+        .p-details-item-teacher-text{
+            height: auto;
+            &::before{
+                display: none;
+            }
+        }
+        .p-details-item-teacher-text-more{
+            display: none;
+        }
+    }
 }
 .p-details-item-teacher-bg{
     @include font-size-eng-small;

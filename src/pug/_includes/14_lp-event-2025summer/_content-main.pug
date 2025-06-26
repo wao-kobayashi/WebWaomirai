@@ -37,18 +37,18 @@ include _mixins
       br
       |複数授業を受けることも可能です！
     ol.p-list-main
-      each item in list_items
+      each item in program
         li.p-list-item(class=`is-${item.key}`)
           .p-list-item-image
-            img(src=item.img, alt=item.title)
+            img(src=item.list_img, alt=item.list_title)
           .p-list-item-info
-            p.p-list-item-info-number #{item.number}
-            p.p-list-item-info-title #{item.title}
+            p.p-list-item-info-number #{item.list_number}
+            p.p-list-item-info-title #{item.list_title}
             p.p-list-item-info-text
               | #{item.times[0]}
               br
               | #{item.times[1]}
-            a.p-list-item-info-button(href=item.link)
+            a.p-list-item-info-button(href='#' + item.link)
               i.fa-solid.fa-arrow-down
               | 詳細を見る
   a.c-btn-cv(href=UrlLine)
@@ -67,8 +67,8 @@ include _mixins
     |受けてみたい教科を選んで講座内容をチェックしよう！
   .p-tab-list
     .p-tab-list-wrapper
-      each tab in list_items
-        a.p-tab-item(href=tab.link, class=`is-${tab.key}`)
+      each tab in program
+        a.p-tab-item(href='#' + tab.link, class=`is-${tab.key}`)
           | #{tab.tab_text[0]}
           br
           | #{tab.tab_text[1]}
@@ -76,8 +76,8 @@ include _mixins
 //- プログラムの詳細
 .p-details
   ul.p-details-list
-    each item in details
-      li.p-details-item(class='is-' + item.category, id=item.id)
+    each item in program
+      li.p-details-item(class='is-' + item.key, id=item.link)
         p.p-details-item-subject
           | #{item.category_icon}
         h2.p-details-item-title
@@ -86,9 +86,9 @@ include _mixins
           li.p-details-item-info-item
             p.p-details-item-info-item-title 日時
             p.p-details-item-info-item-text
-              each date, idx in item.dates
+              each date, idx in item.times
                 | #{date}
-                if idx !== item.dates.length - 1
+                if idx !== item.times.length - 1
                   br
               span.p-details-item-info-item-text-note
                 | ※同じ内容です。ご都合のよい時間でご参加ください。
@@ -104,7 +104,7 @@ include _mixins
             | #{line}
             if idx !== item.description.length - 1
               br
-        .p-details-item-teacher
+        .p-details-item-teacher(class=!item.teacher.texts_more ? 'is-more-false' : '')
           .p-details-item-teacher-bg TEACHER
           .p-details-item-teacher-head
             .p-details-item-teacher-head-image
@@ -122,7 +122,6 @@ include _mixins
             span.p-details-item-teacher-text-more-open 続きを読む
             span.p-details-item-teacher-text-more-close 閉じる
 
-  div(style="height:1000px;background:#fff;")
   a.c-btn-cv(href=UrlLine)
       |LINEで簡単申込
 
@@ -130,5 +129,3 @@ include _mixins
 .c-slide
   img(src=ImgSlide)
   img(src=ImgSlide)
-
-div(style="height:1000px;background:#fff;")
