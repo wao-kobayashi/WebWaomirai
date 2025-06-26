@@ -177,7 +177,7 @@ script.
             const sectionBottom = sectionTop + $section.outerHeight();
 
             if (sectionBottom > scrollTop && sectionTop < scrollBottom) {
-              activeSection = $section.attr("id");
+              activeSection = $section.attr("data-id");
               return false;
             }
           });

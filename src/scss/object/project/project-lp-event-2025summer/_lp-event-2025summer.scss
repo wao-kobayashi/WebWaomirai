@@ -261,11 +261,13 @@
     border-radius: 4px;
     color: $cl-bg-leafgreen-darken;
     text-align: center;
-    @each $key, $color in $subject-categories {
-        &.is-#{$key}.is-active{
-            background: $color;
-            color: #fff;
-            border: 1px solid #fff;
+    @include responsive-style($breakpoint-sp) {
+        @each $key, $color in $subject-categories {
+            &.is-#{$key}.is-active{
+                background: $color;
+                color: #fff;
+                border: 1px solid #fff;
+            }
         }
     }
 }
@@ -299,6 +301,14 @@
                 }
             }
         }
+    }
+}
+.p-details-item-anchor{
+    position: absolute;
+    top: -14px;
+    left: 0;
+    @include responsive-style($breakpoint-sp) {
+        top: -83px;
     }
 }
 .p-details-item-subject{

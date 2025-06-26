@@ -77,7 +77,8 @@ include _mixins
 .p-details
   ul.p-details-list
     each item in program
-      li.p-details-item(class='is-' + item.key, id=item.link)
+      li.p-details-item(class='is-' + item.key,data-id=item.link)
+        .p-details-item-anchor(id=item.link)
         p.p-details-item-subject
           | #{item.category_icon}
         h2.p-details-item-title
