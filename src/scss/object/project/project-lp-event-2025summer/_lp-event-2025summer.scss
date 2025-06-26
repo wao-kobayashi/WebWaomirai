@@ -526,15 +526,15 @@
     }
 }
 
-// こんなお子さんにオススメです！
+// こんなお子さまたちにオススメです！
 .c-recommend {
   margin: 75px 0 0;
+  background: $cl-lp-yellow;
   .c-recommend {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     display: flex;
-    // background: white;
     div {
       @include min-responsive-style(768px) {
         flex: 1;
@@ -689,6 +689,7 @@
   margin: 100px auto 0;
   max-width: $width-lg;
   text-align: center;
+  background: $cl-lp-yellow;
   @include responsive-style(768px) {
     padding: 0 20px;
     margin: 60px auto 0;
@@ -754,7 +755,7 @@
 }
 .c-howto-main {
   padding: 80px 0 45px;
-  background: $cl-bg-eventlp;
+  background: $cl-lp-white;
   margin-bottom: 115px;
   @include responsive-style(768px) {
     padding: 40px 0 5px;
@@ -849,6 +850,7 @@
   max-width: $width-lg;
   padding: 0 20px;
   margin: 100px auto 0;
+  background: $cl-lp-yellow;
   @include responsive-style(768px) {
     padding: 0;
     margin-top: 75px;
@@ -886,6 +888,7 @@
   max-width: $width-xl;
   padding: 0 20px;
   margin: 100px auto 120px;
+  background: $cl-lp-yellow;
   @include responsive-style(768px) {
     margin-top: 75px;
   }
