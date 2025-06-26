@@ -1,6 +1,22 @@
 //////////////////////
 // メイン部分
 //////////////////////
+.c-btn-cv{
+    width: 87.537%;
+    height: 64px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 32px;
+    background: $cl-red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    @include font-size-xm;
+    color: #fff;
+    letter-spacing: 0.25px;
+}
+
 .p-fv,
 .p-fv-main{
     position: relative;
@@ -38,4 +54,104 @@
 
 .p-day{
     margin-top: 60px;
+}
+
+.p-list{
+    width: $width-main-content;
+    margin: 55px auto 0;
+}
+.p-list-eng{
+    color: #000;
+    -webkit-text-stroke: 1px #FFF;
+    text-stroke: 1px #FFF;
+    @include font-size-eng;
+    font-weight: 800;
+    color: $cl-bg-leafgreen;
+    font-family: $font-open-sans;
+    line-height: $lineheight-none;
+    letter-spacing: 3.25px;
+    margin: 0 0 -8px 20px;
+}
+.p-list-wrapper{
+    background: #fff;
+    border-radius: $border-radius-big;
+    padding: 35px 25px 0;
+    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.14);
+    margin-bottom: 53px;
+    background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1750900085IR8YsGcF/grid_lp_sum25.png) left top / 20px auto;
+}
+.p-list-title{
+    width: 180px;
+}
+.p-list-text{
+    @include font-size-m;
+    line-height: $lineheight-normal;
+    margin-top: 10px;
+}
+.p-list-main{
+    margin-top: 22px !important;
+}
+.p-list-item{
+    border-top: 1px solid $cl-gray;
+    padding: 22px 0;
+    display: flex;
+    align-items: flex-start;
+    @each $key, $color in $subject-categories {
+        &.is-#{$key} .p-list-item-image {
+            border: 2px solid $color;
+        }
+        &.is-#{$key} .p-list-item-info-button .fa-solid{
+            color: $color;
+        }
+    }
+}
+.p-list-item-image{
+    width: 65px;
+    flex-shrink: 0;
+    border-radius: $border-radius-middle;
+    overflow: hidden;
+}
+.p-list-item-info{
+    padding-left: 20px;
+}
+.p-list-item-info-number{
+    font-family: $font-open-sans;
+    color: $cl-gray-darken;
+    font-style: italic;
+    @include font-size-xm;
+    line-height: $lineheight-none;
+    margin-top: 2px;
+}
+.p-list-item-info-title{
+    font-weight: bold;
+    @include font-size-m;
+    line-height: $lineheight-normal;
+    margin-top: 3px;
+}
+.p-list-item-info-text{
+    @include font-size-m;
+    line-height: $lineheight-normal;
+}
+.p-list-item-info-button{
+    width: 120px;
+    height: 30px;
+    @include font-size-s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $cl-gray;
+    border-radius: $border-radius-small;
+    margin-top: 10px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding-left: 12px;
+    .fa-solid{
+        display: inline-block;
+        font-size: 110%;
+        line-height: 1;
+        position: absolute;
+        top: calc(50% - 7px);
+        left: 10px;
+    }
 }

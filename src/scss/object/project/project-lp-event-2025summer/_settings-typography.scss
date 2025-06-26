@@ -1,22 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 
+/* fontfamily */
+$font-open-sans: "Open Sans", sans-serif;
+
 /* fontsize */
 @mixin font-size-s {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @mixin font-size-m {
   font-size: 16px;
 }
 
+@mixin font-size-xm {
+  font-size: 18px;
+}
+
 @mixin font-size-l {
   font-size: 22px;
+}
+
+@mixin font-size-eng {
+  font-size: 60px;
 }
 
 /* line-height */
 
 $lineheight-none: 1;
-$lineheight-tight: 1.25;
-$lineheight-normal: 1.5;
-$lineheight-relaxed: 1.75;
+// $lineheight-tight: 1.2;
+$lineheight-normal: 1.4375;
+// $lineheight-relaxed: 1.75;

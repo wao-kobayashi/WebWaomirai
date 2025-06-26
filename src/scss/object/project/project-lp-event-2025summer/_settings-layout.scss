@@ -7,6 +7,14 @@ $breakpoint-sp: 768px; // ブレイクポイントの幅
 body{
     background: $cl-bg-leafgreen;;
 }
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover{
+    filter: brightness(1.1);
+}
+
 .l-pc-logo,
 .l-pc-menu{
     background: #ccc;

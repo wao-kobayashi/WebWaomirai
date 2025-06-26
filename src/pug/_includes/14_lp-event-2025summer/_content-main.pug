@@ -1,13 +1,16 @@
 //- 変数定義
 include _variables
 
+//- 配列定義
+include _data
+
 //- ミックスイン
 include _mixins
 
 //- ファーストビュー
 .p-fv
   .p-fv-logo
-    img(src=ImgLogoWaoMirai)
+    img(src=ImgLogoWaoMirai alt="ワオ未来塾")
   .p-fv-main
     h1.p-fv-main-title
       img(src=ImgFvTitle alt="夏休み自由研究DAY2025 参加費無料")
@@ -15,9 +18,38 @@ include _mixins
       img(src=ImgFvBg)
     .p-fv-main-button
       img(src=ImgFvButton alt="スクロールする")
-  .p-fv-target
+  p.p-fv-target
     |対象：小〜中学生とその保護者
 
 //- 夏休み自由研究DAYとは？
 .p-day
   img(src=ImgDay alt="夏休み自由研究DAYとは？")
+
+//- プログラム一覧
+.p-list
+  p.p-list-eng
+    |INDEX
+  .p-list-wrapper
+    h2.p-list-title
+      img(src=ImgListTitle alt="プログラム一覧")
+    p.p-list-text
+      |自由研究に役立つ授業が盛りだくさん！
+      br
+      |複数授業を受けることも可能です！
+    ol.p-list-main
+      each item in list_items
+        li.p-list-item(class=`is-${item.key}`)
+          .p-list-item-image
+            img(src=item.img, alt=item.title)
+          .p-list-item-info
+            p.p-list-item-info-number #{item.number}
+            p.p-list-item-info-title #{item.title}
+            p.p-list-item-info-text
+              | #{item.times[0]}
+              br
+              | #{item.times[1]}
+            a.p-list-item-info-button(href=item.link)
+              i.fa-solid.fa-arrow-down
+              | 詳細を見る
+  a.c-btn-cv(href=UrlLine)
+    |LINEで簡単申込
