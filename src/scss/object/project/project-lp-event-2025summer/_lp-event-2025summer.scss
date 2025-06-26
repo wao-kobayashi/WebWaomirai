@@ -17,6 +17,65 @@
     letter-spacing: 0.25px;
 }
 
+.c-slide {
+    margin-top: 62px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 182px;
+    overflow: hidden;
+    &::before,
+    &::after{
+        content: "";
+        width: 100%;
+        height: 29px;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq6gx/1026513/1750903759fvnH7HY7/bg_slide_lp_sum25.png) center top / cover no-repeat;
+        @include responsive-style($breakpoint-sp) {
+            height: 6.4vw;
+        }
+    }
+    &::before{
+        top: 0;
+    }
+    &::after{
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+    img {
+        width: auto;
+        max-width: none;
+        height: 100%;
+        will-change: transform;
+    }
+    img:first-child {
+        animation: loop 50s -25s linear infinite;
+        backface-visibility: hidden;
+        will-change: transform;
+    }
+    img + img {
+        animation: loop2 50s linear infinite;
+    }
+}
+@keyframes loop {
+    0% {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes loop2 {
+    0% {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
 .p-fv,
 .p-fv-main{
     position: relative;
