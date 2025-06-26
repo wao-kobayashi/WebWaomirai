@@ -75,6 +75,53 @@ include _mixins
 
 //- プログラムの詳細
 .p-details
+  ul.p-details-list
+    each item in details
+      li.p-details-item(class='is-' + item.category, id=item.id)
+        p.p-details-item-subject
+          | #{item.category_icon}
+        h2.p-details-item-title
+          img(src=item.img, alt=item.title)
+        ul.p-details-item-info
+          li.p-details-item-info-item
+            p.p-details-item-info-item-title 日時
+            p.p-details-item-info-item-text
+              each date, idx in item.dates
+                | #{date}
+                if idx !== item.dates.length - 1
+                  br
+              span.p-details-item-info-item-text-note
+                | ※同じ内容です。ご都合のよい時間でご参加ください。
+          li.p-details-item-info-item
+            p.p-details-item-info-item-title 対象
+            p.p-details-item-info-item-text
+              each text, idx in item.target
+                | #{text}
+                if idx !== item.target - 1
+                  br
+        p.p-details-item-text
+          each line, idx in item.description
+            | #{line}
+            if idx !== item.description.length - 1
+              br
+        .p-details-item-teacher
+          .p-details-item-teacher-bg TEACHER
+          .p-details-item-teacher-head
+            .p-details-item-teacher-head-image
+              img(src=item.teacher.img)
+            .p-details-item-teacher-head-name
+              | #{item.teacher.role}
+              br
+              | #{item.teacher.name}
+          p.p-details-item-teacher-text
+            each line, idx in item.teacher.texts
+              | #{line}
+              if idx !== item.teacher.texts.length - 1
+                br
+          p.p-details-item-teacher-text-more
+            span.p-details-item-teacher-text-more-open 続きを読む
+            span.p-details-item-teacher-text-more-close 閉じる
+
   div(style="height:1000px;background:#fff;")
   a.c-btn-cv(href=UrlLine)
       |LINEで簡単申込

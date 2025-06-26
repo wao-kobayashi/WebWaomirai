@@ -73,18 +73,20 @@ script.
         $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
     });
 
-    // プログラムのタブの追従 
+    /**
+    * プログラムのタブの追従
+    */
     let isFixed = false;
     let topPosition = 0;
     let bottomPosition = 0;
 
-    // プログラムのタブの追従 最初の計算の関数
+    // 最初の計算の関数
     function recalcPositions() {
       topPosition = $('.p-tab-text').offset().top + $('.p-tab-text').height();
       bottomPosition = $('.p-details .c-btn-cv').offset().top - $(window).height();
     }
 
-    // プログラムのタブの追従 イベント設定の関数
+    // イベント設定の関数
     function checkSticky() {
       const scrollTop = $(window).scrollTop();
       if (!window.matchMedia('(max-width: 768px)').matches) {
@@ -104,13 +106,45 @@ script.
       }
     }
 
-    // プログラムのタブの追従 読み込み時とリサイズ時は、最初の計算とイベント設定
+    // 読み込み時とリサイズ時は、最初の計算とイベント設定
     $(window).on('load resize', function() {
       recalcPositions();
       checkSticky();
     });
 
-    // プログラムのタブの追従 スクロール時は、計算しないで判定だけ
+    // スクロール時は、計算しないで判定だけ
     $(window).on('scroll', checkSticky);
+
+    /**
+    * プログラムの詳細の「続きを読む」
+    */
+    $('.p-details-item-teacher-text-more').click(function() {
+      const $btn = $(this);
+      const $text = $btn.prev('.p-details-item-teacher-text');
+
+      if ($text.hasClass('is-active')) {
+        // 閉じる処理
+        const currentHeight = $text[0].scrollHeight;
+        $text.css('height', currentHeight + 'px'); // 現在の高さで固定
+        // 次のフレームで縮める
+        requestAnimationFrame(() => {
+          $text.css('height', '122px');
+        });
+        $text.removeClass('is-active');
+
+        $btn.removeClass('is-active');
+      } else {
+        // 開く処理
+        const fullHeight = $text[0].scrollHeight;
+        $text.css('height', '122px'); // 初期の閉じた高さをセット
+        // 次のフレームでフルサイズに伸ばす
+        requestAnimationFrame(() => {
+          $text.css('height', fullHeight + 'px');
+        });
+        $text.addClass('is-active');
+
+        $btn.addClass('is-active');
+      }
+    });
   
   });
