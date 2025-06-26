@@ -58,3 +58,30 @@ include _mixins
 .c-slide
   img(src=ImgSlide)
   img(src=ImgSlide)
+
+//- プログラムのタブ
+.p-tab
+  .p-tab-text
+    |クリックすると各科目の先頭にジャンプします♪
+    br
+    |受けてみたい教科を選んで講座内容をチェックしよう！
+  .p-tab-list
+    .p-tab-list-wrapper
+      each tab in list_items
+        a.p-tab-item(href=tab.link, class=`is-${tab.key}`)
+          | #{tab.tab_text[0]}
+          br
+          | #{tab.tab_text[1]}
+
+//- プログラムの詳細
+.p-details
+  div(style="height:1000px;background:#fff;")
+  a.c-btn-cv(href=UrlLine)
+      |LINEで簡単申込
+
+//- 画像のスライダー
+.c-slide
+  img(src=ImgSlide)
+  img(src=ImgSlide)
+
+div(style="height:1000px;background:#fff;")

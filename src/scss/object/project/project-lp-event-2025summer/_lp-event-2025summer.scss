@@ -214,3 +214,55 @@
         left: 10px;
     }
 }
+
+.p-tab-text{
+    @include font-size-xs;
+    line-height: $lineheight-relaxed;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.p-tab-list{
+    background: $cl-bg-leafgreen;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.14);
+    position: relative;
+    z-index: 1000;
+    &.is-fixed{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 0.2s ease-in-out;
+        &.is-fixed-hide{
+            transform: translateY(-100%);
+        }
+    }
+}
+.p-tab-list-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: $width-main-content;
+    margin: 0 auto;
+    padding: 11px 0;
+}
+.p-tab-item{
+    width: calc(20% - 5px);
+    @include font-size-ss;
+    line-height: $lineheight-tight;
+    background: #fff;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: $cl-bg-leafgreen-darken;
+    text-align: center;
+    @each $key, $color in $subject-categories {
+        &.is-#{$key}.is-active{
+            background: $color;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+}

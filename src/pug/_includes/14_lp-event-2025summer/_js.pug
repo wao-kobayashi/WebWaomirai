@@ -72,5 +72,45 @@ script.
         // 他の開いているコンテンツを閉じる
         $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
     });
+
+    // プログラムのタブの追従 
+    let isFixed = false;
+    let topPosition = 0;
+    let bottomPosition = 0;
+
+    // プログラムのタブの追従 最初の計算の関数
+    function recalcPositions() {
+      topPosition = $('.p-tab-text').offset().top + $('.p-tab-text').height();
+      bottomPosition = $('.p-details .c-btn-cv').offset().top - $(window).height();
+    }
+
+    // プログラムのタブの追従 イベント設定の関数
+    function checkSticky() {
+      const scrollTop = $(window).scrollTop();
+      if (!window.matchMedia('(max-width: 768px)').matches) {
+          // 769px以上はクラスを全て外して、処理を実行しない
+          $('.p-tab-list').removeClass('is-fixed is-fixed-hide');
+          return;
+      }
+      if (scrollTop < topPosition) {
+        // 元々のタブの位置より上の場合は、全てのクラスを外す
+        $('.p-tab-list').removeClass('is-fixed is-fixed-hide');
+      } else if (scrollTop >= topPosition && scrollTop < bottomPosition) {
+        // 元々のタブの位置～CVボタンより上の場合は、is-fixedクラスのみを付ける
+        $('.p-tab-list').addClass('is-fixed').removeClass('is-fixed-hide');
+      } else if (scrollTop >= bottomPosition) {
+        // CVボタンより下の場合は、is-fixedクラスとis-fixed-hideクラスを付ける
+        $('.p-tab-list').addClass('is-fixed is-fixed-hide');
+      }
+    }
+
+    // プログラムのタブの追従 読み込み時とリサイズ時は、最初の計算とイベント設定
+    $(window).on('load resize', function() {
+      recalcPositions();
+      checkSticky();
+    });
+
+    // プログラムのタブの追従 スクロール時は、計算しないで判定だけ
+    $(window).on('scroll', checkSticky);
   
   });

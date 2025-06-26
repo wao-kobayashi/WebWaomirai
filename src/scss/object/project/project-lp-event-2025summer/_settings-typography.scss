@@ -5,8 +5,16 @@
 $font-open-sans: "Open Sans", sans-serif;
 
 /* fontsize */
+@mixin font-size-ss{
+   font-size: 10px;
+}
+
 @mixin font-size-s {
   font-size: 13px;
+}
+
+@mixin font-size-xs {
+  font-size: 14px;
 }
 
 @mixin font-size-m {
@@ -28,6 +36,6 @@ $font-open-sans: "Open Sans", sans-serif;
 /* line-height */
 
 $lineheight-none: 1;
-// $lineheight-tight: 1.2;
+$lineheight-tight: 1.34;
 $lineheight-normal: 1.4375;
-// $lineheight-relaxed: 1.75;
+$lineheight-relaxed: 1.5;
