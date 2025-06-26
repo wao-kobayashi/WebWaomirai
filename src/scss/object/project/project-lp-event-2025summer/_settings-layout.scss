@@ -1,5 +1,8 @@
 /* width */
 $width-main: 450px; // メインの幅
+$width-xl: 1200px; // 最大幅（セクション全体）
+$width-lg: 1050px; // 大きめの幅（汎用的に利用）
+$width-sm: 700px; // 小さめの幅（「簡単5ステップで〜」で利用）
 $width-main-content: 92%; // メインの幅
 $breakpoint-tb: 1000px; // ブレイクポイントの幅
 $breakpoint-sp: 768px; // ブレイクポイントの幅

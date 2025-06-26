@@ -22,3 +22,7 @@ mixin modal
             .modal-wrapper-content-close.modal-close 
                 |閉じる
     .bg-modal(style='display:none;')
+
+mixin lineEntryButton(text)
+  a.js-line-trigger(href=UrlLine)
+    | #{text}

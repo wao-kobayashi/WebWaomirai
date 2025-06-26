@@ -1,11 +1,13 @@
 //////////////////////
 // メイン部分
 //////////////////////
+
+// 共通CVボタン（赤）
 .c-btn-cv{
     width: 87.537%;
     height: 64px;
     margin: 0 auto;
-    border: 2px solid #fff;
+    border: 2px solid $cl-lp-white;
     border-radius: 32px;
     background: $cl-red;
     display: flex;
@@ -13,10 +15,39 @@
     justify-content: center;
     font-weight: bold;
     @include font-size-xm;
-    color: #fff;
+    color: $cl-lp-white;
     letter-spacing: 0.25px;
 }
 
+// 共通CVボタン（緑）
+.c-btn-cta-main {
+  text-align: center;
+  a {
+    animation: fuwafuwa-button 2s 0s infinite;
+    text-align: center;
+    margin: 0px auto 0px;
+    cursor: pointer;
+    background: $cl-brand-line;
+    text-decoration: none;
+    height: 78px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    @include font-size-l;
+    letter-spacing: 1px;
+    @include responsive-style(768px) {
+      width: 90%;
+    }
+    @include box-shadow-lp;
+  }
+}
+
+// 共通スライダー
 .c-slide {
     margin-top: 62px;
     position: relative;
@@ -76,6 +107,18 @@
     }
 }
 
+// 共通タイトル
+.c-title-lp {
+  @include font-size-xl;
+  @include title-underline; //下の波線
+  margin: 0 auto 50px;
+  font-weight: normal;
+  text-align: center;
+  @include responsive-style(768px) {
+    margin-bottom: 35px;
+  }
+}
+
 .p-fv,
 .p-fv-main{
     position: relative;
@@ -102,7 +145,7 @@
 .p-fv-target{
     @include font-size-m;
     background: $cl-bg-leafgreen-darken;
-    color: #fff;
+    color: $cl-lp-white;
     font-weight: bold;
     height: 59px;
     display: flex;
@@ -121,8 +164,8 @@
 }
 .p-list-eng{
     color: #000;
-    -webkit-text-stroke: 1px #FFF;
-    text-stroke: 1px #FFF;
+    -webkit-text-stroke: 1px $cl-lp-white;
+    text-stroke: 1px $cl-lp-white;
     @include font-size-eng;
     font-weight: 800;
     color: $cl-bg-leafgreen;
@@ -132,7 +175,7 @@
     margin: 0 0 -8px 20px;
 }
 .p-list-wrapper{
-    background: #fff;
+    background: $cl-lp-white;
     border-radius: $border-radius-big;
     padding: 35px 25px 0;
     box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.14);
@@ -221,7 +264,7 @@
 .p-tab-text{
     @include font-size-xs;
     line-height: $lineheight-relaxed;
-    color: #fff;
+    color: $cl-lp-white;
     text-align: center;
     font-weight: bold;
     margin-top: 20px;
@@ -253,7 +296,7 @@
     width: calc(20% - 5px);
     @include font-size-sss;
     line-height: $lineheight-tight;
-    background: #fff;
+    background: $cl-lp-white;
     height: 41px;
     display: flex;
     align-items: center;
@@ -265,8 +308,8 @@
         @each $key, $color in $subject-categories {
             &.is-#{$key}.is-active{
                 background: $color;
-                color: #fff;
-                border: 1px solid #fff;
+                color: $cl-lp-white;
+                border: 1px solid $cl-lp-white;
             }
         }
     }
@@ -315,7 +358,7 @@
     width: 125px;
     height: 32px;
     border-radius: $border-radius-bigplus;
-    color: #fff;
+    color: $cl-lp-white;
     position: absolute;
     top: 0;
     left: 0;
@@ -443,7 +486,7 @@
     position: absolute;
     bottom: 18px;
     left: calc(50% - 121.5px);
-    background: #fff;
+    background: $cl-lp-white;
     font-weight: 500;
     @include font-size-xxs;
     line-height: 1;
@@ -481,4 +524,513 @@
             display: inline;
         }
     }
+}
+
+//こんなお子さんにオススメです！
+.lp-waomirai-recommend {
+  margin: 75px 0 0;
+  .lp-waomirai-recommend {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    // background: white;
+    div {
+      @include min-responsive-style(768px) {
+        flex: 1;
+      }
+    }
+    .lp-waomirai-recommend-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $cl-white;
+      img {
+        width: 50%;
+      }
+    }
+    .lp-waomirai-recommend-right {
+      position: relative;
+      background: $cl-graylightest;
+      padding: 45px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      border-radius: 45px;
+      @include responsive-style(768px) {
+        background: transparent;
+        margin: 0 20px;
+        padding: 0px 0px 30px;
+        border-radius: 0;
+        gap: 30px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40px;
+        bottom: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent $cl-graylightest transparent transparent;
+        border-width: 82px 52px 82px 0px;
+        z-index: 1;
+        @include responsive-style(768px) {
+          display: none;
+        }
+      }
+      .lp-waomirai-recommend-right-child {
+        @include responsive-style(768px) {
+          display: flex;
+          gap: 20px;
+        }
+        &:last-child {
+          flex-direction: row-reverse;
+        }
+        .lp-waomirai-recommend-right-child-icon {
+          @include responsive-style(768px) {
+            width: 102px;
+            margin: 0;
+          }
+        }
+        .lp-waomirai-recommend-right-child-icon {
+          img {
+            height: 75px;
+            margin: 0 auto;
+          }
+          @include responsive-style(768px) {
+            width: 88px;
+            margin: 0;
+          }
+        }
+        .lp-waomirai-recommend-right-child-text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include font-size-l;
+          position: relative;
+          @include responsive-style(768px) {
+            background: $cl-graylightest;
+            @include font-size-m;
+            padding: 16px;
+            border-radius: $border-radius-big;
+          }
+          &::before {
+            @include responsive-style(768px) {
+              content: "";
+              position: absolute;
+              top: 30px;
+              left: -15px;
+              margin: auto;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent $cl-graylightest transparent transparent;
+              border-width: 15px 15px 15px 0px;
+              z-index: 1;
+            }
+          }
+        }
+        &:last-child .lp-waomirai-recommend-right-child-text::before {
+          left: auto;
+          right: -15px;
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  //POINT!
+  .lp-waomirai-point {
+    max-width: 520px;
+    margin: 45px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include responsive-style(768px) {
+      background: $cl-graylightest;
+      margin: 0px 20px 0;
+      padding: 0px 0px;
+      border-radius: $border-radius-big;
+      display: block;
+    }
+    .lp-waomirai-point-left {
+      @include responsive-style(768px) {
+        width: 120px;
+        height: 30px;
+        border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
+      }
+      width: 90px;
+      height: 90px;
+      border-radius: $border-radius-full;
+      background: $cl-gray;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include font-size-xm;
+    }
+    .lp-waomirai-point-right {
+      flex: 1;
+      text-align: center;
+      @include font-size-xm;
+      @include responsive-style(768px) {
+        width: 100%;
+        padding: 20px 20px 30px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+// 授業の特長
+.lp-waomirai-feature {
+  margin: 100px auto 0;
+  max-width: $width-lg;
+  text-align: center;
+  @include responsive-style(768px) {
+    padding: 0 20px;
+    margin: 60px auto 0;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: $border-radius-bigplus;
+  }
+}
+.lp-waomirai-feature-list {
+  padding-left: 0;
+  max-width: calc(100% - 40px);
+  margin: 0 auto !important;
+  @include responsive-style(768px) {
+    max-width: none;
+  }
+}
+.lp-waomirai-feature-list-child {
+  @include font-size-l;
+  background: $cl-feature-yellow;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 30px;
+  border-radius: $border-radius-full;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  @include responsive-style(768px) {
+    @include font-size-l;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 40px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+  &:last-child {
+    margin: 0 auto 90px;
+    @include responsive-style(768px) {
+      margin-bottom: 50px;
+    }
+  }
+  i {
+    display: inline-block;
+    margin-top: 6px;
+  }
+}
+.lp-waomirai-feature-list-child-icons {
+  display: flex;
+  gap: 10px;
+}
+
+//5stepで参加可能
+.lp-waomirai-howto {
+  margin-top: 120px;
+  @include responsive-style(768px) {
+    margin-top: 60px;
+  }
+}
+.lp-waomirai-howto-main {
+  padding: 80px 0 45px;
+  background: $cl-bg-eventlp;
+  margin-bottom: 115px;
+  @include responsive-style(768px) {
+    padding: 40px 0 5px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .lp-waomirai-howto-main-title {
+    @include font-size-xl;
+    font-weight: normal;
+    margin: 0 auto 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    @include responsive-style(768px) {
+      width: 100%;
+    }
+    .large {
+      @include font-size-xxxl;
+      @include responsive-style(768px) {
+        @include font-size-xxxxxxl;
+      }
+    }
+  }
+  .lp-waomirai-howto-main-img {
+    width: 200px;
+    margin: 0 auto 40px;
+  }
+
+  .lp-waomirai-howto-main-step {
+    .lp-waomirai-howto-main-step-child {
+      max-width: $width-sm;
+      width: calc(100% - 40px);
+      margin: 0 auto 75px;
+      display: flex;
+      @include responsive-style(768px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto 70px;
+      }
+      .lp-waomirai-howto-main-step-child-icon {
+        width: 100px;
+        margin-right: 20px;
+        flex-shrink: 0;
+        @include responsive-style(768px) {
+          width: 100px;
+          margin-right: 0;
+        }
+      }
+      .lp-waomirai-howto-main-step-child-text {
+        width: 100%;
+        padding: 0 20px;
+        .lp-waomirai-howto-main-step-child-text-title {
+          @include font-size-l;
+          padding-left: 1em;
+          position: relative;
+          @include responsive-style(768px) {
+            @include font-size-l;
+            padding-left: 0;
+          }
+          margin: 5px 0 15px;
+        }
+        .lp-waomirai-howto-main-step-child-text-title-number {
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include responsive-style(768px) {
+            position: static;
+            display: block;
+            text-align: center;
+            @include font-size-xxxxl;
+          }
+        }
+        .lp-waomirai-howto-main-step-child-text-detail {
+          @include font-size-m;
+          line-height: $lineheight-relaxed;
+          a {
+            color: $cl-black;
+          }
+          @include responsive-style(768px) {
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//ワオ未来塾って？
+.lp-waomirai-about {
+  max-width: $width-lg;
+  padding: 0 20px;
+  margin: 100px auto 0;
+  @include responsive-style(768px) {
+    padding: 0;
+    margin-top: 75px;
+  }
+}
+.lp-waomirai-about-box {
+  border-radius: $border-radius-extrabig;
+  display: flex;
+  gap: 45px;
+  @include responsive-style(768px) {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    border-radius: $border-radius-bigplus;
+  }
+}
+.lp-waomirai-about-box-left {
+  width: 250px;
+  @include responsive-style(768px) {
+    width: 70%;
+    margin: 0 auto 0px;
+  }
+}
+.lp-waomirai-about-box-right {
+  flex: 1;
+  line-height: $lineheight-relaxed;
+  @include font-size-m;
+  @include responsive-style(768px) {
+    letter-spacing: 0.5px;
+  }
+}
+
+//ワオ未来塾詳細
+.lp-waomirai-details {
+  max-width: $width-xl;
+  padding: 0 20px;
+  margin: 100px auto 120px;
+  @include responsive-style(768px) {
+    margin-top: 75px;
+  }
+  .lp-waomirai-details-catch {
+    @include font-size-l;
+    margin: 0 auto 40px;
+    text-align: center;
+    @include responsive-style(768px) {
+      margin-bottom: 30px;
+    }
+  }
+  .lp-waomirai-details-logo {
+    max-width: 800px;
+    margin: 0 auto 34px;
+    @include responsive-style(768px) {
+      margin-bottom: 30px;
+    }
+  }
+  .lp-waomirai-details-target {
+    @include font-size-l;
+    margin: 0 auto 40px;
+    text-align: center;
+    @include responsive-style(768px) {
+      margin-bottom: 30px;
+    }
+  }
+  .lp-waomirai-details-subjects {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    @include responsive-style(768px) {
+      margin-bottom: 35px;
+    }
+  }
+  .lp-waomirai-details-feature {
+    display: flex;
+    gap: 35px;
+    margin: 0 auto 60px;
+    @include responsive-style(768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .lp-waomirai-details-feature-box {
+      background: white;
+      border-radius: $border-radius-bigplus;
+      padding: 30px 20px;
+      @include font-size-m;
+      flex: 1;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      @include responsive-style(768px) {
+        padding: 30px 20px 30px;
+      }
+      .lp-waomirai-details-feature-box-title {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 auto 20px;
+        @include responsive-style(768px) {
+          @include font-size-l;
+          margin-bottom: 20px;
+        }
+        img {
+          width: 30px;
+        }
+      }
+      .lp-waomirai-details-feature-box-title-text {
+        font-weight: normal;
+        @include font-size-xm;
+        @include responsive-style(768px) {
+          @include font-size-l;
+        }
+      }
+      .lp-waomirai-details-feature-box-text {
+        @include font-size-m;
+        line-height: $lineheight-normal;
+      }
+    }
+  }
+  .lp-waomirai-details-btn {
+    text-align: center;
+    a {
+      text-align: center;
+      margin: 30px auto 0px;
+      background: $cl-main-orange;
+      text-decoration: none;
+      height: 78px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $border-radius-full;
+      width: 100%;
+      max-width: 500px;
+      position: relative;
+      line-height: $lineheight-normal;
+      gap: 12px;
+      @include box-shadow-lp;
+
+      .lp-waomirai-details-btn-text {
+        margin: 0px 0 0;
+        @include font-size-l;
+        letter-spacing: 1px;
+      }
+      .lp-waomirai-details-btn-icn {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+}
+
+// フッター
+footer {
+  width: 100%;
+  padding: 120px 0px 0px;
+  text-align: center;
+  background: $cl-black;
+  color: white;
+  border-radius: 100px 100px 0 0;
+  @include responsive-style(768px) {
+    padding: 60px 0px 60px;
+    border-radius: 50px 50px 0 0;
+  }
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  li {
+    list-style: none;
+    padding: 10px 0;
+    a {
+      color: white;
+      text-decoration: none;
+      @include font-size-m;
+    }
+  }
+  .footer-logo img {
+    width: 170px;
+    margin: 120px auto 45px;
+    @include responsive-style(768px) {
+      margin: 60px auto 45px;
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid $cl-lp-white;
+    padding: 15px 0 15px;
+  }
 }

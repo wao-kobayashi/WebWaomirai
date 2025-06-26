@@ -37,6 +37,22 @@ $font-open-sans: "Open Sans", sans-serif;
   font-size: 22px;
 }
 
+@mixin font-size-xl {
+  font-size: 25px;
+}
+
+@mixin font-size-xxxl {
+  font-size: 28px;
+}
+
+@mixin font-size-xxxxl {
+    font-size: 37px;
+}
+
+@mixin font-size-xxxxxxl {
+  font-size: 45px;
+}
+
 @mixin font-size-eng-small {
   font-size: 40px;
 }
@@ -46,7 +62,6 @@ $font-open-sans: "Open Sans", sans-serif;
 }
 
 /* line-height */
-
 $lineheight-none: 1;
 $lineheight-tight: 1.34;
 $lineheight-normal: 1.4375;
@@ -55,3 +70,13 @@ $lineheight-semi-relaxed: 1.5625;
 $lineheight-semi-loose: 1.625;
 $lineheight-loose: 1.63;
 $lineheight-extra-loose: 1.88;
+
+/* title */
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+  text-underline-offset: 8px;
+  @include responsive-style(768px) {
+    text-underline-offset: 6px;
+  }
+}

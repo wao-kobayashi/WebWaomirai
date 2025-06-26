@@ -22,8 +22,8 @@ script.
       // 769px以上をPC表示とみなす
       var isWideScreen = $(window).width() >= 769;
 
-      // 全てのCVボタンに対して処理
-      $('.c-btn-cv').each(function() {
+      // 全てのLINEトリガーのボタンに対して処理
+      $('.js-line-trigger').each(function() {
         var $button = $(this);
         
         if (isWideScreen) {
