@@ -1,6 +1,15 @@
 @mixin box-shadow-lp {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
+@mixin box-shadow-list{
+  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.14);
+}
+@mixin box-shadow-tab-list{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.14);
+}
+@mixin box-shadow-feature{
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+}
 
 /* border-radius */
 $border-radius-tiny: 4px;

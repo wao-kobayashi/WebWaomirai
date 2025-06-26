@@ -23,7 +23,6 @@
 .c-btn-cta-main {
   text-align: center;
   a {
-    animation: fuwafuwa-button 2s 0s infinite;
     text-align: center;
     margin: 0px auto 0px;
     cursor: pointer;
@@ -178,7 +177,7 @@
     background: $cl-lp-white;
     border-radius: $border-radius-big;
     padding: 35px 25px 0;
-    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.14);
+    @include box-shadow-list;
     margin-bottom: 53px;
     background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1750900085IR8YsGcF/grid_lp_sum25.png) left top / 20px auto;
 }
@@ -271,7 +270,7 @@
 }
 .p-tab-list{
     background: $cl-bg-leafgreen;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.14);
+    @include box-shadow-tab-list;
     position: relative;
     z-index: 1000;
     &.is-fixed{
@@ -709,7 +708,7 @@
 .lp-waomirai-feature-list-child {
   @include font-size-l;
   background: $cl-feature-yellow;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  @include box-shadow-feature;
   max-width: 800px;
   width: 100%;
   margin: 0 auto 30px;
@@ -933,7 +932,7 @@
       padding: 30px 20px;
       @include font-size-m;
       flex: 1;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      @include box-shadow-feature;
       @include responsive-style(768px) {
         padding: 30px 20px 30px;
       }
