@@ -5,6 +5,18 @@ script.
   */
   $(document).ready(function() {
     /**
+    * 追従ボタン
+    * 300pxスクロールしたら表示する
+    */
+    $(window).on("load scroll", function () {
+      if ($(this).scrollTop() > 300) {
+         $(".l-btn-cv").fadeIn();
+      } else {
+       $(".l-btn-cv").fadeOut();
+      }
+    });
+
+    /**
     * モーダルウィンドウを開く関数
     * モーダルと背景を表示する
     */
