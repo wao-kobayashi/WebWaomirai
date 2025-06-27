@@ -79,14 +79,11 @@
         width: auto;
         max-width: none;
         height: 100%;
-        will-change: transform;
     }
-    img:first-child{
+    &.is-loaded img:first-child{
         animation: loop 50s -25s linear infinite;
-        backface-visibility: hidden;
-        will-change: transform;
     }
-    img + img{
+    &.is-loaded img + img{
         animation: loop2 50s linear infinite;
     }
 }
@@ -921,6 +918,7 @@
 
 // 追従ボタン
 .l-btn-cv{
+    display: none;
     width: 100%;
     position: fixed;
     bottom: 34px;

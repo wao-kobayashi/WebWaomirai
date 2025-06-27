@@ -209,4 +209,31 @@ script.
       handleScrollEvent(".p-details-item", ".l-pc-menu-link");
     
     });
+
+    /**
+    * iPhoneでスライダーが動作するように、画像読み込み後にクラスを付ける
+    */
+    $('.p-slider').each(function () {
+      const $slider = $(this);
+      const $imgs = $slider.find('img');
+      let loaded = 0;
+
+      $imgs.each(function () {
+        if (this.complete) {
+          loaded++;
+        } else {
+          $(this).on('load error', function () {
+            loaded++;
+            if (loaded === $imgs.length) {
+              $slider.addClass('is-loaded');
+            }
+          });
+        }
+      });
+
+      // すでに全部読み込み済みのとき
+      if (loaded === $imgs.length) {
+        $slider.addClass('is-loaded');
+      }
+    });
   });
