@@ -8,6 +8,9 @@ $breakpoint-tb: 1000px; // ブレイクポイントの幅
 $breakpoint-sp: 768px; // ブレイクポイントの幅
 $min-breakpoint-pc: 769px; // ブレイクポイントの幅
 
+// グリッド
+$bg-grid: 'https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1751006905bwjnruZV/grid_lp_sum25.png';
+
 // body
 body{
     background: $cl-bg-leafgreen;;
@@ -34,7 +37,7 @@ a:hover:not(.u-no-hover-animation),
     height: 100%;
     position: fixed;
     top: 0;
-    background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1750900085IR8YsGcF/grid_lp_sum25.png) left top / 24px auto;
+    background: url($bg-grid) left top / 24px auto;
 }
 .l-pc-logo{
     left: 0;
@@ -131,6 +134,7 @@ a:hover:not(.u-no-hover-animation),
     color: inherit;
     letter-spacing: -0.5px;
     transition: transform 0.2s ease-in-out;
+    background: $cl-lp-white;
 }
 .l-pc-menu-link:hover,
 .l-pc-menu-link.is-active{

@@ -117,28 +117,46 @@
 }
 
 // ファーストビュー
+.p-fv{
+    background: $cl-fv-blue;
+    overflow: hidden;
+}
 .p-fv,
 .p-fv-main{
     position: relative;
+}
+.p-fv-main::before{
+    content: "";
+    width: 84.267%;
+    height: 415px;
+    background: url($bg-grid) left top / 20px auto;
+    position: absolute;
+    left: 7.8665%;
+    top: 40px;
+    z-index: 2;
+    border-radius: $border-radius-bigplus;
+    @include box-shadow-fv;
 }
 .p-fv-logo{
     width: 109px;
     position: absolute;
     top: 15px;
     left: 4%;
-    z-index: 1;
+    z-index: 10;
 }
 .p-fv-main-title{
     width: 67.467%;
-    position: absolute;
-    top: 8.5%;
-    left: 15.925%;
+    margin: 0 auto -5px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 3;
 }
 .p-fv-main-button{
     width: 53.6%;
     position: absolute;
     top: 77.3%;
     left: 22.3%;
+    z-index: 10;
 }
 .p-fv-target{
     @include font-size-m;
@@ -155,6 +173,23 @@
     .p-fv-main-button{
         top: calc(100vh - 110px);
     }
+}
+.p-fv-bg01{
+    position: absolute;
+    top: 1%;
+    left: 0;
+    z-index: 1;
+}
+.p-fv-main-image{
+    position: relative;
+    z-index: 10;
+}
+.p-fv-bg02{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 4;
+    pointer-events: none;
 }
 
 // 夏休み自由研究DAYとは？
@@ -185,7 +220,7 @@
     padding: 35px 25px 0;
     @include box-shadow-list;
     margin-bottom: 53px;
-    background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1750900085IR8YsGcF/grid_lp_sum25.png) left top / 20px auto;
+    background: url($bg-grid) left top / 20px auto;
 }
 .p-list-title{
     width: 180px;
@@ -324,7 +359,7 @@
 }
 .p-details-item{
     border-radius: $border-radius-big;
-    background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1750900085IR8YsGcF/grid_lp_sum25.png) left top / 20px auto;
+    background: url($bg-grid) left top / 20px auto;
     position: relative;
     padding: 30px 24.5px;
     &:nth-child(n+2){
@@ -376,7 +411,6 @@
     letter-spacing: 0.25px;
 }
 .p-details-item-info{
-    width: 110%;
     margin-top: 20px !important;
 }
 .p-details-item-info-item{
@@ -406,6 +440,14 @@
     color: $cl-gray-note;
     display: block;
     line-height: $lineheight-normal;
+    white-space: nowrap;
+    @include responsive-style(374px) {
+        letter-spacing: -0.5px;
+    }
+     @include responsive-style(359px) {
+        letter-spacing: 0;
+        white-space: normal;
+    }
 }
 .p-details-item-text{
     @include font-size-m;
