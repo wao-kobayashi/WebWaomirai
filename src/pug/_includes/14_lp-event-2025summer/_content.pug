@@ -12,5 +12,18 @@ include _mixins
   include _content-main.pug
 .l-pc-menu
   .l-pc-wrapper
-    |メニュー
+    .l-pc-menu-wrapper
+      .l-pc-menu-title
+        p.l-pc-menu-title-eng
+          |INDEX
+        p.l-pc-menu-title-jpn
+          |オンライン授業一覧
+      ol.l-pc-menu-list
+        each item in program
+          li.l-pc-menu-item
+            a.l-pc-menu-link(href=`#${item.link}`).u-no-hover-animation
+              span.l-pc-menu-link-number
+                | #{item.item_number}
+              span.l-pc-menu-link-title
+                | #{item.menu_title}
 +modal

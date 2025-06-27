@@ -19,7 +19,7 @@ a,
     cursor: pointer;
     text-decoration: none;
 }
-a:hover,
+a:hover:not(.u-no-hover-animation),
 .u-link:hover{
     filter: brightness(1.1);
 }
@@ -90,5 +90,67 @@ a:hover,
     }
     .l-main{
         width: 100%;
+    }
+}
+
+// メニュー
+.l-pc-menu-wrapper{
+    width: calc(100% - 48px);
+    max-width: 344px;
+    margin: 0 auto;
+    color: $cl-light-blue;
+}
+.l-pc-menu-title{
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-left: rpx(-3);
+}
+.l-pc-menu-title-eng{
+    font-size: rpx(37);
+    font-family: $font-open-sans;
+    font-weight: 900;
+    letter-spacing: rpx(2);
+}
+.l-pc-menu-title-jpn{
+    font-size: rpx(14);
+    margin-left: rpx(10);
+}
+.l-pc-menu-list{
+    margin-top: rpx(18) !important;
+}
+.l-pc-menu-link{
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius-smallplus;
+    height: rpx(48);
+    border: 1px solid $cl-light-blue;
+    font-size: rpx(15);
+    padding: 0 rpx(9);
+    box-shadow: rpx(4) rpx(4) 0 rgba(0, 0, 0, 0.25);
+    color: inherit;
+    letter-spacing: -0.5px;
+    transition: transform 0.2s ease-in-out;
+}
+.l-pc-menu-link:hover,
+.l-pc-menu-link.is-active{
+    transform: translateX(rpx(-10));
+}
+.l-pc-menu-item:nth-child(n+2){
+    margin-top: rpx(20);
+}
+.l-pc-menu-link-number{
+    font-style: italic;
+    font-family: $font-open-sans;
+    margin-right: rpx(17);
+    font-size: rpx(16);
+}
+@include responsive-style(1055px) {
+    .l-pc-menu-link{
+        font-size: rpx(14);
+    }
+    .l-pc-menu-link-number{
+        font-size: rpx(15);
+        margin-right: rpx(10);
     }
 }

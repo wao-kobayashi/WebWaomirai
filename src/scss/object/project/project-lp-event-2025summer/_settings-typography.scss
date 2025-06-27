@@ -60,6 +60,13 @@ $font-open-sans: "Open Sans", sans-serif;
 @mixin font-size-eng {
   font-size: 60px;
 }
+
+// デザイン基準幅（1440px）から相対的にスケーリングするpx値を返す
+// 最小1px、画面幅が小さい場合はvwで縮小
+@function rpx($value) {
+  @return calc(#{$value} * min(1px, calc(100vw / 1440)));
+}
+
 // line-height
 $lineheight-none: 1;
 $lineheight-tight: 1.34;
