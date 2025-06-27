@@ -1,7 +1,6 @@
 {
   "name": "web-waomirai",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "dev:eleventy": "eleventy --watch",
     "dev:vite": "vite",
