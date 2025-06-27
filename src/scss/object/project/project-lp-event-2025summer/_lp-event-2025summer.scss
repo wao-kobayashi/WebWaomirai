@@ -128,7 +128,7 @@
 .p-fv-main::before{
     content: "";
     width: 84.267%;
-    height: 415px;
+    height: 110.667vw;
     background: url($bg-grid) left top / 20px auto;
     position: absolute;
     left: 7.8665%;
@@ -136,6 +136,9 @@
     z-index: 2;
     border-radius: $border-radius-bigplus;
     @include box-shadow-fv;
+    @include min-responsive-style($min-breakpoint-pc) {
+        height: 415px;
+    }
 }
 .p-fv-logo{
     width: 109px;
@@ -288,6 +291,7 @@
     color: inherit;
     position: relative;
     padding-left: 12px;
+    background: $cl-lp-white;
     .fa-solid{
         display: inline-block;
         font-size: 110%;
