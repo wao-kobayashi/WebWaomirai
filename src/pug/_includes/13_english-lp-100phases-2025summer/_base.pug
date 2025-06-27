@@ -1,15 +1,20 @@
 doctype html
 html
   head
-    // 変数定義
-    include ../../_includes/06_english-lp-main-2025may/_variables
+    // Google Tag Manager
+    //- script.
+    //-   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    //-   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    //-   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    //-   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    //-   })(window,document,'script','dataLayer','GTM-W3X8CG9C');
     // End Google Tag Manager
     meta(charset="utf-8")
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(property="og:image", content="https://go.waomirai.com/image/oggreen")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
-    link(href="../css/06-english-lp-main2025may.css", rel="stylesheet")
+    link(href="../../css/13-english-lp-100phases-2025summer.css", rel="stylesheet")
     link(rel="shortcut icon", type="image/png", href="https://go.waomirai.com/logo/fabicon")
     title %%title%%
     meta(name="robots", content="noindex")
@@ -28,7 +33,12 @@ html
       else { window.addEventListener('load', async_load, false); }
       })();
     script(src="https://storage.pardot.com/1026513/1724128460RuzGLFou/jquery_3.7.1.js")
-  body
-    noscript
-      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-W3X8CG9C", height="0", width="0", style="display:none;visibility:hidden")
-    include ../../_includes/06_english-lp-main-2025may/_content.pug
+    //inviewのjquerycdnをsalesforceにアップしている
+    script(src="https://go.waomirai.com/l/1026513/2025-01-29/hd4b2/1026513/1738200566csRKWJ0Z/jquery.inview.min.js")
+    //vimeo API
+    script(src="https://player.vimeo.com/api/player.js")
+  // コンテンツをインクルード
+  body#eng-phase
+    include _content.pug
+    // JavaScriptをインクルード
+    include _js.pug

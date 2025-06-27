@@ -17,11 +17,14 @@ include _mixins
     .eng-phase-main-fv-persons
        img(src=ImgFvPersons)
     .eng-phase-main-fv-target 
-       img(src=ImgFvTarget)   
-    .eng-phase-main-fv-text
-       img(src=ImgFvtext )
+       img(src=ImgFvTarget)
     .eng-phase-main-fv-logo 
        img(src=ImgFvLogo)
+    .eng-phase-main-fv-text
+      if a_finished
+        img(src=ImgFvTextAFinished)
+      else
+        img(src=ImgFvText)
 
     .eng-phase-main-fv-overflow-hidden 
       .eng-phase-main-fv-shine
@@ -34,61 +37,88 @@ include _mixins
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
-      a.js-btn-cv.js-btn-cv-img(href=UrlLine100Phases)
+      a.c-btn-cv.is-contents(href=UrlLine100Phases)
         img(src=ImgBtnCvPrice)
   
   //blue02 100フレーズクリアで英語の自信がつく!
   section.eng-phase-main-section-blue.eng-phase-main-section-blue-first.inview-triger.inview-hide
        img(src=ImgSectionBlue02)
+  
   //blue03 こんなお子様におすすめ
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
+  section.eng-phase-main-section-blue.inview-triger.inview-hide.fixed-cv-trigger
        img(src=ImgSectionBlue03)
-  //blue04 「カタマリ」で学べば英語は簡単に話せる
+
+  //blue04 100フレーズチャレンジ 10日間プログラムの流れ
   section.eng-phase-main-section-blue.inview-triger.inview-hide
-       img(src=ImgSectionBlue04)
+    .eng-phase-main-flow
+      .eng-phase-main-flow-title
+        img(src=TitleFlow)
+      .eng-phase-main-flow-wrapper
+        if ! a_finished
+          .eng-phase-main-flow-text
+            img(src=TextFlow)
+        .eng-phase-main-flow-tab(class=a_finished ? 'is-finished' : '')
+          .eng-phase-main-flow-tab-item(class=!a_finished ? 'is-active' : 'is-finished')
+            if ! a_finished
+              img(src=ImgFlowBalloon01).image-balloon
+            img(src=ImgFlowTab01).image-tab
+            if a_finished
+              img(src=ImgFlowTab01End).img-finished
+          .eng-phase-main-flow-tab-item(class=a_finished ? 'is-active is-finished' : '')
+            if ! a_finished
+              img(src=ImgFlowBalloon02).image-balloon
+            img(src=ImgFlowTab02).image-tab
+        .eng-phase-main-flow-contents
+          if ! a_finished
+            .eng-phase-main-flow-contents-item(class=!a_finished ? 'is-active' : '')
+              .eng-phase-main-flow-about
+                img(src=ImgFlowAbout)
+              .eng-phase-main-flow-schedule
+                img(src=ImgFlowSchedule01)
+              .eng-phase-main-flow-option
+                img(src=ImgFlowOption)
+          .eng-phase-main-flow-contents-item(class=a_finished ? 'is-active' : '')
+            .eng-phase-main-flow-about
+              img(src=ImgFlowAbout)
+            .eng-phase-main-flow-schedule
+              img(src=ImgFlowSchedule02)
+            .eng-phase-main-flow-option
+              img(src=ImgFlowOption)
   section.eng-phase-main-cv-crowds.inview-triger.inview-hide
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
-      a.js-btn-cv.js-btn-cv-img(href=UrlLine100Phases)
+      a.c-btn-cv.is-contents(href=UrlLine100Phases)
         img(src=ImgBtnCvPrice)
+    
+  //blue05 オープンチャットで仲間と10日間楽しく学ぼう！
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+       img(src=ImgChat)
+
+  //blue06 前回参加者の声
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+       img(src=ImgVoice)
+  
+  //blue07 「カタマリ」で学べば英語は簡単に話せる
   section.eng-phase-main-section-movie.inview-triger.inview-hide
     .eng-phase-main-section-movie-title
       img(src=ImgTitleMovie)
     .eng-phase-main-section-movie-content
       .eng-phase-main-section-movie-content-btn#playButton
-         img(src=ImgSectionBlue06IconMovie)
+          img(src=ImgSectionBlue07IconMovie)
       .eng-phase-main-section-movie-content-vimeo.
-         <iframe src="https://player.vimeo.com/video/1013057465?autoplay=1&muted=1&background=1"
+          <iframe src="https://player.vimeo.com/video/1013057465?autoplay=1&muted=1&background=1"
           frameborder="0" width="100%" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+       img(src=ImgSectionBlue04)
 
-  //blue05 100フレーズチャレンジ 10日間プログラム流れ
-  section.eng-phase-main-section-blue.eng-phase-main-section-blue-last.eng-phase-main-section-blue-static.inview-triger.inview-hide
-      div 
-        img(src=ImgSectionBlue05Title)
-      .eng-phase-main-section-blue-wrap-title-first
-            img(src=ImgSectionBlue05DayTitle01)
-      .eng-phase-main-section-blue-flow-wrap 
-        .eng-phase-main-section-blue-wrap-content
-            img(src=ImgSectionBlue05ContentMain) 
-
-        .eng-phase-main-section-blue-wrap-title 
-            img(src=ImgSectionBlue05DayTitle02)  
-        .eng-phase-main-section-blue-wrap-content
-            img(src=ImgSectionBlue05ContentMain)   
-        .eng-phase-main-section-blue-wrap-title 
-            img(src=ImgSectionBlue05DayTitle03)
-        .eng-phase-main-section-blue-wrap-content
-            img(src=ImgSectionBlue05ContentMain) 
-      div 
-        img(src=ImgSectionBlue05ContentDay10)  
   section.eng-phase-main-cv-humans.inview-triger.inview-hide
     .eng-phase-main-cv-humans-img 
         img(src=ImgBgCvBlue)
     .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-blue
       .eng-phase-main-cv-humans-area-top
           .eng-phase-main-cv-humans-area-top-price
-            |100フレーズチャレンジ 5,800円
+            |100フレーズチャレンジ 8,800円
           .eng-phase-main-cv-humans-area-top-text 
             |たったの10日で楽しく学ぶ！
             br
@@ -138,18 +168,6 @@ include _mixins
         img(src=ImgTitlePrice)
      .eng-phase-main-section-green-wrap-content 
         img(src=ImgPrice)
-  //お客様の声
-  section.eng-phase-main-section-green.eng-phase-main-section-green-voice.inview-hide.inview-triger
-    .eng-phase-main-section-green-wrap
-      .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
-        img(src=ImgTitleVoice)
-      .eng-phase-main-section-green-wrap-voiceimg
-        img(src=ImgVoice)
-      .eng-phase-main-section-green-wrap-text
-          |英語を学んでほしいが、どのように学習の入口のハードルを下げるかが課題でした。入会してみると、遊びの延長のような感覚で楽しく英語に触れることができています。また英語が耳にきちんと残っているようで、実際に先日、外国のスポーツ選手のインタビューに反応し、「レッスンでならったnot only（なろぉんりぃ）や！」ととても嬉しそうでした。
-          br
-          br
-          |「ノット　オンリー」で覚えていたらきっと聞き取れなかったと思います。ワオ未来塾の「発音（ひらがな）で覚えて話す」練習をしていたことが、リスリングの力になっていました。このままどこまで力が伸びるか、傍で見ていて非常に楽しみです。
   //CV
   +cvgreen 
 
@@ -253,7 +271,7 @@ include _mixins
                 br
                 br
   section.eng-phase-main-section-5steps-cv.inview-triger.inview-hide
-          a.js-btn-cv.js-btn-cv-img(href=UrlLine100Phases)
+          a.c-btn-cv.is-green(href=UrlLine100Phases)
               img(src=ImgBtnCvPrice)
 
   //よくある質問
@@ -309,7 +327,7 @@ section.bg-lp-creamyellow
           |ワオ未来塾って？
         .lp-waomirai-about-box 
             .lp-waomirai-about-box-left 
-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+              img(src=ImgLogoWaoCorp)
             .lp-waomirai-about-box-right
               |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。　
               |21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。                
@@ -323,8 +341,6 @@ section.bg-lp-creamyellow
           |オンラインで
           br
           |楽しく学ぶ“新5教科”
-        //- .lp-waomirai-start2025-subtitle 
-        //-   |2025年4月開校！
         .lp-waomirai-start2025-logo 
           img(src=ImgLogoWaoMirai)
         .lp-waomirai-start2025-target 
@@ -379,6 +395,10 @@ section.bg-lp-creamyellow
           a(href="https://go.waomirai.com/shotororihiki", target='_blank')
             |特定商取引に基づく表記
       .footer-logo 
-          img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
+          img(src=ImgLogoWaoMiraiWhite)
       .footer-copyright
          |© ワオ・コーポレーション All rights reserved.
+  
+  #fixed-cv
+    a.fixed-cv-btn(href=UrlLine100Phases)
+      img(src=textFixedCv)
