@@ -6,6 +6,7 @@ $width-sm: 700px; // 小さめの幅（「簡単5ステップで〜」で利用�
 $width-main-content: 92%; // メインの幅
 $breakpoint-tb: 1000px; // ブレイクポイントの幅
 $breakpoint-sp: 768px; // ブレイクポイントの幅
+$min-breakpoint-pc: 769px; // ブレイクポイントの幅
 
 // body
 body{
@@ -24,30 +25,60 @@ a:hover,
 }
 
 // 共通部分
+.l-pc-wrapper{
+    width: 100%;
+}
 .l-pc-logo,
 .l-pc-menu{
-    background: #ccc;
     width: calc(50% - ($width-main / 2));
     height: 100%;
     position: fixed;
     top: 0;
+    background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1750900085IR8YsGcF/grid_lp_sum25.png) left top / 24px auto;
 }
 .l-pc-logo{
     left: 0;
 }
+.l-pc-logo-img{
+    width: calc(100% - 60px);
+    max-width: 340px;
+    margin: 0 auto;
+}
 .l-pc-menu{
     right: 0;
+}
+.l-pc-logo,
+.l-pc-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .l-main{
     width: $width-main;
     margin: 0 auto;
     position: relative;
 }
-.l-pc-menu{
-    background: #eee;
+.l-pc-logo::before,
+.l-pc-menu::before,
+.l-pc-logo::after,
+.l-pc-menu::after{
+    content: "";
+    width: 100%;
+    height: 13px;
+    background: url(https://go.waomirai.com/l/1026513/2025-06-26/hqdy7/1026513/1750994637vGWLZb3j/pc_border_lp_25sum.png) left top / calc(10px + 2.4px) 13px repeat-x;
+    position: absolute;
+    left: 0;
+}
+.l-pc-logo::before,
+.l-pc-menu::before{
+    top: 0;
+}
+.l-pc-logo::after,
+.l-pc-menu::after{
+    bottom: 0;
+    transform: rotate(180deg);
 }
 @include responsive-style($breakpoint-tb) {
-    .l-pc-wrapper,
     .l-pc-wrapper{
         display: none;
     }

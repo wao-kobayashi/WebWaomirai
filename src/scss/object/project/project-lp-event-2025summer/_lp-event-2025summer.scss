@@ -151,6 +151,11 @@
     justify-content: center;
     letter-spacing: 1px;
 }
+@media screen and (min-width: $min-breakpoint-pc) and (min-height: 630px) and (max-height: 700px) {
+    .p-fv-main-button{
+        top: calc(100vh - 110px);
+    }
+}
 
 // 夏休み自由研究DAYとは？
 .p-day{
