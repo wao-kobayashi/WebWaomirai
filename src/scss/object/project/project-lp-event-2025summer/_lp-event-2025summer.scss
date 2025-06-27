@@ -20,9 +20,9 @@
 }
 
 // 共通CVボタン（緑）
-.c-btn-cta-main {
+.c-btn-cta-main{
   text-align: center;
-  a {
+  a{
     text-align: center;
     margin: 0px auto 0px;
     cursor: pointer;
@@ -34,20 +34,17 @@
     justify-content: center;
     align-items: center;
     border-radius: $border-radius-full;
-    width: 100%;
     max-width: 500px;
     position: relative;
     @include font-size-l;
     letter-spacing: 1px;
-    @include responsive-style(768px) {
-      width: 90%;
-    }
+    width: 90%;
     @include box-shadow-lp;
   }
 }
 
 // 共通スライダー
-.p-slider {
+.p-slider{
     margin-top: 62px;
     position: relative;
     display: flex;
@@ -63,59 +60,60 @@
         position: absolute;
         left: 0;
         background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq6gx/1026513/1750903759fvnH7HY7/bg_slide_lp_sum25.png) center top / cover no-repeat;
-        @include responsive-style($breakpoint-sp) {
+        @include responsive-style($breakpoint-sp){
             height: 6.4vw;
         }
     }
     &::before{
-        top: 0;
+        top: -1px;
     }
     &::after{
-        bottom: 0;
+        bottom: -1px;
         transform: rotate(180deg);
     }
-    img {
+    &.is-yellow::after{
+        background-image: url(https://go.waomirai.com/l/1026513/2025-06-26/hqdqb/1026513/17509884317nhZH1YP/bg_slide_yellow_lp_sum25.png);
+        transform: none;
+    }
+    img{
         width: auto;
         max-width: none;
         height: 100%;
         will-change: transform;
     }
-    img:first-child {
+    img:first-child{
         animation: loop 50s -25s linear infinite;
         backface-visibility: hidden;
         will-change: transform;
     }
-    img + img {
+    img + img{
         animation: loop2 50s linear infinite;
     }
 }
-@keyframes loop {
-    0% {
+@keyframes loop{
+    0%{
         transform: translateX(100%);
     }
-    to {
+    to{
         transform: translateX(-100%);
     }
 }
-@keyframes loop2 {
-    0% {
+@keyframes loop2{
+    0%{
         transform: translateX(0);
     }
-    to {
+    to{
         transform: translateX(-200%);
     }
 }
 
 // 共通タイトル
-.c-title-lp {
+.c-title-lp{
   @include font-size-xl;
   @include title-underline;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   font-weight: normal;
   text-align: center;
-  @include responsive-style(768px) {
-    margin-bottom: 35px;
-  }
 }
 
 // ファーストビュー
@@ -200,8 +198,8 @@
     padding: 22px 0;
     display: flex;
     align-items: flex-start;
-    @each $key, $color in $subject-categories {
-        &.is-#{$key} .p-list-item-image {
+    @each $key, $color in $subject-categories{
+        &.is-#{$key} .p-list-item-image{
             border: 2px solid $color;
         }
         &.is-#{$key} .p-list-item-info-button .fa-solid{
@@ -280,7 +278,7 @@
     &.is-fixed-hide{
         transform: translateY(-100%);
     }
-    @include responsive-style($breakpoint-sp) {
+    @include responsive-style($breakpoint-sp){
         position: sticky;
     }
 }
@@ -303,8 +301,8 @@
     border-radius: 4px;
     color: $cl-bg-leafgreen-darken;
     text-align: center;
-    @include responsive-style($breakpoint-sp) {
-        @each $key, $color in $subject-categories {
+    @include responsive-style($breakpoint-sp){
+        @each $key, $color in $subject-categories{
             &.is-#{$key}.is-active{
                 background: $color;
                 color: $cl-lp-white;
@@ -327,7 +325,7 @@
     &:nth-child(n+2){
         margin-top: 52px;
     }
-    @each $key, $color in $subject-categories {
+    @each $key, $color in $subject-categories{
         &.is-#{$key}{
             .p-details-item-subject{
                 background: $color;
@@ -350,7 +348,7 @@
     position: absolute;
     top: -14px;
     left: 0;
-    @include responsive-style($breakpoint-sp) {
+    @include responsive-style($breakpoint-sp){
         top: -83px;
     }
 }
@@ -527,513 +525,345 @@
 }
 
 // こんなお子さまたちにオススメです！
-.c-recommend {
-  margin: 75px 0 0;
-  background: $cl-lp-yellow;
-  .c-recommend {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
+.c-recommend{
+    padding-top: 40px;
+    background: $cl-lp-yellow;
+}
+.c-recommend-main{
+    width: $width-main-content;
+    position: relative;
     display: flex;
-    div {
-      @include min-responsive-style(768px) {
-        flex: 1;
-      }
+    flex-direction: column;
+    border-radius: 0;
+    margin: 0 auto;
+    gap: 30px;
+}
+.c-recommend-main-child{
+    display: flex;
+    gap: 20px;
+    &:last-child{
+        flex-direction: row-reverse;
     }
-    .c-recommend-left {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: $cl-white;
-      img {
-        width: 50%;
-      }
+}
+.c-recommend-main-child-icon{
+    width: 88px;
+    margin: 0;
+    img{
+        height: 75px;
+        margin: 0 auto;
     }
-    .c-recommend-right {
-      position: relative;
-      background: $cl-graylightest;
-      padding: 45px;
-      display: flex;
-      flex-direction: column;
-      gap: 45px;
-      border-radius: 45px;
-      @include responsive-style(768px) {
-        background: transparent;
-        margin: 0 20px;
-        padding: 0px 0px 30px;
-        border-radius: 0;
-        gap: 30px;
-      }
-      &::before {
+}
+.c-recommend-main-child-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background: $cl-lp-white;
+    @include font-size-m;
+    padding: 16px;
+    border-radius: $border-radius-big;
+    &::before{
         content: "";
         position: absolute;
-        top: 0;
-        left: -40px;
-        bottom: 0;
+        top: 30px;
+        left: -15px;
         margin: auto;
         width: 0;
         height: 0;
         border-style: solid;
-        border-color: transparent $cl-graylightest transparent transparent;
-        border-width: 82px 52px 82px 0px;
+        border-color: transparent $cl-lp-white transparent transparent;
+        border-width: 15px 15px 15px 0px;
         z-index: 1;
-        @include responsive-style(768px) {
-          display: none;
-        }
-      }
-      .c-recommend-right-child {
-        @include responsive-style(768px) {
-          display: flex;
-          gap: 20px;
-        }
-        &:last-child {
-          flex-direction: row-reverse;
-        }
-        .c-recommend-right-child-icon {
-          @include responsive-style(768px) {
-            width: 102px;
-            margin: 0;
-          }
-        }
-        .c-recommend-right-child-icon {
-          img {
-            height: 75px;
-            margin: 0 auto;
-          }
-          @include responsive-style(768px) {
-            width: 88px;
-            margin: 0;
-          }
-        }
-        .c-recommend-right-child-text {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          @include font-size-l;
-          position: relative;
-          @include responsive-style(768px) {
-            background: $cl-graylightest;
-            @include font-size-m;
-            padding: 16px;
-            border-radius: $border-radius-big;
-          }
-          &::before {
-            @include responsive-style(768px) {
-              content: "";
-              position: absolute;
-              top: 30px;
-              left: -15px;
-              margin: auto;
-              width: 0;
-              height: 0;
-              border-style: solid;
-              border-color: transparent $cl-graylightest transparent transparent;
-              border-width: 15px 15px 15px 0px;
-              z-index: 1;
-            }
-          }
-        }
-        &:last-child .c-recommend-right-child-text::before {
-          left: auto;
-          right: -15px;
-          transform: rotate(-180deg);
-        }
-      }
     }
-  }
-  // POINT!
-  .c-point {
-    max-width: 520px;
-    margin: 45px auto 0;
+}
+.c-recommend-main-child:last-child .c-recommend-main-child-text::before{
+    left: auto;
+    right: -15px;
+    transform: rotate(-180deg);
+}
+.c-recommend-point{
+    background: $cl-lp-white;
+    border-radius: $border-radius-big;
+}
+.c-recommend-point-left{
+    width: 120px;
+    height: 30px;
+    border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
+    background: $cl-gray-deep;
+    color: $cl-lp-white;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
-    @include responsive-style(768px) {
-      background: $cl-graylightest;
-      margin: 0px 20px 0;
-      padding: 0px 0px;
-      border-radius: $border-radius-big;
-      display: block;
-    }
-    .c-point-left {
-      @include responsive-style(768px) {
-        width: 120px;
-        height: 30px;
-        border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
-      }
-      width: 90px;
-      height: 90px;
-      border-radius: $border-radius-full;
-      background: $cl-gray;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include font-size-xm;
-    }
-    .c-point-right {
-      flex: 1;
-      text-align: center;
-      @include font-size-xm;
-      @include responsive-style(768px) {
-        width: 100%;
-        padding: 20px 20px 30px;
-        text-align: left;
-      }
-    }
-  }
+    @include font-size-xm;
+}
+.c-recommend-point-right{
+    flex: 1;
+    @include font-size-xm;
+    width: 100%;
+    padding: 20px 20px 30px;
+    text-align: left;
 }
 
 // 授業の特長
-.c-feature {
-  margin: 100px auto 0;
-  max-width: $width-lg;
-  text-align: center;
-  background: $cl-lp-yellow;
-  @include responsive-style(768px) {
-    padding: 0 20px;
-    margin: 60px auto 0;
+.c-feature{
+    max-width: $width-lg;
+    text-align: center;
+    background: $cl-lp-yellow;
+    padding: 60px 0;
     height: auto;
     flex-direction: column;
     gap: 10px;
-    border-radius: $border-radius-bigplus;
-  }
 }
-.c-feature-list {
-  padding-left: 0;
-  max-width: calc(100% - 40px);
-  margin: 0 auto !important;
-  @include responsive-style(768px) {
-    max-width: none;
-  }
+.c-feature-wrapper{
+    width: $width-main-content;
+    margin: 0 auto !important;
 }
-.c-feature-list-child {
-  @include font-size-l;
-  background: $cl-feature-yellow;
-  @include box-shadow-feature;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto 30px;
-  border-radius: $border-radius-full;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  @include responsive-style(768px) {
+.c-feature-list-child{
     @include font-size-l;
-    height: auto;
+    background: $cl-feature-yellow;
+    @include box-shadow-feature;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
     gap: 10px;
-    border-radius: 40px;
+    border-radius: $border-radius-large;
     padding: 20px 0;
-    margin-bottom: 30px;
-  }
-  &:last-child {
-    margin: 0 auto 90px;
-    @include responsive-style(768px) {
-      margin-bottom: 50px;
+    &:last-child{
+        margin: 0 auto 50px;
     }
-  }
-  i {
-    display: inline-block;
-    margin-top: 6px;
-  }
+    i{
+        display: inline-block;
+        margin-top: 6px;
+    }
 }
-.c-feature-list-child-icons {
-  display: flex;
-  gap: 10px;
+.c-feature-list-child-icons{
+    display: flex;
+    gap: 10px;
 }
 
 // 5stepで参加可能
-.c-howto {
-  margin-top: 120px;
-  @include responsive-style(768px) {
-    margin-top: 60px;
-  }
+.c-howto{
+    background: $cl-lp-white;
 }
-.c-howto-main {
-  padding: 80px 0 45px;
-  background: $cl-lp-white;
-  margin-bottom: 115px;
-  @include responsive-style(768px) {
+.c-howto-main{
+    width: $width-main-content;
+    margin: 0 auto;
     padding: 40px 0 5px;
     position: relative;
-    margin-bottom: 50px;
-  }
-  .c-howto-main-title {
+}
+.c-howto-main-title{
+    width: 100%;
     @include font-size-xl;
     font-weight: normal;
     margin: 0 auto 30px;
     text-align: center;
     letter-spacing: 2px;
-    @include responsive-style(768px) {
-      width: 100%;
-    }
-    .large {
-      @include font-size-xxxl;
-      @include responsive-style(768px) {
+    .large{
         @include font-size-xxxxxxl;
-      }
     }
-  }
-  .c-howto-main-img {
+}
+.c-howto-main-img{
     width: 200px;
     margin: 0 auto 40px;
-  }
-
-  .c-howto-main-step {
-    .c-howto-main-step-child {
-      max-width: $width-sm;
-      width: calc(100% - 40px);
-      margin: 0 auto 75px;
-      display: flex;
-      @include responsive-style(768px) {
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin: 0 auto 70px;
-      }
-      .c-howto-main-step-child-icon {
-        width: 100px;
-        margin-right: 20px;
-        flex-shrink: 0;
-        @include responsive-style(768px) {
-          width: 100px;
-          margin-right: 0;
-        }
-      }
-      .c-howto-main-step-child-text {
-        width: 100%;
-        padding: 0 20px;
-        .c-howto-main-step-child-text-title {
-          @include font-size-l;
-          padding-left: 1em;
-          position: relative;
-          @include responsive-style(768px) {
-            @include font-size-l;
-            padding-left: 0;
-          }
-          margin: 5px 0 15px;
-        }
-        .c-howto-main-step-child-text-title-number {
-          position: absolute;
-          top: 0;
-          left: 0;
-          @include responsive-style(768px) {
-            position: static;
-            display: block;
-            text-align: center;
-            @include font-size-xxxxl;
-          }
-        }
-        .c-howto-main-step-child-text-detail {
-          @include font-size-m;
-          line-height: $lineheight-relaxed;
-          a {
-            color: $cl-black;
-          }
-          @include responsive-style(768px) {
-            letter-spacing: 0.5px;
-          }
-        }
-      }
+}
+.c-howto-main-step .c-howto-main-step-child{
+    max-width: $width-sm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto 70px;
+}
+.c-howto-main-step-child-icon{
+    width: 100px;
+    flex-shrink: 0;
+}
+.c-howto-main-step-child-text{
+    width: 100%;
+}
+.c-howto-main-step-child-text-title{
+    @include font-size-l;
+    position: relative;
+    margin: 5px 0 15px;
+}
+.c-howto-main-step-child-text-title-number{
+    display: block;
+    text-align: center;
+    @include font-size-xxxxl;
+}
+.c-howto-main-step-child-text-detail{
+    @include font-size-m;
+    line-height: $lineheight-relaxed;
+    a{
+        color: $cl-black;
     }
-  }
+    @include responsive-style(768px){
+        letter-spacing: 0.5px;
+    }
 }
 
 // ワオ未来塾って？
-.c-about {
-  max-width: $width-lg;
-  padding: 0 20px;
-  margin: 100px auto 0;
-  background: $cl-lp-yellow;
-  @include responsive-style(768px) {
-    padding: 0;
-    margin-top: 75px;
-  }
+.c-about{
+    max-width: $width-lg;
+    background: $cl-lp-yellow;
+    padding-top: 50px;
+    .c-title-lp{
+        padding-top: 75px;
+    }
 }
-.c-about-box {
-  border-radius: $border-radius-extrabig;
-  display: flex;
-  gap: 45px;
-  @include responsive-style(768px) {
-    flex-direction: column;
+.c-about-wrapper{
+    width: $width-main-content;
+    margin: 0 auto;
+}
+.c-about-box{
+    display: flex;
     gap: 30px;
-    padding: 0 20px;
+    flex-direction: column;
     border-radius: $border-radius-bigplus;
-  }
+    padding: 40px 20px 40px;
+    background: $cl-lp-white;
 }
-.c-about-box-left {
-  width: 250px;
-  @include responsive-style(768px) {
+.c-about-box-left{
     width: 70%;
     margin: 0 auto 0px;
-  }
 }
-.c-about-box-right {
-  flex: 1;
-  line-height: $lineheight-relaxed;
-  @include font-size-m;
-  @include responsive-style(768px) {
+.c-about-box-right{
+    flex: 1;
+    line-height: $lineheight-relaxed;
+    @include font-size-m;
     letter-spacing: 0.5px;
-  }
 }
 
 // ワオ未来塾詳細
-.c-details {
-  max-width: $width-xl;
-  padding: 0 20px;
-  margin: 100px auto 120px;
-  background: $cl-lp-yellow;
-  @include responsive-style(768px) {
-    margin-top: 75px;
-  }
-  .c-details-catch {
+.c-details{
+    max-width: $width-xl;
+    padding: 75px 0 120px;
+    background: $cl-lp-yellow;
+}
+.c-details-wrapper{
+    width: $width-main-content;
+    margin: 0 auto;
+}
+.c-details-catch{
     @include font-size-l;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
     text-align: center;
-    @include responsive-style(768px) {
-      margin-bottom: 30px;
-    }
-  }
-  .c-details-logo {
+}
+.c-details-logo{
     max-width: 800px;
-    margin: 0 auto 34px;
-    @include responsive-style(768px) {
-      margin-bottom: 30px;
-    }
-  }
-  .c-details-target {
+    margin: 0 auto 30px;
+}
+.c-details-target{
     @include font-size-l;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
     text-align: center;
-    @include responsive-style(768px) {
-      margin-bottom: 30px;
-    }
-  }
-  .c-details-subjects {
+}
+.c-details-subjects{
     max-width: 800px;
-    margin: 0 auto 50px;
-    @include responsive-style(768px) {
-      margin-bottom: 35px;
-    }
-  }
-  .c-details-feature {
+    margin: 0 auto 35px;
+}
+.c-details-feature{
     display: flex;
-    gap: 35px;
+    flex-direction: column;
+    gap: 20px;
     margin: 0 auto 60px;
-    @include responsive-style(768px) {
-      flex-direction: column;
-      gap: 20px;
+}
+.c-details-feature-box{
+    background: white;
+    border-radius: $border-radius-bigplus;
+    padding: 30px 20px 30px;
+    @include font-size-m;
+    flex: 1;
+    @include box-shadow-feature;
+}
+.c-details-feature-box-title{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 20px;
+    @include font-size-l;
+    img{
+        width: 30px;
     }
-    .c-details-feature-box {
-      background: white;
-      border-radius: $border-radius-bigplus;
-      padding: 30px 20px;
-      @include font-size-m;
-      flex: 1;
-      @include box-shadow-feature;
-      @include responsive-style(768px) {
-        padding: 30px 20px 30px;
-      }
-      .c-details-feature-box-title {
+}
+.c-details-feature-box-title-text{
+    font-weight: normal;
+    @include font-size-l;
+}
+.c-details-feature-box-text{
+    @include font-size-m;
+    line-height: $lineheight-normal;
+}
+.c-details-btn{
+    text-align: center;
+    a{
+        text-align: center;
+        margin: 30px auto 0px;
+        background: $cl-main-orange;
+        text-decoration: none;
+        height: 78px;
+        color: white;
         display: flex;
         justify-content: center;
-        gap: 10px;
-        margin: 0 auto 20px;
-        @include responsive-style(768px) {
-          @include font-size-l;
-          margin-bottom: 20px;
-        }
-        img {
-          width: 30px;
-        }
-      }
-      .c-details-feature-box-title-text {
-        font-weight: normal;
-        @include font-size-xm;
-        @include responsive-style(768px) {
-          @include font-size-l;
-        }
-      }
-      .c-details-feature-box-text {
-        @include font-size-m;
+        align-items: center;
+        border-radius: $border-radius-full;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
         line-height: $lineheight-normal;
-      }
+        gap: 12px;
+        @include box-shadow-lp;
+        .c-details-btn-text{
+            margin: 0px 0 0;
+            @include font-size-l;
+            letter-spacing: 1px;
+        }
+        .c-details-btn-icn{
+            width: 17px;
+            height: 17px;
+        }
     }
-  }
-  .c-details-btn {
-    text-align: center;
-    a {
-      text-align: center;
-      margin: 30px auto 0px;
-      background: $cl-main-orange;
-      text-decoration: none;
-      height: 78px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: $border-radius-full;
-      width: 100%;
-      max-width: 500px;
-      position: relative;
-      line-height: $lineheight-normal;
-      gap: 12px;
-      @include box-shadow-lp;
-
-      .c-details-btn-text {
-        margin: 0px 0 0;
-        @include font-size-l;
-        letter-spacing: 1px;
-      }
-      .c-details-btn-icn {
-        width: 17px;
-        height: 17px;
-      }
-    }
-  }
 }
 
 // フッター
-footer {
-  width: 100%;
-  padding: 120px 0px 0px;
-  text-align: center;
-  background: $cl-black;
-  color: white;
-  border-radius: 100px 100px 0 0;
-  @include responsive-style(768px) {
-    padding: 60px 0px 60px;
+.l-footer{
+    background: $cl-lp-yellow;
+}
+.l-footer-wrapper{
+    width: 100%;
+    text-align: center;
+    background: $cl-black;
+    color: $cl-lp-white;
+    padding: 60px 0px;
     border-radius: 50px 50px 0 0;
-  }
-  ul {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  li {
-    list-style: none;
-    padding: 10px 0;
-    a {
-      color: white;
-      text-decoration: none;
-      @include font-size-m;
+    ul{
+        margin: 0 !important;
+        padding: 0 !important;
     }
-  }
-  .footer-logo img {
-    width: 170px;
-    margin: 120px auto 45px;
-    @include responsive-style(768px) {
-      margin: 60px auto 45px;
+    li{
+        list-style: none;
+        padding: 10px 0;
+        a{
+            color: white;
+            text-decoration: none;
+            @include font-size-m;
+        }
     }
-  }
-  .footer-copyright {
+}
+.l-footer-logo{
+    img{
+        width: 170px;
+        margin: 60px auto 45px;
+    }
+}
+.l-footer-copyright{
     width: 100%;
     border-top: 1px solid $cl-lp-white;
     padding: 15px 0 15px;
-  }
 }

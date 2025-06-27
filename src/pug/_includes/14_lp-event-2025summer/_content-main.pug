@@ -126,79 +126,66 @@ include _mixins
       |LINEで簡単申込
 
 //- 画像のスライダー
-.p-slider
+.p-slider.is-yellow
   img(src=ImgSlide)
   img(src=ImgSlide)
 
 //- こんなお子さまたちにオススメです！
 .c-recommend
-    h2.c-title-lp 
-        |こんなお子さまたちに
-        br.spimage
-        |オススメです！
-    .c-recommend
-      .c-recommend-left.pcimage
-          img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpc/1026513/17369098162NUo6Frk/illust_family_3person.png')
-      .c-recommend-right
-        //親子
-        .c-recommend-right-child
-            .c-recommend-right-child-icon.pcimage
-              img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbwzg/1026513/1736921312EFe5ObBQ/illust_family_child.png')
-            .c-recommend-right-child-icon.spimage
-              img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2m5/1026513/1737095331S6YzsenA/illust_voice_child.svg')
-            .c-recommend-right-child-text
-              p ⚪︎学校の勉強だけじゃものたりない
-              p ⚪︎好奇心がとまらない
-              p ⚪︎総合型選抜も見据えた学びがしたい
-        .c-recommend-right-child
-            .c-recommend-right-child-icon.pcimage
-              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp2/1026513/1736909815p2GIKGjy/illust_family_mom_and_papa.png')
-            .c-recommend-right-child-icon.spimage
-              img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2my/1026513/1737097252oErU5qzj/illust_voice_family.svg')
-            .c-recommend-right-child-text
-              p 
-                |⚪︎子どもももちろんだけど、
-                br.pcimage
-                |親だって一緒に学びたい
-              p|⚪︎子どもと話し合えるきっかけがほしい
-              p|⚪︎自立した大人になってほしい
-          
-    .c-point
-        .c-point-left 
+  h2.c-title-lp 
+      |こんなお子さまたちに
+      br
+      |オススメです！
+  .c-recommend-main
+    .c-recommend-main-child
+        .c-recommend-main-child-icon
+          img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2m5/1026513/1737095331S6YzsenA/illust_voice_child.svg')
+        .c-recommend-main-child-text
+          p ⚪︎学校の勉強だけじゃものたりない
+          p ⚪︎好奇心がとまらない
+          p ⚪︎総合型選抜も見据えた学びがしたい
+    .c-recommend-main-child
+        .c-recommend-main-child-icon
+          img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2my/1026513/1737097252oErU5qzj/illust_voice_family.svg')
+        .c-recommend-main-child-text
+          p 
+            |⚪︎子どもももちろんだけど、
+            |親だって一緒に学びたい
+          p|⚪︎子どもと話し合えるきっかけがほしい
+          p|⚪︎自立した大人になってほしい
+    .c-recommend-point
+        .c-recommend-point-left 
           |POINT!
-        .c-point-right
-          |ワオ未来塾の授業は推奨学年はありますが、
-          br.pcimage
-          |大人も子どもも楽しめるコンテンツ。
+        .c-recommend-point-right
+          |ワオ未来塾の授業は推奨学年はありますが、大人も子どもも楽しめるコンテンツ。
           br
-          |授業が終わるころには、
-          br.pcimage
-          |ちょっと世の中の見え方が変わってくる！
+          |授業が終わるころには、ちょっと世の中の見え方が変わってくる！
 
 //- 授業の特徴
 .c-feature
+  .c-feature-wrapper
     h2.c-title-lp 
       |授業の特長
     ul.c-feature-list
       li.c-feature-list-child 
         i.fa-solid.fa-globe
         |オンライン授業で
-        br.spimage
+        br
         |全国どこからでも
-        br.spimage
+        br
         |参加OK
       li.c-feature-list-child 
         i.fa-regular.fa-comments
         |ライブだから
-        br.spimage
+        br
         |チャットで授業に
-        br.spimage
+        br
         |参加できる!
       li.c-feature-list-child 
         .c-feature-list-child-icons 
           i.fa-solid.fa-laptop
         |必要なのはPCか
-        br.spimage
+        br
         |タブレット端末だけ！
     .c-btn-cta-main
         +lineEntryButton('LINEで簡単申込 >')
@@ -210,7 +197,7 @@ include _mixins
         |カンタン
         span.large|5
         |STEP
-        br.spimage
+        br
         |で参加可能！
       .c-howto-main-img 
             img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
@@ -220,7 +207,7 @@ include _mixins
             iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
             number: '1.',
             title: 'LINEで公式アカウントを友だち追加',
-            text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a href="${UrlLineEvent}" target="_blank">こちら</a>から</span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>`
+            text: `まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br />・友だち追加は<a class="js-line-trigger" style="cursor:pointer; text-decoration:underline;" href="${UrlLine}">こちら</a>から`
           },
           {
             iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
@@ -253,12 +240,13 @@ include _mixins
                   |#{step.number}
                 != step.title
               p.c-howto-main-step-child-text-detail
-                != step.text        
-    .c-btn-cta-main
-      +lineEntryButton('LINEで簡単申込 >')
+                != step.text
 
 //- ワオ未来塾って？
 .c-about
+  .c-about-wrapper
+    .c-btn-cta-main
+      +lineEntryButton('LINEで簡単申込 >')
     h2.c-title-lp 
       |ワオ未来塾って？
     .c-about-box 
@@ -270,72 +258,71 @@ include _mixins
 
 //- ワオ未来塾の詳細
 .c-details
-        p.c-details-catch 
-          |社会で役立つ学びを、
-          br.spimage
-          |今はじめよう
-          br
-          |オンラインで
-          br.spimage
-          |楽しく学ぶ“新5教科”
-        .c-details-logo 
-          img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
-        p.c-details-target 
-          |〈対象〉
-          br.spimage
-          |小学3〜6年生／
-          br.spimage
-          |中学生／高校生
-        .c-details-subjects 
-          .pcimage
-              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpg/1026513/1736909816cAU257sd/ilust_5subjects_pc.png')
-          .spimage
-              img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
-        .c-details-feature 
-          .c-details-feature-box
-            .c-details-feature-box-title  
-              .c-details-feature-box-title-icon   
-                img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-              h3.c-details-feature-box-title-text 
-                |新しい5教科
-            p.c-details-feature-box-text 
-              |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
-          .c-details-feature-box
-            .c-details-feature-box-title  
-              .c-details-feature-box-title-icon   
-                img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-              h3.c-details-feature-box-title-text 
-                |飛び級制
-            p.c-details-feature-box-text 
-              |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
-          .c-details-feature-box
-            .c-details-feature-box-title  
-              .c-details-feature-box-title-icon   
-                img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
-              h3.c-details-feature-box-title-text 
-                |オンラインライブ授業
-            p.c-details-feature-box-text 
-              |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
-        .c-details-btn
-          a(href='https://waomirai.com/', target='_blank')
-            .c-details-btn-text
-              |ワオ未来塾の公式サイトへ     
-            .c-details-btn-icn
-              img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
+  .c-details-wrapper
+    p.c-details-catch 
+      |社会で役立つ学びを、
+      br
+      |今はじめよう
+      br
+      |オンラインで
+      br
+      |楽しく学ぶ“新5教科”
+    .c-details-logo 
+      img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+    p.c-details-target 
+      |〈対象〉
+      br
+      |小学3〜6年生／
+      br
+      |中学生／高校生
+    .c-details-subjects 
+      img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
+    .c-details-feature 
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+          h3.c-details-feature-box-title-text 
+            |新しい5教科
+        p.c-details-feature-box-text 
+          |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+          h3.c-details-feature-box-title-text 
+            |飛び級制
+        p.c-details-feature-box-text 
+          |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+          h3.c-details-feature-box-title-text 
+            |オンラインライブ授業
+        p.c-details-feature-box-text 
+          |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+    .c-details-btn
+      a(href='https://waomirai.com/', target='_blank')
+        .c-details-btn-text
+          |ワオ未来塾の公式サイトへ     
+        .c-details-btn-icn
+          img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
 
-footer 
-    ul 
-      li 
-        a(href="https://www.wao-corp.com/", target='_blank')
-          |会社概要
-      li 
-        a(href="https://www.wao-corp.com/kojin/", target='_blank')
-        |プライバシーポリシー
-      li
-        a(href="https://go.waomirai.com/shotororihiki", target='_blank')
-          |特定商取引に基づく表記
-    .footer-logo 
-      img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
-    .footer-copyright
-      |© ワオ・コーポレーション All rights reserved.
+footer.l-footer
+    .l-footer-wrapper
+      ul 
+        li 
+          a(href="https://www.wao-corp.com/", target='_blank')
+            |会社概要
+        li 
+          a(href="https://www.wao-corp.com/kojin/", target='_blank')
+          |プライバシーポリシー
+        li
+          a(href="https://go.waomirai.com/shotororihiki", target='_blank')
+            |特定商取引に基づく表記
+      .l-footer-logo 
+        img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
+      .l-footer-copyright
+        |© ワオ・コーポレーション All rights reserved.
     

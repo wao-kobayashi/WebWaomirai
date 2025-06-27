@@ -74,8 +74,5 @@ $lineheight-extra-loose: 1.88;
 @mixin title-underline {
   text-decoration: underline wavy;
   text-decoration-color: $cl-title-underline;
-  text-underline-offset: 8px;
-  @include responsive-style(768px) {
-    text-underline-offset: 6px;
-  }
+  text-underline-offset: 3px;
 }
