@@ -7,17 +7,23 @@ $width-main-content: 92%; // メインの幅
 $breakpoint-tb: 1000px; // ブレイクポイントの幅
 $breakpoint-sp: 768px; // ブレイクポイントの幅
 
+// body
 body{
     background: $cl-bg-leafgreen;;
 }
-a{
+
+// リンク
+a,
+.u-link{
     cursor: pointer;
     text-decoration: none;
 }
-a:hover{
+a:hover,
+.u-link:hover{
     filter: brightness(1.1);
 }
 
+// 共通部分
 .l-pc-logo,
 .l-pc-menu{
     background: #ccc;
