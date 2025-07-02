@@ -10,9 +10,14 @@ script.
     */
     $(window).on("load scroll", function () {
       if ($(this).scrollTop() > 300) {
-         $(".l-btn-cv").fadeIn();
+       $(".l-btn-cv").fadeIn();
       } else {
        $(".l-btn-cv").fadeOut();
+      }
+      if ($(this).scrollTop() > 50) {
+        $(".p-fv-main-button").fadeOut();
+      } else {
+        $(".p-fv-main-button").fadeIn();
       }
     });
 

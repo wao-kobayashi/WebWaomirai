@@ -26,7 +26,7 @@
     text-align: center;
     margin: 0px auto 0px;
     cursor: pointer;
-    background: $cl-brand-line;
+    background:  $cl-red;
     text-decoration: none;
     height: 78px;
     color: white;
@@ -39,7 +39,8 @@
     @include font-size-l;
     letter-spacing: 1px;
     width: 90%;
-    @include box-shadow-lp;
+    border:2px solid $cl-lp-white;
+    // @include box-shadow-lp;
   }
 }
 
@@ -331,14 +332,14 @@
     justify-content: space-between;
     width: $width-main-content;
     margin: 0 auto;
-    padding: 11px 0;
+    padding: 7px 0;
 }
 .p-tab-item{
     width: calc(20% - 5px);
     @include font-size-sss;
     line-height: $lineheight-tight;
     background: $cl-lp-white;
-    height: 41px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,7 +610,7 @@
 .c-recommend-main-child{
     display: flex;
     gap: 20px;
-    &:last-child{
+    &:nth-child(2){
         flex-direction: row-reverse;
     }
 }
@@ -644,7 +645,7 @@
         z-index: 1;
     }
 }
-.c-recommend-main-child:last-child .c-recommend-main-child-text::before{
+.c-recommend-main-child:nth-child(2) .c-recommend-main-child-text::before{
     left: auto;
     right: -15px;
     transform: rotate(-180deg);
@@ -941,7 +942,7 @@
     display: none;
     width: 100%;
     position: fixed;
-    bottom: 34px;
+    bottom: 20px;
     left: 0;
     z-index: 1000;
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
