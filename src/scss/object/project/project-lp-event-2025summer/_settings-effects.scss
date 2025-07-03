@@ -11,7 +11,7 @@
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
 }
 @mixin box-shadow-fv{
-  box-shadow: 5px 3px 0px $cl-fv-shadow;
+  box-shadow: 5px 0px 0px $cl-fv-shadow;
 }
 
 // border-radius
