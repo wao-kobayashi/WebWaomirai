@@ -1,0 +1,32 @@
+//- 変数定義
+include _variables
+
+//- ミックスイン
+include _mixins
+
+.l-pc-logo
+  .l-pc-wrapper
+    .l-pc-logo-img
+      img(src=ImgLogo alt="夏休み自由研究DAY 2025")
+.l-main
+  include _content-main.pug
+.l-pc-menu
+  .l-pc-wrapper
+    .l-pc-menu-wrapper
+      .l-pc-menu-title
+        p.l-pc-menu-title-eng
+          |INDEX
+        p.l-pc-menu-title-jpn
+          |オンライン授業一覧
+      ol.l-pc-menu-list
+        each item in program
+          li.l-pc-menu-item
+            a.l-pc-menu-link(href=`#${item.link}`).u-no-hover-animation
+              span.l-pc-menu-link-number
+                | #{item.item_number}
+              span.l-pc-menu-link-title
+                | #{item.menu_title}
+.l-btn-cv
+  a.c-btn-cv.js-line-trigger(href=UrlLine)
+    |LINEで簡単申込
++modal

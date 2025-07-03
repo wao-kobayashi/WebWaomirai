@@ -1,0 +1,332 @@
+//- 変数定義
+include _variables
+
+//- 配列定義
+include _data
+
+//- ミックスイン
+include _mixins
+
+//- ファーストビュー
+.p-fv
+  .p-fv-logo
+    img(src=ImgLogoWaoMirai alt="ワオ未来塾")
+  .p-fv-main
+    h1.p-fv-main-title
+      img(src=ImgFvTitle alt="夏休み自由研究DAY2025 参加費無料")
+    .p-fv-main-image
+      img(src=ImgFvImage)
+    .p-fv-bg01
+      img(src=ImgFvBg01)
+    .p-fv-bg02
+      img(src=ImgFvBg02)
+    p.p-fv-main-button
+      img(src=ImgFvButton alt="スクロールする")
+  p.p-fv-target
+    |対象：小〜高校生とその保護者
+
+//- 夏休み自由研究DAYとは？
+.p-day
+  img(src=ImgDay alt="夏休み自由研究DAYとは？")
+
+//- プログラム一覧
+.p-list
+  p.p-list-eng
+    |INDEX
+  .p-list-wrapper
+    h2.p-list-title
+      img(src=ImgListTitle alt="プログラム一覧")
+    p.p-list-text
+      |自由研究に役立つ講座が盛りだくさん！
+      br
+      |複数講座を受けることも可能です！
+    ol.p-list-main
+      each item in program
+        li.p-list-item(class=`is-${item.key}`)
+          .p-list-item-image
+            img(src=item.list_img, alt=item.list_title)
+          .p-list-item-info
+            p.p-list-item-info-number #{item.item_number}
+            p.p-list-item-info-title #{item.list_title}
+            p.p-list-item-info-text
+              | #{item.times[0]}
+              br
+              | #{item.times[1]}
+            a.p-list-item-info-button(href='#' + item.link)
+              i.fa-solid.fa-arrow-down
+              | 詳細を見る
+  a.c-btn-cv.js-line-trigger(href=UrlLine)
+    |LINEで簡単申込
+
+//- 画像のスライダー
+.p-slider
+  img(src=ImgSlide)
+  img(src=ImgSlide)
+
+//- プログラムのタブ
+.p-tab-text
+  |クリックすると各科目の先頭にジャンプします♪
+  br
+  |受けてみたい教科を選んで講座内容をチェックしよう！
+.p-tab-list
+  .p-tab-list-wrapper
+    each tab in program
+      a.p-tab-item(href='#' + tab.link, class=`is-${tab.key}`)
+        | #{tab.tab_text[0]}
+        br
+        | #{tab.tab_text[1]}
+
+//- プログラムの詳細
+.p-details
+  ul.p-details-list
+    each item in program
+      li.p-details-item(class='is-' + item.key,data-id=item.link)
+        .p-details-item-anchor(id=item.link)
+        p.p-details-item-subject
+          | #{item.category_icon}
+        h2.p-details-item-title
+          img(src=item.img, alt=item.title)
+        ul.p-details-item-info
+          li.p-details-item-info-item
+            p.p-details-item-info-item-title 日時
+            p.p-details-item-info-item-text
+              each date, idx in item.times
+                | #{date}
+                if idx !== item.times.length - 1
+                  br
+              span.p-details-item-info-item-text-note
+                | ※同じ内容です。ご都合のよい時間でご参加ください。
+          li.p-details-item-info-item
+            p.p-details-item-info-item-title 対象
+            p.p-details-item-info-item-text
+              each text, idx in item.target
+                | #{text}
+                if idx !== item.target - 1
+                  br
+        p.p-details-item-text
+          each line, idx in item.description
+            | #{line}
+            if idx !== item.description.length - 1
+              br
+        .p-details-item-teacher(class=!item.teacher.texts_more ? 'is-more-false' : '')
+          .p-details-item-teacher-bg TEACHER
+          .p-details-item-teacher-head
+            .p-details-item-teacher-head-image
+              img(src=item.teacher.img)
+            .p-details-item-teacher-head-name
+              | #{item.teacher.role}
+              br
+              | #{item.teacher.name}
+          p.p-details-item-teacher-text
+            each line, idx in item.teacher.texts
+              | #{line}
+              if idx !== item.teacher.texts.length - 1
+                br
+          p.p-details-item-teacher-text-more.u-link
+            span.p-details-item-teacher-text-more-open 続きを読む
+            span.p-details-item-teacher-text-more-close 閉じる
+
+  a.c-btn-cv.js-line-trigger(href=UrlLine)
+      |LINEで簡単申込
+
+//- 画像のスライダー
+.p-slider.is-yellow
+  img(src=ImgSlide)
+  img(src=ImgSlide)
+
+//- こんなお子さまたちにオススメです！
+.c-recommend
+  h2.c-title-lp 
+      |こんなお子さまたちに
+      br
+      |オススメです！
+  .c-recommend-main
+    .c-recommend-main-child
+        .c-recommend-main-child-icon
+          img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2m5/1026513/1737095331S6YzsenA/illust_voice_child.svg')
+        .c-recommend-main-child-text
+          p ⚪︎学校の勉強だけじゃものたりない
+          p ⚪︎好奇心がとまらない
+          p ⚪︎総合型選抜も見据えた学びがしたい
+    .c-recommend-main-child
+        .c-recommend-main-child-icon
+          img(src='https://go.waomirai.com/l/1026513/2025-01-17/hc2my/1026513/1737097252oErU5qzj/illust_voice_family.svg')
+        .c-recommend-main-child-text
+          p 
+            |⚪︎子どもももちろんだけど、
+            |親だって一緒に学びたい
+          p|⚪︎子どもと話し合えるきっかけがほしい
+          p|⚪︎自立した大人になってほしい
+    .c-recommend-point
+        .c-recommend-point-left 
+          |POINT!
+        .c-recommend-point-right
+          |ワオ未来塾の授業は推奨学年はありますが、大人も子どもも楽しめるコンテンツ。
+          br
+          |授業が終わるころには、ちょっと世の中の見え方が変わってくる！
+
+//- 授業の特徴
+.c-feature
+  .c-feature-wrapper
+    h2.c-title-lp 
+      |授業の特長
+    ul.c-feature-list
+      li.c-feature-list-child 
+        i.fa-solid.fa-globe
+        |オンライン授業で
+        br
+        |全国どこからでも
+        br
+        |参加OK
+      li.c-feature-list-child 
+        i.fa-regular.fa-comments
+        |ライブだから
+        br
+        |チャットで授業に
+        br
+        |参加できる!
+      li.c-feature-list-child 
+        .c-feature-list-child-icons 
+          i.fa-solid.fa-laptop
+        |必要なのはPCか
+        br
+        |タブレット端末だけ！
+    .c-btn-cta-main
+        +lineEntryButton('LINEで簡単申込')
+  
+//- 5stepで参加可能
+.c-howto
+    .c-howto-main
+      h2.c-howto-main-title 
+        |カンタン
+        span.large|5
+        |STEP
+        br
+        |で参加可能！
+      .c-howto-main-img 
+            img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwp8/1026513/1736909816UqQkpU4o/illust_family_mom.png')
+
+      -
+          var steps = [{
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnv/1026513/173690981457RRVmID/icon_howto_join01.png',
+            number: '1.',
+            title: 'LINEで公式アカウントを友だち追加',
+            text: `まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。<br>・友だち追加は<a class="js-line-trigger" style="cursor:pointer; text-decoration:underline;" href="${UrlLine}">こちら</a>から`
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnn/1026513/17369098142mF1y2jz/icon_howto_join02.png',
+            number: '2.',
+            title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwng/1026513/1736909814hcl8Cpz9/icon_howto_join03.png',
+            number: '3.',
+            title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnc/1026513/1736909814efjpZrPo/icon_howto_join04.pngg',
+            number: '4.',
+            title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+          },
+          {
+            iconimg: 'https://go.waomirai.com/l/1026513/2025-01-14/hbwnk/1026513/1736909814z0zmhZt9/icon_howto_join05.png',
+            number: '5.',
+            title: '開催時間になったら届いたイベントURLから参加しましょう！'
+          }]
+      each step in steps
+        .c-howto-main-step 
+          .c-howto-main-step-child 
+            .c-howto-main-step-child-icon 
+              img(src=step.iconimg)
+            .c-howto-main-step-child-text
+              p.c-howto-main-step-child-text-title
+                span.c-howto-main-step-child-text-title-number
+                  |#{step.number}
+                != step.title
+              p.c-howto-main-step-child-text-detail
+                != step.text
+
+//- ワオ未来塾って？
+.c-about
+  .c-about-wrapper
+    .c-btn-cta-main
+      +lineEntryButton('LINEで簡単申込')
+    h2.c-title-lp 
+      |ワオ未来塾って？
+    .c-about-box 
+        .c-about-box-left 
+          img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+        p.c-about-box-right
+          |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。
+          |この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。      
+
+//- ワオ未来塾の詳細
+.c-details
+  .c-details-wrapper
+    p.c-details-catch 
+      |社会で役立つ学びを、
+      br
+      |今はじめよう
+      br
+      |オンラインで
+      br
+      |楽しく学ぶ“新5教科”
+    .c-details-logo 
+      img(src='https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg')
+    p.c-details-target 
+      |〈対象〉
+      br
+      |小学3〜6年生／
+      br
+      |中学生／高校生
+    .c-details-subjects 
+      img(src='https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png') 
+    .c-details-feature 
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+          h3.c-details-feature-box-title-text 
+            |新しい5教科
+        p.c-details-feature-box-text 
+          |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+          h3.c-details-feature-box-title-text 
+            |飛び級制
+        p.c-details-feature-box-text 
+          |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1n/1026513/1736924742nDMFWTDp/icn_subject.png')
+          h3.c-details-feature-box-title-text 
+            |オンラインライブ授業
+        p.c-details-feature-box-text 
+          |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+    .c-details-btn
+      a(href='https://waomirai.com/', target='_blank')
+        .c-details-btn-text
+          |ワオ未来塾の公式サイトへ     
+        .c-details-btn-icn
+          img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
+
+footer.l-footer
+    .l-footer-wrapper
+      ul 
+        li 
+          a(href="https://www.wao-corp.com/", target='_blank')
+            |会社概要
+        li 
+          a(href="https://www.wao-corp.com/kojin/", target='_blank')
+          |プライバシーポリシー
+        li
+          a(href="https://go.waomirai.com/shotororihiki", target='_blank')
+            |特定商取引に基づく表記
+      .l-footer-logo 
+        img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
+      .l-footer-copyright
+        |© ワオ・コーポレーション All rights reserved.
+    

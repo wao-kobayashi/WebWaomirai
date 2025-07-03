@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+// fontfamily
+$font-open-sans: "Open Sans", sans-serif;
+
+// fontsize
+@mixin font-size-sss{
+   font-size: 10px;
+}
+
+@mixin font-size-ss{
+   font-size: 10.5px;
+}
+
+@mixin font-size-s {
+  font-size: 13px;
+}
+
+@mixin font-size-xs {
+  font-size: 14px;
+}
+
+@mixin font-size-xxs {
+  font-size: 15px;
+}
+
+@mixin font-size-m {
+  font-size: 16px;
+}
+
+@mixin font-size-xm {
+  font-size: 18px;
+}
+
+@mixin font-size-l {
+  font-size: 22px;
+}
+
+@mixin font-size-xl {
+  font-size: 25px;
+}
+
+@mixin font-size-xxxl {
+  font-size: 28px;
+}
+
+@mixin font-size-xxxxl {
+    font-size: 37px;
+}
+
+@mixin font-size-xxxxxxl {
+  font-size: 45px;
+}
+
+@mixin font-size-eng-small {
+  font-size: 40px;
+}
+
+@mixin font-size-eng {
+  font-size: 60px;
+}
+
+// デザイン基準幅（1440px）から相対的にスケーリングするpx値を返す
+// 最小1px、画面幅が小さい場合はvwで縮小
+@function rpx($value) {
+  @return calc(#{$value} * min(1px, calc(100vw / 1440)));
+}
+
+// line-height
+$lineheight-none: 1;
+$lineheight-tight: 1.34;
+$lineheight-normal: 1.4375;
+$lineheight-relaxed: 1.5;
+$lineheight-semi-relaxed: 1.5625;
+$lineheight-semi-loose: 1.625;
+$lineheight-loose: 1.63;
+$lineheight-extra-loose: 1.88;
+
+// タイトル
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+  text-underline-offset: 3px;
+}
