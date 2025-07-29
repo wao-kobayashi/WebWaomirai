@@ -1,4 +1,53 @@
 // コンテナ
 .l-container{
-    background: yellow;
+    background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2t9/1026513/1753767545wCUKMZNw/bg_fr_ref.png);
+    @include responsive-style($breakpoint-sp) {
+       background: $cl-background;
+    }
+}
+
+// ファーストビュー
+.p-fv{
+    position: relative;
+    overflow: hidden;
+}
+.p-fv::before{
+    content: "";
+    width: 2000px;
+    height: 516px;
+    background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2v3/1026513/1753768516VaNzEh02/confetti_fr_ref.png);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1000px);
+    @include responsive-style($breakpoint-sp) {
+        display: none;
+    }
+}
+.p-fv-logo{
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    @include responsive-style($breakpoint-sp) {
+        width: 168px;
+        position: absolute;
+        top: 22px;
+        left: calc(50% - 84px);
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+    }
+}
+.p-fv-title{
+    @include width-contents;
+    margin: 0 auto;
+    padding-top: 25px;
+    position: relative;
+    z-index: 1;
+    @include responsive-style($breakpoint-sp) {
+        width: 99.734%;
+        max-width: none;
+    }
 }
