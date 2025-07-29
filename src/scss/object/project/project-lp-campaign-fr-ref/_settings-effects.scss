@@ -1,2 +1,12 @@
 // border-radius
+$border-radius-small: 8px;
 $border-radius-middle: 16px;
+
+// border
+@mixin border-base() {
+   border: 4px solid $cl-wao-green;
+   border-radius: $border-radius-middle;
+    @include responsive-style($breakpoint-sp) {
+        border-width: 3px;
+    }
+}

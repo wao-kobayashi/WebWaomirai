@@ -3,9 +3,10 @@ $breakpoint-sp: 768px; // ブレイクポイントの幅
 $min-breakpoint-pc: 769px; // ブレイクポイントの幅
 @mixin width-contents() {
    width: 800px;
-   max-width: calc(100% - 40px);
+   max-width: calc(100% - 30px);
+   margin: 0 auto;
     @include responsive-style($breakpoint-sp) {
-        width: calc(100% - 40px);
+        width: calc(100% - 30px);
     }
 }
 

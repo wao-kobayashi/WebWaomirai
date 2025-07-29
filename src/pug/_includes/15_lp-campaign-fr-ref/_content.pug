@@ -3,9 +3,47 @@ include _variables
 
 .l-container
   .p-fv
-    p.p-fv-logo
+    p.p-fv__logo
       img(src=ImgLogoWaoMirai)
-    h1.p-fv-title
+    h1.p-fv__title
       picture
-        source(srcset=ImgFvSp media="(max-width: 768px)")
+        source(srcset=ImgFvSp media=BreakpointSp)
         img(src=ImgFv alt="友だち紹介キャンペーン 友だちを紹介して2ケ月継続すると図書カードプレゼント")
+  .l-body
+    .p-item
+      h2.p-item__title
+        | キャンペーン条件
+      .p-item__contents
+        .p-condition
+          ul.p-condition__list
+            li.p-condition__item  
+              p.p-condition__item__title01
+                | 紹介された人が
+                br
+                | ワオ未来塾の講座を入会月含め
+              p.p-condition__item__title02
+                | 2ヶ月以上受講継続
+              .p-condition__item__image
+                picture
+                  source(srcset=ImgCondition01Sp media=BreakpointSp)
+                  img(src=ImgCondition01 alt="")
+            li.p-condition__item  
+              p.p-condition__item__title01
+                | 紹介した人も上記時点で
+              p.p-condition__item__title02
+                | 受講を継続していること
+              .p-condition__item__image
+                picture
+                  source(srcset=ImgCondition02Sp media=BreakpointSp)
+                  img(src=ImgCondition02 alt="")
+          .p-condition__gift
+            .p-condition__gift__image
+              img(src=ImgConditionGift alt="GIFT CARD")
+            p.p-condition__gift__text
+              | 上記条件を満たした月の月末までに、それぞれの登録
+              br
+              | メールアドレス宛に
+              span.p-condition__gift__text__point 図書カードネットギフト1500円分
+              | を
+              br
+              | お届けします。

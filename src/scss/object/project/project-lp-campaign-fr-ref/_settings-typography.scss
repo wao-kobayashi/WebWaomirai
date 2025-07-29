@@ -7,6 +7,20 @@ $font-quicksand: "Quicksand", sans-serif;
 @mixin font-size-m {
   font-size: 16px;
 }
+@mixin font-size-ml {
+  font-size: 18px;
+  @include responsive-style($breakpoint-sp) {
+      font-size: 16px;
+  }
+}
+@mixin font-size-l {
+  font-size: 25px;
+  @include responsive-style($breakpoint-sp) {
+      font-size: 20px;
+  }
+}
 
 // line-height
+$lineheight-tight: 1.567;
 $lineheight-normal: 1.58;
+$lineheight-loose: 1.75;

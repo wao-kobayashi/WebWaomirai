@@ -1,6 +1,7 @@
 // コンテナ
 .l-container{
-    background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2t9/1026513/1753767545wCUKMZNw/bg_fr_ref.png);
+    background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2t9/1026513/1753767545wCUKMZNw/bg_fr_ref.png) $cl-background;
+    font-weight: 500;
     @include responsive-style($breakpoint-sp) {
        background: $cl-background;
     }
@@ -10,6 +11,9 @@
 .p-fv{
     position: relative;
     overflow: hidden;
+    @include responsive-style($breakpoint-sp) {
+        margin-bottom: -11px;
+    }
 }
 .p-fv::before{
     content: "";
@@ -24,7 +28,7 @@
         display: none;
     }
 }
-.p-fv-logo{
+.p-fv__logo{
     width: 200px;
     margin: 0 auto;
     padding-top: 20px;
@@ -40,9 +44,8 @@
         padding: 0;
     }
 }
-.p-fv-title{
+.p-fv__title{
     @include width-contents;
-    margin: 0 auto;
     padding-top: 25px;
     position: relative;
     z-index: 1;
@@ -50,4 +53,197 @@
         width: 99.734%;
         max-width: none;
     }
+}
+
+// ボディー部分
+.l-body{
+    @include width-contents;
+}
+
+// アイテム
+.p-item{
+    @include border-base;
+    background: $cl-white;
+    margin-top: 98px;
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 67px;
+    }
+}
+.p-item__contents{
+    padding: 58px 40px 40px;
+    @include responsive-style($breakpoint-sp) {
+        padding: 49px 19px 25px;
+    }
+}
+.p-item__title{
+    border-radius: $border-radius-middle;
+    background: $cl-wao-green;
+    @include font-size-l;
+    height: 55px;
+    letter-spacing: 0.5px;
+    color: $cl-white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    top: -25px;
+    padding: 0 27px;
+    @include responsive-style($breakpoint-sp) {
+        height: 49px;
+        padding: 0 31px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        border-radius: $border-radius-small;
+    }
+}
+
+// キャンペーン条件
+.p-condition{
+    padding-bottom: 105px;
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        padding-bottom: 0;
+    }
+}
+.p-condition__list{
+    display: flex;
+    justify-content: space-between;
+    @include responsive-style($breakpoint-sp) {
+        display: block;
+    }
+}
+.p-condition__item{
+    width: calc((326 / 712) * 100%);
+    height: 329px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include border-base;
+    overflow: hidden;
+    @include responsive-style(900px) {
+        width: 46%;
+    }
+    @include responsive-style($breakpoint-sp) {
+        display: block;
+        width: 100%;
+        height: calc((307 / 375) * 100vw);
+        padding-top: 29px;
+    }
+}
+.p-condition__item:nth-child(2){
+    width: calc((339 / 712) * 100%);
+    padding-top: 11px;
+    @include responsive-style(810px) {
+        width: 51%;
+    }
+    @include responsive-style($breakpoint-sp) {
+        width: 100%;
+        padding-top: 27px;
+        margin-top: 25px;
+        height: calc((275 / 375) * 100vw);
+    }
+}
+.p-condition__item__title01{
+    text-align: center;
+    @include font-size-m;
+    line-height: $lineheight-normal;
+    color: $cl-wao-green;
+    text-align: center;
+}
+.p-condition__item__title02{
+    text-align: center;
+    @include font-size-l;
+    font-weight: bold;
+    color: $cl-wao-green;
+    text-align: center;
+}
+.p-condition__item__image{
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        width: 101.695%;
+        left: -0.8475%;
+        margin-top: 10px;
+        img{
+            width: 100%;
+        }
+    }
+}
+@include min-responsive-style($min-breakpoint-pc) {
+    .p-condition__item:nth-child(1) .p-condition__item__image{
+        width: 326px;
+        left: calc(50% - 163px);
+        margin-top: 21px;
+    }
+    .p-condition__item:nth-child(2) .p-condition__item__image{
+        width: 339px;
+        left: calc(50% - 169.5px);
+        margin-top: 10px;
+    }
+}
+.p-condition__gift{
+    background: #fff;
+    @include border-base;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -72px;
+    padding: 15px 20px;
+    @include responsive-style($breakpoint-sp) {
+        position: relative;
+        bottom: 0;
+        margin-top: 44px;
+        display: block;
+        padding: 25px;
+    }
+    &::before,
+    &::after{
+        content: "";
+        width: 32px;
+        height: 31px;
+        background: $cl-wao-green;
+        position: absolute;
+        top: -31px;
+        left: 21px;
+        clip-path: polygon(0 100%, 50% 0, 100% 100%);
+        @include responsive-style($breakpoint-sp) {
+            width: 20px;
+            height: 18px;
+            top: -18px;
+            left: 24px;
+        }
+    }
+    &::after{
+        background: $cl-white;
+        transform: scale(0.75, 0.742);
+        transform-origin: center bottom;
+        @include responsive-style($breakpoint-sp) {
+            transform: scale(0.7, 0.667)
+        }
+    }
+}
+.p-condition__gift__image{
+    width: 86px;
+    margin-right: 22px;
+    @include responsive-style($breakpoint-sp) {
+        width: 129px;
+        margin: 0 auto;
+    }
+}
+.p-condition__gift__text{
+    @include font-size-ml;
+    line-height: $lineheight-tight;
+    color: $cl-wao-green;
+    letter-spacing: 0.5px;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 15px;
+        line-height: $lineheight-loose;
+    }
+}
+.p-condition__gift__text__point{
+    margin: 0 5px;
+    background: $cl-yellow;
 }
