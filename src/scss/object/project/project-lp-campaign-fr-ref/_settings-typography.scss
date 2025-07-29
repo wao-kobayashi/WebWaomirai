@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700");
+
+// fontfamily
+$font-quicksand: "Quicksand", sans-serif;
+
+// fontsize
+@mixin font-size-m {
+  font-size: 16px;
+}
+
+// line-height
+$lineheight-normal: 1.58;
