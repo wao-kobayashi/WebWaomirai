@@ -1,0 +1,14 @@
+// border-radius
+$border-radius-small: 8px;
+$border-radius-middle: 16px;
+$border-radius-semilarge: 40px;
+$border-radius-large: 100px;
+
+// border
+@mixin border-base() {
+   border: 4px solid $cl-wao-green;
+   border-radius: $border-radius-middle;
+    @include responsive-style($breakpoint-sp) {
+        border-width: 3px;
+    }
+}
