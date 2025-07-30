@@ -310,6 +310,8 @@
     @include responsive-style($breakpoint-sp) {
         width: calc((162 / 375) * 100vw);
         margin: 20px auto 0;
+        display: flex;
+        justify-content: center;
     }
     &.p-steps__item-image--0201{
         width: 127px;
