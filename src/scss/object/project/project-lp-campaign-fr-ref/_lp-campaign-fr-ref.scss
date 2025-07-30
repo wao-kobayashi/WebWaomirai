@@ -2,6 +2,7 @@
 .l-container{
     background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2t9/1026513/1753779829RowICK5g/bg_fr_ref.png) left top / 556px auto $cl-background;
     font-weight: 500;
+    letter-spacing: 0.5px;
     @include responsive-style($breakpoint-sp) {
        background: $cl-background;
     }
@@ -86,7 +87,6 @@
     background: $cl-wao-green;
     @include font-size-pc25;
     height: 55px;
-    letter-spacing: 0.5px;
     color: $cl-white;
     font-weight: bold;
     display: flex;
@@ -242,7 +242,6 @@
     @include font-size-pc18;
     line-height: $lineheight-tight;
     color: $cl-wao-green;
-    letter-spacing: 0.5px;
     @include responsive-style($breakpoint-sp) {
         margin-top: 15px;
         line-height: $lineheight-loose;
@@ -272,7 +271,6 @@
     background: $cl-wao-green-light;
     color: $cl-wao-green;
     padding-left: 30px;
-    letter-spacing: 0.5px;
     @include responsive-style($breakpoint-sp) {
         height: 57px;
         justify-content: center;
@@ -359,7 +357,6 @@
     @include font-size-pc20;
     color: $cl-wao-green;
     font-weight: bold;
-    letter-spacing: 0.5px;
     line-height: $lineheight-none;
     @include responsive-style($breakpoint-sp) {
         margin-top: 12px;
@@ -372,7 +369,6 @@
     line-height: $lineheight-medium;
     color: $cl-wao-green;
     margin-top: 11px;
-    letter-spacing: 0.5px;
     @include responsive-style($breakpoint-sp) {
         margin-top: 9px;
         line-height: $lineheight-loosest;
@@ -381,4 +377,53 @@
 .p-steps__item-link{
     text-decoration: underline;
     text-underline-offset: 4px;
+}
+
+// FAQ
+.p-faq{
+    color: $cl-wao-green;
+    margin: -5px 0 -15px;
+    @include responsive-style($breakpoint-sp) {
+        margin: 5px 0;
+    }
+}
+.p-faq__header{
+    display: flex;
+    align-items: center;
+    @include responsive-style($breakpoint-sp) {
+        align-items: flex-start;
+    }
+}
+.p-faq__item:nth-child(n+2){
+    border-top: 1px solid $cl-gray-light;
+    margin-top: 25px;
+    padding-top: 15px;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+}
+.p-faq__label{
+    @include font-size-pc38;
+    font-family: $font-quicksand;
+    font-weight: 600;
+    margin-right: 16px;
+    @include responsive-style($breakpoint-sp) {
+        line-height: $lineheight-none;
+    }
+}
+.p-faq__question{
+    @include font-size-pc20;
+    font-weight: bold;
+    @include responsive-style($breakpoint-sp) {
+        padding-top: 3px;
+    }
+}
+.p-faq__answer{
+    @include font-size-pc16;
+    line-height: $lineheight-medium;
+    margin-top: 5px;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 8px;
+    }
 }

@@ -28,6 +28,12 @@ $font-quicksand: "Quicksand", sans-serif;
       font-size: 20px;
   }
 }
+@mixin font-size-pc38 {
+  font-size: 38px;
+  @include responsive-style($breakpoint-sp) {
+      font-size: 30px;
+  }
+}
 
 // line-height
 $lineheight-none: 1;
