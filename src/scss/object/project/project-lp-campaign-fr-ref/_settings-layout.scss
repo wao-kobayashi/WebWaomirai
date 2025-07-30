@@ -1,12 +1,16 @@
 // width
 $breakpoint-sp: 768px; // ブレイクポイントの幅
 $min-breakpoint-pc: 769px; // ブレイクポイントの幅
+$width-contents-pc: 800px;
+$max-width-contents: calc(100% - 30px);
+$width-contents-sp: calc(100% - 30px);
+
 @mixin width-contents() {
-   width: 800px;
-   max-width: calc(100% - 30px);
+   width: $width-contents-pc;
+   max-width: $max-width-contents;
    margin: 0 auto;
     @include responsive-style($breakpoint-sp) {
-        width: calc(100% - 30px);
+        width: $width-contents-sp;
     }
 }
 
@@ -29,5 +33,62 @@ a{
     }
     .u-br-pc{
         display: none;
+    }
+}
+
+// フッター
+.l-footer{
+    width: $width-contents-pc;
+    max-width: $max-width-contents;
+    background: $cl-gray-dark;
+    margin: 90px auto 0;
+    padding: 85px 0 28px;
+    border-radius: $border-radius-large $border-radius-large 0 0;
+    font-weight: 400;
+    @include responsive-style($breakpoint-sp) {
+        width: 100%;
+        max-width: none;
+        margin-top: 45px;
+        padding: 90px 0 20px;
+        border-radius: $border-radius-semilarge $border-radius-semilarge 0 0;
+    }
+}
+.l-footer__menu{
+    text-align: center;
+    @include responsive-style($breakpoint-sp) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.l-footer__link{
+    color: $cl-white;
+    @include font-size-pc14;
+}
+.l-footer__link:nth-child(n+2){
+    margin-left: 36px;
+    @include responsive-style($breakpoint-sp) {
+        margin: 16px 0 0;
+    }
+}
+.l-footer__logo{
+    width: 160px;
+    margin: 75px auto 0;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 87px;
+    }
+}
+.l-footer__copy{
+    width: calc(100% - 80px);
+    color: $cl-white;
+    text-align: center;
+    @include font-size-pc10;
+    border-top: 1px solid $cl-white;
+    margin: 90px auto 0;
+    padding-top: 25px;
+    @include responsive-style($breakpoint-sp) {
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 20px;
     }
 }

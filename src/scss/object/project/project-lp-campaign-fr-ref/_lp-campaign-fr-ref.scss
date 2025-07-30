@@ -201,7 +201,8 @@
         position: relative;
         bottom: 0;
         margin-top: 44px;
-        display: block;
+        flex-direction: column;
+        align-items: center;
         padding: 25px;
     }
     &::before,
@@ -236,6 +237,8 @@
     @include responsive-style($breakpoint-sp) {
         width: calc((129 / 375) * 100vw);
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
 }
 .p-condition__gift-text{
@@ -278,7 +281,7 @@
     }
 }
 .p-steps__item{
-    width: 640px;
+    width: calc(100% - 64px);
     margin: 0 auto;
     @include responsive-style($breakpoint-sp) {
         width: 65.334vw;

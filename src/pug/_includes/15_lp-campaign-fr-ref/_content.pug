@@ -41,11 +41,11 @@ include _variables
               img(src=ImgConditionGift alt="GIFT CARD")
             p.p-condition__gift-text
               | 上記条件を満たした月の月末までに、それぞれの登録
-              br
+              br.u-br-pc
               | メールアドレス宛に
               span.p-condition__gift-text-point 図書カードネットギフト1500円分
               | を
-              br
+              br.u-br-pc
               | お届けします。
     .p-item
       h2.p-item__title
@@ -125,16 +125,24 @@ include _variables
         .p-faq
           .p-faq__list
             .p-faq__item
-              .p-faq__header
-                .p-faq__label Q
-                .p-faq__question 何人まで紹介できますか？
-              .p-faq__answer
+              h3.p-faq__header
+                span.p-faq__label Q
+                span.p-faq__question 何人まで紹介できますか？
+              p.p-faq__answer
                 | 制限はありません。お友だち一人につき 1 回ずつ申請していただければ、何人でもご紹介いただけます。
             .p-faq__item
-              .p-faq__header
-                .p-faq__label Q
-                .p-faq__question 自分が受け取る特典の上限額はありますか？
-              .p-faq__answer
+              h3.p-faq__header
+                span.p-faq__label Q
+                span.p-faq__question 自分が受け取る特典の上限額はありますか？
+              p.p-faq__answer
                 | 現在のところ上限は設けていません。紹介 1 人につき 1,500 円分の図書カードネットギフトを、条件達成した人数分お受け取りいただけます。
                 br.u-br-sp
                 | たとえば 3 人紹介してそれぞれのお友だちが2ヶ月受講継続した場合、合計 4,500 円分受け取れます。
+  .l-footer
+    .l-footer__menu
+      a(href=UrlPrivacy target="_blank").l-footer__link プライバシーポリシー
+      a(href=UrlCompany target="_blank").l-footer__link 会社概要
+      a(href=UrlLegal target="_blank").l-footer__link 特定商取引に基づく表記
+    p.l-footer__logo
+      img(src=ImgLogoWaoMiraiWhite)
+    p.l-footer__copy &copy; ワオ・コーポレーション All rights reserved.

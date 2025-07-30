@@ -4,6 +4,12 @@
 $font-quicksand: "Quicksand", sans-serif;
 
 // fontsize
+@mixin font-size-pc10 {
+  font-size: 10px;
+}
+@mixin font-size-pc14 {
+  font-size: 14px;
+}
 @mixin font-size-pc16 {
   font-size: 16px;
 }
