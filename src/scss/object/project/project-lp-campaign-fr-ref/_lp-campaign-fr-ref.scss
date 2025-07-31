@@ -77,9 +77,9 @@
     }
 }
 .p-item__contents{
-    padding: 58px 40px 40px;
+    padding: 58px 40px 58px;
     @include responsive-style($breakpoint-sp) {
-        padding: 49px 19px 25px;
+        padding: 49px 19px 49px;
     }
 }
 .p-item__title{
@@ -253,6 +253,7 @@
 .p-condition__gift-text-point{
     margin: 0 5px;
     background: $cl-yellow;
+    font-weight: bold;
 }
 
 // 具体的な手順
@@ -291,7 +292,7 @@
     border-top: 1px solid $cl-gray-light;
 }
 .p-steps__item-content{
-    padding: 29px 0;
+    padding: 45px 0;
     display: flex;
     justify-content: space-between;
     @include responsive-style($breakpoint-sp) {

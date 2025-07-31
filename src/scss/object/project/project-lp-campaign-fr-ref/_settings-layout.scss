@@ -41,14 +41,14 @@ a{
     width: $width-contents-pc;
     max-width: $max-width-contents;
     background: $cl-gray-dark;
-    margin: 90px auto 0;
+    margin: 150px auto 0;
     padding: 85px 0 28px;
     border-radius: $border-radius-large $border-radius-large 0 0;
     font-weight: 400;
     @include responsive-style($breakpoint-sp) {
         width: 100%;
         max-width: none;
-        margin-top: 45px;
+        margin-top: 90px;
         padding: 90px 0 20px;
         border-radius: $border-radius-semilarge $border-radius-semilarge 0 0;
     }
