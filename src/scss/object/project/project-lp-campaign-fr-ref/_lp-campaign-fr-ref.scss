@@ -116,6 +116,7 @@
 .p-condition__list{
     display: flex;
     justify-content: space-between;
+    position: relative;
     @include responsive-style($breakpoint-sp) {
         display: block;
     }
@@ -138,7 +139,7 @@
         padding-top: 29px;
     }
 }
-.p-condition__item:nth-child(2){
+.p-condition__item:nth-child(3){
     width: calc((339 / 712) * 100%);
     padding-top: 11px;
     @include responsive-style(810px) {
@@ -147,7 +148,7 @@
     @include responsive-style($breakpoint-sp) {
         width: 100%;
         padding-top: 27px;
-        margin-top: 25px;
+        margin-top: 30px;
         height: calc((275 / 375) * 100vw);
     }
 }
@@ -182,10 +183,24 @@
         left: calc(50% - 163px);
         margin-top: 21px;
     }
-    .p-condition__item:nth-child(2) .p-condition__item-image{
+    .p-condition__item:nth-child(3) .p-condition__item-image{
         width: 339px;
         left: calc(50% - 169.5px);
         margin-top: 10px;
+    }
+}
+.p-condition__and{
+    position: absolute;
+    top: calc(50% - 43px);
+    left: calc(50% - 50px);
+    @include responsive-style($breakpoint-sp) {
+        width: 75px;
+        top: calc(50% - 22px);
+        left: calc(50% - 37.5px);
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
 }
 .p-condition__gift{

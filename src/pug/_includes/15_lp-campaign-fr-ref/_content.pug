@@ -15,8 +15,8 @@ include _variables
         | キャンペーン条件
       .p-item__contents
         .p-condition
-          ul.p-condition__list
-            li.p-condition__item  
+          .p-condition__list
+            .p-condition__item  
               p.p-condition__item-title01
                 | 紹介された人が
                 br
@@ -27,7 +27,9 @@ include _variables
                 picture
                   source(srcset=ImgCondition01Sp media=BreakpointSp)
                   img(src=ImgCondition01 alt="")
-            li.p-condition__item  
+            .p-condition__and
+              img(src=ImgConditionAnd alt="&")
+            .p-condition__item  
               p.p-condition__item-title01
                 | 紹介した人も上記時点で
               p.p-condition__item-title02
@@ -40,7 +42,7 @@ include _variables
             .p-condition__gift-image
               img(src=ImgConditionGift alt="GIFT CARD")
             p.p-condition__gift-text
-              | 上記条件を満たした月の月末までに、それぞれの登録
+              | 上記条件をいずれも満たした月の月末までに、それぞれの登録
               br.u-br-pc
               | メールアドレス宛に
               span.p-condition__gift-text-point 図書カードネットギフト1500円分
@@ -100,11 +102,10 @@ include _variables
                       h4.p-steps__item-title
                         | フォームから申請
                       p.p-steps__item-text
-                        | 自動返信メールに載っている 「友だち紹介申請フォーム」 を開き 紹介者の氏名・都道府県 を入力して送信。
-                        br.u-br-sp
-                        | 友だち紹介申請フォームは
+                        | 自動返信メールに記載している、または
                         a.p-steps__item-link(href=UrlForm target="_blank")
                          | こちら
+                        | の「友だち紹介申請フォーム」を開き 紹介者の氏名・都道府県 を入力して送信。
                   .p-steps__item-image.p-steps__item-image--0202
                     img(src=ImgSteps02_02 alt="")
               li.p-steps__item
