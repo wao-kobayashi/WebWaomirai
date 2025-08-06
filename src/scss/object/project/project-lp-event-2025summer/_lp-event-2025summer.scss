@@ -119,10 +119,45 @@
 .p-fv{
     background: $cl-fv-blue;
     overflow: hidden;
+   
 }
 .p-fv,
 .p-fv-main{
     position: relative;
+   
+}
+.p-fv-main{
+    perspective: 200px;
+}
+
+
+
+@keyframes dropIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-180px) rotateX(180deg);
+    }
+    60% {
+      opacity: 0.5;
+      transform: translateY(0px) rotateX(-0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) rotateX(0deg);
+    }
+  }
+.p-fv-main-tape{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: auto;
+    width: 60%;
+    animation: dropIn 1.2s ease-out forwards;   
+    img{
+        width: 100%;
+    }
 }
 .p-fv-main::before{
     content: "";
@@ -131,7 +166,7 @@
     background: url($bg-grid) left top / 20px auto;
     position: absolute;
     left: 7.8665%;
-    top: 40px;
+    top: 60px;
     z-index: 2;
     border-radius: $border-radius-bigplus;
     @include box-shadow-fv;
@@ -149,9 +184,12 @@
 .p-fv-main-title{
     width: 67.467%;
     margin: 0 auto -5px;
-    padding-top: 60px;
+    padding-top: 110px;
     position: relative;
     z-index: 3;
+    @include responsive-style(768px){
+        padding-top: 90px;
+    }
 }
 .p-fv-main-button{
     width: 53.6%;
@@ -159,6 +197,9 @@
     top: 77.3%;
     left: 22.3%;
     z-index: 10;
+    @include responsive-style(768px){
+        top: 71.3%;
+    }
 }
 .p-fv-target{
     @include font-size-m;
