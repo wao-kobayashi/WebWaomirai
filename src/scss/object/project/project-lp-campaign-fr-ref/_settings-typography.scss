@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700");
+
+// fontfamily
+$font-quicksand: "Quicksand", sans-serif;
+
+// fontsize
+@mixin font-size-pc10 {
+  font-size: 10px;
+}
+@mixin font-size-pc14 {
+  font-size: 14px;
+}
+@mixin font-size-pc16 {
+  font-size: 16px;
+}
+@mixin font-size-pc18 {
+  font-size: 18px;
+  @include responsive-style($breakpoint-sp) {
+      font-size: 16px;
+  }
+}
+@mixin font-size-pc20 {
+  font-size: 20px;
+   @include responsive-style($breakpoint-sp) {
+      font-size: 18px;
+  }
+}
+@mixin font-size-pc23 {
+  font-size: 23px;
+}
+@mixin font-size-pc25 {
+  font-size: 25px;
+  @include responsive-style($breakpoint-sp) {
+      font-size: 20px;
+  }
+}
+@mixin font-size-pc38 {
+  font-size: 38px;
+  @include responsive-style($breakpoint-sp) {
+      font-size: 30px;
+  }
+}
+
+// line-height
+$lineheight-none: 1;
+$lineheight-tight: 1.567;
+$lineheight-normal: 1.58;
+$lineheight-medium: 1.625;
+$lineheight-loose: 1.75;
+$lineheight-loosest: 1.7625;

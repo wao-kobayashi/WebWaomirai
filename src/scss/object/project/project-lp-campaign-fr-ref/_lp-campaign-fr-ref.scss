@@ -1,0 +1,450 @@
+// コンテナ
+.l-container{
+    background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2t9/1026513/1753779829RowICK5g/bg_fr_ref.png) left top / 556px auto $cl-background;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    @include responsive-style($breakpoint-sp) {
+       background: $cl-background;
+    }
+}
+
+// ファーストビュー
+.p-fv{
+    position: relative;
+    overflow: hidden;
+    @include responsive-style($breakpoint-sp) {
+        margin-bottom: -11px;
+    }
+}
+.p-fv::before{
+    content: "";
+    width: 2000px;
+    height: 516px;
+    background: url(https://go.waomirai.com/l/1026513/2025-07-29/hs2v3/1026513/1753768516VaNzEh02/confetti_fr_ref.png);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1000px);
+    @include responsive-style($breakpoint-sp) {
+        display: none;
+    }
+}
+.p-fv__logo{
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    @include responsive-style($breakpoint-sp) {
+        width: 168px;
+        position: absolute;
+        top: 22px;
+        left: calc(50% - 84px);
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+    }
+}
+.p-fv__title{
+    @include width-contents;
+    padding-top: 25px;
+    position: relative;
+    z-index: 1;
+    @include responsive-style($breakpoint-sp) {
+        width: 99.734%;
+        max-width: none;
+    }
+}
+
+// ボディー部分
+.l-body{
+    @include width-contents;
+}
+
+// アイテム
+.p-item{
+    @include border-base;
+    background: $cl-white;
+    margin-top: 98px;
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 67px;
+    }
+    @include min-responsive-style($min-breakpoint-pc) {
+        &:nth-child(2){
+            margin-top: 126px;
+        }
+    }
+}
+.p-item__contents{
+    padding: 58px 40px 58px;
+    @include responsive-style($breakpoint-sp) {
+        padding: 49px 19px 49px;
+    }
+}
+.p-item__title{
+    border-radius: $border-radius-middle;
+    background: $cl-wao-green;
+    @include font-size-pc25;
+    height: 55px;
+    color: $cl-white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    top: -25px;
+    padding: 0 27px;
+    @include responsive-style($breakpoint-sp) {
+        height: 49px;
+        padding: 0 31px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        border-radius: $border-radius-small;
+    }
+}
+
+// キャンペーン条件
+.p-condition{
+    padding-bottom: 105px;
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        padding-bottom: 0;
+    }
+}
+.p-condition__list{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        display: block;
+    }
+}
+.p-condition__item{
+    width: calc((326 / 712) * 100%);
+    height: 329px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include border-base;
+    overflow: hidden;
+    @include responsive-style(900px) {
+        width: 46%;
+    }
+    @include responsive-style($breakpoint-sp) {
+        display: block;
+        width: 100%;
+        height: calc((307 / 375) * 100vw);
+        padding-top: 29px;
+    }
+}
+.p-condition__item:nth-child(3){
+    width: calc((339 / 712) * 100%);
+    padding-top: 11px;
+    @include responsive-style(810px) {
+        width: 51%;
+    }
+    @include responsive-style($breakpoint-sp) {
+        width: 100%;
+        padding-top: 27px;
+        margin-top: 30px;
+        height: calc((275 / 375) * 100vw);
+    }
+}
+.p-condition__item-title01{
+    text-align: center;
+    @include font-size-pc16;
+    line-height: $lineheight-normal;
+    color: $cl-wao-green;
+    text-align: center;
+}
+.p-condition__item-title02{
+    text-align: center;
+    @include font-size-pc25;
+    font-weight: bold;
+    color: $cl-wao-green;
+    text-align: center;
+}
+.p-condition__item-image{
+    position: relative;
+    @include responsive-style($breakpoint-sp) {
+        width: 101.695%;
+        left: -0.8475%;
+        margin-top: 10px;
+        img{
+            width: 100%;
+        }
+    }
+}
+@include min-responsive-style($min-breakpoint-pc) {
+    .p-condition__item:nth-child(1) .p-condition__item-image{
+        width: 326px;
+        left: calc(50% - 163px);
+        margin-top: 21px;
+    }
+    .p-condition__item:nth-child(3) .p-condition__item-image{
+        width: 339px;
+        left: calc(50% - 169.5px);
+        margin-top: 10px;
+    }
+}
+.p-condition__and{
+    position: absolute;
+    top: calc(50% - 43px);
+    left: calc(50% - 50px);
+    @include responsive-style($breakpoint-sp) {
+        width: 75px;
+        top: calc(50% - 22px);
+        left: calc(50% - 37.5px);
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.p-condition__gift{
+    background: #fff;
+    @include border-base;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -72px;
+    padding: 15px 20px;
+    @include responsive-style($breakpoint-sp) {
+        position: relative;
+        bottom: 0;
+        margin-top: 44px;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+    }
+    &::before,
+    &::after{
+        content: "";
+        width: 32px;
+        height: 31px;
+        background: $cl-wao-green;
+        position: absolute;
+        top: -31px;
+        left: 21px;
+        clip-path: polygon(0 100%, 50% 0, 100% 100%);
+        @include responsive-style($breakpoint-sp) {
+            width: 20px;
+            height: 18px;
+            top: -18px;
+            left: 24px;
+        }
+    }
+    &::after{
+        background: $cl-white;
+        transform: scale(0.75, 0.742);
+        transform-origin: center bottom;
+        @include responsive-style($breakpoint-sp) {
+            transform: scale(0.7, 0.667)
+        }
+    }
+}
+.p-condition__gift-image{
+    width: 86px;
+    margin-right: 22px;
+    @include responsive-style($breakpoint-sp) {
+        width: calc((129 / 375) * 100vw);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+.p-condition__gift-text{
+    @include font-size-pc18;
+    line-height: $lineheight-tight;
+    color: $cl-wao-green;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 15px;
+        line-height: $lineheight-loose;
+    }
+}
+.p-condition__gift-text-point{
+    margin: 0 5px;
+    background: $cl-yellow;
+    font-weight: bold;
+}
+
+// 具体的な手順
+.p-steps__group{
+    @include border-base;
+    overflow: hidden;
+    &:nth-child(n+2){
+        margin-top: 45px;
+        @include responsive-style($breakpoint-sp) {
+            margin-top: 30px;
+        }
+    }
+}
+.p-steps__group-title{
+    @include font-size-pc20;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    background: $cl-wao-green-light;
+    color: $cl-wao-green;
+    padding-left: 30px;
+    @include responsive-style($breakpoint-sp) {
+        height: 57px;
+        justify-content: center;
+        padding-left: 0;
+    }
+}
+.p-steps__item{
+    width: calc(100% - 64px);
+    margin: 0 auto;
+    @include responsive-style($breakpoint-sp) {
+        width: 65.334vw;
+    }
+}
+.p-steps__item:nth-child(n+2){
+    border-top: 1px solid $cl-gray-light;
+}
+.p-steps__item-content{
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+    @include responsive-style($breakpoint-sp) {
+        display: block;
+        padding: 30px 0 42px;
+    }
+}
+@include responsive-style($breakpoint-sp) {
+    .p-steps__item:nth-child(n+2){
+        padding-top: 15px;
+    }
+}
+.p-steps__item-image{
+    width: 140px;
+    flex-shrink: 0;
+    @include responsive-style($breakpoint-sp) {
+        width: calc((162 / 375) * 100vw);
+        margin: 20px auto 0;
+        display: flex;
+        justify-content: center;
+    }
+    &.p-steps__item-image--0201{
+        width: 127px;
+        @include responsive-style($breakpoint-sp) {
+            width: calc((138 / 375) * 100vw);
+        }
+    }
+    &.p-steps__item-image--0202{
+        width: 113px;
+        @include responsive-style($breakpoint-sp) {
+            width: calc((112 / 375) * 100vw);
+        }
+    }
+    &.p-steps__item-image--0203{
+        width: 126px;
+        @include responsive-style($breakpoint-sp) {
+            width: calc((123 / 375) * 100vw);
+        }
+    }
+}
+.p-steps__item-header{
+    display: flex;
+    padding-right: 30px;
+    @include responsive-style($breakpoint-sp) {
+        display: block;
+        padding-right: 0;
+    }
+}
+.p-steps__item-number{
+    width: 37px;
+    height: 37px;
+    border: 3px solid $cl-wao-green;
+    color: $cl-wao-green;
+    border-radius: 18.5px;
+    @include font-size-pc23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-quicksand;
+    margin-right: 25px;
+    flex-shrink: 0;
+    font-weight: 600;
+    @include responsive-style($breakpoint-sp) {
+        margin: 0 auto;
+    }
+}
+.p-steps__item-title{
+    @include font-size-pc20;
+    color: $cl-wao-green;
+    font-weight: bold;
+    line-height: $lineheight-none;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 12px;
+        line-height: $lineheight-tight;
+        text-align: center;
+    }
+}
+.p-steps__item-text{
+    @include font-size-pc16;
+    line-height: $lineheight-medium;
+    color: $cl-wao-green;
+    margin-top: 11px;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 9px;
+        line-height: $lineheight-loosest;
+    }
+}
+.p-steps__item-link{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+// FAQ
+.p-faq{
+    color: $cl-wao-green;
+    margin: -5px 0 -15px;
+    @include responsive-style($breakpoint-sp) {
+        margin: 5px 0;
+    }
+}
+.p-faq__header{
+    display: flex;
+    align-items: center;
+    @include responsive-style($breakpoint-sp) {
+        align-items: flex-start;
+    }
+}
+.p-faq__item:nth-child(n+2){
+    border-top: 1px solid $cl-gray-light;
+    margin-top: 25px;
+    padding-top: 15px;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+}
+.p-faq__label{
+    @include font-size-pc38;
+    font-family: $font-quicksand;
+    font-weight: 600;
+    margin-right: 16px;
+    @include responsive-style($breakpoint-sp) {
+        line-height: $lineheight-none;
+    }
+}
+.p-faq__question{
+    @include font-size-pc20;
+    font-weight: bold;
+    @include responsive-style($breakpoint-sp) {
+        padding-top: 3px;
+    }
+}
+.p-faq__answer{
+    @include font-size-pc16;
+    line-height: $lineheight-medium;
+    margin-top: 5px;
+    @include responsive-style($breakpoint-sp) {
+        margin-top: 8px;
+    }
+}

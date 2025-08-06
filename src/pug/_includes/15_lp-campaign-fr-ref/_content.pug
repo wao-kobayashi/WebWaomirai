@@ -1,0 +1,151 @@
+//- 変数定義
+include _variables
+
+.l-container
+  .p-fv
+    p.p-fv__logo
+      img(src=ImgLogoWaoMirai alt="ワオ未来塾")
+    h1.p-fv__title
+      picture
+        source(srcset=ImgFvSp media=BreakpointSp)
+        img(src=ImgFv alt="友だち紹介キャンペーン 友だちを紹介して2ケ月継続すると図書カードプレゼント")
+  .l-body
+    .p-item
+      h2.p-item__title
+        | キャンペーン条件
+      .p-item__contents
+        .p-condition
+          .p-condition__list
+            .p-condition__item  
+              p.p-condition__item-title01
+                | 紹介された人が
+                br
+                | ワオ未来塾の講座を入会月含め
+              p.p-condition__item-title02
+                | 2ヶ月以上受講継続
+              .p-condition__item-image
+                picture
+                  source(srcset=ImgCondition01Sp media=BreakpointSp)
+                  img(src=ImgCondition01 alt="")
+            .p-condition__and
+              img(src=ImgConditionAnd alt="&")
+            .p-condition__item  
+              p.p-condition__item-title01
+                | 紹介した人も上記時点で
+              p.p-condition__item-title02
+                | 受講を継続していること
+              .p-condition__item-image
+                picture
+                  source(srcset=ImgCondition02Sp media=BreakpointSp)
+                  img(src=ImgCondition02 alt="")
+          .p-condition__gift
+            .p-condition__gift-image
+              img(src=ImgConditionGift alt="GIFT CARD")
+            p.p-condition__gift-text
+              | 上記条件をいずれも満たした月の月末までに、それぞれの登録
+              br.u-br-pc
+              | メールアドレス宛に
+              span.p-condition__gift-text-point 図書カードネットギフト1500円分
+              | を
+              br.u-br-pc
+              | お届けします。
+    .p-item
+      h2.p-item__title
+        | 具体的な手順
+      .p-item__contents
+        .p-steps
+          .p-steps__group
+            h3.p-steps__group-title 
+              | 紹介者(あなた)がやること
+            ol.p-steps__list
+              li.p-steps__item
+                .p-steps__item-content
+                  .p-steps__item-header
+                    p.p-steps__item-number 1
+                    .p-steps__item-main
+                      h4.p-steps__item-title
+                        | 友だちにキャンペーンの
+                        br.u-br-sp
+                        | ことを紹介
+                      p.p-steps__item-text
+                        |紹介者はお友だちにご自身の「氏名（ふりがな）」
+                        br.u-br-pc
+                        |「お住まいの都道府県」をお伝えしてください。
+                        br
+                        |（申請フォームの入力必要事項となります）
+                  .p-steps__item-image
+                    img(src=ImgSteps01 alt="")
+          .p-steps__group
+            h3.p-steps__group-title 
+              | 紹介された側(友だち)がやること
+            ol.p-steps__list
+              li.p-steps__item
+                .p-steps__item-content
+                  .p-steps__item-header
+                    p.p-steps__item-number 1
+                    .p-steps__item-main
+                      h4.p-steps__item-title
+                        | まずは申し込み
+                      p.p-steps__item-text
+                        | 会員登録→学習サイトで有料講座に申込。
+                        br
+                        | 学習サイトは
+                        a.p-steps__item-link(href=UrlSite target="_blank")
+                         | こちら
+                        | 。
+                  .p-steps__item-image.p-steps__item-image--0201
+                    img(src=ImgSteps02_01 alt="")
+              li.p-steps__item
+                .p-steps__item-content
+                  .p-steps__item-header
+                    p.p-steps__item-number 2
+                    .p-steps__item-main
+                      h4.p-steps__item-title
+                        | フォームから申請
+                      p.p-steps__item-text
+                        | 自動返信メールに記載している、または
+                        a.p-steps__item-link(href=UrlForm target="_blank")
+                         | こちら
+                        | の「友だち紹介申請フォーム」を開き、紹介者の氏名・都道府県を入力して送信。
+                  .p-steps__item-image.p-steps__item-image--0202
+                    img(src=ImgSteps02_02 alt="")
+              li.p-steps__item
+                .p-steps__item-content
+                  .p-steps__item-header
+                    p.p-steps__item-number 3
+                    .p-steps__item-main
+                      h4.p-steps__item-title
+                        | 2ヶ月継続で条件達成
+                      p.p-steps__item-text
+                        | お二人にメールで図書カード（デジタルギフト）を贈呈します。
+                  .p-steps__item-image.p-steps__item-image--0203
+                    img(src=ImgSteps02_03 alt="")
+    .p-item
+      h2.p-item__title
+        | FAQ
+      .p-item__contents
+        .p-faq
+          .p-faq__list
+            .p-faq__item
+              h3.p-faq__header
+                span.p-faq__label Q
+                span.p-faq__question 何人まで紹介できますか？
+              p.p-faq__answer
+                | 制限はありません。お友だち一人につき1回ずつ申請していただければ、何人でもご紹介いただけます。
+            .p-faq__item
+              h3.p-faq__header
+                span.p-faq__label Q
+                span.p-faq__question 自分が受け取る特典の上限額はありますか？
+              p.p-faq__answer
+                | 現在のところ上限は設けていません。紹介1人につき1,500円分の図書カードネットギフトを、条件達成した人数分お受け取りいただけます。
+                br.u-br-sp
+                br.u-br-sp
+                | たとえば3人紹介してそれぞれのお友だちが2ヶ月受講継続した場合、合計4,500円分受け取れます。
+  .l-footer
+    .l-footer__menu
+      a(href=UrlPrivacy target="_blank").l-footer__link プライバシーポリシー
+      a(href=UrlCompany target="_blank").l-footer__link 会社概要
+      a(href=UrlLegal target="_blank").l-footer__link 特定商取引に基づく表記
+    p.l-footer__logo
+      img(src=ImgLogoWaoMiraiWhite alt="ワオ未来塾")
+    p.l-footer__copy &copy; ワオ・コーポレーション All rights reserved.
