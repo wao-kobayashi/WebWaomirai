@@ -2,21 +2,21 @@
 - var ImgOgp = 'https://go.waomirai.com/l/1026513/2025-06-08/hnztt/1026513/17494353353OfqyjL4/ogp_lp_week_free.png'
 
 //- 日付
-- const daysCount = 4
-- const weekDays = ['日', '月', '火', '水', '木', '金', '土']
+- var daysCount = 4
+- var weekDays = ['日', '月', '火', '水', '木', '金', '土']
 
-- const textDays = []
+- var textDays = []
 
 - for (let i = 0; i < daysCount; i++)
-  - const date = new Date(startDate)
+  - var date = new Date(startDate)
   - date.setDate(startDate.getDate() + i)
-  - const month = date.getMonth() + 1
-  - const day = date.getDate()
-  - const dayOfWeek = weekDays[date.getDay()]
+  - var month = date.getMonth() + 1
+  - var day = date.getDate()
+  - var dayOfWeek = weekDays[date.getDay()]
   - textDays.push(`${month}/${day}(${dayOfWeek})`)
 
 //- 月のテキスト
-- const TextMonth = `${startDate.getMonth() + 1}月`
+- var TextMonth = `${startDate.getMonth() + 1}月`
 
 //- 期間のテキスト
 - var TextPeriod = textDays[0] + '～' + textDays[daysCount - 1];
