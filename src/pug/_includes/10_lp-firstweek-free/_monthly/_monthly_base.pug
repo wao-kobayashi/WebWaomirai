@@ -1,0 +1,165 @@
+//- OGPの画像（2025/8以降は毎月同じ画像）
+- var ImgOgp = 'https://go.waomirai.com/l/1026513/2025-06-08/hnztt/1026513/17494353353OfqyjL4/ogp_lp_week_free.png'
+
+//- 日付
+- const daysCount = 4
+- const weekDays = ['日', '月', '火', '水', '木', '金', '土']
+
+- const textDays = []
+
+- for (let i = 0; i < daysCount; i++)
+  - const date = new Date(startDate)
+  - date.setDate(startDate.getDate() + i)
+  - const month = date.getMonth() + 1
+  - const day = date.getDate()
+  - const dayOfWeek = weekDays[date.getDay()]
+  - textDays.push(`${month}/${day}(${dayOfWeek})`)
+
+//- 月のテキスト
+- const TextMonth = `${startDate.getMonth() + 1}月`
+
+//- 期間のテキスト
+- var TextPeriod = textDays[0] + '～' + textDays[daysCount - 1];
+
+//- 講座内容
+-
+  const courses = {
+    philosophy: [
+      {
+        id: "phililosophy-level1",
+        level: "レベル1",
+        recommend: "（小学3・4年生推奨）",
+        time01: textDays[0] + "｜18:30～19:15",
+        time02: textDays[3] + "｜17:30～18:15",
+        img: imgPhLv1Week1,
+        title01: courses_text['philosophy'][0]['title01'],
+        title02: courses_text['philosophy'][0]['title02'],
+        text: courses_text['philosophy'][0]['text'],
+      },
+      {
+        id: "phililosophy-level2",
+        level: "レベル2",
+        recommend: "（小学5・6年生推奨）",
+        time01: textDays[0] + "｜17:30～18:15",
+        time02: textDays[3] + "｜18:30～19:15",
+        img: imgPhLv2Week1,
+        title01: courses_text['philosophy'][1]['title01'],
+        title02: courses_text['philosophy'][1]['title02'],
+        text: courses_text['philosophy'][1]['text'],
+      },
+      {
+        id: "phililosophy-level3",
+        level: "レベル3",
+        recommend: "（中1・2・3年生推奨）",
+        time01: textDays[0] + "｜20:30～21:15",
+        time02: textDays[3] + "｜19:30～20:15",
+        img: imgPhLv3Week1,
+        title01: courses_text['philosophy'][2]['title01'],
+        title02: courses_text['philosophy'][2]['title02'],
+        text: courses_text['philosophy'][2]['text'],
+      },
+      {
+        id: "phililosophy-level4",
+        level: "レベル4",
+        recommend: "（高1・2・3年生推奨）",
+        time01: textDays[0] + "｜19:30～20:15",
+        time02: textDays[3] + "｜20:30～21:15",
+        img: imgPhLv4Week1,
+        title01: courses_text['philosophy'][3]['title01'],
+        title02: courses_text['philosophy'][3]['title02'],
+        text: courses_text['philosophy'][3]['text'],
+      }
+    ],
+    science: [
+      {
+        id: "science-level1",
+        level: "レベル1",
+        recommend: "（小学3・4年生推奨）",
+        time01: textDays[1] + "｜17:30～18:15",
+        time02: textDays[3] + "｜18:30～19:15",
+        img: imgScLv1Week1,
+        title01: courses_text['science'][0]['title01'],
+        title02: courses_text['science'][0]['title02'],
+        text: courses_text['science'][0]['text'],
+      },
+      {
+        id: "science-level2",
+        level: "レベル2",
+        recommend: "（小学5・6年生推奨）",
+        time01: textDays[1] + "｜18:30～19:15",
+        time02: textDays[3] + "｜17:30～18:15",
+        img: imgScLv2Week1,
+        title01: courses_text['science'][1]['title01'],
+        title02: courses_text['science'][1]['title02'],
+        text: courses_text['science'][1]['text'],
+      },
+      {
+        id: "science-level3",
+        level: "レベル3",
+        recommend: "（中1・2・3年生推奨）",
+        time01: textDays[1] + "｜19:30～20:15",
+        time02: textDays[3] + "｜20:30～21:15",
+        img: imgScLv3Week1,
+        title01: courses_text['science'][2]['title01'],
+        title02: courses_text['science'][2]['title02'],
+        text: courses_text['science'][2]['text'],
+      },
+      {
+        id: "science-level4",
+        level: "レベル4",
+        recommend: "（高1・2・3年生推奨）",
+        time01: textDays[1] + "｜20:30～21:15",
+        time02: textDays[3] + "｜19:30～20:15",
+        img: imgScLv4Week1,
+        title01: courses_text['science'][3]['title01'],
+        title02: courses_text['science'][3]['title02'],
+        text: courses_text['science'][3]['text'],
+      }
+    ],
+    economy: [
+      {
+        id: "economy-level1",
+        level: "レベル1",
+        recommend: "（小学3・4年生推奨）",
+        time01: textDays[1] + "｜18:30～19:15",
+        time02: textDays[2] + "｜17:30～18:15",
+        img: imgEcLv1Week1,
+        title01: courses_text['economy'][0]['title01'],
+        title02: courses_text['economy'][0]['title02'],
+        text: courses_text['economy'][0]['text'],
+      },
+      {
+        id: "economy-level2",
+        level: "レベル2",
+        recommend: "（小学5・6年生推奨）",
+        time01: textDays[1] + "｜17:30～18:15",
+        time02: textDays[2] + "｜18:30～19:15",
+        img: imgEcLv2Week1,
+        title01: courses_text['economy'][1]['title01'],
+        title02: courses_text['economy'][1]['title02'],
+        text: courses_text['economy'][1]['text'],
+      },
+      {
+        id: "economy-level3",
+        level: "レベル3",
+        recommend: "（中1・2・3年生推奨）",
+        time01: textDays[1] + "｜20:30～21:15",
+        time02: textDays[2] + "｜19:30～20:15",
+        img: imgEcLv3Week1,
+        title01: courses_text['economy'][2]['title01'],
+        title02: courses_text['economy'][2]['title02'],
+        text: courses_text['economy'][2]['text'],
+      },
+      {
+        id: "economy-level4",
+        level: "レベル4",
+        recommend: "（高1・2・3年生推奨）",
+        time01: textDays[1] + "｜19:30～20:15",
+        time02: textDays[2] + "｜20:30～21:15",
+        img: imgEcLv4Week1,
+        title01: courses_text['economy'][3]['title01'],
+        title02: courses_text['economy'][3]['title02'],
+        text: courses_text['economy'][3]['text'],
+      }
+    ]
+  }
