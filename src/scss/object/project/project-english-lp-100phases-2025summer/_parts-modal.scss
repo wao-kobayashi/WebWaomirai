@@ -102,6 +102,11 @@ $z-indexes: (
           @include font-size-m;
           text-align: center;
         }
+        &-text-close {
+          @include font-size-l;
+          text-align: center;
+          padding: 60px 0 30px;
+        }
       }
       &-close {
         text-align: center;
