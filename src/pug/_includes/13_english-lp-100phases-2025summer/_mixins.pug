@@ -9,6 +9,19 @@ mixin modal-vimeo
             </iframe>
         .modal-vimeo-close.modal-close 
              |閉じる
+mixin modal-close
+    .modal
+        .modal-wrapper 
+            .modal-wrapper-close 
+                .modal-wrapper-close-icon.modal-close
+            .modal-wrapper-content
+                    .modal-wrapper-content-main-text-close(style="text-align: center;")
+                        |A/B日程ともに
+                        br
+                        |募集終了しました
+            .modal-wrapper-content-close.modal-close 
+                |閉じる
+    .bg-modal
 mixin modal
     .modal(style='display:none;')
         .modal-wrapper 
