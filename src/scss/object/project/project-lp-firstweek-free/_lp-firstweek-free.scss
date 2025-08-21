@@ -299,6 +299,26 @@ header {
   }
 }
 .lp-firstweek-free-fv-details {
+  &.lp-firstweek-free-fv-details-2025SepOct{
+    padding: 0px 40px 60px;
+    height: 580px;
+    @include responsive-style(768px) {
+      padding: 0;
+      height: auto;
+    }
+    .lp-firstweek-free-fv-details-cta {
+      margin-bottom: 45px;
+      padding-bottom: 45px;
+      border-bottom: 3px dashed $cl-events-time-glay;
+      @include responsive-style(768px) {
+        border-bottom:none;
+      }
+      .c-btn-cta-main a{
+        background:  $cl-lp-cvred;
+      }
+    }
+  }
+  
   position: absolute;
   top: calc(100% - 70px);
   left: 0;
@@ -326,6 +346,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+  }
+}
+.lp-firstweek-free-fv-details-head{
+  margin: -45px 0 0;
+ 
+}
+.lp-firstweek-free-fv-details-head-sp{
+  margin: 20px -10px 0;
+}
+.lp-firstweek-free-fv-details-head-badge{
+  position: absolute;
+  right:15px;
+  top:15px;
+  img{
+    width: 120px;
   }
 }
 .lp-firstweek-free-fv-details-list {
@@ -377,6 +412,18 @@ header {
   padding-top: 348px;
   @include responsive-style(768px) {
     padding-top: 80px;
+  }
+  &.lp-firstweek-free-intro-2025SepOct{
+    padding-top: 588px;
+    @include responsive-style(768px) {
+      padding-top: 80px;
+    }
+    &::before {
+      @include responsive-style(768px) {
+        height: 1275px;
+        top: -222px;
+      }
+    }
   }
   &::before {
     content: "";

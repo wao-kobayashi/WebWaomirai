@@ -47,7 +47,6 @@ html
           img(src=ImgLogo)
         .header-right.pcimage
           +lineEntryButton('LINE公式アカウントから申込')
-    
     //- ファーストビュー
     section.lp-firstweek-free-fv
           .lp-firstweek-free-fv-main
@@ -84,17 +83,34 @@ html
               img(src=ImgFvDeco03Sp)
             .lp-firstweek-free-fv-main-deco04-sp
               img(src=ImgFvDeco04Sp)
-          .lp-firstweek-free-fv-details
-            .lp-firstweek-free-fv-details-list
-              p.lp-firstweek-free-fv-details-list-item
-                |対象：小３〜高校生
-              p.lp-firstweek-free-fv-details-list-item
-                |期間：#{TextPeriod}
-            .lp-firstweek-free-fv-details-cta
-              .c-btn-cta-main
-                +lineEntryButton('LINEで簡単申込 >')
+          if Campaign === '2025SepOct'
+             .lp-firstweek-free-fv-details.lp-firstweek-free-fv-details-2025SepOct
+                .lp-firstweek-free-fv-details-head-badge.pcimage
+                  img(src=ImgFvCamaign2025SepOctBadge)
+                .lp-firstweek-free-fv-details-head.pcimage
+                  img(src=ImgFvCamaign2025SepOct)
+                .lp-firstweek-free-fv-details-head-sp.spimage
+                  img(src=ImgFvCamaign2025SepOctSp)
+                .lp-firstweek-free-fv-details-cta
+                  .c-btn-cta-main
+                    +lineEntryButton('LINEで簡単申込 >')
+                .lp-firstweek-free-fv-details-list
+                  p.lp-firstweek-free-fv-details-list-item
+                    |対象：小３〜高校生
+                  p.lp-firstweek-free-fv-details-list-item
+                    |期間：#{TextPeriod}
+          else
+             .lp-firstweek-free-fv-details
+                .lp-firstweek-free-fv-details-list
+                  p.lp-firstweek-free-fv-details-list-item
+                    |対象：小３〜高校生
+                  p.lp-firstweek-free-fv-details-list-item
+                    |期間：#{TextPeriod}
+                .lp-firstweek-free-fv-details-cta
+                  .c-btn-cta-main
+                    +lineEntryButton('LINEで簡単申込 >')
     //- イントロ
-    section.lp-firstweek-free-intro 
+    section.lp-firstweek-free-intro(class=Campaign === '2025SepOct' ? 'lp-firstweek-free-intro-2025SepOct' : '') 
           .lp-firstweek-free-intro-contents
             .lp-firstweek-free-intro-contents-image
               img(src=ImgIntro)
