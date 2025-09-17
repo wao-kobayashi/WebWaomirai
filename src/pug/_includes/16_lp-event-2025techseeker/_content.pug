@@ -3,24 +3,39 @@ include _variables
 
 //- ミックスイン
 include _mixins
-p|い
-.l-pc-logo
-  .l-pc-wrapper
-    .l-pc-logo-img
-      //- img(src=ImgLogo alt="夏休み自由研究DAY 2025")
+.l-pc-logo-header
+  .l-pc-logo-header-waomirai 
+    img(src=ImgLogoWaoMirai)
+  .l-pc-logo-header-techseeker 
+    img(src=ImgLogoTechseeker alt="TechSeeker")
+
+.l-pc-logo-main
+  
+  .l-pc-logo-main-img 
+    img(src=ImgLogoSolarpower)
+
+.l-pc-bg-solarpower
+  .l-pc-bg-solarpower-crowds 
+     .l-pc-bg-solarpower-crowds-01 
+       img(src=ImgPcbgBlueParts01)
+     .l-pc-bg-solarpower-crowds-02
+       img(src=ImgPcbgBlueParts01)
+  .l-pc-bg-solarpower-ground
+   .l-pc-bg-solarpower-ground-img
+    .l-pc-bg-solarpower-ground-img-01
+      img(src=ImgPcbgGreenParts01)
+    .l-pc-bg-solarpower-ground-img-02
+      img(src=ImgPcbgGreenParts02)
+    .l-pc-bg-solarpower-ground-img-03
+      img(src=ImgPcbgGreenParts03)
+   .l-pc-bg-solarpower-ground-bg
+     img(src=ImgBgPcGreen)
+.l-pc-bg-halloween(style='display:none;') 
+
 .l-main
   include _content-main.pug
-.l-pc-menu
-  .l-pc-wrapper
-    .l-pc-menu-wrapper
-      .l-pc-menu-title
-        p.l-pc-menu-title-eng
-          |あINDEX
-        p 
-          img(src=ImgImgFv)
-        p.l-pc-menu-title-jpn
-          |オンライン授業一覧
-.l-btn-cv
-  a.c-btn-cv.js-line-trigger(href=UrlLine)
-    |LINEで簡単申込
+
+//- .l-btn-cv
+//-   a.c-btn-cv.js-line-trigger(href=UrlLine)
+//-     |LINEで簡単申込
 +modal
