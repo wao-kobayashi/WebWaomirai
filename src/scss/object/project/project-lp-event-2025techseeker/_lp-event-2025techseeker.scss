@@ -2,6 +2,41 @@
 // メイン部分
 //////////////////////
 
+//base.scssを読み込まないのでこちらで定義
+@media screen and (max-width: 3000px) and (min-width: 768px) {
+  .spimage {
+    display: none !important;
+  }
+  .pcimage {
+    display: inherit;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .spimage {
+    display: inherit;
+  }
+  .pcimage {
+    display: none !important;
+  }
+}
+
+//////////////////////
+// ストライプ
+//////////////////////
+
+@function stripe-bg($color1, $color2, $stripe-width: 20px, $angle: 90deg) {
+  @return repeating-linear-gradient(
+    $angle,
+    $color1,
+    $color1 $stripe-width,
+    $color2 $stripe-width,
+    $color2 ($stripe-width * 2)
+  );
+}
+
+// 使用例
+
 // 共通CVボタン（赤）
 .c-btn-cv {
   width: 87.537%;
@@ -44,66 +79,86 @@
   }
 }
 
-// 共通スライダー
-.p-slider {
-  margin-top: 62px;
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 182px;
-  overflow: hidden;
-  aspect-ratio: 450 / 182; // 読込前のページ内リンクのずれ防止
-  &::before,
-  &::after {
-    content: "";
-    width: 100%;
-    height: 29px;
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq6gx/1026513/1750903759fvnH7HY7/bg_slide_lp_sum25.png)
-      center top / cover no-repeat;
-    @include responsive-style($breakpoint-sp) {
-      height: 6.4vw;
+.p-fv {
+  background: stripe-bg(
+    $cl-halloween-stripe-bg01,
+    $cl-halloween-stripe-bg02,
+    20px,
+    90deg
+  );
+  @include min-responsive-style($breakpoint-tb) {
+    padding: 40px 0 0;
+  }
+  .p-fv-header {
+    padding: 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .p-fv-header-waomirai img {
+      height: 15px;
+    }
+    .p-fv-header-techseeker img {
+      height: 40px;
     }
   }
-  &::before {
-    top: -1px;
+  //outer
+  .p-fv-main-outer {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    .p-fv-main-outer-logo {
+      margin: 340px 0 10px;
+      @include responsive-style($breakpoint-tb) {
+        margin: 260px 0 10px;
+      }
+    }
+    .p-fv-main-outer-date {
+      font-weight: normal;
+      color: $cl-white;
+      line-height: $lineheight-normal;
+    }
+    .p-fv-main-outer-lantern {
+      width: 87%;
+      margin: -4px 0 0;
+    }
   }
-  &::after {
-    bottom: -1px;
-    transform: rotate(180deg);
-  }
-  &.is-yellow::after {
-    background-image: url(https://go.waomirai.com/l/1026513/2025-06-26/hqdqb/1026513/17509884317nhZH1YP/bg_slide_yellow_lp_sum25.png);
-    transform: none;
-  }
-  img {
-    width: auto;
-    max-width: none;
-    height: 100%;
-  }
-  &.is-loaded img:first-child {
-    animation: loop 50s -25s linear infinite;
-  }
-  &.is-loaded img + img {
-    animation: loop2 50s linear infinite;
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-@keyframes loop2 {
-  0% {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-200%);
+  //inner
+  .p-fv-main-inner {
+    position: relative;
+    width: calc(100% - 40px);
+    margin: 0 auto 20px;
+    border-radius: 300px 300px 80px 80px;
+    overflow: hidden;
+    border: 7px solid $cl-halloween-border;
+    // height: 500px;
+
+    .p-fv-main-inner-main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .p-fv-main-inner-green img {
+      //   position: absolute;
+      //   bottom: 0;
+      height: 210px;
+      width: 100%;
+      //   z-index: 0;
+    }
+    // .p-fv-main-logo img {
+    //   position: absolute;
+    //   width: 110%;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   z-index: 1;
+    // }
+    .p-fv-main-inner img {
+      position: absolute;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      bottom: 0;
+    }
   }
 }
 
@@ -116,525 +171,9 @@
   text-align: center;
 }
 
-// ファーストビュー
-.p-fv {
-  background: $cl-fv-blue;
-  overflow: hidden;
-}
-.p-fv,
-.p-fv-main {
-  position: relative;
-}
-.p-fv-main {
-  perspective: 200px;
-}
-
-@keyframes dropIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-180px) rotateX(180deg);
-  }
-  60% {
-    opacity: 0.5;
-    transform: translateY(0px) rotateX(-0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg);
-  }
-}
-.p-fv-main-tape {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  margin: auto;
-  width: 60%;
-  animation: dropIn 1.2s ease-out forwards;
-  img {
-    width: 100%;
-  }
-}
-.p-fv-main::before {
-  content: "";
-  width: 84.267%;
-  height: 110.667vw;
-  background: url($bg-grid) left top / 20px auto;
-  position: absolute;
-  left: 7.8665%;
-  top: 60px;
-  z-index: 2;
-  border-radius: $border-radius-bigplus;
-  @include box-shadow-fv;
-  @include min-responsive-style($min-breakpoint-pc) {
-    height: 415px;
-  }
-}
-.p-fv-logo {
-  width: 109px;
-  position: absolute;
-  top: 15px;
-  left: 4%;
-  z-index: 10;
-}
-.p-fv-main-title {
-  width: 67.467%;
-  margin: 0 auto -5px;
-  padding-top: 110px;
-  position: relative;
-  z-index: 3;
-  @include responsive-style(768px) {
-    padding-top: 90px;
-  }
-}
-.p-fv-main-button {
-  width: 53.6%;
-  position: absolute;
-  top: 77.3%;
-  left: 22.3%;
-  z-index: 10;
-  @include responsive-style(768px) {
-    top: 71.3%;
-  }
-}
-.p-fv-target {
-  @include font-size-m;
-  background: $cl-bg-leafgreen-darken;
-  color: $cl-lp-white;
-  font-weight: bold;
-  height: 59px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 1px;
-}
-@media screen and (min-width: $min-breakpoint-pc) and (min-height: 630px) and (max-height: 700px) {
-  .p-fv-main-button {
-    top: calc(100vh - 110px);
-  }
-}
-.p-fv-bg01 {
-  position: absolute;
-  top: 1%;
-  left: 0;
-  z-index: 1;
-}
-.p-fv-main-image {
-  position: relative;
-  z-index: 10;
-  aspect-ratio: 750 / 693; // 読込前のページ内リンクのずれ防止
-}
-.p-fv-bg02 {
-  position: absolute;
-  top: 15%;
-  left: 0;
-  z-index: 4;
-  pointer-events: none;
-}
-
-// 夏休み自由研究DAYとは？
-.p-day {
-  margin-top: 60px;
-  aspect-ratio: 750 / 1425; // 読込前のページ内リンクのずれ防止
-}
-
-// プログラム一覧
-.p-list {
-  width: $width-main-content;
-  margin: 55px auto 0;
-}
-.p-list-eng {
-  color: #000;
-  -webkit-text-stroke: 1px $cl-lp-white;
-  text-stroke: 1px $cl-lp-white;
-  @include font-size-eng;
-  font-weight: 800;
-  color: $cl-bg-leafgreen;
-  font-family: $font-open-sans;
-  line-height: $lineheight-none;
-  letter-spacing: 3.25px;
-  margin: 0 0 -8px 20px;
-}
-.p-list-wrapper {
-  background: $cl-lp-white;
-  border-radius: $border-radius-big;
-  padding: 35px 25px 0;
-  @include box-shadow-list;
-  margin-bottom: 53px;
-  background: url($bg-grid) left top / 20px auto;
-}
-.p-list-title {
-  width: 180px;
-}
-.p-list-text {
-  @include font-size-m;
-  line-height: $lineheight-normal;
-  margin-top: 10px;
-}
-.p-list-main {
-  margin-top: 22px !important;
-}
-.p-list-item {
-  border-top: 1px solid $cl-gray;
-  padding: 22px 0;
-  display: flex;
-  align-items: flex-start;
-  @each $key, $color in $subject-categories {
-    &.is-#{$key} .p-list-item-image {
-      border: 2px solid $color;
-    }
-    &.is-#{$key} .p-list-item-info-button .fa-solid {
-      color: $color;
-    }
-  }
-}
-.p-list-item-image {
-  width: 65px;
-  flex-shrink: 0;
-  border-radius: $border-radius-middle;
-  overflow: hidden;
-}
-.p-list-item-info {
-  padding-left: 20px;
-}
-.p-list-item-info-number {
-  font-family: $font-open-sans;
-  color: $cl-gray-darken;
-  font-style: italic;
-  @include font-size-xm;
-  line-height: $lineheight-none;
-  margin-top: 2px;
-}
-.p-list-item-info-title {
-  font-weight: bold;
-  @include font-size-m;
-  line-height: $lineheight-normal;
-  margin-top: 3px;
-}
-.p-list-item-info-text {
-  @include font-size-m;
-  line-height: $lineheight-normal;
-}
-.p-list-item-info-button {
-  width: 120px;
-  height: 30px;
-  @include font-size-s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $cl-gray;
-  border-radius: $border-radius-small;
-  margin-top: 10px;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  padding-left: 12px;
-  background: $cl-lp-white;
-  .fa-solid {
-    display: inline-block;
-    font-size: 110%;
-    line-height: 1;
-    position: absolute;
-    top: calc(50% - 7px);
-    left: 10px;
-  }
-}
-
-// プログラムのタブ
-.p-tab-text {
-  @include font-size-xs;
-  line-height: $lineheight-relaxed;
-  color: $cl-lp-white;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 20px;
-}
-.p-tab-list {
-  background: $cl-bg-leafgreen;
-  @include box-shadow-tab-list;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: all 0.2s ease-in-out;
-  &.is-fixed-hide {
-    transform: translateY(-100%);
-  }
-  @include responsive-style($breakpoint-sp) {
-    position: sticky;
-  }
-}
-.p-tab-list-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: $width-main-content;
-  margin: 0 auto;
-  padding: 7px 0;
-}
-.p-tab-item {
-  width: calc(20% - 5px);
-  @include font-size-sss;
-  line-height: $lineheight-tight;
-  background: $cl-lp-white;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  color: $cl-bg-leafgreen-darken;
-  text-align: center;
-  @include responsive-style($breakpoint-sp) {
-    @each $key, $color in $subject-categories {
-      &.is-#{$key}.is-active {
-        background: $color;
-        color: $cl-lp-white;
-        border: 1px solid $cl-lp-white;
-      }
-    }
-  }
-}
-
-// プログラム詳細
-.p-details-list {
-  width: $width-main-content;
-  margin: 60px auto !important;
-}
-.p-details-item {
-  border-radius: $border-radius-big;
-  background: url($bg-grid) left top / 20px auto;
-  position: relative;
-  padding: 30px 24.5px;
-  &:nth-child(n + 2) {
-    margin-top: 52px;
-  }
-  // 読込前のページ内リンクのずれ防止
-  &:nth-child(1) .p-details-item-title {
-    aspect-ratio: 592 / 580;
-  }
-  &:nth-child(2) .p-details-item-title {
-    aspect-ratio: 592 / 572;
-  }
-  &:nth-child(3) .p-details-item-title {
-    aspect-ratio: 592 / 598;
-  }
-  &:nth-child(4) .p-details-item-title {
-    aspect-ratio: 592 / 610;
-  }
-  &:nth-child(5) .p-details-item-title {
-    aspect-ratio: 592 / 582;
-  }
-  @each $key, $color in $subject-categories {
-    &.is-#{$key} {
-      .p-details-item-subject {
-        background: $color;
-      }
-      .p-details-item-info-item-title,
-      .p-details-item-teacher-text-more {
-        border: 2px solid $color;
-        color: $color;
-      }
-      .p-details-item-teacher-text-more {
-        &::before,
-        &::after {
-          background: $color;
-        }
-      }
-    }
-  }
-}
-.p-details-item-anchor {
-  position: absolute;
-  top: -14px;
-  left: 0;
-  @include responsive-style($breakpoint-sp) {
-    top: -83px;
-  }
-}
-.p-details-item-subject {
-  width: 125px;
-  height: 32px;
-  border-radius: $border-radius-bigplus;
-  color: $cl-lp-white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include font-size-xs;
-  position: absolute;
-  top: -14px;
-  left: 24px;
-  letter-spacing: 0.25px;
-}
-.p-details-item-info {
-  margin-top: 20px !important;
-}
-.p-details-item-info-item {
-  display: flex;
-  &:nth-child(n + 2) {
-    margin-top: 10px;
-  }
-}
-.p-details-item-info-item-title {
-  width: 44px;
-  height: 26px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: $border-radius-tiny;
-  margin: 0 10px 0 0;
-  flex-shrink: 0;
-  @include font-size-xs;
-}
-.p-details-item-info-item-text {
-  @include font-size-m;
-  line-height: $lineheight-loose;
-}
-.p-details-item-info-item-text-note {
-  @include font-size-ss;
-  color: $cl-gray-note;
-  display: block;
-  line-height: $lineheight-normal;
-  white-space: nowrap;
-  @include responsive-style(374px) {
-    letter-spacing: -0.5px;
-  }
-  @include responsive-style(359px) {
-    letter-spacing: 0;
-    white-space: normal;
-  }
-}
-.p-details-item-text {
-  @include font-size-m;
-  line-height: $lineheight-extra-loose;
-  margin-top: 20px;
-}
-.p-details-item-teacher {
-  background: $cl-gray-lighten;
-  padding: 22px 16px;
-  margin-top: 30px;
-  border-radius: $border-radius-middle;
-  position: relative;
-  &.is-more-false {
-    .p-details-item-teacher-text {
-      height: auto;
-      &::before {
-        display: none;
-      }
-    }
-    .p-details-item-teacher-text-more {
-      display: none;
-    }
-  }
-}
-.p-details-item-teacher-bg {
-  @include font-size-eng-small;
-  line-height: 1;
-  pointer-events: none;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  font-weight: 300;
-  opacity: 0.05;
-}
-.p-details-item-teacher-head {
-  display: flex;
-  align-items: center;
-}
-.p-details-item-teacher-head-image {
-  width: 75px;
-  flex-shrink: 0;
-  margin-right: 16px;
-  aspect-ratio: 1 / 1; // 読込前のページ内リンクのずれ防止
-}
-.p-details-item-teacher-head-name {
-  @include font-size-m;
-  line-height: $lineheight-semi-relaxed;
-}
-.p-details-item-teacher-text {
-  @include font-size-m;
-  line-height: $lineheight-semi-loose;
-  padding-top: 12px;
-  margin-top: 10px;
-  background: linear-gradient(to right, #000 2px, transparent 2px) repeat-x left
-    top / 4px 1px;
-  height: 122px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      $cl-gray-lighten 62%
-    );
-  }
-  &.is-active {
-    height: auto;
-    &::before {
-      display: none;
-    }
-  }
-}
-.p-details-item-teacher-text-more {
-  width: 243px;
-  height: 41px;
-  border-radius: $border-radius-huge;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 18px;
-  left: calc(50% - 121.5px);
-  background: $cl-lp-white;
-  font-weight: 500;
-  @include font-size-xxs;
-  line-height: 1;
-  padding-right: 10px;
-  cursor: pointer;
-  z-index: 1;
-  &::before {
-    content: "";
-    width: 9px;
-    height: 1px;
-    position: absolute;
-    left: calc(50% + 37px);
-    top: calc(50% - 0.5px);
-  }
-  &::after {
-    content: "";
-    width: 1px;
-    height: 9px;
-    position: absolute;
-    left: calc(50% + 41px);
-    top: calc(50% - 4.5px);
-  }
-  .p-details-item-teacher-text-more-close {
-    display: none;
-  }
-  &.is-active {
-    position: static;
-    margin: 10px auto 0;
-    &::before,
-    &::after,
-    .p-details-item-teacher-text-more-open {
-      display: none;
-    }
-    .p-details-item-teacher-text-more-close {
-      display: inline;
-    }
-  }
-}
+//
+// ここから下は共通エリア
+//
 
 // こんなお子さまたちにオススメです！
 .c-recommend {

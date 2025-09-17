@@ -1,5 +1,5 @@
 // width
-$width-main: 550px; // メインの幅
+$width-main: 500px; // メインの幅
 $width-xl: 1200px; // 最大幅（セクション全体）
 $width-lg: 1050px; // 大きめの幅（汎用的に利用）
 $width-sm: 700px; // 小さめの幅（「簡単5ステップで〜」で利用）
@@ -31,15 +31,16 @@ $LeftRight: 8%;
 //メイン部分
 .l-main {
   width: $width-main;
-  margin: 80px $LeftRight 0 auto;
+  margin: 60px $LeftRight 0 auto;
   position: relative;
-  background: $cl-bg-leafgreen;
   border: 8px solid white;
   border-radius: 100px 100px 0 0;
   overflow: hidden;
+
   @include responsive-style($breakpoint-tb) {
     border: none;
     border-radius: 0;
+    margin: 0 auto;
   }
 }
 
