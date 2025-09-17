@@ -86,30 +86,92 @@
     20px,
     90deg
   );
+  padding: 0px 0 80px;
   @include min-responsive-style($breakpoint-tb) {
-    padding: 40px 0 0;
+    padding: 40px 0 80px;
+  }
+  .p-fv-header-announce {
+    width: 100%;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $cl-white;
+    line-height: $lineheight-tight;
+    position: fixed;
+    z-index: 99;
+    font-size: 12.5px;
+    @include min-responsive-style($breakpoint-sp) {
+      display: none;
+    }
   }
   .p-fv-header {
-    padding: 10px 10px 0;
+    padding: 50px 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include min-responsive-style($breakpoint-sp) {
+      padding: 7px 10px 0;
+    }
     .p-fv-header-waomirai img {
-      height: 15px;
+      height: 10px;
+
+      @include min-responsive-style($breakpoint-sp) {
+        display: none !important;
+      }
     }
     .p-fv-header-techseeker img {
-      height: 40px;
+      height: 30px;
+
+      @include min-responsive-style($breakpoint-sp) {
+        display: none !important;
+      }
     }
   }
   //outer
   .p-fv-main-outer {
     position: absolute;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
+    .p-fv-main-outer-sun img {
+      position: absolute;
+      z-index: 2;
+      left: 8px;
+      top: 10px;
+      width: 60%;
+    }
     .p-fv-main-outer-logo {
       margin: 340px 0 10px;
+      animation: FvfadeInUp 0.65s ease-out;
+      @keyframes FvfadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
       @include responsive-style($breakpoint-tb) {
-        margin: 260px 0 10px;
+        margin: 310px auto 10px;
+        width: 95%;
+      }
+      @include responsive-style(430px) {
+        margin: 290px auto 10px;
+      }
+      @include responsive-style(414px) {
+        margin: 270px auto 10px;
+      }
+      @include responsive-style(390px) {
+        margin: 260px auto 10px;
+      }
+      @include responsive-style(375px) {
+        margin: 240px auto 10px;
       }
     }
     .p-fv-main-outer-date {
@@ -119,7 +181,7 @@
     }
     .p-fv-main-outer-lantern {
       width: 87%;
-      margin: -4px 0 0;
+      margin: -10px 0 0;
     }
   }
   //inner
@@ -131,27 +193,33 @@
     overflow: hidden;
     border: 7px solid $cl-halloween-border;
     // height: 500px;
-
+    @include responsive-style($breakpoint-tb) {
+      margin: -7px auto 50px;
+    }
     .p-fv-main-inner-main {
       position: relative;
       z-index: 1;
+      margin: -10px 0 0;
     }
 
     .p-fv-main-inner-green img {
       //   position: absolute;
       //   bottom: 0;
-      height: 210px;
+      height: 220px;
       width: 100%;
+      @include min-responsive-style($breakpoint-tb) {
+        height: 260px;
+      }
       //   z-index: 0;
     }
-    // .p-fv-main-logo img {
-    //   position: absolute;
-    //   width: 110%;
-    //   top: 0;
-    //   left: 0;
-    //   right: 0;
-    //   z-index: 1;
-    // }
+    .p-fv-main-inner-battery img {
+      position: absolute;
+      z-index: 2;
+      width: 55%;
+      right: 20px;
+      top: 7%;
+    }
+
     .p-fv-main-inner img {
       position: absolute;
       height: 100%;

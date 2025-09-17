@@ -11,53 +11,87 @@ $min-breakpoint-pc: 769px; // ブレイクポイントの幅
 // グリッド
 $bg-grid: "https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1751006905bwjnruZV/grid_lp_sum25.png";
 
+.l-header-coming-soon {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $cl-white;
+}
 .l-pc-logo-header .l-pc-logo-header-waomirai img {
   position: fixed;
   left: 10px;
-  top: 20px;
+  top: 70px;
   width: 200px;
   z-index: 10;
+  @include responsive-style($breakpoint-sp) {
+    display: none !important;
+  }
 }
 .l-pc-logo-header .l-pc-logo-header-techseeker img {
   position: fixed;
   right: 10px;
-  top: 10px;
+  top: 60px;
   height: 50px;
   z-index: 10;
+  @include responsive-style($breakpoint-sp) {
+    display: none !important;
+  }
 }
 
-$LeftRight: 8%;
+$body-margin-Left: 8%;
+$body-margin-Right: 10%;
 
 //メイン部分
 .l-main {
   width: $width-main;
-  margin: 60px $LeftRight 0 auto;
+  margin: 80px $body-margin-Right 0 auto;
   position: relative;
   border: 8px solid white;
   border-radius: 100px 100px 0 0;
-  overflow: hidden;
-
+  overflow-y: scroll;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @include responsive-style($breakpoint-tb) {
-    border: none;
-    border-radius: 0;
-    margin: 0 auto;
+    // border: none;
+    // border-radius: 0;
+    margin: 80px auto 0;
+    left: 0;
+    right: 0;
+  }
+  @include responsive-style($breakpoint-sp) {
+    margin: 0px auto auto;
+    border-radius: 0 0 0;
+    border: 0;
   }
 }
 
 .l-pc-logo-main {
   position: fixed;
-  top: 200px;
-  left: $LeftRight;
-  width: 450px;
+  top: 30%;
+  left: $body-margin-Left;
   margin: 0 auto;
   text-align: center;
+
+  width: clamp(0px, calc(450px - (1200px - 100vw)), 450px);
+
   img {
     width: 100%;
     margin: 0 auto;
   }
-}
-
-body {
+  @include responsive-style($breakpoint-tb) {
+    display: none !important;
+  }
 }
 
 @keyframes cloud-move {
@@ -107,7 +141,7 @@ body {
 .l-pc-bg-solarpower-ground {
   position: fixed;
   width: 100%;
-  height: 30vh;
+  height: 25vh;
   bottom: 0;
   left: 0;
   z-index: 0;
@@ -116,25 +150,39 @@ body {
     width: 100%;
     .l-pc-bg-solarpower-ground-img-01 {
       position: absolute;
-      top: -50px;
-      right: 0;
-      width: 200px;
+      top: -60px;
+      right: -80px;
+      width: 260px;
+      @include responsive-style($breakpoint-tb) {
+        width: 250px;
+        right: -20px;
+      }
     }
-    .l-pc-bg-solarpower-ground-img-02 {
+    .l-pc-bg-solarpower-ground-img-02 img {
       position: absolute;
-      top: -80px;
-      left: 42%;
+      top: -180px;
+      left: 37%;
       width: 250px;
+      @include responsive-style($breakpoint-tb) {
+        width: 270px;
+        left: 0%;
+        top: -220px;
+      }
     }
-    .l-pc-bg-solarpower-ground-img-03 {
+    .l-pc-bg-solarpower-ground-img-03 img {
       position: absolute;
-      top: 0%;
-      left: -2%;
-      width: 150px;
+      top: -180px;
+      left: -6.5%;
+      width: 250px;
+
+      @include responsive-style($breakpoint-tb) {
+        display: none !important;
+      }
     }
   }
   .l-pc-bg-solarpower-ground-bg img {
     object-fit: cover;
+    height: 30vh;
     width: 100%;
   }
 }

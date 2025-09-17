@@ -6,17 +6,52 @@ include _data
 
 //- ミックスイン
 include _mixins
+script.
+    $(function(){
+      // [画像ファイル, 表示時間(ms)] の配列にする
+      const frames = [
+        ["!{ImgFvBattery01}", 500],   // 0.5秒
+        ["!{ImgFvBattery02}", 500],   // 0.5秒
+        ["!{ImgFvBattery03}", 500],   // 0.5秒
+        ["!{ImgFvBattery04}", 500],   // 0.5秒
+        ["!{ImgFvBattery05}", 200],   // 0.5秒
+        ["!{ImgFvBattery06}", 800],   // 0.5秒
+      ];
+
+      let i = 0;
+
+      function showFrame(){
+        // 画像を切り替え
+        $("#p-fv-main-inner-battery-img").attr("src", frames[i][0]);
+
+        // 次のフレームに移動（ループ）
+        const delay = frames[i][1];
+        i = (i + 1) % frames.length;
+
+        // 次の切り替えを予約
+        setTimeout(showFrame, delay);
+      }
+
+      // 最初のフレームを表示開始
+      showFrame();
+    });
+
 
 //- ファーストビュー
 .p-fv
-  .p-fv-header.spimage
+  .p-fv-header-announce
+    |受付申し込みは準備中です。
+    br
+    |9月29日（月）12:00事前受付開始予定
+  .p-fv-header
+  
     .p-fv-header-waomirai 
       img(src=ImgLogoWaoMirai)
     .p-fv-header-techseeker
-      img(src=ImgLogoTechseeker alt="TechSeeker")
+      img(src=ImgLogoTechseeker alt="TechSeeker2025")
   .p-fv-main-outer
     .p-fv-main-outer-sun 
-      img(src=ImgFvSun)
+       img(src=ImgFvSun)
     .p-fv-main-outer-logo
        img(src=ImgLogoSolarpower)
     .p-fv-main-outer-date
@@ -28,20 +63,8 @@ include _mixins
     .p-fv-main-outer-lantern  
       img(src=ImgFvLantern)
   .p-fv-main-inner 
-
     .p-fv-main-inner-battery
-      //- .p-fv-main-battery 
-      //-   img(src=ImgFvBattery01)
-      //- .p-fv-main-battery 
-      //-   img(src=ImgFvBattery02)
-      //- .p-fv-main-battery 
-      //-   img(src=ImgFvBattery03)
-      //- .p-fv-main-battery 
-      //-   img(src=ImgFvBattery04)
-      //- .p-fv-main-battery 
-      //-   img(src=ImgFvBattery05)
-      //- .p-fv-main-battery 
-      //-   img(src=ImgFvBattery06)
+       img#p-fv-main-inner-battery-img(src=ImgFvBattery01)
     .p-fv-main-inner-main
        img(src=ImgFvMain)
     .p-fv-main-inner-green
