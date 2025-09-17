@@ -19,7 +19,80 @@
 // basePathごとの実際のディレクトリ
 
 //- 方法1: 関数を使った簡略化
+//-//////////////
+//- URL
+//-//////////////
+- var UrlLine = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=vLo6';
+
+//-//////////////
+//- ImagePath
+//-//////////////
+
+//- 基本ロゴ
+- var ImgLogoWaoMirai = 'https://go.waomirai.com/l/1026513/2024-08-08/gzqmq/1026513/1723103182E5MU9Ijy/waomirai_logo__1_.svg'; // 未来塾ロゴ
+- var ImgLogo = 'https://go.waomirai.com/l/1026513/2025-06-26/hqdx7/1026513/17509942517NUCkmzL/logo_lp_sum25.png'; // PCのみ表示する部分の画像
+
+//- ページ固有部分の画像（basePathを使用）
 - var paths = { local: '../../images/16_lp-event-2025techseeker', server: 'https://waomirai.com/lp/assets/images/16_lp-event-2025techseeker' }
+- 
+  function img(filename) {
+    return `${paths[basePath]}/${filename}`;
+  }
+//-//////////////
+//- 背景画像
+//-//////////////
+- var ImgBgAboutBlack = img('bg_about_black.svg');
+- var ImgBgAboutWhite = img('bg_about_white.svg');
+- var ImgBgPcGreen = img('bg_pc_green.png');
+
+//-//////////////
+//- ディバイダー画像
+//-//////////////
+- var ImgDividerAboutBottom = img('divider_about_bottom.svg');
+- var ImgDividerEntryBottom = img('divider_entry_bottom.svg');
+- var ImgDividerEntryStep = img('divider_entry_step.svg');
+- var ImgDividerFvBottom = img('divider_fv_bottom.png');
+- var ImgDividerIntroBottom = img('divider_intro_bottom.svg');
+- var ImgDividerMakeBottom = img('divider_make_bottom.svg');
+- var ImgDividerWaomiraiTop = img('divider_waomirai_top.svg');
+
+//-//////////////
+//- メイン画像
+//-//////////////
+- var ImgImgAboutNight = img('img_about_night.png');
+- var ImgImgAboutSun = img('img_about_sun.png');
+- var ImgImgFv = img('img_fv.png');
+- var ImgImgFvBattery01 = img('img_fv_battery_01.png');
+- var ImgImgFvBattery02 = img('img_fv_battery_02.png');
+- var ImgImgFvBattery03 = img('img_fv_battery_03.png');
+- var ImgImgFvBattery04 = img('img_fv_battery_04.png');
+- var ImgImgFvBattery05 = img('img_fv_battery_05.png');
+- var ImgImgFvBattery06 = img('img_fv_battery_06.png');
+- var ImgImgFvLantern = img('img_fv_lantern.png');
+- var ImgImgFvSun = img('img_fv_sun.png');
+- var ImgImgFvSunSvg = img('img_fv_sun.svg');
+- var ImgImgPcbgGreenParts01 = img('img_pcbg_green_parts_01.png');
+- var ImgImgPcbgGreenParts02 = img('img_pcbg_green_parts_02.png');
+- var ImgImgPcbgGreenParts03 = img('img_pcbg_green_parts_03.png');
+- var ImgImgStepFlow02 = img('img_step_flow02.svg');
+- var ImgLogo = img('logo.png');
+- var ImgSectionMake = img('section_make.png');
+
+//-//////////////
+//- タイトル画像
+//-//////////////
+- var ImgTitleAbout = img('title_about.svg');
+- var ImgTitleAboutBlack = img('title_about_black.svg');
+- var ImgTitleEntry = img('title_entry.svg');
+- var ImgTitleFaq = img('title_faq.svg');
+- var ImgTitleIntro = img('title_intro.svg');
+- var ImgTitleMake = img('title_make.svg');
+- var ImgTitleTechseeker = img('title_techseeker.svg');
+
+//-//////////////
+//- QRコード
+//-//////////////
+- var QRLine = img('memo qr_lp_techeeker2025.png');
 - 
   function img(filename) {
     return `${paths[basePath]}/${filename}`;
