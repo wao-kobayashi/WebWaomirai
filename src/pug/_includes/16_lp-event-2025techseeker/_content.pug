@@ -16,16 +16,10 @@ p|い
       .l-pc-menu-title
         p.l-pc-menu-title-eng
           |あINDEX
+        p 
+          img(src=ImgImgFv)
         p.l-pc-menu-title-jpn
           |オンライン授業一覧
-      ol.l-pc-menu-list
-        each item in program
-          li.l-pc-menu-item
-            a.l-pc-menu-link(href=`#${item.link}`).u-no-hover-animation
-              span.l-pc-menu-link-number
-                | #{item.item_number}
-              span.l-pc-menu-link-title
-                | #{item.menu_title}
 .l-btn-cv
   a.c-btn-cv.js-line-trigger(href=UrlLine)
     |LINEで簡単申込
