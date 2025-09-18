@@ -70,7 +70,7 @@ $z-indexes: (
           align-items: center;
           justify-content: center;
           color: $cl-black;
-          @include font-size-l;
+          font-size: $font-size-l;
           font-weight: 300;
           margin: 0px auto 0;
           text-align: center;
@@ -100,15 +100,14 @@ $z-indexes: (
           }
         }
         &-text {
-          @include font-size-m;
+          font-size: $font-size-m;
           text-align: center;
         }
         &-text-close {
-          @include font-size-m;
+          font-size: $font-size-m;
           text-align: center;
           padding: 90px auto;
         }
-
       }
       &-close {
         text-align: center;
@@ -158,7 +157,7 @@ $z-indexes: (
   }
   .modal-vimeo-close {
     color: $cl-white;
-    @include font-size-l;
+    font-size: $font-size-l;
     // position: fixed;
     // bottom: 10%;
     // left: 0;
