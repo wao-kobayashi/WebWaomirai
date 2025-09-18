@@ -71,7 +71,7 @@
     border-radius: $border-radius-full;
     max-width: 500px;
     position: relative;
-    @include font-size-l;
+    // @include font-size-l;
     letter-spacing: 1px;
     width: 90%;
     border: 2px solid $cl-lp-white;
@@ -216,7 +216,7 @@
 
 // 共通タイトル
 .c-title-lp {
-  @include font-size-xl;
+  // @include font-size-xl;
   @include title-underline;
   margin: 0 auto 30px;
   font-weight: normal;
@@ -262,7 +262,7 @@
   gap: 20px;
   position: relative;
   background: $cl-lp-white;
-  @include font-size-m;
+  // @include font-size-m;
   padding: 16px;
   border-radius: $border-radius-big;
   &::before {
@@ -322,7 +322,7 @@
   margin: 0 auto !important;
 }
 .c-feature-list-child {
-  @include font-size-l;
+  // @include font-size-l;
   background: $cl-feature-yellow;
   @include box-shadow-feature;
   max-width: 800px;
@@ -361,7 +361,7 @@
 }
 .c-howto-main-title {
   width: 100%;
-  @include font-size-xl;
+  // @include font-size-xl;
   font-weight: normal;
   margin: 0 auto 30px;
   text-align: center;
@@ -391,7 +391,7 @@
   width: 100%;
 }
 .c-howto-main-step-child-text-title {
-  @include font-size-l;
+  // @include font-size-l;
   position: relative;
   margin: 5px 0 15px;
 }
@@ -401,7 +401,7 @@
   // @include font-size-xxxxl;
 }
 .c-howto-main-step-child-text-detail {
-  @include font-size-m;
+  // @include font-size-m;
   line-height: $lineheight-relaxed;
   a {
     color: $cl-black;
@@ -439,7 +439,7 @@
 .c-about-box-right {
   flex: 1;
   line-height: $lineheight-relaxed;
-  @include font-size-m;
+  // @include font-size-m;
   letter-spacing: 0.5px;
 }
 
@@ -454,7 +454,7 @@
   margin: 0 auto;
 }
 .c-details-catch {
-  @include font-size-l;
+  // @include font-size-l;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -463,7 +463,7 @@
   margin: 0 auto 30px;
 }
 .c-details-target {
-  @include font-size-l;
+  // @include font-size-l;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -481,7 +481,7 @@
   background: white;
   border-radius: $border-radius-bigplus;
   padding: 30px 20px 30px;
-  @include font-size-m;
+  // @include font-size-m;
   flex: 1;
   @include box-shadow-feature;
 }
@@ -490,17 +490,17 @@
   justify-content: center;
   gap: 10px;
   margin: 0 auto 20px;
-  @include font-size-l;
+  // @include font-size-l;
   img {
     width: 30px;
   }
 }
 .c-details-feature-box-title-text {
   font-weight: normal;
-  @include font-size-l;
+  // @include font-size-l;
 }
 .c-details-feature-box-text {
-  @include font-size-m;
+  // @include font-size-m;
   line-height: $lineheight-normal;
 }
 .c-details-btn {
@@ -524,7 +524,7 @@
     @include box-shadow-lp;
     .c-details-btn-text {
       margin: 0px 0 0;
-      @include font-size-l;
+      // @include font-size-l;
       letter-spacing: 1px;
     }
     .c-details-btn-icn {
@@ -555,7 +555,7 @@
     a {
       color: white;
       text-decoration: none;
-      @include font-size-m;
+      // @include font-size-m;
     }
   }
 }
