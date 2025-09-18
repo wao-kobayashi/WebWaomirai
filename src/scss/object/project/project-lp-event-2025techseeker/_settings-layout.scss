@@ -39,7 +39,7 @@ $bg-grid: "https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1751006905
   position: fixed;
   right: 10px;
   top: 10px;
-  height: 70px;
+  width: 70px;
   z-index: 10;
   @include responsive-style($breakpoint-sp) {
     display: none !important;
@@ -93,7 +93,7 @@ $body-margin-Right: 10%;
   left: 0;
   background: linear-gradient(
     180deg,
-    #93e6f1 49.93%,
+    #6edcea 49.93%,
     rgba(255, 250, 232, 0) 136%
   );
   .l-pc-bg-solarpower-crowds-01 {

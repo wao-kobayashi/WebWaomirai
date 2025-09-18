@@ -8,16 +8,26 @@ script.
     * 追従ボタン
     * 300pxスクロールしたら表示する
     */
-    $(window).on("load scroll", function () {
-      if ($(this).scrollTop() > 300) {
-       $(".l-btn-cv").fadeIn();
+    //- $(window).on("load scroll", function () {
+    //-   if ($(this).scrollTop() > 300) {
+    //-    $(".l-btn-cv").fadeIn();
+    //-   } else {
+    //-    $(".l-btn-cv").fadeOut();
+    //-   }
+    //-   if ($(this).scrollTop() > 50) {
+    //-     $(".p-fv-main-button").fadeOut();
+    //-   } else {
+    //-     $(".p-fv-main-button").fadeIn();
+    //-   }
+    //- });
+
+      $(window).on("load scroll", function () {
+      if ($(this).scrollTop() < 300) {
+       $(".l-pc-bg-solarpower").fadeIn();
+       $(".l-pc-bg-halloween").fadeOut();
       } else {
-       $(".l-btn-cv").fadeOut();
-      }
-      if ($(this).scrollTop() > 50) {
-        $(".p-fv-main-button").fadeOut();
-      } else {
-        $(".p-fv-main-button").fadeIn();
+       $(".l-pc-bg-solarpower").fadeOut();
+       $(".l-pc-bg-halloween").fadeIn();
       }
     });
 

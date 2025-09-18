@@ -21,6 +21,11 @@
   }
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 //////////////////////
 // ストライプ
 //////////////////////
@@ -34,8 +39,6 @@
     $color2 ($stripe-width * 2)
   );
 }
-
-// 使用例
 
 // 共通CVボタン（赤）
 .c-btn-cv {
@@ -79,6 +82,7 @@
   }
 }
 
+//FV
 .p-fv {
   background: stripe-bg(
     $cl-halloween-stripe-bg01,
@@ -86,9 +90,9 @@
     20px,
     90deg
   );
-  padding: 20px 0 80px;
+  padding: 20px 0 0px;
   @include min-responsive-style($breakpoint-tb) {
-    padding: 40px 0 80px;
+    padding: 40px 0 0px;
   }
 
   .p-fv-header {
@@ -99,7 +103,7 @@
       position: absolute;
       left: 10px;
       top: 10px;
-      height: 10px;
+      width: 100px;
 
       @include min-responsive-style($breakpoint-sp) {
         display: none !important;
@@ -107,7 +111,7 @@
     }
     .p-fv-header-techseeker img {
       position: absolute;
-      height: 40px;
+      width: 40px;
       right: 10px;
       top: 10px;
 
@@ -214,6 +218,40 @@
   }
 }
 
+.p-section-about {
+  background: $cl-halloween-black;
+}
+
+.p-section-intro {
+  background: stripe-bg(
+    $cl-halloween-stripe-bg01,
+    $cl-halloween-stripe-bg02,
+    20px,
+    90deg
+  );
+}
+.p-section-make {
+  background: linear-gradient(
+    to bottom,
+    $cl-halloween-creamyellow 0%,
+    $cl-halloween-creamyellow 50%,
+    #ffeaad 50%,
+    #ffeaad 100%
+  );
+}
+
+.p-section-entry {
+  background: $cl-gray-lighten;
+}
+
+.p-section {
+  padding: 0 0px 0px;
+}
+
+//
+// ここから下は共通エリア
+//
+
 // 共通タイトル
 .c-title-lp {
   // @include font-size-xl;
@@ -222,10 +260,6 @@
   font-weight: normal;
   text-align: center;
 }
-
-//
-// ここから下は共通エリア
-//
 
 // こんなお子さまたちにオススメです！
 .c-recommend {
