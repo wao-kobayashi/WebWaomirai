@@ -28,7 +28,7 @@ $bg-grid: "https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1751006905
 .l-pc-logo-header .l-pc-logo-header-waomirai img {
   position: fixed;
   left: 10px;
-  top: 70px;
+  top: 20px;
   width: 200px;
   z-index: 10;
   @include responsive-style($breakpoint-sp) {
@@ -38,8 +38,8 @@ $bg-grid: "https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1751006905
 .l-pc-logo-header .l-pc-logo-header-techseeker img {
   position: fixed;
   right: 10px;
-  top: 60px;
-  height: 50px;
+  top: 10px;
+  height: 70px;
   z-index: 10;
   @include responsive-style($breakpoint-sp) {
     display: none !important;
@@ -175,14 +175,12 @@ $body-margin-Right: 10%;
   width: $width-main;
   margin-top: 80px;
   margin-right: calc((100% - 1440px) / 2 + $body-margin-Right);
-  margin-bottom: 0;
+  margin-bottom: 80px;
   margin-left: auto;
   position: relative;
   border: 8px solid white;
-  border-radius: 100px 100px 0 0;
-  overflow-y: scroll;
-  height: 100vh;
-  position: fixed;
+  border-radius: 100px;
+  overflow: hidden;
   right: 0;
   &::-webkit-scrollbar {
     display: none;
