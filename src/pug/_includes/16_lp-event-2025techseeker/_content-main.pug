@@ -155,4 +155,6 @@ script.
 //-         img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
 //-       .l-footer-copyright
 //-         |© ワオ・コーポレーション All rights reserved.
-    
+if basePath === "local"
+  p(style='position: fixed; bottom:0; left:0;  z-index:9999; width:100%; text-align:left; font-size:16px; color:white; padding:15px 0;') 
+    |ローカル環境です、現在のリリースフェーズ: #{releasePhase}
