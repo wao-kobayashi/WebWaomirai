@@ -23,6 +23,7 @@ mixin modal
                 |閉じる
     .bg-modal(style='display:none;')
 
-mixin lineEntryButton(text)
-  a.js-line-trigger(href=UrlLine)
-    | #{text}
+mixin lineEntryButton
+    .c-btn-cta-main
+        a.js-line-trigger(href=UrlLine)
+            img(src=ImgTextCv alt="LINEで簡単申込")

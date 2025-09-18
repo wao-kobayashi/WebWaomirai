@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 
-body {
-  font-family: "Montserrat", "M PLUS 1p", sans-serif;
-}
+/* Rectangle 412 */
 
 // Font size variables
 $font-size-sss: 10px;
@@ -37,4 +35,11 @@ $lineheight-extra-loose: 1.88;
   text-decoration: underline wavy;
   text-decoration-color: $cl-title-underline;
   text-underline-offset: 3px;
+}
+
+body {
+  font-family: "Montserrat", "M PLUS 1p", sans-serif;
+  font-size: $font-size-m;
+  color: $cl-black;
+  line-height: $lineheight-relaxed;
 }

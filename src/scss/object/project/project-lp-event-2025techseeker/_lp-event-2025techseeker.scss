@@ -40,6 +40,10 @@ img {
   );
 }
 
+@mixin content-width {
+  width: calc(100% - 40px);
+}
+
 // 共通CVボタン（赤）
 .c-btn-cv {
   width: 87.537%;
@@ -62,12 +66,11 @@ img {
   text-align: center;
   a {
     text-align: center;
-    margin: 0px auto 0px;
+    margin: 30px auto 0px;
     cursor: pointer;
-    background: $cl-red;
+    background: $cl-halloween-orange;
     text-decoration: none;
-    height: 78px;
-    color: white;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,8 +80,12 @@ img {
     // @include font-size-l;
     letter-spacing: 1px;
     width: 90%;
-    border: 2px solid $cl-lp-white;
+    border: 2px solid $cl-black;
     // @include box-shadow-lp;
+    img {
+      width: 68%;
+      padding: 0 0 4px 0;
+    }
   }
 }
 
@@ -165,7 +172,10 @@ img {
     .p-fv-main-outer-date {
       font-weight: normal;
       color: $cl-white;
-      line-height: $lineheight-normal;
+      line-height: $lineheight-relaxed;
+
+      letter-spacing: 1px;
+      text-shadow: 0px 1px 17px rgba(0, 0, 0, 0.4);
     }
     .p-fv-main-outer-lantern {
       width: 87%;
@@ -182,7 +192,7 @@ img {
     border: 7px solid $cl-halloween-border;
     // height: 500px;
     @include responsive-style($breakpoint-tb) {
-      margin: 0 auto 50px;
+      margin: 0 auto 20px;
     }
     .p-fv-main-inner-main {
       position: relative;
@@ -193,7 +203,7 @@ img {
     .p-fv-main-inner-green img {
       //   position: absolute;
       //   bottom: 0;
-      height: 220px;
+      height: 200px;
       width: 100%;
       @include min-responsive-style($breakpoint-tb) {
         height: 260px;
@@ -217,6 +227,38 @@ img {
     }
   }
 }
+.c-dl.c-dl-bgblack {
+  dt {
+    color: $cl-halloween-yellow;
+  }
+}
+
+.c-dl {
+  color: $cl-white;
+  letter-spacing: 1px;
+  @include content-width;
+  margin: 0 auto;
+  a {
+    color: $cl-white;
+    text-decoration: underline;
+  }
+  dl {
+    display: flex;
+    padding: 15px 20px;
+    gap: 40px;
+    border-bottom: 1px dashed $cl-halloween-gray;
+  }
+  dt {
+    width: 40px;
+    white-space: nowrap;
+    // background: red;
+    display: block;
+    font-weight: bold;
+  }
+  dd {
+    flex: 1;
+  }
+}
 
 .p-section-about {
   background: $cl-halloween-black;
@@ -229,6 +271,32 @@ img {
     20px,
     90deg
   );
+
+  .p-section-intro-box {
+    position: relative;
+    display: table;
+    margin: 70px auto 30px !important;
+    @include content-width;
+    padding: 35px 0 0;
+    border-radius: $border-radius-huge;
+    background: $cl-halloween-creamyellow;
+    h2 img {
+      position: absolute;
+      top: -45px;
+    }
+
+    .p-section.p-section-intro-box-img {
+      margin: 0px auto 0px;
+      width: 90%;
+      display: block;
+      padding: 40px 0 0;
+    }
+    .p-section.p-section-intro-box-text {
+      text-align: center;
+      margin: 0 auto 30px;
+      display: block;
+    }
+  }
 }
 .p-section-make {
   background: linear-gradient(
@@ -238,10 +306,52 @@ img {
     #ffeaad 50%,
     #ffeaad 100%
   );
+  h2 {
+    padding: 20px 0 0;
+  }
 }
 
 .p-section-entry {
   background: $cl-gray-lighten;
+  .p-section-entry-flow {
+    @include content-width;
+    margin: 30px auto 0px;
+    background: white;
+    border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
+    padding: 20px 0px 0px 0px;
+    .p-section-entry-flow-title {
+      display: flex;
+      padding: 0 0px 18px;
+      border-bottom: 1px dashed $cl-gray-deep;
+      margin: 0 20px;
+      .p-section-entry-flow-title-left {
+        flex: 1;
+        .p-section-entry-flow-title-step {
+          padding: 5px 15px;
+          border-radius: $border-radius-full;
+          color: $cl-white;
+          background: $cl-halloween-orange;
+          display: inline-flex;
+          letter-spacing: 2px;
+          font-weight: bold;
+          margin: 0 0 10px;
+        }
+        .p-section-entry-flow-title-name {
+          font-size: $font-size-l;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
+      .p-section-entry-flow-title-right {
+        width: 62px;
+      }
+    }
+    .p-section-entry-flow-text {
+      padding: 18px 0 0;
+      font-size: $font-size-s;
+      margin: 0 20px;
+    }
+  }
 }
 
 .p-section {
