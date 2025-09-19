@@ -40,7 +40,7 @@ export default defineConfig({
     disableHostCheck: true, // これを追加するだけ
     allowedHosts: [
       'localhost',
-      'a5999d155a40.ngrok-free.app'  // エラーメッセージのホスト名をそのまま追加
+      '64b6d22e81ab.ngrok-free.app'  // エラーメッセージのホスト名をそのまま追加
     ],
     open: true
   },

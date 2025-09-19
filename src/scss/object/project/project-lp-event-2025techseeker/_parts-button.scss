@@ -1,3 +1,12 @@
+.c-btn-fixed {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1000;
+}
+
 // 共通CVボタン（緑）
 .c-btn-cta-main {
   text-align: center;

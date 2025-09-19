@@ -162,14 +162,19 @@ section.p-section-intro {
   .p-section-intro-box {
     position: relative;
     display: table;
-    margin: 100px auto 50px !important;
+
     @include content-width;
     padding: 35px 0 30px;
     border-radius: $border-radius-huge;
     background: $cl-halloween-creamyellow;
+    margin: 100px auto 50px !important;
+    @include responsive-style($breakpoint-tb) {
+      margin: 80px auto 30px !important;
+    }
     h2 img {
       position: absolute;
       top: -45px;
+      transform: scale(1.05);
     }
 
     .p-section.p-section-intro-box-img {
@@ -177,11 +182,17 @@ section.p-section-intro {
       width: 90%;
       display: block;
       padding: 60px 0 5px;
+      @include responsive-style($breakpoint-tb) {
+        padding: 45px 0 5px;
+      }
     }
     .p-section.p-section-intro-box-text {
       text-align: center;
-      margin: 0 auto 30px;
       display: block;
+      margin: 0 auto 30px;
+      @include responsive-style($breakpoint-tb) {
+        margin: 0 auto 20px;
+      }
       @include min-responsive-style($breakpoint-sp) {
         font-size: $font-size-l;
       }
@@ -241,11 +252,13 @@ section.p-section-entry {
     }
     .p-section-entry-flow-text {
       padding: 22px 0 0;
+      line-height: $lineheight-semi-relaxed;
       font-size: $font-size-s;
       margin: 0 23px;
-      line-height: $lineheight-semi-relaxed;
       @include min-responsive-style($breakpoint-sp) {
         font-size: $font-size-m;
+        padding: 18px 0 0;
+        margin: 0 20px;
       }
       a {
         text-decoration: underline;
@@ -282,10 +295,14 @@ section.p-section-entry {
       margin: 0 auto 10px;
     }
     .p-section-entry-speech-text {
-      font-size: $font-size-m;
       line-height: $lineheight-relaxed;
       text-align: left;
       letter-spacing: 0.5px;
+
+      font-size: $font-size-m;
+      @include responsive-style($breakpoint-sp) {
+        font-size: $font-size-s;
+      }
       a {
         text-decoration: underline;
         cursor: pointer;
@@ -315,9 +332,13 @@ section.p-section-faq {
   }
   .p-section-faq-box {
     @include content-width;
-    padding: 0 23px;
+
     margin: 30px auto 0;
     border-bottom: 1px dashed $cl-halloween-gray;
+    padding: 0 23px;
+    @include responsive-style($breakpoint-tb) {
+      padding: 0 20px;
+    }
     .p-section-faq-box-title {
       display: flex;
       align-items: center;
@@ -717,19 +738,6 @@ section.p-section-faq {
   width: 100%;
   border-top: 1px solid $cl-lp-white;
   padding: 15px 0 15px;
-}
-
-// 追従ボタン
-.l-btn-cv {
-  display: none;
-  width: 100%;
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  z-index: 1000;
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
-  @include min-responsive-style($min-breakpoint-pc) {
-    width: 450px;
-    left: calc(50% - 225px);
-  }
+  color: $cl-graylight;
+  font-size: $font-size-ss;
 }
