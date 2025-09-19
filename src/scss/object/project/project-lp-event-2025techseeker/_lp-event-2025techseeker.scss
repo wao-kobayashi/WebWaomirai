@@ -1,78 +1,50 @@
 //////////////////////
-// メイン部分
+//01共通で使うパーツ
 //////////////////////
-
-//base.scssを読み込まないのでこちらで定義
-@media screen and (max-width: 3000px) and (min-width: 768px) {
-  .spimage {
-    display: none !important;
-  }
-  .pcimage {
-    display: inherit;
+.c-dl.c-dl-bgblack {
+  color: $cl-white;
+  dt {
+    color: $cl-halloween-yellow;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .spimage {
-    display: inherit;
-  }
-  .pcimage {
-    display: none !important;
+.c-dl.c-dl-bgwhite {
+  color: $cl-black;
+  dt {
+    color: $cl-halloween-orange;
   }
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-//////////////////////
-// ストライプ
-//////////////////////
-
-@function stripe-bg($color1, $color2, $stripe-width: 20px, $angle: 90deg) {
-  @return repeating-linear-gradient(
-    $angle,
-    $color1,
-    $color1 $stripe-width,
-    $color2 $stripe-width,
-    $color2 ($stripe-width * 2)
-  );
-}
-
-@mixin content-width {
-  width: calc(100% - 40px);
-}
-
-// 共通CVボタン（緑）
-.c-btn-cta-main {
-  text-align: center;
+.c-dl {
+  letter-spacing: 1px;
+  @include content-width;
+  margin: 0 auto;
   a {
-    text-align: center;
-    margin: 30px auto 0px;
-    cursor: pointer;
-    background: $cl-halloween-orange;
-    text-decoration: none;
-    height: 60px;
+    color: $cl-white;
+    text-decoration: underline;
+  }
+  dl {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: $border-radius-full;
-    max-width: 500px;
-    position: relative;
-    // @include font-size-l;
-    letter-spacing: 1px;
-    width: 90%;
-    border: 2px solid $cl-black;
-    // @include box-shadow-lp;
-    img {
-      width: 68%;
-      padding: 0 0 4px 0;
-    }
+    padding: 15px 20px;
+    gap: 40px;
+    border-bottom: 1px dashed $cl-halloween-gray;
+  }
+  dt {
+    width: 40px;
+    white-space: nowrap;
+    // background: red;
+    display: block;
+    font-weight: bold;
+  }
+  dd {
+    flex: 1;
   }
 }
 
-//FV
+//////////////////////
+// 02各セクションのデザイン定義
+//////////////////////
+///
+//- ファーストビュー
 .p-fv {
   background: stripe-bg(
     $cl-halloween-stripe-bg01,
@@ -210,44 +182,21 @@ img {
     }
   }
 }
-.c-dl.c-dl-bgblack {
-  dt {
-    color: $cl-halloween-yellow;
-  }
+
+//イベント概要
+section.p-section-about {
+  padding: 0 0 40px;
 }
 
-.c-dl {
-  color: $cl-white;
-  letter-spacing: 1px;
-  @include content-width;
-  margin: 0 auto;
-  a {
-    color: $cl-white;
-    text-decoration: underline;
-  }
-  dl {
-    display: flex;
-    padding: 15px 20px;
-    gap: 40px;
-    border-bottom: 1px dashed $cl-halloween-gray;
-  }
-  dt {
-    width: 40px;
-    white-space: nowrap;
-    // background: red;
-    display: block;
-    font-weight: bold;
-  }
-  dd {
-    flex: 1;
-  }
-}
-
-.p-section-about {
+.p-section-about-black {
   background: $cl-halloween-black;
 }
+.p-section-about-white {
+  background: $cl-white;
+}
 
-.p-section-intro {
+//太陽の光でペットボトルが光る
+section.p-section-intro {
   background: stripe-bg(
     $cl-halloween-stripe-bg01,
     $cl-halloween-stripe-bg02,
@@ -258,9 +207,9 @@ img {
   .p-section-intro-box {
     position: relative;
     display: table;
-    margin: 70px auto 30px !important;
+    margin: 100px auto 50px !important;
     @include content-width;
-    padding: 35px 0 0;
+    padding: 35px 0 30px;
     border-radius: $border-radius-huge;
     background: $cl-halloween-creamyellow;
     h2 img {
@@ -272,16 +221,21 @@ img {
       margin: 0px auto 0px;
       width: 90%;
       display: block;
-      padding: 40px 0 0;
+      padding: 60px 0 5px;
     }
     .p-section.p-section-intro-box-text {
       text-align: center;
       margin: 0 auto 30px;
       display: block;
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: $font-size-l;
+      }
     }
   }
 }
-.p-section-make {
+
+//エコランタンを作りながら太陽光発電について学ぼう！
+section.p-section-make {
   background: linear-gradient(
     to bottom,
     $cl-halloween-creamyellow 0%,
@@ -294,19 +248,20 @@ img {
   }
 }
 
-.p-section-entry {
+//申し込み方法
+section.p-section-entry {
   background: $cl-gray-lighten;
   .p-section-entry-flow {
     @include content-width;
     margin: 30px auto 0px;
-    background: white;
+    background: $cl-white;
     border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
-    padding: 20px 0px 0px 0px;
+    padding: 26px 0px 0px 0px;
     .p-section-entry-flow-title {
       display: flex;
-      padding: 0 0px 18px;
+      padding: 0 0px 22px;
       border-bottom: 1px dashed $cl-gray-deep;
-      margin: 0 20px;
+      margin: 0 23px;
       .p-section-entry-flow-title-left {
         flex: 1;
         .p-section-entry-flow-title-step {
@@ -317,7 +272,7 @@ img {
           display: inline-flex;
           letter-spacing: 2px;
           font-weight: bold;
-          margin: 0 0 10px;
+          margin: 0 0 14px;
         }
         .p-section-entry-flow-title-name {
           font-size: $font-size-l;
@@ -330,20 +285,66 @@ img {
       }
     }
     .p-section-entry-flow-text {
-      padding: 18px 0 0;
+      padding: 22px 0 0;
       font-size: $font-size-s;
-      margin: 0 20px;
+      margin: 0 23px;
+      line-height: $lineheight-semi-relaxed;
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: $font-size-m;
+      }
+      a {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
+  }
+  .p-section-entry-speech {
+    @include content-width;
+    margin: 30px auto 0px !important;
+    background: $cl-halloween-creamyellow;
+    border-radius: $border-radius-bigplus;
+    border: 4px solid $cl-white;
+    padding: 26px 23px 26px;
+    position: relative;
+    &::before {
+      content: ""; // 擬似要素を表示
+      position: absolute;
+      top: -15px; // セクションの下に配置
+      left: 25px; // 吹き出しの尻尾の位置を調整
+      width: 25px;
+      height: 25px;
+      border-top: 4px solid $cl-white;
+      border-right: 4px solid $cl-white;
+      // border-width: 15px 15px 0 15px; // 上向きの三角形を作成
+      background: $cl-halloween-creamyellow; // 三角形の色を設定
+      transform: rotate(-45deg);
+    }
+    .p-section-entry-speech-title {
+      font-size: $font-size-l;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: left;
+      margin: 0 auto 10px;
+    }
+    .p-section-entry-speech-text {
+      font-size: $font-size-m;
+      line-height: $lineheight-relaxed;
+      text-align: left;
+      letter-spacing: 0.5px;
+      a {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  .p-section-entry-divider {
+    padding: 70px 0 0;
   }
 }
 
-.p-section {
-  padding: 0 0px 0px;
-}
-
-//
-// ここから下は共通エリア
-//
+//////////////////////
+// 03共通エリア
+//////////////////////
 
 // 共通タイトル
 .c-title-lp {

@@ -36,6 +36,12 @@ script.
   * ドキュメントの読み込みが完了した時点で実行されるメイン処理
   */
   $(document).ready(function() {
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        // 要素が画面内に表示されたらinviewクラスを追加
+        $(this).addClass('inview');
+      }
+    });
     /**
     * 追従ボタン
     * 300pxスクロールしたら表示する
@@ -53,15 +59,15 @@ script.
     //-   }
     //- });
 
-      $(window).on("load scroll", function () {
-      if ($(this).scrollTop() < 1000) {
-       $(".l-pc-bg-solarpower").fadeIn();
-       $(".l-pc-bg-halloween").fadeOut();
-      } else {
-       $(".l-pc-bg-solarpower").fadeOut();
-       $(".l-pc-bg-halloween").fadeIn();
-      }
-    });
+    //-   $(window).on("load scroll", function () {
+    //-   if ($(this).scrollTop() < 1000) {
+    //-    $(".l-pc-bg-solarpower").fadeIn();
+    //-    $(".l-pc-bg-halloween").fadeOut();
+    //-   } else {
+    //-    $(".l-pc-bg-solarpower").fadeOut();
+    //-    $(".l-pc-bg-halloween").fadeIn();
+    //-   }
+    //- });
 
     /**
     * モーダルウィンドウを開く関数

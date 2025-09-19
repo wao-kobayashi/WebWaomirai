@@ -2,10 +2,13 @@
 @import "foundation/_constant"; // 色などの変数定義
 @import "foundation/_wpstyle"; // WordPressスタイルの定義
 @import "foundation/_reset"; // デフォルトのスタイルをリセットしたもの
+@import "object/project/project-lp-event-2025techseeker/_settings-animation.scss";
+@import "object/project/project-lp-event-2025techseeker/_settings-base.scss"; // 基本形の設定
 @import "object/project/project-lp-event-2025techseeker/_settings-colors.scss"; // 色関連設定
 @import "object/project/project-lp-event-2025techseeker/_settings-typography.scss"; // タイポグラフィ設定
 @import "object/project/project-lp-event-2025techseeker/_settings-effects"; // エフェクト設定
 @import "object/project/project-lp-event-2025techseeker/_settings-layout.scss"; // レイアウト設定
+@import "object/project/project-lp-event-2025techseeker/_parts-button.scss"; // ボタン
 @import "object/project/project-lp-event-2025techseeker/_parts_annoncement.scss"; // お知らせスタイル
 @import "object/project/project-lp-event-2025techseeker/_parts-modal.scss"; // モーダルスタイル
 @import "object/project/project-lp-event-2025techseeker/_lp-event-2025techseeker.scss"; //メインスタイル

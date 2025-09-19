@@ -1,40 +1,9 @@
 //- 変数定義
 include _variables
 
-//- 配列定義
-include _data
 
 //- ミックスイン
 include _mixins
-script.
-    $(function(){
-      // [画像ファイル, 表示時間(ms)] の配列にする
-      const frames = [
-        ["!{ImgFvBattery01}", 500],   // 0.5秒
-        ["!{ImgFvBattery02}", 500],   // 0.5秒
-        ["!{ImgFvBattery03}", 500],   // 0.5秒
-        ["!{ImgFvBattery04}", 500],   // 0.5秒
-        ["!{ImgFvBattery05}", 200],   // 0.5秒
-        ["!{ImgFvBattery06}", 800],   // 0.5秒
-      ];
-
-      let i = 0;
-
-      function showFrame(){
-        // 画像を切り替え
-        $("#p-fv-main-inner-battery-img").attr("src", frames[i][0]);
-
-        // 次のフレームに移動（ループ）
-        const delay = frames[i][1];
-        i = (i + 1) % frames.length;
-
-        // 次の切り替えを予約
-        setTimeout(showFrame, delay);
-      }
-
-      // 最初のフレームを表示開始
-      showFrame();
-    });
 
 
 //- ファーストビュー
@@ -71,40 +40,42 @@ script.
     img(src=ImgDividerFvBottom)
 //イベント概要
 section.p-section.p-section-about.p-section-about-black
-  h2  
-   img(src=ImgTitleAboutBlack)
-  .c-dl.c-dl.c-dl-bgblack 
-    dl 
-      dt|費用
-      dd|無料
-    dl 
-      dt|対象
-      dd|小３〜６
-    dl 
-      dt|日時
-      dd
-        |2025年
-        br
-        |10月25日(土)・10月26日(日)
-        br
-        |10:00 / 11:30 / 14:00 / 15:30（各回）60分
-    dl 
-      dt|定員
-      dd|各回24名まで
-    dl 
-      dt|場所
-      dd|大阪咲洲ATC 特設会場
-        br
-        |アクセスは
-        a(href='#access')|こちら
-  +lineEntryButton
+  .inview-hide.inview-triger
+    h2  
+    img(src=ImgTitleAboutBlack)
+
+    .c-dl.c-dl.c-dl-bgblack 
+      dl 
+        dt|費用
+        dd|無料
+      dl 
+        dt|対象
+        dd|小３〜６
+      dl 
+        dt|日時
+        dd
+          |2025年
+          br
+          |10月25日(土)・10月26日(日)
+          br
+          |10:00 / 11:30 / 14:00 / 15:30（各回）60分
+      dl 
+        dt|定員
+        dd|各回24名まで
+      dl 
+        dt|場所
+        dd|大阪咲洲ATC 特設会場
+          br
+          |アクセスは
+          a(href='#access')|こちら
+    +lineEntryButton
 
 //太陽の光でペットボトルが光る
 section.p-section.p-section-intro
   div 
     img(src=ImgDividerAboutBottom)
 
-  .p-section.p-section-intro-box 
+  .p-section.p-section-intro-box.inview-hide.inview-triger
     h2  
       img(src=ImgTitleIntro)
     .p-section.p-section-intro-box-img 
@@ -128,17 +99,18 @@ section.p-section.p-section-intro
     img(src=ImgDividerIntroBottom)
 //エコランタンを作りながら太陽光発電について学ぼう！
 section.p-section.p-section-make
-  h2  
-    img(src=ImgTitleMake)
-  div   
-    img(src=ImgSectionMake)
+  .inview-hide.inview-triger
+    h2  
+      img(src=ImgTitleMake)
+    div   
+      img(src=ImgSectionMake)
   div   
     img(src=ImgDividerMakeBottom)
 //申し込み方法
 section.p-section.p-section-entry
-  h2  
+  h2.inview-hide.inview-triger  
     img(src=ImgTitleEntry)
-  .p-section-entry-flow 
+  .p-section-entry-flow.inview-hide.inview-triger 
     .p-section-entry-flow-title
       .p-section-entry-flow-title-left 
         .p-section-entry-flow-title-step 
@@ -157,7 +129,7 @@ section.p-section.p-section-entry
        |から
     .p-section-entry-flow-bottom
         img(src=ImgDividerEntryStep)
-  .p-section-entry-flow 
+  .p-section-entry-flow.inview-hide.inview-triger
     .p-section-entry-flow-title
       .p-section-entry-flow-title-left 
         .p-section-entry-flow-title-step 
@@ -167,49 +139,50 @@ section.p-section.p-section-entry
           br
           |必要事項を入力して完了
       .p-section-entry-flow-title-right 
-          img(src=ImgStepFlow01)
+          img(src=ImgStepFlow02)
     .p-section-entry-flow-text 
        |友だち登録が完了すると、LINEのトーク画面に申し込みフォームが届きます。フォームをタップして必要事項をご入力ください。
     .p-section-entry-flow-bottom
         img(src=ImgDividerEntryStep)        
-  .p-section-entry-speech 
+  .p-section-entry-speech.inview-triger
       .p-section-entry-speech-title 
         |お申し込みが定員を超えた場合
       .p-section-entry-speech-text 
          |抽選にて参加者を決定させていただきます。結果はXX/XXまでに、LINEでご案内いたします。
   //CTA
   +lineEntryButton
-  div 
+  .p-section-entry-divider
     img(src=ImgDividerEntryBottom)
 //イベント概要
-section.p-section.p-section-about
-  h2  
-    img(src=ImgTitleAbout)
-  .p-section-about-dl
-    dl 
-      dt|費用
-      dd|無料
-    dl 
-      dt|対象
-      dd|小３〜６
-    dl 
-      dt|日時
-      dd
-      |2025年
-      br
-      |10月25日(土)・10月26日(日)
-      br
-      |10:00 / 11:30 / 14:00 / 15:30（各回）60分
-    dl 
-      dt|定員
-      dd|各回24名まで
-    dl 
-      dt|場所
-      dd|大阪咲洲ATC 特設会場
-  .p-section-about-map-button 
-    a(href='#')
-      |Googleマップを開く
-  .p-section-about-map-iframe
+section.p-section.p-section-about.p-section-about-white
+  .inview-hide.inview-triger
+    h2  
+      img(src=ImgTitleAbout)
+    .c-dl.c-dl-bgwhite
+      dl 
+        dt|費用
+        dd|無料
+      dl 
+        dt|対象
+        dd|小３〜６
+      dl 
+        dt|日時
+        dd
+        |2025年
+        br
+        |10月25日(土)・10月26日(日)
+        br
+        |10:00 / 11:30 / 14:00 / 15:30（各回）60分
+      dl 
+        dt|定員
+        dd|各回24名まで
+      dl 
+        dt|場所
+        dd|大阪咲洲ATC 特設会場
+    .p-section-about-map-button 
+      a(href='#')
+        |Googleマップを開く
+    .p-section-about-map-iframe
  
 section.p-section.p-section-faq
   h2  
@@ -327,6 +300,3 @@ footer.l-footer
         img(src='https://go.waomirai.com/l/1026513/2024-09-09/h313m/1026513/1725935757PmiJf0LH/logo_waomirai_white.svg')
       .l-footer-copyright
         |© ワオ・コーポレーション All rights reserved.
-if basePath === "local"
-  p(style='position: fixed; bottom:0; left:0;  z-index:9999; width:100%; text-align:left; font-size:16px; color:white; padding:15px 0;') 
-    |ローカル環境です、現在のリリースフェーズ: #{releasePhase}
