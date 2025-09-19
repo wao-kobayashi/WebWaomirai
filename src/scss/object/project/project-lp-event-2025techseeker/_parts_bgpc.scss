@@ -1,3 +1,105 @@
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(100px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(-100px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
+
+.l-pc-bg-solarpower {
+  /* Rectangle 412 */
+  position: fixed;
+  width: 100%;
+  height: 80vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    #6edcea 49.93%,
+    rgba(255, 250, 232, 0) 136%
+  );
+  .l-pc-bg-solarpower-crowds-01 {
+    position: fixed;
+    width: 40%;
+    left: 10%;
+    top: 10%;
+    animation: cloud-move 80s ease-in-out infinite;
+  }
+  .l-pc-bg-solarpower-crowds-02 {
+    position: fixed;
+    width: 40%;
+    right: 0%;
+    top: 10%;
+    animation: cloud-move 65s ease-in-out infinite;
+  }
+}
+
+.l-pc-bg-solarpower-ground {
+  position: fixed;
+  width: 100%;
+  height: 25vh;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  .l-pc-bg-solarpower-ground-img {
+    position: relative;
+    width: 100%;
+    .l-pc-bg-solarpower-ground-img-01 {
+      position: absolute;
+      top: -70px;
+      right: -3.5%;
+      width: 18%;
+      @include responsive-style($breakpoint-dk) {
+        width: 270px;
+        right: -6%;
+      }
+      @include responsive-style($breakpoint-tb) {
+        width: 250px;
+      }
+    }
+    .l-pc-bg-solarpower-ground-img-02 img {
+      position: absolute;
+      top: -180px;
+      left: 37%;
+      width: 16%;
+      @include responsive-style($breakpoint-dk) {
+        width: 250px;
+      }
+      @include responsive-style($breakpoint-tb) {
+        width: 270px;
+        left: 0%;
+        top: -220px;
+      }
+    }
+    .l-pc-bg-solarpower-ground-img-03 img {
+      position: absolute;
+      top: -200px;
+      left: 2%;
+      width: 17%;
+      @include responsive-style($breakpoint-dk) {
+        width: 250px;
+        left: -4%;
+      }
+      @include responsive-style($breakpoint-tb) {
+        display: none !important;
+      }
+    }
+  }
+  .l-pc-bg-solarpower-ground-bg img {
+    object-fit: cover;
+    height: 30vh;
+    width: 100%;
+  }
+}
+
 .l-pc-bg-halloween {
   background: stripe-bg(#ffebcc, #fff0d8, 20px, 90deg);
   width: 100%;

@@ -44,23 +44,6 @@ img {
   width: calc(100% - 40px);
 }
 
-// 共通CVボタン（赤）
-.c-btn-cv {
-  width: 87.537%;
-  height: 64px;
-  margin: 0 auto;
-  border: 2px solid $cl-lp-white;
-  border-radius: 32px;
-  background: $cl-red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  // // @include font-size-xm;
-  color: $cl-lp-white;
-  letter-spacing: 0.25px;
-}
-
 // 共通CVボタン（緑）
 .c-btn-cta-main {
   text-align: center;

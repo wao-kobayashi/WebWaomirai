@@ -1,3 +1,35 @@
+//FVの太陽光発電のJS
+script.
+    $(function(){
+      // [画像ファイル, 表示時間(ms)] の配列にする
+      const frames = [
+        ["!{ImgFvBattery01}", 500],   // 0.5秒
+        ["!{ImgFvBattery02}", 500],   // 0.5秒
+        ["!{ImgFvBattery03}", 500],   // 0.5秒
+        ["!{ImgFvBattery04}", 500],   // 0.5秒
+        ["!{ImgFvBattery05}", 200],   // 0.5秒
+        ["!{ImgFvBattery06}", 800],   // 0.5秒
+      ];
+
+      let i = 0;
+
+      function showFrame(){
+        // 画像を切り替え
+        $("#p-fv-main-inner-battery-img").attr("src", frames[i][0]);
+
+        // 次のフレームに移動（ループ）
+        const delay = frames[i][1];
+        i = (i + 1) % frames.length;
+
+        // 次の切り替えを予約
+        setTimeout(showFrame, delay);
+      }
+
+      // 最初のフレームを表示開始
+      showFrame();
+    });
+
+
 script.
   /**
   * jQuery Document Ready

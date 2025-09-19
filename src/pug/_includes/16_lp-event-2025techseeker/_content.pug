@@ -55,3 +55,6 @@ if releasePhase  === "one"
 //-     |LINEで簡単申込
 +modal
 
+if basePath === "local"
+  p(style='position: fixed; bottom:0; left:0;  z-index:9999; width:100%; text-align:left; font-size:16px; color:white; padding:15px 0;') 
+    |ローカル環境です、現在のリリースフェーズ: #{releasePhase}
