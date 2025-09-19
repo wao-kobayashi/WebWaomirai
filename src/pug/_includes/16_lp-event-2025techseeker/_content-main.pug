@@ -1,14 +1,12 @@
-//- 変数定義
-include _variables
-
-
-//- ミックスイン
-include _mixins
-
 .c-btn-fixed.spimage(style='display:none;')
  +lineEntryButton
+
+//-
+//- メインコンテンツのセクション
+//-
+
 //- ファーストビュー
-.p-fv
+section.p-fv
   .p-fv-header
     .p-fv-header-waomirai 
       img(src=ImgLogoWaoMirai)
@@ -39,11 +37,12 @@ include _mixins
        img(src=ImgBgPcGreen)  
   .p-fv-main-bottom
     img(src=ImgDividerFvBottom)
+
 //イベント概要
 section.p-section.p-section-about.p-section-about-black
   .inview-hide.inview-triger
     h2  
-    img(src=ImgTitleAboutBlack)
+      img(src=ImgTitleAboutBlack)
 
     .c-dl.c-dl.c-dl-bgblack 
       dl 
@@ -245,6 +244,10 @@ section.p-section.p-section-techseeker
         dd|一般社団法人デジタル人材共創連盟
     .p-section-techseeker-divider
       img(src=ImgDividerWaomiraiTop)
+
+//-
+//- いつものワオ未来塾バージョン
+//-
 //ワオ未来塾って？
 section.c-about
   .c-about-wrapper

@@ -28,7 +28,13 @@
     width: 90%;
     border: 4px solid $cl-black;
     box-shadow: 0 6px 0 $cl-black;
+    top: 0;
+    transition: all 0.2s ease;
     // @include box-shadow-lp;
+    &:hover {
+      top: 6px; /* 元の位置から9px分下げる */
+      box-shadow: 0 0px 0 $cl-black;
+    }
     img {
       width: 68%;
       padding: 0 0 4px 0;
