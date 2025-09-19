@@ -99,13 +99,22 @@ section.p-section.p-section-intro
     img(src=ImgDividerIntroBottom)
 //エコランタンを作りながら太陽光発電について学ぼう！
 section.p-section.p-section-make
-  .inview-hide.inview-triger
-    h2  
-      img(src=ImgTitleMake)
+    .inview-hide.inview-triger
+      h2  
+        img(src=ImgTitleMake)
+    .p-section-make-content
+      .p-section-make-mask.p-section-make-mask-left.inview-hide.inview-triger
+        +HalloweenMask(ImgMake01)
+      .p-section-make-content-text.inview-hide.inview-triger
+        img(src=ImgSubtitleMake01)
+      .p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
+        +HalloweenMask(ImgMake02)
+      .p-section-make-mask.p-section-make-mask-left.inview-hide.inview-triger
+        +HalloweenMask(ImgMake03)
+      .p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
+        +HalloweenMask(ImgMake04)
     div   
-      img(src=ImgSectionMake)
-  div   
-    img(src=ImgDividerMakeBottom)
+     img(src=ImgDividerMakeBottom)
 //申し込み方法
 section.p-section.p-section-entry
   h2.inview-hide.inview-triger  

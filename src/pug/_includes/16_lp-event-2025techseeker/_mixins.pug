@@ -29,3 +29,50 @@ mixin lineEntryButton
     .c-btn-cta-main
         a.js-line-trigger(href=UrlLine)
             img(src=ImgTextCv alt="LINEで簡単申込")
+
+
+//ハロウィンマスク
+mixin HalloweenMask(imgUrl)
+  // SVG 本体（はみ出す太線でも切れないように overflow:visible）
+  svg(viewBox="0 0 400 330" shape-rendering="geometricPrecision" style="overflow:visible")
+    // ★ フルのパスデータ（必ず最後は Z で閉じる）
+    - const clipShapePath = "M184.231 0.160168C185.241 0.160168 186.402 0.160607 187.21 0.538818C187.916 0.916932 188.168 1.49815 188.37 2.05066C190.844 9.09111 192.56 16.103 194.63 23.1434C195.831 27.231 205.51 30.2912 208.16 34.1854C217.349 36.9298 223.039 42.0905 227.371 48.7396C232.108 42.7156 238.638 38.9693 251.895 39.547C266.513 39.1426 280.77 45.7346 291.917 60.0247C296.063 56.0948 301.856 53.8112 311.872 54.2458C326.957 53.8274 341.625 61.611 352.21 78.557C364.985 98.9719 379.709 128.804 377.299 174.547C368.595 230.924 344.835 263.47 333.169 277.047C323.489 288.321 313.481 296.551 297.104 295.313C285.684 294.81 278.787 291.419 273.934 286.216C263.711 297.792 252.897 306.014 235.663 304.71C226.102 304.294 219.424 302.035 214.425 298.46C207.288 307.456 197.743 313.202 179.821 312.419C162.602 311.666 153.711 305.594 147.578 296.629C142.51 299.105 136.132 300.378 127.645 300.008C110.353 299.808 100.455 290.672 91.4748 278.26C86.0995 283.012 78.8794 285.784 67.458 285.279C51.0225 285.083 41.9289 276.028 33.478 263.958C23.2989 249.426 3.04559 214.964 0.292807 158.078C2.70203 112.334 20.487 83.9145 35.3385 64.7117C47.6529 48.7813 63.0654 42.3205 78.0351 44.0413C88.0734 44.4781 93.603 47.26 97.3163 51.5414C109.911 38.2976 124.785 32.9844 139.29 34.6479C151.278 35.1704 157.421 38.7371 161.507 44.1542C164.521 40.7367 167.992 37.8823 172.305 35.7997C172.415 35.1285 172.686 34.4913 173.071 33.8822L173.176 33.6468C177.063 28.1774 182.372 27.9878 180 21.5004C179.293 19.5803 171.259 1.61633 173.226 1.26528C176.81 0.654325 180.496 0.276541 184.231 0.160168Z"
+
+    defs
+      // 画像の切り抜き用マスク（白=表示、黒=非表示）
+      // 端のにじみを隠すため +1〜2px 膨張させる白ストロークを追加
+      mask(id="maskContent" maskContentUnits="userSpaceOnUse")
+        rect(width="400" height="350" fill="black")
+        path(d=clipShapePath, fill="white")
+        path(d=clipShapePath, fill="none", stroke="white", stroke-width="2", stroke-linejoin="round")
+
+      // アウトライン（外側だけ）を作るマスク
+      // 1) 太い白ストロークで輪郭を作る
+      // 2) その内側を黒塗りの元形で“くり抜く” → 外周だけ残る
+      mask(id="maskOutlineOutside" maskContentUnits="userSpaceOnUse")
+        rect(width="400" height="350" fill="black")
+        // ★ 枠の太さは stroke-width（下の線と同じ値）で調整
+        path(d=clipShapePath, fill="none", stroke="white", stroke-width="8", stroke-linejoin="round", stroke-linecap="round")
+        // 内側を消す（中身に勝たない＝覆わない）
+        path(d=clipShapePath, fill="black")
+
+    // ========== 中身（画像＋HTML） ==========
+    g(mask="url(#maskContent)")
+      image(href=imgUrl width="100%" height="100%" preserveAspectRatio="xMidYMid slice" class="moving-img")
+      foreignObject(width="100%" height="100%")
+        div.fo-container(xmlns="http://www.w3.org/1999/xhtml")
+          .moving
+
+    // ========== アウトライン（外側だけ見える） ==========
+    // マスクで“外側だけ”残しているので、内容に勝って塗り潰すことはありません
+    path(
+      d=clipShapePath
+      fill="none"
+      stroke="#F3DEA2"
+      stroke-width="20"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      paint-order="stroke"
+      pointer-events="none"
+      mask="url(#maskOutlineOutside)"
+    )

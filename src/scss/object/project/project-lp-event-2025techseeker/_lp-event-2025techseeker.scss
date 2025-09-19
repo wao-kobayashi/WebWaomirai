@@ -210,7 +210,48 @@ section.p-section-make {
     #ffeaad 100%
   );
   h2 {
-    padding: 20px 0 0;
+    padding: 20px 0 40px;
+  }
+  .p-section-make-mask {
+    svg {
+      width: 100%;
+    }
+  }
+  .p-section-make-content-text {
+    width: 70%;
+    margin: 0 0 60px 20px;
+  }
+  .p-section-make-mask-left {
+    text-align: left;
+    svg {
+      margin-left: -40px;
+    }
+  }
+  .p-section-make-mask-right {
+    text-align: right;
+    svg {
+      margin-right: -40px;
+    }
+  }
+  .moving {
+    width: 100%;
+    height: 400px;
+    background: repeating-linear-gradient(
+      90deg,
+      #fed088,
+      #fed088 20px,
+      #ffd9a2 20px,
+      #ffd9a2 40px
+    );
+    @keyframes slide {
+      0% {
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateY(-400px);
+      }
+    }
   }
 }
 

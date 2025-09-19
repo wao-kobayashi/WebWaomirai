@@ -117,3 +117,16 @@ script.
     });
 
   });
+
+script.
+  $(document).ready(function () {
+    $(".p-section-make-mask")
+      .on("inview", function (event, isInView) {
+        if (isInView) {
+          $(this).addClass("inview");
+          $(this).find(".moving").css("animation", "slide 1s linear forwards");
+          $(this).off("inview"); // 1回だけ
+        }
+      })
+      .trigger("inview"); // これで初回もチェック
+  });
