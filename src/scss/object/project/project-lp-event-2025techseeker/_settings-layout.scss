@@ -80,6 +80,7 @@ $body-margin-Right: 10%;
   border-radius: 100px;
   overflow: hidden;
   right: 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.18);
   &::-webkit-scrollbar {
     display: none;
   }

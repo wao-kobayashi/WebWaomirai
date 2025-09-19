@@ -75,18 +75,18 @@ section.p-section.p-section-intro
   div 
     img(src=ImgDividerAboutBottom)
 
-  .p-section.p-section-intro-box.inview-hide.inview-triger
-    h2  
+  .p-section.p-section-intro-box
+    h2
       img(src=ImgTitleIntro)
-    .p-section.p-section-intro-box-img 
+    .p-section.p-section-intro-box-img.inview-hide.inview-triger
        img(src=ImgAboutSun)
-    .p-section.p-section-intro-box-text    
+    .p-section.p-section-intro-box-text.inview-hide.inview-triger
        |お日さまの光をいっぱい浴びて、
        br
        |ランタンにエネルギーをためこみます。
-    .p-section.p-section-intro-box-img 
+    .p-section.p-section-intro-box-img.inview-hide.inview-triger
        img(src=ImgAboutNight)
-    .p-section.p-section-intro-box-text    
+    .p-section.p-section-intro-box-text.inview-hide.inview-triger
        |チャージされた電気がランプを灯し、
        br
        |暗闇をやさしく照らします。
@@ -106,14 +106,56 @@ section.p-section.p-section-make
       .p-section-make-mask.p-section-make-mask-left.inview-hide.inview-triger
         +HalloweenMask(ImgMake01)
       .p-section-make-content-text.inview-hide.inview-triger
-        img(src=ImgSubtitleMake01)
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake01)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake01)
+        .p-section-make-content-text-read
+         |最初に、身近な再生可能エネルギー
+         br
+         |「太陽光発電」についてやさしく解説。
+         br
+         |“光が電気になる”不思議を知ることで、
+         br
+         |工作の意味がぐっと広がります。
       .p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
         +HalloweenMask(ImgMake02)
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake02)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake02)
+        .p-section-make-content-text-read
+         |用意されたライトにペットボトルを
+         br
+         |組み合わせ、手を動かして「自分だけのエコランタン」を完成。科学の知識と工作の楽しさがひとつになります。
       .p-section-make-mask.p-section-make-mask-left.inview-hide.inview-triger
         +HalloweenMask(ImgMake03)
-      .p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake03)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake03)
+        .p-section-make-content-text-read
+         |ゴミになるはずのペットボトルが、
+         br
+         |新しい価値を持つランタンに変身。
+         br
+         |環境へのやさしい視点を育てます。
+      .p-section-make-mask-04.p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
         +HalloweenMask(ImgMake04)
-    div   
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake04)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake04)
+        .p-section-make-content-text-read
+         |完成したランタンはそのまま持ち帰りOK。
+         br
+         |家でも光を楽しめるので、ワークショップの体験が日常に続いていきます。
+      .p-section-make-content-bg
+        img(src=ImgBgMake01)
+    .p-section-make-divider
      img(src=ImgDividerMakeBottom)
 //申し込み方法
 section.p-section.p-section-entry
@@ -192,6 +234,7 @@ section.p-section.p-section-about.p-section-about-white
     .p-section-about-map-button 
       a(href=UrlGoogleMap target='_blank')
         img(src=ImgTextGooglemap alt="Googleマップを開く")
+    #access
     .p-section-about-map-iframe.
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13130.7831828881!2d135.412942!3d34.637127!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e852f127885b%3A0x38c4fbca48184eeb!2zQVRD77yI44Ki44K444Ki5aSq5bmz5rSL44OI44Os44O844OJ44K744Oz44K_44O877yJ!5e0!3m2!1sja!2sjp!4v1758247225450!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 

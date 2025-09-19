@@ -31,7 +31,7 @@
     }
     .p-fv-header-techseeker img {
       position: absolute;
-      width: 40px;
+      width: 60px;
       right: 10px;
       top: 10px;
 
@@ -209,33 +209,86 @@ section.p-section-make {
     #ffeaad 50%,
     #ffeaad 100%
   );
+  // background: $cl-halloween-creamyellow;
   h2 {
-    padding: 20px 0 40px;
+    padding: 20px 0 20px;
+    position: relative;
+    z-index: 1;
   }
-  .p-section-make-mask {
-    svg {
-      width: 100%;
-    }
+  .p-section-make-content-bg img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    // display: none;
+  }
+  .p-section-make-content {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 0;
   }
   .p-section-make-content-text {
-    width: 70%;
-    margin: 0 0 60px 20px;
+    margin: 0 0 35px 30px;
+    position: relative;
+    z-index: 1;
+    .p-section-make-content-text-icon {
+      position: absolute;
+      top: -71px;
+      left: -10px;
+      width: 18%;
+      z-index: 2;
+    }
+    .p-section-make-content-text-title {
+      width: 70%;
+      @include responsive-style($breakpoint-sp) {
+        width: 80%;
+      }
+    }
+    .p-section-make-content-text-read {
+      margin: 15px 0 0;
+      font-size: $font-size-m;
+      line-height: $lineheight-extra-loose;
+      width: 70%;
+      @include responsive-style($breakpoint-sp) {
+        width: 80%;
+        font-size: $font-size-s;
+      }
+    }
   }
+  // .p-section-make-mask-04 {
+  //   margin: 20px 0 0 !important;
+  // }
+  .p-section-make-mask {
+    position: relative;
+    z-index: 1;
+    margin: 15px 0 0 !important;
+    // overflow: hidden;
+    svg {
+      width: 103%;
+    }
+    .p-section-make-mask-icon {
+      position: absolute;
+    }
+  }
+
   .p-section-make-mask-left {
     text-align: left;
     svg {
-      margin-left: -40px;
+      margin-left: -9%;
     }
   }
   .p-section-make-mask-right {
     text-align: right;
     svg {
-      margin-right: -40px;
+      margin-right: -9%;
     }
   }
   .moving {
     width: 100%;
     height: 400px;
+    position: relative;
+
     background: repeating-linear-gradient(
       90deg,
       #fed088,
@@ -245,13 +298,19 @@ section.p-section-make {
     );
     @keyframes slide {
       0% {
-        transform: translateX(0px);
+        transform: translateX(0);
       }
-
       100% {
-        transform: translateY(-400px);
+        transform: translateX(400px);
       }
     }
+    @include responsive-style($breakpoint-tb) {
+      display: none;
+    }
+  }
+  .p-section-make-divider {
+    padding: 60px 0 0px;
+    position: relative;
   }
 }
 
@@ -272,7 +331,7 @@ section.p-section-entry {
       .p-section-entry-flow-title-left {
         flex: 1;
         .p-section-entry-flow-title-step {
-          padding: 5px 15px;
+          padding: 8px 15px 5px;
           border-radius: $border-radius-full;
           color: $cl-white;
           background: $cl-halloween-orange;
@@ -282,9 +341,12 @@ section.p-section-entry {
           margin: 0 0 14px;
         }
         .p-section-entry-flow-title-name {
-          font-size: $font-size-l;
+          font-size: $font-size-xl;
           font-weight: bold;
           letter-spacing: 1px;
+          @include responsive-style($breakpoint-sp) {
+            font-size: $font-size-l;
+          }
         }
       }
       .p-section-entry-flow-title-right {
@@ -625,6 +687,7 @@ section.p-section-faq {
   max-width: $width-lg;
   background: $cl-lp-yellow;
   padding-top: 50px;
+  line-height: $lineheight-loose;
   .c-title-lp {
     padding-top: 0px;
   }
@@ -638,8 +701,11 @@ section.p-section-faq {
   gap: 30px;
   flex-direction: column;
   border-radius: $border-radius-bigplus;
-  padding: 40px 20px 40px;
+  padding: 40px 25px 40px;
   background: $cl-lp-white;
+  @include responsive-style(768px) {
+    padding: 40px 20px 40px;
+  }
 }
 .c-about-box-left {
   width: 70%;
@@ -647,7 +713,7 @@ section.p-section-faq {
 }
 .c-about-box-right {
   flex: 1;
-  line-height: $lineheight-relaxed;
+  line-height: $lineheight-loose;
   // @include font-size-m;
   letter-spacing: 0.5px;
 }
