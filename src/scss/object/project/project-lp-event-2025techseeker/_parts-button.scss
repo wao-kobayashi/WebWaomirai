@@ -26,3 +26,28 @@
     }
   }
 }
+.p-section-about-map-button {
+  text-align: center;
+  a {
+    text-align: center;
+    margin: 30px auto 0px;
+    cursor: pointer;
+    background: $cl-black;
+    text-decoration: none;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    max-width: 500px;
+    position: relative;
+    // @include font-size-l;
+    letter-spacing: 1px;
+    width: 90%;
+    // @include box-shadow-lp;
+    img {
+      width: 68%;
+      padding: 0 0 0px 0;
+    }
+  }
+}

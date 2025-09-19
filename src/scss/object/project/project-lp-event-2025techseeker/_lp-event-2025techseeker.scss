@@ -1,47 +1,5 @@
 //////////////////////
-//01共通で使うパーツ
-//////////////////////
-.c-dl.c-dl-bgblack {
-  color: $cl-white;
-  dt {
-    color: $cl-halloween-yellow;
-  }
-}
-.c-dl.c-dl-bgwhite {
-  color: $cl-black;
-  dt {
-    color: $cl-halloween-orange;
-  }
-}
-
-.c-dl {
-  letter-spacing: 1px;
-  @include content-width;
-  margin: 0 auto;
-  a {
-    color: $cl-white;
-    text-decoration: underline;
-  }
-  dl {
-    display: flex;
-    padding: 15px 20px;
-    gap: 40px;
-    border-bottom: 1px dashed $cl-halloween-gray;
-  }
-  dt {
-    width: 40px;
-    white-space: nowrap;
-    // background: red;
-    display: block;
-    font-weight: bold;
-  }
-  dd {
-    flex: 1;
-  }
-}
-
-//////////////////////
-// 02各セクションのデザイン定義
+// 01各セクションのデザイン定義
 //////////////////////
 ///
 //- ファーストビュー
@@ -191,9 +149,6 @@ section.p-section-about {
 .p-section-about-black {
   background: $cl-halloween-black;
 }
-.p-section-about-white {
-  background: $cl-white;
-}
 
 //太陽の光でペットボトルが光る
 section.p-section-intro {
@@ -341,9 +296,70 @@ section.p-section-entry {
     padding: 70px 0 0;
   }
 }
+section.p-section-about-white {
+  background: $cl-white;
+  padding: 70px 0 120px;
+  h2 {
+    margin: 0 0 30px;
+  }
+  .p-section-about-map-iframe {
+    @include content-width;
+    margin: 30px auto 0;
+  }
+}
+section.p-section-faq {
+  background: $cl-white;
+  padding: 0px 0 120px;
+  h2 {
+    margin: 0 0 30px;
+  }
+  .p-section-faq-box {
+    @include content-width;
+    padding: 0 23px;
+    margin: 30px auto 0;
+    border-bottom: 1px dashed $cl-halloween-gray;
+    .p-section-faq-box-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      letter-spacing: 0.5px;
+      margin: 0 0 7px;
+      span {
+        color: $cl-halloween-orange;
+        font-size: $font-size-xl;
+        font-weight: 500;
+      }
+      .p-section-faq-box-title-text {
+        font-size: $font-size-l;
+        font-weight: 500;
+        flex: 1;
+      }
+    }
+    .p-section-faq-box-content {
+      font-size: $font-size-m;
+      margin: 0 auto 25px;
+    }
+  }
+}
+
+.p-section-techseeker {
+  background: $cl-white;
+  padding: 0px 0 0px;
+  h2 {
+    margin: 0 0 30px;
+  }
+  .p-section-about-map-iframe {
+    @include content-width;
+    margin: 30px auto 0;
+  }
+  .p-section-techseeker-divider {
+    padding: 70px 0 0;
+  }
+}
 
 //////////////////////
-// 03共通エリア
+// 02共通エリア
 //////////////////////
 
 // 共通タイトル
