@@ -369,6 +369,9 @@ section.p-section-faq {
   margin: 0 auto 30px;
   font-weight: normal;
   text-align: center;
+  font-size: $font-size-xxl;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 // こんなお子さまたちにオススメです！
@@ -561,7 +564,7 @@ section.p-section-faq {
   background: $cl-lp-yellow;
   padding-top: 50px;
   .c-title-lp {
-    padding-top: 75px;
+    padding-top: 0px;
   }
 }
 .c-about-wrapper {
@@ -598,7 +601,7 @@ section.p-section-faq {
   margin: 0 auto;
 }
 .c-details-catch {
-  // @include font-size-l;
+  font-size: $font-size-xxl;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -607,7 +610,7 @@ section.p-section-faq {
   margin: 0 auto 30px;
 }
 .c-details-target {
-  // @include font-size-l;
+  font-size: $font-size-xl;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -645,7 +648,7 @@ section.p-section-faq {
 }
 .c-details-feature-box-text {
   // @include font-size-m;
-  line-height: $lineheight-normal;
+  line-height: $lineheight-relaxed;
 }
 .c-details-btn {
   text-align: center;
@@ -669,6 +672,7 @@ section.p-section-faq {
     .c-details-btn-text {
       margin: 0px 0 0;
       // @include font-size-l;
+      font-size: $font-size-xl;
       letter-spacing: 1px;
     }
     .c-details-btn-icn {

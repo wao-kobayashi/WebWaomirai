@@ -4,7 +4,7 @@ include _variables
 //- ミックスイン
 include _mixins
 
-//- coming soon
+//- 9/29前はcoming soon
 if releasePhase  === "one"
   .l-annoncement-overlay 
     .l-annoncement-overlay-title
@@ -24,11 +24,11 @@ if releasePhase  === "one"
   .l-pc-logo-header-techseeker
     img(src=ImgLogoTechseeker alt="TechSeeker")
 
+//- PCのみ左部分ロゴ
 .l-pc-logo-main.pcimage
-  
   .l-pc-logo-main-img 
     img(src=ImgLogoSolarpower)
-
+  +lineEntryButton
 .l-pc-bg-solarpower.pcimage
   .l-pc-bg-solarpower-crowds 
      .l-pc-bg-solarpower-crowds-01 

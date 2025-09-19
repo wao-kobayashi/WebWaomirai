@@ -51,7 +51,7 @@ $body-margin-Right: 10%;
 
 .l-pc-logo-main {
   position: fixed;
-  top: 30%;
+  top: 25%;
   margin: 0 auto;
   text-align: center;
   width: clamp(0px, calc(450px - (1200px - 100vw)), 450px);
@@ -92,7 +92,7 @@ $body-margin-Right: 10%;
     margin: 80px auto 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 500px;
   }
   @include responsive-style($breakpoint-sp) {
     margin: 0px auto auto;
@@ -100,5 +100,6 @@ $body-margin-Right: 10%;
     border: 0;
     position: relative;
     height: auto;
+    width: 100%;
   }
 }
