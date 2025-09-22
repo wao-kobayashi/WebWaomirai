@@ -51,7 +51,7 @@ $body-margin-Right: 10%;
 
 .l-pc-logo-main {
   position: fixed;
-  top: 25%;
+  top: 23%;
   margin: 0 auto;
   text-align: center;
   width: clamp(0px, calc(450px - (1200px - 100vw)), 450px);
@@ -65,6 +65,12 @@ $body-margin-Right: 10%;
   }
   @include responsive-style($breakpoint-tb) {
     display: none !important;
+  }
+  .c-btn-cta-main {
+    text-align: center;
+    a {
+      margin: 10px auto 0px !important;
+    }
   }
 }
 
