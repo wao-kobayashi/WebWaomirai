@@ -1,17 +1,9 @@
 @mixin box-shadow-lp {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
 }
-@mixin box-shadow-list {
-  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.14);
-}
-@mixin box-shadow-tab-list {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.14);
-}
+
 @mixin box-shadow-feature {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-}
-@mixin box-shadow-fv {
-  box-shadow: 5px 0px 0px $cl-fv-shadow;
 }
 
 // border-radius
@@ -21,7 +13,7 @@ $border-radius-smallplus: 6px;
 $border-radius-middle: 10px;
 $border-radius-big: 12px;
 $border-radius-bigplus: 16px;
-$border-radius-huge: 21px;
+$border-radius-huge: 20px;
 $border-radius-large: 40px;
 $border-radius-extrabig: 64px;
 $border-radius-full: 10000px;

@@ -1,36 +1,5 @@
 script.
-  $(function(){
-      // [画像ファイル, 表示時間(ms)] の配列にする
-      const frames = [
-        ["!{ImgFvBattery01}", 500],   // 0.5秒
-        ["!{ImgFvBattery02}", 500],   // 0.5秒
-        ["!{ImgFvBattery03}", 500],   // 0.5秒
-        ["!{ImgFvBattery04}", 500],   // 0.5秒
-        ["!{ImgFvBattery05}", 200],   // 0.2秒
-        ["!{ImgFvBattery06}", 800],   // 0.8秒
-      ];
 
-      let i = 0;
-
-      /**
-       * フレームを切り替える関数
-       * 配列内の画像を順番に表示し、指定時間後に次の画像に切り替える
-       */
-      function showFrame(){
-        // 画像を切り替え
-        $("#p-fv-main-inner-battery-img").attr("src", frames[i][0]);
-
-        // 次のフレームに移動（ループ）
-        const delay = frames[i][1];
-        i = (i + 1) % frames.length;
-
-        // 次の切り替えを予約
-        setTimeout(showFrame, delay);
-      }
-
-      // 最初のフレームを表示開始
-      showFrame();
-    });
 
   /**
   * jQuery Document Ready
@@ -120,13 +89,85 @@ script.
 
 script.
   $(document).ready(function () {
-    $(".p-section-make-mask")
-      .on("inview", function (event, isInView) {
-        if (isInView) {
-          $(this).addClass("inview");
-          $(this).find(".moving").css("animation", "slide 1s linear forwards");
-          $(this).off("inview"); // 1回だけ
+    ////////////////////////////  
+    // FV太陽光パネルのアニメーション
+    ////////////////////////////
+    $(function(){
+        // [画像ファイル, 表示時間(ms)] の配列にする
+        const frames = [
+          ["!{ImgFvBattery01}", 500],   // 0.5秒
+          ["!{ImgFvBattery02}", 500],   // 0.5秒
+          ["!{ImgFvBattery03}", 500],   // 0.5秒
+          ["!{ImgFvBattery04}", 500],   // 0.5秒
+          ["!{ImgFvBattery05}", 200],   // 0.2秒
+          ["!{ImgFvBattery06}", 800],   // 0.8秒
+        ];
+
+        let i = 0;
+
+        /**
+        * フレームを切り替える関数
+        * 配列内の画像を順番に表示し、指定時間後に次の画像に切り替える
+        */
+        function showFrame(){
+          // 画像を切り替え
+          $("#p-fv-main-inner-battery-img").attr("src", frames[i][0]);
+
+          // 次のフレームに移動（ループ）
+          const delay = frames[i][1];
+          i = (i + 1) % frames.length;
+
+          // 次の切り替えを予約
+          setTimeout(showFrame, delay);
         }
-      })
-      .trigger("inview"); // これで初回もチェック
+
+        // 最初のフレームを表示開始
+        showFrame();
+      });
+    ////////////////////////////  
+    // 太陽光発電を楽しく学ぼう
+    ////////////////////////////
+    /**
+     * 共通のinview処理
+     * @param {string} selector - 対象のセレクタ
+     * @param {string} animation - 適用するアニメーション名
+     */
+    function handleInview(selector, animation) {
+      $(selector)
+        .on("inview", function (event, isInView) {
+          if (isInView) {
+            $(this).addClass("inview");
+            $(this).find(".moving").css("animation", `${animation} 1s linear forwards`);
+            $(this).off("inview"); // 1回だけ
+               if (window.innerWidth >= 768) {
+            // 横幅768以上なら 1秒後
+            setTimeout(() => {
+               $(this).find(".moving-img").addClass("scale-up");
+            }, 1000);
+          }
+          }
+        })  
+        .trigger("inview"); // 初回もチェック
+    }
+
+    // 左側のマスク処理
+    handleInview(".p-section-make-mask-left", "slide-left");
+
+    // 右側のマスク処理
+    handleInview(".p-section-make-mask-right", "slide-right");
+  });
+  
+
+  ////////////////////////////
+  // Chrome以外はアニメーションを無効化
+  // 本当は全デバイスで動かしたいが、Safariでバグるため
+  ////////////////////////////
+  const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+  $('.moving').each(function() {
+    if (isChrome) {
+      // Chrome以外なら対象要素を非表示
+      $(this).show();
+      return; // この要素だけ処理スキップ
+    }
   });

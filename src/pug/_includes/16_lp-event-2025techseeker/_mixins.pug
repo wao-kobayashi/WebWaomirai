@@ -41,7 +41,7 @@ mixin HalloweenMask(imgUrl)
     defs
       // 画像の切り抜き用マスク（白=表示、黒=非表示）
       // 端のにじみを隠すため +1〜2px 膨張させる白ストロークを追加
-      mask(id="maskContent" maskContentUnits="userSpaceOnUse")
+      mask(id="maskContent" maskContentUnits="userSpaceOnUse"  maskUnits="userSpaceOnUse" )
         rect(width="400" height="320" fill="black")
         path(d=clipShapePath, fill="white")
         path(d=clipShapePath, fill="none", stroke="white", stroke-width="2", stroke-linejoin="round")
@@ -49,7 +49,7 @@ mixin HalloweenMask(imgUrl)
       // アウトライン（外側だけ）を作るマスク
       // 1) 太い白ストロークで輪郭を作る
       // 2) その内側を黒塗りの元形で“くり抜く” → 外周だけ残る
-      mask(id="maskOutlineOutside" maskContentUnits="userSpaceOnUse")
+      mask(id="maskOutlineOutside" maskContentUnits="userSpaceOnUse" )
         rect(width="400" height="350" fill="black")
         // ★ 枠の太さは stroke-width（下の線と同じ値）で調整
         path(d=clipShapePath, fill="none", stroke="white", stroke-width="8", stroke-linejoin="round", stroke-linecap="round")

@@ -53,7 +53,7 @@
       width: 60%;
     }
     .p-fv-main-outer-logo {
-      margin: 340px 0 10px;
+      margin: 360px 0 10px;
       animation: FvfadeInUp 0.65s ease-out;
       @keyframes FvfadeInUp {
         from {
@@ -66,20 +66,20 @@
         }
       }
       @include responsive-style($breakpoint-tb) {
-        margin: 310px auto 10px;
+        margin: 320px auto 10px;
         width: 95%;
       }
       @include responsive-style(430px) {
-        margin: 290px auto 10px;
+        margin: 300px auto 10px;
       }
       @include responsive-style(414px) {
-        margin: 270px auto 10px;
+        margin: 280px auto 10px;
       }
       @include responsive-style(390px) {
-        margin: 260px auto 10px;
+        margin: 270px auto 10px;
       }
       @include responsive-style(375px) {
-        margin: 240px auto 10px;
+        margin: 260px auto 10px;
       }
     }
     .p-fv-main-outer-date {
@@ -119,7 +119,7 @@
       height: 200px;
       width: 100%;
       @include min-responsive-style($breakpoint-tb) {
-        height: 260px;
+        height: 290px;
       }
       //   z-index: 0;
     }
@@ -238,6 +238,9 @@ section.p-section-make {
       left: -10px;
       width: 18%;
       z-index: 2;
+      @include responsive-style($breakpoint-sp) {
+        top: -71px;
+      }
     }
     .p-section-make-content-text-title {
       width: 70%;
@@ -288,7 +291,7 @@ section.p-section-make {
     width: 100%;
     height: 400px;
     position: relative;
-
+    display: none;
     background: repeating-linear-gradient(
       90deg,
       #fed088,
@@ -296,14 +299,7 @@ section.p-section-make {
       #ffd9a2 20px,
       #ffd9a2 40px
     );
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(400px);
-      }
-    }
+
     @include responsive-style($breakpoint-tb) {
       display: none;
     }
@@ -312,6 +308,17 @@ section.p-section-make {
     padding: 60px 0 0px;
     position: relative;
   }
+}
+
+.moving-img {
+  transform-origin: center center; /* 中心を基準に拡大縮小 */
+  transform: scale(1);
+  transition: transform 0.65s ease; /* トランジションを設定 */
+}
+
+/* 拡大アニメーション用のクラス */
+.moving-img.scale-up {
+  transform: scale(1.1); /* 1.2倍に拡大 */
 }
 
 //申し込み方法
