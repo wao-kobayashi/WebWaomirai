@@ -10,7 +10,7 @@
     20px,
     90deg
   );
-  padding: 20px 0 0px;
+  padding: 30px 0 0px;
   @include min-responsive-style($breakpoint-tb) {
     padding: 40px 0 0px;
   }
@@ -22,8 +22,8 @@
     .p-fv-header-waomirai img {
       position: absolute;
       left: 10px;
-      top: 10px;
-      width: 100px;
+      top: 14px;
+      width: 116px;
 
       @include min-responsive-style($breakpoint-sp) {
         display: none !important;
