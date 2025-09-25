@@ -33,6 +33,15 @@ export default defineConfig({
   root: 'dist', // Eleventy の出力を見る
   base: './',
   server: {
+    host: true, // これで全てのホストからのアクセスを許可
+    port: 5173,
+    strictPort: true,
+    // allowedHosts を明示的に無効化
+    disableHostCheck: true, // これを追加するだけ
+    allowedHosts: [
+      'localhost',
+      'e5d8a51e2b0c.ngrok-free.app'  // エラーメッセージのホスト名をそのまま追加
+    ],
     open: true
   },
   build: {

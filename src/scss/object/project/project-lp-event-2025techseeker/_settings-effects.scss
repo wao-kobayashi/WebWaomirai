@@ -1,0 +1,19 @@
+@mixin box-shadow-lp {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+}
+
+@mixin box-shadow-feature {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+// border-radius
+$border-radius-tiny: 4px;
+$border-radius-small: 5px;
+$border-radius-smallplus: 6px;
+$border-radius-middle: 10px;
+$border-radius-big: 12px;
+$border-radius-bigplus: 16px;
+$border-radius-huge: 20px;
+$border-radius-large: 40px;
+$border-radius-extrabig: 64px;
+$border-radius-full: 10000px;

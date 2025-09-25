@@ -1,0 +1,118 @@
+// width
+$width-main: 500px; // メインの幅
+$width-xl: 1200px; // 最大幅（セクション全体）
+$width-lg: 1050px; // 大きめの幅（汎用的に利用）
+$width-sm: 700px; // 小さめの幅（「簡単5ステップで〜」で利用）
+$width-main-content: 92%; // メインの幅
+$breakpoint-dk: 1440px; // ブレイクポイントの幅
+$breakpoint-tb: 1000px; // ブレイクポイントの幅
+$breakpoint-sp: 768px; // ブレイクポイントの幅
+$min-breakpoint-pc: 769px; // ブレイクポイントの幅
+
+// グリッド
+$bg-grid: "https://go.waomirai.com/l/1026513/2025-06-25/hq5sq/1026513/1751006905bwjnruZV/grid_lp_sum25.png";
+
+.l-header-coming-soon {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $cl-white;
+}
+.l-pc-logo-header .l-pc-logo-header-waomirai img {
+  position: fixed;
+  left: 10px;
+  top: 20px;
+  width: 200px;
+  z-index: 10;
+  @include responsive-style($breakpoint-tb) {
+    position: absolute;
+  }
+  @include responsive-style($breakpoint-sp) {
+    display: none !important;
+  }
+}
+.l-pc-logo-header .l-pc-logo-header-techseeker img {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 70px;
+  z-index: 10;
+  @include responsive-style($breakpoint-tb) {
+    position: absolute;
+  }
+  @include responsive-style($breakpoint-sp) {
+    display: none !important;
+  }
+}
+
+$body-margin-Left: 8%;
+$body-margin-Right: 10%;
+
+.l-pc-logo-main {
+  position: fixed;
+  top: 23%;
+  margin: 0 auto;
+  text-align: center;
+  width: clamp(0px, calc(450px - (1200px - 100vw)), 450px);
+  left: calc((100% - 1440px) / 2 + $body-margin-Left);
+  @include responsive-style($breakpoint-dk) {
+    left: $body-margin-Left;
+  }
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  @include responsive-style($breakpoint-tb) {
+    display: none !important;
+  }
+  .c-btn-cta-main {
+    text-align: center;
+    a {
+      margin: 10px auto 0px !important;
+    }
+  }
+}
+
+//メイン部分
+.l-main {
+  width: $width-main;
+  margin-top: 50px;
+  margin-right: calc((100% - 1440px) / 2 + $body-margin-Right);
+  margin-bottom: 80px;
+  margin-left: auto;
+  position: relative;
+  border: 8px solid white;
+  border-radius: 100px;
+  overflow: hidden;
+  right: 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.18);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include responsive-style($breakpoint-dk) {
+    margin-right: $body-margin-Right;
+  }
+  @include responsive-style($breakpoint-tb) {
+    // border: none;
+    // border-radius: 0;
+    margin: 80px auto 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+  }
+  @include responsive-style($breakpoint-sp) {
+    margin: 0px auto auto;
+    border-radius: 0 0 0;
+    border: 0;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+}

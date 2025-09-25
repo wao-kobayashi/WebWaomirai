@@ -1,0 +1,45 @@
+//////////////////////
+//01共通で使うパーツ
+//////////////////////
+.c-dl.c-dl-bgblack {
+  color: $cl-white;
+  background: url(https://waomirai.com/lp/assets/lpimages/16_lp-event-2025techseeker/bg_about_black.svg);
+  background-size: cover;
+  dt {
+    color: $cl-halloween-yellow;
+  }
+}
+.c-dl.c-dl-bgwhite {
+  color: $cl-black;
+  background: url(https://waomirai.com/lp/assets/lpimages/16_lp-event-2025techseeker/bg_about_white.svg);
+  background-size: cover;
+  dt {
+    color: $cl-halloween-orange;
+  }
+}
+
+.c-dl {
+  letter-spacing: 1px;
+  @include content-width;
+  margin: 0 auto;
+  a {
+    color: $cl-white;
+    text-decoration: underline;
+  }
+  dl {
+    display: flex;
+    padding: 15px 20px;
+    gap: 40px;
+    border-bottom: 1px dashed $cl-halloween-gray;
+  }
+  dt {
+    width: 40px;
+    white-space: nowrap;
+    // background: red;
+    display: block;
+    font-weight: bold;
+  }
+  dd {
+    flex: 1;
+  }
+}

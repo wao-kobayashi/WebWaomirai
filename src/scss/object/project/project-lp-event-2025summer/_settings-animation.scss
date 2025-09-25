@@ -1,0 +1,122 @@
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes animation-scale {
+  0% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes FvfadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(200px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(-200px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
+@keyframes cloud-move2 {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(-200px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(200px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
+@keyframes fuwafuwa-button {
+  0% {
+    scale: 1;
+    transform: scale(1);
+  }
+  8% {
+    scale: 1.04;
+    transform: scale(1.04);
+  }
+  17% {
+    scale: 1;
+    transform: scale(1);
+  }
+  25% {
+    scale: 1.02;
+    transform: scale(1.02);
+  }
+  38% {
+    scale: 1;
+    transform: scale(1);
+  }
+  100% {
+    scale: 1;
+    transform: scale(1);
+  }
+}
+
+.inview-hide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
+}
+
+.inview {
+  opacity: 1;
+  transform: translateY(0);
+}

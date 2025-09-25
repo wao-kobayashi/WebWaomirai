@@ -1,0 +1,384 @@
+.c-btn-fixed.spimage(style='display:none;')
+ +lineEntryButton
+
+//-
+//- メインコンテンツのセクション
+//-
+
+//- ファーストビュー
+section.p-fv
+  .p-fv-header
+    .p-fv-header-waomirai 
+      img(src=ImgLogoWaoMirai)
+    .p-fv-header-techseeker
+      img(src=ImgLogoTechseeker alt="TechSeeker2025")
+  .p-fv-main-outer
+    .p-fv-main-outer-sun 
+       img(src=ImgFvSun)
+    .p-fv-main-outer-logo
+       img(src=ImgLogoSolarpower)
+    .p-fv-main-outer-date
+        |2025年 10月25日(土)・26日(日)
+        br
+        |10:00 / 11:30 / 14:00 / 15:30
+        br
+        |（各回）60分
+    .p-fv-main-outer-lantern  
+      img(src=ImgFvLantern)
+  .p-fv-main-inner 
+    .p-fv-main-inner-battery
+       img#p-fv-main-inner-battery-img(src=ImgFvBattery01)
+    .p-fv-main-inner-main
+       img(src=ImgFvMain)
+    .p-fv-main-inner-green
+      div
+       img(src=ImgBgPcGreen)   
+  .p-fv-main-bottom
+    img(src=ImgDividerFvBottom)
+
+//イベント概要
+section.p-section.p-section-about.p-section-about-black
+  .inview-hide.inview-triger
+    h2  
+      img(src=ImgTitleAboutBlack)
+
+    .c-dl.c-dl.c-dl-bgblack 
+      dl 
+        dt|費用
+        dd|無料
+      dl 
+        dt|対象
+        dd|小３〜６
+      dl 
+        dt|日時
+        dd
+          |2025年
+          br
+          |10月25日(土)・10月26日(日)
+          br
+          |10:00 / 11:30 / 14:00 / 15:30（各回）60分
+      dl 
+        dt|定員
+        dd|各回24名まで
+      dl 
+        dt|場所
+        dd|大阪咲洲ATC 特設会場
+          br
+          |アクセスは
+          a(href='#access')|こちら
+    +lineEntryButton
+
+//太陽の光でペットボトルが光る
+section.p-section.p-section-intro
+  div 
+    img(src=ImgDividerAboutBottom)
+
+  .p-section.p-section-intro-box
+    h2
+      img(src=ImgTitleIntro)
+    .p-section.p-section-intro-box-img.inview-hide.inview-triger
+       img(src=ImgAboutSun)
+    .p-section.p-section-intro-box-text.inview-hide.inview-triger
+       |お日さまの光をいっぱい浴びて、
+       br
+       |ランタンにエネルギーをためこみます。
+    .p-section.p-section-intro-box-img.inview-hide.inview-triger
+       img(src=ImgAboutNight)
+    .p-section.p-section-intro-box-text.inview-hide.inview-triger
+       |チャージされた電気がランプを灯し、
+       br
+       |暗闇をやさしく照らします。
+       br
+       br
+       |工作を通して“光が電気になる
+       br
+       |不思議を知ることができます 
+  div 
+    img(src=ImgDividerIntroBottom)
+//エコランタンを作りながら太陽光発電について学ぼう！
+section.p-section.p-section-make
+    .inview-hide.inview-triger
+      h2  
+        img(src=ImgTitleMake)
+    .p-section-make-content
+      .p-section-make-mask.p-section-make-mask-left.inview-hide.inview-triger
+        +HalloweenMask(ImgMake01)
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake01)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake01)
+        .p-section-make-content-text-read
+         |最初に、身近な再生可能エネルギー
+         br
+         |「太陽光発電」についてやさしく解説。
+         br
+         |“光が電気になる”不思議を知ることで、
+         br
+         |工作の意味がぐっと広がります。
+      .p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
+        +HalloweenMask(ImgMake02)
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake02)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake02)
+        .p-section-make-content-text-read
+         |用意されたライトにペットボトルを
+         br
+         |組み合わせ、手を動かして「自分だけのエコランタン」を完成。科学の知識と工作の楽しさがひとつになります。
+      .p-section-make-mask.p-section-make-mask-left.inview-hide.inview-triger
+        +HalloweenMask(ImgMake03)
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake03)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake03)
+        .p-section-make-content-text-read
+         |ゴミになるはずのペットボトルが、
+         br
+         |新しい価値を持つランタンに変身。
+         br
+         |環境へのやさしい視点を育てます。
+      .p-section-make-mask-04.p-section-make-mask.p-section-make-mask-right.inview-hide.inview-triger
+        +HalloweenMask(ImgMake04)
+      .p-section-make-content-text.inview-hide.inview-triger
+        .p-section-make-content-text-icon
+          img(src=ImgIcnMake04)
+        .p-section-make-content-text-title
+          img(src=ImgSubtitleMake04)
+        .p-section-make-content-text-read
+         |完成したランタンはそのまま持ち帰りOK。
+         br
+         |家でも光を楽しめるので、ワークショップの体験が日常に続いていきます。
+      .p-section-make-content-bg
+        img(src=ImgBgMake01)
+    .p-section-make-divider
+     img(src=ImgDividerMakeBottom)
+//申し込み方法
+section.p-section.p-section-entry
+  h2.inview-hide.inview-triger  
+    img(src=ImgTitleEntry)
+  .p-section-entry-flow.inview-hide.inview-triger 
+    .p-section-entry-flow-title
+      .p-section-entry-flow-title-left 
+        .p-section-entry-flow-title-step 
+          |STEP 1
+        .p-section-entry-flow-title-name 
+          |LINEで公式アカウントを
+          br
+          |友だち追加
+      .p-section-entry-flow-title-right 
+          img(src=ImgStepFlow01)
+    .p-section-entry-flow-text 
+       span.pcimage|まず、QRコードからスマートフォンで公式アカウントを友だちに追加してください。
+       span.spimage|リンクまたはボタンから公式アカウントを友だちに追加してください。
+       |・友だち追加は
+       a.js-line-trigger|こちら
+       |から
+    .p-section-entry-flow-bottom
+        img(src=ImgDividerEntryStep)
+  .p-section-entry-flow.inview-hide.inview-triger
+    .p-section-entry-flow-title
+      .p-section-entry-flow-title-left 
+        .p-section-entry-flow-title-step 
+          |STEP 2
+        .p-section-entry-flow-title-name 
+          |申し込みフォームから
+          br
+          |必要事項を入力して完了
+      .p-section-entry-flow-title-right 
+          img(src=ImgStepFlow02)
+    .p-section-entry-flow-text 
+       |友だち登録が完了すると、LINEのトーク画面に申し込みフォームが届きます。フォームをタップして必要事項をご入力ください。
+    .p-section-entry-flow-bottom
+        img(src=ImgDividerEntryStep)        
+  .p-section-entry-speech.inview-triger
+      .p-section-entry-speech-title 
+        |お申し込みが定員を超えた場合
+      .p-section-entry-speech-text 
+         |抽選にて参加者を決定させていただきます。結果は10/21(火)までに、LINEでご案内いたします。
+  //CTA
+  +lineEntryButton
+  .p-section-entry-divider
+    img(src=ImgDividerEntryBottom)
+//イベント概要
+section.p-section.p-section-about.p-section-about-white
+  .inview-hide.inview-triger
+    h2  
+      img(src=ImgTitleAbout)
+    .c-dl.c-dl-bgwhite
+      dl 
+        dt|費用
+        dd|無料
+      dl 
+        dt|対象
+        dd|小３〜６
+      dl 
+        dt|日時
+        dd
+          |2025年
+          br
+          |10月25日(土)・10月26日(日)
+          br
+          |10:00 / 11:30 / 14:00 / 15:30（各回）60分
+      dl 
+        dt|定員
+        dd|各回24名まで
+      dl 
+        dt|場所
+        dd|大阪咲洲ATC 特設会場
+
+    .p-section-about-map-button 
+      a(href=UrlGoogleMap target='_blank')
+        img(src=ImgTextGooglemap alt="Googleマップを開く")
+    #access
+    .p-section-about-map-iframe.
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13130.7831828881!2d135.412942!3d34.637127!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e852f127885b%3A0x38c4fbca48184eeb!2zQVRD77yI44Ki44K444Ki5aSq5bmz5rSL44OI44Os44O844OJ44K744Oz44K_44O877yJ!5e0!3m2!1sja!2sjp!4v1758247225450!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+//よくある質問
+section.p-section.p-section-faq
+  .inview-hide.inview-triger
+    h2  
+      img(src=ImgTitleFaq)
+    .p-section-faq-box 
+      .p-section-faq-box-title 
+         span|Q 
+         .p-section-faq-box-title-text 
+           |事前知識や準備物は必要ですか？
+      .p-section-faq-box-content
+        |不要です。会場で実験設備をご用意してお待ちしておりますので、そのままお越しください。
+    .p-section-faq-box 
+      .p-section-faq-box-title 
+         span|Q 
+         .p-section-faq-box-title-text 
+           |兄弟での参加は可能ですか？？
+      .p-section-faq-box-content
+        |可能です。お申込みフォーム内に二人目以降のお子さま情報をご記入ください。ただし希望日程は同日時でのお申込みとさせていただきます。
+    .p-section-faq-box 
+      .p-section-faq-box-title 
+         span|Q 
+         .p-section-faq-box-title-text 
+           |申込後のキャンセルはできますか？
+      .p-section-faq-box-content
+        |キャンセルをご希望の方は、LINEにてその旨ご連絡ください。
+
+//Techseeker概要
+section.p-section.p-section-techseeker
+  .inview-hide.inview-triger
+    h2  
+      img(src=ImgTitleTechseeker)
+    .c-dl.c-dl-bgwhite
+      dl 
+        dt|主催
+        dd
+         |ソフト産業プラザTEQS（公益財団法人大阪産業局）、一般社団法人i-RooBO Network Forum
+      dl 
+        dt|共催
+        dd|咲洲サテライト万博実行委員会
+      dl 
+        dt
+         |後援
+         br
+         |（予定）
+        dd
+          |日本橋筋商店街振興組合
+      dl 
+        dt
+         |運営
+         br
+         |協力
+        dd|一般社団法人MA、NPO法人 Code for OSAKA
+      dl 
+        dt|協力
+        dd|一般社団法人デジタル人材共創連盟
+    .p-section-techseeker-divider
+      img(src=ImgDividerWaomiraiTop)
+
+//-
+//- いつものワオ未来塾バージョン
+//-
+//ワオ未来塾って？
+section.c-about
+  .c-about-wrapper
+   .inview-hide.inview-triger
+    h2.c-title-lp 
+      |ワオ未来塾って？
+    .c-about-box 
+        .c-about-box-left 
+          img(src='https://go.waomirai.com/l/1026513/2025-01-15/hbx1k/1026513/17369238821jwHk8La/logo_wao.svg')
+        p.c-about-box-right
+          |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。
+          |この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。      
+
+//ワオ未来塾の詳細
+section.c-details
+ .inview-hide.inview-triger
+  .c-details-wrapper
+    p.c-details-catch 
+      |社会で役立つ学びを、
+      br
+      |今はじめよう
+      br
+      |オンラインで
+      br
+      |楽しく学ぶ“新5教科”
+    .c-details-logo 
+      img(src=ImgLogoWaoMirai)
+    p.c-details-target 
+      |〈対象〉
+      br
+      |小学3〜6年生／
+      br
+      |中学生／高校生
+    .c-details-subjects 
+      img(src=Img5Subject)
+    .c-details-feature 
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src=ImgIcn3Subject)
+          h3.c-details-feature-box-title-text 
+            |新しい5教科
+        p.c-details-feature-box-text 
+          |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src=ImgIcn3Subject)
+          h3.c-details-feature-box-title-text 
+            |飛び級制
+        p.c-details-feature-box-text 
+          |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+      .c-details-feature-box
+        .c-details-feature-box-title  
+          .c-details-feature-box-title-icon   
+            img(src=ImgIcn3Subject)
+          h3.c-details-feature-box-title-text 
+            |オンラインライブ授業
+        p.c-details-feature-box-text 
+          |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+    .c-details-btn
+      a(href='https://waomirai.com/', target='_blank')
+        .c-details-btn-text
+          |ワオ未来塾の公式サイトへ     
+        .c-details-btn-icn
+          img(src='https://go.waomirai.com/l/1026513/2025-01-19/hc4f5/1026513/173734363862S1a4bW/icn_target.svg')    
+
+//footer
+footer.l-footer
+    .l-footer-wrapper
+      ul 
+        li 
+          a(href="https://www.wao-corp.com/", target='_blank')
+            |会社概要
+        li 
+          a(href="https://www.wao-corp.com/kojin/", target='_blank')
+          |プライバシーポリシー
+        li
+          a(href="https://go.waomirai.com/shotororihiki", target='_blank')
+            |特定商取引に基づく表記
+      .l-footer-logo 
+         img(src=ImgLogoWaomiraiWhite)
+      .l-footer-copyright
+        |© ワオ・コーポレーション All rights reserved.

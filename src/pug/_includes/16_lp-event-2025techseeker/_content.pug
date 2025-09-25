@@ -1,0 +1,52 @@
+//- 変数定義
+include _variables
+
+//- ミックスイン
+include _mixins
+
+//- 9/29前はcoming soon
+if releasePhase  === "one"
+  .l-annoncement-overlay 
+    .l-annoncement-overlay-title
+      |COMING 
+      br.spimage
+      |SOON
+    .l-annoncement-overlay-text
+      |受付申し込みは準備中です。
+      br
+      |9月29日（月）12:00
+      br.spimage
+      |事前受付開始予定
+  .l-annoncement-overlay-bg
+.l-pc-logo-header.pcimage
+  .l-pc-logo-header-waomirai
+    img(src=ImgLogoWaoMirai)
+  .l-pc-logo-header-techseeker
+    a(href="https://techseeker.jp/" target="_blank" rel="noopener")
+      img(src=ImgLogoTechseeker alt="TechSeeker")
+
+//- PCのみ左部分ロゴ
+.l-pc-logo-main.pcimage
+  .l-pc-logo-main-img 
+    img(src=ImgLogoSolarpower)
+  +lineEntryButton
+.l-pc-bg-solarpower.pcimage
+  .l-pc-bg-solarpower-crowds 
+     .l-pc-bg-solarpower-crowds-01 
+       img(src=ImgPcbgBlueParts01)
+     .l-pc-bg-solarpower-crowds-02
+       img(src=ImgPcbgBlueParts01)
+  .l-pc-bg-solarpower-green
+    img(src=ImgBgPcGreenWide)
+
+.l-pc-bg-halloween(style='display:none;') 
+
+.l-main
+  include _content-main.pug
+
+//LINEモーダル
++modal
+
+if basePath === "local"
+  p(style='position: fixed; bottom:0; left:0;  z-index:9999; width:100%; text-align:left; font-size:16px; color:white; padding:15px 0;') 
+    |ローカル環境です、現在のリリースフェーズ: #{releasePhase}

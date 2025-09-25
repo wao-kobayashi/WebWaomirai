@@ -1,0 +1,62 @@
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px); /* 画面外スタート */
+  }
+  40% {
+    transform: translateX(100px); /* 画面外スタート */
+  }
+  80% {
+    transform: translateX(-100px); /* 画面外スタート */
+  }
+  100% {
+    transform: translateX(-0px); /* 画面外スタート */
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes animation-scale {
+  0% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes FvfadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.inview-hide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
+}
+
+.inview {
+  opacity: 1;
+  transform: translateY(0);
+}

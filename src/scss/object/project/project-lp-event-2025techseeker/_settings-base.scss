@@ -1,0 +1,48 @@
+//////////////////////
+// メイン部分
+//////////////////////
+
+//base.scssを読み込まないのでこちらで定義
+@media screen and (max-width: 3000px) and (min-width: 768px) {
+  .spimage {
+    display: none !important;
+  }
+  .pcimage {
+    display: inherit;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .spimage {
+    display: inherit;
+  }
+  .pcimage {
+    display: none !important;
+  }
+}
+
+@mixin content-width {
+  width: calc(100% - 46px);
+  @include responsive-style($breakpoint-tb) {
+    width: calc(100% - 40px);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+//////////////////////
+// ストライプ
+//////////////////////
+
+@function stripe-bg($color1, $color2, $stripe-width: 20px, $angle: 90deg) {
+  @return repeating-linear-gradient(
+    $angle,
+    $color1,
+    $color1 $stripe-width,
+    $color2 $stripe-width,
+    $color2 ($stripe-width * 2)
+  );
+}

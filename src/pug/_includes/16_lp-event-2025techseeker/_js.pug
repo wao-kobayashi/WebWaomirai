@@ -1,0 +1,173 @@
+script.
+
+
+  /**
+  * jQuery Document Ready
+  * ドキュメントの読み込みが完了した時点で実行されるメイン処理
+  */
+  $(document).ready(function() {
+    /**
+    * 要素が画面内に入ったときにクラスを追加する処理
+    * inview-triger クラスを持つ要素が画面内に表示されたら inview クラスを追加
+    */
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('inview');
+      }
+    });
+
+    /**
+    * 追従ボタンの表示制御
+    * スクロール位置が500pxを超えたらボタンを表示し、それ以下なら非表示にする
+    */
+    $(window).on("load scroll", function () {
+      if ($(this).scrollTop() > 500) {
+       $(".c-btn-fixed").fadeIn();
+      } else {
+       $(".c-btn-fixed").fadeOut();
+      }
+    });
+
+    /**
+    * モーダルウィンドウを開く関数
+    * モーダルと背景を表示する
+    */
+    function modalOpen() {
+      $('.modal, .bg-modal').show();
+    }
+
+    /**
+    * ボタン動作の更新関数
+    * 画面幅に応じてボタンの動作を切り替える
+    * PC: モーダルを開く動作
+    * スマホ: 通常のリンク動作
+    */
+    function updateButtonBehavior() {
+      // 769px以上をPC表示とみなす
+      var isWideScreen = $(window).width() >= 769;
+
+      // 全てのLINEトリガーのボタンに対して処理
+      $('.js-line-trigger').each(function() {
+        var $button = $(this);
+        
+        if (isWideScreen) {
+          // PC表示の場合
+          if ($button.attr('href')) {
+            // href属性を一時的にdata属性に退避し、通常のリンク動作を無効化
+            $button.data('href', $button.attr('href')).removeAttr('href');
+          }
+          // クリックイベントを一旦解除し、モーダルを開く処理を割り当て
+          $button.off('click').on('click', modalOpen);
+        } else {
+          // スマホ表示の場合
+          if ($button.data('href')) {
+            // 保存しておいたURLを元のhref属性に戻し、通常のリンク動作を有効化
+            $button.attr('href', $button.data('href')).removeData('href');
+          }
+          // クリックイベントを解除してデフォルトのリンク動作に戻す
+          $button.off('click');
+        }
+      });
+    }
+
+    /**
+    * 画面サイズ変更対応
+    * ページ読み込み時とリサイズ時にボタン動作を更新する
+    * これによりPC/スマホの表示切替時に適切な動作になる
+    */
+    $(window).on('load resize', updateButtonBehavior);
+
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+    });
+
+  });
+
+script.
+  $(document).ready(function () {
+    ////////////////////////////  
+    // FV太陽光パネルのアニメーション
+    ////////////////////////////
+    $(function(){
+        // [画像ファイル, 表示時間(ms)] の配列にする
+        const frames = [
+          ["!{ImgFvBattery01}", 500],   // 0.5秒
+          ["!{ImgFvBattery02}", 500],   // 0.5秒
+          ["!{ImgFvBattery03}", 500],   // 0.5秒
+          ["!{ImgFvBattery04}", 500],   // 0.5秒
+          ["!{ImgFvBattery05}", 200],   // 0.2秒
+          ["!{ImgFvBattery06}", 800],   // 0.8秒
+        ];
+
+        let i = 0;
+
+        /**
+        * フレームを切り替える関数
+        * 配列内の画像を順番に表示し、指定時間後に次の画像に切り替える
+        */
+        function showFrame(){
+          // 画像を切り替え
+          $("#p-fv-main-inner-battery-img").attr("src", frames[i][0]);
+
+          // 次のフレームに移動（ループ）
+          const delay = frames[i][1];
+          i = (i + 1) % frames.length;
+
+          // 次の切り替えを予約
+          setTimeout(showFrame, delay);
+        }
+
+        // 最初のフレームを表示開始
+        showFrame();
+      });
+    ////////////////////////////  
+    // 太陽光発電を楽しく学ぼう
+    ////////////////////////////
+    /**
+     * 共通のinview処理
+     * @param {string} selector - 対象のセレクタ
+     * @param {string} animation - 適用するアニメーション名
+     */
+    function handleInview(selector, animation) {
+      $(selector)
+        .on("inview", function (event, isInView) {
+          if (isInView) {
+            $(this).addClass("inview");
+            $(this).find(".moving").css("animation", `${animation} 1s linear forwards`);
+            $(this).off("inview"); // 1回だけ
+               if (window.innerWidth >= 768) {
+            // 横幅768以上なら 1秒後
+            setTimeout(() => {
+               $(this).find(".moving-img").addClass("scale-up");
+            }, 1000);
+          }
+          }
+        })  
+        .trigger("inview"); // 初回もチェック
+    }
+
+    // 左側のマスク処理
+    handleInview(".p-section-make-mask-left", "slide-left");
+
+    // 右側のマスク処理
+    handleInview(".p-section-make-mask-right", "slide-right");
+  });
+  
+
+  ////////////////////////////
+  // Chrome以外はアニメーションを無効化
+  // 本当は全デバイスで動かしたいが、Safariでバグるため
+  ////////////////////////////
+  const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+  $('.moving').each(function() {
+    if (isChrome) {
+      // Chrome以外なら対象要素を非表示
+      $(this).show();
+      return; // この要素だけ処理スキップ
+    }
+  });
