@@ -61,7 +61,7 @@
         z-index: 1;
         position: absolute;
         left: 0;
-        background: url(https://go.waomirai.com/l/1026513/2025-06-25/hq6gx/1026513/1750903759fvnH7HY7/bg_slide_lp_sum25.png) center top / cover no-repeat;
+        background: url(https://waomirai.com/lp/assets/lpimages/14_lp-event-2025summer/bg_slide_lp_sum25.png) center top / cover no-repeat;
         @include responsive-style($breakpoint-sp){
             height: 6.4vw;
         }
@@ -74,7 +74,7 @@
         transform: rotate(180deg);
     }
     &.is-yellow::after{
-        background-image: url(https://go.waomirai.com/l/1026513/2025-06-26/hqdqb/1026513/17509884317nhZH1YP/bg_slide_yellow_lp_sum25.png);
+        background-image: url(https://waomirai.com/lp/assets/lpimages/14_lp-event-2025summer/bg_slide_yellow_lp_sum25.png);
         transform: none;
     }
     img{
