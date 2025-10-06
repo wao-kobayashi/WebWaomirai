@@ -1,0 +1,712 @@
+:root{
+  --text-catch-accent: 120px;
+  --text-catch: 85px;
+  --text-title:35px;
+  --text-body:25px;
+  --text-small:15px;
+  --section-spacer:120px;
+  --small-spacer:56px;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.onlineSchool{
+  font-size: 40px;
+  color: #EFD440;
+  margin-top: 30px!important;
+}
+
+.clearfix:after{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+body{
+  background-color: #0D1217;
+  color: #ffffff;
+  font-family: "fot-udkakugo-large-pr6n", sans-serif;
+  font-size: var(--text-body);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.textCenter{
+  text-align: center;
+}
+.textLeft{
+  text-align: left;
+}
+.flex{
+  display: flex;
+}
+.displayInlineBlock{
+  display: inline-block;
+}
+.w-85{
+  width: 85%;
+  margin: 0 auto;
+}
+h2{
+  margin-bottom: var(--small-spacer);
+}
+
+/* main{
+  max-width: 1000px;
+  width: 100%;
+} */
+
+section{
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: var(--section-spacer);
+}
+
+#top{
+  margin-top: 0;
+}
+
+.topBackImage{
+  aspect-ratio: 2318/1558;
+  background-image: url('https://go.waomirai.com/test/watanabe/202403programming/topkarioki');
+  background-size: 100%;
+  position: relative;
+}
+
+.logoPC{
+  display: block;
+  float: right;
+  margin-right: 35px;
+  margin-top: 45px;
+  position: relative;
+  width: 60%;
+  z-index: 2;
+}
+
+.triangle{
+  border-bottom: 170px solid transparent;
+  border-left: 335px solid #ee242b;
+  border-right: 0;
+  border-style: solid;
+  border-top: 30px solid transparent;
+  height: 0;
+  position: absolute;
+  top: -20px;
+  width: 0;
+  z-index: 1;
+}
+
+#top > .topBackImage > .triangle{
+  bottom: 30px;
+  top: unset;
+}
+
+.catchPhrase{
+  bottom: 0;
+  left: 0;
+  margin-left: 5%;
+  position: absolute;
+}
+
+.catch{
+  font-family: "dnp-shuei-ymincho-std", sans-serif;
+  font-size: var(--text-catch);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+.catch > span{
+  font-size: var(--text-catch-accent);
+}
+
+.logoMobile{
+  display: none;
+}
+
+
+.topContents{
+  width: 100%;
+  margin-top: 48px;
+}
+
+.topContents > h1{
+  color: #EFD440;
+  font-size: 55px;
+  text-align: center;
+}
+
+.topContents > h1 > span{
+  display: inline-block;
+}
+
+.applyBtn{
+  background-color: #2CA6E0;
+  border: 5px solid;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-size: 27px;
+  font-weight: 900;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 276px;
+  height: 78px;
+  z-index: 2;
+  margin-bottom: 85.77px;
+}
+#introduction div .applyBtn{
+  margin-bottom: 46.25px;
+}
+.topContents .applyBtn{
+  margin: 24px auto;
+}
+
+
+@media screen and (min-width: 600px){
+  .applyBtn:hover{
+    background-color: #84c2e0;
+  }
+}
+
+.registrationNotice{
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.registrationNotice > p{
+  font-size: var(--text-small);
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+#introduction{
+  position: relative;
+}
+#introduction video{
+  margin-bottom: 80.5px;
+}
+
+.introductionContents{
+  position: relative;
+  z-index: 2;
+}
+#introduction .detail{
+  margin-bottom: 26.75px;
+}
+
+.sectionTitle{
+  font-size: var(--text-title);
+  position: relative;
+  text-align: center;
+  z-index: 2;
+
+}
+
+.sectionTitle > span{
+  display: inline-block;
+}
+
+
+video{
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.detail{
+  position: relative;
+  width: 95%;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.videos{
+  overflow: auto;
+}
+
+#development > .clearfix > .left, #development > .clearfix > .right{
+  float: left;
+  width: 48%;
+}
+#development > .clearfix > .left{
+  margin-right: 2%;
+}
+#development > .clearfix > .right{
+  margin-left: 2%;
+}
+
+#development > .clearfix > .left > video, #development > .clearfix > .right > video{
+  margin-bottom: 0;
+}
+#development div .applyBtn{
+  margin-top: 50.23px;
+}
+.gamePlay{
+  color: #ffffff;
+  font-size: var(--text-small);
+  text-decoration: none;
+}
+.playBtn{
+  padding: 5px 5%;
+  font-size: 1.5em;
+  background-color: #ee242b;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 15px 0px;
+  cursor: pointer;
+  width: 100%;
+}
+.playBtn:hover{
+  background-color: #ff0000;
+}
+
+.relative{
+  position: relative;
+}
+
+.backline{
+  border-bottom: 1px solid;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-5.48deg);
+  width: 100%;
+  z-index: 1;
+}
+
+.whiteBorder{
+  border: 3px solid;
+  border-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 5%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.classThema{
+  flex-wrap: wrap;
+  margin: 0 10%;
+  margin-top: 35.05px;
+}
+.thema{
+  flex: 1 1 23%;
+  margin: 10px 1%;
+}
+.textVertical{
+  transform: rotate(90deg);
+}
+
+#development .whiteBorder{
+  margin: 0 auto;
+}
+.mtwhite{
+  margin-top: 66.98px!important;
+  margin-bottom: 28px!important;
+}
+.pc .whiteBorder{
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+  width: 47%!important;
+  padding: 50px 5%;
+}
+
+.sp{
+  display: none;
+}
+
+.merit{
+  align-items: center;
+  margin-top: var(--small-spacer);
+  margin-bottom: 61.99px;
+}
+
+.merit .whiteBorder{
+  padding: 25px;
+  text-align: left;
+  flex: 1 1 35%;
+  font-size: var(--text-small);
+}
+
+.roundBlue, .roundWhite{
+  flex: 1 1 28%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--text-title);
+  margin-right: 2%;
+}
+
+.roundBlue{
+  background-color: #2DA6E0;
+  color: #ffffff;
+}
+
+.roundWhite{
+  background-color: #ffffff;
+  color: #2DA6E0;
+}
+#turn{
+  margin-bottom: unset;
+}
+
+.conclusionContents > p:nth-child(3){
+  text-align: center;
+  margin: var(--small-spacer) auto;
+}
+
+.spec{
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.specBox, .specBox2{
+  border: 1px solid;
+  flex: 1;
+  font-size: var(--text-small);
+  padding: 20px 2%;
+  width: 49%;
+}
+
+.specBox{
+  margin-right: 1%;
+}
+
+.specBox2{
+  margin-left: 1%;
+}
+
+th{
+  text-align: left;
+  white-space: nowrap;
+  width: 20%;
+}
+
+.bottomBorder{
+  border: 1px solid;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: var(--section-spacer);
+}
+
+.logo{
+  display: block;
+  margin: 0 auto;
+  width: 480px;
+  margin-bottom: var(--small-spacer);
+}
+#datsu h2{
+  position: relative;
+  z-index: 2;
+}
+
+.footerLink{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footerLink > a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: var(--text-small);
+  margin: 0 30px;
+}
+.SNS{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: var(--small-spacer) auto;
+}
+.SNS a{
+  margin: 0 30px;
+}
+
+.fa-square-x-twitter, .fa-youtube, .fa-tiktok{
+  color: #ffffff;
+  font-size: 50px;
+}
+.fa-tiktok{
+  transition: all 0.3s ease;
+}
+.fa-tiktok:hover{
+  text-shadow: 2px 2px 10px #ff0050, -2px -2px 10px #00f2ea;
+}
+
+@keyframes changeyoutube{
+  0%{color: #ffffff;}
+  100%{color: #FF0000;}
+}
+
+.fa-youtube:hover{
+  animation: changeyoutube .5s forwards;
+}
+
+@keyframes changetwitter{
+  0%{opacity: 1;}
+  100%{opacity: .64;}
+}
+
+.fa-square-x-twitter:hover{
+  animation: changetwitter .5s forwards;
+}
+
+footer{
+  background-color: #ffffff;
+  padding: 24px 0 42px;
+}
+
+footer > img{
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+@media screen and (max-width: 599px){
+  :root{
+    --text-catch-accent: 90px;
+    --text-catch: 50px;
+    --text-title:20px;
+    --text-body:15px;
+    --text-small:10px;
+    --section-spacer:72px;
+    --small-spacer:40px;
+  }
+  section{
+    margin-bottom: unset;
+  }
+  .onlineSchool{
+    font-size: 20px;
+  }
+
+  #top{
+    overflow-x: hidden;
+  }
+
+  .topBackImage{
+    aspect-ratio: 872/1558;
+    background-image: url(https://go.waomirai.com/test/watanabe/202403programming/topkarioki/sp);
+  }
+  .topContents h1{
+    margin-top: 12px!important;
+  }
+  .topContents .applyBtn{
+    margin: 16px auto;
+  }
+
+  .logoPC{
+    display: none;
+  }
+
+  .triangle{
+    border-bottom: 85px solid transparent;
+    border-left: 165px solid #ee242b;
+    border-top: 15px solid transparent;
+  }
+
+  .topBackImage{
+    margin-top: 120px;
+  }
+
+  #top > .topBackImage > .triangle{
+    bottom: unset;
+    top: -80px;
+  }
+
+  .catchPhrase{
+    bottom: unset;
+    top: -80px;
+  }
+
+  .catch{
+    line-height: .9;
+  }
+
+  .logoMobile{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+    width: 90%;
+  }
+
+  .topContents{
+    background-color: rgb(0, 0, 0, 0.64);
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 30px;
+  }
+
+  .topContents > h1{
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .detail{
+    width: 85%;
+  }
+
+  .applyBtn{
+    border: 3px solid;
+    border-radius: 10px;
+    text-wrap: nowrap;
+  }
+  .backline{
+    transform: rotate(-16.99deg);
+  }
+  #introduction{
+    margin-bottom: 66.77px;
+  }
+  #introduction video{
+    margin-bottom: 41px;
+  }
+
+  #datsu{
+    margin-bottom: 68px;
+  }
+
+  #development > .clearfix > .left,
+  #development > .clearfix > .right{
+    float: none;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
+  }
+
+  #development .whiteBorder{
+    margin-bottom: var(--small-spacer);
+  }
+
+  .mtwhite{
+    margin-top: 38px!important;
+    margin-bottom: 25px!important;
+  }
+
+  .gamePlay{
+    display: none;
+  }
+
+  .thema{
+    flex: 1 1 48%;
+    margin: 10px 0;
+    margin-left: 1%;
+  }
+  .thema:nth-child(2n-1){
+    margin-right: 1%;
+    margin-left: 0;
+  }
+  #development div .applyBtn{
+    margin-top: 54px;
+    margin-bottom: 78.38px;
+  }
+  #development h2.mb32{
+    margin-bottom: 32px;
+  }
+
+  .pc{
+    display: none;
+    margin-top: 35px;
+  }
+  .sp{
+    display: flex;
+  }
+  .sp .whiteBorder{
+    margin-bottom: 72px;
+  }
+  .merit{
+    flex-wrap: wrap;
+    margin-bottom: unset;
+  }
+  .roundBlue, .roundWhite{
+    flex: 1 1 40%;
+    margin: 0 5%;
+  }
+  .merit .whiteBorder{
+    margin: 0 5%;
+    margin-top: 28.23px;
+    margin-bottom: 36px;
+    font-size: var(--text-body);
+
+  }
+  #turn .applyBtn{
+    margin-bottom: 64.77px;
+  }
+  
+  .conclusionContents > p:nth-child(3){
+    margin-bottom: 16px;
+    margin-top: 57.23px;
+  }
+
+  .spec{
+    display: block;
+  }
+
+  .specBox, .specBox2{
+    font-size: var(--text-body);
+    margin: 24px auto;
+    width: 90%;    
+  }
+  .specBox2{
+    margin-top: var(--small-spacer);
+    margin-bottom: 56px;
+  }
+
+  .bottomBorder{
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 47.77px;
+    margin-bottom: 40px;
+  }
+
+  .logo{
+    width: 90%;
+    margin-bottom: 35.1px;
+  }
+
+  .footerLink{
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .footerLink > a{
+    line-height: 2.8;
+  }
+
+  .SNS{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 31px;
+  }
+  .SNS a{
+    margin: 0 10px;
+  }
+
+  footer{
+    padding: 0 0 10px;
+  }
+
+  footer > img{
+    position: relative;
+    top: -10px;
+    width: 90%;
+  }
+}
