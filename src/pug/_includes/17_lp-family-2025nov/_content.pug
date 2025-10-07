@@ -1,0 +1,486 @@
+
+
+//関数読込
+include _mixin
+include _variables 
+
+body#lp-2025feb
+
+  //00ヘッダー
+  header 
+    img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+  //01メインビジュアル
+  section.c-lp-25feb-mv 
+    .c-lp-25feb-mv-img.c-bg-section-white
+        .c-lp-25feb-mv-img-pc.pcimage 
+          img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/fv_pc_2025feb.svg')   
+        .c-lp-25feb-mv-img-sp.spimage 
+          img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/fv_pc_2025feb.png')   
+    .c-lp-25feb-mv-content
+      .c-lp-25feb-mv-content-text 
+        .pcimage
+          |ああ自己肯定感｜科学的視点｜経済の知識｜
+          br
+          |社会で必要になる新しい学びを親子で体験！
+      .c-lp-25feb-mv-content-target 
+         |対象：小〜中学生とその保護者
+  //02 EVENT INFOMATION
+  section.lp-25feb-info 
+    .lp-25feb-info-title
+       .pcimage
+        |EVENT INFORMATION
+       .spimage
+        |EVENT
+        br
+        |INFORMATION
+    .lp-25feb-info-title-slide.spimage 
+      .lp-25feb-info-title-slide-text
+        |スライド
+      .lp-25feb-info-title-slide-arrow
+    .lp-25feb-info-columns
+        -
+          var eventList = [
+              {
+              id: 'event1',
+              category: 'economy',
+              thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/event_sci_2.png',
+              categoryName: '経済(お金)',
+              eventDate: '<span class="large">10</span>月<span class="large">29</span>日(水)',
+              eventTime: '19:30-20:15',
+              catchCopy: '職業ごとの給料の違い',
+              title: 'あの人の給料は<br />なぜ高い?',
+              statusLabel: '募集は終了しました'
+            },
+            {
+              id: 'event2',
+              category: 'economy',
+              thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/event_sci_2.png',
+              categoryName: '経済(お金)',
+              eventDate: '<span class="large">10</span>月<span class="large">29</span>日(水)',
+              eventTime: '20:30-21:15',
+              catchCopy: '就職活動とお金',
+              title: '人生の選択とお金:<br />最適解をどう選ぶか?',
+              statusLabel: '募集は終了しました'
+            },
+            {
+              id: 'event3',
+              category: 'science',
+              thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ec.png',
+              categoryName: '科学リテラシー',
+              eventDate: '<span class="large">10</span>月<span class="large">31</span>日(金)',
+              eventTime: '19:30-20:15',
+              catchCopy: '人間の味覚ってどんなもの？',
+              title: '苦い野菜をおいしく<br />食べる方法はあるの?',
+              statusLabel: '募集は終了しました'
+            },
+            {
+              id: 'event4',
+              category: 'science',
+              thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ec.png',
+              categoryName: '科学リテラシー',
+              eventDate: '<span class="large">10</span>月<span class="large">31</span>日(金)',
+              eventTime: '20:30-21:15',
+              catchCopy: '発電から見るSDGsの考え方',
+              title: '太陽の光で電気を<br />つくることはエコになる?',
+              statusLabel: '募集は終了しました'
+            },
+            {
+              id: 'event5',
+              category: 'philosophy',
+              thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+              categoryName: '哲学（思考力）',
+              eventDate: '<span class="large">11</span>月<span class="large">1</span>日(土)',
+              eventTime: '18:00-18:45',
+              catchCopy: '「妖怪」は存在するのか？',
+              title: '見える存在 vs<br />見えない存在',
+              statusLabel: '募集は終了しました'
+            },
+            {
+              id: 'event6',
+              category: 'philosophy',
+              thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+              categoryName: '哲学（思考力）',
+              eventDate: '<span class="large">11</span>月<span class="large">1</span>日(土)',
+              eventTime: '19:00-19:45',
+              catchCopy: '「妖怪」は存在するのか？',
+              title: '見える存在 vs<br />見えない存在',
+              statusLabel: '募集は終了しました'
+            }
+          ]
+
+        each item in eventList
+          .lp-25feb-info-columns-child(class=item.category)
+            .lp-25feb-info-columns-child-head= item.categoryName
+            .lp-25feb-info-columns-child-image
+              //- .lp-25feb-info-columns-child-image-overray= item.statusLabel
+              .lp-25feb-info-columns-child-image-main
+                img(src=item.thumbnailUrl)
+              if item.guestImageUrl
+                .lp-25feb-info-columns-child-image-special
+                  img(src=item.guestImageUrl)
+            .lp-25feb-info-columns-child-text
+              .lp-25feb-info-columns-child-text-catch!= item.catchCopy
+              .lp-25feb-info-columns-child-text-title!= item.title
+              .lp-25feb-info-columns-child-text-date!= item.eventDate
+              .lp-25feb-info-columns-child-text-time= item.eventTime
+            a.lp-25feb-info-columns-child-link(href=`#${item.id}`)
+              |詳しくはこちらをclick!
+    //CTA
+    +btn-cta
+      
+  //03 イベントの詳細
+  section.lp-25feb-eventdetail 
+    //変数定義
+    -
+        var events = [
+              {
+            id: 'event1',
+            class: 'economy',
+            subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+            subjecttitle: '経済（お金）',
+            date: '2025年<span class="large">10</span>月<span class="large">29</span>日（水）',
+            time: '19:30〜20:15',
+            eventsubtitle: '小学生向け<br class="pcimage">体験授業',
+            eventtitle: 'あの人の給料はなぜ高い?<br />～職業ごとの給料の違い～',
+            description: 'サッカー選手やお医者さん、コンビニの店員さん――どうして仕事によって給料がちがうのでしょう？この講座では、職業ごとの給料の決まり方や、仕事の価値・責任・人気との関係をわかりやすく学びます。働くことの意味や社会のしくみを考える、未来につながる経済入門の授業です。\n※授業終了後に保護者さま向けの説明会を開催致します。',
+            merits: [
+              { title: "お金の知識をきちんと学べる！", text: "お金の基礎知識はもちろん、その仕組みまで、社会に出る前にしっかり学びましょう。" },
+              { title: "お金の使い方・増やし方を学べる！", text: "値段の仕組みを学ぶことで、商品やサービスを様々な側面から見れるようになります。" },
+              { title: "お金に振りまわされない思考力を身につける！", text: "お金の知識だけではなく、お金を使って夢に近づく方法も考えていきます。" }
+            ]
+            },
+          {
+            id: 'event2',
+            class: 'economy',
+            subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+            subjecttitle: '経済（お金）',
+            date: '2025年<span class="large">10</span>月<span class="large">29</span>日（水）',
+            time: '20:30〜21:15',
+            eventsubtitle: '中高生向け<br class="pcimage">体験授業',
+            eventtitle: '人生の選択とお金：最適解をどう選ぶか?<br />～就職活動とお金～',
+            description: '「やりたい仕事」と「稼げる仕事」――どちらを選ぶべき？この講座では、就職活動で考えるべきお金の視点や、仕事の内容・働き方・給料の関係をわかりやすく学びます。自分の価値観に合った"最適解"を見つけるために、進路とお金のつながりを考える、未来の選択に役立つ経済リテラシー授業です。',
+            merits: [
+              { title: "お金の知識をきちんと学べる！", text: "お金の基礎知識はもちろん、その仕組みまで、社会に出る前にしっかり学びましょう。" },
+              { title: "お金の使い方・増やし方を学べる！", text: "値段の仕組みを学ぶことで、商品やサービスを様々な側面から見れるようになります。" },
+              { title: "お金に振りまわされない思考力を身につける！", text: "お金の知識だけではなく、お金を使って夢に近づく方法も考えていきます。" }
+            ]
+          },
+          {
+        id: 'event3',
+        class: 'science',
+       subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+        subjecttitle: '科学（理知力）',
+        date: '2025年<span class="large">10</span>月<span class="large">31</span>日（金）',
+        time: '19:30〜20:15',
+        eventsubtitle: '小学生向け<br class="pcimage">体験授業',
+        eventtitle: '苦い野菜をおいしく食べる方法はあるの?<br />～人間の味覚ってどんなもの？～',
+        description: 'ピーマンやゴーヤが苦手…それってどうして？この講座では、人間の「味覚」のしくみを学びながら、なぜ苦いと感じるのか、どうすればおいしく食べられるのかを考えます。味の感じ方は人それぞれ？味覚にはどんなひみつがある？科学の力で"食べる"をもっと楽しくしよう！',
+        merits: [
+          { title: "ものごとを理知的に見る視野を広げられる！", text: "科学的視点は「なぜ」「どうして」といった好奇心を刺激し、この疑問とともに視野を広げます。" },
+          { title: "世界の成り立ちが分かる！", text: "これまでの科学者たちの好奇心の結晶をたどり、ものごとの仕組みを理解しましょう。" },
+          { title: "科学的視点を身に着ける！", text: "ITや科学が生活に浸透した現代では、理系の視点や知識を身に着けることが大切です。" }
+          ]
+        },
+        {
+           id: 'event4',
+          class: 'science',
+          subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+          subjecttitle: '科学リテラシー',
+          date: '2025年<span class="large">10</span>月<span class="large">31</span>日（金）',
+          time: '20:30〜21:15',
+          eventsubtitle: '中高生向け<br class="pcimage">体験授業',
+          eventtitle: '太陽の光で電気をつくることはエコになる?<br />～発電から見る SDGs の考え方～',
+          description: '「太陽光発電ってエコなの？」その疑問から、発電のしくみやエネルギーの課題を見つめ直してみませんか？この講座では、電気ができるまでの流れや、太陽光発電のメリット・デメリットを学びながら、持続可能な社会（SDGs）について考えます。科学と社会のつながりを自分ごととして考える一歩に。',
+          merits: [
+            { title: "ものごとを理知的に見る視野を広げられる！", text: "科学的視点は「なぜ」「どうして」といった好奇心を刺激し、この疑問とともに視野を広げます。" },
+            { title: "世界の成り立ちが分かる！", text: "これまでの科学者たちの好奇心の結晶をたどり、ものごとの仕組みを理解しましょう。" },
+            { title: "科学的視点を身に着ける！", text: "ITや科学が生活に浸透した現代では、理系の視点や知識を身に着けることが大切です。" }
+          ]
+        },  
+          {
+          id: 'event5',
+          class: 'philosophy',
+          subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+          subjecttitle: '哲学（思考力）',
+          date: '2025年<span class="large">11</span>月<span class="large">1</span>日（土）',
+          time: '18:00〜18:45',
+          eventsubtitle: '小学生向け<br class="pcimage">体験授業',
+          eventtitle: '見える存在vs見えない存在<br />～「妖怪」は存在するのか？～',
+          description: '妖怪って本当にいるの？それとも、見えないからいないの？この講座では、「見えるもの」「見えないもの」のちがいを出発点に、存在するとはどういうことかを考えます。妖怪や幽霊、心の中の想像の世界を手がかりに、自分なりの「ほんとう」の見つけ方を探る、わくわくする哲学の時間です。\n※授業終了後に保護者さま向けの説明会を開催致します。',
+          merits: [
+            { title: "哲学は難しくない！", text: "ワオ未来塾の哲学はシンプル。授業では、思考を通じて「どう生きたいか」を探求します。" },
+            { title: "主体性が育まれる！", text: "これからの社会で必要な、自分の判断に基づく主体的な行動力を養います。" },
+            { title: "思考力がグングン伸びる！", text: "ものごとの本質を見抜き、考え抜く力を授業を通して身につけます。" }
+          ]
+          },
+        {
+          id: 'event6',
+          class: 'philosophy',
+          subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
+          subjecttitle: '哲学（思考力）',
+          date: '2025年<span class="large">11</span>月<span class="large">1</span>日（土）',
+          time: '19:00〜19:45',
+          eventsubtitle: '中高生向け<br class="pcimage">体験授業',
+          eventtitle: '見える存在vs見えない存在<br />～「妖怪」は存在するのか？～',
+          description: '妖怪って本当にいるの？それとも、見えないからいないの？この講座では、「見えるもの」「見えないもの」のちがいを出発点に、存在するとはどういうことかを考えます。妖怪や幽霊、心の中の想像の世界を手がかりに、自分なりの「ほんとう」の見つけ方を探る、わくわくする哲学の時間です。\n※授業終了後に保護者さま向けの説明会を開催致します。',
+          merits: [
+            { title: "哲学は難しくない！", text: "ワオ未来塾の哲学はシンプル。授業では、思考を通じて「どう生きたいか」を探求します。" },
+            { title: "主体性が育まれる！", text: "これからの社会で必要な、自分の判断に基づく主体的な行動力を養います。" },
+            { title: "思考力がグングン伸びる！", text: "ものごとの本質を見抜き、考え抜く力を授業を通して身につけます。" }
+          ]
+        }
+        ]
+    //3教科ループさせる
+    each event in events
+      .lp-25feb-eventdetail-content(id=event.id, class=event.class)
+        .lp-25feb-eventdetail-content-top
+          .lp-25feb-eventdetail-content-top-left
+            .lp-25feb-eventdetail-content-top-left-title
+              != event.subjecttitle
+            .lp-25feb-eventdetail-content-top-left-img
+              img(src=event.subjectimg)
+
+          .lp-25feb-eventdetail-content-top-right
+            .lp-25feb-eventdetail-content-top-right-online
+              .lp-25feb-eventdetail-content-top-right-online-text
+                != event.eventsubtitle
+            .lp-25feb-eventdetail-content-top-right-date
+              != event.date
+              br
+              | #{event.time}
+            .lp-25feb-eventdetail-content-top-right-title
+              != event.eventtitle
+            .lp-25feb-eventdetail-content-top-right-text
+              | #{event.description}
+            .lp-25feb-eventdetail-content-top-right-archive
+        .lp-25feb-eventdetail-content-merit
+          .lp-25feb-eventdetail-content-merit-illust
+            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
+          .lp-25feb-eventdetail-content-merit-content
+            each merit in event.merits
+              .lp-25feb-eventdetail-content-merit-content-box
+                .lp-25feb-eventdetail-content-merit-content-box-title= merit.title
+                .lp-25feb-eventdetail-content-merit-content-box-text= merit.text   
+        .spimage 
+           +btn-cta-subject
+    .pcimage
+      +btn-cta
+  //04 こんなあなたにオススメです！
+  section.lp-25feb-recommend
+    .c-title-25feb-lp 
+       |こんなあなたに
+       br.spimage
+       |オススメです！
+    .lp-25feb-recommend
+      .lp-25feb-recommend-left.pcimage
+          img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_3person.png')
+      .lp-25feb-recommend-right
+        //親子
+        .lp-25feb-recommend-right-child
+           .lp-25feb-recommend-right-child-icon.pcimage
+              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_child.png')
+           .lp-25feb-recommend-right-child-icon.spimage
+              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_child.svg')
+           .lp-25feb-recommend-right-child-text
+              div ⚪︎学校の勉強だけじゃものたりない
+              div ⚪︎好奇心がとまらない
+              div ⚪︎総合型選抜も見据えた学びがしたい
+        .lp-25feb-recommend-right-child
+           .lp-25feb-recommend-right-child-icon.pcimage
+              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom_and_papa.png')
+           .lp-25feb-recommend-right-child-icon.spimage
+              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_family.svg')
+           .lp-25feb-recommend-right-child-text
+              div 
+                |⚪︎子どもももちろんだけど、
+                br.pcimage
+                |親だって一緒に学びたい
+              div|⚪︎子どもと話し合えるきっかけがほしい
+              div|⚪︎自立した大人になってほしい
+          
+    .lp-25feb-point
+       .lp-25feb-point-left 
+         |POINT!
+       .lp-25feb-point-right
+          |ワオ未来塾の授業は推奨学年はありますが、
+          br.pcimage
+          |大人も子どもも楽しめるコンテンツ。
+          br
+          |授業が終わるころには、
+          br.pcimage
+          |ちょっと世の中の見え方が変わってくる！
+
+  //05 5stepで参加可能
+  section.lp-25feb-howto.c-bg-section-white
+    .lp-25feb-howto-title 
+       |カンタン
+       span.large|5
+       |STEP
+       br.spimage
+       |で参加可能
+    .lp-25feb-howto-img 
+           img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom.png')
+
+    -
+        var steps = [{
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png',
+          number: '1.',
+          title: 'LINEで公式アカウントを友だち追加',
+          text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a class="modal-open-liff-qr">こちら</a></span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>`
+        },
+        {
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join02.png',
+          number: '2.',
+          title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
+        },
+        {
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join03.png',
+          number: '3.',
+          title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
+        },
+        {
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join04.png',
+          number: '4.',
+          title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
+        },
+        {
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join05.png',
+          number: '5.',
+          title: '開催時間になったら届いたイベントURLから参加しましょう！'
+        }]
+    each step in steps
+      .lp-25feb-howto-step 
+        .lp-25feb-howto-step-child 
+          .lp-25feb-howto-step-child-icon 
+            img(src=step.iconimg)
+          .lp-25feb-howto-step-child-number 
+            |#{step.number}
+          .lp-25feb-howto-step-child-text
+            .lp-25feb-howto-step-child-text-title
+              != step.title
+            .lp-25feb-howto-step-child-text-detail
+              != step.text        
+    //登録するためのアイコン
+
+    //CTA
+    +btn-cta
+  //06 ワオ未来塾って？
+  section.lp-25feb-about
+      .c-title-25feb-lp 
+       |ワオ未来塾って？
+      .lp-25feb-about-box 
+          .lp-25feb-about-box-left 
+            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/logo_wao.svg')
+          .lp-25feb-about-box-right
+              |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
+  //07 授業の特徴
+  section.lp-25feb-feature
+    .c-title-25feb-lp 
+       |授業の特長
+    div
+      .lp-25feb-feature-child 
+        i.fa-solid.fa-globe
+        |オンライン授業で
+        br.spimage
+        |全国どこからでも
+        br.spimage
+        |参加OK
+      .lp-25feb-feature-child 
+        i.fa-regular.fa-comments
+        |ライブだからチャットで授業に参加できる!
+      .lp-25feb-feature-child 
+        .lp-25feb-feature-child-icons 
+          i.fa-solid.fa-laptop
+        |必要なのはPCか
+        br.spimage
+        |タブレット端末だけ！
+    //CTA
+    +btn-cta
+               
+  //08 2025年4月開講
+  section.lp-25feb-start2025
+      .lp-25feb-start2025-catch 
+        |社会で役立つ学びを、
+        br.spimage
+        |今はじめよう
+        br
+        |オンラインで
+        br.spimage
+        |楽しく学ぶ“新5教科”
+      .lp-25feb-start2025-subtitle 
+        |2025年4月開校！
+      .lp-25feb-start2025-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+      .lp-25feb-start2025-target 
+        |〈対象〉
+        br.spimage
+        |小学3〜6年生／
+        br.spimage
+        |中学生／高校生
+      .lp-25feb-start2025-subjects 
+        .pcimage
+            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/ilust_5subjects_pc.png')
+        .spimage
+            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/ilust_5subjects_sp.png') 
+      .lp-25feb-start2025-feature 
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |新しい５教科
+          .lp-25feb-start2025-feature-box-text 
+             |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |飛び級制
+          .lp-25feb-start2025-feature-box-text 
+             |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+        .lp-25feb-start2025-feature-box
+          .lp-25feb-start2025-feature-box-title  
+            .lp-25feb-start2025-feature-box-title-icon   
+               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+            .lp-25feb-start2025-feature-box-title-text 
+              |オンラインライブ授業
+          .lp-25feb-start2025-feature-box-text 
+             |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+      .lp-waomirai-start2025-btn
+        a(href='https://waomirai.com/', target='_blank')
+          .lp-waomirai-start2025-btn-text 
+            |ワオ未来塾の公式サイトへ     
+          .lp-waomirai-start2025-btn-icn 
+             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
+  //素材シリーズ
+  footer 
+    ul 
+      li 
+        a(href="https://www.wao-corp.com/", target='_blank')
+          |会社概要
+      li 
+        a(href="https://www.wao-corp.com/kojin/", target='_blank')
+         |プライバシーポリシー
+      li
+        a(href="https://waomirai.com/commerce_law/", target='_blank')
+          |特定商取引に基づく表記
+    .footer-logo 
+      img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+    .footer-copyright
+      |© ワオ・コーポレーション All rights reserved.
+  //- .fixed-button(style='display:none;')
+  //-           .lp-cv-button 
+  //-               a.form-link(href=linkUrl,onclick="gtag('event', 'click', {'event_category': 'click','event_label': 'click-english-lp-button'});",target="_blank")   
+  //-                 .english-fv-absolute-cvtop.cv-limit-text
+  //-                     |無料期間中のみの受講もOK！
+  //-                 .lp-cv-button-main
+  //-                   .lp-cv-button-main-free 
+  //-                     img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/free_icon.svg')
+  //-                   .lp-cv-button-main-text
+  //-                     |受講申し込みはこちら
+  //-                   .lp-cv-button-main-arrow
+  //-               script.
+  //-                 var formLink = document.getElementById("form-link"); // IDを使う
+include _js
++modal

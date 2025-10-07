@@ -1,0 +1,1139 @@
+html {
+  overflow-x: hidden;
+}
+
+#lp-2025feb {
+  background: $cl-bg-eventlp-2025feb;
+  color: $cl-black;
+  font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+  // padding: 0 20px;
+  section {
+    margin: 0 auto 75px;
+  }
+}
+
+.lp-waomirai-start2025-btn {
+  text-align: center;
+  a {
+    text-align: center;
+    margin: 30px auto 120px;
+    background: $cl-btn-cta;
+    background: $cl-main-orange;
+    text-decoration: none;
+    height: 78px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: $ctabuttonwidth;
+    position: relative;
+    line-height: $lineheight-normal;
+    gap: 12px;
+    @include responsive-style(768px) {
+      width: 100%;
+    }
+    @include box-shadow-lp;
+
+    .lp-waomirai-start2025-btn-text {
+      margin: 0px 0 0;
+      @include font-size-ml;
+      letter-spacing: 1px;
+    }
+    .lp-waomirai-start2025-btn-icn {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+.c-btn-cta {
+  text-align: center;
+  a {
+    animation: fuwafuwa-button 2s 0s infinite;
+    text-align: center;
+    margin: 0 auto 135px;
+    cursor: pointer;
+    background: $cl-brand-line;
+    text-decoration: none;
+    height: 108px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: $ctabuttonwidth;
+    position: relative;
+    @include responsive-style(768px) {
+      width: 90%;
+      margin: 0 auto 105px;
+    }
+    @include box-shadow-lp;
+    .c-btn-cta-top {
+      position: absolute;
+      top: 12px;
+      @include font-size-m;
+      letter-spacing: 1px;
+    }
+    .c-btn-cta-main {
+      position: absolute;
+      // top: 0px;
+      margin: 7px 0 0;
+      @include font-size-l;
+      letter-spacing: 1px;
+    }
+  }
+}
+.c-btn-cta-subject {
+  text-align: center;
+  a {
+    animation: fuwafuwa-button 2s 0s infinite;
+    text-align: center;
+    margin: 30px auto 15px;
+    cursor: pointer;
+    background: $cl-brand-line;
+    text-decoration: none;
+    height: 78px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: $ctabuttonwidth;
+    position: relative;
+    @include responsive-style(768px) {
+      width: 90%;
+    }
+    @include box-shadow-lp;
+    // .c-btn-cta-top {
+    //   position: absolute;
+    //   top: 12px;
+    //   @include font-size-m;
+    //   letter-spacing: 1px;
+    // }
+    .c-btn-cta-main {
+      margin: 0px 0 0;
+      @include font-size-l;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.c-title-25feb-lp {
+  @include font-size-l;
+  @include title-underline; //下の波線
+  margin: 0 auto 30px;
+  text-align: center;
+  //   text-decoration-style: wavy;
+}
+
+.c-bg-section-white {
+  background: white;
+}
+
+//00ヘッダー
+header {
+  height: 78px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  max-width: $widewidth;
+  margin: 0 auto;
+  justify-content: center;
+  @include responsive-style(768px) {
+    height: 48px;
+    padding: 0 18px;
+    justify-content: flex-start;
+  }
+  img {
+    max-width: 350px;
+    margin: 0 !important;
+    @include responsive-style(768px) {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+//01メインビジュアル
+.c-lp-25feb-mv {
+  width: 100%;
+
+  .c-lp-25feb-mv-img {
+    padding: 30px 0 20px;
+    margin: 0 -20px 30px;
+    @include responsive-style(768px) {
+      padding: 0px 0 0px;
+      margin: 0 0px 30px;
+    }
+    &-pc {
+      img {
+        @include section-smallwidth;
+      }
+    }
+    &-sp {
+      // padding: 0 20px;
+      text-align: center;
+    }
+  }
+  .c-lp-25feb-mv-wrap {
+  }
+  .c-lp-25feb-mv-content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    &-text {
+      @include font-size-l;
+      text-decoration: underline wavy;
+      text-decoration-color: $cl-title-underline;
+      margin: 0 auto 30px;
+      @include responsive-style(768px) {
+        line-height: $lineheight-relaxed;
+      }
+    }
+    &-target {
+      @include section-widewidth;
+      @include font-size-l;
+      background: $cl-merit-yellow;
+      padding: 16px 0;
+      border-radius: $border-radius-full;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: bold;
+      @include responsive-style(768px) {
+        @include font-size-ml;
+      }
+    }
+  }
+}
+//02 EVENT INFOMATION
+section.lp-25feb-info {
+  .lp-25feb-info-title {
+    text-align: center;
+    color: $cl-graylight;
+    line-height: $lineheight-tight;
+    @include font-size-xxl;
+    margin: 0 auto 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    @include responsive-style(768px) {
+      margin: 0 auto 0px;
+    }
+  }
+  .lp-25feb-info-title-slide {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0;
+    color: $cl-graylight;
+    gap: 10px;
+    animation: bounce-swipe 3s infinite;
+    &-arrow {
+      width: 70px;
+      height: 20px;
+      border-bottom: 1.5px solid $cl-graylight;
+      position: relative;
+      &:before {
+        transform: rotate(-45deg);
+        right: 5px;
+        bottom: -3px;
+        content: "";
+        position: absolute;
+        width: 1.5px;
+        height: 14px;
+        background: $cl-graylight;
+        display: block;
+      }
+    }
+  }
+  .lp-25feb-info-columns {
+    justify-content: normal;
+    display: block;
+    white-space: nowrap;
+    overflow-x: scroll;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto 90px;
+
+    @include responsive-style(768px) {
+      justify-content: normal;
+      display: block;
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding: 20px 20px 20px;
+      margin: 0 auto 30px;
+    }
+    &-child {
+      background: white;
+      border-radius: $border-radius-bigplus;
+      padding: 20px 0px 0;
+      @include box-shadow-lp;
+      overflow: hidden;
+      display: inline-block;
+      width: 300px;
+      margin: 20px 40px 40px 0;
+      &:first-child {
+        margin: 20px 40px 40px 40px;
+      }
+      &:last-child {
+        margin: 20px 120px 40px 0;
+      }
+      @include responsive-style(768px) {
+        width: 250px;
+        margin: 0 20px 0 0;
+        display: inline-block;
+      }
+      &-head {
+        @include font-size-l;
+        text-align: center;
+        margin: 0 auto 12px;
+        font-weight: bold;
+      }
+      .lp-25feb-info-columns-child-image {
+        margin: 0 20px;
+        position: relative;
+        &-overray {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          color: $cl-white;
+          @include font-size-l;
+          background: rgba(0, 0, 0, 0.55);
+          border-radius: $border-radius-bigplus;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &-main {
+          img {
+            border-radius: $border-radius-bigplus;
+          }
+        }
+        &-special {
+          // position: relative;
+          &::before {
+            position: absolute;
+            right: 5px;
+            bottom: -20px;
+            width: 120px;
+            height: 120px;
+            border-radius: $border-radius-full;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+            content: "";
+            @include responsive-style(768px) {
+              width: 80px;
+              height: 80px;
+            }
+          }
+          img {
+            position: absolute;
+            right: 5px;
+            bottom: -20px;
+            width: 120px;
+            height: 120px;
+            border-radius: $border-radius-full;
+            border: 3px solid $cl-white;
+            @include responsive-style(768px) {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+      }
+
+      &-text {
+        &-catch {
+          @include font-size-m;
+          text-align: center;
+          margin: 30px auto 20px;
+          letter-spacing: 0.5px;
+          @include responsive-style(768px) {
+            letter-spacing: -0.2px;
+          }
+        }
+        &-title {
+          @include font-size-ml;
+          text-align: center;
+          margin: 0px auto 30px;
+          @include responsive-style(768px) {
+            margin: 0px auto 20px;
+          }
+        }
+        &-date {
+          text-align: center;
+          @include font-size-ml;
+          letter-spacing: 1.5px;
+          margin: 0px auto 0px;
+          @include responsive-style(768px) {
+            @include font-size-m;
+          }
+        }
+        &-time {
+          text-align: center;
+          letter-spacing: 0.5px;
+          @include font-size-ml;
+          margin: 0 0 20px;
+          @include responsive-style(768px) {
+            margin: 0 0 25px;
+            @include font-size-m;
+          }
+        }
+        &-archive {
+          margin: 0 0 40px;
+          text-align: center;
+          height: 20px;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          i {
+            font-size: 20px;
+          }
+        }
+        span.large {
+          @include font-size-l;
+        }
+      }
+      &-link {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        // background: #000;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        @include font-size-ml;
+        @include responsive-style(768px) {
+          @include font-size-m;
+          height: 49px;
+        }
+      }
+    }
+  }
+
+  // @eachで繰り返し処理
+  @each $category, $values in $categories {
+    .#{$category} {
+      .lp-25feb-info-columns-child-text-catch {
+        color: map-get($values, main-color);
+      }
+      .lp-25feb-info-columns-child-text-archive-icon {
+        color: map-get($values, main-color);
+      }
+    }
+  }
+
+  // @eachで繰り返し処理
+  @each $category, $values in $categories {
+    .#{$category} {
+      .lp-25feb-info-columns-child-link {
+        background: map-get($values, main-color);
+      }
+    }
+  }
+}
+
+//03 イベントの詳細
+section.lp-25feb-eventdetail {
+  @include section-maxwidth;
+  .lp-25feb-eventdetail-content {
+    width: 100%;
+    border-radius: 0 $border-radius-bigplus $border-radius-bigplus
+      $border-radius-bigplus;
+    background: white;
+    margin: 0 auto 75px;
+    padding: 36px;
+    @include responsive-style(768px) {
+      margin: 0 auto 45px;
+      padding: 0px 0 30px;
+      border-radius: $border-radius-bigplus;
+    }
+    &-top {
+      display: flex;
+      gap: 50px;
+      @include responsive-style(768px) {
+        display: block;
+      }
+      //left
+      &-left {
+        flex: 1;
+        position: relative;
+        &-overray {
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 0 $border-radius-extrabig $border-radius-extrabig
+            $border-radius-extrabig;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.55);
+          color: $cl-white;
+          @include font-size-l;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include responsive-style(768px) {
+            padding: 30px 0 0;
+            border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
+          }
+        }
+        &-title {
+          position: absolute;
+          @include responsive-style(768px) {
+            position: relative;
+            width: 100%;
+            border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
+          }
+          left: 0;
+          top: 0;
+          z-index: 1;
+          // background: #000;
+          border-radius: 0 0 $border-radius-bigplus 0;
+          @include font-size-xl;
+          max-width: 300px;
+          width: 100%;
+          padding: 10px 20px;
+          color: white;
+          @include responsive-style(768px) {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
+          }
+        }
+        &-img {
+          img {
+            border-radius: 0 $border-radius-extrabig $border-radius-extrabig
+              $border-radius-extrabig;
+            @include responsive-style(768px) {
+              border-radius: 0;
+            }
+          }
+        }
+        &-special {
+          &::before {
+            position: absolute;
+            right: -28px;
+            bottom: -22px;
+            width: 225px;
+            height: 225px;
+            border-radius: $border-radius-full;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 10;
+            content: "";
+            @include responsive-style(768px) {
+              width: 120px;
+              height: 120px;
+              right: -15px;
+              bottom: -22px;
+            }
+          }
+          img {
+            border-radius: $border-radius-full;
+            position: absolute;
+            right: -28px;
+            bottom: -22px;
+            width: 225px;
+            height: 225px;
+            z-index: 9;
+            border: 5px solid $cl-white;
+            @include responsive-style(768px) {
+              width: 120px;
+              height: 120px;
+              right: -15px;
+              bottom: -22px;
+            }
+          }
+        }
+      }
+      &-right {
+        flex: 1;
+        position: relative;
+        @include responsive-style(768px) {
+          padding: 12px 20px;
+          display: flex;
+          flex-direction: column;
+        }
+        &-online {
+          position: absolute;
+          right: 0;
+          top: 0;
+          text-align: left;
+          margin: 0 0 20px;
+          @include responsive-style(768px) {
+            position: relative;
+            font-weight: bold;
+            margin: 0 0 25px;
+          }
+          &-text {
+            display: inline-block;
+            text-align: left;
+            border: 2px solid $cl-philosophy;
+            color: $cl-philosophy;
+            padding: 6px 8px;
+            border-radius: $border-radius-middle;
+            text-align: center;
+            font-size: 14px;
+            @include responsive-style(768px) {
+              text-align: left;
+            }
+          }
+        }
+        &-date {
+          @include font-size-ml;
+          margin: 20px auto 20px;
+          letter-spacing: 1px;
+          @include responsive-style(768px) {
+            margin: 0 0 25px;
+            order: -1;
+          }
+          .large {
+            // @include font-size-xl;
+          }
+        }
+        &-title {
+          @include font-size-l;
+          margin: 0 auto 15px;
+          font-weight: bold;
+          @include title-underline;
+          @include responsive-style(768px) {
+            margin: 0 0 30px;
+          }
+        }
+        &-text {
+          @include font-size-m;
+          line-height: $lineheight-relaxed;
+        }
+        &-archive {
+          margin: 28px 0 0;
+          display: flex;
+          align-items: center;
+          i {
+            @include font-size-ml;
+            margin: 0 10px 0 0;
+            @include responsive-style(768px) {
+              @include font-size-xl;
+              margin: 0 14px 0 0;
+            }
+            &.philosophy {
+              color: $cl-philosophy;
+            }
+            &.science {
+              color: $cl-science;
+            }
+          }
+          &-text {
+            font-size: 16px;
+            color: $cl-graylight;
+            @include responsive-style(768px) {
+              display: inline-block;
+              line-height: 1.25;
+            }
+            span {
+              font-size: 12px;
+              @include responsive-style(768px) {
+                display: inline-block;
+                line-height: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-merit {
+      margin: 60px 0 0;
+      border-radius: $border-radius-bigplus;
+
+      display: flex;
+      gap: 35px;
+      padding: 30px 20px 20px;
+      @include responsive-style(768px) {
+        border-radius: $border-radius-big;
+        margin: 20px 20px 0px;
+        padding: 20px 20px 0px;
+      }
+      &-illust {
+        width: 100px;
+        @include responsive-style(768px) {
+          display: none;
+        }
+      }
+      &-content {
+        &-box {
+          position: relative;
+          margin: 0 0 30px;
+          padding: 0 0 0 75px;
+          @include responsive-style(768px) {
+            padding: 0 0 0 35px;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            top: 0%;
+            width: 50px;
+            height: 50px;
+            // background: #000;
+            border-radius: 50%;
+            @include responsive-style(768px) {
+              top: 7px;
+              width: 20px;
+              height: 20px;
+              bottom: auto;
+            }
+          }
+          &-title {
+            @include font-size-ml;
+            @include responsive-style(768px) {
+              font-weight: bold;
+            }
+          }
+          &-text {
+            @include font-size-m;
+          }
+        }
+      }
+    }
+  }
+}
+
+//03 イベントの詳細　教科ごとの色付け
+@each $category, $values in $categories {
+  .#{$category} {
+    .lp-25feb-eventdetail-content-top-left-title {
+      background: map-get($values, main-color);
+    }
+    .lp-25feb-eventdetail-content-top-right-online-text {
+      color: map-get($values, main-color);
+      border: 2px solid map-get($values, main-color);
+    }
+    .lp-25feb-eventdetail-content-merit {
+      border: 2px solid map-get($values, main-color);
+    }
+    .lp-25feb-eventdetail-content-merit-content-box {
+      color: map-get($values, main-color);
+      @include responsive-style(768px) {
+        color: map-get($values, sp-main-color);
+      }
+      &::before {
+        background: map-get($values, pale-color);
+        opacity: 0.5; //強すぎなので薄くする
+      }
+    }
+  }
+}
+
+//04 こんなあなたにオススメです！
+section.lp-25feb-recommend {
+  .lp-25feb-recommend {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    // background: white;
+    div {
+      @include min-responsive-style(768px) {
+        flex: 1;
+      }
+    }
+    &-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $cl-white;
+      img {
+        width: 50%;
+      }
+    }
+    &-right {
+      position: relative;
+      background: $cl-graylightest;
+      padding: 45px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      @include responsive-style(768px) {
+        background: transparent;
+        margin: 0 20px;
+        padding: 0px 0px 30px;
+        border-radius: $border-radius-bigplus;
+        gap: 30px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40px;
+        bottom: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent $cl-graylightest transparent transparent;
+        border-width: 82px 52px 82px 0px;
+        z-index: 1;
+        @include responsive-style(768px) {
+          display: none;
+        }
+      }
+      &-child {
+        @include responsive-style(768px) {
+          display: flex;
+          gap: 20px;
+        }
+        &:last-child {
+          flex-direction: row-reverse;
+          .lp-25feb-recommend-right-child-text:before {
+            right: -15px !important;
+            left: auto !important;
+            transform: rotate(180deg);
+          }
+          .lp-25feb-recommend-right-child-icon {
+            @include responsive-style(768px) {
+              width: 102px;
+              margin: 0;
+            }
+          }
+        }
+        &-icon {
+          img {
+            height: 75px;
+            margin: 0 auto;
+          }
+          @include responsive-style(768px) {
+            width: 88px;
+            margin: 0;
+          }
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include font-size-ml;
+          position: relative;
+          @include responsive-style(768px) {
+            @include font-size-m;
+            background: $cl-white;
+            padding: 16px;
+            border-radius: $border-radius-big;
+          }
+          &::before {
+            @include responsive-style(768px) {
+              content: "";
+              position: absolute;
+              top: 30px;
+              left: -15px;
+              margin: auto;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent $cl-white transparent transparent;
+              border-width: 15px 15px 15px 0px;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  //POINT!
+  .lp-25feb-point {
+    max-width: 450px;
+    margin: 45px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include responsive-style(768px) {
+      background: $cl-white;
+      margin: 0px 20px 0;
+      padding: 0px 0px;
+      border-radius: $border-radius-bigplus;
+      display: block;
+    }
+    &-left {
+      @include responsive-style(768px) {
+        width: 120px;
+        height: 30px;
+        border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
+      }
+      width: 75px;
+      height: 75px;
+      border-radius: $border-radius-full;
+      background: $cl-gray;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-right {
+      flex: 1;
+      text-align: center;
+      @include responsive-style(768px) {
+        width: 100%;
+        padding: 20px 20px 30px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+//05 授業の特徴
+section.lp-25feb-feature {
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  .lp-25feb-feature-child {
+    @include font-size-l;
+    background: $cl-feature-yellow;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 30px;
+    border-radius: $border-radius-full;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    &:last-child {
+      margin: 0 auto 90px;
+    }
+    &-icons {
+      display: flex;
+      gap: 10px;
+    }
+    @include responsive-style(768px) {
+      // width: 100%;
+      margin: 0 auto 45px;
+      height: auto;
+      padding: 20px;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: $border-radius-bigplus;
+    }
+  }
+}
+
+//06 5stepで参加可能
+section.lp-25feb-howto {
+  padding: 30px 0;
+  margin: 0 -20px;
+  .lp-25feb-howto-title {
+    @include font-size-l;
+    margin: 0 auto 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    @include responsive-style(768px) {
+      @include font-size-xl;
+    }
+    .large {
+      @include font-size-xxl;
+      @include responsive-style(768px) {
+        @include font-size-xxxl;
+      }
+    }
+  }
+  .lp-25feb-howto-img {
+    width: 200px;
+    margin: 0 auto 60px;
+  }
+
+  .lp-25feb-howto-step {
+    &-child {
+      max-width: $smallwidth;
+      width: 100%;
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: 100px 10px 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      @include responsive-style(768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto 90px;
+      }
+      &-icon {
+        @include responsive-style(768px) {
+          width: 100px;
+        }
+      }
+      &-number {
+        @include font-size-xl;
+        @include responsive-style(768px) {
+          @include font-size-xxl;
+        }
+      }
+      &-text {
+        width: 100%;
+        padding: 0 20px;
+        &-title {
+          @include font-size-ml;
+          @include responsive-style(768px) {
+            @include font-size-l;
+          }
+          margin: 5px 0 15px;
+        }
+        &-detail {
+          @include font-size-m;
+          line-height: $lineheight-relaxed;
+          a {
+            color: $cl-black;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.lp-25feb-about {
+  .lp-25feb-about-box {
+    background: white;
+    max-width: $widewidth;
+    margin: 0 auto 0px;
+    padding: 48px 36px;
+    border-radius: $border-radius-extrabig;
+    display: flex;
+    gap: 45px;
+    @include responsive-style(768px) {
+      flex-direction: column;
+      margin: 0 20px;
+      gap: 30px;
+      padding: 40px 20px 40px;
+      border-radius: $border-radius-bigplus;
+    }
+    &-left {
+      width: 250px;
+      @include responsive-style(768px) {
+        width: 70%;
+        margin: 0 auto 0px;
+      }
+    }
+    &-right {
+      flex: 1;
+      line-height: $lineheight-relaxed;
+      @include font-size-m;
+    }
+  }
+}
+
+.lp-25feb-start2025 {
+  @include section-maxwidth;
+  &-catch {
+    @include font-size-l;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &-subtitle {
+    background: $cl-main-orange;
+    color: white;
+    @include font-size-xl;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: $border-radius-full;
+  }
+  &-logo {
+    max-width: $middlewidth;
+    margin: 0 auto 30px;
+  }
+  &-target {
+    @include font-size-l;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  &-subjects {
+    max-width: $middlewidth;
+    margin: 0 auto 45px;
+  }
+  &-feature {
+    display: flex;
+    gap: 45px;
+    margin: 0px 0 60px;
+    @include responsive-style(768px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    &-box {
+      background: white;
+      border-radius: $border-radius-bigplus;
+      padding: 30px 20px 20px;
+      @include font-size-m;
+      flex: 1;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      @include responsive-style(768px) {
+        padding: 30px 20px 30px;
+      }
+      &-title {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 0 auto 20px;
+        @include responsive-style(768px) {
+          @include font-size-ml;
+        }
+        img {
+          width: 30px;
+        }
+      }
+      &-text {
+        @include font-size-m;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 120px 0px 0px;
+  text-align: center;
+  background: $cl-black;
+  color: white;
+  border-radius: 100px 100px 0 0;
+  @include responsive-style(768px) {
+    padding: 60px 0px 60px;
+    border-radius: 50px 50px 0 0;
+  }
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  li {
+    list-style: none;
+    padding: 10px 0;
+    a {
+      color: white;
+      text-decoration: none;
+      @include font-size-m;
+    }
+  }
+  .footer-logo img {
+    width: 170px;
+    margin: 120px auto 45px;
+    @include responsive-style(768px) {
+      margin: 60px auto 45px;
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding: 15px 0 15px;
+  }
+}
