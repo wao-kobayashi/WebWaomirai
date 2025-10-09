@@ -3,6 +3,8 @@ script.
   * jQuery Document Ready
   * ドキュメントの読み込みが完了した時点で実行されるメイン処理
   */
+  
+
   $(document).ready(function() {
     /**
     * 追従ボタン
@@ -27,7 +29,7 @@ script.
     */
     function modalOpen() {
       $('.modal, .bg-modal').show();
-      alert('test');
+
     }
 
     /**
@@ -80,167 +82,5 @@ script.
     $('.modal-close, .bg-modal').click(function() {
       $('.modal-vimeo, .modal, .bg-modal').hide();
     });
-    /**
-    * モーダルを閉じる処理
-    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
-    */
-    $('.eng-phase-main-section-green-wrap-faq-box-title').click(function() {
-        // クリックされたヘッダーの次のコンテンツを開閉
-        $(this).toggleClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
-
-        // 他の開いているコンテンツを閉じる
-        $('.accordion-header').not(this).removeClass('active').next('.eng-phase-main-section-green-wrap-faq-box-content').slideUp();
-    });
-
-    /**
-    * プログラムのタブの追従のアニメーション
-    */
-    let bottomPosition = 0;
-
-    // 最初の計算の関数
-    function recalcPositions() {
-      bottomPosition = $('.p-details .c-btn-cv').offset().top - $(window).height();
-    }
-
-    // イベント設定の関数
-    function checkSticky() {
-      if (!window.matchMedia('(max-width: 768px)').matches) {
-          // 769px以上はis-fixed-hideクラスを外して、処理を実行しない
-          $('.p-tab-list').removeClass('is-fixed-hide');
-          return;
-      }
-      if ($(window).scrollTop() >= bottomPosition) {
-        // CVボタンより下の場合は、is-fixed-hideクラスを付ける
-        $('.p-tab-list').addClass('is-fixed-hide');
-      }else{
-        $('.p-tab-list').removeClass('is-fixed-hide');
-      }
-    }
-
-    // 読み込み時とリサイズ時は、最初の計算とイベント設定
-    $(window).on('load resize', function() {
-      recalcPositions();
-      checkSticky();
-    });
-
-    // スクロール時は、計算しないで判定だけ
-    $(window).on('scroll', checkSticky);
-
-    /**
-    * プログラムの詳細の「続きを読む」
-    */
-    $('.p-details-item-teacher-text-more').click(function() {
-      const $btn = $(this);
-      const $text = $btn.prev('.p-details-item-teacher-text');
-
-      if ($text.hasClass('is-active')) {
-        // 閉じる処理
-        const currentHeight = $text[0].scrollHeight;
-        $text.css('height', currentHeight + 'px'); // 現在の高さで固定
-        // 次のフレームで縮める
-        requestAnimationFrame(() => {
-          $text.css('height', '122px');
-        });
-        $text.removeClass('is-active');
-
-        $btn.removeClass('is-active');
-      } else {
-        // 開く処理
-        const fullHeight = $text[0].scrollHeight;
-        $text.css('height', '122px'); // 初期の閉じた高さをセット
-        // 次のフレームでフルサイズに伸ばす
-        requestAnimationFrame(() => {
-          $text.css('height', fullHeight + 'px');
-        });
-        $text.addClass('is-active');
-
-        $btn.addClass('is-active');
-      }
-    });
-
-    /**
-    * スクロール連動の UI 制御
-    */
-    $(window).on("load scroll", function () {
-      const scrollPosition = $(window).scrollTop();
-
-      /**
-      * スクロール位置に応じてナビゲーションの現在地を更新する関数
-      * @param {string} sectionSelector - セクションを特定するセレクタ
-      * @param {string} linkSelector - ナビゲーションリンクを特定するセレクタ
-      */
-      function handleScrollEvent(sectionSelector, linkSelector) {
-        const sections = $(sectionSelector);
-        const links = $(linkSelector);
-
-        // 現在表示中のセクションを特定してナビゲーションを更新
-        function updateActiveLink() {
-          const scrollTop = $(window).scrollTop() + $('.p-tab-list').height();
-          const windowHeight = $(window).height();
-          const scrollBottom = scrollTop + windowHeight;
-
-          let activeSection = null;
-
-          // 画面内に表示されているセクションを特定
-          sections.each(function () {
-            const $section = $(this);
-            const sectionTop = $section.offset().top;
-            const sectionBottom = sectionTop + $section.outerHeight();
-
-            if (sectionBottom > scrollTop && sectionTop < scrollBottom) {
-              activeSection = $section.attr("data-id");
-              return false;
-            }
-          });
-
-          // すべてのナビゲーションリンクを非アクティブ化
-          $(`${linkSelector}`).removeClass("is-active");
-
-          // 対応するナビゲーションリンクをアクティブ化
-          if (activeSection) {
-            links.removeClass("active");
-            $(`${linkSelector}[href="#${activeSection}"]`).addClass("is-active");
-          }
-        }
-
-        // パフォーマンス最適化のため、アニメーションフレームを使用
-        $(window).on("scroll", function () {
-          requestAnimationFrame(updateActiveLink);
-        });
-
-        updateActiveLink();
-      }
-
-      // スマホ用のナビゲーションを初期化
-      handleScrollEvent(".p-details-item", ".p-tab-item");
-      handleScrollEvent(".p-details-item", ".l-pc-menu-link");
-    
-    });
-
-    /**
-    * iPhoneでスライダーが動作するように、画像読み込み後にクラスを付ける
-    */
-    $('.p-slider').each(function () {
-      const $slider = $(this);
-      const $imgs = $slider.find('img');
-      let loaded = 0;
-
-      $imgs.each(function () {
-        if (this.complete) {
-          loaded++;
-        } else {
-          $(this).on('load error', function () {
-            loaded++;
-            if (loaded === $imgs.length) {
-              $slider.addClass('is-loaded');
-            }
-          });
-        }
-      });
-
-      // すでに全部読み込み済みのとき
-      if (loaded === $imgs.length) {
-        $slider.addClass('is-loaded');
-      }
-    });
+   new QRCode(document.getElementById("liffqr"), "#{UrlLine}");
   });

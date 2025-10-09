@@ -93,9 +93,10 @@ $z-indexes: (
           text-align: center;
           max-width: 270px;
           margin: 20px auto 25px;
+          @include box-shadow-lp();
           img {
+            padding: 20px;
             margin: 0 auto;
-            @include box-shadow-lp();
           }
         }
         &-text {

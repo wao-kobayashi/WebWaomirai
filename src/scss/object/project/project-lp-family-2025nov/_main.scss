@@ -280,9 +280,16 @@ section.lp-25feb-info {
     overflow: hidden;
     display: inline-block;
     width: 300px;
-    margin: 20px 40px 40px 0;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+
     &:first-child {
-      margin: 20px 40px 40px 40px;
+      margin-left: 20px;
+      @include min-responsive-style(1200px) {
+        margin-left: calc((100% - 1140px) / 2);
+      }
     }
     &:last-child {
       margin: 20px 120px 40px 0;
