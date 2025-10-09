@@ -39,6 +39,13 @@ html {
 }
 
 body {
-  background: $cl-bg-eventlp-2025feb;
+  background: $cl-bg-creamyellow;
   overflow-x: hidden;
+}
+section {
+  margin: 0 auto 75px;
+}
+
+.c-bg-section-white {
+  background: white;
 }

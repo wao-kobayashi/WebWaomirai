@@ -1,9 +1,11 @@
 /* color */
 
 $cl-philosophy-pale: #f4c66d;
-$cl-science-pale: #66cb88; //figmaから持ってきたが色が違う?
+$cl-science-pale: #66cb88;
 $cl-economy-pale: #67d2e9;
-$cl-bg-eventlp-2025feb: #fff8e0;
+$cl-bg-creamyellow: #fff8e0;
+$cl-bg-creamyellow-dark: #fff2c4;
+$cl-border-brown: #d8d2bc;
 $cl-btn-cta: #f88c6a;
 $cl-title-underline: #febcad;
 $cl-merit-yellow: #f8d86a;
@@ -24,6 +26,6 @@ $categories: (
     main-color: $cl-economy,
     sp-main-color: $cl-economy,
     pale-color: $cl-economy-pale
-      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
