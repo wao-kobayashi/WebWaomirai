@@ -1,16 +1,8 @@
 html {
   overflow-x: hidden;
 }
-
-#lp-2025feb {
-  background: $cl-bg-eventlp-2025feb;
-  color: $cl-black;
-  font-family: "Noto Sans JP", sans-serif;
-  overflow-x: hidden;
-  // padding: 0 20px;
-  section {
-    margin: 0 auto 75px;
-  }
+section {
+  margin: 0 auto 75px;
 }
 
 .lp-waomirai-start2025-btn {
@@ -32,7 +24,7 @@ html {
     position: relative;
     line-height: $lineheight-normal;
     gap: 12px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 100%;
     }
     @include box-shadow-lp;
@@ -67,7 +59,7 @@ html {
     width: 100%;
     max-width: $ctabuttonwidth;
     position: relative;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 90%;
       margin: 0 auto 105px;
     }
@@ -105,7 +97,7 @@ html {
     width: 100%;
     max-width: $ctabuttonwidth;
     position: relative;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 90%;
     }
     @include box-shadow-lp;
@@ -145,7 +137,7 @@ header {
   max-width: $widewidth;
   margin: 0 auto;
   justify-content: center;
-  @include responsive-style(768px) {
+  @include responsive-style($breakpoint-sp) {
     height: 48px;
     padding: 0 18px;
     justify-content: flex-start;
@@ -153,7 +145,7 @@ header {
   img {
     max-width: 350px;
     margin: 0 !important;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 50%;
       height: auto;
     }
@@ -167,7 +159,7 @@ header {
   .c-lp-25feb-mv-img {
     padding: 30px 0 20px;
     margin: 0 -20px 30px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       padding: 0px 0 0px;
       margin: 0 0px 30px;
     }
@@ -192,7 +184,7 @@ header {
       text-decoration: underline wavy;
       text-decoration-color: $cl-title-underline;
       margin: 0 auto 30px;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         line-height: $lineheight-relaxed;
       }
     }
@@ -205,7 +197,7 @@ header {
       text-align: center;
       margin: 0 auto;
       font-weight: bold;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         font-size: $font-size-xl;
       }
     }
@@ -221,7 +213,7 @@ section.lp-family-info {
     margin: 0 auto 30px;
     font-weight: 300;
     letter-spacing: 3px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0 auto 0px;
     }
   }
@@ -262,7 +254,7 @@ section.lp-family-info {
     width: 100%;
     margin: 0 auto 90px;
 
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       justify-content: normal;
       display: block;
       white-space: nowrap;
@@ -294,7 +286,7 @@ section.lp-family-info {
     &:last-child {
       margin: 20px 120px 40px 0;
     }
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 250px;
       margin: 0 20px 0 0;
       display: inline-block;
@@ -345,7 +337,7 @@ section.lp-family-info {
       background: rgba(0, 0, 0, 0.55);
       z-index: 2;
       content: "";
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         width: 80px;
         height: 80px;
       }
@@ -358,7 +350,7 @@ section.lp-family-info {
       height: 120px;
       border-radius: $border-radius-full;
       border: 3px solid $cl-white;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         width: 80px;
         height: 80px;
       }
@@ -370,7 +362,7 @@ section.lp-family-info {
     text-align: center;
     margin: 30px auto 20px;
     letter-spacing: 0.5px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       letter-spacing: -0.2px;
     }
   }
@@ -379,7 +371,7 @@ section.lp-family-info {
     font-size: $font-size-xl;
     text-align: center;
     margin: 0px auto 30px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0px auto 20px;
     }
   }
@@ -389,7 +381,7 @@ section.lp-family-info {
     font-size: $font-size-xl;
     letter-spacing: 1.5px;
     margin: 0px auto 0px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-m;
     }
   }
@@ -399,7 +391,7 @@ section.lp-family-info {
     letter-spacing: 0.5px;
     font-size: $font-size-xl;
     margin: 0 0 20px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0 0 25px;
       font-size: $font-size-m;
     }
@@ -435,7 +427,7 @@ section.lp-family-info {
     color: white;
     text-decoration: none;
     font-size: $font-size-xl;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-m;
       height: 49px;
     }
@@ -474,7 +466,7 @@ section.lp-family-eventdetail {
     background: white;
     margin: 0 auto 75px;
     padding: 36px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0 auto 45px;
       padding: 0px 0 30px;
       border-radius: $border-radius-bigplus;
@@ -484,7 +476,7 @@ section.lp-family-eventdetail {
   .lp-family-eventdetail-content-top {
     display: flex;
     gap: 50px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       display: block;
     }
   }
@@ -509,7 +501,7 @@ section.lp-family-eventdetail {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       padding: 30px 0 0;
       border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
     }
@@ -517,7 +509,7 @@ section.lp-family-eventdetail {
 
   .lp-family-eventdetail-content-top-left-title {
     position: absolute;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       position: relative;
       width: 100%;
       border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
@@ -531,7 +523,7 @@ section.lp-family-eventdetail {
     width: 100%;
     padding: 10px 20px;
     color: white;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       position: relative;
       width: 100%;
       max-width: 100%;
@@ -543,7 +535,7 @@ section.lp-family-eventdetail {
     img {
       border-radius: 0 $border-radius-extrabig $border-radius-extrabig
         $border-radius-extrabig;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         border-radius: 0;
       }
     }
@@ -560,7 +552,7 @@ section.lp-family-eventdetail {
       background: rgba(0, 0, 0, 0.55);
       z-index: 10;
       content: "";
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         width: 120px;
         height: 120px;
         right: -15px;
@@ -576,7 +568,7 @@ section.lp-family-eventdetail {
       height: 225px;
       z-index: 9;
       border: 5px solid $cl-white;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         width: 120px;
         height: 120px;
         right: -15px;
@@ -588,7 +580,7 @@ section.lp-family-eventdetail {
   .lp-family-eventdetail-content-top-right {
     flex: 1;
     position: relative;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       padding: 12px 20px;
       display: flex;
       flex-direction: column;
@@ -601,7 +593,7 @@ section.lp-family-eventdetail {
     top: 0;
     text-align: left;
     margin: 0 0 20px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       position: relative;
       font-weight: bold;
       margin: 0 0 25px;
@@ -617,7 +609,7 @@ section.lp-family-eventdetail {
     border-radius: $border-radius-middle;
     text-align: center;
     font-size: 14px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       text-align: left;
     }
   }
@@ -626,7 +618,7 @@ section.lp-family-eventdetail {
     font-size: $font-size-xl;
     margin: 20px auto 20px;
     letter-spacing: 1px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0 0 25px;
       order: -1;
     }
@@ -637,7 +629,7 @@ section.lp-family-eventdetail {
     margin: 0 auto 15px;
     font-weight: bold;
     @include title-underline;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0 0 30px;
     }
   }
@@ -654,7 +646,7 @@ section.lp-family-eventdetail {
     i {
       font-size: $font-size-xl;
       margin: 0 10px 0 0;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         font-size: $font-size-xxl;
         margin: 0 14px 0 0;
       }
@@ -670,13 +662,13 @@ section.lp-family-eventdetail {
   .lp-family-eventdetail-content-top-right-archive-text {
     font-size: 16px;
     color: $cl-graylight;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       display: inline-block;
       line-height: 1.25;
     }
     span {
       font-size: 12px;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         display: inline-block;
         line-height: 1;
       }
@@ -689,7 +681,7 @@ section.lp-family-eventdetail {
     display: flex;
     gap: 35px;
     padding: 30px 20px 20px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       border-radius: $border-radius-big;
       margin: 20px 20px 0px;
       padding: 20px 20px 0px;
@@ -698,7 +690,7 @@ section.lp-family-eventdetail {
 
   .lp-family-eventdetail-content-merit-illust {
     width: 100px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       display: none;
     }
   }
@@ -707,7 +699,7 @@ section.lp-family-eventdetail {
     position: relative;
     margin: 0 0 30px;
     padding: 0 0 0 75px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       padding: 0 0 0 35px;
     }
     &:before {
@@ -720,7 +712,7 @@ section.lp-family-eventdetail {
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         top: 7px;
         width: 20px;
         height: 20px;
@@ -731,7 +723,7 @@ section.lp-family-eventdetail {
 
   .lp-family-eventdetail-content-merit-content-box-title {
     font-size: $font-size-xl;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-weight: bold;
     }
   }
@@ -756,7 +748,7 @@ section.lp-family-eventdetail {
     }
     .lp-family-eventdetail-content-merit-content-box {
       color: map-get($values, main-color);
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         color: map-get($values, sp-main-color);
       }
       &::before {
@@ -798,7 +790,7 @@ section.lp-family-recommend {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       background: transparent;
       margin: 0 20px;
       padding: 0px 0px 30px;
@@ -818,14 +810,14 @@ section.lp-family-recommend {
       border-color: transparent $cl-graylightest transparent transparent;
       border-width: 82px 52px 82px 0px;
       z-index: 1;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         display: none;
       }
     }
   }
 
   .lp-family-recommend-right-child {
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       display: flex;
       gap: 20px;
     }
@@ -844,7 +836,7 @@ section.lp-family-recommend {
 
   .lp-family-recommend-right-child:last-child
     .lp-family-recommend-right-child-icon {
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 102px;
       margin: 0;
     }
@@ -855,7 +847,7 @@ section.lp-family-recommend {
       height: 75px;
       margin: 0 auto;
     }
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 88px;
       margin: 0;
     }
@@ -867,14 +859,14 @@ section.lp-family-recommend {
     gap: 20px;
     font-size: $font-size-xl;
     position: relative;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-m;
       background: $cl-white;
       padding: 16px;
       border-radius: $border-radius-big;
     }
     &::before {
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         content: "";
         position: absolute;
         top: 30px;
@@ -897,7 +889,7 @@ section.lp-family-recommend {
     display: flex;
     align-items: center;
     gap: 30px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       background: $cl-white;
       margin: 0px 20px 0;
       padding: 0px 0px;
@@ -907,7 +899,7 @@ section.lp-family-recommend {
   }
 
   .lp-family-point-left {
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 120px;
       height: 30px;
       border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
@@ -925,7 +917,7 @@ section.lp-family-recommend {
   .lp-family-point-right {
     flex: 1;
     text-align: center;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 100%;
       padding: 20px 20px 30px;
       text-align: left;
@@ -954,7 +946,7 @@ section.lp-family-feature {
     align-items: center;
     text-align: center;
     gap: 20px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 0 auto 45px;
       height: auto;
       padding: 20px;
@@ -1001,7 +993,7 @@ section.lp-family-feature {
       display: flex;
       gap: 10px;
     }
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       // width: 100%;
       margin: 0 auto 45px;
       height: auto;
@@ -1023,12 +1015,12 @@ section.lp-family-howto {
     margin: 0 auto 30px;
     text-align: center;
     letter-spacing: 2px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xxl;
     }
     .large {
       font-size: $font-size-xxxl;
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         font-size: $font-size-huge;
       }
     }
@@ -1047,7 +1039,7 @@ section.lp-family-howto {
     grid-template-columns: 100px 10px 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1058,14 +1050,14 @@ section.lp-family-howto {
   }
 
   .lp-family-howto-step-child-icon {
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 100px;
     }
   }
 
   .lp-family-howto-step-child-number {
     font-size: $font-size-xxl;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xxxl;
     }
   }
@@ -1077,7 +1069,7 @@ section.lp-family-howto {
 
   .lp-family-howto-step-child-text-title {
     font-size: $font-size-xl;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xxl;
     }
     margin: 5px 0 15px;
@@ -1101,7 +1093,7 @@ section.lp-family-about {
     border-radius: $border-radius-extrabig;
     display: flex;
     gap: 45px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       flex-direction: column;
       margin: 0 20px;
       gap: 30px;
@@ -1112,7 +1104,7 @@ section.lp-family-about {
 
   .lp-family-about-box-left {
     width: 250px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       width: 70%;
       margin: 0 auto 0px;
     }
@@ -1164,7 +1156,7 @@ section.lp-family-about {
     display: flex;
     gap: 45px;
     margin: 0px 0 60px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       flex-direction: column;
       gap: 30px;
     }
@@ -1177,7 +1169,7 @@ section.lp-family-about {
     font-size: $font-size-m;
     flex: 1;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       padding: 30px 20px 30px;
     }
   }
@@ -1187,7 +1179,7 @@ section.lp-family-about {
     justify-content: center;
     gap: 15px;
     margin: 0 auto 20px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xl;
     }
     img {
@@ -1232,7 +1224,7 @@ section.lp-family-about {
     display: flex;
     gap: 45px;
     margin: 0px 0 60px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       flex-direction: column;
       gap: 30px;
     }
@@ -1243,7 +1235,7 @@ section.lp-family-about {
       font-size: $font-size-m;
       flex: 1;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-      @include responsive-style(768px) {
+      @include responsive-style($breakpoint-sp) {
         padding: 30px 20px 30px;
       }
       &-title {
@@ -1251,7 +1243,7 @@ section.lp-family-about {
         justify-content: center;
         gap: 15px;
         margin: 0 auto 20px;
-        @include responsive-style(768px) {
+        @include responsive-style($breakpoint-sp) {
           font-size: $font-size-xl;
         }
         img {
@@ -1272,7 +1264,7 @@ footer {
   background: $cl-black;
   color: white;
   border-radius: 100px 100px 0 0;
-  @include responsive-style(768px) {
+  @include responsive-style($breakpoint-sp) {
     padding: 60px 0px 60px;
     border-radius: 50px 50px 0 0;
   }
@@ -1292,7 +1284,7 @@ footer {
   .footer-logo img {
     width: 170px;
     margin: 120px auto 45px;
-    @include responsive-style(768px) {
+    @include responsive-style($breakpoint-sp) {
       margin: 60px auto 45px;
     }
   }
