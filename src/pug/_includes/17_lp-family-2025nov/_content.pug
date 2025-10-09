@@ -36,231 +36,86 @@ body
          img(src=ImgIllustFv05Book)
       .lp-family-fv-main-illust06
           img(src=ImgIllustFv06Bank)
+
   //02 EVENT INFOMATION
   section.lp-family-eventlist 
-   .lp-family-eventlist-section
-    .lp-family-eventlist-wrapper 
-      .lp-family-eventlist-wrapper-title 
-        .lp-family-eventlist-wrapper-title-illust01
-          img(src=ImgIllustFv05Book)
-        .lp-family-eventlist-wrapper-title-illust02
-          img(src=ImgIllustFv06Bank)
-        .lp-family-eventlist-wrapper-title-text
-           .lp-family-eventlist-wrapper-title-text-img
+    .lp-family-eventlist-section
+      .lp-family-eventlist-wrapper 
+        .lp-family-eventlist-wrapper-title 
+          .lp-family-eventlist-wrapper-title-illust01
+            img(src=ImgIllustFv05Book)
+          .lp-family-eventlist-wrapper-title-illust02
+            img(src=ImgIllustFv06Bank)
+          .lp-family-eventlist-wrapper-title-text
+            .lp-family-eventlist-wrapper-title-text-img
               img(src=ImgTitleTryLesson)
-           .lp-family-eventlist-wrapper-title-text-note
-             |※一度に複数受講可能です
-      .lp-family-eventlist-wrapper-grid 
-        - for (let i = 0; i < 6; i++)
-          .lp-family-eventlist-wrapper-grid-item
-            .lp-family-eventlist-wrapper-grid-item-img
-              img(src=ImgThumbEconomyKids)
-            .lp-family-eventlist-wrapper-grid-item-content
-              .lp-family-eventlist-wrapper-grid-item-content-category
-                .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
-                  |経済（お金)
-                .lp-family-eventlist-wrapper-grid-item-content-category-child.target
-                  |小学生向け
-              .lp-family-eventlist-wrapper-grid-item-content-title
-                |あの人の給料はなぜ高い?～職業ごとの給料の違い～
-              .lp-family-eventlist-wrapper-grid-item-content-datetime
+            .lp-family-eventlist-wrapper-title-text-note
+              |※一度に複数受講可能です
+        .lp-family-eventlist-wrapper-grid 
+          each event in events
+            .lp-family-eventlist-wrapper-grid-item(id=event.id)
+              .lp-family-eventlist-wrapper-grid-item-img
+                img(src=event.thumbnail)
+              .lp-family-eventlist-wrapper-grid-item-content
+                .lp-family-eventlist-wrapper-grid-item-content-category
+                  .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
+                    = event.category.subject
+                  .lp-family-eventlist-wrapper-grid-item-content-category-child.target
+                    = event.category.target
+                .lp-family-eventlist-wrapper-grid-item-content-title
+                  = event.title
+                .lp-family-eventlist-wrapper-grid-item-content-datetime
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
-                      |10月29日(水)
+                    = event.dateShort
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
-                      img(src=ImgIconClock)
+                    img(src=ImgIconClock)
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-time
-                      |19:30～20:15
-      
+                    = event.time
+
   //03 イベントの詳細
   section.lp-family-eventdetail 
-    - for (let i = 0; i < 6; i++)
-      .lp-family-eventdetail-content#economy
+    each event in events
+      .lp-family-eventdetail-content(id=event.id)
         .lp-family-eventdetail-content-top
           .lp-family-eventdetail-content-top-left
             .lp-family-eventdetail-content-top-left-img
-              img(src=ImgThumbEconomyKids )
+              img(src=event.thumbnail)
           .lp-family-eventdetail-content-top-right
             .lp-family-eventdetail-content-top-right-category 
-                .lp-family-eventdetail-content-top-right-category-child.subject 
-                   |経済(お金)
-                .lp-family-eventdetail-content-top-right-category-child.target
-                   |小学生向け
+              .lp-family-eventdetail-content-top-right-category-child.subject 
+                = event.category.subject
+              .lp-family-eventdetail-content-top-right-category-child.target
+                = event.category.target
             .lp-family-eventdetail-content-top-right-title
-               |あの人の給料はなぜ高い?～職業ごとの給料の違い～
+              = event.title
             .lp-family-eventdetail-content-top-right-datetime
-                 .lp-family-eventdetail-content-top-right-datetime-date 
-                    |2025年10月29日(水)
-                 .lp-family-eventdetail-content-top-right-datetime-icon
-                    img(src=ImgIconClock)
-                 .lp-family-eventdetail-content-top-right-datetime-time
-                    |19:30～20:15
-
-
+              .lp-family-eventdetail-content-top-right-datetime-date 
+                = event.date
+              .lp-family-eventdetail-content-top-right-datetime-icon
+                img(src=ImgIconClock)
+              .lp-family-eventdetail-content-top-right-datetime-time
+                = event.time
             .lp-family-eventdetail-content-top-right-text
-              |サッカー選手やお医者さん、コンビニの店員さん――どうして仕事によって給料がちがうのでしょう？この講座では、職業ごとの給料の決まり方や、仕事の価値・責任・人気との関係をわかりやすく学びます。働くことの意味や社会のしくみを考える、未来につながる経済入門の授業です。
-              br
-              |※授業終了後に保護者さま向けの説明会を開催致します。
+              = event.description
+              if event.note
+                br
+                = event.note
             .lp-family-eventdetail-content-top-right-archive
         .lp-family-eventdetail-content-merit
           .lp-family-eventdetail-content-merit-left
             .lp-family-eventdetail-content-merit-left-img
-              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png' )
+              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
             .lp-family-eventdetail-content-merit-left-text
               |POINT
           .lp-family-eventdetail-content-merit-right
-            .lp-family-eventdetail-content-merit-right-box 
-              .lp-family-eventdetail-content-merit-right-box-number|1
-              .lp-family-eventdetail-content-merit-right-box-content
-                 .lp-family-eventdetail-content-merit-right-box-content-title
-                  |お金の知識をきちんと学べる！
-                 .lp-family-eventdetail-content-merit-right-box-conten-text 
-                   |お金の基礎知識はもちろん、その仕組みまで、社会に出る前にしっかり学びましょう。
-            .lp-family-eventdetail-content-merit-right-box 
-              .lp-family-eventdetail-content-merit-right-box-number|2
-              .lp-family-eventdetail-content-merit-right-box-content
-                 .lp-family-eventdetail-content-merit-right-box-content-title
-                  |お金の使い方・増やし方を学べる！
-                 .lp-family-eventdetail-content-merit-right-box-conten-text 
-                   |値段の仕組みを学ぶことで、商品やサービスを様々な側面から見れるようになります。
-            .lp-family-eventdetail-content-merit-right-box 
-              .lp-family-eventdetail-content-merit-right-box-number|3
-              .lp-family-eventdetail-content-merit-right-box-content
-                 .lp-family-eventdetail-content-merit-right-box-content-title
-                  |お金に振りまわされない思考力を身につける！
-                 .lp-family-eventdetail-content-merit-right-box-conten-text 
-                   |お金の知識だけではなく、お金を使って夢に近づく方法も考えていきます。
-      //変数定義
-      //- -
-      //-     var events = [
-      //-           {
-      //-         id: 'event1',
-      //-         class: 'economy',
-      //-         subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-      //-         subjecttitle: '経済（お金）',
-      //-         date: '2025年<span class="large">10</span>月<span class="large">29</span>日（水）',
-      //-         time: '19:30〜20:15',
-      //-         eventsubtitle: '小学生向け<br class="pcimage">体験授業',
-      //-         eventtitle: 'あの人の給料はなぜ高い?<br />～職業ごとの給料の違い～',
-      //-         description: 'サッカー選手やお医者さん、コンビニの店員さん――どうして仕事によって給料がちがうのでしょう？この講座では、職業ごとの給料の決まり方や、仕事の価値・責任・人気との関係をわかりやすく学びます。働くことの意味や社会のしくみを考える、未来につながる経済入門の授業です。\n※授業終了後に保護者さま向けの説明会を開催致します。',
-      //-         merits: [
-      //-           { title: "お金の知識をきちんと学べる！", text: "お金の基礎知識はもちろん、その仕組みまで、社会に出る前にしっかり学びましょう。" },
-      //-           { title: "お金の使い方・増やし方を学べる！", text: "値段の仕組みを学ぶことで、商品やサービスを様々な側面から見れるようになります。" },
-      //-           { title: "お金に振りまわされない思考力を身につける！", text: "お金の知識だけではなく、お金を使って夢に近づく方法も考えていきます。" }
-      //-         ]
-      //-         },
-      //-       {
-      //-         id: 'event2',
-      //-         class: 'economy',
-      //-         subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-      //-         subjecttitle: '経済（お金）',
-      //-         date: '2025年<span class="large">10</span>月<span class="large">29</span>日（水）',
-      //-         time: '20:30〜21:15',
-      //-         eventsubtitle: '中高生向け<br class="pcimage">体験授業',
-      //-         eventtitle: '人生の選択とお金：最適解をどう選ぶか?<br />～就職活動とお金～',
-      //-         description: '「やりたい仕事」と「稼げる仕事」――どちらを選ぶべき？この講座では、就職活動で考えるべきお金の視点や、仕事の内容・働き方・給料の関係をわかりやすく学びます。自分の価値観に合った"最適解"を見つけるために、進路とお金のつながりを考える、未来の選択に役立つ経済リテラシー授業です。',
-      //-         merits: [
-      //-           { title: "お金の知識をきちんと学べる！", text: "お金の基礎知識はもちろん、その仕組みまで、社会に出る前にしっかり学びましょう。" },
-      //-           { title: "お金の使い方・増やし方を学べる！", text: "値段の仕組みを学ぶことで、商品やサービスを様々な側面から見れるようになります。" },
-      //-           { title: "お金に振りまわされない思考力を身につける！", text: "お金の知識だけではなく、お金を使って夢に近づく方法も考えていきます。" }
-      //-         ]
-      //-       },
-      //-       {
-      //-     id: 'event3',
-      //-     class: 'science',
-      //-    subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-      //-     subjecttitle: '科学（理知力）',
-      //-     date: '2025年<span class="large">10</span>月<span class="large">31</span>日（金）',
-      //-     time: '19:30〜20:15',
-      //-     eventsubtitle: '小学生向け<br class="pcimage">体験授業',
-      //-     eventtitle: '苦い野菜をおいしく食べる方法はあるの?<br />～人間の味覚ってどんなもの？～',
-      //-     description: 'ピーマンやゴーヤが苦手…それってどうして？この講座では、人間の「味覚」のしくみを学びながら、なぜ苦いと感じるのか、どうすればおいしく食べられるのかを考えます。味の感じ方は人それぞれ？味覚にはどんなひみつがある？科学の力で"食べる"をもっと楽しくしよう！',
-      //-     merits: [
-      //-       { title: "ものごとを理知的に見る視野を広げられる！", text: "科学的視点は「なぜ」「どうして」といった好奇心を刺激し、この疑問とともに視野を広げます。" },
-      //-       { title: "世界の成り立ちが分かる！", text: "これまでの科学者たちの好奇心の結晶をたどり、ものごとの仕組みを理解しましょう。" },
-      //-       { title: "科学的視点を身に着ける！", text: "ITや科学が生活に浸透した現代では、理系の視点や知識を身に着けることが大切です。" }
-      //-       ]
-      //-     },
-      //-     {
-      //-        id: 'event4',
-      //-       class: 'science',
-      //-       subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-      //-       subjecttitle: '科学リテラシー',
-      //-       date: '2025年<span class="large">10</span>月<span class="large">31</span>日（金）',
-      //-       time: '20:30〜21:15',
-      //-       eventsubtitle: '中高生向け<br class="pcimage">体験授業',
-      //-       eventtitle: '太陽の光で電気をつくることはエコになる?<br />～発電から見る SDGs の考え方～',
-      //-       description: '「太陽光発電ってエコなの？」その疑問から、発電のしくみやエネルギーの課題を見つめ直してみませんか？この講座では、電気ができるまでの流れや、太陽光発電のメリット・デメリットを学びながら、持続可能な社会（SDGs）について考えます。科学と社会のつながりを自分ごととして考える一歩に。',
-      //-       merits: [
-      //-         { title: "ものごとを理知的に見る視野を広げられる！", text: "科学的視点は「なぜ」「どうして」といった好奇心を刺激し、この疑問とともに視野を広げます。" },
-      //-         { title: "世界の成り立ちが分かる！", text: "これまでの科学者たちの好奇心の結晶をたどり、ものごとの仕組みを理解しましょう。" },
-      //-         { title: "科学的視点を身に着ける！", text: "ITや科学が生活に浸透した現代では、理系の視点や知識を身に着けることが大切です。" }
-      //-       ]
-      //-     },  
-      //-       {
-      //-       id: 'event5',
-      //-       class: 'philosophy',
-      //-       subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-      //-       subjecttitle: '哲学（思考力）',
-      //-       date: '2025年<span class="large">11</span>月<span class="large">1</span>日（土）',
-      //-       time: '14:30〜15:15',
-      //-       eventsubtitle: '小学生向け<br class="pcimage">体験授業',
-      //-       eventtitle: '見える存在vs見えない存在<br />～「妖怪」は存在するのか？～',
-      //-       description: '妖怪って本当にいるの？それとも、見えないからいないの？この講座では、「見えるもの」「見えないもの」のちがいを出発点に、存在するとはどういうことかを考えます。妖怪や幽霊、心の中の想像の世界を手がかりに、自分なりの「ほんとう」の見つけ方を探る、わくわくする哲学の時間です。\n※授業終了後に保護者さま向けの説明会を開催致します。',
-      //-       merits: [
-      //-         { title: "哲学は難しくない！", text: "ワオ未来塾の哲学はシンプル。授業では、思考を通じて「どう生きたいか」を探求します。" },
-      //-         { title: "主体性が育まれる！", text: "これからの社会で必要な、自分の判断に基づく主体的な行動力を養います。" },
-      //-         { title: "思考力がグングン伸びる！", text: "ものごとの本質を見抜き、考え抜く力を授業を通して身につけます。" }
-      //-       ]
-      //-       },
-      //-     {
-      //-       id: 'event6',
-      //-       class: 'philosophy',
-      //-       subjectimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-      //-       subjecttitle: '哲学（思考力）',
-      //-       date: '2025年<span class="large">11</span>月<span class="large">1</span>日（土）',
-      //-       time: '15:30〜16:15',
-      //-       eventsubtitle: '中高生向け<br class="pcimage">体験授業',
-      //-       eventtitle: 'ルッキズムをぶっとばせ！外見至上主義をどう読み解く？',
-      //-       description: '「かわいい」「かっこいい」って、誰が決めた基準なんだろう？この講座では、外見を重視する社会の考え方（外見至上主義）や、美の基準、ルッキズム（外見による差別）の問題について問い直します。なぜ人は見た目にこだわるのか？多様な価値観と向き合う力を育てる、哲学の時間です。',
-      //-       merits: [
-      //-         { title: "哲学は難しくない！", text: "ワオ未来塾の哲学はシンプル。授業では、思考を通じて「どう生きたいか」を探求します。" },
-      //-         { title: "主体性が育まれる！", text: "これからの社会で必要な、自分の判断に基づく主体的な行動力を養います。" },
-      //-         { title: "思考力がグングン伸びる！", text: "ものごとの本質を見抜き、考え抜く力を授業を通して身につけます。" }
-      //-       ]
-      //-     }
-      //-     ]
-      //- //3教科ループさせる
-      //- each event in events
-      //-   .lp-family-eventdetail-content(id=event.id, class=event.class)
-      //-     .lp-family-eventdetail-content-top
-      //-       .lp-family-eventdetail-content-top-left
-      //-         .lp-family-eventdetail-content-top-left-title
-      //-           != event.subjecttitle
-      //-         .lp-family-eventdetail-content-top-left-img
-      //-           img(src=event.subjectimg)
-
-      //-       .lp-family-eventdetail-content-top-right
-      //-         .lp-family-eventdetail-content-top-right-online
-      //-           .lp-family-eventdetail-content-top-right-online-text
-      //-             != event.eventsubtitle
-      //-         .lp-family-eventdetail-content-top-right-date
-      //-           != event.date
-      //-           br
-      //-           | #{event.time}
-      //-         .lp-family-eventdetail-content-top-right-title
-      //-           != event.eventtitle
-      //-         .lp-family-eventdetail-content-top-right-text
-      //-           | #{event.description}
-      //-         .lp-family-eventdetail-content-top-right-archive
-      //-     .lp-family-eventdetail-content-merit
-      //-       .lp-family-eventdetail-content-merit-illust
-      //-         img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
-      //-       .lp-family-eventdetail-content-merit-content
-      //-         each merit in event.merits
-      //-           .lp-family-eventdetail-content-merit-content-box
-      //-             .lp-family-eventdetail-content-merit-content-box-title= merit.title
-      //-             .lp-family-eventdetail-content-merit-content-box-text= merit.text   
-
+            each merit in event.merits
+              .lp-family-eventdetail-content-merit-right-box 
+                .lp-family-eventdetail-content-merit-right-box-number= merit.number
+                .lp-family-eventdetail-content-merit-right-box-content
+                  .lp-family-eventdetail-content-merit-right-box-content-title
+                    = merit.title
+                  .lp-family-eventdetail-content-merit-right-box-conten-text 
+                    = merit.text
   //04 こんなあなたにオススメです！
   section.lp-family-recommend
     .c-title-25feb-lp 

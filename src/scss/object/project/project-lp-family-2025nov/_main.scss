@@ -131,8 +131,8 @@ header {
     position: relative;
     z-index: 1;
     .lp-family-fv-main-date {
-      font-size: $font-size-xxl;
-      margin: 0 auto 15px;
+      font-size: $font-size-xxxl;
+      margin: 0 auto 0px;
 
       @include title-underline; //下の波線
     }
@@ -231,14 +231,14 @@ header {
 .lp-family-eventlist {
   width: 100%;
   background: $cl-bg-creamyellow-dark;
-  padding: 90px 0 60px;
+  padding: 90px 0 75px;
   .lp-family-eventlist-section {
     width: 100%;
     max-width: 1140px;
     background: $cl-white;
     border-radius: $border-radius-bigplus;
     padding: 36px 0 45px;
-    margin: 0px auto 60px;
+    margin: 0px auto 0px;
   }
   .lp-family-eventlist-wrapper {
     background: $cl-white;
@@ -270,6 +270,7 @@ header {
         left: 20px;
         top: -80px;
         transform: rotate(-10deg);
+        animation: pikopiko 4s steps(2, start) infinite;
       }
       .lp-family-eventlist-wrapper-title-illust02 {
         position: absolute;
@@ -277,6 +278,7 @@ header {
         width: 90px;
         top: -70px;
         transform: rotate(10deg);
+        animation: pikopiko 6s steps(2, start) infinite;
       }
     }
     .lp-family-eventlist-wrapper-grid {
@@ -286,12 +288,12 @@ header {
       padding: 0px 0px 0px;
 
       .lp-family-eventlist-wrapper-grid-item {
-        padding: 35px 30px 45px;
+        padding: 35px 40px 35px;
         .lp-family-eventlist-wrapper-grid-item-img {
           img {
             border-radius: $border-radius-big;
             width: 100%;
-            margin: 0 0 4px;
+            margin: 0 0 8px;
           }
         }
         .lp-family-eventlist-wrapper-grid-item-content-category {
@@ -300,10 +302,14 @@ header {
 
           .lp-family-eventlist-wrapper-grid-item-content-category-child {
             font-size: $font-size-s;
-            background: $cl-graylightest;
+
             padding: 6px 14px;
             border-radius: $border-radius-big;
             margin: 16px 0 0;
+            &.target {
+              border: 2px solid $cl-graylight !important;
+              color: $cl-graylight !important;
+            }
           }
         }
         .lp-family-eventlist-wrapper-grid-item-content-title {
@@ -346,7 +352,7 @@ section.lp-family-eventdetail {
   .lp-family-eventdetail-content {
     width: 100%;
     border-radius: $border-radius-bigplus;
-    margin: 0 auto 60px;
+    margin: 0 auto 75px;
     padding: 36px;
     background: $cl-white;
     @include responsive-style($breakpoint-sp) {
@@ -383,9 +389,13 @@ section.lp-family-eventdetail {
       gap: 16px;
       .lp-family-eventdetail-content-top-right-category-child {
         font-size: $font-size-m;
-        background: $cl-graylightest;
+
         padding: 8px 18px;
         border-radius: $border-radius-big;
+        &.target {
+          border: 2px solid $cl-graylight !important;
+          color: $cl-graylight !important;
+        }
       }
     }
     .lp-family-eventdetail-content-top-right-title {
@@ -423,7 +433,7 @@ section.lp-family-eventdetail {
   }
 
   .lp-family-eventdetail-content-merit {
-    margin: 30px 0 0;
+    margin: 45px 0 0;
     border-radius: $border-radius-bigplus;
     display: flex;
     align-items: flex-start;
@@ -460,7 +470,7 @@ section.lp-family-eventdetail {
           font-weight: 300;
           width: 30px;
           text-align: center;
-          opacity: 0.5;
+          opacity: 0.2;
         }
         .lp-family-eventdetail-content-merit-right-box-content {
           .lp-family-eventdetail-content-merit-right-box-content-title {
@@ -474,27 +484,35 @@ section.lp-family-eventdetail {
 
 //03 イベントの詳細　教科ごとの色付け
 @each $category, $values in $categories {
-  .#{$category} {
-    .lp-family-eventdetail-content-top-left-title {
-      background: map-get($values, main-color);
+  ##{$category} {
+    .lp-family-eventdetail-content-top-right-category-child.subject {
+      border: 2px solid map-get($values, main-color) !important;
+      color: map-get($values, main-color) !important;
     }
-    .lp-family-eventdetail-content-top-right-online-text {
-      color: map-get($values, main-color);
-      border: 2px solid map-get($values, main-color);
+    .lp-family-eventlist-wrapper-grid-item-content-category-child.subject {
+      border: 2px solid map-get($values, main-color) !important;
+      color: map-get($values, main-color) !important;
     }
-    .lp-family-eventdetail-content-merit {
-      border: 2px solid map-get($values, main-color);
-    }
-    .lp-family-eventdetail-content-merit-content-box {
-      color: map-get($values, main-color);
-      @include responsive-style($breakpoint-sp) {
-        color: map-get($values, sp-main-color);
-      }
-      &::before {
-        background: map-get($values, pale-color);
-        opacity: 0.5; //強すぎなので薄くする
-      }
-    }
+    // .lp-family-eventdetail-content-top-left-title {
+    //   background: map-get($values, main-color);
+    // }
+    // .lp-family-eventdetail-content-top-right-online-text {
+    //   color: map-get($values, main-color);
+    //   border: 2px solid map-get($values, main-color);
+    // }
+    // .lp-family-eventdetail-content-merit {
+    //   border: 2px solid map-get($values, main-color);
+    // }
+    // .lp-family-eventdetail-content-merit-content-box {
+    //   color: map-get($values, main-color);
+    //   @include responsive-style($breakpoint-sp) {
+    //     color: map-get($values, sp-main-color);
+    //   }
+    //   &::before {
+    //     background: map-get($values, pale-color);
+    //     opacity: 0.5; //強すぎなので薄くする
+    //   }
+    // }
   }
 }
 

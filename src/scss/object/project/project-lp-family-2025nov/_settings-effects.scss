@@ -1,106 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
-
-/* color */
-
-$cl-philosophy-pale: #f4c66d;
-// $cl-science-pale: #b6d43e;
-$cl-science-pale: #66cb88; //figmaから持ってきたが色が違う?
-$cl-economy-pale: #67d2e9;
-$cl-bg-eventlp-2025feb: #fff8e0;
-$cl-btn-cta: #f88c6a;
-$cl-title-underline: #febcad;
-$cl-merit-yellow: #f8d86a;
-$cl-feature-yellow: #fffb96;
-
-/* width */
-
-$max-width: 1200px;
-$widewidth: 1000px;
-$middlewidth: 800px;
-$smallwidth: 700px;
-$ctabuttonwidth: 500px;
-
-@mixin section-maxwidth {
-  max-width: 1200px;
-  padding: 0 30px;
-  margin: 0 auto;
-  @include responsive-style(768px) {
-    padding: 0 20px;
-  }
-}
-
-@mixin section-widewidth {
-  max-width: 1000px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-@mixin section-middlewidth {
-  max-width: 800px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-@mixin section-smallwidth {
-  max-width: 700px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
 /* box-shadow */
 
 @mixin box-shadow-lp {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-}
-
-/* fontsize */
-
-@mixin font-size-s {
-  font-size: 12px;
-  @include responsive-style(768px) {
-    font-size: 11.5px;
-  }
-}
-
-@mixin font-size-m {
-  font-size: 17px;
-  @include responsive-style(768px) {
-    font-size: 16px;
-  }
-}
-
-@mixin font-size-ml {
-  font-size: 22px;
-  @include responsive-style(768px) {
-    font-size: 20px;
-  }
-}
-
-@mixin font-size-l {
-  font-size: 27px;
-  @include responsive-style(768px) {
-    font-size: 24px;
-  }
-}
-
-@mixin font-size-xl {
-  font-size: 34px;
-  @include responsive-style(768px) {
-    font-size: 30px;
-  }
-}
-@mixin font-size-xxl {
-  font-size: 48px;
-  @include responsive-style(768px) {
-    font-size: 40px;
-  }
-}
-@mixin font-size-xxxl {
-  font-size: 60px;
-  @include responsive-style(768px) {
-    font-size: 48px;
-  }
 }
 
 /* border-radius */
@@ -112,37 +13,6 @@ $border-radius-bigplus: 24px;
 $border-radius-extrabig: 64px;
 $border-radius-full: 10000px;
 
-/* line-height */
-
-$lineheight-none: 1;
-$lineheight-tight: 1.25;
-$lineheight-normal: 1.5;
-$lineheight-relaxed: 1.75;
-
 /* overray */
 
 $overlay: rgba(0, 0, 0, 0.7);
-
-$categories: (
-  "philosophy": (
-    main-color: $cl-philosophy,
-    sp-main-color: $cl-philosophy,
-    pale-color: $cl-philosophy-pale,
-  ),
-  "science": (
-    main-color: $cl-science-darken,
-    sp-main-color: $cl-science-darken,
-    pale-color: $cl-science-pale,
-  ),
-  "economy": (
-    main-color: $cl-economy,
-    sp-main-color: $cl-economy,
-    pale-color: $cl-economy-pale // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,
-  ),
-);
-
-/* title-underline */
-@mixin title-underline {
-  text-decoration: underline wavy;
-  text-decoration-color: $cl-title-underline;
-}
