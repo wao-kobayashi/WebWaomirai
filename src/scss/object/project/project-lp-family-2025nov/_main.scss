@@ -212,8 +212,8 @@ header {
   }
 }
 //02 EVENT INFOMATION
-section.lp-25feb-info {
-  .lp-25feb-info-title {
+section.lp-family-info {
+  .lp-family-info-title {
     text-align: center;
     color: $cl-graylight;
     line-height: $lineheight-tight;
@@ -226,7 +226,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-title-slide {
+  .lp-family-info-title-slide {
     display: flex;
     justify-content: center;
     margin: 20px auto 0;
@@ -235,7 +235,7 @@ section.lp-25feb-info {
     animation: bounce-swipe 3s infinite;
   }
 
-  .lp-25feb-info-title-slide-arrow {
+  .lp-family-info-title-slide-arrow {
     width: 70px;
     height: 20px;
     border-bottom: 1.5px solid $cl-graylight;
@@ -253,7 +253,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns {
+  .lp-family-info-columns {
     justify-content: normal;
     display: block;
     white-space: nowrap;
@@ -272,7 +272,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child {
+  .lp-family-info-columns-child {
     background: white;
     border-radius: $border-radius-bigplus;
     padding: 20px 0px 0;
@@ -301,19 +301,19 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-head {
+  .lp-family-info-columns-child-head {
     @include font-size-l;
     text-align: center;
     margin: 0 auto 12px;
     font-weight: bold;
   }
 
-  .lp-25feb-info-columns-child-image {
+  .lp-family-info-columns-child-image {
     margin: 0 20px;
     position: relative;
   }
 
-  .lp-25feb-info-columns-child-image-overray {
+  .lp-family-info-columns-child-image-overray {
     left: 0;
     top: 0;
     width: 100%;
@@ -328,13 +328,13 @@ section.lp-25feb-info {
     align-items: center;
   }
 
-  .lp-25feb-info-columns-child-image-main {
+  .lp-family-info-columns-child-image-main {
     img {
       border-radius: $border-radius-bigplus;
     }
   }
 
-  .lp-25feb-info-columns-child-image-special {
+  .lp-family-info-columns-child-image-special {
     &::before {
       position: absolute;
       right: 5px;
@@ -365,7 +365,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-text-catch {
+  .lp-family-info-columns-child-text-catch {
     @include font-size-m;
     text-align: center;
     margin: 30px auto 20px;
@@ -375,7 +375,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-text-title {
+  .lp-family-info-columns-child-text-title {
     @include font-size-ml;
     text-align: center;
     margin: 0px auto 30px;
@@ -384,7 +384,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-text-date {
+  .lp-family-info-columns-child-text-date {
     text-align: center;
     @include font-size-ml;
     letter-spacing: 1.5px;
@@ -394,7 +394,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-text-time {
+  .lp-family-info-columns-child-text-time {
     text-align: center;
     letter-spacing: 0.5px;
     @include font-size-ml;
@@ -405,7 +405,7 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-text-archive {
+  .lp-family-info-columns-child-text-archive {
     margin: 0 0 40px;
     text-align: center;
     height: 20px;
@@ -418,13 +418,13 @@ section.lp-25feb-info {
     }
   }
 
-  .lp-25feb-info-columns-child-text {
+  .lp-family-info-columns-child-text {
     span.large {
       @include font-size-l;
     }
   }
 
-  .lp-25feb-info-columns-child-link {
+  .lp-family-info-columns-child-link {
     width: 100%;
     height: 60px;
     display: flex;
@@ -444,10 +444,10 @@ section.lp-25feb-info {
   // @eachで繰り返し処理
   @each $category, $values in $categories {
     .#{$category} {
-      .lp-25feb-info-columns-child-text-catch {
+      .lp-family-info-columns-child-text-catch {
         color: map-get($values, main-color);
       }
-      .lp-25feb-info-columns-child-text-archive-icon {
+      .lp-family-info-columns-child-text-archive-icon {
         color: map-get($values, main-color);
       }
     }
@@ -456,7 +456,7 @@ section.lp-25feb-info {
   // @eachで繰り返し処理
   @each $category, $values in $categories {
     .#{$category} {
-      .lp-25feb-info-columns-child-link {
+      .lp-family-info-columns-child-link {
         background: map-get($values, main-color);
       }
     }
@@ -464,10 +464,10 @@ section.lp-25feb-info {
 }
 
 //03 イベントの詳細
-section.lp-25feb-eventdetail {
+section.lp-family-eventdetail {
   @include section-maxwidth;
 
-  .lp-25feb-eventdetail-content {
+  .lp-family-eventdetail-content {
     width: 100%;
     border-radius: 0 $border-radius-bigplus $border-radius-bigplus
       $border-radius-bigplus;
@@ -481,7 +481,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top {
+  .lp-family-eventdetail-content-top {
     display: flex;
     gap: 50px;
     @include responsive-style(768px) {
@@ -489,12 +489,12 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-left {
+  .lp-family-eventdetail-content-top-left {
     flex: 1;
     position: relative;
   }
 
-  .lp-25feb-eventdetail-content-top-left-overray {
+  .lp-family-eventdetail-content-top-left-overray {
     position: absolute;
     left: 0;
     top: 0;
@@ -515,7 +515,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-left-title {
+  .lp-family-eventdetail-content-top-left-title {
     position: absolute;
     @include responsive-style(768px) {
       position: relative;
@@ -539,7 +539,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-left-img {
+  .lp-family-eventdetail-content-top-left-img {
     img {
       border-radius: 0 $border-radius-extrabig $border-radius-extrabig
         $border-radius-extrabig;
@@ -549,7 +549,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-left-special {
+  .lp-family-eventdetail-content-top-left-special {
     &::before {
       position: absolute;
       right: -28px;
@@ -585,7 +585,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right {
+  .lp-family-eventdetail-content-top-right {
     flex: 1;
     position: relative;
     @include responsive-style(768px) {
@@ -595,7 +595,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right-online {
+  .lp-family-eventdetail-content-top-right-online {
     position: absolute;
     right: 0;
     top: 0;
@@ -608,7 +608,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right-online-text {
+  .lp-family-eventdetail-content-top-right-online-text {
     display: inline-block;
     text-align: left;
     border: 2px solid $cl-philosophy;
@@ -622,7 +622,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right-date {
+  .lp-family-eventdetail-content-top-right-date {
     @include font-size-ml;
     margin: 20px auto 20px;
     letter-spacing: 1px;
@@ -632,7 +632,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right-title {
+  .lp-family-eventdetail-content-top-right-title {
     @include font-size-l;
     margin: 0 auto 15px;
     font-weight: bold;
@@ -642,12 +642,12 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right-text {
+  .lp-family-eventdetail-content-top-right-text {
     @include font-size-m;
     line-height: $lineheight-relaxed;
   }
 
-  .lp-25feb-eventdetail-content-top-right-archive {
+  .lp-family-eventdetail-content-top-right-archive {
     margin: 28px 0 0;
     display: flex;
     align-items: center;
@@ -667,7 +667,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-top-right-archive-text {
+  .lp-family-eventdetail-content-top-right-archive-text {
     font-size: 16px;
     color: $cl-graylight;
     @include responsive-style(768px) {
@@ -683,7 +683,7 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-merit {
+  .lp-family-eventdetail-content-merit {
     margin: 60px 0 0;
     border-radius: $border-radius-bigplus;
     display: flex;
@@ -696,14 +696,14 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-merit-illust {
+  .lp-family-eventdetail-content-merit-illust {
     width: 100px;
     @include responsive-style(768px) {
       display: none;
     }
   }
 
-  .lp-25feb-eventdetail-content-merit-content-box {
+  .lp-family-eventdetail-content-merit-content-box {
     position: relative;
     margin: 0 0 30px;
     padding: 0 0 0 75px;
@@ -729,14 +729,14 @@ section.lp-25feb-eventdetail {
     }
   }
 
-  .lp-25feb-eventdetail-content-merit-content-box-title {
+  .lp-family-eventdetail-content-merit-content-box-title {
     @include font-size-ml;
     @include responsive-style(768px) {
       font-weight: bold;
     }
   }
 
-  .lp-25feb-eventdetail-content-merit-content-box-text {
+  .lp-family-eventdetail-content-merit-content-box-text {
     @include font-size-m;
   }
 }
@@ -744,17 +744,17 @@ section.lp-25feb-eventdetail {
 //03 イベントの詳細　教科ごとの色付け
 @each $category, $values in $categories {
   .#{$category} {
-    .lp-25feb-eventdetail-content-top-left-title {
+    .lp-family-eventdetail-content-top-left-title {
       background: map-get($values, main-color);
     }
-    .lp-25feb-eventdetail-content-top-right-online-text {
+    .lp-family-eventdetail-content-top-right-online-text {
       color: map-get($values, main-color);
       border: 2px solid map-get($values, main-color);
     }
-    .lp-25feb-eventdetail-content-merit {
+    .lp-family-eventdetail-content-merit {
       border: 2px solid map-get($values, main-color);
     }
-    .lp-25feb-eventdetail-content-merit-content-box {
+    .lp-family-eventdetail-content-merit-content-box {
       color: map-get($values, main-color);
       @include responsive-style(768px) {
         color: map-get($values, sp-main-color);
@@ -768,8 +768,8 @@ section.lp-25feb-eventdetail {
 }
 
 //04 こんなあなたにオススメです！
-section.lp-25feb-recommend {
-  .lp-25feb-recommend {
+section.lp-family-recommend {
+  .lp-family-recommend {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
@@ -781,7 +781,7 @@ section.lp-25feb-recommend {
     }
   }
 
-  .lp-25feb-recommend-left {
+  .lp-family-recommend-left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -791,7 +791,7 @@ section.lp-25feb-recommend {
     }
   }
 
-  .lp-25feb-recommend-right {
+  .lp-family-recommend-right {
     position: relative;
     background: $cl-graylightest;
     padding: 45px 30px;
@@ -824,33 +824,33 @@ section.lp-25feb-recommend {
     }
   }
 
-  .lp-25feb-recommend-right-child {
+  .lp-family-recommend-right-child {
     @include responsive-style(768px) {
       display: flex;
       gap: 20px;
     }
   }
 
-  .lp-25feb-recommend-right-child:last-child {
+  .lp-family-recommend-right-child:last-child {
     flex-direction: row-reverse;
   }
 
-  .lp-25feb-recommend-right-child:last-child
-    .lp-25feb-recommend-right-child-text:before {
+  .lp-family-recommend-right-child:last-child
+    .lp-family-recommend-right-child-text:before {
     right: -15px !important;
     left: auto !important;
     transform: rotate(180deg);
   }
 
-  .lp-25feb-recommend-right-child:last-child
-    .lp-25feb-recommend-right-child-icon {
+  .lp-family-recommend-right-child:last-child
+    .lp-family-recommend-right-child-icon {
     @include responsive-style(768px) {
       width: 102px;
       margin: 0;
     }
   }
 
-  .lp-25feb-recommend-right-child-icon {
+  .lp-family-recommend-right-child-icon {
     img {
       height: 75px;
       margin: 0 auto;
@@ -861,7 +861,7 @@ section.lp-25feb-recommend {
     }
   }
 
-  .lp-25feb-recommend-right-child-text {
+  .lp-family-recommend-right-child-text {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -891,7 +891,7 @@ section.lp-25feb-recommend {
   }
 
   //POINT!
-  .lp-25feb-point {
+  .lp-family-point {
     max-width: 450px;
     margin: 45px auto 0;
     display: flex;
@@ -906,7 +906,7 @@ section.lp-25feb-recommend {
     }
   }
 
-  .lp-25feb-point-left {
+  .lp-family-point-left {
     @include responsive-style(768px) {
       width: 120px;
       height: 30px;
@@ -922,7 +922,7 @@ section.lp-25feb-recommend {
     align-items: center;
   }
 
-  .lp-25feb-point-right {
+  .lp-family-point-right {
     flex: 1;
     text-align: center;
     @include responsive-style(768px) {
@@ -934,13 +934,13 @@ section.lp-25feb-recommend {
 }
 
 //05 授業の特徴
-section.lp-25feb-feature {
+section.lp-family-feature {
   padding: 0 20px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
 
-  .lp-25feb-feature-child {
+  .lp-family-feature-child {
     @include font-size-l;
     background: $cl-feature-yellow;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -964,23 +964,23 @@ section.lp-25feb-feature {
     }
   }
 
-  .lp-25feb-feature-child:last-child {
+  .lp-family-feature-child:last-child {
     margin: 0 auto 90px;
   }
 
-  .lp-25feb-feature-child-icons {
+  .lp-family-feature-child-icons {
     display: flex;
     gap: 10px;
   }
 }
 
 //05 授業の特徴
-section.lp-25feb-feature {
+section.lp-family-feature {
   padding: 0 20px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  .lp-25feb-feature-child {
+  .lp-family-feature-child {
     @include font-size-l;
     background: $cl-feature-yellow;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -1014,11 +1014,11 @@ section.lp-25feb-feature {
 }
 
 //06 5stepで参加可能
-section.lp-25feb-howto {
+section.lp-family-howto {
   padding: 30px 0;
   margin: 0 -20px;
 
-  .lp-25feb-howto-title {
+  .lp-family-howto-title {
     @include font-size-l;
     margin: 0 auto 30px;
     text-align: center;
@@ -1034,12 +1034,12 @@ section.lp-25feb-howto {
     }
   }
 
-  .lp-25feb-howto-img {
+  .lp-family-howto-img {
     width: 200px;
     margin: 0 auto 60px;
   }
 
-  .lp-25feb-howto-step-child {
+  .lp-family-howto-step-child {
     max-width: $smallwidth;
     width: 100%;
     margin: 0 auto 60px;
@@ -1057,25 +1057,25 @@ section.lp-25feb-howto {
     }
   }
 
-  .lp-25feb-howto-step-child-icon {
+  .lp-family-howto-step-child-icon {
     @include responsive-style(768px) {
       width: 100px;
     }
   }
 
-  .lp-25feb-howto-step-child-number {
+  .lp-family-howto-step-child-number {
     @include font-size-xl;
     @include responsive-style(768px) {
       @include font-size-xxl;
     }
   }
 
-  .lp-25feb-howto-step-child-text {
+  .lp-family-howto-step-child-text {
     width: 100%;
     padding: 0 20px;
   }
 
-  .lp-25feb-howto-step-child-text-title {
+  .lp-family-howto-step-child-text-title {
     @include font-size-ml;
     @include responsive-style(768px) {
       @include font-size-l;
@@ -1083,7 +1083,7 @@ section.lp-25feb-howto {
     margin: 5px 0 15px;
   }
 
-  .lp-25feb-howto-step-child-text-detail {
+  .lp-family-howto-step-child-text-detail {
     @include font-size-m;
     line-height: $lineheight-relaxed;
     a {
@@ -1092,8 +1092,8 @@ section.lp-25feb-howto {
   }
 }
 
-section.lp-25feb-about {
-  .lp-25feb-about-box {
+section.lp-family-about {
+  .lp-family-about-box {
     background: white;
     max-width: $widewidth;
     margin: 0 auto 0px;
@@ -1110,7 +1110,7 @@ section.lp-25feb-about {
     }
   }
 
-  .lp-25feb-about-box-left {
+  .lp-family-about-box-left {
     width: 250px;
     @include responsive-style(768px) {
       width: 70%;
@@ -1118,23 +1118,23 @@ section.lp-25feb-about {
     }
   }
 
-  .lp-25feb-about-box-right {
+  .lp-family-about-box-right {
     flex: 1;
     line-height: $lineheight-relaxed;
     @include font-size-m;
   }
 }
 
-.lp-25feb-start2025 {
+.lp-family-start2025 {
   @include section-maxwidth;
 
-  .lp-25feb-start2025-catch {
+  .lp-family-start2025-catch {
     @include font-size-l;
     margin: 0 auto;
     text-align: center;
   }
 
-  .lp-25feb-start2025-subtitle {
+  .lp-family-start2025-subtitle {
     background: $cl-main-orange;
     color: white;
     @include font-size-xl;
@@ -1144,23 +1144,23 @@ section.lp-25feb-about {
     border-radius: $border-radius-full;
   }
 
-  .lp-25feb-start2025-logo {
+  .lp-family-start2025-logo {
     max-width: $middlewidth;
     margin: 0 auto 30px;
   }
 
-  .lp-25feb-start2025-target {
+  .lp-family-start2025-target {
     @include font-size-l;
     margin: 0 auto 30px;
     text-align: center;
   }
 
-  .lp-25feb-start2025-subjects {
+  .lp-family-start2025-subjects {
     max-width: $middlewidth;
     margin: 0 auto 45px;
   }
 
-  .lp-25feb-start2025-feature {
+  .lp-family-start2025-feature {
     display: flex;
     gap: 45px;
     margin: 0px 0 60px;
@@ -1170,7 +1170,7 @@ section.lp-25feb-about {
     }
   }
 
-  .lp-25feb-start2025-feature-box {
+  .lp-family-start2025-feature-box {
     background: white;
     border-radius: $border-radius-bigplus;
     padding: 30px 20px 20px;
@@ -1182,7 +1182,7 @@ section.lp-25feb-about {
     }
   }
 
-  .lp-25feb-start2025-feature-box-title {
+  .lp-family-start2025-feature-box-title {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -1195,11 +1195,11 @@ section.lp-25feb-about {
     }
   }
 
-  .lp-25feb-start2025-feature-box-text {
+  .lp-family-start2025-feature-box-text {
     @include font-size-m;
   }
 }
-.lp-25feb-start2025 {
+.lp-family-start2025 {
   @include section-maxwidth;
   &-catch {
     @include font-size-l;

@@ -25,111 +25,24 @@ body#lp-2025feb
       .c-lp-25feb-mv-content-target 
          |対象：小〜中学生とその保護者
   //02 EVENT INFOMATION
-  section.lp-25feb-info 
-    .lp-25feb-info-title
+  section.lp-family-info 
+    .lp-family-info-title
        .pcimage
         |EVENT INFORMATION
        .spimage
         |EVENT
         br
         |INFORMATION
-    .lp-25feb-info-title-slide.spimage 
-      .lp-25feb-info-title-slide-text
+    .lp-family-info-title-slide.spimage 
+      .lp-family-info-title-slide-text
         |スライド
-      .lp-25feb-info-title-slide-arrow
-    //- .lp-25feb-info-columns
-    //-     -
-    //-       var eventList = [
-    //-           {
-    //-           id: 'event1',
-    //-           category: 'economy',
-    //-           thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/event_sci_2.png',
-    //-           categoryName: '経済(お金)',
-    //-           eventDate: '<span class="large">10</span>月<span class="large">29</span>日(水)',
-    //-           eventTime: '19:30-20:15',
-    //-           catchCopy: '職業ごとの給料の違い',
-    //-           title: 'あの人の給料は<br />なぜ高い?',
-    //-           statusLabel: '募集は終了しました'
-    //-         },
-    //-         {
-    //-           id: 'event2',
-    //-           category: 'economy',
-    //-           thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/event_sci_2.png',
-    //-           categoryName: '経済(お金)',
-    //-           eventDate: '<span class="large">10</span>月<span class="large">29</span>日(水)',
-    //-           eventTime: '20:30-21:15',
-    //-           catchCopy: '就職活動とお金',
-    //-           title: '人生の選択とお金:<br />最適解をどう選ぶか?',
-    //-           statusLabel: '募集は終了しました'
-    //-         },
-    //-         {
-    //-           id: 'event3',
-    //-           category: 'science',
-    //-           thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ec.png',
-    //-           categoryName: '科学リテラシー',
-    //-           eventDate: '<span class="large">10</span>月<span class="large">31</span>日(金)',
-    //-           eventTime: '19:30-20:15',
-    //-           catchCopy: '人間の味覚ってどんなもの？',
-    //-           title: '苦い野菜をおいしく<br />食べる方法はあるの?',
-    //-           statusLabel: '募集は終了しました'
-    //-         },
-    //-         {
-    //-           id: 'event4',
-    //-           category: 'science',
-    //-           thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ec.png',
-    //-           categoryName: '科学リテラシー',
-    //-           eventDate: '<span class="large">10</span>月<span class="large">31</span>日(金)',
-    //-           eventTime: '20:30-21:15',
-    //-           catchCopy: '発電から見るSDGsの考え方',
-    //-           title: '太陽の光で電気を<br />つくることはエコになる?',
-    //-           statusLabel: '募集は終了しました'
-    //-         },
-    //-         {
-    //-           id: 'event5',
-    //-           category: 'philosophy',
-    //-           thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-    //-           categoryName: '哲学（思考力）',
-    //-           eventDate: '<span class="large">11</span>月<span class="large">1</span>日(土)',
-    //-           eventTime: '18:00-18:45',
-    //-           catchCopy: '「妖怪」は存在するのか？',
-    //-           title: '見える存在 vs<br />見えない存在',
-    //-           statusLabel: '募集は終了しました'
-    //-         },
-    //-         {
-    //-           id: 'event6',
-    //-           category: 'philosophy',
-    //-           thumbnailUrl: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/img_event_ph.png',
-    //-           categoryName: '哲学（思考力）',
-    //-           eventDate: '<span class="large">11</span>月<span class="large">1</span>日(土)',
-    //-           eventTime: '19:00-19:45',
-    //-           catchCopy: '「妖怪」は存在するのか？',
-    //-           title: '見える存在 vs<br />見えない存在',
-    //-           statusLabel: '募集は終了しました'
-    //-         }
-    //-       ]
+      .lp-family-info-title-slide-arrow
 
-    //-     each item in eventList
-    //-       .lp-25feb-info-columns-child(class=item.category)
-    //-         .lp-25feb-info-columns-child-head= item.categoryName
-    //-         .lp-25feb-info-columns-child-image
-    //-           //- .lp-25feb-info-columns-child-image-overray= item.statusLabel
-    //-           .lp-25feb-info-columns-child-image-main
-    //-             img(src=item.thumbnailUrl)
-    //-           if item.guestImageUrl
-    //-             .lp-25feb-info-columns-child-image-special
-    //-               img(src=item.guestImageUrl)
-    //-         .lp-25feb-info-columns-child-text
-    //-           .lp-25feb-info-columns-child-text-catch!= item.catchCopy
-    //-           .lp-25feb-info-columns-child-text-title!= item.title
-    //-           .lp-25feb-info-columns-child-text-date!= item.eventDate
-    //-           .lp-25feb-info-columns-child-text-time= item.eventTime
-    //-         a.lp-25feb-info-columns-child-link(href=`#${item.id}`)
-    //-           |詳しくはこちらをclick!
     //CTA
     +btn-cta
       
   //03 イベントの詳細
-  section.lp-25feb-eventdetail 
+  section.lp-family-eventdetail 
     //変数定義
     -
         var events = [
@@ -232,65 +145,65 @@ body#lp-2025feb
         ]
     //3教科ループさせる
     each event in events
-      .lp-25feb-eventdetail-content(id=event.id, class=event.class)
-        .lp-25feb-eventdetail-content-top
-          .lp-25feb-eventdetail-content-top-left
-            .lp-25feb-eventdetail-content-top-left-title
+      .lp-family-eventdetail-content(id=event.id, class=event.class)
+        .lp-family-eventdetail-content-top
+          .lp-family-eventdetail-content-top-left
+            .lp-family-eventdetail-content-top-left-title
               != event.subjecttitle
-            .lp-25feb-eventdetail-content-top-left-img
+            .lp-family-eventdetail-content-top-left-img
               img(src=event.subjectimg)
 
-          .lp-25feb-eventdetail-content-top-right
-            .lp-25feb-eventdetail-content-top-right-online
-              .lp-25feb-eventdetail-content-top-right-online-text
+          .lp-family-eventdetail-content-top-right
+            .lp-family-eventdetail-content-top-right-online
+              .lp-family-eventdetail-content-top-right-online-text
                 != event.eventsubtitle
-            .lp-25feb-eventdetail-content-top-right-date
+            .lp-family-eventdetail-content-top-right-date
               != event.date
               br
               | #{event.time}
-            .lp-25feb-eventdetail-content-top-right-title
+            .lp-family-eventdetail-content-top-right-title
               != event.eventtitle
-            .lp-25feb-eventdetail-content-top-right-text
+            .lp-family-eventdetail-content-top-right-text
               | #{event.description}
-            .lp-25feb-eventdetail-content-top-right-archive
-        .lp-25feb-eventdetail-content-merit
-          .lp-25feb-eventdetail-content-merit-illust
+            .lp-family-eventdetail-content-top-right-archive
+        .lp-family-eventdetail-content-merit
+          .lp-family-eventdetail-content-merit-illust
             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
-          .lp-25feb-eventdetail-content-merit-content
+          .lp-family-eventdetail-content-merit-content
             each merit in event.merits
-              .lp-25feb-eventdetail-content-merit-content-box
-                .lp-25feb-eventdetail-content-merit-content-box-title= merit.title
-                .lp-25feb-eventdetail-content-merit-content-box-text= merit.text   
+              .lp-family-eventdetail-content-merit-content-box
+                .lp-family-eventdetail-content-merit-content-box-title= merit.title
+                .lp-family-eventdetail-content-merit-content-box-text= merit.text   
         .spimage 
            +btn-cta-subject
     .pcimage
       +btn-cta
   //04 こんなあなたにオススメです！
-  section.lp-25feb-recommend
+  section.lp-family-recommend
     .c-title-25feb-lp 
        |こんなあなたに
        br.spimage
        |オススメです！
-    .lp-25feb-recommend
-      .lp-25feb-recommend-left.pcimage
+    .lp-family-recommend
+      .lp-family-recommend-left.pcimage
           img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_3person.png')
-      .lp-25feb-recommend-right
+      .lp-family-recommend-right
         //親子
-        .lp-25feb-recommend-right-child
-           .lp-25feb-recommend-right-child-icon.pcimage
+        .lp-family-recommend-right-child
+           .lp-family-recommend-right-child-icon.pcimage
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_child.png')
-           .lp-25feb-recommend-right-child-icon.spimage
+           .lp-family-recommend-right-child-icon.spimage
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_child.svg')
-           .lp-25feb-recommend-right-child-text
+           .lp-family-recommend-right-child-text
               div ⚪︎学校の勉強だけじゃものたりない
               div ⚪︎好奇心がとまらない
               div ⚪︎総合型選抜も見据えた学びがしたい
-        .lp-25feb-recommend-right-child
-           .lp-25feb-recommend-right-child-icon.pcimage
+        .lp-family-recommend-right-child
+           .lp-family-recommend-right-child-icon.pcimage
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom_and_papa.png')
-           .lp-25feb-recommend-right-child-icon.spimage
+           .lp-family-recommend-right-child-icon.spimage
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_family.svg')
-           .lp-25feb-recommend-right-child-text
+           .lp-family-recommend-right-child-text
               div 
                 |⚪︎子どもももちろんだけど、
                 br.pcimage
@@ -298,10 +211,10 @@ body#lp-2025feb
               div|⚪︎子どもと話し合えるきっかけがほしい
               div|⚪︎自立した大人になってほしい
           
-    .lp-25feb-point
-       .lp-25feb-point-left 
+    .lp-family-point
+       .lp-family-point-left 
          |POINT!
-       .lp-25feb-point-right
+       .lp-family-point-right
           |ワオ未来塾の授業は推奨学年はありますが、
           br.pcimage
           |大人も子どもも楽しめるコンテンツ。
@@ -311,85 +224,85 @@ body#lp-2025feb
           |ちょっと世の中の見え方が変わってくる！
 
   //05 5stepで参加可能
-  section.lp-25feb-howto.c-bg-section-white
-    .lp-25feb-howto-title 
+  section.lp-family-howto.c-bg-section-white
+    .lp-family-howto-title 
        |カンタン
        span.large|5
        |STEP
        br.spimage
        |で参加可能
-    .lp-25feb-howto-img 
+    .lp-family-howto-img 
            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom.png')
 
     -
         var steps = [{
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png',
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join01.png',
           number: '1.',
           title: 'LINEで公式アカウントを友だち追加',
           text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a class="modal-open-liff-qr">こちら</a></span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>`
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join02.png',
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join02.png',
           number: '2.',
           title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join03.png',
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join03.png',
           number: '3.',
           title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join04.png',
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join04.png',
           number: '4.',
           title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join05.png',
+          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join05.png',
           number: '5.',
           title: '開催時間になったら届いたイベントURLから参加しましょう！'
         }]
     each step in steps
-      .lp-25feb-howto-step 
-        .lp-25feb-howto-step-child 
-          .lp-25feb-howto-step-child-icon 
+      .lp-family-howto-step 
+        .lp-family-howto-step-child 
+          .lp-family-howto-step-child-icon 
             img(src=step.iconimg)
-          .lp-25feb-howto-step-child-number 
+          .lp-family-howto-step-child-number 
             |#{step.number}
-          .lp-25feb-howto-step-child-text
-            .lp-25feb-howto-step-child-text-title
+          .lp-family-howto-step-child-text
+            .lp-family-howto-step-child-text-title
               != step.title
-            .lp-25feb-howto-step-child-text-detail
+            .lp-family-howto-step-child-text-detail
               != step.text        
     //登録するためのアイコン
 
     //CTA
     +btn-cta
   //06 ワオ未来塾って？
-  section.lp-25feb-about
+  section.lp-family-about
       .c-title-25feb-lp 
        |ワオ未来塾って？
-      .lp-25feb-about-box 
-          .lp-25feb-about-box-left 
+      .lp-family-about-box 
+          .lp-family-about-box-left 
             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/logo_wao.svg')
-          .lp-25feb-about-box-right
+          .lp-family-about-box-right
               |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
   //07 授業の特徴
-  section.lp-25feb-feature
+  section.lp-family-feature
     .c-title-25feb-lp 
        |授業の特長
     div
-      .lp-25feb-feature-child 
+      .lp-family-feature-child 
         i.fa-solid.fa-globe
         |オンライン授業で
         br.spimage
         |全国どこからでも
         br.spimage
         |参加OK
-      .lp-25feb-feature-child 
+      .lp-family-feature-child 
         i.fa-regular.fa-comments
         |ライブだからチャットで授業に参加できる!
-      .lp-25feb-feature-child 
-        .lp-25feb-feature-child-icons 
+      .lp-family-feature-child 
+        .lp-family-feature-child-icons 
           i.fa-solid.fa-laptop
         |必要なのはPCか
         br.spimage
@@ -398,8 +311,8 @@ body#lp-2025feb
     +btn-cta
                
   //08 2025年4月開講
-  section.lp-25feb-start2025
-      .lp-25feb-start2025-catch 
+  section.lp-family-start2025
+      .lp-family-start2025-catch 
         |社会で役立つ学びを、
         br.spimage
         |今はじめよう
@@ -407,45 +320,45 @@ body#lp-2025feb
         |オンラインで
         br.spimage
         |楽しく学ぶ“新5教科”
-      .lp-25feb-start2025-subtitle 
+      .lp-family-start2025-subtitle 
         |2025年4月開校！
-      .lp-25feb-start2025-logo 
+      .lp-family-start2025-logo 
         img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-      .lp-25feb-start2025-target 
+      .lp-family-start2025-target 
         |〈対象〉
         br.spimage
         |小学3〜6年生／
         br.spimage
         |中学生／高校生
-      .lp-25feb-start2025-subjects 
+      .lp-family-start2025-subjects 
         .pcimage
             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/ilust_5subjects_pc.png')
         .spimage
             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/ilust_5subjects_sp.png') 
-      .lp-25feb-start2025-feature 
-        .lp-25feb-start2025-feature-box
-          .lp-25feb-start2025-feature-box-title  
-            .lp-25feb-start2025-feature-box-title-icon   
+      .lp-family-start2025-feature 
+        .lp-family-start2025-feature-box
+          .lp-family-start2025-feature-box-title  
+            .lp-family-start2025-feature-box-title-icon   
                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-            .lp-25feb-start2025-feature-box-title-text 
+            .lp-family-start2025-feature-box-title-text 
               |新しい５教科
-          .lp-25feb-start2025-feature-box-text 
+          .lp-family-start2025-feature-box-text 
              |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
-        .lp-25feb-start2025-feature-box
-          .lp-25feb-start2025-feature-box-title  
-            .lp-25feb-start2025-feature-box-title-icon   
+        .lp-family-start2025-feature-box
+          .lp-family-start2025-feature-box-title  
+            .lp-family-start2025-feature-box-title-icon   
                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-            .lp-25feb-start2025-feature-box-title-text 
+            .lp-family-start2025-feature-box-title-text 
               |飛び級制
-          .lp-25feb-start2025-feature-box-text 
+          .lp-family-start2025-feature-box-text 
              |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
-        .lp-25feb-start2025-feature-box
-          .lp-25feb-start2025-feature-box-title  
-            .lp-25feb-start2025-feature-box-title-icon   
+        .lp-family-start2025-feature-box
+          .lp-family-start2025-feature-box-title  
+            .lp-family-start2025-feature-box-title-icon   
                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-            .lp-25feb-start2025-feature-box-title-text 
+            .lp-family-start2025-feature-box-title-text 
               |オンラインライブ授業
-          .lp-25feb-start2025-feature-box-text 
+          .lp-family-start2025-feature-box-text 
              |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
       .lp-waomirai-start2025-btn
         a(href='https://waomirai.com/', target='_blank')

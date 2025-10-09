@@ -3,7 +3,11 @@
 @import "foundation/_constant"; //色などの変数定義
 @import "foundation/_wpstyle"; //色などの変数定義
 @import "foundation/_reset"; //デフォルトのスタイルをリセットしたもの
-@import "object/project/project-lp-family-2025nov/_mixins-colors.scss";
-@import "object/project/project-lp-family-2025nov/_modal";
-@import "object/project/project-lp-family-2025nov/_animation";
+@import "object/project/project-lp-family-2025nov/_settings-colors.scss"; //エフェクト設定
+@import "object/project/project-lp-family-2025nov/_settings-typographic.scss"; //タイポグラフィ設定
+@import "object/project/project-lp-family-2025nov/_settings-layout.scss"; //レイアウト設定
+@import "object/project/project-lp-family-2025nov/_settings-animation"; //アニメーション設定
+@import "object/project/project-lp-family-2025nov/_settings-effects.scss"; //エフェクト設定
+@import "object/project/project-lp-family-2025nov/_parts-modal.scss"; //テーブル
+@import "object/project/project-lp-family-2025nov/_parts-button.scss"; //ボタン
 @import "object/project/project-lp-family-2025nov/_main";

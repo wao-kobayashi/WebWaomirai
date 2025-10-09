@@ -1,0 +1,29 @@
+/* color */
+
+$cl-philosophy-pale: #f4c66d;
+$cl-science-pale: #66cb88; //figmaから持ってきたが色が違う?
+$cl-economy-pale: #67d2e9;
+$cl-bg-eventlp-2025feb: #fff8e0;
+$cl-btn-cta: #f88c6a;
+$cl-title-underline: #febcad;
+$cl-merit-yellow: #f8d86a;
+$cl-feature-yellow: #fffb96;
+
+$categories: (
+  "philosophy": (
+    main-color: $cl-philosophy,
+    sp-main-color: $cl-philosophy,
+    pale-color: $cl-philosophy-pale,
+  ),
+  "science": (
+    main-color: $cl-science-darken,
+    sp-main-color: $cl-science-darken,
+    pale-color: $cl-science-pale,
+  ),
+  "economy": (
+    main-color: $cl-economy,
+    sp-main-color: $cl-economy,
+    pale-color: $cl-economy-pale
+      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+);
