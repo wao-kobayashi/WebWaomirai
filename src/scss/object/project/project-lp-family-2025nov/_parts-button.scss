@@ -24,7 +24,7 @@
 
     .lp-waomirai-start2025-btn-text {
       margin: 0px 0 0;
-      @include font-size-ml;
+      font-size: $font-size-xl;
       letter-spacing: 1px;
     }
     .lp-waomirai-start2025-btn-icn {
@@ -60,14 +60,14 @@
     .c-btn-cta-top {
       position: absolute;
       top: 12px;
-      @include font-size-m;
+      font-size: $font-size-m;
       letter-spacing: 1px;
     }
     .c-btn-cta-main {
       position: absolute;
       // top: 0px;
       margin: 7px 0 0;
-      @include font-size-l;
+      font-size: $font-size-xxl;
       letter-spacing: 1px;
     }
   }
@@ -97,12 +97,12 @@
     // .c-btn-cta-top {
     //   position: absolute;
     //   top: 12px;
-    //   @include font-size-m;
+    //   font-size: $font-size-m;
     //   letter-spacing: 1px;
     // }
     .c-btn-cta-main {
       margin: 0px 0 0;
-      @include font-size-l;
+      font-size: $font-size-xxl;
       letter-spacing: 1px;
     }
   }

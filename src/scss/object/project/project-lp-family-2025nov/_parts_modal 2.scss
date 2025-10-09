@@ -23,19 +23,17 @@ $z-indexes: (
   background: white;
   padding: 0 0 0px;
   border-radius: 20px;
-
-  .modal-wrapper {
+  // overflow: hidden;
+  &-wrapper {
     position: relative;
-
-    .modal-wrapper-close {
+    &-close {
       position: absolute;
       right: -10px;
       top: -10px;
       z-index: z("modalclose");
       width: 40px;
       height: 40px;
-
-      .modal-wrapper-close-icon {
+      &-icon {
         width: 40px;
         height: 40px;
         border-radius: 20px;
@@ -61,62 +59,58 @@ $z-indexes: (
         }
       }
     }
+    &-content {
+      &-main {
+        position: relative;
+        border-radius: 20px 20px 0 0;
+        padding: 20px 0 0;
 
-    .modal-wrapper-content-main {
-      position: relative;
-      border-radius: 20px 20px 0 0;
-      padding: 20px 0 0;
-
-      .modal-wrapper-content-main-head {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $cl-black;
-        font-size: $font-size-xl;
-        font-weight: 300;
-        margin: 0px auto 0;
-        text-align: center;
-        line-height: $lineheight-normal;
-        letter-spacing: 2px;
-        gap: 20px;
-
-        .modal-wrapper-content-main-head-img {
+        &-head {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $cl-black;
+          font-size: $font-size-xl;
+          font-weight: 300;
+          margin: 0px auto 0;
           text-align: center;
+          line-height: $lineheight-normal;
+          letter-spacing: 2px;
+          gap: 20px;
+          &-img {
+            text-align: center;
+            img {
+              height: 60px;
+              object-fit: cover;
+              margin: 0 auto;
+            }
+          }
+          &-text {
+            text-align: left;
+          }
+        }
+        &-qr {
+          text-align: center;
+          max-width: 270px;
+          margin: 20px auto 25px;
+          @include box-shadow-lp();
           img {
-            height: 60px;
-            object-fit: cover;
+            padding: 20px;
             margin: 0 auto;
           }
         }
-
-        .modal-wrapper-content-main-head-text {
-          text-align: left;
+        &-text {
+          font-size: $font-size-m;
+          text-align: center;
         }
       }
-
-      .modal-wrapper-content-main-qr {
+      &-close {
         text-align: center;
-        max-width: 270px;
         margin: 20px auto 25px;
-        @include box-shadow-lp();
-        img {
-          padding: 20px;
-          margin: 0 auto;
-        }
+        color: $cl-graylight;
+        text-decoration: underline;
+        cursor: pointer;
       }
-
-      .modal-wrapper-content-main-text {
-        font-size: $font-size-m;
-        text-align: center;
-      }
-    }
-
-    .modal-wrapper-content-close {
-      text-align: center;
-      margin: 20px auto 25px;
-      color: $cl-graylight;
-      text-decoration: underline;
-      cursor: pointer;
     }
   }
 }

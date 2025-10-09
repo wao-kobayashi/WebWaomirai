@@ -1,51 +1,15 @@
 /* fontsize */
 
-@mixin font-size-s {
-  font-size: 12px;
-  @include responsive-style(768px) {
-    font-size: 11.5px;
-  }
-}
-
-@mixin font-size-m {
-  font-size: 17px;
-  @include responsive-style(768px) {
-    font-size: 16px;
-  }
-}
-
-@mixin font-size-ml {
-  font-size: 22px;
-  @include responsive-style(768px) {
-    font-size: 20px;
-  }
-}
-
-@mixin font-size-l {
-  font-size: 27px;
-  @include responsive-style(768px) {
-    font-size: 24px;
-  }
-}
-
-@mixin font-size-xl {
-  font-size: 34px;
-  @include responsive-style(768px) {
-    font-size: 30px;
-  }
-}
-@mixin font-size-xxl {
-  font-size: 48px;
-  @include responsive-style(768px) {
-    font-size: 40px;
-  }
-}
-@mixin font-size-xxxl {
-  font-size: 60px;
-  @include responsive-style(768px) {
-    font-size: 48px;
-  }
-}
+// Font size variables
+$font-size-sss: 10px;
+$font-size-ss: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 22px;
+$font-size-xxl: 30px;
+$font-size-xxxl: 40px;
+$font-size-huge: 56px;
 
 /* line-height */
 
