@@ -120,255 +120,220 @@ header {
 //   }
 // }
 
+.lp-family-fv {
+  text-align: center;
+  margin: 0 auto 0;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  .lp-family-fv-main {
+    padding: 45px 0 75px;
+    position: relative;
+    z-index: 1;
+    .lp-family-fv-main-date {
+      font-size: $font-size-xxl;
+      margin: 0 auto 15px;
+
+      @include title-underline; //下の波線
+    }
+    .lp-family-fv-main-logo {
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    .lp-family-fv-main-text {
+      font-size: $font-size-m;
+      margin: 30px auto 0px;
+      line-height: $lineheight-relaxed;
+    }
+    .lp-family-fv-main-target {
+      font-size: $font-size-xl;
+      display: block;
+      background: $cl-merit-yellow;
+      padding: 16px 0;
+      border-radius: $border-radius-full;
+      text-align: center;
+      margin: 30px auto 0px;
+      font-weight: bold;
+      max-width: 500px;
+    }
+  }
+  &::before {
+    display: block;
+    content: "";
+    width: 780px;
+    height: 780px;
+    position: absolute;
+    border-radius: $border-radius-full;
+    background: $cl-white;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+  }
+  //familyイラスト
+  .lp-family-fv-main-illust01 {
+    position: absolute;
+    right: 30px;
+    bottom: -20px;
+    width: 220px;
+  }
+  //standイラスト
+  .lp-family-fv-main-illust02 {
+    position: absolute;
+    left: 30px;
+    bottom: -30px;
+    width: 130px;
+  }
+  //onlineイラスト
+  .lp-family-fv-main-illust03 {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 220px;
+  }
+  //Questionイラスト
+  .lp-family-fv-main-illust04 {
+    position: absolute;
+    left: 130px;
+    top: 226px;
+    width: 110px;
+    animation: pikopiko 3s steps(2, start) infinite;
+  }
+  //Bookイラスト
+  .lp-family-fv-main-illust05 {
+    position: absolute;
+    right: 60px;
+    width: 130px;
+    top: 190px;
+    animation: pikopiko 3s steps(2, start) infinite;
+  }
+  //Bankイラスト
+  .lp-family-fv-main-illust06 {
+    position: absolute;
+    right: 40px;
+    top: -15px;
+    width: 110px;
+    animation: pikopiko 3s steps(2, start) infinite;
+  }
+  @keyframes pikopiko {
+    0% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+}
+
 //02 EVENT INFOMATION
 .lp-family-eventlist {
-  @include section-maxwidth;
-  margin: 0 auto 75px;
-  .lp-family-info-title {
-    text-align: center;
-    color: $cl-graylight;
-    line-height: $lineheight-tight;
-    font-size: $font-size-xxxl;
-    margin: 0 auto 30px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    @include responsive-style($breakpoint-sp) {
-      margin: 0 auto 0px;
-    }
-  }
-
-  .lp-family-info-title-slide {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto 0;
-    color: $cl-graylight;
-    gap: 10px;
-    animation: bounce-swipe 3s infinite;
-  }
-
-  .lp-family-info-title-slide-arrow {
-    width: 70px;
-    height: 20px;
-    border-bottom: 1.5px solid $cl-graylight;
-    position: relative;
-    &:before {
-      transform: rotate(-45deg);
-      right: 5px;
-      bottom: -3px;
-      content: "";
-      position: absolute;
-      width: 1.5px;
-      height: 14px;
-      background: $cl-graylight;
-      display: block;
-    }
-  }
-
-  .lp-family-info-columns {
-    justify-content: normal;
-    display: block;
-    white-space: nowrap;
-    overflow-x: scroll;
-    gap: 30px;
+  width: 100%;
+  background: $cl-bg-creamyellow-dark;
+  padding: 90px 0 60px;
+  .lp-family-eventlist-section {
     width: 100%;
-    margin: 0 auto 90px;
-
-    @include responsive-style($breakpoint-sp) {
-      justify-content: normal;
-      display: block;
-      white-space: nowrap;
-      overflow-x: scroll;
-      padding: 20px 20px 20px;
-      margin: 0 auto 30px;
-    }
-  }
-
-  .lp-family-info-columns-child {
-    background: white;
+    max-width: 1140px;
+    background: $cl-white;
     border-radius: $border-radius-bigplus;
-    padding: 20px 0px 0;
-    @include box-shadow-lp;
-    overflow: hidden;
-    display: inline-block;
-    width: 300px;
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    margin-left: 0px;
-
-    &:first-child {
-      margin-left: 20px;
-      @include min-responsive-style(1200px) {
-        margin-left: calc((100% - 1140px) / 2);
-      }
-    }
-    &:last-child {
-      margin: 20px 120px 40px 0;
-    }
-    @include responsive-style($breakpoint-sp) {
-      width: 250px;
-      margin: 0 20px 0 0;
-      display: inline-block;
-    }
+    padding: 36px 0 45px;
+    margin: 0px auto 60px;
   }
-
-  .lp-family-info-columns-child-head {
-    font-size: $font-size-xxl;
-    text-align: center;
-    margin: 0 auto 12px;
-    font-weight: bold;
-  }
-
-  .lp-family-info-columns-child-image {
-    margin: 0 20px;
-    position: relative;
-  }
-
-  .lp-family-info-columns-child-image-overray {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    color: $cl-white;
-    font-size: $font-size-xxl;
-    background: rgba(0, 0, 0, 0.55);
+  .lp-family-eventlist-wrapper {
+    background: $cl-white;
+    margin: 0px 36px 0;
+    border: 2px dashed $cl-border-brown;
     border-radius: $border-radius-bigplus;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .lp-family-eventlist-wrapper-title {
+      position: relative;
 
-  .lp-family-info-columns-child-image-main {
-    img {
-      border-radius: $border-radius-bigplus;
-    }
-  }
+      border-bottom: 2px dashed $cl-border-brown;
+      .lp-family-eventlist-wrapper-title-text {
+        padding: 50px 0 40px;
+        margin: 0 auto;
+        text-align: center;
+        .lp-family-eventlist-wrapper-title-text-img img {
+          margin: 0 auto;
+        }
+        .lp-family-eventlist-wrapper-title-text-note {
+          font-size: $font-size-l;
+          color: $cl-gray;
+          margin: 10px 0 0;
+          text-align: center;
+        }
+      }
 
-  .lp-family-info-columns-child-image-special {
-    &::before {
-      position: absolute;
-      right: 5px;
-      bottom: -20px;
-      width: 120px;
-      height: 120px;
-      border-radius: $border-radius-full;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 2;
-      content: "";
-      @include responsive-style($breakpoint-sp) {
-        width: 80px;
-        height: 80px;
+      .lp-family-eventlist-wrapper-title-illust01 {
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: -80px;
+        transform: rotate(-10deg);
+      }
+      .lp-family-eventlist-wrapper-title-illust02 {
+        position: absolute;
+        right: 30px;
+        width: 90px;
+        top: -70px;
+        transform: rotate(10deg);
       }
     }
-    img {
-      position: absolute;
-      right: 5px;
-      bottom: -20px;
-      width: 120px;
-      height: 120px;
-      border-radius: $border-radius-full;
-      border: 3px solid $cl-white;
-      @include responsive-style($breakpoint-sp) {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  }
+    .lp-family-eventlist-wrapper-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // gap: 2px;
+      padding: 0px 0px 0px;
 
-  .lp-family-info-columns-child-text-catch {
-    font-size: $font-size-m;
-    text-align: center;
-    margin: 30px auto 20px;
-    letter-spacing: 0.5px;
-    @include responsive-style($breakpoint-sp) {
-      letter-spacing: -0.2px;
-    }
-  }
+      .lp-family-eventlist-wrapper-grid-item {
+        padding: 35px 30px 45px;
+        .lp-family-eventlist-wrapper-grid-item-img {
+          img {
+            border-radius: $border-radius-big;
+            width: 100%;
+            margin: 0 0 4px;
+          }
+        }
+        .lp-family-eventlist-wrapper-grid-item-content-category {
+          display: flex;
+          gap: 10px;
 
-  .lp-family-info-columns-child-text-title {
-    font-size: $font-size-xl;
-    text-align: center;
-    margin: 0px auto 30px;
-    @include responsive-style($breakpoint-sp) {
-      margin: 0px auto 20px;
-    }
-  }
-
-  .lp-family-info-columns-child-text-date {
-    text-align: center;
-    font-size: $font-size-xl;
-    letter-spacing: 1.5px;
-    margin: 0px auto 0px;
-    @include responsive-style($breakpoint-sp) {
-      font-size: $font-size-m;
-    }
-  }
-
-  .lp-family-info-columns-child-text-time {
-    text-align: center;
-    letter-spacing: 0.5px;
-    font-size: $font-size-xl;
-    margin: 0 0 20px;
-    @include responsive-style($breakpoint-sp) {
-      margin: 0 0 25px;
-      font-size: $font-size-m;
-    }
-  }
-
-  .lp-family-info-columns-child-text-archive {
-    margin: 0 0 40px;
-    text-align: center;
-    height: 20px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    i {
-      font-size: 20px;
-    }
-  }
-
-  .lp-family-info-columns-child-text {
-    span.large {
-      font-size: $font-size-xxl;
-    }
-  }
-
-  .lp-family-info-columns-child-link {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    color: white;
-    text-decoration: none;
-    font-size: $font-size-xl;
-    @include responsive-style($breakpoint-sp) {
-      font-size: $font-size-m;
-      height: 49px;
-    }
-  }
-
-  // @eachで繰り返し処理
-  @each $category, $values in $categories {
-    .#{$category} {
-      .lp-family-info-columns-child-text-catch {
-        color: map-get($values, main-color);
-      }
-      .lp-family-info-columns-child-text-archive-icon {
-        color: map-get($values, main-color);
-      }
-    }
-  }
-
-  // @eachで繰り返し処理
-  @each $category, $values in $categories {
-    .#{$category} {
-      .lp-family-info-columns-child-link {
-        background: map-get($values, main-color);
+          .lp-family-eventlist-wrapper-grid-item-content-category-child {
+            font-size: $font-size-s;
+            background: $cl-graylightest;
+            padding: 6px 14px;
+            border-radius: $border-radius-big;
+            margin: 16px 0 0;
+          }
+        }
+        .lp-family-eventlist-wrapper-grid-item-content-title {
+          font-size: $font-size-l;
+          font-weight: bold;
+          margin: 16px 0 8px;
+        }
+        .lp-family-eventlist-wrapper-grid-item-content-datetime {
+          display: flex;
+          align-items: flex-end;
+          .lp-family-eventlist-wrapper-grid-item-content-datetime-date {
+            font-size: $font-size-m;
+            line-height: $lineheight-normal;
+            margin: 0 11px 0px 0px;
+          }
+          .lp-family-eventlist-wrapper-grid-item-content-datetime-icon {
+            margin: 0 10px 3px 0px;
+          }
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5) {
+          border-right: 2px dashed $cl-border-brown;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-bottom: 2px dashed $cl-border-brown;
+        }
       }
     }
   }
@@ -380,11 +345,10 @@ section.lp-family-eventdetail {
 
   .lp-family-eventdetail-content {
     width: 100%;
-    border-radius: 0 $border-radius-bigplus $border-radius-bigplus
-      $border-radius-bigplus;
-    background: white;
-    margin: 0 auto 75px;
+    border-radius: $border-radius-bigplus;
+    margin: 0 auto 60px;
     padding: 36px;
+    background: $cl-white;
     @include responsive-style($breakpoint-sp) {
       margin: 0 auto 45px;
       padding: 0px 0 30px;
@@ -425,7 +389,7 @@ section.lp-family-eventdetail {
       }
     }
     .lp-family-eventdetail-content-top-right-title {
-      font-size: $font-size-xxl;
+      font-size: $font-size-xxxl;
       font-weight: bold;
       margin: 20px 0 20px;
       @include responsive-style($breakpoint-sp) {
@@ -438,7 +402,7 @@ section.lp-family-eventdetail {
       align-items: flex-end;
       margin: 0px 0 20px;
       .lp-family-eventdetail-content-top-right-datetime-date {
-        font-size: $font-size-xl;
+        font-size: $font-size-xxl;
         line-height: $lineheight-normal;
         font-weight: bold;
         margin: 0 16px 0px 0px;
@@ -464,7 +428,7 @@ section.lp-family-eventdetail {
     display: flex;
     align-items: flex-start;
     gap: 35px;
-    padding: 30px 32px 20px;
+    padding: 35px 35px 20px;
     background: $cl-graylightest;
     .lp-family-eventdetail-content-merit-left {
       width: 185px;
@@ -483,30 +447,26 @@ section.lp-family-eventdetail {
         font-weight: 300;
       }
     }
-  }
-
-  .lp-family-eventdetail-content-merit-content-box {
-    position: relative;
-    margin: 0 0 30px;
-    padding: 0 0 0 75px;
-    @include responsive-style($breakpoint-sp) {
-      padding: 0 0 0 35px;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-      top: 0%;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      @include responsive-style($breakpoint-sp) {
-        top: 7px;
-        width: 20px;
-        height: 20px;
-        bottom: auto;
+    .lp-family-eventdetail-content-merit-right {
+      flex: 1;
+      .lp-family-eventdetail-content-merit-right-box {
+        border-top: $cl-gray 1px dashed;
+        padding: 12px 0 12px 24px;
+        display: flex;
+        align-items: center;
+        gap: 27px;
+        .lp-family-eventdetail-content-merit-right-box-number {
+          font-size: 50px;
+          font-weight: 300;
+          width: 30px;
+          text-align: center;
+          opacity: 0.5;
+        }
+        .lp-family-eventdetail-content-merit-right-box-content {
+          .lp-family-eventdetail-content-merit-right-box-content-title {
+            font-size: $font-size-xl;
+          }
+        }
       }
     }
   }

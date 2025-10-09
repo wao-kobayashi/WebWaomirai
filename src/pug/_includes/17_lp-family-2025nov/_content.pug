@@ -7,8 +7,8 @@ include _lessons
 
 body
   //00ヘッダー
-  header 
-    img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+  //- header 
+  //-   img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
   //01メインビジュアル
   section.lp-family-fv
       .lp-family-fv-main 
@@ -24,8 +24,21 @@ body
             |未来を生きる力を一緒に体感してみませんか？
          .lp-family-fv-main-target 
             |対象：小学生・中高生とその保護者さま
+      .lp-family-fv-main-illust01
+         img(src=ImgIllustFv01FamilyNormal)
+      .lp-family-fv-main-illust02
+         img(src=ImgIllustFv02FamilyStand)
+      .lp-family-fv-main-illust03
+          img(src=ImgIllustFv03Online)
+      .lp-family-fv-main-illust04
+          img(src=ImgIllustFv04Question)
+      .lp-family-fv-main-illust05
+         img(src=ImgIllustFv05Book)
+      .lp-family-fv-main-illust06
+          img(src=ImgIllustFv06Bank)
   //02 EVENT INFOMATION
   section.lp-family-eventlist 
+   .lp-family-eventlist-section
     .lp-family-eventlist-wrapper 
       .lp-family-eventlist-wrapper-title 
         .lp-family-eventlist-wrapper-title-illust01
@@ -38,30 +51,29 @@ body
            .lp-family-eventlist-wrapper-title-text-note
              |※一度に複数受講可能です
       .lp-family-eventlist-wrapper-grid 
-        - for (let i = 0; i < 3; i++)
+        - for (let i = 0; i < 6; i++)
           .lp-family-eventlist-wrapper-grid-item
             .lp-family-eventlist-wrapper-grid-item-img
               img(src=ImgThumbEconomyKids)
             .lp-family-eventlist-wrapper-grid-item-content
               .lp-family-eventlist-wrapper-grid-item-content-category
-                .lp-family-eventlist-wrapper-grid-item-content-category-subject 
-                  |経済（お金）
-                .lp-family-eventlist-wrapper-grid-item-content-category-target 
+                .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
+                  |経済（お金)
+                .lp-family-eventlist-wrapper-grid-item-content-category-child.target
                   |小学生向け
               .lp-family-eventlist-wrapper-grid-item-content-title
                 |あの人の給料はなぜ高い?～職業ごとの給料の違い～
               .lp-family-eventlist-wrapper-grid-item-content-datetime
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
-                      |2025年10月29日（水）
+                      |10月29日(水)
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
                       img(src=ImgIconClock)
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-time
                       |19:30～20:15
-    //CTA
-    +btn-cta
       
   //03 イベントの詳細
   section.lp-family-eventdetail 
+    - for (let i = 0; i < 6; i++)
       .lp-family-eventdetail-content#economy
         .lp-family-eventdetail-content-top
           .lp-family-eventdetail-content-top-left
@@ -100,23 +112,23 @@ body
               .lp-family-eventdetail-content-merit-right-box-number|1
               .lp-family-eventdetail-content-merit-right-box-content
                  .lp-family-eventdetail-content-merit-right-box-content-title
-                  |titletitletitletitletitletitletitle
+                  |お金の知識をきちんと学べる！
                  .lp-family-eventdetail-content-merit-right-box-conten-text 
-                   |texttexttexttexttexttexttext
+                   |お金の基礎知識はもちろん、その仕組みまで、社会に出る前にしっかり学びましょう。
             .lp-family-eventdetail-content-merit-right-box 
-              .lp-family-eventdetail-content-merit-right-box-number|1
+              .lp-family-eventdetail-content-merit-right-box-number|2
               .lp-family-eventdetail-content-merit-right-box-content
                  .lp-family-eventdetail-content-merit-right-box-content-title
-                  |titletitletitletitletitletitletitle
+                  |お金の使い方・増やし方を学べる！
                  .lp-family-eventdetail-content-merit-right-box-conten-text 
-                   |texttexttexttexttexttexttext
+                   |値段の仕組みを学ぶことで、商品やサービスを様々な側面から見れるようになります。
             .lp-family-eventdetail-content-merit-right-box 
-              .lp-family-eventdetail-content-merit-right-box-number|1
+              .lp-family-eventdetail-content-merit-right-box-number|3
               .lp-family-eventdetail-content-merit-right-box-content
                  .lp-family-eventdetail-content-merit-right-box-content-title
-                  |titletitletitletitletitletitletitle
+                  |お金に振りまわされない思考力を身につける！
                  .lp-family-eventdetail-content-merit-right-box-conten-text 
-                   |texttexttexttexttexttexttext
+                   |お金の知識だけではなく、お金を使って夢に近づく方法も考えていきます。
       //変数定義
       //- -
       //-     var events = [
