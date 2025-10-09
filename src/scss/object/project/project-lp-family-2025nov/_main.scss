@@ -307,7 +307,7 @@ header {
             border-radius: $border-radius-big;
             margin: 16px 0 0;
             &.target {
-              border: 2px solid $cl-graylight !important;
+              background-color: $cl-graylightest;
               color: $cl-graylight !important;
             }
           }
@@ -393,8 +393,9 @@ section.lp-family-eventdetail {
         padding: 8px 18px;
         border-radius: $border-radius-big;
         &.target {
-          border: 2px solid $cl-graylight !important;
+          // border: 2px solid $cl-graylight !important;
           color: $cl-graylight !important;
+          background: $cl-graylightest !important;
         }
       }
     }
@@ -486,12 +487,12 @@ section.lp-family-eventdetail {
 @each $category, $values in $categories {
   ##{$category} {
     .lp-family-eventdetail-content-top-right-category-child.subject {
-      border: 2px solid map-get($values, main-color) !important;
       color: map-get($values, main-color) !important;
+      background-color: map-get($values, pale-color) !important;
     }
     .lp-family-eventlist-wrapper-grid-item-content-category-child.subject {
-      border: 2px solid map-get($values, main-color) !important;
       color: map-get($values, main-color) !important;
+      background-color: map-get($values, pale-color) !important;
     }
     // .lp-family-eventdetail-content-top-left-title {
     //   background: map-get($values, main-color);

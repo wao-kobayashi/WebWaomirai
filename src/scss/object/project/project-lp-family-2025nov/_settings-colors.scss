@@ -15,17 +15,16 @@ $categories: (
   "philosophy": (
     main-color: $cl-philosophy,
     sp-main-color: $cl-philosophy,
-    pale-color: $cl-philosophy-pale,
+    pale-color: #fff8e0,
   ),
   "science": (
     main-color: $cl-science-darken,
     sp-main-color: $cl-science-darken,
-    pale-color: $cl-science-pale,
+    pale-color: #f8ffea,
   ),
   "economy": (
     main-color: $cl-economy,
     sp-main-color: $cl-economy,
-    pale-color: $cl-economy-pale
-      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    pale-color: #eaf6ff // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
