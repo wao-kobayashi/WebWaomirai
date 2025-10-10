@@ -7,36 +7,36 @@ include _lessons
 
 body
   //00ヘッダー
-  //- header 
-  //-   img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-  //01メインビジュアル
-  section.lp-family-fv
-      .lp-family-fv-main 
-         .lp-family-fv-main-date 
-             |2025年11月
-         .lp-family-fv-main-logo 
+  header 
+    img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+  //01メインビジュアル(PC)
+  section.lp-family-fvpc
+      .lp-family-fvpc-main 
+         .lp-family-fvpc-main-logo 
             img(src=ImgLogoFvPc)
-         .lp-family-fv-main-text 
+         .lp-family-fvpc-main-text 
             |親子で楽しめるワオ未来塾の“考える力”の体験授業。
             br
             |哲学で問いを深め、科学で世界を探り、経済で社会をひもとく。
             br
             |未来を生きる力を一緒に体感してみませんか？
-         .lp-family-fv-main-target 
-            |対象：小学生・中高生とその保護者さま
-      .lp-family-fv-main-illust01
+         .lp-family-fvpc-main-target 
+            |日時：10/27(水)〜11/1(土)
+         .lp-family-fvpc-main-target 
+            |対象：小〜中学生とその保護者
+      .lp-family-fvpc-main-illust01
          img(src=ImgIllustFv01FamilyNormal)
-      .lp-family-fv-main-illust02
+      .lp-family-fvpc-main-illust02
          img(src=ImgIllustFv02FamilyStand)
-      .lp-family-fv-main-illust03
+      .lp-family-fvpc-main-illust03
           img(src=ImgIllustFv03Online)
-      .lp-family-fv-main-illust04
+      .lp-family-fvpc-main-illust04
           img(src=ImgIllustFv04Question)
-      .lp-family-fv-main-illust05
+      .lp-family-fvpc-main-illust05
          img(src=ImgIllustFv05Book)
-      .lp-family-fv-main-illust06
+      .lp-family-fvpc-main-illust06
           img(src=ImgIllustFv06Bank)
-
+  
   //02 EVENT INFOMATION
   section.lp-family-eventlist 
     .lp-family-eventlist-section
@@ -50,32 +50,45 @@ body
             .lp-family-eventlist-wrapper-title-text-img
               img(src=ImgTitleTryLesson)
             .lp-family-eventlist-wrapper-title-text-note
-              |※一度に複数受講可能です
+              |※複数の授業を受講可能です
         .lp-family-eventlist-wrapper-grid 
           each event in events
-            .lp-family-eventlist-wrapper-grid-item(id=event.id)
+            .lp-family-eventlist-wrapper-grid-item(class=event.id)
               .lp-family-eventlist-wrapper-grid-item-img
                 img(src=event.thumbnail)
               .lp-family-eventlist-wrapper-grid-item-content
                 .lp-family-eventlist-wrapper-grid-item-content-category
                   .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
-                    = event.category.subject
+                    if event.id === 'science'
+                      |科学
+                    else if event.id === 'economy'
+                      |経済
+                    else if event.id === 'philosophy'
+                      |哲学
                   .lp-family-eventlist-wrapper-grid-item-content-category-child.target
-                    = event.category.target
+                    if event.target === 'kids'
+                      |小学生
+                    else if event.target === 'teens'
+                      |中高生
                 .lp-family-eventlist-wrapper-grid-item-content-title
                   = event.title
                 .lp-family-eventlist-wrapper-grid-item-content-datetime
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
-                    = event.dateShort
+                    span.spimage
+                     = formatDate(event.dateRaw, 'short')
+                    span.pcimage
+                     = formatDate(event.dateRaw, 'numeric')
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
                     img(src=ImgIconClock)
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-time
                     = event.time
-
+                .lp-family-eventlist-wrapper-grid-item-content-link 
+                  a(href=`#event0${events.indexOf(event) + 1}`) 
+                    |詳細を見る
   //03 イベントの詳細
   section.lp-family-eventdetail 
-    each event in events
-      .lp-family-eventdetail-content(id=event.id)
+    each event, index in events
+     .lp-family-eventdetail-content(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
         .lp-family-eventdetail-content-top
           .lp-family-eventdetail-content-top-left.pcimage
             .lp-family-eventdetail-content-top-left-img
@@ -83,16 +96,24 @@ body
           .lp-family-eventdetail-content-top-right
             .lp-family-eventdetail-content-top-right-category 
               .lp-family-eventdetail-content-top-right-category-child.subject 
-                = event.category.subject
+                    if event.id === 'science'
+                      |科学リテラシー
+                    else if event.id === 'economy'
+                      |経済(お金)
+                    else if event.id === 'philosophy'
+                      |哲学（思考力）
               .lp-family-eventdetail-content-top-right-category-child.target
-                = event.category.target
+                    if event.target === 'kids'
+                      |小学生向け
+                    else if event.target === 'teens'
+                      |中高校生向け
             .lp-family-eventdetail-content-top-right-title
               = event.title
             .lp-family-eventdetail-content-top-right-img.spimage
-               img(src=event.thumbnail)
+              img(src=event.thumbnail)
             .lp-family-eventdetail-content-top-right-datetime
               .lp-family-eventdetail-content-top-right-datetime-date 
-                = event.date
+                = formatDate(event.dateRaw, 'full')
               .lp-family-eventdetail-content-top-right-datetime-icon
                 img(src=ImgIconClock)
               .lp-family-eventdetail-content-top-right-datetime-time
@@ -101,7 +122,8 @@ body
               = event.description
               if event.note
                 br
-                = event.note
+                p.lp-family-eventdetail-content-top-right-text-note
+                 = event.note
             .lp-family-eventdetail-content-top-right-archive
         .lp-family-eventdetail-content-merit
           .lp-family-eventdetail-content-merit-left
@@ -322,5 +344,7 @@ body
       img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
     .footer-copyright
       |© ワオ・コーポレーション All rights reserved.
+
+
 include _js
 +modal
