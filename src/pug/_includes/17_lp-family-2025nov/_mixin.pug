@@ -1,10 +1,16 @@
 
-
-
+mixin fixed-btn
+  .fixed-btn
+    a.js-line-trigger(href=UrlLine, target='_blank')
+        .fixed-btn-left
+        .fixed-btn-text|ラインで無料申込
+        .fixed-btn-icn
 mixin btn-cta 
-  .c-btn-cta 
-     a.js-line-trigger
-        |LINEで無料申込
+    a.btn-cta.js-line-trigger(href=UrlLine, target='_blank')
+        .btn-cta-left
+          img(src=ImgIllustBtn, alt="")
+        .btn-cta-text|ラインで無料申込
+        .btn-cta-icn
 
 
 

@@ -7,13 +7,8 @@ include _lessons
 
 body
   //00ヘッダー
-  .fixed-btn
-    a.js-line-trigger(href=UrlLine, target='_blank')
-      .fixed-btn-left
-        .fixed-btn-left-icn
-        .fixed-btn-left-text|LINEで無料申込
-      .fixed-btn-illust
-        img(src=ImgIllustFv01FamilyNormal)
+
+
   header 
     img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
   //01メインビジュアル(PC)
@@ -123,6 +118,7 @@ body
                 .lp-family-eventlist-wrapper-grid-item-content-link 
                   a(href=`#event0${events.indexOf(event) + 1}`) 
                     |詳細を見る
+      +btn-cta 
   //03 イベントの詳細
   section.lp-family-eventdetail 
     each event, index in events
@@ -307,8 +303,6 @@ body
         |必要なのはPCか
         br.spimage
         |タブレット端末だけ！
-    //CTA
-    +btn-cta
                
   //08 2025年4月開講
   section.lp-family-start2025
@@ -320,8 +314,6 @@ body
         |オンラインで
         br.spimage
         |楽しく学ぶ“新5教科”
-      .lp-family-start2025-subtitle 
-        |2025年4月開校！
       .lp-family-start2025-logo 
         img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
       .lp-family-start2025-target 
@@ -386,3 +378,4 @@ body
 
 include _js
 +modal
++fixed-btn

@@ -71,6 +71,8 @@ header {
   }
 }
 
+$fv-breakpoint: 1200px;
+
 .lp-family-fvpc {
   text-align: center;
   margin: 0 auto 0;
@@ -149,6 +151,9 @@ header {
     bottom: -20px;
     width: 220px;
     z-index: 2;
+    @include responsive-style($fv-breakpoint) {
+      width: 20%;
+    }
   }
   //standイラスト
   .lp-family-fvpc-main-illust02 {
@@ -157,6 +162,9 @@ header {
     bottom: -30px;
     width: 130px;
     z-index: 2;
+    @include responsive-style($fv-breakpoint) {
+      width: 15%;
+    }
   }
   //onlineイラスト
   .lp-family-fvpc-main-illust03 {
@@ -165,15 +173,22 @@ header {
     top: 0;
     width: 220px;
     z-index: 2;
+    @include responsive-style($fv-breakpoint) {
+      width: 20%;
+      left: -5%;
+    }
   }
   //Questionイラスト
   .lp-family-fvpc-main-illust04 {
     position: absolute;
-    left: 120px;
-    top: 236px;
+    left: 10%;
+    top: 250px;
     width: 120px;
     animation: pikopiko 3s steps(2, start) infinite;
     z-index: 2;
+    @include responsive-style(1000px) {
+      display: none;
+    }
   }
   //Bookイラスト
   .lp-family-fvpc-main-illust05 {
@@ -183,6 +198,9 @@ header {
     top: 200px;
     animation: pikopiko 3s steps(2, start) infinite;
     z-index: 2;
+    @include responsive-style(1000px) {
+      display: none;
+    }
   }
   //Bankイラスト
   .lp-family-fvpc-main-illust06 {
@@ -192,6 +210,10 @@ header {
     width: 110px;
     animation: pikopiko 3s steps(2, start) infinite;
     z-index: 2;
+    @include responsive-style($fv-breakpoint) {
+      width: 10%;
+      // left: -5%;
+    }
   }
   @keyframes pikopiko {
     0% {
@@ -312,10 +334,11 @@ header {
           }
         }
         .lp-family-eventlist-wrapper-title-text-note {
-          font-size: $font-size-l;
+          font-size: $font-size-m;
           color: $cl-graylight;
           margin: 16px 0 0;
           text-align: center;
+          letter-spacing: 0.5px;
           @include responsive-style($breakpoint-sp) {
             margin: 12px 0 0;
             font-size: $font-size-s;
@@ -359,6 +382,7 @@ header {
         padding: 35px 40px 35px;
         @include responsive-style($breakpoint-sp) {
           padding: 15px;
+          border-bottom: 2px dashed $cl-border-brown;
         }
         .lp-family-eventlist-wrapper-grid-item-img {
           img {
@@ -476,12 +500,6 @@ header {
           &:nth-child(3),
           &:nth-child(5) {
             border-right: 2px dashed $cl-border-brown;
-          }
-          &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(3),
-          &:nth-child(4) {
-            border-bottom: 2px dashed $cl-border-brown;
           }
         }
       }
@@ -1095,10 +1113,10 @@ section.lp-family-about {
 
 .lp-family-start2025 {
   @include section-maxwidth;
-
+  padding: 90px 0 0;
   .lp-family-start2025-catch {
-    font-size: $font-size-xxl;
-    margin: 0 auto;
+    font-size: $font-size-xxxl;
+    margin: 0 auto 30px;
     text-align: center;
   }
 
@@ -1165,71 +1183,6 @@ section.lp-family-about {
 
   .lp-family-start2025-feature-box-text {
     font-size: $font-size-m;
-  }
-}
-.lp-family-start2025 {
-  @include section-maxwidth;
-  &-catch {
-    font-size: $font-size-xxl;
-    margin: 0 auto;
-    text-align: center;
-  }
-  &-subtitle {
-    background: $cl-main-orange;
-    color: white;
-    font-size: $font-size-xxl;
-    max-width: 400px;
-    margin: 30px auto;
-    text-align: center;
-    border-radius: $border-radius-full;
-  }
-  &-logo {
-    max-width: $middlewidth;
-    margin: 0 auto 30px;
-  }
-  &-target {
-    font-size: $font-size-xxl;
-    margin: 0 auto 30px;
-    text-align: center;
-  }
-  &-subjects {
-    max-width: $middlewidth;
-    margin: 0 auto 45px;
-  }
-  &-feature {
-    display: flex;
-    gap: 45px;
-    margin: 0px 0 60px;
-    @include responsive-style($breakpoint-sp) {
-      flex-direction: column;
-      gap: 30px;
-    }
-    &-box {
-      background: white;
-      border-radius: $border-radius-bigplus;
-      padding: 30px 20px 20px;
-      font-size: $font-size-m;
-      flex: 1;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-      @include responsive-style($breakpoint-sp) {
-        padding: 30px 20px 30px;
-      }
-      &-title {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin: 0 auto 20px;
-        @include responsive-style($breakpoint-sp) {
-          font-size: $font-size-xl;
-        }
-        img {
-          width: 30px;
-        }
-      }
-      &-text {
-        font-size: $font-size-m;
-      }
-    }
   }
 }
 
