@@ -77,7 +77,7 @@ body
     each event in events
       .lp-family-eventdetail-content(id=event.id)
         .lp-family-eventdetail-content-top
-          .lp-family-eventdetail-content-top-left
+          .lp-family-eventdetail-content-top-left.pcimage
             .lp-family-eventdetail-content-top-left-img
               img(src=event.thumbnail)
           .lp-family-eventdetail-content-top-right
@@ -88,6 +88,8 @@ body
                 = event.category.target
             .lp-family-eventdetail-content-top-right-title
               = event.title
+            .lp-family-eventdetail-content-top-right-img.spimage
+               img(src=event.thumbnail)
             .lp-family-eventdetail-content-top-right-datetime
               .lp-family-eventdetail-content-top-right-datetime-date 
                 = event.date
@@ -106,7 +108,7 @@ body
             .lp-family-eventdetail-content-merit-left-img
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
             .lp-family-eventdetail-content-merit-left-text
-              |POINT
+              |学べること
           .lp-family-eventdetail-content-merit-right
             each merit in event.merits
               .lp-family-eventdetail-content-merit-right-box 

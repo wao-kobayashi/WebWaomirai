@@ -258,8 +258,8 @@ header {
         }
         .lp-family-eventlist-wrapper-title-text-note {
           font-size: $font-size-l;
-          color: $cl-gray;
-          margin: 10px 0 0;
+          color: $cl-graylight;
+          margin: 16px 0 0;
           text-align: center;
         }
       }
@@ -357,7 +357,7 @@ section.lp-family-eventdetail {
     background: $cl-white;
     @include responsive-style($breakpoint-sp) {
       margin: 0 auto 45px;
-      padding: 0px 0 30px;
+      padding: 20px 20px;
       border-radius: $border-radius-bigplus;
     }
   }
@@ -389,13 +389,14 @@ section.lp-family-eventdetail {
       gap: 16px;
       .lp-family-eventdetail-content-top-right-category-child {
         font-size: $font-size-m;
-
         padding: 8px 18px;
         border-radius: $border-radius-big;
         &.target {
-          // border: 2px solid $cl-graylight !important;
           color: $cl-graylight !important;
           background: $cl-graylightest !important;
+        }
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-s;
         }
       }
     }
@@ -404,27 +405,47 @@ section.lp-family-eventdetail {
       font-weight: bold;
       margin: 20px 0 20px;
       @include responsive-style($breakpoint-sp) {
-        font-size: $font-size-xl;
-        margin: 15px 20px 10px;
+        font-size: $font-size-xxl;
+        font-weight: normal;
+        margin: 20px 0 30px;
       }
     }
     .lp-family-eventdetail-content-top-right-datetime {
       display: flex;
       align-items: flex-end;
       margin: 0px 0 20px;
+      @include responsive-style($breakpoint-sp) {
+        margin: 26px 0 26px;
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        // grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 6px;
+      }
       .lp-family-eventdetail-content-top-right-datetime-date {
         font-size: $font-size-xxl;
         line-height: $lineheight-normal;
         font-weight: bold;
         margin: 0 16px 0px 0px;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-xl;
+          grid-area: 1 / 1 / 2 / 3;
+        }
       }
       .lp-family-eventdetail-content-top-right-datetime-icon {
         margin: 0 16px 8px 0px;
+        @include responsive-style($breakpoint-sp) {
+          grid-area: 2 / 1 / 3 / 2;
+          margin: 0 0px 10px 0px;
+        }
       }
       .lp-family-eventdetail-content-top-right-datetime-time {
         font-size: $font-size-l;
         line-height: $lineheight-normal;
         margin: 0 0px 4px 0px;
+        @include responsive-style($breakpoint-sp) {
+          grid-area: 2 / 2 / 3 / 3;
+        }
       }
     }
     .lp-family-eventdetail-content-top-right-text {
@@ -441,6 +462,11 @@ section.lp-family-eventdetail {
     gap: 35px;
     padding: 35px 35px 20px;
     background: $cl-graylightest;
+    @include responsive-style($breakpoint-sp) {
+      flex-direction: column;
+      padding: 20px 20px 20px;
+      gap: 10px;
+    }
     .lp-family-eventdetail-content-merit-left {
       width: 185px;
       display: flex;
@@ -448,14 +474,26 @@ section.lp-family-eventdetail {
       gap: 11px;
       padding: 14px 0 0;
       border-top: $cl-gray 1px solid;
+      @include responsive-style($breakpoint-sp) {
+        padding: 0px 0 0;
+      }
+      @include responsive-style($breakpoint-sp) {
+        border: none;
+      }
       img {
         width: 57px;
         margin: 0 0 0 2px;
+        @include responsive-style($breakpoint-sp) {
+          width: 40px;
+        }
       }
       .lp-family-eventdetail-content-merit-left-text {
         font-size: $font-size-xl;
         letter-spacing: 3px;
         font-weight: 300;
+        @include responsive-style($breakpoint-sp) {
+          letter-spacing: 1px;
+        }
       }
     }
     .lp-family-eventdetail-content-merit-right {
@@ -466,19 +504,53 @@ section.lp-family-eventdetail {
         display: flex;
         align-items: center;
         gap: 27px;
+
+        @include responsive-style($breakpoint-sp) {
+          // margin: 26px 0 26px;
+          display: grid;
+          grid-template-columns: 30px 1fr;
+          // grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 20px;
+          padding: 20px 0px;
+        }
+
         .lp-family-eventdetail-content-merit-right-box-number {
           font-size: 50px;
           font-weight: 300;
           width: 30px;
           text-align: center;
           opacity: 0.2;
+          @include responsive-style($breakpoint-sp) {
+            font-size: 40px;
+            align-self: flex-start;
+            width: auto;
+            padding: 0px 0 0px 7px;
+            line-height: $lineheight-none;
+          }
         }
         .lp-family-eventdetail-content-merit-right-box-content {
           .lp-family-eventdetail-content-merit-right-box-content-title {
             font-size: $font-size-xl;
+            @include responsive-style($breakpoint-sp) {
+              font-size: $font-size-m;
+              font-weight: 500;
+              margin: 0 0 10px;
+            }
+          }
+          .lp-family-eventdetail-content-merit-right-box-conten-text {
+            font-size: $font-size-s;
           }
         }
       }
+    }
+  }
+  .lp-family-eventdetail-content-top-right-img {
+    text-align: center;
+    margin: 20px 0 0;
+    img {
+      border-radius: $border-radius-middle;
+      max-width: 100%;
+      height: auto;
     }
   }
 }
