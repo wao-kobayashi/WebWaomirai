@@ -1,12 +1,5 @@
 script.
-  /**
-  * jQuery Document Ready
-  * ドキュメントの読み込みが完了した時点で実行されるメイン処理
-  */
-  
-
-  $(document).ready(function() {
- 
+  $(document).ready(function() { 
     $('.inview-triger').on('inview', function(event, isInView) {
       if (isInView) {
         $(this).addClass('inview');
@@ -14,11 +7,10 @@ script.
     });
     $(window).on("load scroll", function () {
       if ($(this).scrollTop() > 600) {
-       $(".fixed-btn").fadeIn();
+       $(".fixed-btn a").fadeIn();
       } else {
-       $(".fixed-btn").fadeOut();
+       $(".fixed-btn a").fadeOut();
       }
-
     });
 
     /**
@@ -27,7 +19,6 @@ script.
     */
     function modalOpen() {
       $('.modal, .bg-modal').show();
-
     }
 
     /**

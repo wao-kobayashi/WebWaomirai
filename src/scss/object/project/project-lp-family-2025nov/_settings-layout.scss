@@ -52,6 +52,7 @@ section {
 
 main {
   position: relative;
+  z-index: 2;
   background: $cl-bg-creamyellow;
   @include min-responsive-style($breakpoint-sp) {
     margin-top: calc(611px + 78px);

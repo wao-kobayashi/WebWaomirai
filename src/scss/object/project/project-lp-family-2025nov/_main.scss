@@ -117,7 +117,7 @@ $fv-breakpoint: 1200px;
       border-radius: $border-radius-full;
       text-align: center;
       margin: 0px auto 25px;
-      font-weight: bold;
+      font-weight: normal;
       max-width: 500px;
     }
   }
@@ -278,7 +278,7 @@ $fv-breakpoint: 1200px;
     border-radius: $border-radius-full;
     text-align: center;
     margin: 0px auto 25px;
-    font-weight: bold;
+
     max-width: 500px;
     width: 80%;
   }
@@ -572,8 +572,7 @@ section.lp-family-eventdetail {
       margin: 20px 0 20px;
       @include responsive-style($breakpoint-sp) {
         font-size: $font-size-xxl;
-        font-weight: normal;
-        margin: px 0 30px;
+        font-weight: 500;
       }
     }
     .lp-family-eventdetail-content-top-right-datetime {
@@ -1193,6 +1192,8 @@ footer {
   background: $cl-black;
   color: white;
   border-radius: 100px 100px 0 0;
+  position: relative;
+  z-index: 2;
   @include responsive-style($breakpoint-sp) {
     padding: 60px 0px 60px;
     border-radius: 50px 50px 0 0;

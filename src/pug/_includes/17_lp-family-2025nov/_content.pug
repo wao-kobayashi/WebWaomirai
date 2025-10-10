@@ -1,15 +1,5 @@
 
-
-//関数読込
-include _mixin
-include _variables 
-include _lessons
-
 body
-  //00ヘッダー
-
-
-
   //01メインビジュアル(PC)
   header 
     img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
@@ -24,11 +14,10 @@ body
             br
             |未来を生きる力を一緒に体感してみませんか？
          .lp-family-fvpc-main-target 
-            |日時：10/29(水)〜11/1(土)
+            |日時：
+            =lessondate
          .lp-family-fvpc-main-target
-            |対象：小〜中学生とその保護者
-         //-  .lp-family-fvpc-main-target(style='display:none;')
-         //-     |対象：小〜中学生とその保護者
+            |対象：小〜高校生とその保護者
       .lp-family-fvpc-main-illust01
          img(src=ImgIllustFv01FamilyNormal)
       .lp-family-fvpc-main-illust02
@@ -69,30 +58,45 @@ body
               br
               |一緒に体感してみませんか？
       .lp-family-fvsp-main-target 
-              |日時：10/27(水)〜11/1(土)
+              |日時：
+              =lessondate
       .lp-family-fvsp-main-target
-              |対象：小〜中学生とその保護者
-    //02 EVENT INFOMATION
+              |対象：小〜高校生とその保護者
+    // イベント一覧セクション
     section.lp-family-eventlist 
       .lp-family-eventlist-section.inview-hide.inview-triger
         .lp-family-eventlist-wrapper 
+          // セクションタイトルエリア
           .lp-family-eventlist-wrapper-title 
+            // 装飾イラスト1（本のアイコン）
             .lp-family-eventlist-wrapper-title-illust01
               img(src=ImgIllustFv05Book)
+            // 装飾イラスト2（銀行のアイコン）
             .lp-family-eventlist-wrapper-title-illust02
               img(src=ImgIllustFv06Bank)
+            // タイトルテキスト
             .lp-family-eventlist-wrapper-title-text
               .lp-family-eventlist-wrapper-title-text-img
                 img(src=ImgTitleTryLesson)
+              // 注釈：複数授業受講可能
               .lp-family-eventlist-wrapper-title-text-note
                 |※複数の授業を受講可能です
+          
+          // イベントカードのグリッドレイアウト
           .lp-family-eventlist-wrapper-grid 
+            // 各イベントをループ処理
             each event in events
+              // イベントカード（IDをクラスとして付与）
               .lp-family-eventlist-wrapper-grid-item(class=event.id)
+                // サムネイル画像
                 .lp-family-eventlist-wrapper-grid-item-img
                   img(src=event.thumbnail)
+                
+                // カードコンテンツ
                 .lp-family-eventlist-wrapper-grid-item-content
+                  // カテゴリー表示（科目・対象学年）
                   .lp-family-eventlist-wrapper-grid-item-content-category
+                    // 科目ラベル
                     .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
                       if event.id === 'science'
                         |科学
@@ -100,37 +104,58 @@ body
                         |経済
                       else if event.id === 'philosophy'
                         |哲学
+                    // 対象学年ラベル
                     .lp-family-eventlist-wrapper-grid-item-content-category-child.target
                       if event.target === 'kids'
                         |小学生
                       else if event.target === 'teens'
                         |中高生
+                  
+                  // イベントタイトル
                   .lp-family-eventlist-wrapper-grid-item-content-title
                     = event.title
+                  
+                  // 日時情報
                   .lp-family-eventlist-wrapper-grid-item-content-datetime
+                    // 日付（SP表示は短縮形式、PC表示は数値形式）
                     .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
                       span.spimage
-                         = formatDate(event.dateRaw, 'short')
+                        = formatDate(event.dateRaw, 'short')
                       span.pcimage
-                         = formatDate(event.dateRaw, 'numeric')
+                        = formatDate(event.dateRaw, 'numeric')
+                    // 時計アイコン
                     .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
-                       img(src=ImgIcnClock)
+                      img(src=ImgIcnClock)
+                    // 時刻
                     .lp-family-eventlist-wrapper-grid-item-content-datetime-time
-                         = event.time
+                        = event.time
+                  
+                  // 詳細ページへのリンク
                   .lp-family-eventlist-wrapper-grid-item-content-link 
                     a(href=`#event0${events.indexOf(event) + 1}`) 
                       |詳細を見る
+        
+        // CTAボタン（Mixinで定義されたコンポーネント）
         +btn-cta 
+
     //03 イベントの詳細
     section.lp-family-eventdetail 
-     each event, index in events
-      .lp-family-eventdetail-content.inview-hide.inview-triger(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
+      // 各イベントの詳細をループ処理
+      each event, index in events
+        // 詳細コンテンツ（ID付与でアンカーリンク先に）
+        .lp-family-eventdetail-content.inview-hide.inview-triger(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
+          // 上部エリア（画像・基本情報）
           .lp-family-eventdetail-content-top
+            // 左側：サムネイル画像（PC表示のみ）
             .lp-family-eventdetail-content-top-left.pcimage
               .lp-family-eventdetail-content-top-left-img
                 img(src=event.thumbnail)
+            
+            // 右側：詳細情報
             .lp-family-eventdetail-content-top-right
+              // カテゴリー表示
               .lp-family-eventdetail-content-top-right-category 
+                // 科目ラベル（詳細版）
                 .lp-family-eventdetail-content-top-right-category-child.subject 
                       if event.id === 'science'
                         |科学リテラシー
@@ -138,42 +163,70 @@ body
                         |経済(お金)
                       else if event.id === 'philosophy'
                         |哲学（思考力）
+                // 対象学年ラベル（詳細版）
                 .lp-family-eventdetail-content-top-right-category-child.target
                       if event.target === 'kids'
                         |小学生向け
                       else if event.target === 'teens'
                         |中高校生向け
+              
+              // イベントタイトル
               .lp-family-eventdetail-content-top-right-title
                 = event.title
+              
+              // サムネイル画像（SP表示のみ）
               .lp-family-eventdetail-content-top-right-img.spimage
                 img(src=event.thumbnail)
+              
+              // 日時情報
               .lp-family-eventdetail-content-top-right-datetime
+                // 日付（完全形式）
                 .lp-family-eventdetail-content-top-right-datetime-date 
                   = formatDate(event.dateRaw, 'full')
+                // 時計アイコン
                 .lp-family-eventdetail-content-top-right-datetime-icon
                   img(src=ImgIcnClock)
+                // 時刻
                 .lp-family-eventdetail-content-top-right-datetime-time
                   = event.time
+              
+              // イベント説明文
               .lp-family-eventdetail-content-top-right-text
                 = event.description
+                // 注釈がある場合は表示
                 if event.note
                   br
                   p.lp-family-eventdetail-content-top-right-text-note
                    = event.note
+              
+              // アーカイブエリア（現在は空）
               .lp-family-eventdetail-content-top-right-archive
+          
+          // メリット（学べること）セクション
           .lp-family-eventdetail-content-merit
+            // 左側：セクションタイトル
             .lp-family-eventdetail-content-merit-left
+              // イラスト
               .lp-family-eventdetail-content-merit-left-img
                 img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
+              // 「学べること」テキスト
               .lp-family-eventdetail-content-merit-left-text
                 |学べること
+            
+            // 右側：メリット一覧
             .lp-family-eventdetail-content-merit-right
+              // 各メリットをループ処理
               each merit in event.merits
+                // メリットボックス
                 .lp-family-eventdetail-content-merit-right-box 
+                  // 番号
                   .lp-family-eventdetail-content-merit-right-box-number= merit.number
+                  // メリット内容
                   .lp-family-eventdetail-content-merit-right-box-content
+                    // メリットタイトル
                     .lp-family-eventdetail-content-merit-right-box-content-title
                       = merit.title
+                    // メリット説明文
                     .lp-family-eventdetail-content-merit-right-box-conten-text 
                       = merit.text
     //04 こんなあなたにオススメです！
@@ -326,9 +379,9 @@ body
           |中学生／高校生
         .lp-family-start2025-subjects 
           .pcimage
-              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/ilust_5subjects_pc.png')
+              img(src=Img5subjectPc)
           .spimage
-              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/ilust_5subjects_sp.png') 
+              img(src=Img5subjectSp)
         .lp-family-start2025-feature 
           .lp-family-start2025-feature-box
             .lp-family-start2025-feature-box-title  
@@ -376,8 +429,7 @@ body
       img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
     .footer-copyright
       |© ワオ・コーポレーション All rights reserved.
-
-
+//JS読込
 include _js
 +modal
 +fixed-btn
