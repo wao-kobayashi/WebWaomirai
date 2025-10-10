@@ -50,16 +50,18 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
-
+  position: fixed;
+  top: 0;
   margin: 0 auto;
   justify-content: center;
   background: $cl-white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 99;
+  z-index: -1;
   @include responsive-style($breakpoint-sp) {
     height: 48px;
     padding: 0 18px;
+    z-index: 2;
+    position: relative;
   }
   img {
     max-width: 300px;
@@ -76,9 +78,14 @@ $fv-breakpoint: 1200px;
 .lp-family-fvpc {
   text-align: center;
   margin: 0 auto 0;
-  position: relative;
+  position: fixed;
+  top: 78px;
   overflow: hidden;
   max-width: 1200px;
+  height: 611px;
+  z-index: -2;
+  left: 0;
+  right: 0;
   @include responsive-style($breakpoint-sp) {
     display: none;
   }
@@ -213,14 +220,6 @@ $fv-breakpoint: 1200px;
     @include responsive-style($fv-breakpoint) {
       width: 10%;
       // left: -5%;
-    }
-  }
-  @keyframes pikopiko {
-    0% {
-      transform: rotate(20deg);
-    }
-    100% {
-      transform: rotate(-10deg);
     }
   }
 }
@@ -510,7 +509,7 @@ $fv-breakpoint: 1200px;
 //03 イベントの詳細
 section.lp-family-eventdetail {
   @include section-maxwidth;
-
+  background: $cl-bg-creamyellow;
   .lp-family-eventdetail-content {
     width: 100%;
     border-radius: $border-radius-bigplus;
@@ -519,7 +518,7 @@ section.lp-family-eventdetail {
     background: $cl-white;
     @include responsive-style($breakpoint-sp) {
       margin: 0 auto 45px;
-      padding: 20px 20px;
+      padding: 30px 20px 20px;
       border-radius: $border-radius-bigplus;
     }
   }
@@ -641,6 +640,7 @@ section.lp-family-eventdetail {
       flex-direction: column;
       padding: 20px 20px 20px;
       gap: 10px;
+      border-radius: $border-radius-big;
     }
     .lp-family-eventdetail-content-merit-left {
       width: 185px;
@@ -1113,7 +1113,7 @@ section.lp-family-about {
 
 .lp-family-start2025 {
   @include section-maxwidth;
-  padding: 90px 0 0;
+  padding: 90px 0 30px;
   .lp-family-start2025-catch {
     font-size: $font-size-xxxl;
     margin: 0 auto 30px;

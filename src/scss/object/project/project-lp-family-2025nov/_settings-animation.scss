@@ -1,49 +1,19 @@
-@keyframes fuwafuwa-button {
+@keyframes pikopiko {
   0% {
-    scale: 1;
-    transform: scale(1);
-  }
-  8% {
-    scale: 1.04;
-    transform: scale(1.04);
-  }
-  17% {
-    scale: 1;
-    transform: scale(1);
-  }
-  25% {
-    scale: 1.02;
-    transform: scale(1.02);
-  }
-  38% {
-    scale: 1;
-    transform: scale(1);
+    transform: rotate(20deg);
   }
   100% {
-    scale: 1;
-    transform: scale(1);
+    transform: rotate(-10deg);
   }
 }
 
-@keyframes bounce-swipe {
-  0%,
-  30%,
-  60%,
-  80%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  15% {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-  }
-  45% {
-    -webkit-transform: translateX(15px);
-    transform: translateX(15px);
-  }
+.inview-hide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
 }
 
-.newfunction-contents {
-  scrollbar-width: none;
+.inview {
+  opacity: 1;
+  transform: translateY(0);
 }

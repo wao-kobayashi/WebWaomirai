@@ -49,3 +49,11 @@ section {
 .c-bg-section-white {
   background: white;
 }
+
+main {
+  position: relative;
+  background: $cl-bg-creamyellow;
+  @include min-responsive-style($breakpoint-sp) {
+    margin-top: calc(611px + 78px);
+  }
+}

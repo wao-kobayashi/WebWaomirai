@@ -6,10 +6,12 @@ script.
   
 
   $(document).ready(function() {
-    /**
-    * 追従ボタン
-    * 300pxスクロールしたら表示する
-    */
+ 
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('inview');
+      }
+    });
     $(window).on("load scroll", function () {
       if ($(this).scrollTop() > 600) {
        $(".fixed-btn").fadeIn();
