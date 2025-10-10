@@ -7,6 +7,13 @@ include _lessons
 
 body
   //00ヘッダー
+  .fixed-btn
+    a.js-line-trigger(href=UrlLine, target='_blank')
+      .fixed-btn-left
+        .fixed-btn-left-icn
+        .fixed-btn-left-text|LINEで無料申込
+      .fixed-btn-illust
+        img(src=ImgIllustFv01FamilyNormal)
   header 
     img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
   //01メインビジュアル(PC)
@@ -22,8 +29,10 @@ body
             |未来を生きる力を一緒に体感してみませんか？
          .lp-family-fvpc-main-target 
             |日時：10/27(水)〜11/1(土)
-         .lp-family-fvpc-main-target 
+         .lp-family-fvpc-main-target
             |対象：小〜中学生とその保護者
+         //-  .lp-family-fvpc-main-target(style='display:none;')
+         //-     |対象：小〜中学生とその保護者
       .lp-family-fvpc-main-illust01
          img(src=ImgIllustFv01FamilyNormal)
       .lp-family-fvpc-main-illust02
@@ -36,7 +45,36 @@ body
          img(src=ImgIllustFv05Book)
       .lp-family-fvpc-main-illust06
           img(src=ImgIllustFv06Bank)
-  
+  section.lp-family-fvsp
+    .lp-family-fvsp-img 
+      .lp-family-fvsp-img-main
+        img(src=ImgFvSp)
+      .lp-family-fvsp-img-illust01
+          img(src=ImgIllustFv04Question)
+      .lp-family-fvsp-img-illust02
+         img(src=ImgIllustFv05Book)
+      .lp-family-fvsp-img-illust03
+          img(src=ImgIllustFv06Bank)
+    .lp-family-fvsp-main-text 
+            |親子で楽しめるワオ未来塾の
+            br
+            |“考える力”の体験授業。
+            br
+            br
+            |哲学で問いを深め、
+            br
+            |科学で世界を探り、
+            br
+            |経済で社会をひもとく。
+            br
+            br
+            |未来を生きる力を
+            br
+            |一緒に体感してみませんか？
+    .lp-family-fvsp-main-target 
+            |日時：10/27(水)〜11/1(土)
+    .lp-family-fvsp-main-target
+            |対象：小〜中学生とその保護者
   //02 EVENT INFOMATION
   section.lp-family-eventlist 
     .lp-family-eventlist-section
@@ -79,7 +117,7 @@ body
                     span.pcimage
                      = formatDate(event.dateRaw, 'numeric')
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
-                    img(src=ImgIconClock)
+                    img(src=ImgIcnClock)
                   .lp-family-eventlist-wrapper-grid-item-content-datetime-time
                     = event.time
                 .lp-family-eventlist-wrapper-grid-item-content-link 
@@ -115,7 +153,7 @@ body
               .lp-family-eventdetail-content-top-right-datetime-date 
                 = formatDate(event.dateRaw, 'full')
               .lp-family-eventdetail-content-top-right-datetime-icon
-                img(src=ImgIconClock)
+                img(src=ImgIcnClock)
               .lp-family-eventdetail-content-top-right-datetime-time
                 = event.time
             .lp-family-eventdetail-content-top-right-text
@@ -198,28 +236,28 @@ body
 
     -
         var steps = [{
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join01.png',
+          iconimg: ImgIcnStep01,
           number: '1.',
           title: 'LINEで公式アカウントを友だち追加',
           text: `<span class="pcimage">まず、二次元コードから</span>スマートフォンで公式アカウントを友だちに追加してください。<br /><span class="spimage">・友だち追加は<a class="modal-open-liff-qr">こちら</a></span><span class="pcimage">・友だち追加は<a class="modal-open-liff-qr" style="cursor:pointer; text-decoration:underline;">こちら</a>から</span>`
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join02.png',
+          iconimg: ImgIcnStep02,
           number: '2.',
           title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join03.png',
+          iconimg:  ImgIcnStep03,
           number: '3.',
           title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join04.png',
+          iconimg: ImgIcnStep04,
           number: '4.',
           title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
         },
         {
-          iconimg: 'https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_howto_join05.png',
+          iconimg: ImgIcnStep05,
           number: '5.',
           title: '開催時間になったら届いたイベントURLから参加しましょう！'
         }]

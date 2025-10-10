@@ -36,7 +36,7 @@
 }
 
 .c-title-25feb-lp {
-  font-size: $font-size-xxl;
+  font-size: $font-size-xxxl;
   @include title-underline; //下の波線
   margin: 0 auto 30px;
   text-align: center;
@@ -50,14 +50,16 @@ header {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  max-width: $widewidth;
+
   margin: 0 auto;
   justify-content: center;
-  // background: $cl-white;
+  background: $cl-white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 99;
   @include responsive-style($breakpoint-sp) {
     height: 48px;
     padding: 0 18px;
-    justify-content: flex-start;
   }
   img {
     max-width: 300px;
@@ -79,9 +81,9 @@ header {
     display: none;
   }
   .lp-family-fvpc-main {
-    padding: 45px 0 75px;
+    padding: 55px 0 45px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     .lp-family-fvpc-main-date {
       font-size: $font-size-xxxl;
       margin: 0 auto 0px;
@@ -93,21 +95,37 @@ header {
       max-width: 600px;
     }
     .lp-family-fvpc-main-text {
-      font-size: $font-size-m;
-      margin: 30px auto 0px;
+      font-size: $font-size-l;
+      margin: 30px auto 30px;
       line-height: $lineheight-relaxed;
+      letter-spacing: 0.5px;
     }
     .lp-family-fvpc-main-target {
-      font-size: $font-size-xl;
+      font-size: $font-size-l;
       display: block;
       background: $cl-merit-yellow;
-      padding: 16px 0;
+      padding: 12px 0;
       border-radius: $border-radius-full;
       text-align: center;
-      margin: 30px auto 0px;
+      margin: 0px auto 25px;
       font-weight: bold;
       max-width: 500px;
     }
+  }
+  &::after {
+    display: block;
+    content: "";
+    width: 720px;
+    height: 720px;
+    position: absolute;
+    border-radius: $border-radius-full;
+    border: 2px dashed $cl-border-brown;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
   }
   &::before {
     display: block;
@@ -130,6 +148,7 @@ header {
     right: 30px;
     bottom: -20px;
     width: 220px;
+    z-index: 2;
   }
   //standイラスト
   .lp-family-fvpc-main-illust02 {
@@ -137,6 +156,7 @@ header {
     left: 30px;
     bottom: -30px;
     width: 130px;
+    z-index: 2;
   }
   //onlineイラスト
   .lp-family-fvpc-main-illust03 {
@@ -144,22 +164,25 @@ header {
     left: 30px;
     top: 0;
     width: 220px;
+    z-index: 2;
   }
   //Questionイラスト
   .lp-family-fvpc-main-illust04 {
     position: absolute;
-    left: 130px;
-    top: 226px;
-    width: 110px;
+    left: 120px;
+    top: 236px;
+    width: 120px;
     animation: pikopiko 3s steps(2, start) infinite;
+    z-index: 2;
   }
   //Bookイラスト
   .lp-family-fvpc-main-illust05 {
     position: absolute;
     right: 60px;
     width: 130px;
-    top: 190px;
+    top: 200px;
     animation: pikopiko 3s steps(2, start) infinite;
+    z-index: 2;
   }
   //Bankイラスト
   .lp-family-fvpc-main-illust06 {
@@ -168,6 +191,7 @@ header {
     top: -15px;
     width: 110px;
     animation: pikopiko 3s steps(2, start) infinite;
+    z-index: 2;
   }
   @keyframes pikopiko {
     0% {
@@ -178,6 +202,66 @@ header {
     }
   }
 }
+.lp-family-fvsp {
+  text-align: center;
+  margin: 0 auto 0;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  padding: 0 0 60px;
+  @include min-responsive-style($breakpoint-sp) {
+    display: none;
+  }
+  .lp-family-fvsp-img {
+    position: relative;
+    //questionイラスト
+    .lp-family-fvsp-img-illust01 img {
+      position: absolute;
+      left: -2%;
+      top: 26%;
+      width: 22%;
+      z-index: 1;
+      animation: pikopiko 3s steps(2, start) infinite;
+    }
+    //bookイラスト
+    .lp-family-fvsp-img-illust02 img {
+      position: absolute;
+      left: 3%;
+      bottom: 5%;
+      width: 30%;
+      z-index: 1;
+      animation: pikopiko 5s steps(2, start) infinite;
+    }
+    //bankイラスト
+    .lp-family-fvsp-img-illust03 img {
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 20%;
+      z-index: 1;
+      animation: pikopiko 4s steps(2, start) infinite;
+    }
+  }
+  .lp-family-fvsp-main-text {
+    font-size: $font-size-l;
+    margin: 15px auto 30px;
+    line-height: 2.5;
+    padding: 0 20px;
+    letter-spacing: 1px;
+  }
+  .lp-family-fvsp-main-target {
+    font-size: $font-size-l;
+    display: block;
+    background: $cl-merit-yellow;
+    padding: 12px 0;
+    border-radius: $border-radius-full;
+    text-align: center;
+    margin: 0px auto 25px;
+    font-weight: bold;
+    max-width: 500px;
+    width: 80%;
+  }
+}
 
 //02 EVENT INFOMATION
 .lp-family-eventlist {
@@ -185,8 +269,8 @@ header {
   background: $cl-bg-creamyellow-dark;
   padding: 90px 0 75px;
   @include responsive-style($breakpoint-sp) {
-    margin: 0 auto 45px;
-    padding: 20px 20px;
+    margin: 0 auto 60px;
+    padding: 80px 20px 60px;
   }
   .lp-family-eventlist-section {
     width: 100%;
@@ -447,6 +531,9 @@ section.lp-family-eventdetail {
     .lp-family-eventdetail-content-top-right-category {
       display: flex;
       gap: 16px;
+      @include responsive-style($breakpoint-sp) {
+        gap: 12px;
+      }
       .lp-family-eventdetail-content-top-right-category-child {
         font-size: $font-size-m;
         padding: 8px 18px;
@@ -456,7 +543,9 @@ section.lp-family-eventdetail {
           background: $cl-graylightest !important;
         }
         @include responsive-style($breakpoint-sp) {
-          font-size: $font-size-s;
+          font-size: $font-size-ss;
+          padding: 6px 12px;
+          border-radius: $border-radius-middle;
         }
       }
     }
@@ -467,7 +556,7 @@ section.lp-family-eventdetail {
       @include responsive-style($breakpoint-sp) {
         font-size: $font-size-xxl;
         font-weight: normal;
-        margin: 20px 0 30px;
+        margin: px 0 30px;
       }
     }
     .lp-family-eventdetail-content-top-right-datetime {
@@ -893,11 +982,11 @@ section.lp-family-feature {
 
 //06 5stepで参加可能
 section.lp-family-howto {
-  padding: 30px 0;
-  margin: 0 -20px;
+  padding: 75px 0;
+  margin: 0 0px;
 
   .lp-family-howto-title {
-    font-size: $font-size-xxl;
+    font-size: $font-size-xxxl;
     margin: 0 auto 30px;
     text-align: center;
     letter-spacing: 2px;
@@ -923,7 +1012,7 @@ section.lp-family-howto {
     margin: 0 auto 60px;
     display: grid;
     grid-template-columns: 100px 10px 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 35px;
     grid-row-gap: 20px;
     @include responsive-style($breakpoint-sp) {
       display: flex;
@@ -942,7 +1031,7 @@ section.lp-family-howto {
   }
 
   .lp-family-howto-step-child-number {
-    font-size: $font-size-xxl;
+    font-size: 40px;
     @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xxxl;
     }
@@ -971,6 +1060,7 @@ section.lp-family-howto {
 }
 
 section.lp-family-about {
+  padding: 75px 0 0;
   .lp-family-about-box {
     background: white;
     max-width: $widewidth;

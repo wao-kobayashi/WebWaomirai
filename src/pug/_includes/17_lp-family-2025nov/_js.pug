@@ -11,16 +11,12 @@ script.
     * 300pxスクロールしたら表示する
     */
     $(window).on("load scroll", function () {
-      if ($(this).scrollTop() > 300) {
-       $(".l-btn-cv").fadeIn();
+      if ($(this).scrollTop() > 600) {
+       $(".fixed-btn").fadeIn();
       } else {
-       $(".l-btn-cv").fadeOut();
+       $(".fixed-btn").fadeOut();
       }
-      if ($(this).scrollTop() > 50) {
-        $(".p-fv-main-button").fadeOut();
-      } else {
-        $(".p-fv-main-button").fadeIn();
-      }
+
     });
 
     /**
