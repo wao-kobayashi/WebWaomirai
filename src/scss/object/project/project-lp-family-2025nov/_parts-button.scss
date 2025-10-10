@@ -16,11 +16,23 @@
   position: relative;
   text-align: center;
   box-shadow: 0 4px 0 0 #da613b;
+  transition: 0.2s ease-in-out;
   @include responsive-style($breakpoint-sp) {
     width: 90%;
     height: 60px;
     margin: 30px auto 30px;
     border-radius: $border-radius-full;
+  }
+  &:hover {
+    background: darken($cl-btn-cta, 10%);
+    .btn-cta-icn {
+      transform: translateX(10px);
+      transition: 0.2s ease-in-out;
+      &::before {
+        border-right: 2px solid darken($cl-btn-cta, 10%);
+        border-bottom: 2px solid darken($cl-btn-cta, 10%);
+      }
+    }
   }
   .btn-cta-left img {
     // width: 40px;
@@ -35,6 +47,7 @@
     }
   }
   .btn-cta-icn {
+    transform: translateX(0px);
     position: absolute;
     right: 30px;
     top: 0;
@@ -43,8 +56,8 @@
     background: $cl-white;
     width: 40px;
     height: 40px;
-
     border-radius: $border-radius-full;
+
     &::before {
       content: "";
       // margin: 6px 0 0 4px;
