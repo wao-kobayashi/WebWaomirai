@@ -238,26 +238,26 @@ $fv-breakpoint: 1200px;
     .lp-family-fvsp-img-illust01 img {
       position: absolute;
       left: -2%;
-      top: 26%;
-      width: 22%;
+      top: 33%;
+      width: 20%;
       z-index: 1;
       animation: pikopiko 3s steps(2, start) infinite;
     }
     //bookイラスト
     .lp-family-fvsp-img-illust02 img {
       position: absolute;
-      left: 3%;
-      bottom: 5%;
-      width: 30%;
+      right: 0%;
+      bottom: 42%;
+      width: 20%;
       z-index: 1;
       animation: pikopiko 5s steps(2, start) infinite;
     }
     //bankイラスト
     .lp-family-fvsp-img-illust03 img {
       position: absolute;
-      right: 0px;
-      top: 0;
-      width: 20%;
+      right: 2%;
+      top: -2.5%;
+      width: 19%;
       z-index: 1;
       animation: pikopiko 4s steps(2, start) infinite;
     }
@@ -378,6 +378,7 @@ $fv-breakpoint: 1200px;
       }
       .lp-family-eventlist-wrapper-grid-item {
         padding: 35px 40px 35px;
+        border-bottom: 2px dashed $cl-border-brown;
         @include responsive-style($breakpoint-sp) {
           padding: 15px;
           border-bottom: 2px dashed $cl-border-brown;
@@ -427,7 +428,7 @@ $fv-breakpoint: 1200px;
             line-height: $lineheight-normal;
             margin: 0 11px 0px 0px;
             @include responsive-style($breakpoint-sp) {
-              font-size: $font-size-ss;
+              font-size: 11px;
               margin: 0 6px 0px 0px;
             }
           }
@@ -481,22 +482,22 @@ $fv-breakpoint: 1200px;
           }
         }
         @include min-responsive-style($breakpoint-sp) {
-          &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(4),
-          &:nth-child(5) {
+          //1列目、2列目
+          &:nth-child(3n + 1),
+          &:nth-child(3n + 2) {
             border-right: 2px dashed $cl-border-brown;
           }
-          &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(3) {
-            border-bottom: 2px dashed $cl-border-brown;
+          &:nth-last-child(-n + 3) {
+            border-bottom: none !important;
           }
+          // &:nth-child(1),
+          // &:nth-child(2),
+          // &:nth-child(3) {
+          //   border-bottom: 2px dashed $cl-border-brown;
+          // }
         }
         @include responsive-style($breakpoint-sp) {
-          &:nth-child(1),
-          &:nth-child(3),
-          &:nth-child(5) {
+          &:nth-child(2n + 1) {
             border-right: 2px dashed $cl-border-brown;
           }
         }
