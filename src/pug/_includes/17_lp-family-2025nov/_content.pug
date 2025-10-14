@@ -1,36 +1,35 @@
 
 body
-  //01メインビジュアル(PC)
-  header 
-    img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-  section.lp-family-fvpc
-      .lp-family-fvpc-main 
-         .lp-family-fvpc-main-logo 
-            img(src=ImgLogoFvPc)
-         .lp-family-fvpc-main-text 
-            |親子で楽しめるワオ未来塾の“考える力”の体験授業。
-            br
-            |哲学で問いを深め、科学で世界を探り、経済で社会をひもとく。
-            br
-            |未来を生きる力を一緒に体感してみませんか？
-         .lp-family-fvpc-main-target 
-            |日時：
-            =lessondate
-         .lp-family-fvpc-main-target
-            |対象：小〜高校生とその保護者
-      .lp-family-fvpc-main-illust01
-         img(src=ImgIllustFv01FamilyNormal)
-      .lp-family-fvpc-main-illust02
-         img(src=ImgIllustFv02FamilyStand)
-      .lp-family-fvpc-main-illust03
-          img(src=ImgIllustFv03Online)
-      .lp-family-fvpc-main-illust04
-          img(src=ImgIllustFv04Question)
-      .lp-family-fvpc-main-illust05
-         img(src=ImgIllustFv05Book)
-      .lp-family-fvpc-main-illust06
-          img(src=ImgIllustFv06Bank)
-  main
+    //01メインビジュアル(PC)
+    header 
+      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    section.lp-family-fvpc
+        .lp-family-fvpc-main 
+          .lp-family-fvpc-main-logo 
+              img(src=ImgLogoFvPc)
+          .lp-family-fvpc-main-text 
+              |親子で楽しめるワオ未来塾の“考える力”の体験授業。
+              br
+              |哲学で問いを深め、科学で世界を探り、経済で社会をひもとく。
+              br
+              |未来を生きる力を一緒に体感してみませんか？
+          .lp-family-fvpc-main-target 
+              |日時：
+              =lessondate
+          .lp-family-fvpc-main-target
+              |対象：小〜高校生とその保護者
+        .lp-family-fvpc-main-illust01
+          img(src=ImgIllustFv01FamilyNormal)
+        .lp-family-fvpc-main-illust02
+          img(src=ImgIllustFv02FamilyStand)
+        .lp-family-fvpc-main-illust03
+            img(src=ImgIllustFv03Online)
+        .lp-family-fvpc-main-illust04
+            img(src=ImgIllustFv04Question)
+        .lp-family-fvpc-main-illust05
+          img(src=ImgIllustFv05Book)
+        .lp-family-fvpc-main-illust06
+            img(src=ImgIllustFv06Bank)
     section.lp-family-fvsp
       .lp-family-fvsp-img 
         .lp-family-fvsp-img-main
@@ -47,9 +46,7 @@ body
               |“考える力”の体験授業。
               br
               br
-              |哲学で問いを深め、
-              br
-              |科学で世界を探り、
+              |哲学で問いを深め、科学で世界を探り、
               br
               |経済で社会をひもとく。
               br
@@ -202,33 +199,7 @@ body
               // アーカイブエリア（現在は空）
               .lp-family-eventdetail-content-top-right-archive
           
-          // メリット（学べること）セクション
-          .lp-family-eventdetail-content-merit
-            // 左側：セクションタイトル
-            .lp-family-eventdetail-content-merit-left
-              // イラスト
-              .lp-family-eventdetail-content-merit-left-img
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_point_women.png')
-              // 「学べること」テキスト
-              .lp-family-eventdetail-content-merit-left-text
-                |学べること
-            
-            // 右側：メリット一覧
-            .lp-family-eventdetail-content-merit-right
-              // 各メリットをループ処理
-              each merit in event.merits
-                // メリットボックス
-                .lp-family-eventdetail-content-merit-right-box 
-                  // 番号
-                  .lp-family-eventdetail-content-merit-right-box-number= merit.number
-                  // メリット内容
-                  .lp-family-eventdetail-content-merit-right-box-content
-                    // メリットタイトル
-                    .lp-family-eventdetail-content-merit-right-box-content-title
-                      = merit.title
-                    // メリット説明文
-                    .lp-family-eventdetail-content-merit-right-box-conten-text 
-                      = merit.text
+
     //04 こんなあなたにオススメです！
     section.lp-family-recommend
       .c-title-25feb-lp 
@@ -414,21 +385,21 @@ body
             .lp-waomirai-start2025-btn-icn 
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
     //素材シリーズ
-  footer 
-    ul 
-      li 
-        a(href="https://www.wao-corp.com/", target='_blank')
-          |会社概要
-      li 
-        a(href="https://www.wao-corp.com/kojin/", target='_blank')
-         |プライバシーポリシー
-      li
-        a(href="https://waomirai.com/commerce_law/", target='_blank')
-          |特定商取引に基づく表記
-    .footer-logo 
-      img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
-    .footer-copyright
-      |© ワオ・コーポレーション All rights reserved.
+    footer 
+      ul 
+        li 
+          a(href="https://www.wao-corp.com/", target='_blank')
+            |会社概要
+        li 
+          a(href="https://www.wao-corp.com/kojin/", target='_blank')
+             |プライバシーポリシー
+        li
+          a(href="https://waomirai.com/commerce_law/", target='_blank')
+            |特定商取引に基づく表記
+      .footer-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+      .footer-copyright
+        |© ワオ・コーポレーション All rights reserved.
 //JS読込
 include _js
 +modal
