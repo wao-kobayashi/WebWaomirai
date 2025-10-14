@@ -45,12 +45,12 @@
 
 //00ヘッダー
 header {
+  position: relative;
   height: 78px;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 20px;
-  position: fixed;
   top: 0;
   margin: 0 auto;
   justify-content: center;
@@ -76,10 +76,9 @@ header {
 $fv-breakpoint: 1200px;
 
 .lp-family-fvpc {
+  position: relative;
   text-align: center;
   margin: 0 auto 0;
-  position: fixed;
-  top: 78px;
   overflow: hidden;
   max-width: 1200px;
   height: 611px;
