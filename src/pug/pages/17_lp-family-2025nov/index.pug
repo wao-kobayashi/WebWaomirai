@@ -1,0 +1,31 @@
+//mixin
+include ../../_includes/17_lp-family-2025nov/_mixin  
+//variable
+include ../../_includes/17_lp-family-2025nov/_variables 
+//授業データ
+include ../../_includes/17_lp-family-2025nov/_lessons
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    //mixin
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    link(href=`../css/17_lp-family-2025nov.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`17_lp-family-2025nov.css?v=${Date.now()}`, rel="stylesheet")
+    meta(property="og:image", content=ImgOgp)
+    title 【ワオ未来塾】親子で参加♪授業体験＆説明会｜#{lessondate}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  include ../../_includes/17_lp-family-2025nov/_content
+    block contents

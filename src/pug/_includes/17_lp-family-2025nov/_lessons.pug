@@ -1,0 +1,98 @@
+//授業日時のフォーマット関数
+-
+  function formatDate(dateStr, format) {
+    if (!dateStr) return '';
+    
+    const date = new Date(dateStr);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+    const weekday = weekdays[date.getDay()];
+    
+    switch(format) {
+      case 'full':
+        return `${year}年${month}月${day}日(${weekday})`;
+      case 'short':
+        return `${month}/${day}(${weekday})`;
+      case 'numeric':
+        return `${month}月${day}日(${weekday})`;
+      case 'slash':
+        return `${year}/${month}/${day}`;
+      default:
+        return dateStr;
+    }
+  }
+
+
+//- イベントデータの定義
+- 
+  var events = [
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyKids,
+      target:'kids',
+      title: 'あの人の給料はなぜ高い?～職業ごとの給料の違い～',
+      dateRaw: '2025-10-29',
+      time: '19:30〜20:15',
+      description: 'サッカー選手やお医者さん、コンビニの店員さん――どうして仕事によって給料がちがうのでしょう？この講座では、職業ごとの給料の決まり方や、仕事の価値・責任・人気との関係をわかりやすく学びます。働くことの意味や社会のしくみを考える、未来につながる経済入門の授業です。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。',
+      customTag: '25_11月経済_親子体験説明会'
+    },
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyTeens,
+      target:'teens',
+      title: '人生の選択とお金：最適解をどう選ぶか? ～就職活動とお金～',
+      dateRaw: '2025-10-29',
+      time: '20:30～21:15',
+      description: '「やりたい仕事」と「稼げる仕事」――どちらを選ぶべき？この講座では、就職活動で考えるべきお金の視点や、仕事の内容・働き方・給料の関係をわかりやすく学びます。自分の価値観に合った"最適解"を見つけるために、進路とお金のつながりを考える、未来の選択に役立つ経済リテラシー授業です。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。',
+      customTag: '25_11月経済_親子体験説明会'
+    },
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceKids,
+      target:'kids',
+      title: '苦い野菜をおいしく食べる方法はあるの ?～人間の味覚ってどんなもの？～',
+      dateRaw: '2025-10-31',
+      time: '19:30～20:15',
+      description: 'ピーマンやゴーヤが苦手…それってどうして？この講座では、人間の「味覚」のしくみを学びながら、なぜ苦いと感じるのか、どうすればおいしく食べられるのかを考えます。味の感じ方は人それぞれ？味覚にはどんなひみつがある？科学の力で"食べる"をもっと楽しくしよう！',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。',
+      customTag: '25_11月科学_親子体験説明会'
+    },
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceTeens,
+      target:'teens',
+      title: '太陽の光で電気をつくることはエコになる ?～発電から見る SDGs の考え方～',
+      dateRaw: '2025-10-31',
+      time: '20:30～21:15',
+      description: '「太陽光発電ってエコなの？」その疑問から、発電のしくみやエネルギーの課題を見つめ直してみませんか？この講座では、電気ができるまでの流れや、太陽光発電のメリット・デメリットを学びながら、持続可能な社会（SDGs）について考えます。科学と社会のつながりを自分ごととして考える一歩に。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。',
+      customTag: '25_11月科学_親子体験説明会'
+    },
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyKids,
+      target:'kids',
+      title: '見える存在vs見えない存在～「妖怪」は存在するのか？～',
+      dateRaw: '2025-11-01',
+      time: '14:30～15:15',
+      description: '妖怪って本当にいるの？それとも、見えないからいないの？この講座では、「見えるもの」「見えないもの」のちがいを出発点に、存在するとはどういうことかを考えます。妖怪や幽霊、心の中の想像の世界を手がかりに、自分なりの「ほんとう」の見つけ方を探る、わくわくする哲学の時間です。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。',
+      customTag: '25_11月哲学_親子体験説明会'
+    },
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyTeens,
+      target:'teens',
+      title: 'ルッキズムをぶっとばせ！～外見至上主義をどう読み解く？～',
+      dateRaw: '2025-11-01',
+      time: '15:30～16:15',
+      description: '「かわいい」「かっこいい」って、誰が決めた基準なんだろう？この講座では、外見を重視する社会の考え方（外見至上主義）や、美の基準、ルッキズム（外見による差別）の問題について問い直します。なぜ人は見た目にこだわるのか？多様な価値観と向き合う力を育てる、哲学の時間です。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。',
+      customTag: '25_11月哲学_親子体験説明会'
+    },
+    
+  ]

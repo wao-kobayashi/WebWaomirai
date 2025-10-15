@@ -1,0 +1,51 @@
+/* width */
+
+$max-width: 1200px;
+$widewidth: 1000px;
+$middlewidth: 800px;
+$smallwidth: 700px;
+$ctabuttonwidth: 500px;
+$breakpoint-sp: 768px;
+
+@mixin section-maxwidth {
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+  @include responsive-style(768px) {
+    padding: 0 20px;
+  }
+}
+
+@mixin section-widewidth {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@mixin section-middlewidth {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@mixin section-smallwidth {
+  max-width: 700px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: $cl-bg-creamyellow;
+  overflow-x: hidden;
+}
+section {
+  margin: 0 auto 75px;
+}
+
+.c-bg-section-white {
+  background: white;
+}
