@@ -1,0 +1,39 @@
+
+mixin fixed-btn
+  .fixed-btn
+    a.js-line-trigger(href=UrlLine, target='_blank')
+        .fixed-btn-left
+          img(src=ImgIllustBtn, alt="")
+        .fixed-btn-text|LINEで無料申込
+        .fixed-btn-icn
+mixin btn-cta 
+    a.btn-cta.js-line-trigger(href=UrlLine, target='_blank')
+        .btn-cta-left
+          img(src=ImgIllustBtn, alt="")
+        .btn-cta-text|LINEで無料申込
+        .btn-cta-icn
+
+
+
+mixin modal
+  .modal(style='display:none;')
+    .modal-wrapper 
+      .modal-wrapper-content
+         .modal-wrapper-content-main
+            .modal-wrapper-content-main-head
+              .modal-wrapper-content-main-head-img
+                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png')
+              .modal-wrapper-content-main-head-text 
+                 |スマホで
+                 br
+                 |LINEの友だち追加
+            .modal-wrapper-content-main-qr#liffqr
+              
+            .modal-wrapper-content-main-text
+                        |追加後に申込フォームが
+                        br
+                        |送信されます
+         .modal-wrapper-content-close.modal-close 
+                |閉じる
+  .bg-modal(style='display:none;')
+// +ModalEntlyLine
