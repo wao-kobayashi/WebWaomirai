@@ -1,0 +1,94 @@
+
+//- LINE URL
+- var UrlLine = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=DJET'
+
+
+//- レッスン日程
+- var lessondate = '11/26(水)〜11/28(金)'
+
+
+//- 画像パス設定
+//- - var paths = '../../../images/18_lp-family'
+- var paths = 'https://waomirai.com/lp/assets/lpimages/18_lp-family';
+- var monthly_paths = '2025_12_december'
+
+//- 画像パス生成関数
+-
+  function img(filename) {
+    return `${paths}/${filename}`;
+  }
+
+
+//- サムネイル画像パス
+- var ImgThumbEconomyKids = img(monthly_paths + '/thumbnail-economy-kids.jpg')
+- var ImgThumbEconomyTeens = img(monthly_paths + '/thumbnail-economy-teens.jpg')
+- var ImgThumbScienceKids = img(monthly_paths + '/thumbnail-science-kids.jpg')
+- var ImgThumbScienceTeens = img(monthly_paths + '/thumbnail-science-teens.jpg')
+- var ImgThumbPhilosophyKids = img(monthly_paths + '/thumbnail-philosophy-kids.jpg')
+- var ImgThumbPhilosophyTeens = img(monthly_paths + '/thumbnail-philosophy-teens.jpg')
+
+
+//- イベントデータ
+-
+  var events = [
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceKids,
+      target: 'kids',
+      title: '空飛ぶ乗り物が命を救う～人が空を飛べるようになるまで～',
+      dateRaw: '2025-11-26',
+      time: '19:30～20:15',
+      description: '人はどうして「空を飛びたい」と思ったの？この講座では、飛行機やヘリコプターの歴史やしくみを学びながら、空を飛ぶことがどうやって人の命を助けているのかを考えます。ドクターヘリや災害時の支援など、空の力が活やくする場面も紹介。科学の進歩と「夢」のつながりを感じられる授業です！',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceTeens,
+      target: 'teens',
+      title: '感染症から日本を救ったのは誰？～近代医学の父～',
+      dateRaw: '2025-11-26',
+      time: '20:30～21:15',
+      description: '感染症と闘い、日本の近代医学を築いたのは誰？ペスト菌の発見や伝染病研究所の設立など、彼の数々の功績の裏には「命を守る」という信念がありました。この講座では、彼の生涯と挑戦をたどりながら、医療・科学の使命や社会との関わりを考えます。未来を切り拓く探究心に出会う授業です。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+    },
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyKids,
+      target: 'kids',
+      title: '10歳から知っておきたいゲーム課金～ただの小学生が150万円も課金できたのはなぜ?～',
+      dateRaw: '2025-11-27',
+      time: '19:30～20:15',
+      description: 'スマホゲームやオンラインゲームで、なぜそんなに簡単にお金を使ってしまうことがあるのでしょう？この講座では、ゲーム課金のしくみやお金の流れ、注意するべきポイントをわかりやすく学びます。楽しく遊ぶために、お金と上手につき合う力を身につける授業です。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyTeens,
+      target: 'teens',
+      title: '人生の選択とお金～衣食住の費用と貯金術～',
+      dateRaw: '2025-11-27',
+      time: '20:30～21:15',
+      description: '衣食住にかかるお金はいくら？どれだけ稼げば、望む水準の暮らしができる？いつまでにいくら貯金をすればよい？夢を追うためにも、人生で躓かないためにも、足元の生活を安定させる力を身に付けよう。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+    },
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyKids,
+      target: 'kids',
+      title: 'あなたのSNSルールどう決める？～ネット被害なぜなくならない？～',
+      dateRaw: '2025-11-28',
+      time: '19:30～20:15',
+      description: 'SNSやネットは便利だけど、どうしてトラブルや被害がなくならないんだろう？この講座では、「なぜルールが必要なの？」「自分だったらどんなルールを作る？」という問いを出発点に、ネットの使い方をみんなで考えます。安全に楽しく使うために、自分の頭で考えて決める力を育てる哲学の時間です。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyTeens,
+      target: 'teens',
+      title: 'もしも武士がタイムスリップしてきたら！？～現代の武士道と騎士道～',
+      dateRaw: '2025-11-28',
+      time: '20:30～21:15',
+      description: '日本の「武士道」とヨーロッパの「騎士道」。どちらも名誉や忠誠を重んじる精神ですが、その根底にある価値観やルールはどう違うのでしょうか？この講座では、東西の思想を比較しながら、正義、勇気、名誉の意味を問い直します。歴史や文化の違いから、自分はどんな生き方を選ぶのかを考える哲学の時間です。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+    }
+  ]
