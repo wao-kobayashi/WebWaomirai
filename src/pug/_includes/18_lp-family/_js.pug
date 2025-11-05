@@ -21,22 +21,27 @@ script.
 
     // LINEブラウザかつURLにform=loycusがある場合にURLを変更する関数
     function updateLineUrls() {
-      var isLineBrowser = /Line/i.test(navigator.userAgent);
+      // URLに from=loycus が含まれているか確認
       var hasLoycusParam = window.location.search.indexOf('from=loycus') !== -1;
 
-      console.log('isLineBrowser:', isLineBrowser);
       console.log('hasLoycusParam:', hasLoycusParam);
 
-      if (isLineBrowser && hasLoycusParam) {
+      if (hasLoycusParam) {
         var newUrl = "#{UrlFormLoycus}";
+        console.log('✅ from=loycus を検出。URLを更新します →', newUrl);
+
         $('.js-line-trigger').each(function(index) {
           var $button = $(this);
           var oldHref = $button.attr('href') || '(hrefなし)';
           
           $button.attr('href', newUrl);
           $button.data('href', newUrl);
+
+          console.log(`ボタン${index + 1}: hrefを "${oldHref}" から "${newUrl}" に変更しました`);
         });
-      } 
+      } else {
+        console.log('❌ from=loycus パラメータがURLに含まれていません。URL変更は行いません。');
+      }
     }
 
 
