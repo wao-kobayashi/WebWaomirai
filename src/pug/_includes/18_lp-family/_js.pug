@@ -13,67 +13,74 @@ script.
       }
     });
 
-    /**
-    * モーダルウィンドウを開く関数
-    * モーダルと背景を表示する
-    */
+    // モーダルウィンドウを開く関数
+    // モーダルと背景を表示する
     function modalOpen() {
       $('.modal, .bg-modal').show();
     }
 
-    /**
-    * ボタン動作の更新関数
-    * 画面幅に応じてボタンの動作を切り替える
-    * PC: モーダルを開く動作
-    * スマホ: 通常のリンク動作
-    */
+    // LINEブラウザかつURLにform=loycusがある場合にURLを変更する関数
+    function updateLineUrls() {
+      var isLineBrowser = /Line/i.test(navigator.userAgent);
+      var hasLoycusParam = window.location.search.indexOf('from=loycus') !== -1;
+
+      console.log('isLineBrowser:', isLineBrowser);
+      console.log('hasLoycusParam:', hasLoycusParam);
+
+      if (isLineBrowser && hasLoycusParam) {
+        var newUrl = "#{UrlFormLoycus}";
+        $('.js-line-trigger').each(function(index) {
+          var $button = $(this);
+          var oldHref = $button.attr('href') || '(hrefなし)';
+          
+          $button.attr('href', newUrl);
+          $button.data('href', newUrl);
+        });
+      } 
+    }
+
+
+    // ボタン動作の更新関数
+    // 画面幅に応じてボタンの動作を切り替える
+    // PC: モーダルを開く動作
+    // スマホ: 通常のリンク動作
     function updateButtonBehavior() {
-      // 769px以上をPC表示とみなす
       var isWideScreen = $(window).width() >= 769;
 
-      // 全てのLINEトリガーのボタンに対して処理
       $('.js-line-trigger').each(function() {
        
         var $button = $(this);
         
         if (isWideScreen) {
-          // PC表示の場合
           if ($button.attr('href')) {
-            // href属性を一時的にdata属性に退避し、通常のリンク動作を無効化
             $button.data('href', $button.attr('href')).removeAttr('href');
           }
-          // クリックイベントを一旦解除し、モーダルを開く処理を割り当て
           $button.off('click').on('click', modalOpen);
         } else {
-          // スマホ表示の場合
           if ($button.data('href')) {
-            // 保存しておいたURLを元のhref属性に戻し、通常のリンク動作を有効化
             $button.attr('href', $button.data('href')).removeData('href');
           }
-          // クリックイベントを解除してデフォルトのリンク動作に戻す
           $button.off('click');
         }
       });
     }
 
-    /**
-    * 画面サイズ変更対応
-    * ページ読み込み時とリサイズ時にボタン動作を更新する
-    * これによりPC/スマホの表示切替時に適切な動作になる
-    */
-    $(window).on('load resize', updateButtonBehavior);
+    // 画面サイズ変更対応
+    // ページ読み込み時とリサイズ時にボタン動作を更新する
+    // これによりPC/スマホの表示切替時に適切な動作になる
+    $(window).on('load resize', function() {
+      //- updateButtonBehavior();
+      updateLineUrls();
+    });
 
     
-    /**
-    * モーダルを閉じる処理
-    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
-    */
+    // モーダルを閉じる処理
+    // 閉じるボタンまたは背景クリック時にモーダルを非表示にする
     $('.modal-close, .bg-modal').click(function() {
       $('.modal-vimeo, .modal, .bg-modal').hide();
     });
    new QRCode(document.getElementById("liffqr"), "#{UrlLine}");
   });
-
 script.
   // イベントタイトルの高さを揃える関数
   function alignEventTitleHeights() {
