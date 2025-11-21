@@ -1,8 +1,6 @@
 
 body
     //01メインビジュアル(PC)
-    header 
-      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
     section.lp-family-fvpc
         .lp-family-fvpc-main 
           .lp-family-fvpc-main-logo 
@@ -82,55 +80,55 @@ body
           // イベントカードのグリッドレイアウト
           .lp-family-eventlist-wrapper-grid 
             // 各イベントをループ処理
-            each event in events
-              // イベントカード（IDをクラスとして付与）
-              .lp-family-eventlist-wrapper-grid-item(class=event.id)
-                // サムネイル画像
-                .lp-family-eventlist-wrapper-grid-item-img
-                  img(src=event.thumbnail)
+            //- each event in events
+            //-   // イベントカード（IDをクラスとして付与）
+            //-   .lp-family-eventlist-wrapper-grid-item(class=event.id)
+            //-     // サムネイル画像
+            //-     .lp-family-eventlist-wrapper-grid-item-img
+            //-       img(src=event.thumbnail)
                 
-                // カードコンテンツ
-                .lp-family-eventlist-wrapper-grid-item-content
-                  // カテゴリー表示（科目・対象学年）
-                  .lp-family-eventlist-wrapper-grid-item-content-category
-                    // 科目ラベル
-                    .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
-                      if event.id === 'science'
-                        |科学
-                      else if event.id === 'economy'
-                        |経済
-                      else if event.id === 'philosophy'
-                        |哲学
-                    // 対象学年ラベル
-                    .lp-family-eventlist-wrapper-grid-item-content-category-child.target
-                      if event.target === 'kids'
-                        |小学生
-                      else if event.target === 'teens'
-                        |中高生
+            //-     // カードコンテンツ
+            //-     .lp-family-eventlist-wrapper-grid-item-content
+            //-       // カテゴリー表示（科目・対象学年）
+            //-       .lp-family-eventlist-wrapper-grid-item-content-category
+            //-         // 科目ラベル
+            //-         .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
+            //-           if event.id === 'science'
+            //-             |科学
+            //-           else if event.id === 'economy'
+            //-             |経済
+            //-           else if event.id === 'philosophy'
+            //-             |哲学
+            //-         // 対象学年ラベル
+            //-         .lp-family-eventlist-wrapper-grid-item-content-category-child.target
+            //-           if event.target === 'kids'
+            //-             |小学生
+            //-           else if event.target === 'teens'
+            //-             |中高生
                   
-                  // イベントタイトル
-                  .lp-family-eventlist-wrapper-grid-item-content-title
-                    = event.title
+            //-       // イベントタイトル
+            //-       .lp-family-eventlist-wrapper-grid-item-content-title
+            //-         = event.title
                   
-                  // 日時情報
-                  .lp-family-eventlist-wrapper-grid-item-content-datetime
-                    // 日付（SP表示は短縮形式、PC表示は数値形式）
-                    .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
-                      span.spimage
-                        = formatDate(event.dateRaw, 'short')
-                      span.pcimage
-                        = formatDate(event.dateRaw, 'numeric')
-                    // 時計アイコン
-                    .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
-                      img(src=ImgIcnClock)
-                    // 時刻
-                    .lp-family-eventlist-wrapper-grid-item-content-datetime-time
-                        = event.time
+            //-       // 日時情報
+            //-       .lp-family-eventlist-wrapper-grid-item-content-datetime
+            //-         // 日付（SP表示は短縮形式、PC表示は数値形式）
+            //-         .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
+            //-           span.spimage
+            //-             = formatDate(event.dateRaw, 'short')
+            //-           span.pcimage
+            //-             = formatDate(event.dateRaw, 'numeric')
+            //-         // 時計アイコン
+            //-         .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
+            //-           img(src=ImgIcnClock)
+            //-         // 時刻
+            //-         .lp-family-eventlist-wrapper-grid-item-content-datetime-time
+            //-             = event.time
                   
-                  // 詳細ページへのリンク
-                  .lp-family-eventlist-wrapper-grid-item-content-link 
-                    a(href=`#event0${events.indexOf(event) + 1}`) 
-                      |詳細を見る
+            //-       // 詳細ページへのリンク
+            //-       .lp-family-eventlist-wrapper-grid-item-content-link 
+            //-         a(href=`#event0${events.indexOf(event) + 1}`) 
+            //-           |詳細を見る
         
         // CTAボタン（Mixinで定義されたコンポーネント）
         +btn-cta 
@@ -138,66 +136,66 @@ body
     //03 イベントの詳細
     section.lp-family-eventdetail 
       // 各イベントの詳細をループ処理
-      each event, index in events
-        // 詳細コンテンツ（ID付与でアンカーリンク先に）
-        .lp-family-eventdetail-content.inview-hide.inview-triger(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
-          // 上部エリア（画像・基本情報）
-          .lp-family-eventdetail-content-top
-            // 左側：サムネイル画像（PC表示のみ）
-            .lp-family-eventdetail-content-top-left.pcimage
-              .lp-family-eventdetail-content-top-left-img
-                img(src=event.thumbnail)
+      //- each event, index in events
+      //-   // 詳細コンテンツ（ID付与でアンカーリンク先に）
+      //-   .lp-family-eventdetail-content.inview-hide.inview-triger(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
+      //-     // 上部エリア（画像・基本情報）
+      //-     .lp-family-eventdetail-content-top
+      //-       // 左側：サムネイル画像（PC表示のみ）
+      //-       .lp-family-eventdetail-content-top-left.pcimage
+      //-         .lp-family-eventdetail-content-top-left-img
+      //-           img(src=event.thumbnail)
             
-            // 右側：詳細情報
-            .lp-family-eventdetail-content-top-right
-              // カテゴリー表示
-              .lp-family-eventdetail-content-top-right-category 
-                // 科目ラベル（詳細版）
-                .lp-family-eventdetail-content-top-right-category-child.subject 
-                      if event.id === 'science'
-                        |科学リテラシー
-                      else if event.id === 'economy'
-                        |経済(お金)
-                      else if event.id === 'philosophy'
-                        |哲学（思考力）
-                // 対象学年ラベル（詳細版）
-                .lp-family-eventdetail-content-top-right-category-child.target
-                      if event.target === 'kids'
-                        |小学生向け
-                      else if event.target === 'teens'
-                        |中高校生向け
+      //-       // 右側：詳細情報
+      //-       .lp-family-eventdetail-content-top-right
+      //-         // カテゴリー表示
+      //-         .lp-family-eventdetail-content-top-right-category 
+      //-           // 科目ラベル（詳細版）
+      //-           .lp-family-eventdetail-content-top-right-category-child.subject 
+      //-                 if event.id === 'science'
+      //-                   |科学リテラシー
+      //-                 else if event.id === 'economy'
+      //-                   |経済(お金)
+      //-                 else if event.id === 'philosophy'
+      //-                   |哲学（思考力）
+      //-           // 対象学年ラベル（詳細版）
+      //-           .lp-family-eventdetail-content-top-right-category-child.target
+      //-                 if event.target === 'kids'
+      //-                   |小学生向け
+      //-                 else if event.target === 'teens'
+      //-                   |中高校生向け
               
-              // イベントタイトル
-              .lp-family-eventdetail-content-top-right-title
-                = event.title
+      //-         // イベントタイトル
+      //-         .lp-family-eventdetail-content-top-right-title
+      //-           = event.title
               
-              // サムネイル画像（SP表示のみ）
-              .lp-family-eventdetail-content-top-right-img.spimage
-                img(src=event.thumbnail)
+      //-         // サムネイル画像（SP表示のみ）
+      //-         .lp-family-eventdetail-content-top-right-img.spimage
+      //-           img(src=event.thumbnail)
               
-              // 日時情報
-              .lp-family-eventdetail-content-top-right-datetime
-                // 日付（完全形式）
-                .lp-family-eventdetail-content-top-right-datetime-date 
-                  = formatDate(event.dateRaw, 'full')
-                // 時計アイコン
-                .lp-family-eventdetail-content-top-right-datetime-icon
-                  img(src=ImgIcnClock)
-                // 時刻
-                .lp-family-eventdetail-content-top-right-datetime-time
-                  = event.time
+      //-         // 日時情報
+      //-         .lp-family-eventdetail-content-top-right-datetime
+      //-           // 日付（完全形式）
+      //-           .lp-family-eventdetail-content-top-right-datetime-date 
+      //-             = formatDate(event.dateRaw, 'full')
+      //-           // 時計アイコン
+      //-           .lp-family-eventdetail-content-top-right-datetime-icon
+      //-             img(src=ImgIcnClock)
+      //-           // 時刻
+      //-           .lp-family-eventdetail-content-top-right-datetime-time
+      //-             = event.time
               
-              // イベント説明文
-              .lp-family-eventdetail-content-top-right-text
-                = event.description
-                // 注釈がある場合は表示
-                if event.note
-                  br
-                  p.lp-family-eventdetail-content-top-right-text-note
-                   = event.note
+      //-         // イベント説明文
+      //-         .lp-family-eventdetail-content-top-right-text
+      //-           = event.description
+      //-           // 注釈がある場合は表示
+      //-           if event.note
+      //-             br
+      //-             p.lp-family-eventdetail-content-top-right-text-note
+      //-              = event.note
               
-              // アーカイブエリア（現在は空）
-              .lp-family-eventdetail-content-top-right-archive
+      //-         // アーカイブエリア（現在は空）
+      //-         .lp-family-eventdetail-content-top-right-archive
           
 
     //04 こんなあなたにオススメです！
