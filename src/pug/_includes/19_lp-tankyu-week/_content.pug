@@ -161,10 +161,12 @@ body
              img(src=ImgBookbottom)  
     //03 イベントの詳細
     section.lp-tkw-eventdetail 
-      // 各イベントの詳細をループ処理
+      // special
       .lp-tkw-eventdetail-content
         .lp-tkw-eventdetail-content-ribbon-top
+          img(src=ImgRibbon)
         .lp-tkw-eventdetail-content-ribbon-bottom
+          img(src=ImgRibbon)
         .lp-tkw-eventdetail-content-subject 
           |科学リテラシー
         .lp-tkw-eventdetail-content-box 
@@ -173,7 +175,13 @@ body
             .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
               |01
             .lp-tkw-eventdetail-content-box-grid01ttl-title 
-                |簡単クリスマスケーキを作ろう★超高速ふわふわ ホイップのひみつ
+                |簡単クリスマス
+                br
+                |ケーキを作ろう★
+                br
+                |超高速ふわふわ
+                br
+                |ホイップのひみつ
          //サムネ
          .lp-tkw-eventdetail-content-box-grid02thumb
             img(src=ImgThumbPcEconomyKids)
@@ -185,64 +193,111 @@ body
               |① 11:00～11:45
               br
               |② 14:00～14:45
+           .lp-tkw-eventdetail-content-box-grid03info-note
+             |※同じ内容です。ご都合のよい時間でご参加ください。
            .lp-tkw-eventdetail-content-box-grid03info-hr
            .lp-tkw-eventdetail-content-box-grid03info-target 
               |対象：小学3～6年生
   
-         .lp-tkw-eventdetail-content-box-grid04info-text  
-           |ケーキにぴったりの生クリーム！🎄🍰
-           br
-           |でも、どうしてあんなにふわふわになるんだろう？ クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
-           br
-           |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
-         .lp-tkw-eventdetail-content-box-grid04info-note 
-           |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
-    //04 こんなあなたにオススメです！
-    section.lp-family-recommend
-      .c-title-25feb-lp 
-        |こんなあなたに
-        br.spimage
-        |オススメです！
-      .lp-family-recommend
-        .lp-family-recommend-left.pcimage
-            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_3person.png')
-        .lp-family-recommend-right
-          //親子
-          .lp-family-recommend-right-child
-            .lp-family-recommend-right-child-icon.pcimage
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_child.png')
-            .lp-family-recommend-right-child-icon.spimage
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_child.svg')
-            .lp-family-recommend-right-child-text
-                div ⚪︎学校の勉強だけじゃものたりない
-                div ⚪︎好奇心がとまらない
-                div ⚪︎総合型選抜も見据えた学びがしたい
-          .lp-family-recommend-right-child
-            .lp-family-recommend-right-child-icon.pcimage
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom_and_papa.png')
-            .lp-family-recommend-right-child-icon.spimage
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_family.svg')
-            .lp-family-recommend-right-child-text
-                div 
-                  |⚪︎子どもももちろんだけど、
-                  br.pcimage
-                  |親だって一緒に学びたい
-                div|⚪︎子どもと話し合えるきっかけがほしい
-                div|⚪︎自立した大人になってほしい
-            
-      .lp-family-point
-        .lp-family-point-left 
-          |POINT!
-        .lp-family-point-right
-            |ワオ未来塾の授業は推奨学年はありますが、
-            br.pcimage
-            |大人も子どもも楽しめるコンテンツ。
+         .lp-tkw-eventdetail-content-box-grid04explore
+           .lp-tkw-eventdetail-content-box-grid04explore-text
+            |ケーキにぴったりの生クリーム！🎄🍰
             br
-            |授業が終わるころには、
-            br.pcimage
-            |ちょっと世の中の見え方が変わってくる！
+            |でも、どうしてあんなにふわふわになるんだろう？ クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
+            br
+            |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
+           .lp-tkw-eventdetail-content-box-explore-note 
+            |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
+      // normal
+      .lp-tkw-eventdetail-content
+        .lp-tkw-eventdetail-content-subject 
+          |経済（お金）
+        .lp-tkw-eventdetail-content-box 
+         //タイトル
+         .lp-tkw-eventdetail-content-box-grid01ttl
+            .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
+              |01
+            .lp-tkw-eventdetail-content-box-grid01ttl-title 
+                |簡単クリスマス
+                br
+                |ケーキを作ろう★
+                br
+                |超高速ふわふわ
+                br
+                |ホイップのひみつ
+         //サムネ
+         .lp-tkw-eventdetail-content-box-grid02thumb
+            img(src=ImgThumbPcEconomyKids)
+         //日時
+         .lp-tkw-eventdetail-content-box-grid03info
+           .lp-tkw-eventdetail-content-box-grid03info-date 
+              |2025年12月20日(土)
+           .lp-tkw-eventdetail-content-box-grid03info-time  
+               .lp-tkw-eventdetail-content-box-grid03info-time-icon 
+                 img(src=ImgIcnClock)
+               .lp-tkw-eventdetail-content-box-grid03info-time-text 
+                  |10:00～10:45
+           .lp-tkw-eventdetail-content-box-grid03info-hr
+           .lp-tkw-eventdetail-content-box-grid03info-target 
+              |対象：小学3～6年生
+  
+         .lp-tkw-eventdetail-content-box-grid04explore
+           .lp-tkw-eventdetail-content-box-grid04explore-text
+            |ケーキにぴったりの生クリーム！🎄🍰
+            br
+            |でも、どうしてあんなにふわふわになるんだろう？ クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
+            br
+            |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
+           .lp-tkw-eventdetail-content-box-explore-note 
+            |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
+
+    //04 こんなあなたにオススメです！
+    //- section.lp-family-recommend
+    //-   .c-title-25feb-lp 
+    //-     |こんなあなたに
+    //-     br.spimage
+    //-     |オススメです！
+    //-   .lp-family-recommend
+    //-     .lp-family-recommend-left.pcimage
+    //-         img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_3person.png')
+    //-     .lp-family-recommend-right
+    //-       //親子
+    //-       .lp-family-recommend-right-child
+    //-         .lp-family-recommend-right-child-icon.pcimage
+    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_child.png')
+    //-         .lp-family-recommend-right-child-icon.spimage
+    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_child.svg')
+    //-         .lp-family-recommend-right-child-text
+    //-             div ⚪︎学校の勉強だけじゃものたりない
+    //-             div ⚪︎好奇心がとまらない
+    //-             div ⚪︎総合型選抜も見据えた学びがしたい
+    //-       .lp-family-recommend-right-child
+    //-         .lp-family-recommend-right-child-icon.pcimage
+    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom_and_papa.png')
+    //-         .lp-family-recommend-right-child-icon.spimage
+    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_family.svg')
+    //-         .lp-family-recommend-right-child-text
+    //-             div 
+    //-               |⚪︎子どもももちろんだけど、
+    //-               br.pcimage
+    //-               |親だって一緒に学びたい
+    //-             div|⚪︎子どもと話し合えるきっかけがほしい
+    //-             div|⚪︎自立した大人になってほしい
+            
+    //-   .lp-family-point
+    //-     .lp-family-point-left 
+    //-       |POINT!
+    //-     .lp-family-point-right
+    //-         |ワオ未来塾の授業は推奨学年はありますが、
+    //-         br.pcimage
+    //-         |大人も子どもも楽しめるコンテンツ。
+    //-         br
+    //-         |授業が終わるころには、
+    //-         br.pcimage
+    //-         |ちょっと世の中の見え方が変わってくる！
 
     //05 5stepで参加可能
+
     section.lp-family-howto.c-bg-section-white
       .lp-family-howto-title 
         |カンタン
@@ -305,92 +360,93 @@ body
 
       //CTA
       +btn-cta
-    //06 ワオ未来塾って？
-    section.lp-family-about
+
+    .bg-creamyellow-dark
+      //06 ワオ未来塾って？
+      section.lp-family-about
+          .c-title-25feb-lp 
+            |ワオ未来塾って？
+          .lp-family-about-box 
+              .lp-family-about-box-left 
+                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/logo_wao.svg')
+              .lp-family-about-box-right
+                  |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
+      //07 授業の特徴
+      section.lp-family-feature
         .c-title-25feb-lp 
-          |ワオ未来塾って？
-        .lp-family-about-box 
-            .lp-family-about-box-left 
-              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/logo_wao.svg')
-            .lp-family-about-box-right
-                |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
-    //07 授業の特徴
-    section.lp-family-feature
-      .c-title-25feb-lp 
-        |授業の特長
-      div
-        .lp-family-feature-child 
-          i.fa-solid.fa-globe
-          |オンライン授業で
-          br.spimage
-          |全国どこからでも
-          br.spimage
-          |参加OK
-        .lp-family-feature-child 
-          i.fa-regular.fa-comments
-          |ライブだからチャットで授業に参加できる!
-        .lp-family-feature-child 
-          .lp-family-feature-child-icons 
-            i.fa-solid.fa-laptop
-          |必要なのはPCか
-          br.spimage
-          |タブレット端末だけ！
-                
-    //08 2025年4月開講
-    section.lp-family-start2025
-        .lp-family-start2025-catch 
-          |社会で役立つ学びを、
-          br.spimage
-          |今はじめよう
-          br
-          |オンラインで
-          br.spimage
-          |楽しく学ぶ“新5教科”
-        .lp-family-start2025-logo 
-          img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-        .lp-family-start2025-target 
-          |〈対象〉
-          br.spimage
-          |小学3〜6年生／
-          br.spimage
-          |中学生／高校生
-        .lp-family-start2025-subjects 
-          .pcimage
-              img(src=Img5subjectPc)
-          .spimage
-              img(src=Img5subjectSp)
-        .lp-family-start2025-feature 
-          .lp-family-start2025-feature-box
-            .lp-family-start2025-feature-box-title  
-              .lp-family-start2025-feature-box-title-icon   
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-              .lp-family-start2025-feature-box-title-text 
-                |新しい５教科
-            .lp-family-start2025-feature-box-text 
-              |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
-          .lp-family-start2025-feature-box
-            .lp-family-start2025-feature-box-title  
-              .lp-family-start2025-feature-box-title-icon   
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-              .lp-family-start2025-feature-box-title-text 
-                |飛び級制
-            .lp-family-start2025-feature-box-text 
-              |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
-          .lp-family-start2025-feature-box
-            .lp-family-start2025-feature-box-title  
-              .lp-family-start2025-feature-box-title-icon   
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-              .lp-family-start2025-feature-box-title-text 
-                |オンラインライブ授業
-            .lp-family-start2025-feature-box-text 
-              |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
-        .lp-waomirai-start2025-btn
-          a(href='https://waomirai.com/', target='_blank')
-            .lp-waomirai-start2025-btn-text 
-              |ワオ未来塾の公式サイトへ     
-            .lp-waomirai-start2025-btn-icn 
-              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
-    //素材シリーズ
+          |授業の特長
+        div
+          .lp-family-feature-child 
+            i.fa-solid.fa-globe
+            |オンライン授業で
+            br.spimage
+            |全国どこからでも
+            br.spimage
+            |参加OK
+          .lp-family-feature-child 
+            i.fa-regular.fa-comments
+            |ライブだからチャットで授業に参加できる!
+          .lp-family-feature-child 
+            .lp-family-feature-child-icons 
+              i.fa-solid.fa-laptop
+            |必要なのはPCか
+            br.spimage
+            |タブレット端末だけ！
+                  
+      //08 2025年4月開講
+      section.lp-family-start2025
+          .lp-family-start2025-catch 
+            |社会で役立つ学びを、
+            br.spimage
+            |今はじめよう
+            br
+            |オンラインで
+            br.spimage
+            |楽しく学ぶ“新5教科”
+          .lp-family-start2025-logo 
+            img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+          .lp-family-start2025-target 
+            |〈対象〉
+            br.spimage
+            |小学3〜6年生／
+            br.spimage
+            |中学生／高校生
+          .lp-family-start2025-subjects 
+            .pcimage
+                img(src=Img5subjectPc)
+            .spimage
+                img(src=Img5subjectSp)
+          .lp-family-start2025-feature 
+            .lp-family-start2025-feature-box
+              .lp-family-start2025-feature-box-title  
+                .lp-family-start2025-feature-box-title-icon   
+                  img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                .lp-family-start2025-feature-box-title-text 
+                  |新しい５教科
+              .lp-family-start2025-feature-box-text 
+                |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+            .lp-family-start2025-feature-box
+              .lp-family-start2025-feature-box-title  
+                .lp-family-start2025-feature-box-title-icon   
+                  img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                .lp-family-start2025-feature-box-title-text 
+                  |飛び級制
+              .lp-family-start2025-feature-box-text 
+                |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+            .lp-family-start2025-feature-box
+              .lp-family-start2025-feature-box-title  
+                .lp-family-start2025-feature-box-title-icon   
+                  img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                .lp-family-start2025-feature-box-title-text 
+                  |オンラインライブ授業
+              .lp-family-start2025-feature-box-text 
+                |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+          .lp-waomirai-start2025-btn
+            a(href='https://waomirai.com/', target='_blank')
+              .lp-waomirai-start2025-btn-text 
+                |ワオ未来塾の公式サイトへ     
+              .lp-waomirai-start2025-btn-icn 
+                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
     footer 
       ul 
         li 

@@ -358,229 +358,6 @@ header {
   }
 }
 
-//03 イベントの詳細
-section.lp-family-eventdetail {
-  @include section-maxwidth;
-  background: $cl-bg-creamyellow;
-  .lp-family-eventdetail-content {
-    width: 100%;
-    border-radius: $border-radius-bigplus;
-    margin: 0 auto 60px;
-    padding: 36px 36px 48px;
-    background: $cl-white;
-    @include responsive-style($breakpoint-sp) {
-      margin: 0 auto 30px;
-      padding: 30px 20px 30px;
-      border-radius: $border-radius-bigplus;
-    }
-  }
-
-  .lp-family-eventdetail-content-top {
-    display: flex;
-    gap: 50px;
-    @include responsive-style($breakpoint-sp) {
-      display: block;
-    }
-  }
-
-  .lp-family-eventdetail-content-top-left {
-    flex: 1;
-    position: relative;
-  }
-
-  .lp-family-eventdetail-content-top-left-img {
-    img {
-      border-radius: $border-radius-bigplus;
-    }
-  }
-
-  .lp-family-eventdetail-content-top-right {
-    flex: 1;
-    position: relative;
-    .lp-family-eventdetail-content-top-right-category {
-      display: flex;
-      gap: 16px;
-      @include responsive-style($breakpoint-sp) {
-        gap: 12px;
-      }
-      .lp-family-eventdetail-content-top-right-category-child {
-        font-size: $font-size-s;
-        padding: 8px 18px 5px;
-        border-radius: $border-radius-big;
-        &.target {
-          color: $cl-graylight !important;
-          background: $cl-graylightest !important;
-        }
-        @include responsive-style($breakpoint-sp) {
-          font-size: $font-size-ss;
-          padding: 6px 12px;
-          border-radius: $border-radius-middle;
-        }
-      }
-    }
-    .lp-family-eventdetail-content-top-right-title {
-      font-size: $font-size-xxl;
-      font-weight: bold;
-      margin: 20px 0 20px;
-      @include responsive-style($breakpoint-sp) {
-        font-size: $font-size-xxl;
-        font-weight: 500;
-      }
-    }
-    .lp-family-eventdetail-content-top-right-datetime {
-      display: flex;
-      align-items: flex-end;
-      margin: 0px 0 26px;
-      padding: 0 0 26px;
-      border-bottom: $cl-gray 1px dashed;
-      @include responsive-style($breakpoint-sp) {
-        margin: 26px 0 26px;
-        display: grid;
-        grid-template-columns: 30px 1fr;
-        // grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 6px;
-      }
-      .lp-family-eventdetail-content-top-right-datetime-date {
-        font-size: $font-size-xl;
-        line-height: $lineheight-normal;
-        font-weight: bold;
-        margin: 0 16px 0px 0px;
-        @include responsive-style($breakpoint-sp) {
-          font-size: $font-size-xl;
-          grid-area: 1 / 1 / 2 / 3;
-        }
-      }
-      .lp-family-eventdetail-content-top-right-datetime-icon {
-        margin: 0 16px 8px 0px;
-        @include responsive-style($breakpoint-sp) {
-          grid-area: 2 / 1 / 3 / 2;
-          margin: 0 0px 10px 0px;
-        }
-      }
-      .lp-family-eventdetail-content-top-right-datetime-time {
-        font-size: $font-size-l;
-        line-height: $lineheight-normal;
-        margin: 0 0px 4px 0px;
-        @include responsive-style($breakpoint-sp) {
-          grid-area: 2 / 2 / 3 / 3;
-        }
-      }
-    }
-    .lp-family-eventdetail-content-top-right-text {
-      font-size: $font-size-m;
-      line-height: $lineheight-relaxed;
-      .lp-family-eventdetail-content-top-right-text-note {
-        font-size: $font-size-s;
-        color: $cl-graylight;
-        margin: 16px 0 0;
-        line-height: $lineheight-relaxed;
-      }
-    }
-  }
-
-  .lp-family-eventdetail-content-merit {
-    margin: 45px 0 0;
-    border-radius: $border-radius-bigplus;
-    display: flex;
-    align-items: flex-start;
-    gap: 35px;
-    padding: 35px 35px 20px;
-    background: $cl-graylightest;
-    @include responsive-style($breakpoint-sp) {
-      flex-direction: column;
-      padding: 20px 20px 20px;
-      gap: 10px;
-      border-radius: $border-radius-big;
-    }
-    .lp-family-eventdetail-content-merit-left {
-      width: 185px;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      padding: 14px 0 0;
-      border-top: $cl-gray 1px solid;
-      @include responsive-style($breakpoint-sp) {
-        padding: 0px 0 0;
-      }
-      @include responsive-style($breakpoint-sp) {
-        border: none;
-      }
-      img {
-        width: 57px;
-        margin: 0 0 0 2px;
-        @include responsive-style($breakpoint-sp) {
-          width: 40px;
-        }
-      }
-      .lp-family-eventdetail-content-merit-left-text {
-        font-size: $font-size-xl;
-        letter-spacing: 3px;
-        font-weight: 300;
-        @include responsive-style($breakpoint-sp) {
-          letter-spacing: 1px;
-        }
-      }
-    }
-    .lp-family-eventdetail-content-merit-right {
-      flex: 1;
-      .lp-family-eventdetail-content-merit-right-box {
-        border-top: $cl-gray 1px dashed;
-        padding: 12px 0 12px 24px;
-        display: flex;
-        align-items: center;
-        gap: 27px;
-
-        @include responsive-style($breakpoint-sp) {
-          // margin: 26px 0 26px;
-          display: grid;
-          grid-template-columns: 30px 1fr;
-          // grid-template-rows: repeat(2, 1fr);
-          grid-column-gap: 20px;
-          padding: 20px 0px;
-        }
-
-        .lp-family-eventdetail-content-merit-right-box-number {
-          font-size: 50px;
-          font-weight: 300;
-          width: 30px;
-          text-align: center;
-          opacity: 0.2;
-          @include responsive-style($breakpoint-sp) {
-            font-size: 40px;
-            align-self: flex-start;
-            width: auto;
-            padding: 0px 0 0px 7px;
-            line-height: $lineheight-none;
-          }
-        }
-        .lp-family-eventdetail-content-merit-right-box-content {
-          .lp-family-eventdetail-content-merit-right-box-content-title {
-            font-size: $font-size-xl;
-            @include responsive-style($breakpoint-sp) {
-              font-size: $font-size-m;
-              font-weight: 500;
-              margin: 0 0 10px;
-            }
-          }
-          .lp-family-eventdetail-content-merit-right-box-conten-text {
-            font-size: $font-size-s;
-          }
-        }
-      }
-    }
-  }
-  .lp-family-eventdetail-content-top-right-img {
-    text-align: center;
-    margin: 20px 0 0;
-    img {
-      border-radius: $border-radius-middle;
-      max-width: 100%;
-      height: auto;
-    }
-  }
-}
-
 //03 イベントの詳細　教科ごとの色付け
 // @each $category, $values in $categories {
 //   .#{$category} {
@@ -604,170 +381,124 @@ section.lp-family-eventdetail {
 // }
 
 //04 こんなあなたにオススメです！
-// section.lp-family-recommend {
-//   .lp-family-recommend {
-//     max-width: 1000px;
-//     width: 100%;
-//     margin: 0 auto;
-//     display: flex;
-//     div {
-//       @include min-responsive-style(768px) {
-//         flex: 1;
-//       }
-//     }
-//   }
+section.lp-tkw-eventdetail {
+  background: $cl-tankyu-green-light;
+  border-radius: $border-radius-extrabig $border-radius-extrabig 0 0;
+  padding: 75px 0;
+  margin: 0 auto !important;
 
-//   .lp-family-recommend-left {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background: $cl-white;
-//     img {
-//       width: 50%;
-//     }
-//   }
+  .lp-tkw-eventdetail-content {
+    max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
+    .lp-tkw-eventdetail-content-ribbon-top {
+      width: 150px;
+      position: absolute;
+      right: -17px;
+      top: 30px;
+      z-index: 1;
+    }
+    .lp-tkw-eventdetail-content-ribbon-bottom {
+      width: 150px;
+      position: absolute;
+      left: -17px;
+      bottom: -15px;
+      z-index: 1;
+      transform: rotate(180deg);
+    }
+    .lp-tkw-eventdetail-content-ribbon-bottom {
+    }
+    .lp-tkw-eventdetail-content-subject {
+      margin: 0 0 0 70px;
+      background: $cl-tankyu-green;
+      border-radius: $border-radius-big $border-radius-big 0 0;
+      border: 2px $cl-white solid;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+      height: 45px;
+      font-size: $font-size-l;
+      color: $cl-white;
+      text-align: center;
+      line-height: $lineheight-normal;
+    }
+    .lp-tkw-eventdetail-content-box {
+      border-radius: 40px;
+      padding: 50px 70px 60px;
+      background: $cl-white;
+      display: grid;
+      gap: 30px 60px;
+      margin: 0 auto 60px;
+      grid-template-columns: 284px 1fr;
+      //01
+      .lp-tkw-eventdetail-content-box-grid01ttl-number {
+        font-family: "Be Vietnam Pro", "Noto Sans JP", sans-serif;
+        font-size: 90px;
+        letter-spacing: 2px;
+        color: $cl-tankyu-green;
+        font-weight: 600;
+      }
+      .lp-tkw-eventdetail-content-box-grid01ttl-title {
+        font-size: $font-size-xxxl;
+        font-weight: 800;
+        color: $cl-black;
+        line-height: $lineheight-normal;
+      }
+      //02
+      .lp-tkw-eventdetail-content-box-grid02thumb {
+        img {
+          border-radius: $border-radius-bigplus;
+        }
+      }
 
-//   .lp-family-recommend-right {
-//     position: relative;
-//     background: $cl-graylightest;
-//     padding: 45px 30px;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 45px;
-//     @include responsive-style($breakpoint-sp) {
-//       background: transparent;
-//       margin: 0 20px;
-//       padding: 0px 0px 30px;
-//       border-radius: $border-radius-bigplus;
-//       gap: 30px;
-//     }
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: 0;
-//       left: -40px;
-//       bottom: 0;
-//       margin: auto;
-//       width: 0;
-//       height: 0;
-//       border-style: solid;
-//       border-color: transparent $cl-graylightest transparent transparent;
-//       border-width: 82px 52px 82px 0px;
-//       z-index: 1;
-//       @include responsive-style($breakpoint-sp) {
-//         display: none;
-//       }
-//     }
-//   }
+      //03
 
-//   .lp-family-recommend-right-child {
-//     @include responsive-style($breakpoint-sp) {
-//       display: flex;
-//       gap: 20px;
-//     }
-//   }
-
-//   .lp-family-recommend-right-child:last-child {
-//     flex-direction: row-reverse;
-//   }
-
-//   .lp-family-recommend-right-child:last-child
-//     .lp-family-recommend-right-child-text:before {
-//     right: -15px !important;
-//     left: auto !important;
-//     transform: rotate(180deg);
-//   }
-
-//   .lp-family-recommend-right-child:last-child
-//     .lp-family-recommend-right-child-icon {
-//     @include responsive-style($breakpoint-sp) {
-//       width: 102px;
-//       margin: 0;
-//     }
-//   }
-
-//   .lp-family-recommend-right-child-icon {
-//     img {
-//       height: 75px;
-//       margin: 0 auto;
-//     }
-//     @include responsive-style($breakpoint-sp) {
-//       width: 88px;
-//       margin: 0;
-//     }
-//   }
-
-//   .lp-family-recommend-right-child-text {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 20px;
-//     font-size: $font-size-xl;
-//     position: relative;
-//     @include responsive-style($breakpoint-sp) {
-//       font-size: $font-size-m;
-//       background: $cl-white;
-//       padding: 16px;
-//       border-radius: $border-radius-big;
-//     }
-//     &::before {
-//       @include responsive-style($breakpoint-sp) {
-//         content: "";
-//         position: absolute;
-//         top: 30px;
-//         left: -15px;
-//         margin: auto;
-//         width: 0;
-//         height: 0;
-//         border-style: solid;
-//         border-color: transparent $cl-white transparent transparent;
-//         border-width: 15px 15px 15px 0px;
-//         z-index: 1;
-//       }
-//     }
-//   }
-
-//   //POINT!
-//   .lp-family-point {
-//     max-width: 450px;
-//     margin: 45px auto 0;
-//     display: flex;
-//     align-items: center;
-//     gap: 30px;
-//     @include responsive-style($breakpoint-sp) {
-//       background: $cl-white;
-//       margin: 0px 20px 0;
-//       padding: 0px 0px;
-//       border-radius: $border-radius-bigplus;
-//       display: block;
-//     }
-//   }
-
-//   .lp-family-point-left {
-//     @include responsive-style($breakpoint-sp) {
-//       width: 120px;
-//       height: 30px;
-//       border-radius: $border-radius-bigplus 0 $border-radius-bigplus 0;
-//     }
-//     width: 75px;
-//     height: 75px;
-//     border-radius: $border-radius-full;
-//     background: $cl-gray;
-//     color: white;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   .lp-family-point-right {
-//     flex: 1;
-//     text-align: center;
-//     @include responsive-style($breakpoint-sp) {
-//       width: 100%;
-//       padding: 20px 20px 30px;
-//       text-align: left;
-//     }
-//   }
-// }
+      .lp-tkw-eventdetail-content-box-grid03info {
+        .lp-tkw-eventdetail-content-box-grid03info-date {
+          font-size: $font-size-xxl;
+          font-weight: bold;
+          margin: 0 0 4px;
+        }
+        .lp-tkw-eventdetail-content-box-grid03info-hr {
+          width: 100%;
+          height: 1px;
+          background: $cl-graylight;
+          margin: 20px 0 20px;
+        }
+        .lp-tkw-eventdetail-content-box-grid03info-note {
+          font-size: $font-size-ss;
+          color: $cl-graylight;
+          white-space: nowrap;
+          margin: 7px 0 0;
+          letter-spacing: -0.3px;
+        }
+        .lp-tkw-eventdetail-content-box-grid03info-time {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-size: $font-size-l;
+        }
+        .lp-tkw-eventdetail-content-box-grid03info-timespecial {
+          font-size: $font-size-l;
+        }
+      }
+      .lp-tkw-eventdetail-content-box-grid04explore {
+        .lp-tkw-eventdetail-content-box-grid04explore-text {
+          font-size: $font-size-m;
+          line-height: $lineheight-relaxed;
+          margin: 0 0 15px;
+        }
+        .lp-tkw-eventdetail-content-box-explore-note {
+          font-size: $font-size-s;
+          color: $cl-graylight;
+          line-height: $lineheight-relaxed;
+          margin: 0 0 15px;
+        }
+      }
+    }
+  }
+}
 
 //05 授業の特徴
 section.lp-family-feature {
@@ -775,7 +506,7 @@ section.lp-family-feature {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-
+  background: $cl-bg-creamyellow-dark;
   .lp-family-feature-child {
     font-size: $font-size-xxl;
     background: $cl-feature-yellow;
@@ -853,7 +584,7 @@ section.lp-family-feature {
 section.lp-family-howto {
   padding: 75px 0;
   margin: 0 0px;
-
+  background: $cl-bg-creamyellow;
   .lp-family-howto-title {
     font-size: $font-size-xxxl;
     margin: 0 auto 30px;
@@ -930,8 +661,9 @@ section.lp-family-howto {
 
 section.lp-family-about {
   padding: 75px 0 0;
+  background: $cl-bg-creamyellow-dark;
   .lp-family-about-box {
-    background: white;
+    background: $cl-white;
     max-width: $widewidth;
     margin: 0 auto 0px;
     padding: 48px 36px;
@@ -965,6 +697,7 @@ section.lp-family-about {
 .lp-family-start2025 {
   @include section-maxwidth;
   padding: 90px 0 30px;
+  background: $cl-bg-creamyellow-dark;
   .lp-family-start2025-catch {
     font-size: $font-size-xxxl;
     margin: 0 auto 30px;
