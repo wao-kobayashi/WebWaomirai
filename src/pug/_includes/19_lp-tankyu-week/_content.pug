@@ -94,77 +94,71 @@ body
          .lp-tkw-eventlist-illust 
             img(src=ImgIllustEventlistGirl)
        .lp-tkw-eventlist-content
-         |test
-         br
-         |p cta
-       .lp-tkw-eventlist-content-grid 
-            // 各イベントをループ処理
-            .lp-tkw-eventlist-griditem.special
-                // サムネイル画像
-                .lp-tkw-eventlist-griditem-img
-                    img(src=ImgThumbPcEconomyKids)
-                // カードコンテンツ
-                .lp-tkw-eventlist-griditem-content
-                  // カテゴリー表示（科目・対象学年）
-                  .lp-tkw-eventlist-griditem-content-category
-                    // 科目ラベル
-                    .lp-tkw-eventlist-griditem-content-category-child.subject
-                        |科学
-                    // 対象学年ラベル
-                    .lp-tkw-eventlist-griditem-content-category-child.target
-                        |小学生                  
-                  // イベントタイトル
-                  .lp-tkw-eventlist-griditem-content-title
-                        |モノの値段はどう決まる?         
-                  // 日時情報
-                  .lp-tkw-eventlist-griditem-content-datetime
-                    // 日付（SP表示は短縮形式、PC表示は数値形式）
-                    .lp-tkw-eventlist-griditem-content-datetime-date 
-                      |12/20(金)
-                    // 時計アイコン
-                    .lp-tkw-eventlist-griditem-content-datetime-icon 
-                      img(src=ImgIcnClock)
-                    // 時刻
-                    .lp-tkw-eventlist-griditem-content-datetime-time
-                      |19:30～20:15        
-                  // 詳細ページへのリンク
-                  .lp-tkw-eventlist-griditem-content-link 
-                    a(href="#")
-                      |詳細を見る
-
-            //- .lp-tkw-eventlist-griditem
-            //-     // サムネイル画像
-            //-     .lp-tkw-eventlist-griditem-img
-            //-         img(src=ImgThumbPcEconomyKids)
-            //-     // カードコンテンツ
-            //-     .lp-tkw-eventlist-griditem-content
-            //-       // カテゴリー表示（科目・対象学年）
-            //-       .lp-tkw-eventlist-griditem-content-category
-            //-         // 科目ラベル
-            //-         .lp-tkw-eventlist-griditem-content-category-child.subject
-            //-             |科学
-            //-         // 対象学年ラベル
-            //-         .lp-tkw-eventlist-griditem-content-category-child.target
-            //-             |小学生                  
-            //-       // イベントタイトル
-            //-       .lp-tkw-eventlist-griditem-content-title
-            //-             |モノの値段はどう決まる?         
-            //-       // 日時情報
-            //-       .lp-tkw-eventlist-griditem-content-datetime
-            //-         // 日付（SP表示は短縮形式、PC表示は数値形式）
-            //-         .lp-tkw-eventlist-griditem-content-datetime-date 
-            //-           |12/20(金)
-            //-         // 時計アイコン
-            //-         .lp-tkw-eventlist-griditem-content-datetime-icon 
-            //-           img(src=ImgIcnClock)
-            //-         // 時刻
-            //-         .lp-tkw-eventlist-griditem-content-datetime-time
-            //-           |19:30～20:15        
-            //-       // 詳細ページへのリンク
-            //-       .lp-tkw-eventlist-griditem-content-link 
-            //-         a(href="#")
-            //-           |詳細を見る
-
+          .lp-tkw-eventlist-content-grid 
+                // 各イベントをループ処理
+                .lp-tkw-eventlist-griditem.special
+                    // サムネイル画像
+                    .lp-tkw-eventlist-griditem-img
+                        img(src=ImgThumbPcEconomyKids)
+                    // カードコンテンツ
+                    .lp-tkw-eventlist-griditem-content
+                      // カテゴリー表示（科目・対象学年）
+                      .lp-tkw-eventlist-griditem-content-category
+                        // 科目ラベル
+                        .lp-tkw-eventlist-griditem-content-category-child.subject
+                            |科学
+                        // 対象学年ラベル
+                        .lp-tkw-eventlist-griditem-content-category-child.target
+                            |小学生                  
+                      // イベントタイトル
+                      .lp-tkw-eventlist-griditem-content-title
+                            |簡単クリスマスケーキを作ろう★ 超高速ふわふわホイップのひみつ
+                      // 日時情報
+                      .lp-tkw-eventlist-griditem-content-datetime
+                        // 日付（SP表示は短縮形式、PC表示は数値形式）
+                        .lp-tkw-eventlist-griditem-content-datetime-date 
+                          |12/20(土) ① 11:00～11:45  ②14:00～14:45
+                        // 時計アイコン      
+                      // 詳細ページへのリンク
+                      .lp-tkw-eventlist-griditem-content-link 
+                        a(href="#")
+                          |詳細を見る
+                - for (var i = 1; i < 7; i++)
+                  .lp-tkw-eventlist-griditem.normal
+                      // サムネイル画像
+                      .lp-tkw-eventlist-griditem-img
+                          img(src=ImgThumbPcEconomyKids)
+                      // カードコンテンツ
+                      .lp-tkw-eventlist-griditem-content
+                        // カテゴリー表示（科目・対象学年）
+                        .lp-tkw-eventlist-griditem-content-category
+                          // 科目ラベル
+                          .lp-tkw-eventlist-griditem-content-category-child.subject
+                              |科学
+                          // 対象学年ラベル
+                          .lp-tkw-eventlist-griditem-content-category-child.target
+                              |小学生                  
+                        // イベントタイトル
+                        .lp-tkw-eventlist-griditem-content-title
+                              |モノの値段はどう決まる?         
+                        // 日時情報
+                        .lp-tkw-eventlist-griditem-content-datetime
+                          // 日付（SP表示は短縮形式、PC表示は数値形式）
+                          .lp-tkw-eventlist-griditem-content-datetime-date 
+                            |12/20(金)
+                          // 時計アイコン
+                          .lp-tkw-eventlist-griditem-content-datetime-icon 
+                            img(src=ImgIcnClock)
+                          // 時刻
+                          .lp-tkw-eventlist-griditem-content-datetime-time
+                            |19:30～20:15        
+                        // 詳細ページへのリンク
+                        .lp-tkw-eventlist-griditem-content-link 
+                          a(href="#")
+                            |詳細を見る
+          +btn-cta 
+          .lp-tkw-eventlist-content-bottom
+             img(src=ImgBookbottom)  
     //03 イベントの詳細
     section.lp-tkw-eventdetail 
       // 各イベントの詳細をループ処理

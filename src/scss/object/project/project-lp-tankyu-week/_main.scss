@@ -134,7 +134,7 @@ header {
 .lp-tkw-intro-pc {
   max-width: $max-width;
   padding: 0 40px;
-  margin: 0px auto 120px !important;
+  margin: 0px auto 150px !important;
   .lp-tkw-intro-pc-box {
     display: flex;
     gap: 50px;
@@ -164,8 +164,8 @@ header {
   &:before {
     content: "";
     position: absolute;
-    width: 1000px;
-    height: 1000px;
+    width: 1050px;
+    height: 1050px;
     top: -60px;
     left: 0;
     right: 0;
@@ -208,11 +208,11 @@ header {
   }
   .lp-tkw-eventlist-content {
     background: $cl-tankyu-green;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px;
     max-width: $max-width;
     position: relative;
     z-index: 1;
-    padding: 100px 0 1000px;
+    padding: 100px 0 0px;
     margin: -105px auto 0;
     overflow: hidden;
     &:before {
@@ -226,230 +226,137 @@ header {
       z-index: -1;
       bottom: 0;
     }
+    .lp-tkw-eventlist-content-grid {
+      display: grid;
+      max-width: 1100px;
+      margin: 45px auto 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 30px 30px;
+      grid-template-areas:
+        "special special special"
+        ". . ."
+        ". . .";
+    }
+    .lp-tkw-eventlist-griditem {
+      border-radius: $border-radius-big;
+      background: $cl-white;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    .lp-tkw-eventlist-griditem.special {
+      grid-area: special;
+      display: flex;
+      /* lesson */
+      padding: 30px;
+      box-sizing: border-box;
+      gap: 30px;
+      > div {
+        flex: 1;
+      }
+      .lp-tkw-eventlist-griditem-img img {
+        border-radius: $border-radius-big;
+      }
+    }
+    .lp-tkw-eventlist-griditem.normal {
+      /* lesson */
+      padding: 20px;
+      .lp-tkw-eventlist-griditem-img img {
+        border-radius: $border-radius-big;
+      }
+    }
+    .lp-tkw-eventlist-griditem-content-category {
+      display: flex;
+      gap: 10px;
+
+      .lp-tkw-eventlist-griditem-content-category-child {
+        font-size: $font-size-s;
+        padding: 6px 14px;
+        border-radius: $border-radius-big;
+        margin: 16px 0 0;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-sss;
+          padding: 3px 6px;
+          border-radius: $border-radius-middle;
+          margin: 10px 0 0;
+        }
+        &.target {
+          background-color: $cl-graylightest;
+          color: $cl-graylight !important;
+        }
+      }
+    }
+    .lp-tkw-eventlist-griditem-content-title {
+      font-size: $font-size-l;
+      font-weight: bold;
+      margin: 16px 0 8px;
+      @include responsive-style($breakpoint-sp) {
+        font-size: $font-size-m;
+        margin: 10px 0 8px;
+      }
+    }
+    .lp-tkw-eventlist-griditem-content-datetime {
+      display: flex;
+      align-items: flex-end;
+      .lp-tkw-eventlist-griditem-content-datetime-date {
+        font-size: $font-size-m;
+        line-height: $lineheight-normal;
+        margin: 0 11px 0px 0px;
+        @include responsive-style($breakpoint-sp) {
+          font-size: 11px;
+          margin: 0 6px 0px 0px;
+        }
+      }
+      .lp-tkw-eventlist-griditem-content-datetime-icon {
+        margin: 0 10px 3px 0px;
+        @include responsive-style($breakpoint-sp) {
+          margin: 0 6px 3px 0px;
+          display: none;
+        }
+      }
+      .lp-tkw-eventlist-griditem-content-datetime-time {
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-ss;
+          white-space: nowrap;
+        }
+      }
+    }
+    .lp-tkw-eventlist-griditem-content-link a {
+      width: 100%;
+      display: flex;
+      height: 37px;
+      border-radius: $border-radius-middle;
+      border: 1px solid $cl-graylight;
+      font-size: $font-size-s;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      margin: 18px 0 0;
+      position: relative;
+      gap: 10px;
+
+      @include responsive-style($breakpoint-sp) {
+        margin: 10px 0 0;
+        padding: 0;
+        border: none;
+        height: auto;
+        justify-content: flex-start;
+        font-size: $font-size-ss;
+        text-decoration: underline;
+        gap: 7px;
+      }
+      &::before {
+        content: "";
+        margin: 6px 0 0 4px;
+        transform: translateY(-50%) rotate(45deg);
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid $cl-gray;
+        border-bottom: 2px solid $cl-gray;
+        background: transparent;
+      }
+    }
   }
 }
-
-// .lp-family-eventlist {
-//   width: 100%;
-//   background: $cl-bg-creamyellow-dark;
-//   padding: 90px 0 75px;
-//   @include responsive-style($breakpoint-sp) {
-//     margin: 0 auto 60px;
-//     padding: 60px 20px 60px;
-//   }
-//   .lp-family-eventlist-section {
-//     width: 100%;
-//     max-width: 1140px;
-//     background: $cl-white;
-//     border-radius: $border-radius-bigplus;
-//     padding: 36px 0 45px;
-//     margin: 0px auto 0px;
-//     @include responsive-style($breakpoint-sp) {
-//       border: 2px dashed $cl-border-brown;
-//       padding: 36px 0 0px;
-//     }
-//   }
-//   .lp-family-eventlist-wrapper {
-//     background: $cl-white;
-//     margin: 0px 36px 0;
-//     border: 2px dashed $cl-border-brown;
-//     border-radius: $border-radius-bigplus;
-//     @include responsive-style($breakpoint-sp) {
-//       border: none;
-//       margin: 0px 0px 0;
-//     }
-//     .lp-family-eventlist-wrapper-title {
-//       position: relative;
-
-//       border-bottom: 2px dashed $cl-border-brown;
-//       .lp-family-eventlist-wrapper-title-text {
-//         padding: 50px 0 40px;
-//         margin: 0 auto;
-//         text-align: center;
-//         @include responsive-style($breakpoint-sp) {
-//           padding: 13px 0 20px;
-//         }
-//         .lp-family-eventlist-wrapper-title-text-img img {
-//           margin: 0 auto;
-//           max-width: 70%;
-//           @include responsive-style($breakpoint-sp) {
-//             max-width: 80%;
-//           }
-//         }
-//         .lp-family-eventlist-wrapper-title-text-note {
-//           font-size: $font-size-m;
-//           color: $cl-graylight;
-//           margin: 16px 0 0;
-//           text-align: center;
-//           letter-spacing: 0.5px;
-//           @include responsive-style($breakpoint-sp) {
-//             margin: 12px 0 0;
-//             font-size: $font-size-s;
-//           }
-//         }
-//       }
-
-//       .lp-family-eventlist-wrapper-title-illust01 {
-//         position: absolute;
-//         width: 100px;
-//         left: 20px;
-//         top: -80px;
-//         transform: rotate(-10deg);
-//         animation: pikopiko 3s steps(2, start) infinite;
-//         @include responsive-style($breakpoint-sp) {
-//           width: 62px;
-//         }
-//       }
-//       .lp-family-eventlist-wrapper-title-illust02 {
-//         position: absolute;
-//         right: 30px;
-//         width: 90px;
-//         top: -70px;
-//         transform: rotate(10deg);
-//         animation: pikopiko 3s steps(2, start) infinite;
-//         @include responsive-style($breakpoint-sp) {
-//           width: 60px;
-//           right: 20px;
-//         }
-//       }
-//     }
-//     .lp-family-eventlist-wrapper-grid {
-//       display: grid;
-//       grid-template-columns: repeat(3, 1fr);
-//       // gap: 2px;
-//       padding: 0px 0px 0px;
-//       @include responsive-style($breakpoint-sp) {
-//         grid-template-columns: repeat(2, 1fr);
-//       }
-//       .lp-family-eventlist-wrapper-grid-item {
-//         padding: 35px 40px 35px;
-//         border-bottom: 2px dashed $cl-border-brown;
-//         @include responsive-style($breakpoint-sp) {
-//           padding: 15px;
-//           border-bottom: 2px dashed $cl-border-brown;
-//         }
-//         .lp-family-eventlist-wrapper-grid-item-img {
-//           img {
-//             border-radius: $border-radius-big;
-//             width: 100%;
-//             margin: 0 0 8px;
-//           }
-//         }
-//         .lp-family-eventlist-wrapper-grid-item-content-category {
-//           display: flex;
-//           gap: 10px;
-
-//           .lp-family-eventlist-wrapper-grid-item-content-category-child {
-//             font-size: $font-size-s;
-//             padding: 6px 14px;
-//             border-radius: $border-radius-big;
-//             margin: 16px 0 0;
-//             @include responsive-style($breakpoint-sp) {
-//               font-size: $font-size-sss;
-//               padding: 3px 6px;
-//               border-radius: $border-radius-middle;
-//               margin: 10px 0 0;
-//             }
-//             &.target {
-//               background-color: $cl-graylightest;
-//               color: $cl-graylight !important;
-//             }
-//           }
-//         }
-//         .lp-family-eventlist-wrapper-grid-item-content-title {
-//           font-size: $font-size-l;
-//           font-weight: bold;
-//           margin: 16px 0 8px;
-//           @include responsive-style($breakpoint-sp) {
-//             font-size: $font-size-m;
-//             margin: 10px 0 8px;
-//           }
-//         }
-//         .lp-family-eventlist-wrapper-grid-item-content-datetime {
-//           display: flex;
-//           align-items: flex-end;
-//           .lp-family-eventlist-wrapper-grid-item-content-datetime-date {
-//             font-size: $font-size-m;
-//             line-height: $lineheight-normal;
-//             margin: 0 11px 0px 0px;
-//             @include responsive-style($breakpoint-sp) {
-//               font-size: 11px;
-//               margin: 0 6px 0px 0px;
-//             }
-//           }
-//           .lp-family-eventlist-wrapper-grid-item-content-datetime-icon {
-//             margin: 0 10px 3px 0px;
-//             @include responsive-style($breakpoint-sp) {
-//               margin: 0 6px 3px 0px;
-//               display: none;
-//             }
-//           }
-//           .lp-family-eventlist-wrapper-grid-item-content-datetime-time {
-//             @include responsive-style($breakpoint-sp) {
-//               font-size: $font-size-ss;
-//               white-space: nowrap;
-//             }
-//           }
-//         }
-//         .lp-family-eventlist-wrapper-grid-item-content-link a {
-//           width: 100%;
-//           display: flex;
-//           height: 37px;
-//           border-radius: $border-radius-middle;
-//           border: 1px solid $cl-graylight;
-//           font-size: $font-size-s;
-//           text-decoration: none;
-//           align-items: center;
-//           justify-content: center;
-//           margin: 18px 0 0;
-//           position: relative;
-//           gap: 10px;
-
-//           @include responsive-style($breakpoint-sp) {
-//             margin: 10px 0 0;
-//             padding: 0;
-//             border: none;
-//             height: auto;
-//             justify-content: flex-start;
-//             font-size: $font-size-ss;
-//             text-decoration: underline;
-//             gap: 7px;
-//           }
-//           &::before {
-//             content: "";
-//             margin: 6px 0 0 4px;
-//             transform: translateY(-50%) rotate(45deg);
-//             width: 8px;
-//             height: 8px;
-//             border-right: 2px solid $cl-gray;
-//             border-bottom: 2px solid $cl-gray;
-//             background: transparent;
-//           }
-//         }
-//         @include min-responsive-style($breakpoint-sp) {
-//           //1列目、2列目
-//           &:nth-child(3n + 1),
-//           &:nth-child(3n + 2) {
-//             border-right: 2px dashed $cl-border-brown;
-//           }
-//           &:nth-last-child(-n + 3) {
-//             border-bottom: none !important;
-//           }
-//           // &:nth-child(1),
-//           // &:nth-child(2),
-//           // &:nth-child(3) {
-//           //   border-bottom: 2px dashed $cl-border-brown;
-//           // }
-//         }
-//         @include responsive-style($breakpoint-sp) {
-//           &:nth-child(2n + 1) {
-//             border-right: 2px dashed $cl-border-brown;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 //03 イベントの詳細
 section.lp-family-eventdetail {
@@ -681,12 +588,12 @@ section.lp-family-eventdetail {
 //       color: map-get($values, main-color) !important;
 //       background-color: map-get($values, pale-color) !important;
 //     }
-//     .lp-family-eventlist-wrapper-grid-item-content-category-child.subject {
+//     .lp-tkw-eventlist-griditem-content-category-child.subject {
 //       color: map-get($values, main-color) !important;
 //       background-color: map-get($values, pale-color) !important;
 //     }
 //     @include responsive-style($breakpoint-sp) {
-//       .lp-family-eventlist-wrapper-grid-item-content-link a {
+//       .lp-tkw-eventlist-griditem-content-link a {
 //         &::before {
 //           border-right: 2px solid map-get($values, main-color) !important;
 //           border-bottom: 2px solid map-get($values, main-color) !important;
