@@ -4,128 +4,153 @@ header {
     width: 200px;
     left: 25px;
     top: 25px;
+    @include responsive-style($breakpoint-sp) {
+      width: 150px;
+      left: 20px;
+      top: 20px;
+    }
   }
 }
 
 //01メインビジュアル
 .lp-tkw-fv {
   width: 100%;
-}
-
-.lp-tkw-fv-grid {
-  display: grid;
-  grid-template-columns: 3.5fr 5.2fr 0.9fr;
-  max-width: $max-width;
-  padding: 0 40px;
-  margin: 70px auto 120px !important;
-
-  position: relative;
-  z-index: 1;
-  .lp-tkw-fv-grid-left {
+  @include responsive-style($breakpoint-sp) {
+    margin: 0px auto 30px !important;
+  }
+  .lp-tkw-fv-grid {
+    display: grid;
+    grid-template-columns: 3.5fr 5.2fr 0.9fr;
+    max-width: $max-width;
+    padding: 0 40px;
+    margin: 70px auto 120px !important;
     position: relative;
     z-index: 1;
-    .lp-tkw-fv-left-logo {
-      margin: 0 0 25px;
+    @include responsive-style($breakpoint-sp) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 0px;
+      margin: 30px auto 30px !important;
     }
-    .lp-tkw-fv-left-info {
-      .lp-tkw-fv-left-info-column {
-        display: flex;
-        border-radius: $border-radius-big;
+    .lp-tkw-fv-grid-left {
+      position: relative;
+      z-index: 1;
+      @include responsive-style($breakpoint-sp) {
+        margin: 0 auto;
+      }
+      .lp-tkw-fv-left-logo {
         margin: 0 0 25px;
-        overflow: hidden;
-        background: $cl-white;
-        .lp-tkw-fv-left-info-column-title {
-          width: 110px;
-          background: $cl-tankyu-green-dark;
-          padding: 12px 0;
-          text-align: center;
-          color: $cl-white;
-          font-size: $font-size-m;
-          font-weight: bold;
-          letter-spacing: 1.5px;
+        text-align: center;
+        @include responsive-style($breakpoint-sp) {
+          margin: -90px auto 0;
+          width: 80%;
         }
-        .lp-tkw-fv-left-info-column-content {
-          font-size: $font-size-m;
-          flex: 1;
-          padding: 12px 15px;
-          font-weight: bold;
-          letter-spacing: 0.5px;
+        img {
+          margin: 0 auto;
+        }
+      }
+      .lp-tkw-fv-left-info {
+        @include responsive-style($breakpoint-sp) {
+          width: calc(100% - 40px);
+          margin: 30px auto 30px;
+          border-radius: $border-radius-big;
+          overflow: hidden;
+        }
+        .lp-tkw-fv-left-info-column {
+          display: flex;
+          border-radius: $border-radius-big;
+          margin: 0 0 25px;
+          overflow: hidden;
+          background: $cl-white;
+          @include responsive-style($breakpoint-sp) {
+            &:first-child {
+              border-bottom: $cl-black 1px dashed;
+            }
+          }
+
+          @include responsive-style($breakpoint-sp) {
+            margin: 0;
+            border-radius: 0;
+          }
+          .lp-tkw-fv-left-info-column-title {
+            width: 110px;
+            background: $cl-tankyu-green-dark;
+            padding: 12px 0;
+            text-align: center;
+            color: $cl-white;
+            font-size: $font-size-m;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+          }
+          .lp-tkw-fv-left-info-column-content {
+            font-size: $font-size-m;
+            flex: 1;
+            padding: 12px 15px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+    .lp-tkw-fv-center {
+      position: relative;
+      img {
+        margin: -45px 0 0 -30px;
+        transform: scale(1.1);
+        transform-origin: top center;
+        @include responsive-style($breakpoint-sp) {
+          margin: 0 auto;
+          transform: scale(1);
+          width: 95%;
+          margin: 0px 7px 0 auto;
+        }
+      }
+    }
+    .lp-tkw-fv-right {
+      position: relative;
+      z-index: 1;
+      align-self: end;
+      margin: 0 0 35px;
+      @include responsive-style($breakpoint-sp) {
+        position: absolute;
+        left: 35px;
+        top: 30px;
+        width: 16%;
+        margin: 0 0 0px;
+      }
+      img {
+        margin: 0 0 0 -40px;
+        @include responsive-style($breakpoint-sp) {
+          margin: 0px;
         }
       }
     }
   }
-  .lp-tkw-fv-center {
-    position: relative;
-    img {
-      margin: -45px 0 0 -30px;
-      transform: scale(1.1);
 
-      transform-origin: top center;
-    }
-  }
-  .lp-tkw-fv-right {
-    position: relative;
-    z-index: 1;
-    align-self: end;
-    margin: 0 0 35px;
-    img {
-      margin: 0 0 0 -40px;
-    }
-  }
-}
+  .lp-tkw-fv-bgcircle {
+    position: absolute;
 
-.lp-tkw-fv-bgcircle {
-  position: absolute;
-  width: 1000px;
-  height: 1000px;
-  top: -200px;
-  left: 0;
-  right: 0;
-  /* Ellipse 40 */
-  border-radius: $border-radius-full;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
-
-  margin: auto;
-  opacity: 0.2;
-  z-index: -1;
-}
-.lp-waomirai-start2025-btn {
-  text-align: center;
-  a {
-    text-align: center;
-    margin: 30px auto 120px;
-    background: $cl-btn-cta;
-    background: $cl-main-orange;
-    text-decoration: none;
-    height: 78px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: -200px;
+    left: 0;
+    right: 0;
+    /* Ellipse 40 */
     border-radius: $border-radius-full;
-    width: 100%;
-    max-width: $ctabuttonwidth;
-    position: relative;
-    line-height: $lineheight-normal;
-    gap: 12px;
-    @include responsive-style($breakpoint-sp) {
-      width: 100%;
-    }
-    @include box-shadow-lp;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
 
-    .lp-waomirai-start2025-btn-text {
-      margin: 0px 0 0;
-      font-size: $font-size-xl;
-      letter-spacing: 1px;
-      color: $cl-white;
-    }
-    .lp-waomirai-start2025-btn-icn {
-      width: 17px;
-      height: 17px;
+    margin: auto;
+    opacity: 0.2;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    @include responsive-style($breakpoint-sp) {
+      top: 30px;
+      width: 400px;
+      height: 400px;
+      transform: scale(1.2);
     }
   }
 }
@@ -154,14 +179,67 @@ header {
     }
   }
 }
+.lp-tkw-intro-sp {
+  margin: 0px auto 0px !important;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 60px;
+
+  .lp-tkw-intro-sp-title {
+    color: $cl-white;
+    font-size: $font-size-xl;
+    line-height: $lineheight-relaxed;
+    font-weight: 500;
+    margin: 0 auto 20px;
+    letter-spacing: 1px;
+    max-width: calc(100% - 50px);
+  }
+  .lp-tkw-intro-sp-text {
+    color: $cl-white;
+    line-height: 2;
+    font-size: $font-size-m;
+    letter-spacing: 1px;
+    max-width: calc(100% - 50px);
+    margin: 0 auto;
+  }
+  .lp-tkw-intro-sp-img {
+    width: 70%;
+    margin: 20px auto 0;
+    position: relative;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: -240px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* Ellipse 40 */
+    border-radius: $border-radius-full;
+    background: $cl-white;
+    opacity: 0.2;
+    z-index: -1;
+    transform-origin: top center;
+    transform: scale(3);
+  }
+}
 
 //03 EVENT INFOMATION
 .lp-tkw-eventlist {
   // max-width: $max-width;
   padding: 0 40px;
   position: relative;
+  @include responsive-style($breakpoint-sp) {
+    padding: 0 0px;
+  }
   // height: 1000px;
   &:before {
+    @include responsive-style($breakpoint-sp) {
+      display: none;
+    }
     content: "";
     position: absolute;
     width: 1050px;
@@ -181,6 +259,9 @@ header {
     z-index: 1;
     transform-origin: top center;
     transform: scale(1.8);
+    @include responsive-style($breakpoint-sp) {
+      display: none;
+    }
   }
   .lp-tkw-eventlist-title {
     display: flex;
@@ -193,18 +274,11 @@ header {
     }
     .lp-tkw-eventlist-title-text {
       width: 496px;
+      @include responsive-style($breakpoint-sp) {
+        width: 90%;
+        margin: -60px auto 0;
+      }
     }
-    // &:before {
-    //   position: absolute;
-    //   max-width: $max-width;
-    //   width: 100%;
-    //   background: $cl-tankyu-green;
-    //   border-radius: 40px 40px 0 0;
-    //   content: "";
-    //   height: 89px;
-    //   z-index: -1;
-    //   bottom: 0;
-    // }
   }
   .lp-tkw-eventlist-content {
     background: $cl-tankyu-green;
@@ -215,6 +289,7 @@ header {
     padding: 100px 0 0px;
     margin: -105px auto 0;
     overflow: hidden;
+
     &:before {
       position: absolute;
       max-width: $max-width;
@@ -225,6 +300,9 @@ header {
       height: 100%;
       z-index: -1;
       bottom: 0;
+      @include responsive-style($breakpoint-sp) {
+        display: none;
+      }
     }
     .lp-tkw-eventlist-content-grid {
       display: grid;
@@ -237,11 +315,47 @@ header {
         "special special special"
         ". . ."
         ". . .";
+      @include responsive-style($breakpoint-sp) {
+        border-radius: $border-radius-big;
+        background: $cl-white;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "special special"
+          ". . "
+          ". . "
+          ". . ";
+        gap: 0px;
+      }
+      @include responsive-style($breakpoint-sp) {
+        width: calc(100% - 40px);
+      }
     }
     .lp-tkw-eventlist-griditem {
       border-radius: $border-radius-big;
-      background: $cl-white;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      background: $cl-white;
+      @include responsive-style($breakpoint-sp) {
+        border-radius: 0;
+        box-shadow: none !important;
+        background: none !important;
+      }
+    }
+    .lp-tkw-eventlist-griditem {
+      @include responsive-style($breakpoint-sp) {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+          border-top: 1px dashed $cl-graylight;
+        }
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+          border-right: 1px dashed $cl-graylight;
+        }
+      }
     }
     .lp-tkw-eventlist-griditem.special {
       grid-area: special;
@@ -250,8 +364,14 @@ header {
       padding: 30px;
       box-sizing: border-box;
       gap: 30px;
+      @include responsive-style($breakpoint-sp) {
+        flex-direction: column;
+        padding: 20px;
+      }
       > div {
-        flex: 1;
+        @include min-responsive-style($breakpoint-sp) {
+          flex: 1;
+        }
       }
       .lp-tkw-eventlist-griditem-img img {
         border-radius: $border-radius-big;
@@ -302,7 +422,7 @@ header {
         line-height: $lineheight-normal;
         margin: 0 11px 0px 0px;
         @include responsive-style($breakpoint-sp) {
-          font-size: 11px;
+          font-size: 10px;
           margin: 0 6px 0px 0px;
         }
       }
@@ -316,6 +436,7 @@ header {
       .lp-tkw-eventlist-griditem-content-datetime-time {
         @include responsive-style($breakpoint-sp) {
           font-size: $font-size-ss;
+          font-size: 10px;
           white-space: nowrap;
         }
       }

@@ -17,7 +17,6 @@ style.
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
     z-index:0;
   }
-
 script.
   const snowSVG = `<?xml version="1.0" encoding="UTF-8"?>
     <svg id="snow" data-name="snow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.09 78.31">
@@ -50,14 +49,13 @@ script.
 
     reset() {
       const rect = this.parent.getBoundingClientRect();
-      // 横位置を均等に配置（各雪の担当エリアの中央±20%のランダム位置）
       const sectionWidth = rect.width / this.total;
       const sectionCenter = sectionWidth * (this.index + 0.5);
       const randomOffset = (Math.random() - 0.5) * sectionWidth * 0.4;
       this.x = sectionCenter + randomOffset;
       
       this.y = -100;
-      this.speed = Math.random() * 0.7 + 0.8;
+      this.speed = Math.random() * 0.7 + 0.4;
       this.baseOpacity = Math.random() * 0.5 + 0.2;
       this.swayOffset = Math.random() * Math.PI * 2;
       this.rotation = Math.random() * 360;
@@ -73,7 +71,6 @@ script.
       this.rotation += this.rotationSpeed;
       const sway = Math.sin(this.y / 100 + this.swayOffset) * 30;
 
-      // 下20%でフェードアウト
       const fadeStart = rect.height * 0.6;
       let opacity = this.baseOpacity;
       if (this.y > fadeStart) {
@@ -90,38 +87,94 @@ script.
     }
   }
 
-  // 任意のdivに雪を降らせる
-  const container = document.getElementById('mySnowDiv');
-  const snowflakes = [];
-  const snowCount = 15;
+  // 設定
+  const CONFIG = {
+    // 対象のdiv ID配列
+    targetIds: ['mySnowDiv', 'mySnowDivSecond', 'thirdSnowDiv'],
+    // PC用の雪の数
+    snowCountPC: 15,
+    // スマホ用の雪の数（768px以下）
+    snowCountMobile: 8
+  };
 
-  for (let i = 0; i < snowCount; i++) {
-    const flake = new Snowflake(container, i, snowCount);
-    flake.y = Math.random() * container.offsetHeight;
-    flake.element.style.top = flake.y + 'px';
-    snowflakes.push(flake);
+  // 画面幅を取得して雪の数を決定
+  function getSnowCount() {
+    return window.innerWidth <= 768 ? CONFIG.snowCountMobile : CONFIG.snowCountPC;
   }
 
+  // 各コンテナごとの雪管理
+  const snowContainers = [];
+
+  // 初期化
+  function initSnow() {
+    CONFIG.targetIds.forEach(id => {
+      const container = document.getElementById(id);
+      if (!container) return;
+
+      const snowflakes = [];
+      const snowCount = getSnowCount();
+
+      for (let i = 0; i < snowCount; i++) {
+        const flake = new Snowflake(container, i, snowCount);
+        flake.y = Math.random() * container.offsetHeight;
+        flake.element.style.top = flake.y + 'px';
+        snowflakes.push(flake);
+      }
+
+      snowContainers.push({ container, snowflakes });
+    });
+  }
+
+  // アニメーション
   function animate() {
-    snowflakes.forEach(flake => flake.update());
+    snowContainers.forEach(({ snowflakes }) => {
+      snowflakes.forEach(flake => flake.update());
+    });
     requestAnimationFrame(animate);
   }
-  animate();
 
+  // リサイズ対応
+  let resizeTimeout;
   window.addEventListener('resize', () => {
-    snowflakes.forEach(flake => {
-      const rect = container.getBoundingClientRect();
-      // リサイズ時も均等な位置を維持
-      const sectionWidth = rect.width / snowCount;
-      const sectionCenter = sectionWidth * (flake.index + 0.5);
-      if (flake.x > rect.width || flake.x < 0) {
-        flake.x = sectionCenter;
-        flake.element.style.left = flake.x + 'px';
-      }
-    });
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const newSnowCount = getSnowCount();
+      
+      snowContainers.forEach(({ container, snowflakes }) => {
+        const currentCount = snowflakes.length;
+        
+        // 雪の数が変わった場合は再初期化
+        if (currentCount !== newSnowCount) {
+          // 既存の雪をすべて削除
+          snowflakes.forEach(flake => flake.element.remove());
+          snowflakes.length = 0;
+          
+          // 新しい数で再生成
+          for (let i = 0; i < newSnowCount; i++) {
+            const flake = new Snowflake(container, i, newSnowCount);
+            flake.y = Math.random() * container.offsetHeight;
+            flake.element.style.top = flake.y + 'px';
+            snowflakes.push(flake);
+          }
+        } else {
+          // 数が同じ場合は位置調整のみ
+          const rect = container.getBoundingClientRect();
+          snowflakes.forEach(flake => {
+            const sectionWidth = rect.width / newSnowCount;
+            const sectionCenter = sectionWidth * (flake.index + 0.5);
+            if (flake.x > rect.width || flake.x < 0) {
+              flake.x = sectionCenter;
+              flake.element.style.left = flake.x + 'px';
+            }
+          });
+        }
+      });
+    }, 200);
   });
 
-
+  // 実行
+  initSnow();
+  animate();
 script.
   $(document).ready(function() { 
     $('.inview-triger').on('inview', function(event, isInView) {
