@@ -1,163 +1,208 @@
 
 body
-    //01メインビジュアル(PC)
-    section.lp-tkw-fv.pcimage 
-       .lp-tkw-fv-waologo 
-          img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
-       .lp-tkw-fv-left 
-          .lp-tkw-fv-left-logo 
-            .pcimage
-             img(src=ImgLogoTankyuweekPc)
-            .spimage 
-              img(src=ImgLogoTankyuweekSp)
-          .lp-tkw-fv-left-info 
-            .lp-tkw-fv-left-info-column
-             .lp-tkw-fv-left-info-column-title|開催日時
-             .lp-tkw-fv-left-info-column-content|12/20(金) 22(日) 23(月) 26(木)   
-            .lp-tkw-fv-left-info-column
-             .lp-tkw-fv-left-info-column-title|対象
-             .lp-tkw-fv-left-info-column-content|高校生とその保護者         
+    //01メインビジュアル
+    header 
+      img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+    section.lp-tkw-fv#mySnowDiv
+       .lp-tkw-fv-grid
+        .lp-tkw-fv-grid-left 
+            .lp-tkw-fv-left-logo 
+              .pcimage
+              img(src=ImgLogoTankyuweekPc)
+              .spimage 
+                img(src=ImgLogoTankyuweekSp)
+            .lp-tkw-fv-left-info 
+              .lp-tkw-fv-left-info-column
+                .lp-tkw-fv-left-info-column-title|開催日時
+                .lp-tkw-fv-left-info-column-content|12/20(金) 22(日) 23(月) 26(木)   
+              .lp-tkw-fv-left-info-column
+                .lp-tkw-fv-left-info-column-title|対象
+                .lp-tkw-fv-left-info-column-content|小学３年～高校生とその保護者
+        .lp-tkw-fv-center  
+          img(src=ImgFvBook)
+        .lp-tkw-fv-right 
+            img(src=ImgFvRighttext)
+       .lp-tkw-fv-bgcircle
+    //02イントロセクションPC
+    section.lp-tkw-intro-pc.pcimage 
+      .lp-tkw-intro-pc-box
+        .lp-tkw-intro-pc-box-text.lp-tkw-intro-pc-box-text01
+          |「なんで？」「どうして？」が
+          br
+          |止まらない冬がやってくる！
+          br
+          br
+          |モノの値段はどう決まる？
+          br
+          |友だちとケンカしたらどうすればいい？
+        .lp-tkw-intro-pc-box-img.lp-tkw-intro-pc-box-img01
+          img(src=ImgIntro01Pc)
+      .lp-tkw-intro-pc-box
+        .lp-tkw-intro-pc-box-img.lp-tkw-intro-pc-box-img02
+          img(src=ImgIntro02Pc)
+        .lp-tkw-intro-pc-box-text.lp-tkw-intro-pc-box-text02
+          |身近な“ふしぎ”から世界を見つめる、
+          br
+          |考える冬の探究授業。
+          br
+          br
+          |子どもが自分の問いを見つけ、
+          br
+          |考え、言葉にする。
+          br
+          br
+          |この冬、親子で“考える楽しさ”を
+          br
+          |体験してみませんか？
+
+    //02イントロセクションSP
+    section.lp-tkw-intro-sp.spimage
+      .lp-tkw-intro-sp-title
+        |「なんで？」「どうして？」が止まらない冬がやってくる！
+      .lp-tkw-intro-sp-text 
+          |「なんで？」「どうして？」が
+          br
+          |止まらない冬がやってくる！
+          br
+          br
+          |モノの値段はどう決まる？
+          br
+          |友だちとケンカしたらどうすればいい？   
+          br
+          |身近な“ふしぎ”から世界を見つめる、
+          br
+          |考える冬の探究授業。
+          br
+          br
+          |子どもが自分の問いを見つけ、
+          br
+          |考え、言葉にする。
+          br
+          br
+          |この冬、親子で“考える楽しさ”を
+          br
+          |体験してみませんか？    
+      .lp-tkw-intro-sp-img
+          img(src=ImgIntro01Sp) 
     // イベント一覧セクション
-    section.lp-family-eventlist 
-      .lp-family-eventlist-section.inview-hide.inview-triger
-        .lp-family-eventlist-wrapper 
-          // セクションタイトルエリア
-          .lp-family-eventlist-wrapper-title 
-            // 装飾イラスト1（本のアイコン）
-            .lp-family-eventlist-wrapper-title-illust01
-              img(src=ImgIllustFv05Book)
-            // 装飾イラスト2（銀行のアイコン）
-            .lp-family-eventlist-wrapper-title-illust02
-              img(src=ImgIllustFv06Bank)
-            // タイトルテキスト
-            .lp-family-eventlist-wrapper-title-text
-              .lp-family-eventlist-wrapper-title-text-img
-                img(src=ImgTitleTryLesson)
-              // 注釈：複数授業受講可能
-              .lp-family-eventlist-wrapper-title-text-note
-                |※複数の授業を受講可能です
-          
-          // イベントカードのグリッドレイアウト
-          .lp-family-eventlist-wrapper-grid 
+    section.lp-tkw-eventlist 
+       .lp-tkw-eventlist-title
+         .lp-tkw-eventlist-illust 
+            img(src=ImgIllustEventlistBoy)
+         .lp-tkw-eventlist-title-text
+            img(src=ImgTitleEventlist)
+         .lp-tkw-eventlist-illust 
+            img(src=ImgIllustEventlistGirl)
+       .lp-tkw-eventlist-content
+         |test
+         br
+         |p cta
+       .lp-tkw-eventlist-content-grid 
             // 各イベントをループ処理
-            //- each event in events
-            //-   // イベントカード（IDをクラスとして付与）
-            //-   .lp-family-eventlist-wrapper-grid-item(class=event.id)
+            .lp-tkw-eventlist-griditem.special
+                // サムネイル画像
+                .lp-tkw-eventlist-griditem-img
+                    img(src=ImgThumbPcEconomyKids)
+                // カードコンテンツ
+                .lp-tkw-eventlist-griditem-content
+                  // カテゴリー表示（科目・対象学年）
+                  .lp-tkw-eventlist-griditem-content-category
+                    // 科目ラベル
+                    .lp-tkw-eventlist-griditem-content-category-child.subject
+                        |科学
+                    // 対象学年ラベル
+                    .lp-tkw-eventlist-griditem-content-category-child.target
+                        |小学生                  
+                  // イベントタイトル
+                  .lp-tkw-eventlist-griditem-content-title
+                        |モノの値段はどう決まる?         
+                  // 日時情報
+                  .lp-tkw-eventlist-griditem-content-datetime
+                    // 日付（SP表示は短縮形式、PC表示は数値形式）
+                    .lp-tkw-eventlist-griditem-content-datetime-date 
+                      |12/20(金)
+                    // 時計アイコン
+                    .lp-tkw-eventlist-griditem-content-datetime-icon 
+                      img(src=ImgIcnClock)
+                    // 時刻
+                    .lp-tkw-eventlist-griditem-content-datetime-time
+                      |19:30～20:15        
+                  // 詳細ページへのリンク
+                  .lp-tkw-eventlist-griditem-content-link 
+                    a(href="#")
+                      |詳細を見る
+
+            //- .lp-tkw-eventlist-griditem
             //-     // サムネイル画像
-            //-     .lp-family-eventlist-wrapper-grid-item-img
-            //-       img(src=event.thumbnail)
-                
+            //-     .lp-tkw-eventlist-griditem-img
+            //-         img(src=ImgThumbPcEconomyKids)
             //-     // カードコンテンツ
-            //-     .lp-family-eventlist-wrapper-grid-item-content
+            //-     .lp-tkw-eventlist-griditem-content
             //-       // カテゴリー表示（科目・対象学年）
-            //-       .lp-family-eventlist-wrapper-grid-item-content-category
+            //-       .lp-tkw-eventlist-griditem-content-category
             //-         // 科目ラベル
-            //-         .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
-            //-           if event.id === 'science'
+            //-         .lp-tkw-eventlist-griditem-content-category-child.subject
             //-             |科学
-            //-           else if event.id === 'economy'
-            //-             |経済
-            //-           else if event.id === 'philosophy'
-            //-             |哲学
             //-         // 対象学年ラベル
-            //-         .lp-family-eventlist-wrapper-grid-item-content-category-child.target
-            //-           if event.target === 'kids'
-            //-             |小学生
-            //-           else if event.target === 'teens'
-            //-             |中高生
-                  
+            //-         .lp-tkw-eventlist-griditem-content-category-child.target
+            //-             |小学生                  
             //-       // イベントタイトル
-            //-       .lp-family-eventlist-wrapper-grid-item-content-title
-            //-         = event.title
-                  
+            //-       .lp-tkw-eventlist-griditem-content-title
+            //-             |モノの値段はどう決まる?         
             //-       // 日時情報
-            //-       .lp-family-eventlist-wrapper-grid-item-content-datetime
+            //-       .lp-tkw-eventlist-griditem-content-datetime
             //-         // 日付（SP表示は短縮形式、PC表示は数値形式）
-            //-         .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
-            //-           span.spimage
-            //-             = formatDate(event.dateRaw, 'short')
-            //-           span.pcimage
-            //-             = formatDate(event.dateRaw, 'numeric')
+            //-         .lp-tkw-eventlist-griditem-content-datetime-date 
+            //-           |12/20(金)
             //-         // 時計アイコン
-            //-         .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
+            //-         .lp-tkw-eventlist-griditem-content-datetime-icon 
             //-           img(src=ImgIcnClock)
             //-         // 時刻
-            //-         .lp-family-eventlist-wrapper-grid-item-content-datetime-time
-            //-             = event.time
-                  
+            //-         .lp-tkw-eventlist-griditem-content-datetime-time
+            //-           |19:30～20:15        
             //-       // 詳細ページへのリンク
-            //-       .lp-family-eventlist-wrapper-grid-item-content-link 
-            //-         a(href=`#event0${events.indexOf(event) + 1}`) 
+            //-       .lp-tkw-eventlist-griditem-content-link 
+            //-         a(href="#")
             //-           |詳細を見る
-        
-        // CTAボタン（Mixinで定義されたコンポーネント）
-        +btn-cta 
 
     //03 イベントの詳細
-    section.lp-family-eventdetail 
+    section.lp-tkw-eventdetail 
       // 各イベントの詳細をループ処理
-      //- each event, index in events
-      //-   // 詳細コンテンツ（ID付与でアンカーリンク先に）
-      //-   .lp-family-eventdetail-content.inview-hide.inview-triger(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
-      //-     // 上部エリア（画像・基本情報）
-      //-     .lp-family-eventdetail-content-top
-      //-       // 左側：サムネイル画像（PC表示のみ）
-      //-       .lp-family-eventdetail-content-top-left.pcimage
-      //-         .lp-family-eventdetail-content-top-left-img
-      //-           img(src=event.thumbnail)
-            
-      //-       // 右側：詳細情報
-      //-       .lp-family-eventdetail-content-top-right
-      //-         // カテゴリー表示
-      //-         .lp-family-eventdetail-content-top-right-category 
-      //-           // 科目ラベル（詳細版）
-      //-           .lp-family-eventdetail-content-top-right-category-child.subject 
-      //-                 if event.id === 'science'
-      //-                   |科学リテラシー
-      //-                 else if event.id === 'economy'
-      //-                   |経済(お金)
-      //-                 else if event.id === 'philosophy'
-      //-                   |哲学（思考力）
-      //-           // 対象学年ラベル（詳細版）
-      //-           .lp-family-eventdetail-content-top-right-category-child.target
-      //-                 if event.target === 'kids'
-      //-                   |小学生向け
-      //-                 else if event.target === 'teens'
-      //-                   |中高校生向け
-              
-      //-         // イベントタイトル
-      //-         .lp-family-eventdetail-content-top-right-title
-      //-           = event.title
-              
-      //-         // サムネイル画像（SP表示のみ）
-      //-         .lp-family-eventdetail-content-top-right-img.spimage
-      //-           img(src=event.thumbnail)
-              
-      //-         // 日時情報
-      //-         .lp-family-eventdetail-content-top-right-datetime
-      //-           // 日付（完全形式）
-      //-           .lp-family-eventdetail-content-top-right-datetime-date 
-      //-             = formatDate(event.dateRaw, 'full')
-      //-           // 時計アイコン
-      //-           .lp-family-eventdetail-content-top-right-datetime-icon
-      //-             img(src=ImgIcnClock)
-      //-           // 時刻
-      //-           .lp-family-eventdetail-content-top-right-datetime-time
-      //-             = event.time
-              
-      //-         // イベント説明文
-      //-         .lp-family-eventdetail-content-top-right-text
-      //-           = event.description
-      //-           // 注釈がある場合は表示
-      //-           if event.note
-      //-             br
-      //-             p.lp-family-eventdetail-content-top-right-text-note
-      //-              = event.note
-              
-      //-         // アーカイブエリア（現在は空）
-      //-         .lp-family-eventdetail-content-top-right-archive
-          
-
+      .lp-tkw-eventdetail-content
+        .lp-tkw-eventdetail-content-ribbon-top
+        .lp-tkw-eventdetail-content-ribbon-bottom
+        .lp-tkw-eventdetail-content-subject 
+          |科学リテラシー
+        .lp-tkw-eventdetail-content-box 
+         //タイトル
+         .lp-tkw-eventdetail-content-box-grid01ttl
+            .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
+              |01
+            .lp-tkw-eventdetail-content-box-grid01ttl-title 
+                |簡単クリスマスケーキを作ろう★超高速ふわふわ ホイップのひみつ
+         //サムネ
+         .lp-tkw-eventdetail-content-box-grid02thumb
+            img(src=ImgThumbPcEconomyKids)
+         //日時
+         .lp-tkw-eventdetail-content-box-grid03info
+           .lp-tkw-eventdetail-content-box-grid03info-date 
+              |2025年12月20日(土)
+           .lp-tkw-eventdetail-content-box-grid03info-timespecial 
+              |① 11:00～11:45
+              br
+              |② 14:00～14:45
+           .lp-tkw-eventdetail-content-box-grid03info-hr
+           .lp-tkw-eventdetail-content-box-grid03info-target 
+              |対象：小学3～6年生
+  
+         .lp-tkw-eventdetail-content-box-grid04info-text  
+           |ケーキにぴったりの生クリーム！🎄🍰
+           br
+           |でも、どうしてあんなにふわふわになるんだろう？ クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
+           br
+           |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
+         .lp-tkw-eventdetail-content-box-grid04info-note 
+           |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
     //04 こんなあなたにオススメです！
     section.lp-family-recommend
       .c-title-25feb-lp 
