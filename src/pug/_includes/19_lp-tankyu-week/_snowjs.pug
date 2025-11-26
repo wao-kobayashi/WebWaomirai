@@ -6,7 +6,7 @@ style.
     height: 500px; /* 任意の高さ */
     overflow: hidden;
   }
-  .snowflake {
+  .snowflake,.snow-circle {
     position: absolute;
     top: -100px;
     will-change: transform, opacity;
@@ -17,6 +17,11 @@ style.
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
     z-index:0;
   }
+   .snow-circle svg{
+     display: block;
+    z-index:0;
+   }
+
 script.
   const snowSVG = `<?xml version="1.0" encoding="UTF-8"?>
     <svg id="snow" data-name="snow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.09 78.31">
@@ -29,6 +34,10 @@ script.
       </defs>
       <polygon class="cls-1" points="68.09 50.6 66.01 49.8 59.44 51.55 54.6 48.66 62.54 45.87 63.59 43.97 61.51 43.17 50.38 46.14 45.57 43.27 47.02 42.86 48.09 41.01 46.03 40.12 41.91 41.08 38.68 39.16 41.91 37.23 46.03 38.2 48.09 37.31 47.02 35.46 45.57 35.04 50.38 32.17 61.51 35.14 63.59 34.34 62.54 32.44 54.6 29.65 59.44 26.76 66.01 28.52 68.09 27.71 67.12 26.03 62.61 24.86 66.64 22.46 67.96 19.58 64.8 19.28 60.71 21.56 61.95 17.07 60.98 15.39 59.24 16.79 57.48 23.36 52.56 26.11 54.11 17.84 52.99 15.98 51.25 17.37 48.27 28.5 43.38 31.23 43.74 29.77 42.67 27.92 40.87 29.25 39.65 33.31 36.36 35.14 36.31 31.38 39.21 28.29 39.46 26.07 37.33 26.07 36.25 27.11 36.16 21.52 44.31 13.36 44.65 11.16 42.48 11.12 36.09 16.6 36.01 10.97 40.82 6.15 41.16 3.95 39.22 3.95 35.95 7.27 35.88 2.58 34.05 0 32.21 2.58 32.14 7.27 28.88 3.95 26.93 3.95 27.28 6.15 32.09 10.97 32 16.6 25.62 11.12 23.44 11.16 23.79 13.36 31.93 21.52 31.85 27.11 30.76 26.07 28.63 26.07 28.88 28.29 31.78 31.38 31.73 35.14 28.45 33.31 27.22 29.25 25.42 27.92 24.36 29.77 24.72 31.23 19.83 28.5 16.84 17.37 15.1 15.98 13.98 17.84 15.54 26.11 10.61 23.36 8.85 16.79 7.11 15.39 6.14 17.07 7.39 21.56 3.29 19.28 .14 19.58 1.45 22.46 5.48 24.86 .97 26.03 0 27.71 2.08 28.52 8.65 26.76 13.49 29.65 5.55 32.44 4.5 34.34 6.58 35.14 17.71 32.17 22.52 35.04 21.07 35.46 20.01 37.31 22.06 38.2 26.18 37.23 29.41 39.16 26.18 41.08 22.06 40.12 20.01 41.01 21.07 42.86 22.52 43.27 17.71 46.14 6.58 43.17 4.5 43.97 5.55 45.87 13.49 48.66 8.65 51.55 2.08 49.8 0 50.6 .97 52.28 5.48 53.45 1.45 55.85 .14 58.73 3.29 59.03 7.39 56.75 6.14 61.24 7.11 62.92 8.85 61.52 10.61 54.95 15.54 52.2 13.98 60.48 15.1 62.34 16.84 60.94 19.83 49.81 24.72 47.08 24.36 48.54 25.42 50.39 27.22 49.06 28.45 45 31.73 43.17 31.78 46.93 28.88 50.02 28.63 52.24 30.76 52.24 31.85 51.2 31.93 56.8 23.79 64.95 23.44 67.15 25.62 67.19 32 61.71 32.09 67.34 27.28 72.16 26.93 74.36 28.88 74.36 32.14 71.04 32.21 75.73 34.05 78.31 35.88 75.73 35.95 71.04 39.22 74.36 41.16 74.36 40.82 72.16 36.01 67.34 36.09 61.71 42.48 67.19 44.65 67.15 44.31 64.95 36.16 56.8 36.25 51.2 37.33 52.24 39.46 52.24 39.21 50.02 36.31 46.93 36.36 43.17 39.65 45 40.87 49.06 42.67 50.39 43.74 48.54 43.38 47.08 48.27 49.81 51.25 60.94 52.99 62.34 54.11 60.48 52.56 52.2 57.48 54.95 59.24 61.52 60.98 62.92 61.95 61.24 60.71 56.75 64.8 59.03 67.96 58.73 66.64 55.85 62.61 53.45 67.12 52.28 68.09 50.6"/>
     </svg>`;
+
+  const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#fff"/>
+  </svg>`;
 
   class Snowflake {
     constructor(parent, index, total) {
@@ -87,19 +96,84 @@ script.
     }
   }
 
+  class SnowCircle {
+    constructor(parent, index, total) {
+      this.parent = parent;
+      this.index = index;
+      this.total = total;
+      this.element = document.createElement('div');
+      this.element.className = 'snow-circle';
+      this.element.innerHTML = circleSVG;
+
+      this.size = Math.random() * 5 + 3;
+      this.element.querySelector('svg').style.width = this.size + 'px';
+      this.element.querySelector('svg').style.height = this.size + 'px';
+
+      this.reset();
+      this.parent.appendChild(this.element);
+    }
+
+    reset() {
+      const rect = this.parent.getBoundingClientRect();
+      const sectionWidth = rect.width / this.total;
+      const sectionCenter = sectionWidth * (this.index + 0.5);
+      const randomOffset = (Math.random() - 0.5) * sectionWidth * 0.4;
+      this.x = sectionCenter + randomOffset;
+      
+      this.y = -100;
+      this.speed = Math.random() * 0.7 + 0.4;
+      this.baseOpacity = Math.random() * 0.5 + 0.2;
+      this.swayOffset = Math.random() * Math.PI * 2;
+      this.rotation = Math.random() * 360;
+      this.rotationSpeed = (Math.random() - 0.5) * 2;
+      this.element.style.left = this.x + 'px';
+      this.element.style.top = this.y + 'px';
+      this.element.style.opacity = this.baseOpacity;
+    }
+
+    update() {
+      const rect = this.parent.getBoundingClientRect();
+      this.y += this.speed;
+      this.rotation += this.rotationSpeed;
+      const sway = Math.sin(this.y / 100 + this.swayOffset) * 30;
+
+      const fadeStart = rect.height * 0.6;
+      let opacity = this.baseOpacity;
+      if (this.y > fadeStart) {
+        const fadeRange = rect.height - fadeStart;
+        opacity = this.baseOpacity * (1 - (this.y - fadeStart) / fadeRange);
+        opacity = Math.max(opacity, 0);
+      }
+
+      this.element.style.transform = `translate(${sway}px,0) rotate(${this.rotation}deg)`;
+      this.element.style.top = this.y + 'px';
+      this.element.style.opacity = opacity;
+
+      if (this.y > rect.height + 100) this.reset();
+    }
+  }
+
   // 設定
   const CONFIG = {
     // 対象のdiv ID配列
     targetIds: ['mySnowDiv', '', 'thirdSnowDiv'],
-    // PC用の雪の数
-    snowCountPC: 15,
-    // スマホ用の雪の数（768px以下）
-    snowCountMobile: 8
+    // PC用の雪結晶の数
+    crystalCountPC: 30,
+    // PC用の白い丸の数
+    circleCountPC: 0,
+    // スマホ用の雪結晶の数（768px以下）
+    crystalCountMobile: 10,
+    // スマホ用の白い丸の数（768px以下）
+    circleCountMobile: 0
   };
 
   // 画面幅を取得して雪の数を決定
-  function getSnowCount() {
-    return window.innerWidth <= 768 ? CONFIG.snowCountMobile : CONFIG.snowCountPC;
+  function getSnowCounts() {
+    const isMobile = window.innerWidth <= 768;
+    return {
+      crystals: isMobile ? CONFIG.crystalCountMobile : CONFIG.crystalCountPC,
+      circles: isMobile ? CONFIG.circleCountMobile : CONFIG.circleCountPC
+    };
   }
 
   // 各コンテナごとの雪管理
@@ -111,24 +185,34 @@ script.
       const container = document.getElementById(id);
       if (!container) return;
 
-      const snowflakes = [];
-      const snowCount = getSnowCount();
+      const particles = [];
+      const counts = getSnowCounts();
+      const totalCount = counts.crystals + counts.circles;
 
-      for (let i = 0; i < snowCount; i++) {
-        const flake = new Snowflake(container, i, snowCount);
+      // 雪結晶を生成
+      for (let i = 0; i < counts.crystals; i++) {
+        const flake = new Snowflake(container, i, totalCount);
         flake.y = Math.random() * container.offsetHeight;
         flake.element.style.top = flake.y + 'px';
-        snowflakes.push(flake);
+        particles.push(flake);
       }
 
-      snowContainers.push({ container, snowflakes });
+      // 白い丸を生成
+      for (let i = 0; i < counts.circles; i++) {
+        const circle = new SnowCircle(container, counts.crystals + i, totalCount);
+        circle.y = Math.random() * container.offsetHeight;
+        circle.element.style.top = circle.y + 'px';
+        particles.push(circle);
+      }
+
+      snowContainers.push({ container, particles });
     });
   }
 
   // アニメーション
   function animate() {
-    snowContainers.forEach(({ snowflakes }) => {
-      snowflakes.forEach(flake => flake.update());
+    snowContainers.forEach(({ particles }) => {
+      particles.forEach(particle => particle.update());
     });
     requestAnimationFrame(animate);
   }
@@ -138,33 +222,45 @@ script.
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-      const newSnowCount = getSnowCount();
+      const newCounts = getSnowCounts();
       
-      snowContainers.forEach(({ container, snowflakes }) => {
-        const currentCount = snowflakes.length;
+      snowContainers.forEach(({ container, particles }) => {
+        const currentCrystals = particles.filter(p => p instanceof Snowflake).length;
+        const currentCircles = particles.filter(p => p instanceof SnowCircle).length;
         
         // 雪の数が変わった場合は再初期化
-        if (currentCount !== newSnowCount) {
+        if (currentCrystals !== newCounts.crystals || currentCircles !== newCounts.circles) {
           // 既存の雪をすべて削除
-          snowflakes.forEach(flake => flake.element.remove());
-          snowflakes.length = 0;
+          particles.forEach(particle => particle.element.remove());
+          particles.length = 0;
           
-          // 新しい数で再生成
-          for (let i = 0; i < newSnowCount; i++) {
-            const flake = new Snowflake(container, i, newSnowCount);
+          const totalCount = newCounts.crystals + newCounts.circles;
+          
+          // 雪結晶を新しい数で再生成
+          for (let i = 0; i < newCounts.crystals; i++) {
+            const flake = new Snowflake(container, i, totalCount);
             flake.y = Math.random() * container.offsetHeight;
             flake.element.style.top = flake.y + 'px';
-            snowflakes.push(flake);
+            particles.push(flake);
+          }
+          
+          // 白い丸を新しい数で再生成
+          for (let i = 0; i < newCounts.circles; i++) {
+            const circle = new SnowCircle(container, newCounts.crystals + i, totalCount);
+            circle.y = Math.random() * container.offsetHeight;
+            circle.element.style.top = circle.y + 'px';
+            particles.push(circle);
           }
         } else {
           // 数が同じ場合は位置調整のみ
           const rect = container.getBoundingClientRect();
-          snowflakes.forEach(flake => {
-            const sectionWidth = rect.width / newSnowCount;
-            const sectionCenter = sectionWidth * (flake.index + 0.5);
-            if (flake.x > rect.width || flake.x < 0) {
-              flake.x = sectionCenter;
-              flake.element.style.left = flake.x + 'px';
+          const totalCount = newCounts.crystals + newCounts.circles;
+          particles.forEach(particle => {
+            const sectionWidth = rect.width / totalCount;
+            const sectionCenter = sectionWidth * (particle.index + 0.5);
+            if (particle.x > rect.width || particle.x < 0) {
+              particle.x = sectionCenter;
+              particle.element.style.left = particle.x + 'px';
             }
           });
         }
@@ -175,7 +271,6 @@ script.
   // 実行
   initSnow();
   animate();
-
 //- script.
   const snowSVG = `<?xml version="1.0" encoding="UTF-8"?>
     <svg id="snow" data-name="snow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.09 78.31">

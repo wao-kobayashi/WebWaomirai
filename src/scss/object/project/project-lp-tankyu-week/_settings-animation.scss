@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes zoomUpSp {
+  from {
+    transform: scale(0.5) ranslateY(200px);
+  }
+  to {
+    transform: scale(1.2) translateY(0px);
+  }
+}
+
 .inview-hide {
   opacity: 0;
   transform: translateY(100px);
