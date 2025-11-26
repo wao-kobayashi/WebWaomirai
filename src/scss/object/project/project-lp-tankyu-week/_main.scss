@@ -549,27 +549,21 @@ header {
   }
 }
 
-//03 イベントの詳細　教科ごとの色付け
-// @each $category, $values in $categories {
-//   .#{$category} {
-//     .lp-family-eventdetail-content-top-right-category-child.subject {
-//       color: map-get($values, main-color) !important;
-//       background-color: map-get($values, pale-color) !important;
-//     }
-//     .lp-tkw-eventlist-griditem-content-category-child.subject {
-//       color: map-get($values, main-color) !important;
-//       background-color: map-get($values, pale-color) !important;
-//     }
-//     @include responsive-style($breakpoint-sp) {
-//       .lp-tkw-eventlist-griditem-content-link a {
-//         &::before {
-//           border-right: 2px solid map-get($values, main-color) !important;
-//           border-bottom: 2px solid map-get($values, main-color) !important;
-//         }
-//       }
-//     }
-//   }
-// }
+// 03 イベントの詳細　教科ごとの色付け
+@each $category, $values in $categories {
+  .#{$category} {
+    .lp-tkw-eventlist-griditem-content-category-child.subject {
+      color: $cl-white !important;
+      background-color: map-get($values, main-color) !important;
+    }
+    .lp-tkw-eventdetail-content-subject {
+      background-color: map-get($values, main-color) !important;
+    }
+    .lp-tkw-eventdetail-content-box-grid01ttl-number {
+      color: map-get($values, main-color) !important;
+    }
+  }
+}
 
 //04 イベント詳細
 section.lp-tkw-eventdetail {
