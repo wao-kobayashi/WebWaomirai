@@ -457,10 +457,11 @@ header {
       gap: 10px;
 
       .lp-tkw-eventlist-griditem-content-category-child {
-        font-size: $font-size-s;
-        padding: 6px 14px;
-        border-radius: $border-radius-big;
-        margin: 16px 0 0;
+        font-size: $font-size-ss;
+        padding: 6px 10px 4px;
+        border-radius: $border-radius-middle;
+        line-height: $lineheight-normal;
+        margin: 20px 0 0;
         @include responsive-style($breakpoint-sp) {
           font-size: $font-size-sss;
           padding: 3px 6px;
@@ -631,13 +632,13 @@ section.lp-tkw-eventdetail {
     }
     .lp-tkw-eventdetail-content-box {
       border-radius: 40px;
-      padding: 50px clamp(10px, 4.8vw, 70px) 60px;
+      padding: 50px clamp(10px, 4.8vw, 60px) 60px;
       background: $cl-white;
       display: grid;
       // gap: 30px 60px;
       gap: clamp(15px, 2.5vw, 30px) clamp(30px, 5vw, 60px);
       margin: 0 auto 60px;
-      grid-template-columns: 284px 1fr;
+      grid-template-columns: 290px 1fr;
       @include responsive-style($breakpoint-sp) {
         border-radius: 20px;
         width: calc(100% - 40px);
@@ -662,7 +663,9 @@ section.lp-tkw-eventdetail {
           font-size: $font-size-xl;
         }
         &.special {
-          width: 80%;
+          @include responsive-style($breakpoint-sp) {
+            width: 80%;
+          }
         }
       }
       //02

@@ -119,39 +119,44 @@ body
                       .lp-tkw-eventlist-griditem-content-link 
                         a(href="#")
                           |詳細を見る
-                - for (var i = 1; i < 7; i++)
-                  .lp-tkw-eventlist-griditem.normal.science
-                      // サムネイル画像
-                      .lp-tkw-eventlist-griditem-img
-                          img(src=ImgThumbPcEconomyKids)
-                      // カードコンテンツ
-                      .lp-tkw-eventlist-griditem-content
-                        // カテゴリー表示（科目・対象学年）
-                        .lp-tkw-eventlist-griditem-content-category
-                          // 科目ラベル
-                          .lp-tkw-eventlist-griditem-content-category-child.subject
-                              |科学
-                          // 対象学年ラベル
-                          .lp-tkw-eventlist-griditem-content-category-child.target
-                              |小学生                  
-                        // イベントタイトル
-                        .lp-tkw-eventlist-griditem-content-title
-                              |モノの値段はどう決まる?         
-                        // 日時情報
-                        .lp-tkw-eventlist-griditem-content-datetime
-                          // 日付（SP表示は短縮形式、PC表示は数値形式）
-                          .lp-tkw-eventlist-griditem-content-datetime-date 
-                            |12/20(金)
-                          // 時計アイコン
-                          .lp-tkw-eventlist-griditem-content-datetime-icon.pcimage
-                            img(src=ImgIcnClock)
-                          // 時刻
-                          .lp-tkw-eventlist-griditem-content-datetime-time
-                            |19:30～20:15        
-                        // 詳細ページへのリンク
-                        .lp-tkw-eventlist-griditem-content-link 
-                          a(href="#")
-                            |詳細を見る
+
+                each event in events
+                  .lp-tkw-eventlist-griditem(class=`normal ${event.category}`)
+                    // サムネイル画像
+                    .lp-tkw-eventlist-griditem-img
+                      img(src=event.thumbList)
+                    
+                    // カードコンテンツ
+                    .lp-tkw-eventlist-griditem-content
+                      // カテゴリー表示（科目・対象学年）
+                      .lp-tkw-eventlist-griditem-content-category
+                        // 科目ラベル
+                        .lp-tkw-eventlist-griditem-content-category-child.subject
+                          = subjectLabels[event.category].list
+                        // 対象学年ラベル
+                        .lp-tkw-eventlist-griditem-content-category-child.target
+                          = targetLabels[event.target].list
+                      
+                      // イベントタイトル
+                      .lp-tkw-eventlist-griditem-content-title
+                        = event.titleShort
+                      
+                      // 日時情報
+                      .lp-tkw-eventlist-griditem-content-datetime
+                        // 日付（SP表示は短縮形式、PC表示は数値形式）
+                        .lp-tkw-eventlist-griditem-content-datetime-date
+                          = formatDate(event.date, 'short')
+                        // 時計アイコン
+                        .lp-tkw-eventlist-griditem-content-datetime-icon.pcimage
+                          img(src=ImgIcnClock)
+                        // 時刻
+                        .lp-tkw-eventlist-griditem-content-datetime-time
+                          = `${event.timeStart}～${event.timeEnd}`
+                      
+                      // 詳細ページへのリンク
+                      .lp-tkw-eventlist-griditem-content-link
+                        a(href=`#${event.id}`)
+                          | 詳細を見る
           +btn-cta 
           .lp-tkw-eventlist-content-bottom
              img(src=ImgBookbottom)  
@@ -205,49 +210,43 @@ body
            .lp-tkw-eventdetail-content-box-explore-note 
             |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
       // normal
-      .lp-tkw-eventdetail-content.economy
-        .lp-tkw-eventdetail-content-subject 
-          |経済（お金）
-        .lp-tkw-eventdetail-content-box 
-         //タイトル
-         .lp-tkw-eventdetail-content-box-grid01ttl
-            .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
-              |01
-            .lp-tkw-eventdetail-content-box-grid01ttl-title
-                |簡単クリスマス
-                br.pcimage 
-                |ケーキを作ろう★
-                br.pcimage 
-                |超高速ふわふわ
-                br.pcimage 
-                |ホイップのひみつ
-
-         //サムネ
-         .lp-tkw-eventdetail-content-box-grid02thumb
-            img(src=ImgThumbPcEconomyKids)
-         //日時
-         .lp-tkw-eventdetail-content-box-grid03info
-           .lp-tkw-eventdetail-content-box-grid03info-date 
-              |2025年12月20日(土)
-           .lp-tkw-eventdetail-content-box-grid03info-time  
-               .lp-tkw-eventdetail-content-box-grid03info-time-icon 
-                 img(src=ImgIcnClock)
-               .lp-tkw-eventdetail-content-box-grid03info-time-text 
-                  |10:00～10:45
-           .lp-tkw-eventdetail-content-box-grid03info-hr
-           .lp-tkw-eventdetail-content-box-grid03info-target 
-              |対象：小学3～6年生
-  
-         .lp-tkw-eventdetail-content-box-grid04explore
-           .lp-tkw-eventdetail-content-box-grid04explore-text
-            |ケーキにぴったりの生クリーム！🎄🍰
-            br
-            |でも、どうしてあんなにふわふわになるんだろう？ クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
-            br
-            |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
-           .lp-tkw-eventdetail-content-box-explore-note 
-            |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
-
+      each event in events
+        .lp-tkw-eventdetail-content(class=event.category id=event.id)
+          .lp-tkw-eventdetail-content-subject
+            = subjectLabels[event.category].detail
+          
+          .lp-tkw-eventdetail-content-box
+            // タイトル
+            .lp-tkw-eventdetail-content-box-grid01ttl
+              .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
+                = event.number
+              .lp-tkw-eventdetail-content-box-grid01ttl-title
+                != event.titleLong
+            
+            // サムネイル
+            .lp-tkw-eventdetail-content-box-grid02thumb
+              img(src=event.thumbDetail)
+            
+            // 日時情報
+            .lp-tkw-eventdetail-content-box-grid03info
+              .lp-tkw-eventdetail-content-box-grid03info-date
+                = formatDate(event.date, 'full')
+              .lp-tkw-eventdetail-content-box-grid03info-time
+                .lp-tkw-eventdetail-content-box-grid03info-time-icon
+                  img(src=ImgIcnClock)
+                .lp-tkw-eventdetail-content-box-grid03info-time-text
+                  = `${event.timeStart}～${event.timeEnd}`
+              .lp-tkw-eventdetail-content-box-grid03info-hr
+              .lp-tkw-eventdetail-content-box-grid03info-target
+                = `対象：${targetLabels[event.target].detail}`
+            
+            // 説明文
+            .lp-tkw-eventdetail-content-box-grid04explore
+              .lp-tkw-eventdetail-content-box-grid04explore-text
+                = event.description
+              if event.note
+                .lp-tkw-eventdetail-content-box-explore-note
+                  = event.note
 
 
     //05 5stepで参加可能
