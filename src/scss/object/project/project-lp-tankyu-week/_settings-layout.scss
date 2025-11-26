@@ -33,6 +33,23 @@ $breakpoint-sp: 768px;
   padding: 0 20px;
   margin: 0 auto;
 }
+// mixinとして定義
+@mixin curved-top-block($bg-color) {
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 64px;
+    display: block;
+    top: -64px;
+    left: 0;
+    border-radius: 64px 64px 0px 0px;
+    background: $bg-color;
+    @include responsive-style($breakpoint-sp) {
+      border-radius: 40px 40px 0px 0px;
+    }
+  }
+}
 
 html {
   overflow-x: hidden;

@@ -14,7 +14,7 @@ body
             .lp-tkw-fv-left-info 
               .lp-tkw-fv-left-info-column
                 .lp-tkw-fv-left-info-column-title|開催日時
-                .lp-tkw-fv-left-info-column-content|12/20(金) 22(日) 23(月) 26(木)   
+                .lp-tkw-fv-left-info-column-content|12/20(土) 22(月) 23(火) 26(金)   
               .lp-tkw-fv-left-info-column
                 .lp-tkw-fv-left-info-column-title|対象
                 .lp-tkw-fv-left-info-column-content|小学３年～高校生とその保護者
@@ -83,11 +83,11 @@ body
     // イベント一覧セクション
     section.lp-tkw-eventlist 
        .lp-tkw-eventlist-title
-         .lp-tkw-eventlist-illust.pcimage
+         .lp-tkw-eventlist-illust.lp-tkw-eventlist-illust01.pcimage
             img(src=ImgIllustEventlistBoy)
          .lp-tkw-eventlist-title-text
             img(src=ImgTitleEventlist)
-         .lp-tkw-eventlist-illust.pcimage
+         .lp-tkw-eventlist-illust.lp-tkw-eventlist-illust02.pcimage
             img(src=ImgIllustEventlistGirl)
        .lp-tkw-eventlist-content
           .lp-tkw-eventlist-content-grid 
@@ -159,9 +159,9 @@ body
     section.lp-tkw-eventdetail 
       // special
       .lp-tkw-eventdetail-content
-        .lp-tkw-eventdetail-content-ribbon-top
+        .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-top
           img(src=ImgRibbon)
-        .lp-tkw-eventdetail-content-ribbon-bottom
+        .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-bottom
           img(src=ImgRibbon)
         .lp-tkw-eventdetail-content-subject 
           |科学リテラシー
@@ -170,13 +170,13 @@ body
          .lp-tkw-eventdetail-content-box-grid01ttl
             .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
               |01
-            .lp-tkw-eventdetail-content-box-grid01ttl-title 
+            .lp-tkw-eventdetail-content-box-grid01ttl-title.special
                 |簡単クリスマス
-                br
+                br.pcimage 
                 |ケーキを作ろう★
-                br
+                br.pcimage 
                 |超高速ふわふわ
-                br
+                br.pcimage 
                 |ホイップのひみつ
          //サムネ
          .lp-tkw-eventdetail-content-box-grid02thumb
@@ -213,14 +213,15 @@ body
          .lp-tkw-eventdetail-content-box-grid01ttl
             .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
               |01
-            .lp-tkw-eventdetail-content-box-grid01ttl-title 
+            .lp-tkw-eventdetail-content-box-grid01ttl-title
                 |簡単クリスマス
-                br
+                br.pcimage 
                 |ケーキを作ろう★
-                br
+                br.pcimage 
                 |超高速ふわふわ
-                br
+                br.pcimage 
                 |ホイップのひみつ
+
          //サムネ
          .lp-tkw-eventdetail-content-box-grid02thumb
             img(src=ImgThumbPcEconomyKids)
@@ -460,5 +461,6 @@ body
         |© ワオ・コーポレーション All rights reserved.
 //JS読込
 include _js
+include _snowjs
 +modal
 +fixed-btn
