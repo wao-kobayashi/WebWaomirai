@@ -92,32 +92,36 @@ body
        .lp-tkw-eventlist-content
           .lp-tkw-eventlist-content-grid 
                 // 各イベントをループ処理
-                .lp-tkw-eventlist-griditem.special
+                .lp-tkw-eventlist-griditem.science.special
                     // サムネイル画像
-                    .lp-tkw-eventlist-griditem-img
-                        img(src=ImgThumbPcEconomyKids)
+                    .lp-tkw-eventlist-griditem-img.special
+                        //- img(src=ImgThumbPcEconomyKids)
                     // カードコンテンツ
                     .lp-tkw-eventlist-griditem-content
                       // カテゴリー表示（科目・対象学年）
                       .lp-tkw-eventlist-griditem-content-category
                         // 科目ラベル
+                        //- .lp-tkw-eventlist-griditem-content-category-child.special
+                        //-     |SPECIAL
                         .lp-tkw-eventlist-griditem-content-category-child.subject
                             |科学
                         // 対象学年ラベル
                         .lp-tkw-eventlist-griditem-content-category-child.target
                             |小学生                  
                       // イベントタイトル
-                      .lp-tkw-eventlist-griditem-content-title
-                            |簡単クリスマスケーキを作ろう★ 超高速ふわふわホイップのひみつ
+                      .lp-tkw-eventlist-griditem-content-title.special
+                            |簡単クリスマスケーキを作ろう★
+                            br
+                            |超高速ふわふわホイップのひみつ
                       // 日時情報
                       .lp-tkw-eventlist-griditem-content-datetime
                         // 日付（SP表示は短縮形式、PC表示は数値形式）
-                        .lp-tkw-eventlist-griditem-content-datetime-date 
-                          |12/20(土) ① 11:00～11:45  ②14:00～14:45
+                        .lp-tkw-eventlist-griditem-content-datetime-date.special 
+                          |12/20(土)　① 11:00～11:45 　② 14:00～14:45
                         // 時計アイコン      
                       // 詳細ページへのリンク
-                      .lp-tkw-eventlist-griditem-content-link 
-                        a(href="#")
+                      .lp-tkw-eventlist-griditem-content-link.special
+                        a(href="#event01")
                           |詳細を見る
 
                 each event in events
@@ -138,7 +142,7 @@ body
                           = targetLabels[event.target].list
                       
                       // イベントタイトル
-                      .lp-tkw-eventlist-griditem-content-title
+                      .lp-tkw-eventlist-griditem-content-title.lp-tkw-eventlist-griditem-content-title-normal
                         = event.titleShort
                       
                       // 日時情報
@@ -159,56 +163,80 @@ body
                           | 詳細を見る
           +btn-cta 
           .lp-tkw-eventlist-content-bottom
-             img(src=ImgBookbottom)  
+            .pcimage
+              img(src=ImgBookbottom)  
+            .spimage 
+              img(src=ImgBookbottomSp)  
     //03 イベントの詳細
-    section.lp-tkw-eventdetail 
-      // special
-      .lp-tkw-eventdetail-content.special
-        .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-top
-          img(src=ImgRibbon)
-        .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-bottom
-          img(src=ImgRibbon)
-        .lp-tkw-eventdetail-content-subject 
-          |科学リテラシー
-        .lp-tkw-eventdetail-content-box 
-         //タイトル
-         .lp-tkw-eventdetail-content-box-grid01ttl
-            .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
-              |01
-            .lp-tkw-eventdetail-content-box-grid01ttl-title.special
-                |簡単クリスマス
-                br.pcimage 
-                |ケーキを作ろう★
-                br.pcimage 
-                |超高速ふわふわ
-                br.pcimage 
-                |ホイップのひみつ
-         //サムネ
-         .lp-tkw-eventdetail-content-box-grid02thumb
-            img(src=ImgThumbPcEconomyKids)
-         //日時
-         .lp-tkw-eventdetail-content-box-grid03info
-           .lp-tkw-eventdetail-content-box-grid03info-date 
-              |2025年12月20日(土)
-           .lp-tkw-eventdetail-content-box-grid03info-timespecial 
-              |① 11:00～11:45
-              br
-              |② 14:00～14:45
-           .lp-tkw-eventdetail-content-box-grid03info-note
-             |※同じ内容です。ご都合のよい時間でご参加ください。
-           .lp-tkw-eventdetail-content-box-grid03info-hr
-           .lp-tkw-eventdetail-content-box-grid03info-target 
-              |対象：小学3～6年生
-  
-         .lp-tkw-eventdetail-content-box-grid04explore
-           .lp-tkw-eventdetail-content-box-grid04explore-text
-            |ケーキにぴったりの生クリーム！🎄🍰
-            br
-            |でも、どうしてあんなにふわふわになるんだろう？ クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
-            br
-            |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
-           .lp-tkw-eventdetail-content-box-explore-note 
-            |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
+    section.lp-tkw-eventdetail
+      #lp-tkw-eventdetail 
+        // special(ほしみさん)
+        .lp-tkw-eventdetail-content.special-detail#event01
+          .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-top
+            img(src=ImgRibbon)
+          .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-bottom
+            img(src=ImgRibbon)
+          .lp-tkw-eventdetail-content-subject.special
+            |SPECIAL
+          .lp-tkw-eventdetail-content-box.special
+            //タイトル
+            .lp-tkw-eventdetail-content-box-grid01ttl
+                .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
+                  |01
+                .lp-tkw-eventdetail-content-box-grid01ttl-title.special
+                    |簡単クリスマス
+                    br.pcimage 
+                    |ケーキを作ろう★
+                    br.pcimage 
+                    |超高速ふわふわ
+                    br.pcimage 
+                    |ホイップのひみつ
+            //サムネ
+            .lp-tkw-eventdetail-content-box-grid02thumb.special
+
+            //日時
+            .lp-tkw-eventdetail-content-box-grid03info
+              .lp-tkw-eventdetail-content-box-grid03info-date 
+                  |2025年12月20日(土)
+              .lp-tkw-eventdetail-content-box-grid03info-timespecial 
+                  |① 11:00～11:45
+                  br
+                  |② 14:00～14:45
+              .lp-tkw-eventdetail-content-box-grid03info-note
+                |※同じ内容です。ご都合のよい時間でご参加ください。
+              .lp-tkw-eventdetail-content-box-grid03info-hr
+              .lp-tkw-eventdetail-content-box-grid03info-target 
+                  |対象：小学3～6年生
+      
+            .lp-tkw-eventdetail-content-box-grid04explore
+              .lp-tkw-eventdetail-content-box-grid04explore-text
+                |ケーキにぴったりの生クリーム！🎄🍰
+                br
+                |でも、どうしてあんなにふわふわになるんだろう？
+                br.spimage
+                |クリスマスケーキ🎅にも大活躍の生クリームには、実は、○○○の科学の力が隠れているんです！
+                br.spimage
+                br.spimage
+                |実験しながら、生クリームが「泡立つしくみ」を探ってみよう！
+                br
+                br.spimage
+                |さらに今回は、“たった３分で”ホイップができちゃう！科学の裏ワザも大公開🎁
+                br.spimage
+                |できたクリームは、レンジで簡単!スポンジケーキにトッピングして、“オリジナルクリスマスケーキ”を作ろう🍫🎄
+              .lp-tkw-eventdetail-content-box-explore-note 
+                |※本イベントでは、ケーキ作りの工程をご紹介する形のイベントになります。実際に作りたい場合は、イベント後に各ご家庭でお試しください☆      
+          .lp-tkw-eventdetail-content-snow-sp.spimage
+            .snowsp01: +snowSvg
+            .snowsp02: +snowSvg
+            .snowsp03: +snowSvg
+            .snowsp04: +snowSvg     
+          .lp-tkw-eventdetail-content-snow-pc.pcimage
+            .snowpc01: +snowSvg
+            .snowpc02: +snowSvg
+            .snowpc03: +snowSvg
+            .snowpc04: +snowSvg  
+            .snowpc05: +snowSvg
+            .snowpc06: +snowSvg          
       // normal
       each event in events
         .lp-tkw-eventdetail-content(class=event.category id=event.id)
@@ -243,7 +271,7 @@ body
             // 説明文
             .lp-tkw-eventdetail-content-box-grid04explore
               .lp-tkw-eventdetail-content-box-grid04explore-text
-                = event.description
+                != event.description
               if event.note
                 .lp-tkw-eventdetail-content-box-explore-note
                   = event.note

@@ -47,6 +47,8 @@ $breakpoint-sp: 768px;
     background: $bg-color;
     @include responsive-style($breakpoint-sp) {
       border-radius: 40px 40px 0px 0px;
+      height: 40px;
+      top: -40px;
     }
   }
 }
@@ -69,4 +71,5 @@ section {
 .bg-creamyellow-dark {
   width: 100%;
   background: $cl-bg-creamyellow-dark;
+  padding: 0 0 0.5px;
 }

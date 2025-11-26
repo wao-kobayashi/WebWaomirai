@@ -14,10 +14,11 @@ header {
 
 //01メインビジュアル
 .lp-tkw-fv {
+  overflow-x: hidden;
   width: 100%;
-  overflow: hidden;
+
   @include responsive-style($breakpoint-sp) {
-    margin: 0px auto 30px !important;
+    margin: 0px auto 0px !important;
   }
   .lp-tkw-fv-grid {
     display: grid;
@@ -32,7 +33,7 @@ header {
       display: flex;
       flex-direction: column-reverse;
       padding: 0 0px;
-      margin: 30px auto 30px !important;
+      margin: 30px auto 0px !important;
     }
     .lp-tkw-fv-grid-left {
       position: relative;
@@ -46,7 +47,7 @@ header {
         text-align: center;
         @include responsive-style($breakpoint-sp) {
           margin: -90px auto 0;
-          width: 80%;
+          width: 100%;
         }
         img {
           margin: 0 auto;
@@ -54,7 +55,7 @@ header {
       }
       .lp-tkw-fv-left-info {
         @include responsive-style($breakpoint-sp) {
-          width: calc(100% - 40px);
+          width: calc(100% - 0px);
           margin: 30px auto 30px;
           border-radius: $border-radius-big;
           overflow: hidden;
@@ -65,6 +66,7 @@ header {
           margin: 0 0 25px;
           overflow: hidden;
           background: $cl-white;
+          line-height: $lineheight-normal;
           @include responsive-style($breakpoint-sp) {
             &:first-child {
               border-bottom: $cl-black 1px dashed;
@@ -76,21 +78,32 @@ header {
             border-radius: 0;
           }
           .lp-tkw-fv-left-info-column-title {
-            width: 110px;
+            width: 100px;
             background: $cl-tankyu-green-dark;
             padding: 12px 0;
             text-align: center;
             color: $cl-white;
-            font-size: $font-size-m;
             font-weight: bold;
             letter-spacing: 1.5px;
+            font-size: $font-size-m;
+            line-height: $lineheight-tight;
+            @include responsive-style($breakpoint-sp) {
+              width: 90px;
+              font-size: $font-size-s;
+            }
           }
           .lp-tkw-fv-left-info-column-content {
-            font-size: $font-size-m;
             flex: 1;
             padding: 12px 15px;
             font-weight: bold;
             letter-spacing: 0.5px;
+
+            @include responsive-style($breakpoint-sp) {
+              padding: 12px 15px 10px;
+              font-size: $font-size-s;
+              letter-spacing: -0.3px;
+              line-height: $lineheight-tight;
+            }
           }
         }
       }
@@ -106,10 +119,9 @@ header {
           transform: scale(1.3);
         }
         @include responsive-style($breakpoint-sp) {
-          margin: 0 auto;
+          margin: 0 0 0 18px;
           transform: scale(1);
-          width: 95%;
-          margin: 0px 7px 0 auto;
+          width: 90%;
         }
       }
     }
@@ -136,11 +148,17 @@ header {
 
   .lp-tkw-fv-bgcircle {
     position: absolute;
-
     top: -200px;
-    left: 0;
-    right: 0;
+    left: 0%;
+    right: 0%;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
     margin: auto;
+    opacity: 0.25;
+    animation: zoomUp 1s ease forwards;
+    transform: scale(0.6) translateY(200px);
+
     /* Ellipse 40 */
     border-radius: $border-radius-full;
     background: linear-gradient(
@@ -149,16 +167,12 @@ header {
       rgba(255, 255, 255, 0.3) 100%
     );
 
-    margin: auto;
-    opacity: 0.2;
-    z-index: -1;
-    width: 1000px;
-    height: 1000px;
     @include responsive-style($breakpoint-sp) {
-      top: 30px;
-      width: 400px;
-      height: 400px;
-      // transform: scale(1.2);
+      display: none;
+      top: -20px;
+      width: 100vmin; /* 画面の小さい方を基準に正方形 */
+      height: 100vmin;
+      transform: scale(1.2);
     }
   }
 }
@@ -210,7 +224,7 @@ header {
   margin: 0px auto 0px !important;
   position: relative;
   overflow: hidden;
-  padding: 0 0 60px;
+  padding: 0 0 120px;
 
   .lp-tkw-intro-sp-title {
     color: $cl-white;
@@ -238,9 +252,9 @@ header {
   &::before {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
-    bottom: -240px;
+    width: 100vmin;
+    height: 100vmin;
+    bottom: -140px;
     left: 0;
     right: 0;
     margin: auto;
@@ -259,9 +273,10 @@ header {
   // max-width: $max-width;
   position: relative;
   padding: 0 30px 75px;
-  margin: 0 auto 75px;
 
+  margin: 0px auto 90px;
   @include responsive-style($breakpoint-sp) {
+    margin: -150px auto 0px;
     padding: 0 0px;
   }
   // height: 1000px;
@@ -354,7 +369,9 @@ header {
     padding: 100px 0 0px;
     margin: -100px auto 0;
     overflow: hidden;
-
+    @include responsive-style($breakpoint-sp) {
+      border-radius: 40px 40px 0 0;
+    }
     &:before {
       position: absolute;
       max-width: $max-width;
@@ -371,16 +388,18 @@ header {
     }
     .lp-tkw-eventlist-content-grid {
       display: grid;
-      width: calc(100% - 100px);
-      margin: 45px auto 0;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto auto auto;
-      gap: 30px 30px;
+      gap: 30px 25px;
       grid-template-areas:
         "special special special"
         ". . ."
         ". . .";
+      width: calc(100% - 100px);
+      margin: 45px auto 0;
+
       @include responsive-style(900px) {
+        margin: 20px auto 0;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
           "special special"
@@ -433,7 +452,7 @@ header {
       box-sizing: border-box;
       gap: 30px;
       @include responsive-style($breakpoint-sp) {
-        flex-direction: column;
+        display: block;
         padding: 20px;
       }
       > div {
@@ -441,13 +460,23 @@ header {
           flex: 1;
         }
       }
-      .lp-tkw-eventlist-griditem-img img {
+      .lp-tkw-eventlist-griditem-img {
         border-radius: $border-radius-big;
+        background: $cl-graylightest;
+        width: 100%;
+        height: 240px;
+        @include responsive-style($breakpoint-sp) {
+          height: 140px;
+          margin: 0 0 7px;
+        }
       }
     }
     .lp-tkw-eventlist-griditem.normal {
       /* lesson */
-      padding: 20px;
+      padding: 30px;
+      @include responsive-style($breakpoint-sp) {
+        padding: 20px 20px 16px;
+      }
       .lp-tkw-eventlist-griditem-img img {
         border-radius: $border-radius-big;
       }
@@ -465,13 +494,23 @@ header {
         @include responsive-style($breakpoint-sp) {
           font-size: $font-size-sss;
           padding: 3px 6px;
-          border-radius: $border-radius-middle;
-          margin: 10px 0 0;
+          border-radius: $border-radius-small;
+          margin: 15px 0 0;
         }
         &.target {
           background-color: $cl-graylightest;
           color: $cl-graylight !important;
         }
+      }
+      .lp-tkw-eventlist-griditem-content-category-child.special {
+        background: $cl-tankyu-green;
+        color: $cl-white !important;
+      }
+    }
+    .lp-tkw-eventlist-griditem-content-title.special {
+      font-size: $font-size-xl !important;
+      @include responsive-style($breakpoint-sp) {
+        font-size: $font-size-l !important;
       }
     }
     .lp-tkw-eventlist-griditem-content-title {
@@ -483,9 +522,16 @@ header {
         margin: 10px 0 8px;
       }
     }
+
     .lp-tkw-eventlist-griditem-content-datetime {
       display: flex;
       align-items: flex-end;
+      .lp-tkw-eventlist-griditem-content-datetime-date.special {
+        font-size: $font-size-m;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-ss !important;
+        }
+      }
       .lp-tkw-eventlist-griditem-content-datetime-date {
         font-size: $font-size-s;
         line-height: $lineheight-normal;
@@ -512,6 +558,11 @@ header {
         }
       }
     }
+    .lp-tkw-eventlist-griditem-content-link.special a {
+      @include min-responsive-style($breakpoint-sp) {
+        width: 70%;
+      }
+    }
     .lp-tkw-eventlist-griditem-content-link a {
       width: 100%;
       display: flex;
@@ -536,6 +587,7 @@ header {
         text-decoration: underline;
         gap: 7px;
       }
+
       &::before {
         content: "";
         margin: 6px 0 0 4px;
@@ -569,38 +621,40 @@ header {
 //04 イベント詳細
 section.lp-tkw-eventdetail {
   position: relative;
-  padding: 31px 30px 90px;
-  margin: 0 auto !important;
+  padding: 20px 30px 90px;
+  margin: 0 auto 15px !important;
   background: $cl-tankyu-green-light;
+  z-index: 1;
   @include responsive-style($breakpoint-sp) {
-    padding: 31px 0px 90px;
+    padding: 0px 0px 60px;
+    margin: 75px auto 0px !important;
   }
   @include curved-top-block($cl-tankyu-green-light);
   .lp-tkw-eventdetail-content {
     max-width: $max-width;
     margin: 0 auto;
-
     position: relative;
+    z-index: 10;
     .lp-tkw-eventdetail-content-ribbon {
       width: 150px;
       position: absolute;
-      z-index: 1;
+      z-index: 11;
       @include responsive-style($breakpoint-sp) {
         width: 95px;
       }
     }
     .lp-tkw-eventdetail-content-ribbon-top {
       right: -17px;
-      top: 30px;
+      top: 27px;
       @include responsive-style($breakpoint-sp) {
         right: 10px;
-        top: 25px;
+        top: 18px;
       }
     }
 
     .lp-tkw-eventdetail-content-ribbon-bottom {
       left: -17px;
-      bottom: -15px;
+      bottom: -14px;
       transform: rotate(180deg);
       @include responsive-style($breakpoint-sp) {
         left: 10px;
@@ -608,42 +662,59 @@ section.lp-tkw-eventdetail {
     }
 
     .lp-tkw-eventdetail-content-subject {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 280px;
+      z-index: 11;
+      width: 240px;
       height: 45px;
-      margin: 0 0 0 70px;
+      margin: 0 0 -3px 70px;
+      padding: 3px 0 0;
       background: $cl-tankyu-green;
       border-radius: $border-radius-big $border-radius-big 0 0;
-      border: 2px $cl-white solid;
+      border: 3px $cl-white solid;
       color: $cl-white;
       text-align: center;
       line-height: $lineheight-normal;
       font-size: $font-size-l;
+      font-weight: bold;
+      font-family: "Be Vietnam Pro", "Noto Sans JP", sans-serif;
 
+      &.special {
+        letter-spacing: 4px;
+      }
       @include responsive-style($breakpoint-sp) {
-        width: 150px;
-        height: 35px;
-        margin: 0 0 0 50px;
-        font-size: $font-size-s;
-        padding: 3px 0 0;
+        width: 120px;
+        height: 34px;
+        margin: 0 0 -3px 50px;
+        font-size: $font-size-ss;
+        letter-spacing: 1px;
+        padding: 3px 0 0 5px;
+        border-radius: $border-radius-middle $border-radius-middle 0 0;
       }
     }
     .lp-tkw-eventdetail-content-box {
-      border-radius: 40px;
-      padding: 50px clamp(10px, 4.8vw, 60px) 60px;
-      background: $cl-white;
       display: grid;
       // gap: 30px 60px;
       gap: clamp(15px, 2.5vw, 30px) clamp(30px, 5vw, 60px);
-      margin: 0 auto 60px;
       grid-template-columns: 290px 1fr;
+      border-radius: 40px;
+      padding: 50px clamp(10px, 4.8vw, 60px) 60px;
+      background: $cl-white;
+
+      margin: 0 auto 60px;
+      position: relative;
+      z-index: 10;
       @include responsive-style($breakpoint-sp) {
-        border-radius: 20px;
-        width: calc(100% - 40px);
         display: block;
-        padding: 30px 25px 60px;
+        width: calc(100% - 40px);
+        padding: 30px 25px 30px;
+        margin: 0 auto 30px;
+        border-radius: 20px;
+        &.special {
+          padding: 30px 25px 60px;
+        }
       }
       //01
       .lp-tkw-eventdetail-content-box-grid01ttl-number {
@@ -675,6 +746,16 @@ section.lp-tkw-eventdetail {
         }
         img {
           border-radius: $border-radius-bigplus;
+        }
+      }
+      .lp-tkw-eventdetail-content-box-grid02thumb.special {
+        background: $cl-graylightest;
+        width: 100%;
+        height: 320px;
+        display: block;
+        border-radius: $border-radius-bigplus;
+        @include responsive-style($breakpoint-sp) {
+          height: 130px;
         }
       }
 
@@ -745,6 +826,108 @@ section.lp-tkw-eventdetail {
       }
     }
   }
+
+  .lp-tkw-eventdetail-content-snow-sp,
+  .lp-tkw-eventdetail-content-snow-pc {
+    left: 0;
+    top: 0;
+    svg {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .snowsp01 svg {
+      left: -3%;
+      top: -8px;
+      width: 12%;
+      opacity: 0.5;
+      animation: spin 18s linear infinite;
+    }
+    .snowsp02 svg {
+      left: 55%;
+      top: -30px;
+      width: 20%;
+      opacity: 0.35;
+      animation: spin 30s linear infinite;
+    }
+    .snowsp03 svg {
+      left: 40%;
+      top: -20px;
+      width: 5%;
+      opacity: 0.62;
+      animation: spin-reverse 25s linear infinite;
+    }
+    .snowsp04 svg {
+      right: 6%;
+      top: -20px;
+      width: 4.5%;
+      opacity: 0.4;
+      animation: spin-reverse 25s linear infinite;
+    }
+    .snowpc01 svg {
+      left: -5%;
+      top: 25%;
+      width: 7%;
+      opacity: 0.62;
+      animation: spin 25s linear infinite;
+      display: none;
+    }
+    .snowpc02 svg {
+      left: -7%;
+      top: 40%;
+      width: 11%;
+      opacity: 0.4;
+      animation: spin-reverse 20s linear infinite;
+    }
+    .snowpc03 svg {
+      left: -5%;
+      top: 5%;
+      width: 3%;
+      opacity: 0;
+      animation: spin-reverse 30s linear infinite;
+      // display: none;
+    }
+    .snowpc04 svg {
+      right: -5%;
+      top: 28%;
+      width: 3%;
+      opacity: 0.8;
+      animation: spin 10s linear infinite;
+      display: none;
+    }
+    .snowpc05 svg {
+      right: -6%;
+      top: 15%;
+      width: 10%;
+      opacity: 0.6;
+      animation: spin 34s linear infinite;
+    }
+    .snowpc06 svg {
+      right: -5%;
+      top: 65%;
+      width: 8%;
+      opacity: 0.6;
+      animation: spin 20s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes spin-reverse {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
 
 //05 授業の特徴
@@ -754,6 +937,9 @@ section.lp-family-feature {
   width: 100%;
   text-align: center;
   background: $cl-bg-creamyellow-dark;
+  @include min-responsive-style($breakpoint-sp) {
+    margin: 0 auto 90px !important;
+  }
   .lp-family-feature-child {
     font-size: $font-size-xxl;
     background: $cl-feature-yellow;
@@ -830,10 +1016,13 @@ section.lp-family-feature {
 //06 5stepで参加可能
 section.lp-family-howto {
   position: relative;
-  padding: 31px 0 75px;
+  padding: 20px 0 105px;
   margin: 0 0px;
   background: $cl-bg-creamyellow;
-
+  z-index: 10;
+  @include responsive-style($breakpoint-sp) {
+    padding: 0px 0 75px;
+  }
   @include curved-top-block($cl-bg-creamyellow);
   .lp-family-howto-title {
     font-size: $font-size-xxxl;
@@ -870,7 +1059,7 @@ section.lp-family-howto {
       justify-content: center;
       align-items: center;
       gap: 10px;
-      margin: 0 auto 90px;
+      margin: 0 auto 60px;
     }
   }
 
@@ -893,11 +1082,12 @@ section.lp-family-howto {
   }
 
   .lp-family-howto-step-child-text-title {
+    margin: 5px 0 15px;
     font-size: $font-size-xl;
     @include responsive-style($breakpoint-sp) {
+      margin: 5px 0 0px;
       font-size: $font-size-xxl;
     }
-    margin: 5px 0 15px;
   }
 
   .lp-family-howto-step-child-text-detail {
@@ -911,8 +1101,15 @@ section.lp-family-howto {
 
 section.lp-family-about {
   position: relative;
-  padding: 11px 30px 0;
+  z-index: 11;
+  padding: 20px 30px 0;
   background: $cl-bg-creamyellow-dark;
+  @include min-responsive-style($breakpoint-sp) {
+    margin: 0 auto 90px !important;
+  }
+  @include responsive-style($breakpoint-sp) {
+    padding: 11px 0px 0;
+  }
   @include curved-top-block($cl-bg-creamyellow-dark);
   .lp-family-about-box {
     background: $cl-white;
@@ -950,6 +1147,7 @@ section.lp-family-about {
   @include section-maxwidth;
   padding: 0px 30px 30px;
   background: $cl-bg-creamyellow-dark;
+
   .lp-family-start2025-catch {
     font-size: $font-size-xxxl;
     margin: 0 auto 30px;
@@ -1060,18 +1258,15 @@ section.lp-family-about {
 
 footer {
   position: relative;
+  z-index: 2;
   width: 100%;
   padding: 31px 0px 0px;
   text-align: center;
   background: $cl-black;
   color: white;
-
-  position: relative;
-  z-index: 2;
   @include curved-top-block($cl-black);
   @include responsive-style($breakpoint-sp) {
     padding: 60px 0px 60px;
-    border-radius: 50px 50px 0 0;
   }
   ul {
     margin: 0 !important;
@@ -1096,7 +1291,7 @@ footer {
   .footer-copyright {
     width: 100%;
     border-top: 1px solid #fff;
-    padding: 15px 0 15px;
+    padding: 15px 0 105px;
     color: $cl-graylight;
     font-size: $font-size-ss;
   }

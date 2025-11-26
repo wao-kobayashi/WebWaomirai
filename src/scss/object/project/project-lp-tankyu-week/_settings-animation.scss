@@ -1,16 +1,16 @@
-@keyframes pikopiko {
-  0% {
-    transform: rotate(20deg);
+@keyframes zoomUp {
+  from {
+    transform: scale(0.5) ranslateY(200px);
   }
-  100% {
-    transform: rotate(-10deg);
+  to {
+    transform: scale(1) translateY(0px);
   }
 }
 
 .inview-hide {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s, transform 1s;
+  transform: translateY(100px);
+  transition: opacity 1.5s, transform 1.5s;
 }
 
 .inview {
