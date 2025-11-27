@@ -14,7 +14,7 @@ header {
 
 //01メインビジュアル
 .lp-tkw-fv {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   position: relative;
   z-index: 100;
@@ -92,8 +92,10 @@ header {
             font-size: $font-size-m;
             line-height: $lineheight-normal;
             @include responsive-style($breakpoint-sp) {
+              padding: 12px 0px 10px;
               width: 90px;
               font-size: $font-size-s;
+              line-height: $lineheight-tight !important;
             }
           }
           .lp-tkw-fv-left-info-column-content {
@@ -106,7 +108,7 @@ header {
               padding: 12px 15px 10px;
               font-size: $font-size-s;
               letter-spacing: -0.3px;
-              line-height: $lineheight-tight;
+              line-height: $lineheight-tight !important;
             }
           }
         }
@@ -164,9 +166,6 @@ header {
     height: 1000px;
     margin: auto;
     opacity: 0.25;
-    animation: zoomUp 1s ease forwards;
-    transform: scale(0.6) translateY(200px);
-
     /* Ellipse 40 */
     border-radius: $border-radius-full;
     background: linear-gradient(
@@ -188,8 +187,7 @@ header {
       top: -20px;
       width: 100vmin; /* 画面の小さい方を基準に正方形 */
       height: 100vmin;
-      transform: scale(0.6) translateY(200px);
-      animation: zoomUpSp 1s ease forwards;
+      transform: scale(1.4);
     }
   }
 }
@@ -643,8 +641,8 @@ section.lp-tkw-eventdetail {
   background: $cl-tankyu-green-light;
   z-index: 1;
   @include responsive-style($breakpoint-sp) {
-    padding: 0px 0px 60px;
-    margin: 75px auto 0px !important;
+    padding: 20px 0px 70px;
+    margin: 100px auto 0px !important;
   }
   @include curved-top-block($cl-tankyu-green-light);
   .lp-tkw-eventdetail-content {
@@ -664,8 +662,8 @@ section.lp-tkw-eventdetail {
       right: -17px;
       top: 27px;
       @include responsive-style($breakpoint-sp) {
-        right: 10px;
-        top: 18px;
+        right: 9px;
+        top: 22px;
       }
     }
 
@@ -674,7 +672,8 @@ section.lp-tkw-eventdetail {
       bottom: -14px;
       transform: rotate(180deg);
       @include responsive-style($breakpoint-sp) {
-        left: 10px;
+        bottom: -10px;
+        left: 9px;
       }
     }
 
@@ -854,16 +853,16 @@ section.lp-tkw-eventdetail {
     }
 
     .snowsp01 svg {
-      left: -3%;
-      top: -8px;
-      width: 12%;
+      left: 2%;
+      top: 10px;
+      width: 5%;
       opacity: 0.5;
       animation: spin 18s linear infinite;
     }
     .snowsp02 svg {
       left: 55%;
-      top: -30px;
-      width: 20%;
+      top: -14px;
+      width: 16%;
       opacity: 0.35;
       animation: spin 30s linear infinite;
     }
@@ -949,8 +948,8 @@ section.lp-tkw-eventdetail {
 
 //05 授業の特徴
 section.lp-family-feature {
-  padding: 0 20px;
-  margin: 0 auto;
+  padding: 60px 20px 0;
+  margin: 0px auto 0;
   width: 100%;
   text-align: center;
   background: $cl-bg-creamyellow-dark;
@@ -1038,7 +1037,7 @@ section.lp-family-howto {
   background: $cl-bg-creamyellow;
   z-index: 10;
   @include responsive-style($breakpoint-sp) {
-    padding: 0px 0 75px;
+    padding: 10px 0 75px;
   }
   @include curved-top-block($cl-bg-creamyellow);
   .lp-family-howto-title {
@@ -1125,7 +1124,8 @@ section.lp-family-about {
     margin: 0 auto 90px !important;
   }
   @include responsive-style($breakpoint-sp) {
-    padding: 11px 0px 0;
+    padding: 20px 0px 0;
+    margin: -1px 0 !important;
   }
   @include curved-top-block($cl-bg-creamyellow-dark);
   .lp-family-about-box {
