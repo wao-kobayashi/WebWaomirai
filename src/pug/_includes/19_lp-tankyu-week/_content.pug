@@ -1,59 +1,62 @@
 
 body
     //01メインビジュアル
-    header 
-      img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
-    section.lp-tkw-fv#mySnowDiv
-       .lp-tkw-fv-grid
-        .lp-tkw-fv-grid-left 
-            .lp-tkw-fv-left-logo 
-              .pcimage
-                img(src=ImgLogoTankyuweekPc)
-              .spimage 
-                img(src=ImgLogoTankyuweekSp)
-            .lp-tkw-fv-left-info 
-              .lp-tkw-fv-left-info-column
-                .lp-tkw-fv-left-info-column-title|開催日時
-                .lp-tkw-fv-left-info-column-content|12/20(土) 22(月) 23(火) 26(金)   
-              .lp-tkw-fv-left-info-column
-                .lp-tkw-fv-left-info-column-title|対象
-                .lp-tkw-fv-left-info-column-content|小学３年～高校生とその保護者
-        .lp-tkw-fv-center  
-          img(src=ImgFvBook)
-        .lp-tkw-fv-right 
-            img(src=ImgFvRighttext)
-       .lp-tkw-fv-bgcircle
-    //02イントロセクションPC
-    section.lp-tkw-intro-pc.pcimage 
-      .lp-tkw-intro-pc-box
-        .lp-tkw-intro-pc-box-text.lp-tkw-intro-pc-box-text01
-          |「なんで？」「どうして？」が
-          br
-          |止まらない冬がやってくる！
-          br
-          br
-          |モノの値段はどう決まる？
-          br
-          |友だちとケンカしたらどうすればいい？
-        .lp-tkw-intro-pc-box-img.lp-tkw-intro-pc-box-img01
-          img(src=ImgIntro01Pc)
-      .lp-tkw-intro-pc-box
-        .lp-tkw-intro-pc-box-img.lp-tkw-intro-pc-box-img02
-          img(src=ImgIntro02Pc)
-        .lp-tkw-intro-pc-box-text.lp-tkw-intro-pc-box-text02
-          |身近な“ふしぎ”から世界を見つめる、
-          br
-          |考える冬の探究授業。
-          br
-          br
-          |子どもが自分の問いを見つけ、
-          br
-          |考え、言葉にする。
-          br
-          br
-          |この冬、親子で“考える楽しさ”を
-          br
-          |体験してみませんか？
+    .intro-section
+      header 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+      .lp-tkw-fv-bgcircle
+      
+      section.lp-tkw-fv#fvsnow
+          .lp-tkw-fv-grid
+            .lp-tkw-fv-grid-left 
+                .lp-tkw-fv-left-logo 
+                  .pcimage
+                    img(src=ImgLogoTankyuweekPc)
+                  .spimage 
+                    img(src=ImgLogoTankyuweekSp)
+                .lp-tkw-fv-left-info 
+                  .lp-tkw-fv-left-info-column
+                    .lp-tkw-fv-left-info-column-title|開催日時
+                    .lp-tkw-fv-left-info-column-content|12/20(土) 22(月) 23(火) 26(金)   
+                  .lp-tkw-fv-left-info-column
+                    .lp-tkw-fv-left-info-column-title|対象
+                    .lp-tkw-fv-left-info-column-content|小学３年～高校生とその保護者
+            .lp-tkw-fv-center  
+              img(src=ImgFvBook)
+            .lp-tkw-fv-right 
+                img(src=ImgFvRighttext)
+      //02イントロセクションPC
+      section.lp-tkw-intro-pc.pcimage 
+        .lp-tkw-intro-pc-box
+          .lp-tkw-intro-pc-box-text.lp-tkw-intro-pc-box-text01
+            |「なんで？」「どうして？」が
+            br
+            |止まらない冬がやってくる！
+            br
+            br
+            |モノの値段はどう決まる？
+            br
+            |友だちとケンカしたらどうすればいい？
+          .lp-tkw-intro-pc-box-img.lp-tkw-intro-pc-box-img01
+            img(src=ImgIntro01Pc)
+        .lp-tkw-intro-pc-box
+          .lp-tkw-intro-pc-box-img.lp-tkw-intro-pc-box-img02
+            img(src=ImgIntro02Pc)
+          .lp-tkw-intro-pc-box-text.lp-tkw-intro-pc-box-text02
+            |身近な“ふしぎ”から世界を見つめる、
+            br
+            |考える冬の探究授業。
+            br
+            br
+            |子どもが自分の問いを見つけ、
+            br
+            |考え、言葉にする。
+            br
+            br
+            |この冬、親子で“考える楽しさ”を
+            br
+            |体験してみませんか？
+
     //02イントロセクションSP
     section.lp-tkw-intro-sp.spimage#mySnowDivSecond
       .lp-tkw-intro-sp-title
@@ -80,6 +83,8 @@ body
           |体験してみませんか？    
       .lp-tkw-intro-sp-img
           img(src=ImgIntro01Sp) 
+      .lp-tkw-intro-sp-bg
+        img(src=ImgBgIntroSp)
     // イベント一覧セクション
     section.lp-tkw-eventlist 
        .lp-tkw-eventlist-title
@@ -92,10 +97,13 @@ body
        .lp-tkw-eventlist-content
           .lp-tkw-eventlist-content-grid 
                 // 各イベントをループ処理
-                .lp-tkw-eventlist-griditem.science.special
+                .lp-tkw-eventlist-griditem.special
                     // サムネイル画像
                     .lp-tkw-eventlist-griditem-img.special
-                        //- img(src=ImgThumbPcEconomyKids)
+                       .spimage
+                         img(src=ImgThumbSpListSpecial)
+                       .pcimage
+                         img(src=ImgThumbPcListSpecial)
                     // カードコンテンツ
                     .lp-tkw-eventlist-griditem-content
                       // カテゴリー表示（科目・対象学年）
@@ -103,15 +111,15 @@ body
                         // 科目ラベル
                         //- .lp-tkw-eventlist-griditem-content-category-child.special
                         //-     |SPECIAL
-                        .lp-tkw-eventlist-griditem-content-category-child.subject
+                        .lp-tkw-eventlist-griditem-content-category-child.subject.special
                             |科学
                         // 対象学年ラベル
                         .lp-tkw-eventlist-griditem-content-category-child.target
                             |小学生                  
                       // イベントタイトル
                       .lp-tkw-eventlist-griditem-content-title.special
-                            |簡単クリスマスケーキを作ろう★
-                            br
+                            |レンジで簡単♪クリスマスケーキを作ろう★
+                            br.pcimage
                             |超高速ふわふわホイップのひみつ
                       // 日時情報
                       .lp-tkw-eventlist-griditem-content-datetime
@@ -177,22 +185,26 @@ body
           .lp-tkw-eventdetail-content-ribbon.lp-tkw-eventdetail-content-ribbon-bottom
             img(src=ImgRibbon)
           .lp-tkw-eventdetail-content-subject.special
-            |SPECIAL
+            |科学リテラシー
           .lp-tkw-eventdetail-content-box.special
             //タイトル
             .lp-tkw-eventdetail-content-box-grid01ttl
                 .lp-tkw-eventdetail-content-box-grid01ttl-number.pcimage
                   |01
                 .lp-tkw-eventdetail-content-box-grid01ttl-title.special
-                    |簡単クリスマス
-                    br.pcimage 
-                    |ケーキを作ろう★
-                    br.pcimage 
+                    |レンジで簡単♪
+                    br
+                    |クリスマスケーキを作ろう★
+                    br
                     |超高速ふわふわ
                     br.pcimage 
                     |ホイップのひみつ
             //サムネ
-            .lp-tkw-eventdetail-content-box-grid02thumb.special
+            .lp-tkw-eventdetail-content-box-grid02thumb
+              .pcimage
+               img(src=ImgThumbPcSpecial)
+              .spimage
+               img(src=ImgThumbSpDetailSpecial)
 
             //日時
             .lp-tkw-eventdetail-content-box-grid03info
@@ -253,8 +265,11 @@ body
             
             // サムネイル
             .lp-tkw-eventdetail-content-box-grid02thumb
-              img(src=event.thumbDetail)
-            
+              .pcimage
+               img(src=event.thumbDetail)
+              .spimage
+               img(src=event.thumbDetailSp)
+                        
             // 日時情報
             .lp-tkw-eventdetail-content-box-grid03info
               .lp-tkw-eventdetail-content-box-grid03info-date
@@ -376,14 +391,14 @@ body
                   
       //08 2025年4月開講
       section.lp-family-start2025
-          .lp-family-start2025-catch 
-            |社会で役立つ学びを、
-            br.spimage
-            |今はじめよう
-            br
-            |オンラインで
-            br.spimage
-            |楽しく学ぶ“新5教科”
+          //- .lp-family-start2025-catch 
+          //-   |社会で役立つ学びを、
+          //-   br.spimage
+          //-   |今はじめよう
+          //-   br
+          //-   |オンラインで
+          //-   br.spimage
+          //-   |楽しく学ぶ“新5教科”
           .lp-family-start2025-logo 
             img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
           .lp-family-start2025-target 
@@ -392,20 +407,15 @@ body
             |小学3〜6年生／
             br.spimage
             |中学生／高校生
-          .lp-family-start2025-subjects 
-            .pcimage
-                img(src=Img5subjectPc)
-            .spimage
-                img(src=Img5subjectSp)
           .lp-family-start2025-feature 
             .lp-family-start2025-feature-box
               .lp-family-start2025-feature-box-title  
                 .lp-family-start2025-feature-box-title-icon   
                   img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
                 .lp-family-start2025-feature-box-title-text 
-                  |新しい５教科
+                  |新しい学び
               .lp-family-start2025-feature-box-text 
-                |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」「プログラミング」を身につけます。
+                |自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」を身につけます。
             .lp-family-start2025-feature-box
               .lp-family-start2025-feature-box-title  
                 .lp-family-start2025-feature-box-title-icon   

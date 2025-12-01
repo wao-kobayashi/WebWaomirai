@@ -1,9 +1,10 @@
 
 mixin fixed-btn
-  .fixed-btn
-    a.js-line-trigger(style='display:none;',href=UrlLine, target='_blank')
+  .fixed-btn(style='display:none;')
+    a.cta-line.js-line-trigger(href=UrlLine, target='_blank')
       |LINEで無料申込
-
+    a.page-top(href='#')
+       img(src=ImgArrowTop) 
 mixin btn-cta 
     a.btn-cta.js-line-trigger(href=UrlLine, target='_blank')
       |LINEで無料申込

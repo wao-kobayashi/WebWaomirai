@@ -1,15 +1,24 @@
-header {
+body header {
   img {
     position: absolute;
     width: 200px;
     left: 25px;
     top: 25px;
     @include responsive-style($breakpoint-sp) {
-      width: 150px;
+      width: 40%;
       left: 20px;
       top: 20px;
     }
   }
+}
+body {
+  overflow-x: hidden;
+}
+
+.intro-section {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 //01メインビジュアル
@@ -18,8 +27,9 @@ header {
   width: 100%;
   position: relative;
   z-index: 100;
+  margin: 0px auto 0px !important;
   @include responsive-style($breakpoint-sp) {
-    margin: 0px auto 0px !important;
+    margin: 0px auto 30px !important;
   }
   .lp-tkw-fv-grid {
     display: grid;
@@ -43,8 +53,10 @@ header {
       position: relative;
       z-index: 1;
       margin: 20px 0 0;
+
       @include responsive-style($breakpoint-sp) {
         margin: 0 auto;
+        width: calc(100% - 40px);
       }
       .lp-tkw-fv-left-logo {
         margin: 0 0 25px;
@@ -55,6 +67,10 @@ header {
         }
         img {
           margin: 0 auto;
+          width: 100%;
+          @include responsive-style($breakpoint-sp) {
+            width: 95%;
+          }
         }
       }
       .lp-tkw-fv-left-info {
@@ -129,9 +145,10 @@ header {
           transform: scale(1.3);
         }
         @include responsive-style($breakpoint-sp) {
-          margin: 0 0 0 18px;
-          transform: scale(1);
+          margin: 16px 0 0 45px;
+          transform: scale(1.09);
           width: 90%;
+          transform-origin: right center;
         }
       }
     }
@@ -139,11 +156,11 @@ header {
       position: relative;
       z-index: 1;
       align-self: end;
-      margin: 0 0 35px;
+      margin: 0 0 24px;
       @include responsive-style($breakpoint-sp) {
         position: absolute;
         left: 35px;
-        top: 30px;
+        top: 45px;
         width: 16%;
         margin: 0 0 0px;
       }
@@ -155,40 +172,39 @@ header {
       }
     }
   }
-
-  .lp-tkw-fv-bgcircle {
-    position: absolute;
-    top: -200px;
-    left: 0%;
-    right: 0%;
-    z-index: -1;
-    width: 1000px;
-    height: 1000px;
-    margin: auto;
-    opacity: 0.25;
-    /* Ellipse 40 */
-    border-radius: $border-radius-full;
-    background: linear-gradient(
-      180deg,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0.3) 100%
-    );
-    @include responsive-style(1200px) {
-      top: -100px;
-      width: 800px;
-      height: 800px;
-    }
-    @include responsive-style(1000px) {
-      top: -80px;
-      width: 700px;
-      height: 700px;
-    }
-    @include responsive-style($breakpoint-sp) {
-      top: -20px;
-      width: 100vmin; /* 画面の小さい方を基準に正方形 */
-      height: 100vmin;
-      transform: scale(1.4);
-    }
+}
+.lp-tkw-fv-bgcircle {
+  position: absolute;
+  top: -200px;
+  left: 0%;
+  right: 0%;
+  z-index: -1;
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  opacity: 0.25;
+  /* Ellipse 40 */
+  border-radius: $border-radius-full;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  @include responsive-style(1200px) {
+    top: -100px;
+    width: 800px;
+    height: 800px;
+  }
+  @include responsive-style(1000px) {
+    top: -80px;
+    width: 700px;
+    height: 700px;
+  }
+  @include responsive-style($breakpoint-sp) {
+    top: 180px;
+    width: 100vmin; /* 画面の小さい方を基準に正方形 */
+    height: 100vmin;
+    transform: scale(1.5);
   }
 }
 
@@ -199,35 +215,42 @@ header {
   padding: 0 80px;
   margin: 0px auto 150px !important;
   @include responsive-style(1300px) {
-    padding: 0 60px;
+    padding: 0 80px;
+  }
+  @include responsive-style(1150px) {
+    padding: 0 100px;
+  }
+  @include responsive-style(1000px) {
+    padding: 0 80px;
   }
   .lp-tkw-intro-pc-box {
     display: flex;
-    gap: 50px;
-    margin: 0 0 75px;
+    gap: 90px;
+    margin: 0 0 90px;
     @include responsive-style(1100px) {
       gap: 40px;
     }
     .lp-tkw-intro-pc-box-text {
-      font-size: clamp(18px, 1.6vw, 20px);
+      font-size: clamp(18px, 1.6vw, 21px);
       letter-spacing: 5px;
       line-height: 2.2;
       color: $cl-white;
-      max-width: 520px;
+      max-width: 550px;
       @include responsive-style(1100px) {
         flex: 1.3;
         width: 100%;
+        letter-spacing: 2px;
       }
     }
     .lp-tkw-intro-pc-box-img01 {
-      width: 390px;
+      width: 300px;
       @include responsive-style(1100px) {
         flex: 1;
         width: 100%;
       }
     }
     .lp-tkw-intro-pc-box-img02 {
-      width: 480px;
+      width: 380px;
       @include responsive-style(1100px) {
         flex: 1;
         width: 100%;
@@ -239,30 +262,36 @@ header {
   margin: 0px auto 0px !important;
   position: relative;
   overflow: hidden;
-  padding: 0 0 120px;
+  padding: 0 0 150px;
 
   .lp-tkw-intro-sp-title {
+    max-width: calc(100% - 50px);
     color: $cl-white;
-    font-size: $font-size-xl;
+    font-size: clamp(20px, 0.5vw, 25px);
     line-height: $lineheight-relaxed;
     font-weight: 500;
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
     letter-spacing: 1px;
-    max-width: calc(100% - 50px);
   }
   .lp-tkw-intro-sp-text {
-    color: $cl-white;
-    line-height: 2;
-    font-size: $font-size-m;
-    letter-spacing: 1px;
     max-width: calc(100% - 50px);
     margin: 0 auto;
+    color: $cl-white;
+    line-height: 2;
+    font-size: clamp(14px, 0.5vw, 19px);
+    letter-spacing: 1px;
   }
   .lp-tkw-intro-sp-img {
     width: 70%;
     margin: 20px auto 0;
     position: relative;
     z-index: 1;
+  }
+  .lp-tkw-intro-sp-bg img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   &::before {
     content: "";
@@ -329,10 +358,20 @@ header {
     position: relative;
     z-index: 2;
     margin: 0 auto;
-
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 115px;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 40px;
+    //   background: $cl-tankyu-green;
+    //   border-radius: 40px 40px 0 0;
+    //   z-index: 1;
+    // }
     .lp-tkw-eventlist-illust01 {
       left: 10%;
-      top: 0%;
+
       @include responsive-style(1260px) {
         left: 3%;
       }
@@ -342,7 +381,7 @@ header {
     }
     .lp-tkw-eventlist-illust02 {
       right: 10%;
-      top: 0%;
+
       @include responsive-style(1260px) {
         right: 3%;
       }
@@ -353,9 +392,10 @@ header {
     .lp-tkw-eventlist-illust {
       width: 250px;
       position: absolute;
+      top: -20px;
       @include responsive-style(1150px) {
         width: 200px;
-        top: 35px;
+        top: 15px;
       }
       @include responsive-style(940px) {
         display: none;
@@ -370,8 +410,10 @@ header {
         width: 100%;
       }
       @include responsive-style($breakpoint-sp) {
-        width: 90%;
+        width: 75%;
         margin: 60px auto 0;
+        position: relative;
+        z-index: 2;
       }
     }
   }
@@ -382,9 +424,10 @@ header {
     position: relative;
     z-index: 1;
     padding: 100px 0 0px;
-    margin: -100px auto 0;
+    margin: -120px auto 0;
     overflow: hidden;
     @include responsive-style($breakpoint-sp) {
+      margin: -140px auto 0;
       border-radius: 40px 40px 0 0;
     }
     &:before {
@@ -414,7 +457,7 @@ header {
       margin: 45px auto 0;
 
       @include responsive-style(900px) {
-        margin: 20px auto 0;
+        margin: 60px auto 0;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
           "special special"
@@ -465,24 +508,40 @@ header {
       /* lesson */
       padding: 30px;
       box-sizing: border-box;
-      gap: 30px;
+      gap: 40px;
+
+      @include min-responsive-style($breakpoint-sp) {
+        align-items: center;
+      }
       @include responsive-style($breakpoint-sp) {
         display: block;
         padding: 20px;
       }
-      > div {
+
+      .lp-tkw-eventlist-griditem-img {
+        @include min-responsive-style($breakpoint-sp) {
+          flex: 0.8;
+        }
+      }
+      .lp-tkw-eventlist-griditem-img img {
+        border-radius: $border-radius-big;
+        // background: $cl-graylightest;
+        width: 100%;
+        // height: 260px;
+        object-fit: cover;
+        @include responsive-style($breakpoint-sp) {
+          height: auto;
+        }
+      }
+      .lp-tkw-eventlist-griditem-content {
         @include min-responsive-style($breakpoint-sp) {
           flex: 1;
         }
       }
-      .lp-tkw-eventlist-griditem-img {
-        border-radius: $border-radius-big;
-        background: $cl-graylightest;
-        width: 100%;
-        height: 240px;
-        @include responsive-style($breakpoint-sp) {
-          height: 140px;
-          margin: 0 0 7px;
+
+      .lp-tkw-eventlist-griditem-content-category-child {
+        @include min-responsive-style($breakpoint-sp) {
+          margin: 0px 0 0;
         }
       }
     }
@@ -615,6 +674,9 @@ header {
       }
     }
   }
+  .lp-tkw-eventlist-content-bottom img {
+    width: 100%;
+  }
 }
 
 // 03 イベントの詳細　教科ごとの色付け
@@ -697,9 +759,6 @@ section.lp-tkw-eventdetail {
       font-weight: bold;
       font-family: "Be Vietnam Pro", "Noto Sans JP", sans-serif;
 
-      &.special {
-        letter-spacing: 4px;
-      }
       @include responsive-style($breakpoint-sp) {
         width: 120px;
         height: 34px;
@@ -751,7 +810,7 @@ section.lp-tkw-eventdetail {
         }
         &.special {
           @include responsive-style($breakpoint-sp) {
-            width: 80%;
+            // width: 80%;
           }
         }
       }
@@ -762,16 +821,9 @@ section.lp-tkw-eventdetail {
         }
         img {
           border-radius: $border-radius-bigplus;
-        }
-      }
-      .lp-tkw-eventdetail-content-box-grid02thumb.special {
-        background: $cl-graylightest;
-        width: 100%;
-        height: 320px;
-        display: block;
-        border-radius: $border-radius-bigplus;
-        @include responsive-style($breakpoint-sp) {
-          height: 130px;
+          @include responsive-style($breakpoint-sp) {
+            border-radius: $border-radius-big;
+          }
         }
       }
 
@@ -949,7 +1001,7 @@ section.lp-tkw-eventdetail {
 //05 授業の特徴
 section.lp-family-feature {
   padding: 60px 20px 0;
-  margin: 0px auto 0;
+  margin: 0px auto -30px;
   width: 100%;
   text-align: center;
   background: $cl-bg-creamyellow-dark;
@@ -1124,7 +1176,7 @@ section.lp-family-about {
     margin: 0 auto 90px !important;
   }
   @include responsive-style($breakpoint-sp) {
-    padding: 20px 0px 0;
+    padding: 20px 0px 60px;
     margin: -1px 0 !important;
   }
   @include curved-top-block($cl-bg-creamyellow-dark);
