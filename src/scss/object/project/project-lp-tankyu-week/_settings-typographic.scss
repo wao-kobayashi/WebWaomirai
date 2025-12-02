@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  color: $cl-black;
+  font-family: "Be Vietnam Pro", "Noto Sans JP", sans-serif;
+}
+
+// Font size variables
+$font-size-sss: 10px;
+$font-size-ss: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 24px;
+$font-size-xxxl: 30px;
+$font-size-huge: 56px;
+
+/* line-height */
+
+$lineheight-none: 1;
+$lineheight-tight: 1.25;
+$lineheight-normal: 1.5;
+$lineheight-relaxed: 1.75;
+$lineheight-very-relaxed: 2;
+
+/* title-underline */
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+}
+.c-title-25feb-lp {
+  font-size: $font-size-xxxl;
+  margin: 0 auto 30px;
+  text-align: center;
+  //   text-decoration-style: wavy;
+}

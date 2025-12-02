@@ -1,0 +1,139 @@
+//授業日時のフォーマット関数
+-
+  //- 日付フォーマット関数
+    function formatDate(dateStr, format) {
+      if (!dateStr) return '';
+      
+      const date = new Date(dateStr);
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+      const day = date.getDate();
+      const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+      const weekday = weekdays[date.getDay()];
+      
+      switch(format) {
+        case 'full':
+          return `${year}年${month}月${day}日(${weekday})`;
+        case 'short':
+          return `${month}/${day}(${weekday})`;
+        case 'numeric':
+          return `${month}月${day}日(${weekday})`;
+        case 'slash':
+          return `${year}/${month}/${day}`;
+        default:
+          return dateStr;
+      }
+    }
+
+    const events = [
+      {
+        id: 'event02',
+        number: '02',
+        category: 'economy',
+        target: 'child',
+        titleShort: 'モノの値段はどう決まる?',
+        titleLong: 'モノの値段は<br class="pcimage">どう決まる?<br class="pcimage">～セールに隠されたヒミツとは～',
+        date: '2025-12-22',
+        timeStart: '19:30',
+        timeEnd: '20:15',
+        thumbList: ImgThumbSpListEconomyKids,
+        //- thumbList: ImgThumbPcEconomyKids,
+        thumbDetail: ImgThumbPcEconomyKids,
+        thumbDetailSp: ImgThumbSpDetailEconomyKids,
+        description: '同じ商品でも、店やタイミングによって値段がちがうのはなぜ？<br />この講座では、モノの値段がどう決まるのか、セールや割引に隠されたお店の工夫をわかりやすく学びます。<br /><br />お金の流れを知ることで、かしこく買い物する力を育てる、楽しい経済入門の授業です。',
+        note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+      },
+      {
+        id: 'event03',
+        number: '03',
+        category: 'economy',
+        target: 'teen',
+        titleShort: 'お金の貯め方・使い方',
+        titleLong: 'お金の<br class="pcimage">貯め方・使い方<br class="pcimage">～お金の貯め方と貯金の種類～',
+        date: '2025-12-22',
+        timeStart: '20:30',
+        timeEnd: '21:15',
+        thumbList: ImgThumbSpListEconomyTeen,
+        thumbDetail: ImgThumbPcEconomyTeen,
+        thumbDetailSp: ImgThumbSpDetailEconomyTeen,
+        description: '「どうやってお金を貯めたらいいの？」<br />「貯金って銀行に預けるだけ？」<br />この講座では、計画的なお金の貯め方や、貯金のいろいろな種類をわかりやすく学びます。<br />未来の夢や目標のために、今から知っておきたいお金の管理法を考える授業です。',
+        note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+      },
+      {
+        id: 'event04',
+        number: '04',
+        category: 'philosophy',
+        target: 'child',
+        titleShort: '友だち関係のトラブル、どうする?',
+        titleLong: '友だち関係の<br class="pcimage">トラブルどうする？<br class="pcimage">～トラブルにも個性がある？～',
+        date: '2025-12-23',
+        timeStart: '19:30',
+        timeEnd: '20:15',
+        thumbList: ImgThumbSpListPhilosophyKids,
+        thumbDetail: ImgThumbPcPhilosophyKids,
+        thumbDetailSp: ImgThumbSpDetailPhilosophyKids,
+        description: '友だちとけんかをしたり、気まずくなったりしたとき、どうすればいいんだろう？<br />この講座では、友だち関係のトラブルを出発点に、「なぜトラブルが起こるの？」「人によって解決法はちがうの？」という問いを考えます。<br />人間関係の中で自分らしく向き合う力を育てる、やさしい哲学の時間です。',
+        note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+      },
+      {
+        id: 'event05',
+        number: '05',
+        category: 'philosophy',
+        target: 'teen',
+        titleShort: '成功も失敗もない世界',
+        titleLong: '成功も失敗も<br class="pcimage">ない世界<br class="pcimage">～成功と失敗は紙一重？～',
+        date: '2025-12-23',
+        timeStart: '20:30',
+        timeEnd: '21:15',
+        thumbList: ImgThumbSpListPhilosophyTeen,
+        thumbDetail: ImgThumbPcPhilosophyTeen,
+        thumbDetailSp: ImgThumbSpDetailPhilosophyTeen,
+        description: '「成功」と「失敗」って、いったい誰が決めるのだろう？<br />この講座では、成功と失敗の境界や、その価値を問い直します。<br />一見うまくいかなかったことが、実は大きな学びになることもある――そんな「紙一重」の意味を深掘りし、自分の人生観や価値観を見つめ直す哲学の時間です。',
+        note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+      },
+      {
+        id: 'event06',
+        number: '06',
+        category: 'science',
+        target: 'child',
+        titleShort: '太陽はなくなるとどうなる ?',
+        titleLong: '太陽はなくなると<br class="pcimage">どうなる ?<br class="pcimage">～太陽はなにからできているの ?～',
+        date: '2025-12-26',
+        timeStart: '19:30',
+        timeEnd: '20:15',
+        thumbList: ImgThumbSpListScienceKids,
+        thumbDetail: ImgThumbPcScienceKids,
+        thumbDetailSp: ImgThumbSpDetailScienceKids,
+        description: '毎日あたり前のように見ている太陽。だけど、もしなくなったらどうなるの？<br />この講座では、太陽の正体やできているもの、はたらきについてわかりやすく学びます。<br />どんな星？どれくらい熱い？<br />そして、いつかなくなるって本当？宇宙と地球のつながりを楽しく学ぶ、理科の入門授業です！',
+        note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+      },
+      {
+        id: 'event07',
+        number: '07',
+        category: 'science',
+        target: 'teen',
+        titleShort: 'テクノロジーの心臓部って !?',
+        titleLong: 'テクノロジーの<br class="pcimage">心臓部って !?<br class="pcimage">～半導体のしくみと役割～',
+        date: '2025-12-26',
+        timeStart: '20:30',
+        timeEnd: '21:15',
+        thumbList: ImgThumbSpListScienceTeen,
+        thumbDetail: ImgThumbPcScienceTeen,
+        thumbDetailSp: ImgThumbSpDetailScienceTeen,
+        description: 'スマホやパソコン、ゲーム機の中で大活やくしている「半導体（はんどうたい）」って知っていますか？この講座では、半導体がどんな役割をもっているのか、なぜ"テクノロジーの心臓部"とよばれるのかをやさしく学びます。<br />身近な道具の中のすごい科学をのぞき見できる、ワクワクの授業です。',
+        note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+      }
+    ];
+
+    // 科目ラベルのマッピング
+    const subjectLabels = {
+      economy: { list: '経済', detail: '経済（お金）' },
+      philosophy: { list: '哲学', detail: '哲学（思考力）' },
+      science: { list: '科学', detail: '科学リテラシー' }
+    };
+
+    // 対象学年のマッピング
+    const targetLabels = {
+      child: { list: '小学生', detail: '小学3～6年生' },
+      teen: { list: '中高生', detail: '中高校生' }
+    };

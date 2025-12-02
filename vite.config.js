@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react'
 import path from 'path';
 import fs from 'fs';
 
@@ -30,6 +31,7 @@ const jsEntries = getEntries('src/js', ['.js']);
 const allEntries = { ...jsEntries, ...scssEntries };
 
 export default defineConfig({
+  plugins: [react()],
   root: 'dist', // Eleventy の出力を見る
   base: './',
   server: {
@@ -40,7 +42,9 @@ export default defineConfig({
     disableHostCheck: true, // これを追加するだけ
     allowedHosts: [
       'localhost',
-      'e5d8a51e2b0c.ngrok-free.app'  // エラーメッセージのホスト名をそのまま追加
+      '.lhr.life',
+      '.localhost.run',
+      '.ngrok-free.app'
     ],
     open: true
   },

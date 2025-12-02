@@ -1,0 +1,40 @@
+/* color */
+
+$cl-tankyu-green: #07b078;
+$cl-tankyu-green-dark: #125f45;
+$cl-tankyu-green-light: #b5e4a5;
+$cl-bg-creamyellow-dark: #fff2c4;
+
+$cl-philosophy-pale: #f4c66d;
+$cl-science-pale: #66cb88;
+$cl-economy-pale: #67d2e9;
+$cl-bg-creamyellow: #fff8e0;
+$cl-bg-creamyellow-dark: #fff2c4;
+$cl-border-brown: #d8d2bc;
+$cl-btn-cta: #f88c6a;
+$cl-title-underline: #febcad;
+$cl-merit-yellow: #f8d86a;
+$cl-feature-yellow: #fffb96;
+
+$categories: (
+  "philosophy": (
+    main-color: $cl-philosophy,
+    sp-main-color: $cl-philosophy,
+    pale-color: #fff8e0,
+  ),
+  "science": (
+    main-color: $cl-science-darken,
+    sp-main-color: $cl-science-darken,
+    pale-color: #f8ffea,
+  ),
+  "economy": (
+    main-color: $cl-economy,
+    sp-main-color: $cl-economy,
+    pale-color: #eaf6ff
+      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+  "special-detail": (
+    main-color: $cl-tankyu-green,
+    sp-main-color: $cl-tankyu-green,
+  ),
+);
