@@ -1,0 +1,96 @@
+
+//- LINE URL
+- var UrlLine = ''
+
+
+//- レッスン日程
+- var lessondate = '1/27(火)〜1/29(木)'
+
+
+//- 画像パス設定
+- var paths = '../../../images/18_lp-family'
+//- - var paths = 'https://waomirai.com/lp/assets/lpimages/18_lp-family';
+- var monthly_paths = '2026_01_january'
+
+//- 画像パス生成関数
+-
+  function img(filename) {
+    return `${paths}/${filename}`;
+  }
+
+
+//- サムネイル画像パス
+- var ImgThumbEconomyKids = img(monthly_paths + '/thumbnail-economy-kids.jpg')
+- var ImgThumbEconomyTeens = img(monthly_paths + '/thumbnail-economy-teens.jpg')
+- var ImgThumbScienceKids = img(monthly_paths + '/thumbnail-science-kids.jpg')
+- var ImgThumbScienceTeens = img(monthly_paths + '/thumbnail-science-teens.jpg')
+- var ImgThumbPhilosophyKids = img(monthly_paths + '/thumbnail-philosophy-kids.jpg')
+- var ImgThumbPhilosophyTeens = img(monthly_paths + '/thumbnail-philosophy-teens.jpg')
+
+
+//- イベントデータ
+-
+  var events = [
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyKids,
+      target: 'kids',
+      title: 'ランキングはなくしてしまった方がいい？～順位を決めなければ平等？～',
+      dateRaw: '2025-01-27',
+      time: '19:30～20:15',
+      description: '足が速い人、絵が上手な人、話がうまい人――こうした違いは「個性」？それとも「優劣」？この講座では、「個性」と「優劣」のちがいや、順位づけがない世界は本当に平等なのかを問い直します。人と比べることの意味や、自分の価値をどう考えるかを、みんなで深める哲学の時間です。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceKids,
+      target: 'kids',
+      title: '携帯ゲーム機の充電を長持ちさせるには?～最初に電池を作ったのはだれ? 電池の歴史～',
+      dateRaw: '2025-01-28',
+      time: '19:30～20:15',
+      description: '私たちの生活に欠かせない電池。最初に電池を作ったのはどんな人だったのでしょう？電池の歴史をたどりながら、携帯ゲーム機の充電を長持ちさせる工夫や、電池のしくみについて学びます。身近な科学を楽しく体験しよう！',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+        {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyKids,
+      target: 'kids',
+      title: '「アリとキリギリス」のアリは本当に正しいの?～貯金ばかりで大丈夫?～',
+      dateRaw: '2025-01-29',
+      time: '19:30～20:15',
+      description: '「アリとキリギリス」のお話では、一生けんめい貯めるアリが正しくて、遊ぶキリギリスはダメだと思われがち。でも本当にそうでしょうか？この講座では、貯金の大切さだけでなく、お金を使うことの意味も考えます。未来の自分のために、かしこいお金の使い方を学べる経済入門の授業です。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyTeens,
+      target: 'teens',
+      title: 'ラブソングで考える「愛」～愛され続ける「ラブソング」～',
+      dateRaw: '2025-01-27',
+      time: '20:30～21:15',
+      description: 'なぜ人は、昔からラブソングを作り、歌い続けるのでしょう？この講座では、人気のラブソングを手がかりに、「愛って何？」「誰かを愛するってどういうこと？」という問いをみんなで考えます。音楽を通して、人間関係や心の深い部分にふれる、哲学の時間です。',
+      note: '※授業終了後にワオ未来塾の説明会を開催致します。'
+    },
+ 
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceTeens,
+      target: 'teens',
+      title: '病気にならないための食事はあるのか?～体を丈夫にするための必要な栄養素～',
+      dateRaw: '2025-01-28',
+      time: '20:30～21:15',
+      description: '食事で健康を守ることはできるの？そんな疑問から、体を丈夫に保つために欠かせない栄養素や、バランスの良い食生活のポイントを探ります。病気になりにくい体づくりの秘訣を、科学的な視点から考えます。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    },
+
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyTeens,
+      target: 'teens',
+      title: 'お金の失敗をどう避けるか?～推し活との付き合い方～',
+      dateRaw: '2025-01-29',
+      time: '20:30～21:15',
+      description: '好きなアイドルやYouTuberを応援する推し活は、いまや多くの人にとって一般的なものとなりつつあります。明日を生きる力を「推し」から得ている人も多いでしょう。一方で、推し活のための限度を超えた支出によってトラブルに陥る人が増えていることにも注意が必要です。推し活の良い面と気を付けるべき点を考えましょう。',
+      note: '※授業終了後に保護者さま向けの説明会を開催致します。'
+    }
+  ]
