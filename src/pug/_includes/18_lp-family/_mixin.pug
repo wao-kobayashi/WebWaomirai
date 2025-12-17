@@ -1,13 +1,21 @@
 
 mixin fixed-btn
   .fixed-btn
-    a.js-line-trigger(href=UrlLine, target='_blank')
-        .fixed-btn-left
-          img(src=ImgIllustBtn, alt="")
-        .fixed-btn-text|LINEで無料申込
-        .fixed-btn-icn
+    a(
+      class=loycus ? '' : 'js-line-trigger'
+      href=loycus ? UrlLiffForm : false
+      target=loycus ? '_blank' : false
+    )
+      .fixed-btn-left
+        img(src=ImgIllustBtn, alt="")
+      .fixed-btn-text LINEで無料申込
+      .fixed-btn-icn
 mixin btn-cta 
-    a.btn-cta.js-line-trigger(href=UrlLine, target='_blank')
+    a.btn-cta(
+      class=loycus ? '' : 'js-line-trigger'
+      href=loycus ? UrlLiffForm : false
+      target=loycus ? '_blank' : false
+    )
         .btn-cta-left
           img(src=ImgIllustBtn, alt="")
         .btn-cta-text|LINEで無料申込
@@ -16,7 +24,33 @@ mixin btn-cta
 
 
 mixin modal
-  .modal(style='display:none;')
+  .modal#modal-alreadyfriend
+    .modal-wrapper 
+      .modal-wrapper-content
+         .modal-wrapper-content-title-alreadyfriend
+                |すでにワオ未来塾公式LINEを
+                br
+                |友だち追加している方へ
+         .modal-wrapper-content-main
+
+            .modal-wrapper-content-main-text-alreadyfriend
+              |イベントの申し込み案内が
+              br
+              |自動で届かない場合がございます
+              br
+              |その場合は
+              b|「イベント」
+              |とLINEで
+              br
+              |送信すると自動でフォームが届きます
+            .modal-wrapper-content-main-image-alreadyfriend
+              img(src=ImgModalEvent)
+            .modal-wrapper-content-main-btn 
+                a(href=UrlLine, target='_blank')
+                  |OKです(イベント申込へ)
+         .modal-wrapper-content-close.modal-close 
+                |閉じる
+  .modal#modal-pc-liff(style='display:none;')
     .modal-wrapper 
       .modal-wrapper-content
          .modal-wrapper-content-main
@@ -35,5 +69,6 @@ mixin modal
                         |送信されます
          .modal-wrapper-content-close.modal-close 
                 |閉じる
+  .bg-modal
   .bg-modal(style='display:none;')
 // +ModalEntlyLine

@@ -17,8 +17,11 @@ script.
     * モーダルウィンドウを開く関数
     * モーダルと背景を表示する
     */
-    function modalOpen() {
-      $('.modal, .bg-modal').show();
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+    function ModalAlreadyFriendOpen() {
+      $('#modal-alreadyfriend, .bg-modal').show();
     }
 
     /**
@@ -27,41 +30,28 @@ script.
     * PC: モーダルを開く動作
     * スマホ: 通常のリンク動作
     */
-    function updateButtonBehavior() {
-      // 769px以上をPC表示とみなす
-      var isWideScreen = $(window).width() >= 769;
+  function updateButtonBehavior() {
+    // 769px以上をPC表示とみなす
+    var isWideScreen = $(window).width() >= 769;
+    
+    // 全てのLINEトリガーのボタンに対して処理
+    $('.js-line-trigger').off('click').on('click', function(e) {
+      e.preventDefault(); // リンクを無効化
+      
+      if (isWideScreen) {
+        modalPcLiffOpen(); // PC表示の場合はこちらを実行
+      } else {
+        ModalAlreadyFriendOpen(); // スマホ表示の場合はこちらを実行
+      }
+    });
+  }
 
-      // 全てのLINEトリガーのボタンに対して処理
-      $('.js-line-trigger').each(function() {
-       
-        var $button = $(this);
-        
-        if (isWideScreen) {
-          // PC表示の場合
-          if ($button.attr('href')) {
-            // href属性を一時的にdata属性に退避し、通常のリンク動作を無効化
-            $button.data('href', $button.attr('href')).removeAttr('href');
-          }
-          // クリックイベントを一旦解除し、モーダルを開く処理を割り当て
-          $button.off('click').on('click', modalOpen);
-        } else {
-          // スマホ表示の場合
-          if ($button.data('href')) {
-            // 保存しておいたURLを元のhref属性に戻し、通常のリンク動作を有効化
-            $button.attr('href', $button.data('href')).removeData('href');
-          }
-          // クリックイベントを解除してデフォルトのリンク動作に戻す
-          $button.off('click');
-        }
-      });
-    }
-
-    /**
-    * 画面サイズ変更対応
-    * ページ読み込み時とリサイズ時にボタン動作を更新する
-    * これによりPC/スマホの表示切替時に適切な動作になる
-    */
-    $(window).on('load resize', updateButtonBehavior);
+  /**
+  * 画面サイズ変更対応
+  * ページ読み込み時とリサイズ時にボタン動作を更新する
+  * これによりPC/スマホの表示切替時に適切な動作になる
+  */
+  $(window).on('load resize', updateButtonBehavior);
 
     
     /**
