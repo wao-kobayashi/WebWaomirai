@@ -137,7 +137,7 @@ html
                   
                   // イベントタイトル
                   .lp-family-eventlist-wrapper-grid-item-content-title
-                    = event.title
+                    = event.titleShort
                   
                   // 日時情報
                   .lp-family-eventlist-wrapper-grid-item-content-datetime
@@ -216,7 +216,7 @@ html
               
               // イベント説明文
               .lp-family-eventdetail-content-top-right-text
-                = event.description
+                != event.description
                 // 注釈がある場合は表示
                 if event.note
                   br

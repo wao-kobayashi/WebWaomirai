@@ -24,9 +24,11 @@ mixin btn-cta
 
 
 mixin modal
-  .modal#modal-alreadyfriend
+  .modal#modal-alreadyfriend(style='display:none;')
     .modal-wrapper 
-      .modal-wrapper-content
+      .modal-wrapper-close
+          .modal-wrapper-close-icon.modal-close
+      .modal-wrapper-content   
          .modal-wrapper-content-title-alreadyfriend
                 |すでにワオ未来塾公式LINEを
                 br
@@ -36,20 +38,18 @@ mixin modal
             .modal-wrapper-content-main-text-alreadyfriend
               |イベントの申し込み案内が
               br
-              |自動で届かない場合がございます
+              |自動で届かない場合がございます。
               br
               |その場合は
               b|「イベント」
               |とLINEで
               br
-              |送信すると自動でフォームが届きます
+              |送信すると自動でフォームが届きます。
             .modal-wrapper-content-main-image-alreadyfriend
               img(src=ImgModalEvent)
-            .modal-wrapper-content-main-btn 
+            .modal-wrapper-content-main-btn-alreadyfriend
                 a(href=UrlLine, target='_blank')
                   |OKです(イベント申込へ)
-         .modal-wrapper-content-close.modal-close 
-                |閉じる
   .modal#modal-pc-liff(style='display:none;')
     .modal-wrapper 
       .modal-wrapper-content
@@ -69,6 +69,5 @@ mixin modal
                         |送信されます
          .modal-wrapper-content-close.modal-close 
                 |閉じる
-  .bg-modal
   .bg-modal(style='display:none;')
 // +ModalEntlyLine
