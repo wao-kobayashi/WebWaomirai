@@ -64,15 +64,29 @@ $z-indexes: (
       text-align: center;
       font-size: $font-size-m;
       line-height: $lineheight-normal;
-      padding: 10px 0 8px;
+      padding: 14px 0 12px;
       border-radius: 20px 20px 0 0;
       border: 2px solid $cl-waogreen;
+      .modal-wrapper-content-title-alreadyfriend-top {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        color: $cl-white;
+        margin: 0 0 0px;
+        div {
+          color: $cl-white;
+        }
+      }
+      .modal-wrapper-content-title-alreadyfriend-bottom {
+        color: $cl-white;
+      }
     }
     .modal-wrapper-content-main-text-alreadyfriend {
-      font-size: $font-size-s;
+      font-size: $font-size-m;
+      font-weight: bold;
       text-align: center;
       padding: 0 20px 20px;
-      line-height: $lineheight-relaxed;
+      line-height: $lineheight-normal;
       b {
         font-weight: bold;
       }

@@ -30,8 +30,12 @@ mixin modal
           .modal-wrapper-close-icon.modal-close
       .modal-wrapper-content   
          .modal-wrapper-content-title-alreadyfriend
-                |すでにワオ未来塾公式LINEを
-                br
+            .modal-wrapper-content-title-alreadyfriend-top
+                div|すでに
+                div 
+                  img(src=ImgIcnWaoLine)
+                div|ワオ未来塾公式LINEを
+            .modal-wrapper-content-title-alreadyfriend-bottom
                 |友だち追加している方へ
          .modal-wrapper-content-main
 
@@ -40,11 +44,7 @@ mixin modal
               br
               |自動で届かない場合がございます。
               br
-              |その場合は
-              b|「イベント」
-              |とLINEで
-              br
-              |送信すると自動でフォームが届きます。
+              |その場合は下記手順で申込ください。
             .modal-wrapper-content-main-image-alreadyfriend
               img(src=ImgModalEvent)
             .modal-wrapper-content-main-btn-alreadyfriend
