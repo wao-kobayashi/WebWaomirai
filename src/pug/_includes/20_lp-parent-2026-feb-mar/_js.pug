@@ -1,0 +1,116 @@
+script.
+  $(document).ready(function() { 
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('inview');
+      }
+    });
+    $(window).on("load scroll", function () {
+      if ($(this).scrollTop() > 600) {
+       $(".fixed-btn a").fadeIn();
+      } else {
+       $(".fixed-btn a").fadeOut();
+      }
+    });
+
+    /**
+    * モーダルウィンドウを開く関数
+    * モーダルと背景を表示する
+    */
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+    function ModalAlreadyFriendOpen() {
+      $('#modal-alreadyfriend, .bg-modal').show();
+    }
+
+    /**
+    * ボタン動作の更新関数
+    * 画面幅に応じてボタンの動作を切り替える
+    * PC: モーダルを開く動作
+    * スマホ: 通常のリンク動作
+    */
+  function updateButtonBehavior() {
+    // 769px以上をPC表示とみなす
+    var isWideScreen = $(window).width() >= 769;
+    
+    // 全てのLINEトリガーのボタンに対して処理
+    $('.js-line-trigger').off('click').on('click', function(e) {
+      e.preventDefault(); // リンクを無効化
+      
+      if (isWideScreen) {
+        modalPcLiffOpen(); // PC表示の場合はこちらを実行
+      } else {
+        ModalAlreadyFriendOpen(); // スマホ表示の場合はこちらを実行
+      }
+    });
+  }
+
+  /**
+  * 画面サイズ変更対応
+  * ページ読み込み時とリサイズ時にボタン動作を更新する
+  * これによりPC/スマホの表示切替時に適切な動作になる
+  */
+  $(window).on('load resize', updateButtonBehavior);
+
+    
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+    });
+   new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
+  });
+
+script.
+  // イベントタイトルの高さを揃える関数
+  function alignEventTitleHeights() {
+    const $titles = $('.lp-family-eventlist-wrapper-grid-item-content-title');
+    const breakpoint = 678;
+    const currentWidth = $(window).width();
+    
+    // 一旦すべてのタイトルの高さをリセット
+    $titles.css('height', 'auto');
+    
+    // グループサイズを決定（PC: 3個ずつ、SP: 2個ずつ）
+    const groupSize = currentWidth > breakpoint ? 3 : 2;
+    
+    // グループごとに処理
+    for (let i = 0; i < $titles.length; i += groupSize) {
+      const $group = $titles.slice(i, i + groupSize);
+      
+      // グループ内の最大高さを取得
+      let maxHeight = 0;
+      $group.each(function() {
+        const height = $(this).outerHeight();
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+      
+      // グループ内のすべてのタイトルに最大高さを適用
+      $group.css('height', maxHeight + 'px');
+    }
+  }
+
+
+    // DOMの準備完了後に実行
+    $(document).ready(function() {
+      alignEventTitleHeights();
+    });
+
+    // リサイズ時に再実行（デバウンス処理付き）
+    let resizeTimer;
+    $(window).on('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        alignEventTitleHeights();
+      }, 250);
+    });
+
+    // 画像読み込み完了後にも実行
+    $(window).on('load', function() {
+      alignEventTitleHeights();
+    });

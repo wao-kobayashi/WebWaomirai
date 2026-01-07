@@ -1,0 +1,25 @@
+//授業日時のフォーマット関数
+-
+  function formatDate(dateStr, format) {
+    if (!dateStr) return '';
+    
+    const date = new Date(dateStr);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+    const weekday = weekdays[date.getDay()];
+    
+    switch(format) {
+      case 'full':
+        return `${year}年${month}月${day}日(${weekday})`;
+      case 'short':
+        return `${month}/${day}(${weekday})`;
+      case 'numeric':
+        return `${month}月${day}日(${weekday})`;
+      case 'slash':
+        return `${year}/${month}/${day}`;
+      default:
+        return dateStr;
+    }
+  }
