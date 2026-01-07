@@ -29,17 +29,15 @@ $z-indexes: (
 
     .modal-wrapper-close {
       position: absolute;
-      right: -10px;
-      top: -10px;
+      right: 10px;
+      top: 10px;
       z-index: z("modalclose");
-      width: 40px;
-      height: 40px;
+      width: 20px;
+      height: 20px;
 
       .modal-wrapper-close-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        background: rgba(0, 0, 0, 0.9);
+        width: 20px;
+        height: 20px;
         transition: 0.2s ease-in-out;
         position: relative;
         cursor: pointer;
@@ -50,8 +48,7 @@ $z-indexes: (
           top: 50%;
           left: 50%;
           width: 20px;
-          height: 4px;
-          border-radius: 2px;
+          height: 2px;
           background: #fff;
           transform-origin: center;
           transform: translate(-50%, -50%) rotate(45deg);
@@ -61,7 +58,68 @@ $z-indexes: (
         }
       }
     }
+    .modal-wrapper-content-title-alreadyfriend {
+      background: $cl-waogreen;
+      color: $cl-white;
+      text-align: center;
+      font-size: $font-size-m;
+      line-height: $lineheight-normal;
+      padding: 14px 0 12px;
+      border-radius: 20px 20px 0 0;
+      border: 2px solid $cl-waogreen;
+      .modal-wrapper-content-title-alreadyfriend-top {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        color: $cl-white;
+        margin: 0 0 0px;
+        div {
+          color: $cl-white;
+        }
+      }
+      .modal-wrapper-content-title-alreadyfriend-bottom {
+        color: $cl-white;
+      }
+    }
+    .modal-wrapper-content-main-text-alreadyfriend {
+      font-size: $font-size-m;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 20px 20px;
+      line-height: $lineheight-normal;
+      b {
+        font-weight: bold;
+      }
+    }
+    .modal-wrapper-content-main-image-alreadyfriend img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .modal-wrapper-content-main-btn-alreadyfriend a {
+      position: relative;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 55px;
+      margin: 30px auto 30px;
+      padding: 0;
+      border-radius: $border-radius-big;
+      background: $cl-btn-cta;
+      color: $cl-white;
+      font-size: $font-size-l;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 0 0 #da613b;
+      transition: 0.2s ease-in-out;
 
+      &:hover {
+        background: darken($cl-btn-cta, 10%);
+      }
+    }
     .modal-wrapper-content-main {
       position: relative;
       border-radius: 20px 20px 0 0;
