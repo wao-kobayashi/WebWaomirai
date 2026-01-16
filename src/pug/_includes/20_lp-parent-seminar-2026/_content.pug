@@ -20,8 +20,8 @@ html
     - const cssBase = loycus ? '../../../css/' : '../../css/'
     - const cssLocal = loycus ? '' : ''
 
-    link(href=`${cssBase}18_lp-family.css?v=${Date.now()}`, rel="stylesheet")
-    link(href=`${cssLocal}18_lp-family.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssBase}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
 
     meta(property="og:image", content=ImgOgp)
     title 【ワオ未来塾】親子で参加♪授業体験＆説明会｜#{lessondate}
@@ -29,67 +29,110 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
-    //01メインビジュアル(PC)
-    .bg-blur.bg-blur-01.philosophy
-      |aa
-    //- header 
-    //-   img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-    //- section.lp-family-fvpc
-    //-     .lp-family-fvpc-main 
-    //-       .lp-family-fvpc-main-logo 
-    //-           img(src=ImgLogoFvPc)
-    //-       .lp-family-fvpc-main-text 
-    //-           |親子で楽しめるワオ未来塾の“考える力”の体験授業。
-    //-           br
-    //-           |哲学で問いを深め、科学で世界を探り、経済で社会をひもとく。
-    //-           br
-    //-           |未来を生きる力を一緒に体感してみませんか？
-    //-       .lp-family-fvpc-main-target 
-    //-           |日時：
-    //-           =lessondate
-    //-       .lp-family-fvpc-main-target
-    //-           |対象：小〜高校生とその保護者
-    //-     .lp-family-fvpc-main-illust01
-    //-       img(src=ImgIllustFv01FamilyNormal)
-    //-     .lp-family-fvpc-main-illust02
-    //-       img(src=ImgIllustFv02FamilyStand)
-    //-     .lp-family-fvpc-main-illust03
-    //-         img(src=ImgIllustFv03Online)
-    //-     .lp-family-fvpc-main-illust04
-    //-         img(src=ImgIllustFv04Question)
-    //-     .lp-family-fvpc-main-illust05
-    //-       img(src=ImgIllustFv05Book)
-    //-     .lp-family-fvpc-main-illust06
-    //-         img(src=ImgIllustFv06Bank)
-    //- section.lp-family-fvsp
-    //-   .lp-family-fvsp-img 
-    //-     .lp-family-fvsp-img-main
-    //-       img(src=ImgFvSp)
-    //-     .lp-family-fvsp-img-illust01
-    //-         img(src=ImgIllustFv04Question)
-    //-     .lp-family-fvsp-img-illust02
-    //-       img(src=ImgIllustFv05Book)
-    //-     .lp-family-fvsp-img-illust03
-    //-         img(src=ImgIllustFv06Bank)
-    //-   .lp-family-fvsp-main-text 
-    //-           |親子で楽しめるワオ未来塾の
-    //-           br
-    //-           |“考える力”の体験授業。
-    //-           br
-    //-           br
-    //-           |哲学で問いを深め、科学で世界を探り、
-    //-           br
-    //-           |経済で社会をひもとく。
-    //-           br
-    //-           br
-    //-           |未来を生きる力を
-    //-           br
-    //-           |一緒に体感してみませんか？
-    //-   .lp-family-fvsp-main-target 
-    //-           |日時：
-    //-           =lessondate
-    //-   .lp-family-fvsp-main-target
-    //-           |対象：小〜高校生とその保護者
+    .pc-left.pcimage
+       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    .pc-right.pcimage
+     .pc-right-content
+        .pc-right-title 
+          |INDEX
+          span|オンラインセミナー一覧
+        .pc-right-content
+          .pc-right-content-link 
+            a(href='#philosophy') 
+              .pc-right-content-link-number 
+                |#01
+              .pc-right-content-link-text 
+                |正解のない時代の歩き方
+                br
+                span|〜哲学（思考力）からアプローチする～
+          .pc-right-content-link 
+            a(href='#philosophy') 
+              .pc-right-content-link-number 
+                |#01
+              .pc-right-content-link-text 
+                |正解のない時代の歩き方
+                br
+                span|〜哲学（思考力）からアプローチする～
+          .pc-right-content-link 
+            a(href='#philosophy') 
+              .pc-right-content-link-number 
+                |#01
+              .pc-right-content-link-text 
+                |正解のない時代の歩き方
+                br
+                span|〜哲学（思考力）からアプローチする～             
+        .pc-right-content-cta
+          //- +btn-cta 
+    .main-content
+       .fv 
+          .fv-logo 
+            
+          .fv-subtitle
+           img(src=ImgFvSubtile)
+          h1 
+            span.sub
+              |AI時代を生き抜く
+            span.main
+              |子どもに本当に
+              br
+              |必要な学びとは
+          .fv-img
+            img(src=ImgFv)
+       .infotable
+        .infotable-column
+          .infotable-column-title   
+            |対象
+          .infotable-column-content
+            |小学３年～高校生の子を持つ保護者
+        .infotable-column
+          .infotable-column-title
+            |日時
+          .infotable-column-content
+            |2026年2月
+            br
+            span|※詳細な日程は各セミナー日時をご確認ください
+        .infotable-column
+          .infotable-column-title
+            |費用
+          .infotable-column-content
+            |無料
+        .infotable-column
+          .infotable-column-title
+            |場所
+          .infotable-column-content
+            |Zoomウェビナー(オンライン)
+       .goal
+         .goal-title 
+           |セミナーのゴール
+         .goal-table 
+            .goal-table-row
+              .goal-table-row-number
+                  |1.
+              .goal-table-row-content
+                  |AI時代、企業が本当に求めている
+                  b|「これからの社会に必要な力」
+                  |の正体がわかる。
+            .goal-table-row
+              .goal-table-row-number
+                  |2.
+              .goal-table-row-content
+                  b|大学入試に、その力がどのように必要
+                  |とされているかがわかる。
+            .goal-table-row
+              .goal-table-row-number
+                  |3.
+              .goal-table-row-content
+                  |親として、明日から
+                  b|お子さまに「どんな言葉」をかければよいか
+                  |がわかる。
+       .main-content-wrapper 
+    .pc-bg
+      .bg-blur.pc-bg-blur-01.philosophy
+      .bg-blur.pc-bg-blur-02.science
+      .bg-blur.pc-bg-blur-03.economy
+      .bg-blur.pc-bg-blur-04.philosophy
+      .bg-blur.pc-bg-blur-05.science
+      .bg-blur.pc-bg-blur-06.economy
     //- // イベント一覧セクション
     //- section.lp-family-eventlist 
     //-   .lp-family-eventlist-section.inview-hide.inview-triger

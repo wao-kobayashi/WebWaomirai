@@ -1,0 +1,14 @@
+.bg-blur {
+  opacity: 0.5;
+  margin: 100px 0 100px 100px;
+  border-radius: 1000px;
+  &.philosophy {
+    background: $cl-philosophy;
+  }
+  &.science {
+    background: $cl-science;
+  }
+  &.economy {
+    background: $cl-economy;
+  }
+}

@@ -1,0 +1,14 @@
+@import "foundation/_base"; //ベースのcss、フォントなどの定義
+@import "foundation/_mixin"; //よく使う関数など定義したもの
+@import "foundation/_constant"; //色などの変数定義
+@import "foundation/_wpstyle"; //色などの変数定義
+@import "foundation/_reset"; //デフォルトのスタイルをリセットしたもの
+@import "object/project/project-lp-parent-seminar-2026/_settings-colors.scss"; //エフェクト設定
+@import "object/project/project-lp-parent-seminar-2026/_settings-typographic.scss"; //タイポグラフィ設定
+@import "object/project/project-lp-parent-seminar-2026/_settings-animation"; //アニメーション設定
+@import "object/project/project-lp-parent-seminar-2026/_settings-effects.scss"; //エフェクト設定
+@import "object/project/project-lp-parent-seminar-2026/_settings-layout.scss"; //レイアウト設定
+@import "object/project/project-lp-parent-seminar-2026/_parts-modal.scss"; //テーブル
+@import "object/project/project-lp-parent-seminar-2026/_parts-button.scss"; //ボタン
+@import "object/project/project-lp-parent-seminar-2026/_parts-blur.scss"; //ブラー
+@import "object/project/project-lp-parent-seminar-2026/_main";
