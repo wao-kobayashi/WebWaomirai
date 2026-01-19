@@ -137,7 +137,11 @@ html
               span|」
               |が変わる
             .introduction-img 
-               img(src=ImgIntro)
+              .introduction-img-photo
+                 img(src=ImgIntro)
+              .bg-blur.pc-bg-blur-01.philosophy
+              .bg-blur.pc-bg-blur-02.science
+              .bg-blur.pc-bg-blur-03.economy
             .introduction-text 
                 |AIに「答え」を委ねるか、自ら「価値」を創り出すか。今、教育の世界で大きなパラダイムシフトが起きています 。 かつて高く評価された「決まった業務を効率よく処理する能力」は、今やAIが最も得意とする領域になりました 。
                 br
@@ -174,18 +178,78 @@ html
                          |を解き明かす
              section.seminar-blocks-content#teacher 
                 .seminar-blocks-content-box
-                  |今回３つのセミナーを
-                  br
-                  |担当する講師紹介
-             section.seminar-blocks-content#philosophy 
+                  .seminar-blocks-content-box-subtitle-eng 
+                     |TEACHER
+                  .seminar-blocks-content-box-title-teacher 
+                      |今回３つのセミナーを
+                      br
+                      |担当する講師紹介
+                  .seminar-blocks-content-box-teacher 
+                      .seminar-blocks-content-box-teacher-left
+                          img(src=ImgTeacher) 
+                      .seminar-blocks-content-box-teacher-right 
+                          .seminar-blocks-content-box-teacher-right-job 
+                             |ワオ未来塾事業責任者 / 講師
+                          .seminar-blocks-content-box-teacher-right-name 
+                            |松木 和也
+                          .seminar-blocks-content-box-teacher-right-english 
+                            |Kazuya Matsuki
+                  .seminar-blocks-content-box-text 
+                     |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+                     br
+                     |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+                .bg-blur.pc-bg-blur-01.philosophy
+                .bg-blur.pc-bg-blur-02.science
+                .bg-blur.pc-bg-blur-03.economy
+             each seminar in seminars
+              section.seminar-blocks-content.seminar-blocks-content-subject(id=seminar.id)
                 .seminar-blocks-content-box
-                  |正解のない時代の歩き方
-             section.seminar-blocks-content#science 
-                .seminar-blocks-content-box
-                  |事実を見極め「納得解」を導く力
-             section.seminar-blocks-content#economy
-                .seminar-blocks-content-box
-                  |社会の「仕組み」を解き明かす力
+                  .seminar-blocks-content-box-subtitle-eng
+                    |seminar #{seminar.seminarNumber}
+                  if seminar.subtitle
+                    .seminar-blocks-content-box-subtitle-seminar
+                      |#{seminar.subtitle}
+                  if seminar.title
+                    .seminar-blocks-content-box-title
+                      !=seminar.title
+                  .seminar-blocks-content-box-img
+                    img(src=seminar.image)
+                  
+                  //こんな方におすすめ
+                  if seminar.recommendation
+                    .seminar-blocks-content-box-note
+                      .seminar-blocks-content-box-note-head
+                        .seminar-blocks-content-box-note-head-icn
+                          img(src=ImgIcnFamily)
+                        .seminar-blocks-content-box-note-head-title
+                          |こんな方にオススメ
+                      .seminar-blocks-content-box-note-content
+                        p!=seminar.recommendation
+                  
+                  //開催日時
+                  if seminar.schedules.length > 0
+                    .seminar-blocks-content-box-note
+                      .seminar-blocks-content-box-note-head
+                        .seminar-blocks-content-box-note-head-icn
+                          img(src=ImgIcnCalender)
+                        .seminar-blocks-content-box-note-head-title
+                          |開催日時
+                      .seminar-blocks-content-box-note-content
+                        .seminar-blocks-content-box-note-content-schedule
+                          each schedule in seminar.schedules
+                            .seminar-blocks-content-box-note-content-schedule-date
+                              |#{schedule}
+                        .seminar-blocks-content-box-note-content-note
+                          |※各回45分の開催です
+                          br
+                          |※同じ内容です。お好きな日程をお選びください
+                  
+                  if seminar.description
+                    .seminar-blocks-content-box-text
+                      !=seminar.description
+                
+                .bg-blur.pc-bg-blur-01(class=seminar.className)
+                .bg-blur.pc-bg-blur-02(class=seminar.className)
          //かんたん5STEP
          section.join-5steps 
             .join-5steps-title 
@@ -288,7 +352,7 @@ html
                    .faq-content-answer-left|A
                    .faq-content-answer-right
                      |ウェビナー形式ですので顔出しは不要です
-         //06 ワオ未来塾って？
+         //ワオ未来塾って？
          section.about-wao
             .about-wao-title
               |ワオ未来塾って？
@@ -302,7 +366,7 @@ html
                 br
                 br
                 |半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
-         //07 授業の特徴
+         //授業の特徴
          section.about-feature
           .about-feature-title
             |授業の特長
@@ -324,7 +388,7 @@ html
                 |必要なのは
                 br
                 |PCかタブレットだけ！                 
-         //08 2025年4月開講
+         //ワオ未来塾
          section.about-school
            .about-school-catch 
               |社会で役立つ学びを、オンラインで今始めよう
@@ -389,344 +453,6 @@ html
       .bg-blur.pc-bg-blur-04.philosophy
       .bg-blur.pc-bg-blur-05.science
       .bg-blur.pc-bg-blur-06.economy
-    //- // イベント一覧セクション
-    //- section.lp-family-eventlist 
-    //-   .lp-family-eventlist-section
-    //-     .lp-family-eventlist-wrapper 
-    //-       // セクションタイトルエリア
-    //-       .lp-family-eventlist-wrapper-title 
-    //-         // 装飾イラスト1（本のアイコン）
-    //-         .lp-family-eventlist-wrapper-title-illust01
-    //-           img(src=ImgIllustFv05Book)
-    //-         // 装飾イラスト2（銀行のアイコン）
-    //-         .lp-family-eventlist-wrapper-title-illust02
-    //-           img(src=ImgIllustFv06Bank)
-    //-         // タイトルテキスト
-    //-         .lp-family-eventlist-wrapper-title-text
-    //-           .lp-family-eventlist-wrapper-title-text-img
-    //-             img(src=ImgTitleTryLesson)
-    //-           // 注釈：複数授業受講可能
-    //-           .lp-family-eventlist-wrapper-title-text-note
-    //-             |※複数の授業を受講可能です
-          
-    //-       // イベントカードのグリッドレイアウト
-    //-       .lp-family-eventlist-wrapper-grid 
-    //-         // 各イベントをループ処理
-    //-         each event in events
-    //-           // イベントカード（IDをクラスとして付与）
-    //-           .lp-family-eventlist-wrapper-grid-item(class=event.id)
-    //-             // サムネイル画像
-    //-             .lp-family-eventlist-wrapper-grid-item-img
-    //-               img(src=event.thumbnail)
-                
-    //-             // カードコンテンツ
-    //-             .lp-family-eventlist-wrapper-grid-item-content
-    //-               // カテゴリー表示（科目・対象学年）
-    //-               .lp-family-eventlist-wrapper-grid-item-content-category
-    //-                 // 科目ラベル
-    //-                 .lp-family-eventlist-wrapper-grid-item-content-category-child.subject
-    //-                   if event.id === 'science'
-    //-                     |科学
-    //-                   else if event.id === 'economy'
-    //-                     |経済
-    //-                   else if event.id === 'philosophy'
-    //-                     |哲学
-    //-                 // 対象学年ラベル
-    //-                 .lp-family-eventlist-wrapper-grid-item-content-category-child.target
-    //-                   if event.target === 'kids'
-    //-                     |小学生
-    //-                   else if event.target === 'teens'
-    //-                     |中高生
-                  
-    //-               // イベントタイトル
-    //-               .lp-family-eventlist-wrapper-grid-item-content-title
-    //-                 = event.titleShort
-                  
-    //-               // 日時情報
-    //-               .lp-family-eventlist-wrapper-grid-item-content-datetime
-    //-                 // 日付（SP表示は短縮形式、PC表示は数値形式）
-    //-                 .lp-family-eventlist-wrapper-grid-item-content-datetime-date 
-
-    //-                 // 時計アイコン
-    //-                 .lp-family-eventlist-wrapper-grid-item-content-datetime-icon 
-    //-                   img(src=ImgIcnClock)
-    //-                 // 時刻
-    //-                 .lp-family-eventlist-wrapper-grid-item-content-datetime-time
-    //-                     = event.time
-                  
-    //-               // 詳細ページへのリンク
-    //-               .lp-family-eventlist-wrapper-grid-item-content-link 
-    //-                 a(href=`#event0${events.indexOf(event) + 1}`) 
-    //-                   |詳細を見る
-        
-    //-     // CTAボタン（Mixinで定義されたコンポーネント）
-    //-     +btn-cta 
-
-    //- //03 イベントの詳細
-    //- section.lp-family-eventdetail 
-    //-   // 各イベントの詳細をループ処理
-    //-   each event, index in events
-    //-     // 詳細コンテンツ（ID付与でアンカーリンク先に）
-    //-     .lp-family-eventdetail-content(class=event.id, id=`event${(index + 1).toString().padStart(2, '0')}`)
-    //-       // 上部エリア（画像・基本情報）
-    //-       .lp-family-eventdetail-content-top
-    //-         // 左側：サムネイル画像（PC表示のみ）
-    //-         .lp-family-eventdetail-content-top-left.pcimage
-    //-           .lp-family-eventdetail-content-top-left-img
-    //-             img(src=event.thumbnail)
-            
-    //-         // 右側：詳細情報
-    //-         .lp-family-eventdetail-content-top-right
-    //-           // カテゴリー表示
-    //-           .lp-family-eventdetail-content-top-right-category 
-    //-             // 科目ラベル（詳細版）
-    //-             .lp-family-eventdetail-content-top-right-category-child.subject 
-    //-                   if event.id === 'science'
-    //-                     |科学リテラシー
-    //-                   else if event.id === 'economy'
-    //-                     |経済(お金)
-    //-                   else if event.id === 'philosophy'
-    //-                     |哲学（思考力）
-    //-             // 対象学年ラベル（詳細版）
-    //-             .lp-family-eventdetail-content-top-right-category-child.target
-    //-                   if event.target === 'kids'
-    //-                     |小学生向け
-    //-                   else if event.target === 'teens'
-    //-                     |中高校生向け
-              
-    //-           // イベントタイトル
-    //-           .lp-family-eventdetail-content-top-right-title
-    //-             = event.title
-              
-    //-           // サムネイル画像（SP表示のみ）
-    //-           .lp-family-eventdetail-content-top-right-img.spimage
-    //-             img(src=event.thumbnail)
-              
-    //-           // 日時情報
-    //-           .lp-family-eventdetail-content-top-right-datetime
-    //-             // 日付（完全形式）
-    //-             .lp-family-eventdetail-content-top-right-datetime-date 
-    //-             // 時計アイコン
-    //-             .lp-family-eventdetail-content-top-right-datetime-icon
-    //-               img(src=ImgIcnClock)
-    //-             // 時刻
-    //-             .lp-family-eventdetail-content-top-right-datetime-time
-    //-               = event.time
-              
-    //-           // イベント説明文
-    //-           .lp-family-eventdetail-content-top-right-text
-    //-             != event.description
-    //-             // 注釈がある場合は表示
-    //-             if event.note
-    //-               br
-    //-               p.lp-family-eventdetail-content-top-right-text-note
-    //-                = event.note
-              
-    //-           // アーカイブエリア（現在は空）
-    //-           .lp-family-eventdetail-content-top-right-archive
-          
-    //- //04 こんなあなたにオススメです！
-    //- section.lp-family-recommend
-    //-   .c-title-25feb-lp 
-    //-     |こんなあなたに
-    //-     br.spimage
-    //-     |オススメです！
-    //-   .lp-family-recommend
-    //-     .lp-family-recommend-left.pcimage
-    //-         img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_3person.png')
-    //-     .lp-family-recommend-right
-    //-       //親子
-    //-       .lp-family-recommend-right-child
-    //-         .lp-family-recommend-right-child-icon.pcimage
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_child.png')
-    //-         .lp-family-recommend-right-child-icon.spimage
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_child.svg')
-    //-         .lp-family-recommend-right-child-text
-    //-             div ⚪︎学校の勉強だけじゃものたりない
-    //-             div ⚪︎好奇心がとまらない
-    //-             div ⚪︎総合型選抜も見据えた学びがしたい
-    //-       .lp-family-recommend-right-child
-    //-         .lp-family-recommend-right-child-icon.pcimage
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom_and_papa.png')
-    //-         .lp-family-recommend-right-child-icon.spimage
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_voice_family.svg')
-    //-         .lp-family-recommend-right-child-text
-    //-             div 
-    //-               |⚪︎子どもももちろんだけど、
-    //-               br.pcimage
-    //-               |親だって一緒に学びたい
-    //-             div|⚪︎子どもと話し合えるきっかけがほしい
-    //-             div|⚪︎自立した大人になってほしい
-            
-    //-   .lp-family-point
-    //-     .lp-family-point-left 
-    //-       |POINT!
-    //-     .lp-family-point-right
-    //-         |ワオ未来塾の授業は推奨学年はありますが、
-    //-         br.pcimage
-    //-         |大人も子どもも楽しめるコンテンツ。
-    //-         br
-    //-         |授業が終わるころには、
-    //-         br.pcimage
-    //-         |ちょっと世の中の見え方が変わってくる！
-
-    //- //05 5stepで参加可能
-    //- section.lp-family-howto.c-bg-section-white
-    //-   .lp-family-howto-title 
-    //-     |カンタン
-    //-     span.large|5
-    //-     |STEP
-    //-     br.spimage
-    //-     |で参加可能
-    //-   .lp-family-howto-img 
-    //-         img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/illust_family_mom.png')
-
-    //-   -
-    //-       var steps = [{
-    //-         iconimg: ImgIcnStep01,
-    //-         number: '1.',
-    //-         title: 'LINEで公式アカウントを友だち追加',
-    //-          text: `<span class="pcimage">まず、二次元コードから</span>
-    //-       スマートフォンで公式アカウントを友だちに追加してください。<br />
-    //-       <span class="spimage">
-    //-         ・友だち追加は
-    //-         <a href="${UrlLine}" class="js-line-trigger" style="cursor:pointer; text-decoration:underline;">こちら</a>
-    //-       </span>
-    //-       <span class="pcimage">
-    //-         ・友だち追加は
-    //-         <a class="js-line-trigger" style="cursor:pointer; text-decoration:underline;">こちら</a>から
-    //-       </span>`
-    //-       },
-    //-       {
-    //-         iconimg: ImgIcnStep02,
-    //-         number: '2.',
-    //-         title: '友だち登録後、LINEのトーク画面に送られる申し込みフォームをタップ！'
-    //-       },
-    //-       {
-    //-         iconimg:  ImgIcnStep03,
-    //-         number: '3.',
-    //-         title: '参加したいイベントを選び、必要な情報を記入して「申込」をタップ'
-    //-       },
-    //-       {
-    //-         iconimg: ImgIcnStep04,
-    //-         number: '4.',
-    //-         title: 'イベント前日にLINEメッセージでイベントURLをお送りします'
-    //-       },
-    //-       {
-    //-         iconimg: ImgIcnStep05,
-    //-         number: '5.',
-    //-         title: '開催時間になったら届いたイベントURLから参加しましょう！'
-    //-       }]
-    //-   each step in steps
-    //-     .lp-family-howto-step 
-    //-       .lp-family-howto-step-child 
-    //-         .lp-family-howto-step-child-icon 
-    //-           img(src=step.iconimg)
-    //-         .lp-family-howto-step-child-number 
-    //-           |#{step.number}
-    //-         .lp-family-howto-step-child-text
-    //-           .lp-family-howto-step-child-text-title
-    //-             != step.title
-    //-           .lp-family-howto-step-child-text-detail
-    //-             != step.text        
-    //-   //登録するためのアイコン
-
-    //-   //CTA
-    //-   +btn-cta
-    //- //06 ワオ未来塾って？
-    //- section.lp-family-about
-    //-     .c-title-25feb-lp 
-    //-       |ワオ未来塾って？
-    //-     .lp-family-about-box 
-    //-         .lp-family-about-box-left 
-    //-           img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/logo_wao.svg')
-    //-         .lp-family-about-box-right
-    //-             |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
-    //- //07 授業の特徴
-    //- section.lp-family-feature
-    //-   .c-title-25feb-lp 
-    //-     |授業の特長
-    //-   div
-    //-     .lp-family-feature-child 
-    //-       i.fa-solid.fa-globe
-    //-       |オンライン授業で
-    //-       br.spimage
-    //-       |全国どこからでも
-    //-       br.spimage
-    //-       |参加OK
-    //-     .lp-family-feature-child 
-    //-       i.fa-regular.fa-comments
-    //-       |ライブだからチャットで授業に参加できる!
-    //-     .lp-family-feature-child 
-    //-       .lp-family-feature-child-icons 
-    //-         i.fa-solid.fa-laptop
-    //-       |必要なのはPCか
-    //-       br.spimage
-    //-       |タブレット端末だけ！
-                
-    //- //08 2025年4月開講
-    //- section.lp-family-start2025
-    //-    .about-school-catch 
-    //-       |社会で役立つ学びを、
-    //-       br.spimage
-    //-       |オンラインで今始めよう
-    //-    .about-school-logo 
-    //-       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-    //-    .about-school-target 
-    //-       |〈対象〉
-    //-       br.spimage
-    //-       |小学3〜6年生／
-    //-       br.spimage
-    //-       |中学生／高校生
-    //-    .about-school-feature 
-    //-      .about-school-feature-box
-    //-        .about-school-feature-box-title  
-    //-          .about-school-feature-box-title-icon   
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-    //-          .about-school-feature-box-title-text 
-    //-             |新しい学び
-    //-        .about-school-feature-box-text 
-    //-           |これから必要になる自己肯定感を養う「哲学」、正しく物事目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」を身につけます。
-    //-      .about-school-feature-box
-    //-        .about-school-feature-box-title  
-    //-          .about-school-feature-box-title-icon   
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-    //-          .about-school-feature-box-title-text 
-    //-             |飛び級制
-    //-        .about-school-feature-box-text 
-    //-           |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
-    //-      .about-school-feature-box
-    //-        .about-school-feature-box-title  
-    //-          .about-school-feature-box-title-icon   
-    //-             img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
-    //-          .about-school-feature-box-title-text 
-    //-             |オンラインライブ授業
-    //-        .about-school-feature-box-text 
-    //-           |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
-    //-     .about-school-btn
-    //-       a(href='https://waomirai.com/', target='_blank')
-    //-         .about-school-btn-text 
-    //-           |ワオ未来塾の公式サイトへ     
-    //-         .about-school-btn-icn 
-    //-           img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
-    //- //素材シリーズ
-    //- footer 
-    //-   ul 
-    //-     li 
-    //-       a(href="https://www.wao-corp.com/", target='_blank')
-    //-         |会社概要
-    //-     li 
-    //-       a(href="https://www.wao-corp.com/kojin/", target='_blank')
-    //-          |プライバシーポリシー
-    //-     li
-    //-       a(href="https://waomirai.com/commerce_law/", target='_blank')
-    //-         |特定商取引に基づく表記
-    //-   .footer-logo 
-    //-     img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
-    //-   .footer-copyright
-    //-     |© ワオ・コーポレーション All rights reserved.
-
-    //- //JS読込
-    //- include _js
-    //- +modal
-    //- +fixed-btn
+  
+//js
+include _js

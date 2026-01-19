@@ -165,17 +165,21 @@
 }
 
 .main-content-wrapper {
-  width: calc(100% - 50px);
+  width: 100%;
+  // overflow: hidden;
   margin: 30px auto 0;
   background: $cl-white;
   border-radius: $border-radius-big;
   @include box-shadow-small;
+  @include min-responsive-style($breakpoint-sp) {
+    width: calc(100% - 50px);
+  }
 }
 
 section.introduction {
-  @include content-width;
-  padding: 30px 0 0;
+  padding: 30px 30px 0;
   margin: 30px auto 0;
+  overflow: hidden;
   .introduction-title {
     @include catch-copytitle;
     font-weight: 800;
@@ -188,7 +192,35 @@ section.introduction {
     }
   }
   .introduction-img {
-    margin: 0 auto 55px;
+    position: relative;
+    margin: 0px auto 30px;
+    .introduction-img-photo {
+      position: relative;
+      z-index: 10;
+    }
+    .bg-blur {
+      position: absolute;
+      z-index: 1;
+      filter: blur(30px);
+    }
+    .bg-blur.pc-bg-blur-01 {
+      top: -7%;
+      right: -10%;
+      @include square-size-px(200);
+      opacity: 0.3;
+    }
+    .bg-blur.pc-bg-blur-02 {
+      top: -23%;
+      left: -43%;
+      @include square-size-px(200);
+      opacity: 0.2;
+    }
+    .bg-blur.pc-bg-blur-03 {
+      bottom: -23%;
+      left: -43%;
+      @include square-size-px(160);
+      opacity: 0.2;
+    }
   }
   .introduction-text {
     font-size: $font-size-m;
@@ -198,10 +230,99 @@ section.introduction {
   }
 }
 
+//セミナーとかのマージン変数
+%seminar-blocks-margin {
+  width: calc(100% - 30px);
+}
+
+.seminar-blocks-sticky-links {
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: $cl-white;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+  margin: 0px auto 0px !important;
+  padding: 9px 20px !important;
+
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+  li {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $cl-graylightest;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+//blurのデザイン
+.seminar-blocks-content#teacher {
+  overflow: hidden;
+  .bg-blur {
+    position: absolute;
+    z-index: 1;
+    filter: blur(30px);
+  }
+  .pc-bg-blur-01 {
+    top: -15%;
+    right: -10%;
+    @include square-size-px(200);
+
+    opacity: 0.3;
+  }
+  .pc-bg-blur-02 {
+    top: 2%;
+    left: -37%;
+    width: 37vw;
+    height: 37vw;
+    @include square-size-px(200);
+    opacity: 0.5;
+  }
+  .pc-bg-blur-03 {
+    top: 15%;
+    right: -37%;
+    width: 37vw;
+    height: 37vw;
+    @include square-size-px(140);
+    opacity: 0.5;
+  }
+}
+.seminar-blocks-content-subject {
+  .bg-blur {
+    position: absolute;
+    z-index: 1;
+    filter: blur(30px);
+  }
+  .pc-bg-blur-01 {
+    top: -7%;
+    right: -10%;
+    @include square-size-px(200);
+
+    opacity: 0.3;
+  }
+  .pc-bg-blur-02 {
+    top: 5%;
+    left: -37%;
+    width: 37vw;
+    height: 37vw;
+    @include square-size-px(200);
+    opacity: 0.5;
+  }
+}
+
 .seminar-blocks {
   position: relative;
   background: $cl-graylightest;
-  height: 200vh;
+
   .seminar-blocks-sticky {
     background: $cl-white;
     .seminar-blocks-sticky-title {
@@ -220,33 +341,117 @@ section.introduction {
       background: $cl-graylight;
     }
   }
-}
-.seminar-blocks-sticky-links {
-  position: sticky;
-  left: 0;
-  top: 0;
-  background: $cl-white;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  gap: 10px;
-  margin: 0px auto;
-  padding: 9px 20px !important;
-  li {
-    flex: 1;
-    text-align: center;
-    font-size: 10px;
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $cl-graylightest;
-    a {
-      text-decoration: none;
+  .seminar-blocks-content {
+    padding: 60px 0 0;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .seminar-blocks-content-box {
+    position: relative;
+    z-index: 100;
+    @extend %seminar-blocks-margin;
+    background: $cl-white;
+    margin: 0px auto 0px;
+    border-radius: $border-radius-middle;
+    padding: 0 20px 0px;
+    .seminar-blocks-content-box-subtitle-eng {
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: $cl-graylight;
+      padding: 25px 0 0 !important;
+    }
+    .seminar-blocks-content-box-title-teacher {
+      font-weight: 500;
+      font-size: $font-size-xl;
+      line-height: $lineheight-relaxed;
+      letter-spacing: 4px;
+      color: $cl-black;
+      padding: 20px 0 0 !important;
+    }
+    .seminar-blocks-content-box-teacher {
+      display: flex;
+      margin: 30px 0 30px;
+      gap: 20px;
+      .seminar-blocks-content-box-teacher-left img {
+        width: 123px;
+        border-radius: $border-radius-big;
+      }
+      .seminar-blocks-content-box-teacher-right-job {
+        font-size: $font-size-ss;
+        margin: 0 0 6px;
+      }
+      .seminar-blocks-content-box-teacher-right-name {
+        font-size: $font-size-xl;
+        font-weight: 500;
+        margin: 0 0 3px;
+      }
+      .seminar-blocks-content-box-teacher-right-english {
+        font-size: $font-size-s;
+        color: $cl-graylight;
+        letter-spacing: 1px;
+      }
+    }
+    .seminar-blocks-content-box-text {
+      font-size: $font-size-m;
+      line-height: $lineheight-very-relaxed;
+      padding: 0px 0 45px;
+      text-align: left;
+    }
+    .seminar-blocks-content-box-subtitle-seminar {
+      margin: 20px 0 0;
+      font-size: $font-size-l;
+    }
+    .seminar-blocks-content-box-title {
+      margin: 7px 0 0;
+      font-size: $font-size-xxl;
+      line-height: 1.4;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    .seminar-blocks-content-box-img img {
+      margin: 15px 0 30px;
+      border-radius: $border-radius-middle;
+    }
+  }
+  .seminar-blocks-content-box-note {
+    border-radius: $border-radius-middle;
+    border: 1px solid #ccc;
+    margin: 0 0 30px;
+    .seminar-blocks-content-box-note-head {
+      display: flex;
+      padding: 13px 20px;
+      gap: 10px;
+      border-bottom: 1px dashed #ccc;
+      font-weight: bold;
+    }
+    .seminar-blocks-content-box-note-content {
+      padding: 15px 20px;
+      p {
+        line-height: $lineheight-relaxed;
+      }
+      .seminar-blocks-content-box-note-content-schedule {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        .seminar-blocks-content-box-note-content-schedule-date {
+          display: block;
+          padding: 5px 13px;
+          @include box-shadow-small;
+          border-radius: $border-radius-small;
+        }
+      }
+      .seminar-blocks-content-box-note-content-note {
+        font-size: $font-size-ss;
+        color: $cl-graylight;
+        margin: 10px 0 0;
+      }
     }
   }
 }
 
+//5step〜よくある質問のタイトル
 %underbar-title {
   font-size: $font-size-xxl;
   letter-spacing: 2.5px;
@@ -265,12 +470,13 @@ section.introduction {
 //かんたん5STEPで参加可能
 .join-5steps {
   background: $cl-graylightest;
-  padding: 0 15px 75px;
+  padding: 75px 0px 75px;
   .join-5steps-title {
     @extend %underbar-title;
   }
 
   .join-5steps-box {
+    @extend %seminar-blocks-margin;
     background: $cl-white;
     margin: 0 auto 30px;
     padding: 25px 0;

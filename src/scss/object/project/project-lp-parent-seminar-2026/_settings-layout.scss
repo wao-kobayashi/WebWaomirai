@@ -146,13 +146,24 @@ body {
   width: #{$vw-percentage}vw;
   height: #{$vw-percentage}vw;
 }
+@mixin square-size-px($vw-percentage) {
+  width: #{$vw-percentage}px;
+  height: #{$vw-percentage}px;
+}
+
+.pc-bg.lighten {
+  .bg-blur {
+    opacity: 0.1 !important;
+  }
+}
 
 .pc-bg {
   z-index: -1;
 
   .bg-blur {
     z-index: -1;
-    position: fixed;
+    position: absolute;
+    // position: fixed;
     opacity: 0.3;
   }
   .pc-bg-blur-01 {

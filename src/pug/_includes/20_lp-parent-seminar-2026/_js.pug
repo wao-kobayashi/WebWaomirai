@@ -1,15 +1,13 @@
 script.
   $(document).ready(function() { 
-    $('.inview-triger').on('inview', function(event, isInView) {
-      if (isInView) {
-        $(this).addClass('inview');
-      }
-    });
+  $(".pc-bg .bg-blur").css({ opacity: 0.3 });
     $(window).on("load scroll", function () {
       if ($(this).scrollTop() > 600) {
-       $(".fixed-btn a").fadeIn();
+        $(".fixed-btn a").fadeIn();
+        $(".pc-bg .bg-blur").animate({ opacity: 0.2 }, 300);
       } else {
-       $(".fixed-btn a").fadeOut();
+        $(".fixed-btn a").fadeOut();
+        $(".pc-bg .bg-blur").animate({ opacity: 0.3 }, 300);
       }
     });
 
