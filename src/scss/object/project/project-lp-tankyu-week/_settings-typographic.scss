@@ -31,6 +31,9 @@ $lineheight-very-relaxed: 2;
   text-decoration: underline wavy;
   text-decoration-color: $cl-title-underline;
 }
+@mixin catch-copytitle {
+  font-size: 37px;
+}
 .c-title-25feb-lp {
   font-size: $font-size-xxxl;
   margin: 0 auto 30px;

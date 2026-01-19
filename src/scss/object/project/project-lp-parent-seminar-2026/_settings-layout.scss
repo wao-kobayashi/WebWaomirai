@@ -7,6 +7,7 @@ $smallwidth: 700px;
 $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
 $maincontentWidth: 450px;
+$breakpoint-tablet: 980px;
 
 @mixin section-maxwidth {
   max-width: 1200px;
@@ -41,7 +42,7 @@ html {
 
 body {
   background: $cl-white !important;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .c-bg-section-white {
@@ -56,7 +57,9 @@ body {
   align-items: center;
   width: calc((100% - $maincontentWidth) / 2);
   height: 100vh;
-
+  @include responsive-style($breakpoint-tablet) {
+    display: none;
+  }
   img {
     width: 70%;
     max-width: 300px;
@@ -71,6 +74,9 @@ body {
   align-items: center;
   width: calc((100% - $maincontentWidth) / 2);
   height: 100vh;
+  @include responsive-style($breakpoint-tablet) {
+    display: none;
+  }
   .pc-right-title {
     font-size: 36px;
     font-weight: 800;
@@ -125,8 +131,12 @@ body {
 }
 
 .main-content {
-  width: calc((100% - $maincontentWidth) / 2);
+  width: $maincontentWidth;
   margin: 0 auto;
+
+  @include responsive-style($breakpoint-tablet) {
+    width: 90%;
+  }
   @include responsive-style($breakpoint-sp) {
     width: 100%;
   }
@@ -182,4 +192,8 @@ body {
     @include square-size(12);
     filter: blur(36px);
   }
+}
+
+@mixin content-width {
+  width: calc(100% - 50px);
 }

@@ -54,8 +54,9 @@
       font-weight: 900;
       letter-spacing: 7px;
     }
+
     span.main {
-      font-size: 40px;
+      @include catch-copytitle;
       color: $cl-waogreen;
       display: block;
       font-weight: 900;
@@ -125,22 +126,150 @@
   background: $cl-white;
   width: calc(100% - 50px);
   margin: 30px auto 0;
-  padding: 20px;
+  padding: 20px 25px 10px;
   @include box-shadow-small;
   // padding: 6px 0 3px;
   overflow: hidden;
   border-radius: $border-radius-big;
+  .goal-title {
+    font-size: $font-size-xl;
+    font-weight: 400;
+    margin: 0px 0 0px;
+    text-align: left;
+  }
+  .goal-table {
+    .goal-table-row {
+      display: flex;
+      gap: 15px;
+      margin: 0px 0;
+      padding: 20px 0 20px;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed $cl-graylight;
+      }
+      .goal-table-row-number {
+        font-size: $font-size-xxl;
+        font-style: italic;
+        margin: -3px 0 0;
+        font-weight: 300;
+      }
+      .goal-table-row-content {
+        font-size: $font-size-m;
+        line-height: $lineheight-normal;
+        @include min-responsive-style($breakpoint-sp) {
+          font-size: $font-size-l;
+        }
+      }
+    }
+  }
 }
-$fv-breakpoint: 1200px;
 
 .main-content-wrapper {
   width: calc(100% - 50px);
   margin: 30px auto 0;
-  height: 100vh;
   background: $cl-white;
   border-radius: $border-radius-big;
   @include box-shadow-small;
 }
+
+section.introduction {
+  @include content-width;
+  padding: 30px 0 0;
+  margin: 30px auto 0;
+  .introduction-title {
+    @include catch-copytitle;
+    font-weight: 800;
+    margin: 0px 0 20px;
+    text-align: left;
+    color: $cl-waogreen;
+    span {
+      font-weight: normal;
+      color: $cl-waogreen;
+    }
+  }
+  .introduction-img {
+    margin: 0 auto 55px;
+  }
+  .introduction-text {
+    font-size: $font-size-m;
+    line-height: $lineheight-very-relaxed;
+    margin: 0px auto 60px;
+    text-align: left;
+  }
+}
+
+.seminar-blocks {
+  position: relative;
+  background: $cl-graylightest;
+  height: 200vh;
+  .seminar-blocks-sticky {
+    background: $cl-white;
+    .seminar-blocks-sticky-title {
+      font-size: $font-size-xxl;
+      color: $cl-waogreen;
+      @include content-width;
+      margin: 0 auto;
+    }
+    .seminar-blocks-sticky-text {
+      margin: 0 auto 15px;
+      @include content-width;
+    }
+    .seminar-blocks-sticky-hr {
+      width: 100%;
+      height: 1px;
+      background: $cl-graylight;
+    }
+  }
+}
+.seminar-blocks-sticky-links {
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: $cl-white;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+  margin: 0px auto;
+  padding: 9px 20px !important;
+  li {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $cl-graylightest;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.join-5steps {
+  background: $cl-graylightest;
+  padding: 0 15px;
+  .join-5steps-title {
+    font-size: $font-size-xxl;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 300;
+    margin: 0 0 20px;
+    &::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: $cl-waogreen;
+      margin: 20px auto 0;
+    }
+  }
+}
+//////////////////////////////
+///以下古いコード
+//////////////////////////////
+$fv-breakpoint: 1200px;
 
 .lp-family-fvpc {
   position: relative;
