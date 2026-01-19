@@ -3,6 +3,8 @@
 @import "foundation/_constant"; //色などの変数定義
 @import "foundation/_wpstyle"; //色などの変数定義
 @import "foundation/_reset"; //デフォルトのスタイルをリセットしたもの
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css";
+// @import "foundation/_fontawesome7"; //fontawesome
 @import "object/project/project-lp-parent-seminar-2026/_settings-colors.scss"; //エフェクト設定
 @import "object/project/project-lp-parent-seminar-2026/_settings-typographic.scss"; //タイポグラフィ設定
 @import "object/project/project-lp-parent-seminar-2026/_settings-animation"; //アニメーション設定
