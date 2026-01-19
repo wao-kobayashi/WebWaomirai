@@ -265,7 +265,79 @@ section.introduction {
       margin: 20px auto 0;
     }
   }
+
+  .join-5steps-box {
+    background: $cl-white;
+    margin: 0 auto 30px;
+    padding: 25px 0;
+    border-radius: $border-radius-middle;
+    .join-5steps-box-head {
+      display: flex;
+      margin: 0 auto 20px;
+      > div {
+        flex: 1;
+      }
+      .join-5steps-box-head-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: $lineheight-tight;
+        position: relative;
+        font-size: $font-size-l;
+        &::before {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 45px;
+          background: $cl-graylight;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          margin: auto;
+        }
+        span {
+          display: block;
+          font-size: 40px;
+        }
+      }
+      .join-5steps-box-head-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 60px;
+        }
+      }
+    }
+    .join-5steps-box-title {
+      margin: 0 0 20px;
+      font-weight: bold;
+      font-size: $font-size-xl;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+    .join-5steps-box-text {
+      text-align: left;
+      font-weight: normal;
+      width: calc(100% - 40px);
+      margin: 0 auto;
+      line-height: $lineheight-relaxed;
+      a {
+        text-decoration: underline;
+        color: $cl-black;
+      }
+    }
+    .eng-phase-main-section-5steps-box {
+      .eng-phase-main-section-5steps-box-wrap {
+        padding: 30px 30px 30px;
+      }
+    }
+  }
 }
+
 //////////////////////////////
 ///以下古いコード
 //////////////////////////////
