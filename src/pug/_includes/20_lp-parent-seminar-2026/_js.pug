@@ -8,10 +8,10 @@ script.
     $(window).on("load scroll", function () {
        if ($(this).scrollTop() > 600) {
         $(".fixed-btn-container").fadeIn();
-        $(".pc-bg .bg-blur").animate({ opacity: 0.2 }, 300);
+
       } else {
         $(".fixed-btn-container").fadeOut();
-        $(".pc-bg .bg-blur").animate({ opacity: 0.3 }, 300);
+  
       }
     });
 
@@ -135,15 +135,5 @@ script.
       // 初回実行
       updateSeminarNavigation();
       
-      // スムーズスクロール(オプション)
-      // -----------------------------
-      $('.seminar-blocks-sticky-links a, .pc-right-content-link a').on('click', function(e) {
-        e.preventDefault();
-        const target = $(this).attr('href');
-        const targetOffset = $(target).offset().top;
-        
-        $('html, body').animate({
-          scrollTop: targetOffset
-        }, 500);
-      });
+
     });

@@ -20,16 +20,13 @@ section.seminar-blocks-content#teacher
                      |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
                      br
                      |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
-                .bg-blur.pc-bg-blur-01.philosophy
-                .bg-blur.pc-bg-blur-02.science
-                .bg-blur.pc-bg-blur-03.economy
 
 //メインコンテンツ
 each seminar, index in seminars
   section.seminar-blocks-content.seminar-blocks-content-subject(id=seminar.id)
     .seminar-blocks-content-box
       .seminar-blocks-content-box-subtitle-eng
-        |seminar #0#{index + 1}
+        |SEMINAR #0#{index + 1}
       if seminar.subtitle
         .seminar-blocks-content-box-subtitle-seminar
           |#{seminar.subtitle}

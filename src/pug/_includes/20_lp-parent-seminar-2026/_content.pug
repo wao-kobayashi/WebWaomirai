@@ -45,7 +45,7 @@ html
                   |#0#{index + 1}
                 .pc-right-content-link-text 
                   if seminar.pcnavititle
-                    |#{seminar.pcnavititle}
+                    !=seminar.pcnavititle
                     br
                   if seminar.subtitle
                     span!=seminar.subtitle
@@ -75,7 +75,7 @@ html
           .infotable-column-title   
             |対象
           .infotable-column-content
-            |小学３年～高校生の子を持つ保護者
+            |小学3年生以上のお子さまを持つ保護者
         .infotable-column
           .infotable-column-title
             |日時
@@ -161,7 +161,7 @@ html
                               !=seminar.titleShort
                             else
                               !=seminar.title
-             include _seminar
+             include _content_seminar
 
          //かんたん5STEP
          section.join-5steps 
@@ -186,7 +186,8 @@ html
                       span.pcimage|まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。
                       //- |・LINEが利用できない場合はこちらから
                       |・友だち追加は
-                      a.js-btn-cv.js-line-trigger(href=UrlLiffForm)|こちら
+                      +conditionalLink
+                        |こちら
                       |から
 
             //step2

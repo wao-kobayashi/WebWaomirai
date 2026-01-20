@@ -1,27 +1,35 @@
+//- 条件付きリンクを生成するmixin
+//- loycus変数の値によって、通常のリンク or LIFFフォームへのリンクを切り替える
+//- @param {string} baseClass - リンクに適用する基本CSSクラス名
+mixin conditionalLink(baseClass)
+  a(
+    class=baseClass + (loycus ? '' : ' js-line-trigger')
+    href=loycus ? UrlLiffForm : false
+    target=loycus ? '_blank' : false
+  )
+    block
+
+//- 固定フッターボタンのmixin
+//- ページ下部に固定表示される申込ボタンとページトップへ戻るボタン
 mixin fixed-btn
   .fixed-btn-container(style='display:none;')
-    a.fixed-cta(
-      class=loycus ? '' : 'js-line-trigger'
-      href=loycus ? UrlLiffForm : false
-      target=loycus ? '_blank' : false
-    )
-        |LINEで簡単申込(無料)
+    +conditionalLink('fixed-cta')
+      |LINEで簡単申込(無料)
     a.btn-pagetop(href="#")
       i.fas.fa-arrow-up
 
-        
+
+
+//- CTA（Call To Action）ボタンのmixin
+//- メインの申込ボタンとして使用
 mixin btn-cta 
-    a.btn-cta(
-      class=loycus ? '' : 'js-line-trigger'
-      href=loycus ? UrlLiffForm : false
-      target=loycus ? '_blank' : false
-    )
-        .btn-cta-text|LINEで簡単申込(無料)
-        .btn-cta-line
-        .btn-cta-icn.fa-solid.fa-angle-right
+  +conditionalLink('btn-cta')
+    .btn-cta-text|LINEで簡単申込(無料)
+    .btn-cta-line
+    .btn-cta-icn.fa-solid.fa-angle-right
 
-
-
+//- モーダルウィンドウのmixin
+//- 2種類のモーダルとオーバーレイ背景を含む
 mixin modal
   .modal#modal-alreadyfriend(style='display:none;')
     .modal-wrapper 
@@ -69,4 +77,3 @@ mixin modal
          .modal-wrapper-content-close.modal-close 
                 |閉じる
   .bg-modal(style='display:none;')
-// +ModalEntlyLine

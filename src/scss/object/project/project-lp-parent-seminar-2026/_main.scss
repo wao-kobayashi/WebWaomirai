@@ -156,11 +156,12 @@
   .infotable-column {
     display: flex;
     &:not(:last-child) {
-      border-bottom: 1px dashed #000;
+      border-bottom: 1px dashed $cl-graylight;
     }
     > div {
       padding: 10px 15px;
       font-size: 13px;
+      font-weight: bold;
       @include min-responsive-style($breakpoint-sp) {
         font-size: $font-size-m;
       }
@@ -219,6 +220,7 @@
         font-style: italic;
         margin: -3px 0 0;
         font-weight: 300;
+        color: $cl-graylight;
       }
       .goal-table-row-content {
         font-size: $font-size-m;
@@ -250,7 +252,7 @@ section.introduction {
   margin: 30px auto 0;
   overflow: hidden;
   .introduction-title {
-    @include catch-copytitle;
+    @include catch-copytitle-intro;
     font-weight: 800;
     margin: 0px 0 20px;
     text-align: left;
@@ -274,7 +276,7 @@ section.introduction {
       filter: blur(30px);
     }
     .bg-blur.pc-bg-blur-01 {
-      top: -7%;
+      top: -5%;
       right: -10%;
       @include square-size-px(200);
       opacity: 0.3;
@@ -329,20 +331,25 @@ section.introduction {
     justify-content: center;
     background: $cl-graylightest;
     border-radius: $border-radius-small;
+
     &.teacher.active,
     &.teacher:hover {
-      background: #e0fff5;
+      font-weight: 500;
+      background: #e7ffe0;
     }
     &.philosophy.active,
     &.philosophy:hover {
+      font-weight: 500;
       background: #fffbe2;
     }
     &.science.active,
     &.science:hover {
+      font-weight: 500;
       background: #f3ffc4;
     }
     &.economy.active,
     &.economy:hover {
+      font-weight: 500;
       background: #daf1ff;
     }
     a {
@@ -694,6 +701,7 @@ section.introduction {
       a {
         text-decoration: underline;
         color: $cl-black;
+        cursor: pointer;
       }
     }
     .eng-phase-main-section-5steps-box {
@@ -793,6 +801,7 @@ section.introduction {
     @extend %wao-title;
   }
   .about-feature-point {
+    border-radius: $border-radius-middle;
     @include box-shadow-small;
     display: flex;
     align-items: center;
@@ -816,7 +825,7 @@ section.introduction {
 
 .about-school {
   @include content-width;
-  margin: 0px auto 75px;
+  margin: 0px auto 105px;
   .about-school-catch {
     font-size: $font-size-m;
     text-align: center;

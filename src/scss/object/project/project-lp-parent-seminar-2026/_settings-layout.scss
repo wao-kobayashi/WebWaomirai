@@ -43,7 +43,7 @@ body {
     display: none;
   }
   img {
-    width: 70%;
+    width: 50%;
     max-width: 300px;
   }
 }
@@ -124,19 +124,19 @@ body {
   width: $maincontentWidth;
   margin: 0 auto;
 
-  @include responsive-style($breakpoint-tablet) {
-    width: 90%;
-  }
+  // @include responsive-style($breakpoint-tablet) {
+  //   width: 90%;
+  // }
   @include responsive-style($breakpoint-sp) {
     width: 100%;
   }
 }
 
-.pc-bg.lighten {
-  .bg-blur {
-    opacity: 0.1 !important;
-  }
-}
+// .pc-bg.lighten {
+//   .bg-blur {
+//     opacity: 0.1 !important;
+//   }
+// }
 
 .pc-bg {
   z-index: -1;
@@ -145,42 +145,65 @@ body {
     z-index: -1;
     position: absolute;
     // position: fixed;
-    opacity: 0.3;
+    opacity: 0.4;
   }
   .pc-bg-blur-01 {
     top: -15%;
     left: -10%;
     @include square-size(12);
     filter: blur(30px);
+    @include responsive-style(1000px) {
+      top: -5%;
+      left: -10%;
+    }
   }
+
   .pc-bg-blur-02 {
     top: 50%;
     left: -12%;
     @include square-size(17);
     filter: blur(30px);
+    animation: float2 25s ease-in-out infinite;
   }
   .pc-bg-blur-03 {
     top: 0%;
     left: 15%;
     @include square-size(12);
     filter: blur(30px);
+    animation: float3 22s ease-in-out infinite;
+    @include responsive-style(1000px) {
+      top: 20%;
+      left: 3%;
+    }
   }
   .pc-bg-blur-04 {
     top: 48%;
     right: -8%;
+
     @include square-size(12);
     filter: blur(30px);
+    animation: float4 28s ease-in-out infinite;
+    @include responsive-style(1000px) {
+      top: 38%;
+    }
   }
   .pc-bg-blur-05 {
     top: 20%;
     right: 28%;
     @include square-size(14);
     filter: blur(30px);
+    @include responsive-style(1000px) {
+      right: 18%;
+    }
   }
 
   .pc-bg-blur-06 {
     top: -25%;
     right: 26%;
+    @include responsive-style(1000px) {
+      top: -5%;
+      right: -8%;
+    }
     @include square-size(12);
     filter: blur(36px);
   }
