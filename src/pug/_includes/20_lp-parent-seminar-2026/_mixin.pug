@@ -9,17 +9,16 @@ mixin fixed-btn
       .fixed-btn-left
         img(src=ImgIllustBtn, alt="")
       .fixed-btn-text LINEで無料申込
-      .fixed-btn-icn
+      .fixed-btn-icn.
 mixin btn-cta 
     a.btn-cta(
       class=loycus ? '' : 'js-line-trigger'
       href=loycus ? UrlLiffForm : false
       target=loycus ? '_blank' : false
     )
-        .btn-cta-left
-          img(src=ImgIllustBtn, alt="")
-        .btn-cta-text|LINEで無料申込
-        .btn-cta-icn
+        .btn-cta-text|LINEで簡単申込(無料)
+        .btn-cta-line
+        .btn-cta-icn.fa-solid.fa-angle-right
 
 
 

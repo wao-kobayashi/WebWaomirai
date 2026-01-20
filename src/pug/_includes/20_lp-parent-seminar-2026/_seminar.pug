@@ -1,0 +1,84 @@
+section.seminar-blocks-content#teacher 
+                .seminar-blocks-content-box
+                  .seminar-blocks-content-box-subtitle-eng 
+                     |TEACHER
+                  .seminar-blocks-content-box-title-teacher 
+                      |今回３つのセミナーを
+                      br
+                      |担当する講師紹介
+                  .seminar-blocks-content-box-teacher 
+                      .seminar-blocks-content-box-teacher-left
+                          img(src=ImgTeacher) 
+                      .seminar-blocks-content-box-teacher-right 
+                          .seminar-blocks-content-box-teacher-right-job 
+                             |ワオ未来塾事業責任者 / 講師
+                          .seminar-blocks-content-box-teacher-right-name 
+                            |松木 和也
+                          .seminar-blocks-content-box-teacher-right-english 
+                            |Kazuya Matsuki
+                  .seminar-blocks-content-box-text 
+                     |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+                     br
+                     |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+                .bg-blur.pc-bg-blur-01.philosophy
+                .bg-blur.pc-bg-blur-02.science
+                .bg-blur.pc-bg-blur-03.economy
+
+//メインコンテンツ
+each seminar, index in seminars
+  section.seminar-blocks-content.seminar-blocks-content-subject(id=seminar.id)
+    .seminar-blocks-content-box
+      .seminar-blocks-content-box-subtitle-eng
+        |seminar #0#{index + 1}
+      if seminar.subtitle
+        .seminar-blocks-content-box-subtitle-seminar
+          |#{seminar.subtitle}
+      if seminar.title
+        .seminar-blocks-content-box-title
+          !=seminar.title
+      .seminar-blocks-content-box-img
+        if seminar.overlay && seminar.overlay.show
+          .seminar-blocks-content-box-img-overray 
+            .seminar-blocks-content-box-img-overray-large
+              |#{seminar.overlay.largeText}
+            .seminar-blocks-content-box-img-overray-small
+              |#{seminar.overlay.smallText}
+        .seminar-blocks-content-box-img-main
+          img(src=seminar.image)
+      
+      //こんな方におすすめ
+      if seminar.recommendation
+        .seminar-blocks-content-box-note
+          .seminar-blocks-content-box-note-head
+            .seminar-blocks-content-box-note-head-icn
+              img(src=ImgIcnFamily)
+            .seminar-blocks-content-box-note-head-title
+              |こんな方にオススメ
+          .seminar-blocks-content-box-note-content
+            p!=seminar.recommendation
+      
+      //開催日時
+      if seminar.schedules && seminar.schedules.length > 0
+        .seminar-blocks-content-box-note
+          .seminar-blocks-content-box-note-head
+            .seminar-blocks-content-box-note-head-icn
+              img(src=ImgIcnCalender)
+            .seminar-blocks-content-box-note-head-title
+              |開催日時
+          .seminar-blocks-content-box-note-content
+            .seminar-blocks-content-box-note-content-schedule
+              each schedule in seminar.schedules
+                .seminar-blocks-content-box-note-content-schedule-date
+                  |#{schedule}
+            .seminar-blocks-content-box-note-content-note
+              |※各回45分の開催です
+              br
+              |※同じ内容です。お好きな日程をお選びください
+      
+      if seminar.description
+        .seminar-blocks-content-box-text
+          !=seminar.description
+      .seminar-blocks-content-box-btn
+        +btn-cta       
+    .bg-blur.pc-bg-blur-01(class=seminar.className)
+    .bg-blur.pc-bg-blur-02(class=seminar.className)

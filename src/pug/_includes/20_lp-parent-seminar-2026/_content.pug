@@ -24,7 +24,7 @@ html
     link(href=`${cssLocal}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
 
     meta(property="og:image", content=ImgOgp)
-    title 【ワオ未来塾】親子で参加♪授業体験＆説明会｜#{lessondate}
+    title #{MetaTitle}
     script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
@@ -36,31 +36,17 @@ html
         .pc-right-title 
           |INDEX
           span|オンラインセミナー一覧
-        .pc-right-content
-          .pc-right-content-link 
-            a(href='#philosophy') 
-              .pc-right-content-link-number 
-                |#01
-              .pc-right-content-link-text 
-                |正解のない時代の歩き方
-                br
-                span|〜哲学（思考力）からアプローチする～
-          .pc-right-content-link 
-            a(href='#philosophy') 
-              .pc-right-content-link-number 
-                |#01
-              .pc-right-content-link-text 
-                |正解のない時代の歩き方
-                br
-                span|〜哲学（思考力）からアプローチする～
-          .pc-right-content-link 
-            a(href='#philosophy') 
-              .pc-right-content-link-number 
-                |#01
-              .pc-right-content-link-text 
-                |正解のない時代の歩き方
-                br
-                span|〜哲学（思考力）からアプローチする～             
+        each seminar, index in seminars
+            .pc-right-content-link 
+              a(href=`#${seminar.id}`)
+                .pc-right-content-link-number 
+                  |#0#{index + 1}
+                .pc-right-content-link-text 
+                  if seminar.pcnavititle
+                    |#{seminar.pcnavititle}
+                    br
+                  if seminar.subtitle
+                    span!=seminar.subtitle
         .pc-right-content-cta
           //- +btn-cta 
     .main-content
@@ -158,98 +144,19 @@ html
                   |聞いてみたいテーマを選んでチェックしよう！
                .seminar-blocks-sticky-hr
              ul.seminar-blocks-sticky-links 
-                     li
+                     //講師紹介は最初で固定
+                     li.teacher
                        a(href="#teacher")
                          |講師紹介
-                     li
-                       a(href="#philosophy")
-                         |正解のない
-                         br
-                         |時代の歩き方
-                     li
-                        a(href="#science")
-                         |「納得解」を
-                         br
-                         |導く力
-                     li
-                        a(href="#economy")
-                         |社会の仕組み
-                         br
-                         |を解き明かす
-             section.seminar-blocks-content#teacher 
-                .seminar-blocks-content-box
-                  .seminar-blocks-content-box-subtitle-eng 
-                     |TEACHER
-                  .seminar-blocks-content-box-title-teacher 
-                      |今回３つのセミナーを
-                      br
-                      |担当する講師紹介
-                  .seminar-blocks-content-box-teacher 
-                      .seminar-blocks-content-box-teacher-left
-                          img(src=ImgTeacher) 
-                      .seminar-blocks-content-box-teacher-right 
-                          .seminar-blocks-content-box-teacher-right-job 
-                             |ワオ未来塾事業責任者 / 講師
-                          .seminar-blocks-content-box-teacher-right-name 
-                            |松木 和也
-                          .seminar-blocks-content-box-teacher-right-english 
-                            |Kazuya Matsuki
-                  .seminar-blocks-content-box-text 
-                     |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
-                     br
-                     |ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
-                .bg-blur.pc-bg-blur-01.philosophy
-                .bg-blur.pc-bg-blur-02.science
-                .bg-blur.pc-bg-blur-03.economy
-             each seminar in seminars
-              section.seminar-blocks-content.seminar-blocks-content-subject(id=seminar.id)
-                .seminar-blocks-content-box
-                  .seminar-blocks-content-box-subtitle-eng
-                    |seminar #{seminar.seminarNumber}
-                  if seminar.subtitle
-                    .seminar-blocks-content-box-subtitle-seminar
-                      |#{seminar.subtitle}
-                  if seminar.title
-                    .seminar-blocks-content-box-title
-                      !=seminar.title
-                  .seminar-blocks-content-box-img
-                    img(src=seminar.image)
-                  
-                  //こんな方におすすめ
-                  if seminar.recommendation
-                    .seminar-blocks-content-box-note
-                      .seminar-blocks-content-box-note-head
-                        .seminar-blocks-content-box-note-head-icn
-                          img(src=ImgIcnFamily)
-                        .seminar-blocks-content-box-note-head-title
-                          |こんな方にオススメ
-                      .seminar-blocks-content-box-note-content
-                        p!=seminar.recommendation
-                  
-                  //開催日時
-                  if seminar.schedules.length > 0
-                    .seminar-blocks-content-box-note
-                      .seminar-blocks-content-box-note-head
-                        .seminar-blocks-content-box-note-head-icn
-                          img(src=ImgIcnCalender)
-                        .seminar-blocks-content-box-note-head-title
-                          |開催日時
-                      .seminar-blocks-content-box-note-content
-                        .seminar-blocks-content-box-note-content-schedule
-                          each schedule in seminar.schedules
-                            .seminar-blocks-content-box-note-content-schedule-date
-                              |#{schedule}
-                        .seminar-blocks-content-box-note-content-note
-                          |※各回45分の開催です
-                          br
-                          |※同じ内容です。お好きな日程をお選びください
-                  
-                  if seminar.description
-                    .seminar-blocks-content-box-text
-                      !=seminar.description
-                
-                .bg-blur.pc-bg-blur-01(class=seminar.className)
-                .bg-blur.pc-bg-blur-02(class=seminar.className)
+                     each seminar, index in seminars
+                        li(class=seminar.className)
+                          a(href=`#${seminar.id}`)
+                            if seminar.titleShort
+                              !=seminar.titleShort
+                            else
+                              !=seminar.title
+             include _seminar
+
          //かんたん5STEP
          section.join-5steps 
             .join-5steps-title 
@@ -273,7 +180,7 @@ html
                       //- |・LINEが利用できない場合はこちらから
                       br
                       |・友だち追加は
-                      a.js-btn-cv()|こちら
+                      a.js-btn-cv.js-line-trigger(href=UrlLiffForm)|こちら
                       |から
 
             //step2
@@ -429,7 +336,7 @@ html
                   |ワオ未来塾の公式サイトへ     
                 .about-school-btn-icn 
                   img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
-         //素材シリーズ
+         //footer
          footer 
           ul 
             li 
@@ -456,3 +363,5 @@ html
   
 //js
 include _js
++modal
+//- +fixed-btn
