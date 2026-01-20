@@ -1,15 +1,15 @@
-
 mixin fixed-btn
-  .fixed-btn
-    a(
+  .fixed-btn-container(style='display:none;')
+    a.fixed-cta(
       class=loycus ? '' : 'js-line-trigger'
       href=loycus ? UrlLiffForm : false
       target=loycus ? '_blank' : false
     )
-      .fixed-btn-left
-        img(src=ImgIllustBtn, alt="")
-      .fixed-btn-text LINEで無料申込
-      .fixed-btn-icn.
+        |LINEで簡単申込(無料)
+    a.btn-pagetop(href="#")
+      i.fas.fa-arrow-up
+
+        
 mixin btn-cta 
     a.btn-cta(
       class=loycus ? '' : 'js-line-trigger'
@@ -47,7 +47,7 @@ mixin modal
             .modal-wrapper-content-main-image-alreadyfriend
               img(src=ImgModalEvent)
             .modal-wrapper-content-main-btn-alreadyfriend
-                a(href=UrlLine, target='_blank')
+                a(href=UrlLiffAddFriend, target='_blank')
                   |OKです(イベント申込へ)
   .modal#modal-pc-liff(style='display:none;')
     .modal-wrapper 

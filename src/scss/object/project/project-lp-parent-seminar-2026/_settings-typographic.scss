@@ -18,8 +18,8 @@
 // Font size variables
 $font-size-sss: 10px;
 $font-size-ss: 12px;
-$font-size-s: 15px;
-$font-size-m: 16px;
+$font-size-s: 14px;
+$font-size-m: 15px;
 $font-size-l: 18px;
 $font-size-xl: 20px;
 $font-size-xxl: 30px;
@@ -41,5 +41,5 @@ $lineheight-very-relaxed: 2;
 }
 
 @mixin catch-copytitle {
-  font-size: calc(37 * var(--px));
+  font-size: calc(36 * var(--px));
 }

@@ -9,31 +9,13 @@ $breakpoint-sp: 768px;
 $maincontentWidth: 500px;
 $breakpoint-tablet: 980px;
 
-@mixin section-maxwidth {
-  max-width: 1200px;
-  padding: 0 30px;
-  margin: 0 auto;
-  @include responsive-style(768px) {
-    padding: 0 20px;
-  }
+@mixin square-size($vw-percentage) {
+  width: #{$vw-percentage}vw;
+  height: #{$vw-percentage}vw;
 }
-
-@mixin section-widewidth {
-  max-width: 1000px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-@mixin section-middlewidth {
-  max-width: 800px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-@mixin section-smallwidth {
-  max-width: 700px;
-  padding: 0 20px;
-  margin: 0 auto;
+@mixin square-size-px($vw-percentage) {
+  width: #{$vw-percentage}px;
+  height: #{$vw-percentage}px;
 }
 
 html {
@@ -115,6 +97,7 @@ body {
         }
         .pc-right-content-link-text {
           line-height: $lineheight-normal;
+          font-size: $font-size-s;
           span {
             color: $cl-waogreen !important;
             font-size: $font-size-ss;
@@ -128,6 +111,11 @@ body {
     width: 70%;
     max-width: 300px;
   }
+  .pc-right-content-cta {
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+    border-top: 0.5px solid $cl-graylight;
+  }
 }
 
 .main-content {
@@ -140,15 +128,6 @@ body {
   @include responsive-style($breakpoint-sp) {
     width: 100%;
   }
-}
-
-@mixin square-size($vw-percentage) {
-  width: #{$vw-percentage}vw;
-  height: #{$vw-percentage}vw;
-}
-@mixin square-size-px($vw-percentage) {
-  width: #{$vw-percentage}px;
-  height: #{$vw-percentage}px;
 }
 
 .pc-bg.lighten {

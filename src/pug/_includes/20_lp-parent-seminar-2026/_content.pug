@@ -2,6 +2,8 @@
 include _mixin  
 //variable
 include _variables 
+//data
+include _data_seminar
 
 doctype html
 html
@@ -48,7 +50,7 @@ html
                   if seminar.subtitle
                     span!=seminar.subtitle
         .pc-right-content-cta
-          //- +btn-cta 
+          +btn-cta 
     .main-content
        .fv 
           .fv-logo
@@ -64,7 +66,7 @@ html
               |必要な学びとは?
           .fv-img
             img(src=ImgFv)
-          .fv-blur.spiamge 
+          .fv-blur
             .bg-blur.pc-bg-blur-01.philosophy
             .bg-blur.pc-bg-blur-02.science
             .bg-blur.pc-bg-blur-03.economy
@@ -143,7 +145,7 @@ html
          .seminar-blocks 
              .seminar-blocks-sticky 
                .seminar-blocks-sticky-title 
-                 |セミナー一覧
+                 |開催セミナー
                .seminar-blocks-sticky-text 
                   |聞いてみたいテーマを選んでチェックしよう！
                .seminar-blocks-sticky-hr
@@ -357,7 +359,7 @@ html
           .footer-copyright
             |© ワオ・コーポレーション All rights reserved.
 
-    .pc-bg
+    .pc-bg.pcimage
       .bg-blur.pc-bg-blur-01.philosophy
       .bg-blur.pc-bg-blur-02.science
       .bg-blur.pc-bg-blur-03.economy
@@ -368,4 +370,4 @@ html
 //js
 include _js
 +modal
-//- +fixed-btn
++fixed-btn
