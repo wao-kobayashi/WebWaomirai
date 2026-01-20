@@ -11,7 +11,7 @@
   /* PC用（デザイン基準幅: 1200px）*/
   --px: min(1px, calc(100vw / 1200));
   @include responsive-style(768px) {
-    --px: min(1px, calc(100vw / 375));
+    --px: min(2px, calc(100vw / 375));
   }
 }
 
@@ -41,5 +41,5 @@ $lineheight-very-relaxed: 2;
 }
 
 @mixin catch-copytitle {
-  font-size: 37px;
+  font-size: calc(37 * var(--px));
 }
