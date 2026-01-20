@@ -63,7 +63,7 @@
     margin: 0 25px 8px;
     @include min-responsive-style($breakpoint-sp) {
       align-items: center;
-      margin: 0 0 0px;
+      margin: 0 0 20px;
     }
     span.sub {
       color: $cl-waogreen;
@@ -95,9 +95,10 @@
     position: relative;
     z-index: 10;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     @include min-responsive-style($breakpoint-sp) {
-      width: 320px;
+      margin: 0 auto 10px;
+      width: 70%;
     }
   }
   .fv-blur {
@@ -160,6 +161,9 @@
     > div {
       padding: 10px 15px;
       font-size: 13px;
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: $font-size-m;
+      }
     }
     .infotable-column-title {
       width: $info-tabletitle-width;
@@ -168,6 +172,9 @@
       letter-spacing: 1px;
       text-align: center;
       color: $cl-white;
+      @include min-responsive-style($breakpoint-sp) {
+        letter-spacing: 0px;
+      }
     }
     .infotable-column-content {
       flex: 1;
@@ -217,7 +224,7 @@
         font-size: $font-size-m;
         line-height: $lineheight-relaxed;
         @include min-responsive-style($breakpoint-sp) {
-          font-size: $font-size-l;
+          font-size: $font-size-m;
         }
       }
     }
@@ -304,7 +311,7 @@ section.introduction {
   top: 0;
   background: $cl-white;
   width: 100%;
-  z-index: 100;
+  z-index: 20;
   display: flex;
   gap: 10px;
   margin: 0px auto 0px !important;
@@ -322,16 +329,20 @@ section.introduction {
     justify-content: center;
     background: $cl-graylightest;
     border-radius: $border-radius-small;
-    &.teacher.active {
+    &.teacher.active,
+    &.teacher:hover {
       background: #e0fff5;
     }
-    &.philosophy.active {
+    &.philosophy.active,
+    &.philosophy:hover {
       background: #fffbe2;
     }
-    &.science.active {
+    &.science.active,
+    &.science:hover {
       background: #f3ffc4;
     }
-    &.economy.active {
+    &.economy.active,
+    &.economy:hover {
       background: #daf1ff;
     }
     a {
@@ -416,11 +427,12 @@ section.introduction {
       font-size: $font-size-xxl;
       color: $cl-waogreen;
       @include content-width;
-      font-weight: 800;
-      margin: 0 auto;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 0 auto 5px;
     }
     .seminar-blocks-sticky-text {
-      margin: 0 auto 15px;
+      margin: 0 auto 25px;
       font-size: $font-size-s;
       @include content-width;
     }
@@ -545,7 +557,7 @@ section.introduction {
       gap: 15px;
       border-bottom: 1px dashed #ccc;
       font-weight: bold;
-      font-size: $font-size-s;
+      font-size: $font-size-m;
       .seminar-blocks-content-box-note-head-icn {
         width: 18px;
       }
@@ -557,20 +569,30 @@ section.introduction {
         font-size: $font-size-s;
       }
       .seminar-blocks-content-box-note-content-schedule {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: inline-flex;
+        flex-direction: column;
         gap: 10px;
+        @include min-responsive-style($breakpoint-sp) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
         .seminar-blocks-content-box-note-content-schedule-date {
-          display: block;
-          padding: 5px 13px;
+          display: inline-block;
+          padding: 5px 11px;
           @include box-shadow-small;
           font-size: $font-size-s;
           border-radius: $border-radius-small;
-          letter-spacing: -0.5px;
+          letter-spacing: 0px;
+          @include responsive-style($breakpoint-sp) {
+            padding: 5px 15px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+          }
         }
       }
       .seminar-blocks-content-box-note-content-note {
-        font-size: $font-size-ss;
+        font-size: 11px;
         color: $cl-graylight;
         margin: 10px 0 0;
       }
@@ -724,7 +746,7 @@ section.introduction {
       }
       .faq-content-answer-right {
         font-size: $font-size-s;
-        padding: 5px 0 0;
+        padding: 0px 0 0;
       }
     }
   }
@@ -785,6 +807,9 @@ section.introduction {
       font-weight: bold;
       font-size: $font-size-m;
       letter-spacing: 0.5px;
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: $font-size-l;
+      }
     }
   }
 }

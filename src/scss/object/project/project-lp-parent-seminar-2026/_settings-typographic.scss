@@ -9,7 +9,7 @@
 
 :root {
   /* PC用（デザイン基準幅: 1200px）*/
-  --px: min(1px, calc(100vw / 1200));
+  --px: min(2px, calc(100vw / 1200));
   @include responsive-style(768px) {
     --px: min(2px, calc(100vw / 375));
   }
