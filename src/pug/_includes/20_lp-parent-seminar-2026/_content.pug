@@ -20,7 +20,7 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssBase = loycus ? '../../../css/' : '../../css/'
-    - const cssLocal = loycus ? '' : ''
+    - const cssLocal = loycus ? '../' : ''
 
     link(href=`${cssBase}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
@@ -266,6 +266,16 @@ html
                    .faq-content-answer-left|A
                    .faq-content-answer-right
                      |ウェビナー形式ですので顔出しは不要です
+             .faq-content 
+                .faq-content-question 
+                   .faq-content-question-left|Q
+                   .faq-content-question-right
+                     |当日参加できなかった場合、後日アーカイブ視聴はできますか？
+                .faq-content-answer 
+                   .faq-content-answer-left|A
+                   .faq-content-answer-right
+                     |恐れ入りますが、本セミナーはライブ参加を前提とした内容のため、後日のアーカイブ配信は行っておりません。ご都合のつく日時の回にてお申込みください。
+
          //ワオ未来塾って？
          section.about-wao
             .about-wao-title
