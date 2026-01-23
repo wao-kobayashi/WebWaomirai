@@ -1,0 +1,15 @@
+/* width */
+$width-xl: 1200px; // 最大幅（セクション全体）
+$width-lg: 1050px; // 大きめの幅（汎用的に利用）
+$width-md: 800px; // 中くらいの幅（「ワオ未来塾って？」で利用）
+$width-sm: 700px; // 小さめの幅（「簡単5ステップで〜」で利用）
+$width-side-sticky: 280px; // サイドの追従（sticky）要素の幅
+
+@mixin section-maxwidth {
+  max-width: $width-xl;
+  padding: 0 30px;
+  margin: 0 auto;
+  @include responsive-style(768px) {
+    padding: 0 20px;
+  }
+}

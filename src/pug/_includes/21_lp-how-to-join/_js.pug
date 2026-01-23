@@ -1,0 +1,10 @@
+script.
+  $(function () {            
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() > 50) {
+         $(".fixed-button").fadeIn();
+      } else {
+       $(".fixed-button").fadeOut();
+      }
+    });
+  });

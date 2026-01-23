@@ -1,0 +1,57 @@
+//mixin
+include _mixin  
+//variable
+include _variables 
+
+//data
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    link(href=`21_lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`../../css/21_lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  // コンテンツをインクルード
+  body
+    li(class="p-learning__item js-hidden js-visible")
+      div(class="p-learning__main")
+        div(class="p-learning__head")
+          div(class="p-learning__number")
+            p(class="p-learning__number01") 特徴
+            p(class="p-learning__number02") 2
+          h2(class="p-learning__title")
+            span(class="p-learning__title01") 全員参加型の
+            span(class="p-learning__title02") オンライン授業
+        p(class="p-learning__text")
+          | ワオ未来塾は学習管理システムの moodle を導入。
+          br
+          | 授業はオンラインのライブ（生配信）形式で行われ、受講者は選択問題への回答やリアクションボタンで授業に参加できます。
+        div(class="p-learning__moodle")
+          div(class="p-learning__moodle-logo")
+            div(class="p-learning__moodle-logo__image")
+              img(src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/about/moodle.png", width="220", height="56", alt="moodle")
+            p(class="p-learning__moodle-logo__text") [ムードル]
+          p(class="p-learning__moodle-text")
+            | 世界中で2億人以上のユーザーが利用しトップシェアを誇るLMS（学習管理システム）です。
+            br
+            | 大学等の高等教育機関や企業、政府機関で15万以上のmoodle学習サイトが存在します。
+            br
+            | 多彩なカスタマイズ性を誇るため、インタラクティブな学びに最適なシステムです。
+        .c-button.is-small.js-hidden.js-visible
+          a(href="https://waomirai.com/school/", class="c-button__link")
+            span(class="c-button__text") オンライン授業について
+      div(class="p-learning__image")
+        img(src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/common/learning02.jpg?20250801", width="400", height="300", alt="全員参加型のオンライン授業")
