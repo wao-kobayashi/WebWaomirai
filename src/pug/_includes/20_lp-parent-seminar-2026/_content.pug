@@ -1,0 +1,384 @@
+//mixin
+include _mixin  
+//variable
+include _variables 
+//data
+include _data_seminar
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    - const cssBase = loycus ? '../../../css/' : '../../css/'
+    - const cssLocal = loycus ? '../' : ''
+
+    link(href=`${cssBase}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}20_lp-parent-seminar-2026.css?v=${Date.now()}`, rel="stylesheet")
+
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  body
+    .pc-left.pcimage
+       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    .pc-right.pcimage
+     .pc-right-content
+        .pc-right-title 
+          |INDEX
+          span|オンラインセミナー一覧
+        each seminar, index in seminars
+            .pc-right-content-link 
+              a(href=`#${seminar.id}`)
+                .pc-right-content-link-number 
+                  |#0#{index + 1}
+                .pc-right-content-link-text 
+                  if seminar.pcnavititle
+                    !=seminar.pcnavititle
+                    br
+                  if seminar.subtitle
+                    span!=seminar.subtitle
+        .pc-right-content-cta
+          +btn-cta 
+    .main-content
+       .fv 
+          .fv-logo
+             img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+          .fv-subtitle
+           img(src=ImgFvSubtile)
+          h1 
+            span.sub
+              |AI時代を生き抜く
+            span.main
+              |子どもに本当に
+              br
+              |必要な学びとは
+          .fv-img
+            img(src=ImgFv)
+          .fv-blur
+            .bg-blur.pc-bg-blur-01.philosophy
+            .bg-blur.pc-bg-blur-02.science
+            .bg-blur.pc-bg-blur-03.economy
+       .infotable
+        .infotable-column
+          .infotable-column-title   
+            |対象
+          .infotable-column-content
+            |小学3年生以上のお子さまを持つ保護者
+        .infotable-column
+          .infotable-column-title
+            |日時
+          .infotable-column-content
+            |2026年2月
+            br
+            span|※詳細な日程は各セミナー日時をご確認ください
+        .infotable-column
+          .infotable-column-title
+            |費用
+          .infotable-column-content
+            |無料
+        .infotable-column
+          .infotable-column-title
+            |場所
+          .infotable-column-content
+            |Zoomウェビナー(オンライン)
+       .goal
+         .goal-title 
+           |セミナーのゴール
+         .goal-table 
+            .goal-table-row
+              .goal-table-row-number
+                  |1.
+              .goal-table-row-content
+                  |AI時代、企業が本当に求めている
+                  b|「これからの社会に必要な力」
+                  |の正体がわかる。
+            .goal-table-row
+              .goal-table-row-number
+                  |2.
+              .goal-table-row-content
+                  b|大学入試に、その力がどのように必要
+                  |とされているかがわかる。
+            .goal-table-row
+              .goal-table-row-number
+                  |3.
+              .goal-table-row-content
+                  |親として、明日から
+                  b|お子さまに「どんな言葉」をかければよいか
+                  |がわかる。
+       .main-content-wrapper 
+         section.introduction 
+            .introduction-title 
+              |45分で
+              br
+              |お子さまの未来への
+              br
+              span|「
+              |視界
+              span|」
+              |が変わる
+            .introduction-img 
+              .introduction-img-photo
+                 img(src=ImgIntro)
+              .bg-blur.pc-bg-blur-01.philosophy
+              .bg-blur.pc-bg-blur-02.science
+              .bg-blur.pc-bg-blur-03.economy
+            .introduction-text 
+                |AIに「答え」を委ねるか、自ら「価値」を創り出すか。今、教育の世界で大きなパラダイムシフトが起きています 。 かつて高く評価された「決まった業務を効率よく処理する能力」は、今やAIが最も得意とする領域になりました 。
+                br
+                br
+                |「うちの子の将来、どうなってしまうんだろう？」 そんな漠然とした不安を保護者のみなさまはお持ちではないでしょうか。 
+                br
+                br
+                |本セミナーでは、50年の教育実践から導き出した「新しい教育」を提供するワオ未来塾が、大学入試の最前線でも問われ始めている「これからの社会に必要な力」の正体を3つのアプローチからみなさまと一緒に考えます 。            
+         .seminar-blocks 
+             .seminar-blocks-sticky 
+               .seminar-blocks-sticky-title 
+                 |開催セミナー
+               .seminar-blocks-sticky-text 
+                  |聞いてみたいテーマを選んでチェックしよう！
+               .seminar-blocks-sticky-hr
+             ul.seminar-blocks-sticky-links 
+                     //講師紹介は最初で固定
+                     li.teacher
+                       a(href="#teacher")
+                         |講師紹介
+                     each seminar, index in seminars
+                        li(class=seminar.className)
+                          a(href=`#${seminar.id}`)
+                            if seminar.titleShort
+                              !=seminar.titleShort
+                            else
+                              !=seminar.title
+             include _content_seminar
+
+         //かんたん5STEP
+         section.join-5steps 
+            .join-5steps-title 
+              |かんたん5STEPで
+              br
+              |参加可能
+            //step1
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|1
+                  .join-5steps-box-head-img
+                      img(src=ImgIcnStep01)
+                .join-5steps-box-title 
+                      |LINEで公式アカウントを
+                      br
+                      |友だち追加
+                .join-5steps-box-text 
+                      span.spimage|まず公式アカウントを友だちに追加してください。
+                      span.pcimage|まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。
+                      //- |・LINEが利用できない場合はこちらから
+                      |・友だち追加は
+                      +conditionalLink
+                        |こちら
+                      |から
+
+            //step2
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|2
+                  .join-5steps-box-head-img
+                       img(src=ImgIcnStep02)
+                .join-5steps-box-title 
+                      |友だち登録後、LINEのトーク
+                      br
+                      |画面に送られる申し込み
+                      br
+                      |フォームをタップ！
+            
+            //step3
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|3
+                  .join-5steps-box-head-img
+                       img(src=ImgIcnStep03)
+                .join-5steps-box-title 
+                  |Zoomをインストール
+                .join-5steps-box-text 
+                  |お手持ちの端末にzoomのインストールをお願いします。パソコンまたはタブレットが推奨です
+            //step4
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|4
+                  .join-5steps-box-head-img.step4
+                     img(src=ImgIcnStep04)
+                .join-5steps-box-title 
+                      |イベント前日に
+                      br
+                      |LINEメッセージで
+                      br
+                      |イベントURLをお送りします
+            //step5
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|5
+                  .join-5steps-box-head-img
+                     img(src=ImgIcnStep05)
+                .join-5steps-box-title 
+                      |開催時間になったら
+                      br
+                      |届いたイベントURLから
+                      br
+                      |参加しましょう！
+         section.faq 
+             .faq-title 
+               |よくある質問
+             .faq-content 
+                .faq-content-question 
+                   .faq-content-question-left|Q
+                   .faq-content-question-right
+                     |複数のテーマは申し込むことはできますか？
+                .faq-content-answer 
+                   .faq-content-answer-left|A
+                   .faq-content-answer-right
+                     |はい、可能です。
+             .faq-content 
+                .faq-content-question 
+                   .faq-content-question-left|Q
+                   .faq-content-question-right
+                     |カメラオンで参加は必要ですか？？
+                .faq-content-answer 
+                   .faq-content-answer-left|A
+                   .faq-content-answer-right
+                     |ウェビナー形式ですので顔出しは不要です
+             .faq-content 
+                .faq-content-question 
+                   .faq-content-question-left|Q
+                   .faq-content-question-right
+                     |当日参加できなかった場合、後日アーカイブ視聴はできますか？
+                .faq-content-answer 
+                   .faq-content-answer-left|A
+                   .faq-content-answer-right
+                     |恐れ入りますが、本セミナーはライブ参加を前提とした内容のため、後日のアーカイブ配信は行っておりません。ご都合のつく日時の回にてお申込みください。
+
+         //ワオ未来塾って？
+         section.about-wao
+            .about-wao-title
+              |ワオ未来塾って？
+            .about-wao-img
+              img(src=ImgLogoWao)
+            .about-wao-text
+                |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。
+                br
+                br
+                |21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。
+                br
+                br
+                |半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
+         //授業の特徴
+         section.about-feature
+          .about-feature-title
+            |授業の特長
+          .about-feature-point
+              i.fa-solid.fa-earth-americas
+              .about-feature-point-text
+                |オンライン授業で
+                br
+                |全国どこからでも参加OK
+          .about-feature-point
+              i.fa-regular.fa-comments
+              .about-feature-point-text
+                |ライブだからチャットで
+                br
+                |授業に参加できる!
+          .about-feature-point
+              i.fa-solid.fa-laptop
+              .about-feature-point-text
+                |必要なのは
+                br
+                |PCかタブレットだけ！                 
+         //ワオ未来塾
+         section.about-school
+           .about-school-catch 
+              |社会で役立つ学びを、オンラインで今始めよう
+           .about-school-logo 
+              img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+           .about-school-target 
+              |〈対象〉小学3〜6年生／中学生／高校生
+           .about-school-4subjects
+              img(src=Img4subject)
+           .about-school-feature 
+             .about-school-feature-box
+               .about-school-feature-box-title  
+                 .about-school-feature-box-title-icon   
+                    img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                 .about-school-feature-box-title-text 
+                    |新しい学び
+               .about-school-feature-box-text 
+                  |これから必要になる自己肯定感を養う「哲学」、正しく物事目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」を身につけます。
+             .about-school-feature-box
+               .about-school-feature-box-title  
+                 .about-school-feature-box-title-icon   
+                    img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                 .about-school-feature-box-title-text 
+                    |飛び級制
+               .about-school-feature-box-text 
+                  |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+             .about-school-feature-box
+               .about-school-feature-box-title  
+                 .about-school-feature-box-title-icon   
+                    img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                 .about-school-feature-box-title-text 
+                    |オンラインライブ授業
+               .about-school-feature-box-text 
+                  |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+           .about-school-btn
+              a(href='https://waomirai.com/', target='_blank')
+                .about-school-btn-text 
+                  |ワオ未来塾の公式サイトへ     
+                .about-school-btn-icn 
+                  img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
+         //footer
+         footer 
+          ul 
+            li 
+              a(href="https://www.wao-corp.com/", target='_blank')
+                |会社概要
+            li 
+              a(href="https://www.wao-corp.com/kojin/", target='_blank')
+                |プライバシーポリシー
+            li
+              a(href="https://waomirai.com/commerce_law/", target='_blank')
+                |特定商取引に基づく表記
+          .footer-logo 
+            img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+          .footer-copyright
+            |© ワオ・コーポレーション All rights reserved.
+
+    .pc-bg.pcimage
+      .bg-blur.pc-bg-blur-01.philosophy
+      .bg-blur.pc-bg-blur-02.science
+      .bg-blur.pc-bg-blur-03.economy
+      .bg-blur.pc-bg-blur-04.philosophy
+      .bg-blur.pc-bg-blur-05.science
+      .bg-blur.pc-bg-blur-06.economy
+  
+//js
+include _js
++modal
++fixed-btn

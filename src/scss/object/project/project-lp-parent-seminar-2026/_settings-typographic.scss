@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+* {
+  color: $cl-black;
+  font-family: "Figtree", "Noto Sans JP", sans-serif;
+}
+
+// Font size variables
+$font-size-sss: 10px;
+$font-size-ss: 12px;
+$font-size-s: 14px;
+$font-size-m: 15px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 30px;
+$font-size-xxxl: 40px;
+$font-size-huge: 56px;
+
+/* line-height */
+
+$lineheight-none: 1;
+$lineheight-tight: 1.25;
+$lineheight-normal: 1.5;
+$lineheight-relaxed: 1.75;
+$lineheight-very-relaxed: 2;
+
+/* title-underline */
+@mixin title-underline {
+  text-decoration: underline wavy;
+  text-decoration-color: $cl-title-underline;
+}
+
+:root {
+  /* PC用（デザイン基準幅: 1200px）*/
+  --px: min(1.5px, calc(100vw / 1200));
+  @include responsive-style(1000px) {
+    --px: min(2px, calc(100vw / 375));
+  }
+}
+
+@mixin catch-copytitle {
+  font-size: min(44px, calc(36 * var(--px)));
+  @include responsive-style(768px) {
+    font-size: calc(40 * var(--px));
+  }
+}
+
+@mixin catch-copytitle-intro {
+  font-size: min(44px, calc(36 * var(--px)));
+  @include responsive-style(768px) {
+    font-size: calc(34 * var(--px));
+  }
+}
