@@ -20,8 +20,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  font-size: $font-size-huge;
+  height: 80px;
+  font-size: $font-size-xxl;
   font-weight: 400;
   position: relative;
   z-index: 1;
@@ -135,6 +135,10 @@ h2 {
     a {
       color: var(--text-color);
       text-decoration: underline;
+      &::after {
+        font-family: var(--icon-font-family);
+        content: "\f08e";
+      }
     }
   }
 }
@@ -186,6 +190,21 @@ h2 {
   .p-learning__image img {
     object-fit: contain;
     border-radius: var(--radius-base);
+  }
+  p.p-note {
+    font-size: $font-size-ss;
+    line-height: $lineheight-relaxed;
+    color: var(--gray-color-dark);
+    margin: 10px 0 0;
+  }
+  .p-learning__image_skip {
+    margin: 45px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .p-learning__image_skip_radius img {
+      border-radius: var(--radius-base);
+    }
   }
 }
 .section-child-flex {
