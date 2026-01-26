@@ -32,7 +32,7 @@ html
     section.intro
       p.c-text 
         |ワオ未来塾にご興味をお持ちいただき、ありがとうございます。このガイドではワオ未来塾の科目/特徴や入会手続きまでをご案内します。
-      p|CTA 
+      +cta
     nav 
         div
           a(href="#subjects") 学べる科目
@@ -49,7 +49,6 @@ html
         div
           a(href="#price") 
             |料金
-
         div
           a(href="#system") 
             |推奨環境
@@ -64,149 +63,172 @@ html
             |よくある
             br
             |質問
-    section#subjects 
+    section.bg-white
+     .section-child 
       h2|学べる科目
       .subjects-list 
-        .subjects-list-head
+        .subjects-list-head.philosophy
           .subjects-list-head-left 
              .subjects-list-head-left-title
                |哲学（思考力）
              .subjects-list-head-left-text
-               |自分の生き方に「軸」を持つための学び
+               |自分の生き方に「軸」を
+               br
+               |持つための学び
           .subjects-list-head-right
             img(src=ImgSubject01) 
-        .subjects-list-content 
+        .subjects-list-content.philosophy
           |哲学と聞くと、抽象的で難解なイメージがあるかもしれません。でも、ワオ未来塾の哲学はシンプルです。自分はどんな大人になりたいのか。自分はこの世界でどう生きたいのか。生き方の「軸」を見つけるための学びです。
           br
           br
-          |カリキュラム詳細を見る(公式サイトへ)  
-    li.js-hidden.js-visible(class="p-learning__item")
-      div(class="p-learning__main")
-        div(class="p-learning__head")
-          div(class="p-learning__number")
-            p(class="p-learning__number01") 特徴
-            p(class="p-learning__number02") 2
-          h2(class="p-learning__title")
-            span(class="p-learning__title01") 全員参加型の
-            span(class="p-learning__title02") オンライン授業
-        p(class="p-learning__text")
-          | ワオ未来塾は学習管理システムの moodle を導入。
+          a(href="https://waomirai.com/subject/philosophy/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
+      .subjects-list 
+        .subjects-list-head.science
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |科学リテラシー
+             .subjects-list-head-left-text
+               |知らない世界にも視野を
+               br
+               |広げ、知的好奇心を育む
+          .subjects-list-head-right
+            img(src=ImgSubject02) 
+        .subjects-list-content.science
+          |科学とは、主観や個人の思い込みを許さず、事実から原理、法則を見いだす学問です。日常的なふとした疑問を科学的視点から考え、議論を重ねることで科学リテラシーを身に着けます。
           br
-          | 授業はオンラインのライブ（生配信）形式で行われ、受講者は選択問題への回答やリアクションボタンで授業に参加できます。
-        div(class="p-learning__moodle")
-          div(class="p-learning__moodle-logo")
-            div(class="p-learning__moodle-logo__image")
-              img(
-                alt="moodle" 
-                height="56" 
-                width="220" 
-                src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/about/moodle.png"
-                )
-            p(class="p-learning__moodle-logo__text") [ムードル]
-          p(class="p-learning__moodle-text")
-            | 世界中で2億人以上のユーザーが利用しトップシェアを誇るLMS（学習管理システム）です。
-            br
-            | 大学等の高等教育機関や企業、政府機関で15万以上のmoodle学習サイトが存在します。
-            br
-            | 多彩なカスタマイズ性を誇るため、インタラクティブな学びに最適なシステムです。
-        .c-button.is-small.js-hidden.js-visible
-          a(
-            class="c-button__link" 
-            href="https://waomirai.com/school/"
-            )
-            span(class="c-button__text") オンライン授業について
-      div(class="p-learning__image")
-        img(
-          alt="全員参加型のオンライン授業" 
-          height="300" 
-          width="400" 
-          src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/common/learning02.jpg?20250801"
+          br
+          a(href="https://waomirai.com/subject/science/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
+      .subjects-list 
+        .subjects-list-head.economy
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |経済（お金）
+             .subjects-list-head-left-text
+               |お金の基礎知識と考え方・
+               br
+               |付き合い方を身につける
+          .subjects-list-head-right
+            img(src=ImgSubject03) 
+        .subjects-list-content.economy
+          |私たちの生活とは切り離せないお金。 でも、お金にまつわる経済の仕組みや制度を知らない人は、まだまだ少なくありません。 生活に役立つ知識、起業・ビジネスに使う知識など、お金にまつわるさまざまなテーマについて、具体的な例を挙げながら広く深く学びます。
+          br
+          br
+          a(href="https://waomirai.com/subject/money/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
+    section.bg-graylight
+     .section-child 
+      h2|ワオ未来塾の特徴
+      .p-learning__item
+            .p-learning__main
+              .p-learning__head
+                .p-learning__number
+                  img(src=ImgIcnSubject)
+                .p-learning__title
+                  span.p-learning__title01 ライブ参加型の
+
+                  span.p-learning__title02 オンライン授業
+              p.p-learning__text
+                  |ワオ未来塾のオンライン・ライブ授業は生配信形式で行われ、選択問題への回答やリアクションボタンで積極的に授業に参加できます。    
+            .p-learning__image
+              img(src=ImgLearning02 )
+      .p-learning__item
+            .p-learning__main
+              .p-learning__head
+                .p-learning__number
+                  img(src=ImgIcnSubject)
+                .p-learning__title
+                  span.p-learning__title01 学年を超えた学びを実現する
+                  span.p-learning__title02 飛び級制
+              p.p-learning__text
+                  |授業は４レベルに分けられ、それぞれ推奨学年を設定していますが、学年に縛られず、理解度に応じて高いレベルの授業を選択することができます
+              table.p-table
+                tbody
+                  tr
+                    th レベル1
+                    td 小学３,４年生〜推奨
+                  tr
+                    th レベル2
+                    td 小学５,６年生〜推奨
+                  tr
+                    th レベル3
+                    td 中学生〜推奨
+                  tr
+                    th レベル4
+                    td 高校生〜推奨
+              p.p-note|※レベルが合わない場合は途中で変更可能です。
+              .p-learning__image_skip
+                div
+                  img(src=ImgLearning03 )
+                div
+                  img(src=ImgLevel01 )
+                div
+                  img(src=ImgLevel02 )
+      .c-button.is-small.js-hidden.js-visible
+        a(
+          class="c-button__link" 
+          href="https://waomirai.com/school/"
           )
-    //料金
-    .p-head.l-wrapper.l-wrapper-sp
-      p.js-hidden.js-visible(class="p-head__text")
-        | ワオ未来塾は、入会金・登録費などの余分な費用は一切かかりません。
-        br
-        | 受講したい科目の月額受講費用のみで新しい学びをスタートできます。
-        br
-        | なお、受講する教科数や組み合わせによって費用は変わります。
-      table.p-table.js-hidden.js-visible
-        tbody
-          tr
-            th 入会金
-            td 不要
-    .p-fee.js-hidden.js-visible
-      .l-wrapper.l-wrapper-sp.js-hidden.js-visible
-        h2.c-section-title 受講費用について
-        p.js-hidden.js-visible(class="p-fee__text") 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
-        table.p-table.js-hidden.js-visible
-          tbody
-            tr
-              th 1教科を受講
-              td 6,600円(税込)／月額
-            tr
-              th 2教科を受講
-              td 11,000円(税込)／月額
-            tr
-              th 3教科を受講
-              td 15,400円(税込)／月額
-        p.js-hidden.js-visible(class="p-fee__text") グローバル英語の受講費用は割引対象外です。
-        table.p-table.js-hidden.js-visible
-          tbody
-            tr
-              th グローバル英語
-              td 6,600円(税込)／月額
-    .p-payment.js-hidden.js-visible
-      .l-wrapper.l-wrapper-sp.js-hidden.js-visible
-        h2.c-section-title お支払い方法について
-        p(class="p-payment__text") 以下のクレジットカード決済がご利用いただけます。
-        ul(class="p-payment__list")
-          li(class="p-payment__item")
-            img(
-              alt="Visa" 
-              height="33" 
-              width="100" 
-              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment01.png"
-              )
-          li(class="p-payment__item")
-            img(
-              alt="Mastercard" 
-              height="62" 
-              width="100" 
-              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment02.png"
-              )
-          li(class="p-payment__item")
-            img(
-              alt="JCB" 
-              height="77" 
-              width="100" 
-              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment03.jpg"
-              )
-          li(class="p-payment__item")
-            img(
-              alt="Diners Club International" 
-              height="74" 
-              width="100" 
-              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment04.jpg"
-              )
-          li(class="p-payment__item")
-            img(
-              alt="American Express" 
-              height="100" 
-              width="100" 
-              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment05.jpg"
-              )
-        p(class="p-payment__text")
-          | 受講登録した翌月の1日に受講料が決済されます。
+          span(class="c-button__text") オンライン授業について
+    section.bg-white
+     .section-child#schedule 
+      h2|ライブ配信スケジュール
+     .section-child#price 
+      h2|料金
+      .section-child-flex
+        .section-child-flex-content
+          .c-text
+            |ワオ未来塾は、入会金・登録費などの余分な費用は一切かかりません。
+            br
+            |受講したい科目の月額受講費用のみで新しい学びをスタートできます。
+            br
+            |なお、受講する教科数や組み合わせによって費用は変わります。
+          table.p-table.js-hidden.js-visible
+            tbody
+              tr
+                th 入会金
+                td 不要
+
+        .section-child-flex-content
+          h3.c-section-title
+            .c-section-title-img
+              img(src=ImgTitleDecoration) 
+            .c-section-title-text
+              |受講費用について
+          p.js-hidden.js-visible(class="p-fee__text") 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
+          .p-join__note
+           |初月は「無料」で受講いただけます
+          table.p-table.js-hidden.js-visible
+            tbody
+              tr
+                th 1教科を受講
+                td 6,600円(税込)／月額
+              tr
+                th 2教科を受講
+                td 11,000円(税込)／月額
+              tr
+                th 3教科を受講
+                td 15,400円(税込)／月額
+        .section-child-flex-content 
+          h3.c-section-title
+            .c-section-title-img
+              img(src=ImgTitleDecoration) 
+            .c-section-title-text
+              |お支払い方法について
+          .c-text
+            |以下のクレジットカード決済がご利用いただけます。
+          .p-price-items 
+            img(src=ImgPayment01)
+            img(src=ImgPayment02)
+            img(src=ImgPayment03)
+            img(src=ImgPayment04)
+            img(src=ImgPayment05)
+          .c-text
+            |受講登録した翌月の1日に受講料が決済されます。［例］4月に講座を購入した場合、5月1日に5月分が決済されます。※4月分は無料
+     .section-child#system 
+        h2|推奨環境
+        .c-text
+          | インターネットに接続可能なPC・タブレット・スマートフォンをご用意ください。
           br
-          | ［例］4月に講座を購入した場合、5月1日に5月分が決済されます。　※4月分は無料
-    .p-head.l-wrapper.l-wrapper-sp
-      p.js-hidden.js-visible(class="p-head__text")
-        | インターネットに接続可能なPC・タブレット・スマートフォンをご用意ください。
-        br
-        | 授業では回答を画面に入力することもありますので、PC・タブレットでの参加を推奨しています。
-    .p-details.js-hidden.js-visible
-      .l-wrapper-medium.l-wrapper-sp
+          | 授業では回答を画面に入力することもありますので、PC・タブレットでの参加を推奨しています。
         table(class="p-details__table")
           tbody
             tr

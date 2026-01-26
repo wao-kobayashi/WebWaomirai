@@ -58,14 +58,133 @@ nav {
 section.intro {
   padding: 20px 20px 60px;
 }
+section.bg-white {
+  padding: 75px 20px 0;
+}
+section.bg-graylight {
+  background: var(--gray-color-light);
+  padding: 75px 20px 0;
+}
 
 h2 {
   font-size: $font-size-huge;
   text-align: center;
   color: var(--text-color);
   letter-spacing: 1px;
+  margin: 0 auto 35px;
 }
 
-.c-text {
-  line-height: $lineheight-relaxed;
+.subjects-list {
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  margin: 0 auto 30px;
+  .subjects-list-head {
+    display: flex;
+    height: 120px;
+
+    &.philosophy {
+      background: $cl-philosophy;
+    }
+    &.science {
+      background: $cl-science;
+    }
+    &.economy {
+      background: $cl-economy;
+    }
+    .subjects-list-head-left {
+      flex: 1;
+      padding: 20px;
+      color: $cl-white;
+      .subjects-list-head-left-title {
+        font-size: $font-size-xl;
+        font-weight: bold;
+        margin: 0 0 6px;
+      }
+      .subjects-list-head-left-text {
+        font-size: $font-size-s;
+        line-height: $lineheight-relaxed;
+      }
+    }
+    .subjects-list-head-right {
+      width: 120px;
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+  .subjects-list-content {
+    padding: 25px 20px;
+    font-size: $font-size-s;
+    line-height: $lineheight-relaxed;
+
+    &.philosophy {
+      background: $cl-waomirai-philosophy-pale;
+    }
+    &.science {
+      background: $cl-waomirai-science-pale;
+    }
+    &.economy {
+      background: $cl-waomirai-economy-pale;
+    }
+    a {
+      color: var(--text-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+.section-child {
+  padding: 0 0 60px;
+}
+.p-learning__item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-base);
+  width: 100%;
+  display: block;
+  padding: 30px 20px;
+  margin: 0 auto 30px;
+  .p-learning__head {
+    display: flex;
+    align-items: center;
+    margin: 0 0 22px;
+    .p-learning__number {
+      width: 44px;
+      height: 44px;
+      margin: 0 10px 0 0;
+    }
+    .p-learning__title01 {
+      display: block;
+      font-size: $font-size-m;
+      line-height: $lineheight-tight;
+      color: var(--text-color);
+      margin: 0 0 3px;
+    }
+    .p-learning__title02 {
+      display: block;
+      font-size: $font-size-xxl;
+      font-weight: 500;
+      line-height: $lineheight-tight;
+      color: var(--text-color);
+      letter-spacing: 1px;
+    }
+  }
+  .p-learning__text {
+    font-size: $font-size-m;
+    line-height: $lineheight-relaxed;
+    color: var(--text-color);
+    margin: 0 0 20px;
+  }
+  .p-learning__image img {
+    object-fit: contain;
+    border-radius: var(--radius-base);
+  }
+}
+.section-child-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
 }
