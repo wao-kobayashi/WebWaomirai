@@ -1,9 +1,4 @@
-@mixin box-shadow-lp {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 12px 0px;
-}
-
 /* border-radius */
-
 $border-radius-small: 4px;
 $border-radius-middle: 8px;
 $border-radius-big: 20px;
@@ -11,3 +6,41 @@ $border-radius-bigplus: 32px;
 $border-radius-extrabig: 64px;
 $border-radius-extrabigplus: 100px;
 $border-radius-full: 10000px;
+
+/* デザイン上の1pxを、画面幅に応じてスケーリングした値として定義 */
+:root {
+  /* PC用（基準の幅は1220px）*/
+  --px: min(1px, calc(100vw / 1200));
+}
+@media screen and (max-width: 767px) {
+  :root {
+    /* SP用（基準の幅は375px）*/
+    --px: min(1px, calc(100vw / 375));
+  }
+}
+
+:root {
+  --icon-font-family: "Font Awesome 6 Free";
+  --number-font-family: "Roboto", sans-serif;
+  --link-hover-opacity: 0.7;
+  --link-transition: all 0.3s ease-in-out;
+  --link-opacity-transition: opacity 0.3s ease-in-out;
+  --image-zoom-transform: scale(1.1);
+  --section-margin-top: calc(100 * var(--px));
+  --page-top-padding-top: calc(60 * var(--px));
+  --text-margin-top: calc(30 * var(--px));
+  --radius-base: calc(15 * var(--px));
+  --radius-base-top: var(--radius-base) var(--radius-base) 0 0;
+  --radius-base-bottom: 0 0 var(--radius-base) var(--radius-base);
+  --radius-base-left: var(--radius-base) 0 0 var(--radius-base);
+  --radius-base-right: 0 var(--radius-base) var(--radius-base) 0;
+  --radius-light: calc(10 * var(--px));
+  --radius-light-top: var(--radius-light) var(--radius-light) 0 0;
+  --radius-light-bottom: 0 0 var(--radius-light) var(--radius-light);
+  --radius-light-left: var(--radius-light) 0 0 var(--radius-light);
+  --radius-light-right: 0 var(--radius-light) var(--radius-light) 0;
+  --shadow-base: rgba(0, 0, 0, 0.15) 0px 0px calc(12 * var(--px)) 0px;
+  --shadow-light: rgba(0, 0, 0, 0.15) 0px 0px calc(6 * var(--px)) 0px;
+  --shadow-text: 0 0 calc(3 * var(--px)) var(--text-color);
+  --transition-animation: all 0.3s 0s ease;
+}

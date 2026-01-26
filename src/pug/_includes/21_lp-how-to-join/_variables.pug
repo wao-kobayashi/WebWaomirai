@@ -1,18 +1,36 @@
-//imagePath
+//- 画像パス設定
+- var paths = '../../../images/21_lp-how-to-join'
+//- - var paths = 'https://waomirai.com/lp/assets/lpimages/21_lp-how-to-join';
 
-- var ImgFv = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1kx/1026513/1746773077TNCtsK8m/fv.png'
-- var ImgSubject = 'https://go.waomirai.com/l/1026513/2025-01-14/hbwpk/1026513/1736909816LZo2nh6L/ilust_5subjects_sp.png'
-- var ImgFlowLesson = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1kj/1026513/1746772393MCyzOSuU/img_flow_lessson.png'
-- var ImgCurriculum = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1kf/1026513/1746772393vSbfrav8/img_curriculum.png'
-- var ImgEnglish = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1kq/1026513/1746772394R7p6lvbN/img_english.png'
-- var ImgSchedule = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1kb/1026513/1746772393QJY6gKZu/img_schedule.png'
-- var ImgPrice = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1lf/1026513/1746773894s9Oac14k/img_price.svg'
-- var ImgRegister = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1km/1026513/1746772394b2YfRzst/img_register.png'
-- var IcnPdf = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1mx/1026513/1746774949p1yQva6j/icn_pdf.png'
-- var IcnBlank = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1n1/1026513/1746774952WZhOJhGm/icn_blank.svg'
-- var PdfCurriculumn = 'https://go.waomirai.com/l/1026513/2025-05-09/hm1vx/1026513/1746779722CZ5r2D5u/waomirai_curriculum.pdf'
 
-// URLPath
+//- 画像パス生成関数
+-
+  function img(filename) {
+    return `${paths}/${filename}`;
+  }
 
-- var UrlMoodleRegister = 'https://lms.waomirai.com/login/signup.php/?tenant=lmswaomirai'
-- var UrlLpGlobalEnglish = 'https://go.waomirai.com/global-english'
+
+//-//////////////
+//- images
+//-//////////////
+
+- var ImgIcnSubject = img('icn_subject.png');
+- var ImgIcnSwipeArrow = img('icn_swipe_arrow.svg');
+- var ImgIcnSwipeHand = img('icn_swipe_hand.svg');
+- var ImgIllust01 = img('illust_01.png');
+- var ImgIllust02 = img('illust_02.png');
+- var ImgIllust03 = img('illust_03.png');
+- var ImgIllust04 = img('illust_04.png');
+- var ImgLearning02 = img('learning02.jpg');
+- var ImgLearning03 = img('learning03.jpg');
+- var ImgLevel01 = img('level01.png');
+- var ImgLevel02 = img('level02.png');
+- var ImgPayment01 = img('payment01.png');
+- var ImgPayment02 = img('payment02.png');
+- var ImgPayment03 = img('payment03.jpg');
+- var ImgPayment04 = img('payment04.jpg');
+- var ImgPayment05 = img('payment05.jpg');
+- var ImgSubject01 = img('subject-01.jpg');
+- var ImgSubject02 = img('subject-02.jpg');
+- var ImgSubject03 = img('subject-03.jpg');
+- var ImgTitleDecoration = img('title-decoration.svg');

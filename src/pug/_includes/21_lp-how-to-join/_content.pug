@@ -1,5 +1,5 @@
 //mixin
-include _mixin  
+include _mixins 
 //variable
 include _variables 
 
@@ -17,8 +17,8 @@ html
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
-    link(href=`21_lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
-    link(href=`../../css/21_lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`21-lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`../css/21-lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
     meta(property="og:image", content=ImgOgp)
     title #{MetaTitle}
     script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
@@ -26,7 +26,61 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   // コンテンツをインクルード
   body
-    li(class="p-learning__item js-hidden js-visible")
+    header 
+      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    h1|入会ガイド
+    section.intro
+      p.c-text 
+        |ワオ未来塾にご興味をお持ちいただき、ありがとうございます。このガイドではワオ未来塾の科目/特徴や入会手続きまでをご案内します。
+      p|CTA 
+    nav 
+        div
+          a(href="#subjects") 学べる科目
+        div
+          a(href="#features") 
+            |ワオ未来塾
+            br
+            |の特徴
+        div
+          a(href="#schedule") 
+            |配信
+            br
+            |スケジュール
+        div
+          a(href="#price") 
+            |料金
+
+        div
+          a(href="#system") 
+            |推奨環境
+        div
+          a(href="#voice") 
+            |お客様の声
+        div
+          a(href="#join") 
+            |入会手順
+        div
+          a(href="#faq") 
+            |よくある
+            br
+            |質問
+    section#subjects 
+      h2|学べる科目
+      .subjects-list 
+        .subjects-list-head
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |哲学（思考力）
+             .subjects-list-head-left-text
+               |自分の生き方に「軸」を持つための学び
+          .subjects-list-head-right
+            img(src=ImgSubject01) 
+        .subjects-list-content 
+          |哲学と聞くと、抽象的で難解なイメージがあるかもしれません。でも、ワオ未来塾の哲学はシンプルです。自分はどんな大人になりたいのか。自分はこの世界でどう生きたいのか。生き方の「軸」を見つけるための学びです。
+          br
+          br
+          |カリキュラム詳細を見る(公式サイトへ)  
+    li.js-hidden.js-visible(class="p-learning__item")
       div(class="p-learning__main")
         div(class="p-learning__head")
           div(class="p-learning__number")
@@ -42,7 +96,12 @@ html
         div(class="p-learning__moodle")
           div(class="p-learning__moodle-logo")
             div(class="p-learning__moodle-logo__image")
-              img(src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/about/moodle.png", width="220", height="56", alt="moodle")
+              img(
+                alt="moodle" 
+                height="56" 
+                width="220" 
+                src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/about/moodle.png"
+                )
             p(class="p-learning__moodle-logo__text") [ムードル]
           p(class="p-learning__moodle-text")
             | 世界中で2億人以上のユーザーが利用しトップシェアを誇るLMS（学習管理システム）です。
@@ -51,7 +110,246 @@ html
             br
             | 多彩なカスタマイズ性を誇るため、インタラクティブな学びに最適なシステムです。
         .c-button.is-small.js-hidden.js-visible
-          a(href="https://waomirai.com/school/", class="c-button__link")
+          a(
+            class="c-button__link" 
+            href="https://waomirai.com/school/"
+            )
             span(class="c-button__text") オンライン授業について
       div(class="p-learning__image")
-        img(src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/common/learning02.jpg?20250801", width="400", height="300", alt="全員参加型のオンライン授業")
+        img(
+          alt="全員参加型のオンライン授業" 
+          height="300" 
+          width="400" 
+          src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/common/learning02.jpg?20250801"
+          )
+    //料金
+    .p-head.l-wrapper.l-wrapper-sp
+      p.js-hidden.js-visible(class="p-head__text")
+        | ワオ未来塾は、入会金・登録費などの余分な費用は一切かかりません。
+        br
+        | 受講したい科目の月額受講費用のみで新しい学びをスタートできます。
+        br
+        | なお、受講する教科数や組み合わせによって費用は変わります。
+      table.p-table.js-hidden.js-visible
+        tbody
+          tr
+            th 入会金
+            td 不要
+    .p-fee.js-hidden.js-visible
+      .l-wrapper.l-wrapper-sp.js-hidden.js-visible
+        h2.c-section-title 受講費用について
+        p.js-hidden.js-visible(class="p-fee__text") 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
+        table.p-table.js-hidden.js-visible
+          tbody
+            tr
+              th 1教科を受講
+              td 6,600円(税込)／月額
+            tr
+              th 2教科を受講
+              td 11,000円(税込)／月額
+            tr
+              th 3教科を受講
+              td 15,400円(税込)／月額
+        p.js-hidden.js-visible(class="p-fee__text") グローバル英語の受講費用は割引対象外です。
+        table.p-table.js-hidden.js-visible
+          tbody
+            tr
+              th グローバル英語
+              td 6,600円(税込)／月額
+    .p-payment.js-hidden.js-visible
+      .l-wrapper.l-wrapper-sp.js-hidden.js-visible
+        h2.c-section-title お支払い方法について
+        p(class="p-payment__text") 以下のクレジットカード決済がご利用いただけます。
+        ul(class="p-payment__list")
+          li(class="p-payment__item")
+            img(
+              alt="Visa" 
+              height="33" 
+              width="100" 
+              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment01.png"
+              )
+          li(class="p-payment__item")
+            img(
+              alt="Mastercard" 
+              height="62" 
+              width="100" 
+              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment02.png"
+              )
+          li(class="p-payment__item")
+            img(
+              alt="JCB" 
+              height="77" 
+              width="100" 
+              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment03.jpg"
+              )
+          li(class="p-payment__item")
+            img(
+              alt="Diners Club International" 
+              height="74" 
+              width="100" 
+              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment04.jpg"
+              )
+          li(class="p-payment__item")
+            img(
+              alt="American Express" 
+              height="100" 
+              width="100" 
+              src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/fee/payment05.jpg"
+              )
+        p(class="p-payment__text")
+          | 受講登録した翌月の1日に受講料が決済されます。
+          br
+          | ［例］4月に講座を購入した場合、5月1日に5月分が決済されます。　※4月分は無料
+    .p-head.l-wrapper.l-wrapper-sp
+      p.js-hidden.js-visible(class="p-head__text")
+        | インターネットに接続可能なPC・タブレット・スマートフォンをご用意ください。
+        br
+        | 授業では回答を画面に入力することもありますので、PC・タブレットでの参加を推奨しています。
+    .p-details.js-hidden.js-visible
+      .l-wrapper-medium.l-wrapper-sp
+        table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") Windowsの場合
+              th OS
+              td Windows10 以降
+            tr
+              th ブラウザ
+              td 最新バージョンの Google Chrome、Firefox、Safari
+        table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") Macの場合
+              th OS
+              td macOS Catalina 10.15 以降
+            tr
+              th ブラウザ
+              td 最新バージョンの Google Chrome、Firefox、Safari
+        table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") タブレット・スマートフォンの場合
+              th OS
+              td 最新のiOSまたはAndroid OSをインストールできる機種
+            tr
+              th ブラウザ
+              td 最新バージョンの Google Chrome、Firefox、Safari
+
+    .p-join
+      .l-wrapper.l-wrapper-sp
+        ul(class="p-join__list")
+          li.js-hidden.js-visible(class="p-join__item")
+            div(class="p-join__head")
+              div(class="p-join__number")
+                p(class="p-join__number01") STEP
+                p(class="p-join__number02") 1
+              h2(class="p-join__title")
+                | LINEの友だちに
+                br.u-br-sp
+                | 登録しましょう
+            p(class="p-join__text")
+              | まずは、サイトの「LINEで体験申込」ボタンから友だち登録を行いましょう。
+              br
+              | スマホでご覧の方はそのまま登録画面に進みます。
+              br
+              | PCでご覧の方は、表示された2次元コードをスマホで読み取ってください。
+            .c-button.js-hidden.js-visible(class="p-join__button")
+              span.is-member.is-blank.u-link(
+                data-link="line" 
+                class="c-button__link"
+                )
+                span(class="c-button__text") LINEで体験申込する
+          li.js-hidden.js-visible(class="p-join__item")
+            div(class="p-join__head")
+              div(class="p-join__number")
+                p(class="p-join__number01") STEP
+                p(class="p-join__number02") 2
+              h2(class="p-join__title")
+                | LINEのメニューから
+                br.u-br-sp
+                | 会員登録しましょう
+            p(class="p-join__text")
+              | LINEのトーク画面下部のメニューの「学習サイト登録」から会員登録ページに移動できますので、
+              br.u-br-pc
+              | 受講される方の情報をご入力ください。
+            div(class="p-join__wrapper")
+              div(class="p-join__wrapper-main")
+                p(class="p-join__text")
+                  span(class="p-join__text-small")
+                    span(class="p-join__text-small__inner") 会員登録するだけでは費用は発生しませんので、ご安心ください。
+                  span(class="p-join__text-small")
+                    span(class="p-join__text-small__inner") 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
+                p(class="p-join__note")
+                  | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
+                  br
+                  | お手数ですが、再度お申し込みをお願いいたします。
+              div(class="p-join__image")
+                div(class="p-join__image-item")
+                  img(
+                    alt="受けたい授業を申し込みましょう" 
+                    height="350" 
+                    width="450" 
+                    src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step02.jpg"
+                    )
+          li.js-hidden.js-visible(class="p-join__item")
+            div(class="p-join__head")
+              div(class="p-join__number")
+                p(class="p-join__number01") STEP
+                p(class="p-join__number02") 3
+              h2(class="p-join__title")
+                | 受けたい授業を
+                br.u-br-sp
+                | 申し込みましょう
+            p(class="p-join__text")
+              | 会員専用の学習ページで、受講したい科目をお申し込みいただけます。
+              br
+              | 「今すぐ無料トライアル」ボタンを押すと、決済情報の入力画面に進みます。
+              br
+              span(class="p-join__text-small")
+                span(class="p-join__text-small__inner") 登録初月は無料となるため、費用は発生しません。
+              span(class="p-join__text-small p-join__text-small--important")
+                span(class="p-join__text-small__inner") ここからはPCでの閲覧をおすすめします。
+            div(class="p-join__image")
+              div(class="p-join__image-item")
+                img(
+                  alt="受けたい授業を申し込みましょう" 
+                  height="350" 
+                  width="450" 
+                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0301.jpg"
+                  )
+              div(class="p-join__image-item")
+                img(
+                  alt="受けたい授業を申し込みましょう" 
+                  height="350" 
+                  width="450" 
+                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0302.jpg"
+                  )
+          li.js-hidden.js-visible(class="p-join__item")
+            div(class="p-join__head")
+              div(class="p-join__number")
+                p(class="p-join__number01") STEP
+                p(class="p-join__number02") 4
+              h2(class="p-join__title")
+                | 受講レベルを
+                br.u-br-sp
+                | 選択しましょう
+            p(class="p-join__text")
+              | 受講レベルを設定すると、授業を受けられるようになります。
+              br
+              span(class="p-join__text-small")
+                span(class="p-join__text-small__inner") 自分には難しかった…と感じた場合は、あとから受講レベルを変更できます。
+            div(class="p-join__image")
+              div(class="p-join__image-item")
+                img(
+                  alt="受講レベルを選択しましょう" 
+                  height="350" 
+                  width="450" 
+                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0401.jpg"
+                  )
+              div(class="p-join__image-item")
+                img(
+                  alt="受講レベルを選択しましょう" 
+                  height="350" 
+                  width="450" 
+                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0402.jpg"
+                  )
