@@ -1,8 +1,12 @@
 mixin cta 
   .c-btn
    a(href="#join")
-    |入会方針をすぐ確認したい方はこちら
+    |入会方法をすぐ確認したい方はこちら
 mixin cta-blank
   .c-btn.c-btn-blank
    a(href="https://lms.waomirai.com/login/index.php?tenant=lmswaomirai", target='_blank')
         |無料会員登録
+mixin cta-fixed
+  .fixed-btn(style='display:none;')
+   a(href="#join")
+    |入会方法を確認する

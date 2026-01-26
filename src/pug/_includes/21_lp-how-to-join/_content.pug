@@ -187,7 +187,7 @@ html
               img(src=ImgTitleDecoration) 
             .c-section-title-text
               |受講費用について
-          p.js-hidden.js-visible(class="p-fee__text") 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
+          .c-text| 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
           .p-join__note
            |初月は「無料」で受講いただけます
           table.p-table.js-hidden.js-visible
@@ -283,8 +283,8 @@ html
               text: '5教科以外の探究的な学びとして哲学などに魅力を感じ、入会を決めました。 また、じっと座ることが得意ではない子どもにとって、多少動きながらでも参加できるオンライン形式が合っていると感じています。'
             }
           ]
-
-        each voice in voices
+        .p-voice-item-wrapper
+         each voice in voices
           .p-voice-item
             .p-voice-item-head
               .p-voice-item-head-left
@@ -308,7 +308,9 @@ html
                   .p-join__number
                     p.p-join__number01 STEP
                     p.p-join__number02 1
-                  h2.p-join__title
+                    .p-join__number-icn
+                      img(src=ImgIcnSubject)
+                  .p-join__title
                     | 会員登録しましょう
                 p.p-join__text
                   | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。会員登録するだけでは費用は発生しませんので、ご安心ください。
@@ -320,7 +322,7 @@ html
                       span.p-join__text-small
                         span.p-join__text-small__inner 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
                         span.p-join__text-small
-                      span.p-join__text-small
+                      span.p-join__text-small_red
                          span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
                     p.p-join__note
                       | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
@@ -332,7 +334,9 @@ html
                   .p-join__number
                     p.p-join__number01 STEP
                     p.p-join__number02 2
-                  h2.p-join__title
+                    .p-join__number-icn
+                      img(src=ImgIcnSubject)
+                  .p-join__title
                     | 受けたい授業を
                     br.u-br-sp
                     | 申し込みましょう
@@ -347,6 +351,37 @@ html
                 .p-join__image
                   .p-join__image-item
                     img(src=Imgstep0301)
+      .section-child#faq
+        h2|よくある質問
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |受講にあたりテストや条件はありますか？
+              p.c-faq-list__answer
+                |受講にあたりテストはありません。どなた でも受講可能です。
+        .c-faq-list__item
+              h3.c-faq-list__question オンライン授業で子どもの顔が出ることはありますか？
+              p.c-faq-list__answer
+                |授業の双方向性を高めるため、原則としてカメラはONにしてご参加をお願いしています。事情により難しい場合はOFFで参加しても構いません。チャットや質問への回答を通して授業にご参加いただきます。
+              p.c-faq-list__answer
+                |（Zoomを使用して実施します）
+              p.c-faq-list__answer
+                |※受講者の映像は講師のみに表示され、他の受講者には表示されません。
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |授業で使用する教材はどのようなものですか？
+              p.c-faq-list__answer
+                |ワオ未来塾が開発した独自教材を使用しています。基礎的なテーマから最新のトピックまで幅広くカバーした内容になっています。
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |月の途中からの受講（入会）はできますか？
+              p.c-faq-list__answer
+                |はい、可能です。
+                br
+                |ただし、カリキュラムが終了している授業につきましては、アーカイブ（録画）視聴となります。
+        .c-faq-list__item_end
+          |こちらに記載のない内容については、
+          br
+          |公式ラインよりお問い合わせください
     footer 
       .footer-logo 
         img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
@@ -357,3 +392,5 @@ html
            a(href='https://www.wao-corp.com/', target='_blank')|運営会社
       .footer-copyright
         |© ワオ・コーポレーション All rights reserved.
+    +cta-fixed
+    include _js
