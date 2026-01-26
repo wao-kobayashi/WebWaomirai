@@ -64,7 +64,7 @@ html
             br
             |質問
     section.bg-white
-     .section-child 
+     .section-child#subjects
       h2|学べる科目
       .subjects-list 
         .subjects-list-head.philosophy
@@ -115,7 +115,7 @@ html
           br
           a(href="https://waomirai.com/subject/money/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
     section.bg-graylight
-     .section-child 
+     .section-child#features
       h2|ワオ未来塾の特徴
       .p-learning__item
             .p-learning__main
@@ -256,122 +256,110 @@ html
             tr
               th ブラウザ
               td 最新バージョンの Google Chrome、Firefox、Safari
+    section.bg-creamyellow 
+     .section-child#voice
+        h2|お客様の声
+        -
+          const voices = [{
+              img: ImgIllust01,
+              name: '小学５年生 / 男の子',
+              subject: '[受講科目]哲学/科学',
+              title: '上の学年の受講者に刺激を受け、文章を書く意識も高まっています',
+              text: '学校では扱わないような、普段あまり考えることのないテーマに惹かれて受講を決めました。学年の推奨レベルより高いクラスでも、難しい言葉を自分で調べたり質問したりと、知的好奇心が自然と育っています。'
+            },
+            {
+              img: ImgIllust02,
+              name: '中学１年生 / 女の子',
+              subject: '[受講科目]哲学/科学',
+              title: '自分の考えを共有したり、他の受講者の意見を聞いたりできる点も魅力',
+              text: '以前から哲学に興味があり、「答えのない問い」を考えることが好きだったため受講を決めました。 科学の講座も学年の推奨レベルより高いクラスを受講していますが、基礎知識がなくても分かりやすく、安心して学べています。'
+            },
+            {
+              img: ImgIllust03,
+              name: '小学６年生 / 女の子',
+              subject: '[受講科目]経済',
+              title: '送り迎えが不要なオンラインであることに加え、教科書の学習だけでなく、その先につながる思考力の大切さ',
+              text: '受験を意識し始める6年生の時期に受講を決めました。授業中に先生が自分の意見に反応してくれる点が良く、他の生徒の発言を通して、物事を「自分の視点」から考える大切さに気づかされました。'
+            },
+            {
+              img: ImgIllust04,
+              name: '小学３年生 / 男の子',
+              subject: '[受講科目]哲学/科学',
+              title: '保護者として、テストの点だけでなく「自分の頭で考えられる人」になってほしい',
+              text: '5教科以外の探究的な学びとして哲学などに魅力を感じ、入会を決めました。 また、じっと座ることが得意ではない子どもにとって、多少動きながらでも参加できるオンライン形式が合っていると感じています。'
+            }
+          ]
 
-    .p-join
-      .l-wrapper.l-wrapper-sp
-        ul(class="p-join__list")
-          li.js-hidden.js-visible(class="p-join__item")
-            div(class="p-join__head")
-              div(class="p-join__number")
-                p(class="p-join__number01") STEP
-                p(class="p-join__number02") 1
-              h2(class="p-join__title")
-                | LINEの友だちに
-                br.u-br-sp
-                | 登録しましょう
-            p(class="p-join__text")
-              | まずは、サイトの「LINEで体験申込」ボタンから友だち登録を行いましょう。
-              br
-              | スマホでご覧の方はそのまま登録画面に進みます。
-              br
-              | PCでご覧の方は、表示された2次元コードをスマホで読み取ってください。
-            .c-button.js-hidden.js-visible(class="p-join__button")
-              span.is-member.is-blank.u-link(
-                data-link="line" 
-                class="c-button__link"
-                )
-                span(class="c-button__text") LINEで体験申込する
-          li.js-hidden.js-visible(class="p-join__item")
-            div(class="p-join__head")
-              div(class="p-join__number")
-                p(class="p-join__number01") STEP
-                p(class="p-join__number02") 2
-              h2(class="p-join__title")
-                | LINEのメニューから
-                br.u-br-sp
-                | 会員登録しましょう
-            p(class="p-join__text")
-              | LINEのトーク画面下部のメニューの「学習サイト登録」から会員登録ページに移動できますので、
-              br.u-br-pc
-              | 受講される方の情報をご入力ください。
-            div(class="p-join__wrapper")
-              div(class="p-join__wrapper-main")
-                p(class="p-join__text")
-                  span(class="p-join__text-small")
-                    span(class="p-join__text-small__inner") 会員登録するだけでは費用は発生しませんので、ご安心ください。
-                  span(class="p-join__text-small")
-                    span(class="p-join__text-small__inner") 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
-                p(class="p-join__note")
-                  | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
+        each voice in voices
+          .p-voice-item
+            .p-voice-item-head
+              .p-voice-item-head-left
+                img(src=voice.img)
+              .p-voice-item-head-right
+                .p-voice-item-head-right-name
+                  = voice.name
+                .p-voice-item-head-right-subject
+                  = voice.subject
+            .p-voice-item-content
+              .p-voice-item-content-title
+                = voice.title
+              .p-voice-item-content-text
+                = voice.text
+    section.bg-white
+      .section-child#join 
+        h2|入会手順 
+        ul.p-join__list
+              li.p-join__item.js-hidden.js-visible
+                .p-join__head
+                  .p-join__number
+                    p.p-join__number01 STEP
+                    p.p-join__number02 1
+                  h2.p-join__title
+                    | 会員登録しましょう
+                p.p-join__text
+                  | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。会員登録するだけでは費用は発生しませんので、ご安心ください。
+                .p-join__wrapper
+                  .p-join__wrapper-main
+                    p.p-join__text
+                      span.p-join__text-small
+                        span.p-join__text-small__inner 会員登録するだけでは費用は発生しませんので、ご安心ください。
+                      span.p-join__text-small
+                        span.p-join__text-small__inner 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
+                        span.p-join__text-small
+                      span.p-join__text-small
+                         span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
+                    p.p-join__note
+                      | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
+                      br
+                      | お手数ですが、再度お申し込みをお願いいたします。
+                +cta-blank
+              li.p-join__item.js-hidden.js-visible
+                .p-join__head
+                  .p-join__number
+                    p.p-join__number01 STEP
+                    p.p-join__number02 2
+                  h2.p-join__title
+                    | 受けたい授業を
+                    br.u-br-sp
+                    | 申し込みましょう
+                p.p-join__text
+                  | 会員専用の学習ページで、受講したい科目をお申し込みいただけます。
                   br
-                  | お手数ですが、再度お申し込みをお願いいたします。
-              div(class="p-join__image")
-                div(class="p-join__image-item")
-                  img(
-                    alt="受けたい授業を申し込みましょう" 
-                    height="350" 
-                    width="450" 
-                    src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step02.jpg"
-                    )
-          li.js-hidden.js-visible(class="p-join__item")
-            div(class="p-join__head")
-              div(class="p-join__number")
-                p(class="p-join__number01") STEP
-                p(class="p-join__number02") 3
-              h2(class="p-join__title")
-                | 受けたい授業を
-                br.u-br-sp
-                | 申し込みましょう
-            p(class="p-join__text")
-              | 会員専用の学習ページで、受講したい科目をお申し込みいただけます。
-              br
-              | 「今すぐ無料トライアル」ボタンを押すと、決済情報の入力画面に進みます。
-              br
-              span(class="p-join__text-small")
-                span(class="p-join__text-small__inner") 登録初月は無料となるため、費用は発生しません。
-              span(class="p-join__text-small p-join__text-small--important")
-                span(class="p-join__text-small__inner") ここからはPCでの閲覧をおすすめします。
-            div(class="p-join__image")
-              div(class="p-join__image-item")
-                img(
-                  alt="受けたい授業を申し込みましょう" 
-                  height="350" 
-                  width="450" 
-                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0301.jpg"
-                  )
-              div(class="p-join__image-item")
-                img(
-                  alt="受けたい授業を申し込みましょう" 
-                  height="350" 
-                  width="450" 
-                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0302.jpg"
-                  )
-          li.js-hidden.js-visible(class="p-join__item")
-            div(class="p-join__head")
-              div(class="p-join__number")
-                p(class="p-join__number01") STEP
-                p(class="p-join__number02") 4
-              h2(class="p-join__title")
-                | 受講レベルを
-                br.u-br-sp
-                | 選択しましょう
-            p(class="p-join__text")
-              | 受講レベルを設定すると、授業を受けられるようになります。
-              br
-              span(class="p-join__text-small")
-                span(class="p-join__text-small__inner") 自分には難しかった…と感じた場合は、あとから受講レベルを変更できます。
-            div(class="p-join__image")
-              div(class="p-join__image-item")
-                img(
-                  alt="受講レベルを選択しましょう" 
-                  height="350" 
-                  width="450" 
-                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0401.jpg"
-                  )
-              div(class="p-join__image-item")
-                img(
-                  alt="受講レベルを選択しましょう" 
-                  height="350" 
-                  width="450" 
-                  src="https://waomirai.com/wp-content/themes/Wao-Mirai-HP/assets/img/guide/join/step0402.jpg"
-                  )
+                  | 「今すぐ無料トライアル」ボタンを押すと、決済情報の入力画面に進みます。
+                  br
+                  span.p-join__text-small
+                    span.p-join__text-small__inner.
+                        登録初月は無料となるため、費用は発生しません。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0301)
+    footer 
+      .footer-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+      .footer-navi 
+        .footer-navi-link 
+           a(href='https://waomirai.com/', target='_blank')|ワオ未来塾公式サイト
+        .footer-navi-link 
+           a(href='https://www.wao-corp.com/', target='_blank')|運営会社
+      .footer-copyright
+        |© ワオ・コーポレーション All rights reserved.
