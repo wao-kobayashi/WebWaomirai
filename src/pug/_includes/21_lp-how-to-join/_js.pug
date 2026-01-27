@@ -8,3 +8,36 @@ script.
       }
     });
   });
+
+  $(document).ready(function() {
+    
+    // .schedule-table内を横スクロールしたら .overlay-swipe をfadeout
+    $('.schedule-table').on('scroll', function() {
+      //- alert('test');
+      $('.overlay-swipe').fadeOut();
+    });
+    
+    // .schedule-tabをクリックしたときの処理
+    $('.schedule-tab-content').on('click', function() {
+      // クリックされたタブにactiveクラスを追加、他のタブから削除
+      $('.schedule-tab-content').removeClass('active');
+      $(this).addClass('active');
+      
+      // クリックされたタブのIDを取得
+      var selectedClass = $(this).attr('id');
+      
+      // 「全教科」がクリックされた場合
+      if (selectedClass === 'all') {
+        $('.subject-content').css('opacity', '1');
+      } 
+      // 特定の教科がクリックされた場合
+      else {
+        // すべての subject-content を一旦 opacity: 0 に
+        $('.subject-content').css('opacity', '0');
+        
+        // クリックされた教科のクラスに対応する subject-content のみ opacity: 1 に
+        $('.subject-content.' + selectedClass).css('opacity', '1');
+      }
+    });
+    
+  });

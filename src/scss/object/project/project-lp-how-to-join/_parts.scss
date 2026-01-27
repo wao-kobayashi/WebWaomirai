@@ -222,9 +222,82 @@ $single-subject-row: 57px;
 $double-subject-row: 120px;
 
 .schedule-table {
+  position: relative;
   overflow-x: auto;
   width: calc(100% + 40px);
   margin: 0 -20px;
+  .overlay-swipe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline-table;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    border-radius: var(--radius-base);
+    .overlay-swipe-flex {
+      display: flex;
+      align-items: center;
+      padding: 16px 18px;
+      gap: 16px;
+      .overlay-swipe-text {
+        color: $cl-white;
+        font-size: $font-size-l;
+        letter-spacing: 0.5px;
+      }
+      .overlay-swipe-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .hand img {
+          width: 28px;
+          animation: hand-move 2s ease-out infinite;
+        }
+        .arrow {
+          transform: scale(-1, 1);
+          img {
+            width: 20px;
+            margin: 0 auto 4px;
+
+            animation: pulse-arrow 3s ease-out infinite;
+          }
+        }
+      }
+    }
+  }
+  @keyframes pulse-arrow {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-0.25em);
+      opacity: 1;
+    }
+    75% {
+      transform: translateX(-0.25em);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes hand-move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(0.5em);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
   table {
     border-collapse: separate;
     border-spacing: 0;
@@ -242,6 +315,9 @@ $double-subject-row: 120px;
 
   td.subject {
     position: relative;
+  }
+  thead th {
+    border-top: 1.5px dashed var(--gray-color);
   }
   th {
     border-bottom: 1.5px dashed var(--gray-color);
@@ -369,6 +445,8 @@ $double-subject-row: 120px;
     box-shadow: var(--shadow-light);
     padding: 8px 0;
     border-radius: var(--radius-base);
+    font-size: $font-size-m;
+    letter-spacing: 0.5px;
     cursor: pointer;
     &.active,
     &:hover {
