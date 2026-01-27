@@ -12,7 +12,7 @@ header {
   align-items: center;
   justify-content: center;
   img {
-    width: calc(200 * var(--px));
+    width: 55%;
   }
 }
 h1 {
@@ -47,6 +47,7 @@ nav {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       width: 100%;
       height: 45px;
       color: $cl-black;
@@ -76,7 +77,7 @@ h2 {
   text-align: center;
   color: var(--text-color);
   letter-spacing: 1px;
-  margin: 0 auto 35px;
+  margin: 0 auto 25px;
 }
 
 .subjects-list {
@@ -106,7 +107,7 @@ h2 {
         margin: 0 0 6px;
       }
       .subjects-list-head-left-text {
-        font-size: $font-size-s;
+        font-size: $font-size-m;
         line-height: $lineheight-relaxed;
       }
     }
@@ -120,7 +121,7 @@ h2 {
   }
   .subjects-list-content {
     padding: 25px 20px;
-    font-size: $font-size-s;
+    font-size: $font-size-m;
     line-height: $lineheight-relaxed;
 
     &.philosophy {
@@ -137,7 +138,11 @@ h2 {
       text-decoration: underline;
       &::after {
         font-family: var(--icon-font-family);
+        font-weight: 900; /* この行を追加 */
         content: "\f08e";
+        padding: 0 0 0 8px;
+        font-size: 12px;
+        text-decoration: none;
       }
     }
   }
@@ -191,12 +196,7 @@ h2 {
     object-fit: contain;
     border-radius: var(--radius-base);
   }
-  p.p-note {
-    font-size: $font-size-ss;
-    line-height: $lineheight-relaxed;
-    color: var(--gray-color-dark);
-    margin: 10px 0 0;
-  }
+
   .p-learning__image_skip {
     margin: 45px auto 0;
     display: flex;
@@ -262,16 +262,16 @@ h2 {
       }
     }
     .p-voice-item-content {
-      padding: 20px 20px;
+      padding: 20px 25px 30px;
       .p-voice-item-content-title {
-        font-size: $font-size-l;
+        font-size: 18px;
         line-height: $lineheight-relaxed;
         font-weight: bold;
         margin: 0 0 12px;
       }
       .p-voice-item-content-text {
         font-size: $font-size-m;
-        line-height: $lineheight-relaxed;
+        line-height: 2.1;
       }
     }
   }
@@ -340,13 +340,13 @@ h2 {
   line-height: var(--lh-tight);
 }
 .p-join__text {
-  margin-top: calc(20 * var(--px));
+  margin-top: 20px;
   font-size: $font-size-m;
-  line-height: var(--lh-base);
+  line-height: $lineheight-normal;
   text-align: left;
 }
 .p-join__button {
-  margin-top: calc(20 * var(--px));
+  margin-top: 20px;
 }
 .p-join__image {
   display: block;
@@ -355,7 +355,7 @@ h2 {
 }
 .p-join__image-item {
   width: 100%;
-  margin-top: calc(20 * var(--px));
+  margin-top: 20px;
 }
 .p-join__image-item img {
   width: 100%;
@@ -389,18 +389,9 @@ h2 {
 }
 .p-join__text-small {
   display: block;
-  margin-top: calc(10 * var(--px));
+  margin-top: 10px;
 }
 
-// .p-join__note::before {
-//   display: block;
-//   content: "";
-//   width: calc(21 * var(--px));
-//   height: calc(19 * var(--px));
-//   background: url(../img/guide/join/icon.svg) center top / cover no-repeat;
-//   flex-shrink: 0;
-//   margin: calc(1 * var(--px)) calc(10 * var(--px)) 0 0;
-// }
 .p-join__wrapper {
   display: block;
 }
@@ -417,15 +408,15 @@ h2 {
 /* faq*/
 
 .c-faq-list {
-  margin-top: calc(25 * var(--px));
+  margin-top: 25px;
 }
 .c-faq-list__item {
-  padding: calc(20 * var(--px));
+  padding: 20px;
   box-shadow: var(--shadow-base);
   border-radius: var(--radius-base);
 }
 .c-faq-list__item {
-  margin-bottom: calc(20 * var(--px));
+  margin-bottom: 20px;
 }
 .c-faq-list__question {
   display: flex;
@@ -438,7 +429,7 @@ h2 {
   font-size: var(--fs-text);
 }
 .c-faq-list__question.is-accordion {
-  padding-right: calc(30 * var(--px));
+  padding-right: 30px;
 }
 .c-faq-list__question::before {
   content: "Q.";
@@ -451,8 +442,8 @@ h2 {
   white-space: nowrap;
 }
 .c-faq-list--small .c-faq-list__question::before {
-  font-size: calc(20 * var(--px));
-  margin-top: calc(2 * var(--px));
+  font-size: 20px;
+  margin-top: 2px;
 }
 .c-faq-list__question.is-accordion::after {
   position: absolute;
@@ -472,21 +463,22 @@ h2 {
 }
 .c-faq-list__answer {
   display: flex;
-  font-size: $font-size-l;
-  line-height: var(--lh-tight);
-  margin-top: calc(10 * var(--px));
+  font-size: $font-size-m;
+  line-height: 1.65;
+  margin-top: 10px;
 }
 .c-faq-list--small .c-faq-list__answer {
   font-size: $font-size-ss;
-  margin-top: calc(10 * var(--px));
+  margin-top: 10px;
 }
 .c-faq-list__item_end {
   font-size: $font-size-l;
-  padding: calc(20 * var(--px));
+  padding: 20px;
   box-shadow: var(--shadow-base);
   border-radius: var(--radius-base);
   text-align: center;
   background: var(--gray-color-lighter);
+  line-height: $lineheight-relaxed;
 }
 
 /* footer */
@@ -515,6 +507,13 @@ footer {
       a {
         color: $cl-white;
         text-decoration: none;
+        &::after {
+          padding: 0 0 0 8px;
+          font-size: 12px;
+          font-family: var(--icon-font-family);
+          font-weight: 900; /* この行を追加 */
+          content: "\f08e";
+        }
       }
     }
   }

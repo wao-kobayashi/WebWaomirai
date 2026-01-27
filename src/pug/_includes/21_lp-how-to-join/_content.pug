@@ -34,35 +34,7 @@ html
         |ワオ未来塾にご興味をお持ちいただき、ありがとうございます。このガイドではワオ未来塾の科目/特徴や入会手続きまでをご案内します。
       +cta
     nav 
-        div
-          a(href="#subjects") 学べる科目
-        div
-          a(href="#features") 
-            |ワオ未来塾
-            br
-            |の特徴
-        div
-          a(href="#schedule") 
-            |配信
-            br
-            |スケジュール
-        div
-          a(href="#price") 
-            |料金
-        div
-          a(href="#system") 
-            |推奨環境
-        div
-          a(href="#voice") 
-            |お客様の声
-        div
-          a(href="#join") 
-            |入会手順
-        div
-          a(href="#faq") 
-            |よくある
-            br
-            |質問
+      +menu-links 
     section.bg-white
      .section-child#subjects
       h2|学べる科目
@@ -78,7 +50,9 @@ html
           .subjects-list-head-right
             img(src=ImgSubject01) 
         .subjects-list-content.philosophy
-          |哲学と聞くと、抽象的で難解なイメージがあるかもしれません。でも、ワオ未来塾の哲学はシンプルです。自分はどんな大人になりたいのか。自分はこの世界でどう生きたいのか。生き方の「軸」を見つけるための学びです。
+          |哲学と聞くと、抽象的で難解なイメージがあるかもしれません。でも、ワオ未来塾の哲学はシンプルです。
+          br
+          |自分はどんな大人になりたいのか。自分はこの世界でどう生きたいのか。生き方の「軸」を見つけるための学びです。
           br
           br
           a(href="https://waomirai.com/subject/philosophy/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
@@ -94,7 +68,9 @@ html
           .subjects-list-head-right
             img(src=ImgSubject02) 
         .subjects-list-content.science
-          |科学とは、主観や個人の思い込みを許さず、事実から原理、法則を見いだす学問です。日常的なふとした疑問を科学的視点から考え、議論を重ねることで科学リテラシーを身に着けます。
+          |科学とは、主観や個人の思い込みを許さず、事実から原理、法則を見いだす学問です。
+          br
+          |日常的なふとした疑問を科学的視点から考え、議論を重ねることで科学リテラシーを身に着けます。
           br
           br
           a(href="https://waomirai.com/subject/science/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
@@ -110,7 +86,9 @@ html
           .subjects-list-head-right
             img(src=ImgSubject03) 
         .subjects-list-content.economy
-          |私たちの生活とは切り離せないお金。 でも、お金にまつわる経済の仕組みや制度を知らない人は、まだまだ少なくありません。 生活に役立つ知識、起業・ビジネスに使う知識など、お金にまつわるさまざまなテーマについて、具体的な例を挙げながら広く深く学びます。
+          |私たちの生活とは切り離せないお金。でも、お金にまつわる経済の仕組みや制度を知らない人は、まだまだ少なくありません。
+          br
+          |生活に役立つ知識、起業・ビジネスに使う知識など、お金にまつわるさまざまなテーマについて、具体的な例を挙げながら広く深く学びます。
           br
           br
           a(href="https://waomirai.com/subject/money/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
@@ -154,7 +132,7 @@ html
                   tr
                     th レベル4
                     td 高校生〜推奨
-              p.p-note|※レベルが合わない場合は途中で変更可能です。
+              p.c-note|※レベルが合わない場合は途中で変更可能です。
               .p-learning__image_skip
                 div.p-learning__image_skip_radius
                   img(src=ImgLearning03 )
@@ -165,6 +143,7 @@ html
     section.bg-white
      .section-child#schedule 
         h2|ライブ配信スケジュール
+        .c-text|ライブ授業は、年間を通じて平日の夜を中心に配信されます。
         include _content_schedule.pug
      .section-child#price 
       h2|料金
@@ -216,7 +195,7 @@ html
             img(src=ImgPayment03)
             img(src=ImgPayment04)
             img(src=ImgPayment05)
-          .c-text
+          .c-note
             |受講登録した翌月の1日に受講料が決済されます。［例］4月に講座を購入した場合、5月1日に5月分が決済されます。※4月分は無料
      .section-child#system 
         h2|推奨環境
@@ -258,28 +237,28 @@ html
           const voices = [{
               img: ImgIllust01,
               name: '小学５年生 / 男の子',
-              subject: '[受講科目]哲学/科学',
+              subject: '[受講科目] 哲学/科学',
               title: '上の学年の受講者に刺激を受け、文章を書く意識も高まっています',
               text: '学校では扱わないような、普段あまり考えることのないテーマに惹かれて受講を決めました。学年の推奨レベルより高いクラスでも、難しい言葉を自分で調べたり質問したりと、知的好奇心が自然と育っています。'
             },
             {
               img: ImgIllust02,
               name: '中学１年生 / 女の子',
-              subject: '[受講科目]哲学/科学',
+              subject: '[受講科目] 哲学/科学',
               title: '自分の考えを共有したり、他の受講者の意見を聞いたりできる点も魅力',
               text: '以前から哲学に興味があり、「答えのない問い」を考えることが好きだったため受講を決めました。 科学の講座も学年の推奨レベルより高いクラスを受講していますが、基礎知識がなくても分かりやすく、安心して学べています。'
             },
             {
               img: ImgIllust03,
               name: '小学６年生 / 女の子',
-              subject: '[受講科目]経済',
+              subject: '[受講科目] 経済',
               title: '送り迎えが不要なオンラインであることに加え、教科書の学習だけでなく、その先につながる思考力の大切さ',
               text: '受験を意識し始める6年生の時期に受講を決めました。授業中に先生が自分の意見に反応してくれる点が良く、他の生徒の発言を通して、物事を「自分の視点」から考える大切さに気づかされました。'
             },
             {
               img: ImgIllust04,
               name: '小学３年生 / 男の子',
-              subject: '[受講科目]哲学/科学',
+              subject: '[受講科目] 哲学/科学',
               title: '保護者として、テストの点だけでなく「自分の頭で考えられる人」になってほしい',
               text: '5教科以外の探究的な学びとして哲学などに魅力を感じ、入会を決めました。 また、じっと座ることが得意ではない子どもにとって、多少動きながらでも参加できるオンライン形式が合っていると感じています。'
             }
@@ -314,7 +293,7 @@ html
                   .p-join__title
                     | 会員登録しましょう
                 p.p-join__text
-                  | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。会員登録するだけでは費用は発生しませんので、ご安心ください。
+                  | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。
                 .p-join__wrapper
                   .p-join__wrapper-main
                     p.p-join__text
@@ -326,9 +305,11 @@ html
                       span.p-join__text-small_red
                          span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
                     p.p-join__note
-                      | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
-                      br
-                      | お手数ですが、再度お申し込みをお願いいたします。
+                      i.fa-solid.fa-triangle-exclamation
+                      span
+                        | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
+                        br
+                        | お手数ですが、再度お申し込みをお願いいたします。
                 +cta-blank
               li.p-join__item.js-hidden.js-visible
                 .p-join__head
@@ -355,11 +336,6 @@ html
       .section-child#faq
         h2|よくある質問
         .c-faq-list__item
-              h3.c-faq-list__question 
-                |受講にあたりテストや条件はありますか？
-              p.c-faq-list__answer
-                |受講にあたりテストはありません。どなた でも受講可能です。
-        .c-faq-list__item
               h3.c-faq-list__question オンライン授業で子どもの顔が出ることはありますか？
               p.c-faq-list__answer
                 |授業の双方向性を高めるため、原則としてカメラはONにしてご参加をお願いしています。事情により難しい場合はOFFで参加しても構いません。チャットや質問への回答を通して授業にご参加いただきます。
@@ -379,6 +355,11 @@ html
                 |はい、可能です。
                 br
                 |ただし、カリキュラムが終了している授業につきましては、アーカイブ（録画）視聴となります。
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |受講にあたりテストや条件はありますか？
+              p.c-faq-list__answer
+                |受講にあたりテストはありません。どなた でも受講可能です。
         .c-faq-list__item_end
           |こちらに記載のない内容については、
           br
@@ -394,4 +375,5 @@ html
       .footer-copyright
         |© ワオ・コーポレーション All rights reserved.
     +cta-fixed
+    +menu-modal
     include _js

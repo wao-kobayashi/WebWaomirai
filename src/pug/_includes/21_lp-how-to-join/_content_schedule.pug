@@ -116,12 +116,11 @@
             td.subject(class=day.type)
               if day.classes && day.classes[timeIndex]
                 each item in day.classes[timeIndex]
-                  .subject-wrpper
-                    .subject-content(class=item.class)
+                  .subject-wrapper(class=item.class)
+                    .subject-content
                       .name= item.subject
                       .label レベル
                       .level= item.level
-
 .schedule-info
      table(class="p-details__table")
           tbody
