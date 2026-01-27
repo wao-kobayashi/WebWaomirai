@@ -215,3 +215,175 @@
 .p-details__table tr:nth-child(n + 2) td {
   border-top: none;
 }
+
+$time-row: 53px;
+$td-row-height: 66px;
+$single-subject-row: 57px;
+$double-subject-row: 120px;
+
+.schedule-table {
+  overflow-x: auto;
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: calc(
+      $time-row + ($single-subject-row * 3) + ($double-subject-row * 2)
+    );
+  }
+
+  th,
+  td {
+    // padding: 8px;
+    text-align: center;
+    background: #fff;
+  }
+
+  td.subject {
+    position: relative;
+  }
+  th {
+    border-bottom: 1.5px dashed var(--gray-color);
+  }
+  tr td {
+    height: $td-row-height;
+    border-right: 1.5px dashed var(--gray-color);
+  }
+  /* 左列固定 */
+  th.time {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #f5f5f5;
+    width: $time-row;
+    border-right: 1.5px solid #6b6b6b;
+    font-size: 12px;
+    line-height: $lineheight-tight;
+    font-weight: 300;
+  }
+  td.subject {
+    border-bottom: 1.5px dashed var(--gray-color);
+  }
+
+  .subject-wrpper {
+    width: $single-subject-row;
+    height: $td-row-height;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 2px;
+  }
+  .subject-content {
+    width: calc($single-subject-row - 4px);
+    height: calc($td-row-height - 6px);
+    border-radius: 3px;
+    text-align: center;
+    &.philosophy {
+      background-color: #ffe1a6;
+      border-left: #fcaf17 solid 2px;
+    }
+    &.economy {
+      background-color: #abe4ff;
+      border-left: #09a4e5 solid 2px;
+    }
+    &.science {
+      background-color: #efffb4;
+      border-left: #9dc03a solid 2px;
+    }
+    .name {
+      padding: 4px 0 0;
+      font-size: 11.5px;
+      line-height: $lineheight-tight;
+    }
+    .label {
+      margin: 4px 0 0;
+      font-size: 8px;
+      line-height: $lineheight-tight;
+    }
+    .level {
+      margin: -1px 0 0;
+      font-size: 22px;
+      line-height: $lineheight-tight;
+    }
+  }
+  .single {
+    width: $single-subject-row;
+  }
+  .double {
+    width: $double-subject-row;
+  }
+  .week {
+    background: #d2d2d2;
+    border-radius: 4px;
+    width: calc(100% - 4px);
+    margin: 4px auto;
+    font-size: 12px;
+    padding: 3px 0;
+    color: $cl-white;
+  }
+  /* ヘッダーも固定したい場合 */
+  // thead th {
+  //   position: sticky;
+  //   top: 0;
+  //   z-index: 3;
+  // }
+}
+
+.schedule-info {
+  margin: 40px auto 0;
+  tr td {
+    width: 100%;
+  }
+  td {
+    padding: 15px 15px 0;
+    border-bottom-left-radius: var(--radius-base);
+  }
+  .schedule-info-list {
+    display: flex;
+    padding: 0 0px;
+    gap: 3px;
+    margin: 0 0 20px;
+  }
+  .schedule-info-list-content {
+    font-size: $font-size-l;
+    font-weight: bold;
+    span {
+      display: block;
+      margin: 4px 0 0;
+      font-size: $font-size-ss;
+      font-weight: normal;
+    }
+  }
+}
+.schedule-tab {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 16px;
+  .schedule-tab-content {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-light);
+    padding: 8px 0;
+    border-radius: var(--radius-base);
+    cursor: pointer;
+    &.active,
+    &:hover {
+      &#all {
+        background: #e6ffd7;
+      }
+      &#philosophy {
+        background: #fff1d6;
+      }
+      &#science {
+        background: #f0f9d9;
+      }
+      &#economy {
+        background: #e6f6fc;
+      }
+    }
+  }
+}
