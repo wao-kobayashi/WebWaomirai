@@ -1,5 +1,6 @@
 script.
-  $(function () {            
+  $(function () {    
+    //スクロールで追従ボタン表示        
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 200) {
          $(".fixed-btn").fadeIn();
@@ -8,12 +9,14 @@ script.
       }
     });
   });
+  //モーダルメニューのjs
    $('.menu-modal-navi a, .modal-close, .bg-modal').click(function() {
       $('.menu-modal, .bg-modal').hide();
     });
     $('.btn-modalmenu').click(function() {
       $('.menu-modal, .bg-modal').show();
     });
+//教科スクロール＆タブのjs
 script.
   $(document).ready(function() {
   // overlay-swipeが消えたかどうかのフラグ

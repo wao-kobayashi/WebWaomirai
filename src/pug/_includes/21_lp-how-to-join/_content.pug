@@ -26,13 +26,45 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   // コンテンツをインクルード
   body
-    header 
-      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-    h1|入会ガイド
+    .fv
+      .fv-shapes
+        .fv-shapes-01 
+           img(src=ImgFvShape01)
+        .fv-shapes-02
+           img(src=ImgFvShape02)
+        .fv-shapes-03
+           img(src=ImgFvShape03)
+        .fv-shapes-04
+           img(src=ImgFvShape04)
+
+      .fv-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+      .fv-slider-container
+         .fv-slider-wrapper
+            .slide
+              img(src=ImgFvSlidePh)
+            .slide
+              img(src=ImgFvSlideEc)
+            .slide
+              img(src=ImgFvSlideSc)
+            .slide
+              img(src=ImgFvSlidePh)
+            .slide
+              img(src=ImgFvSlideEc)
+            .slide
+              img(src=ImgFvSlideSc)
     section.intro
-      p.c-text 
-        |ワオ未来塾にご興味をお持ちいただき、ありがとうございます。このガイドではワオ未来塾の科目/特徴や入会手続きまでをご案内します。
+      h1|入会ガイド
+      p.intro-text
+          |ワオ未来塾にご興味をお持ちいただき、
+          br
+          |ありがとうございます。
+          br
+          |このガイドではワオ未来塾の科目/特徴や
+          br
+          |入会手続きまでをご案内します。
       +cta
+
     nav 
       +menu-links 
     section.bg-white
@@ -332,7 +364,30 @@ html
                         登録初月は無料となるため、費用は発生しません。
                 .p-join__image
                   .p-join__image-item
+                    img(src=Imgstep0201)
+              li.p-join__item.js-hidden.js-visible
+                .p-join__head
+                  .p-join__number
+                    p.p-join__number01 STEP
+                    p.p-join__number02 3
+                    .p-join__number-icn
+                      img(src=ImgIcnSubject)
+                  .p-join__title
+                    | 受講レベル
+                    br.u-br-sp
+                    | を選択しましょう
+                p.p-join__text
+                  | 受講レベルを設定すると、授業を受けられるようになります。
+                  br
+                  span.p-join__text-small
+                    span.p-join__text-small__inner
+                       |自分には難しかった…と感じた場合は、あとから受講レベルを変更できます。
+                .p-join__image
+                  .p-join__image-item
                     img(src=Imgstep0301)
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0302)
       .section-child#faq
         h2|よくある質問
         .c-faq-list__item
