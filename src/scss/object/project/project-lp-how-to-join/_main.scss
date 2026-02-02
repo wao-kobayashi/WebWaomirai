@@ -161,10 +161,28 @@ h2 {
   border-radius: var(--radius-base);
   overflow: hidden;
   margin: 0 auto 30px;
+  .youtube {
+    padding: 20px 20px !important;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  .youtube iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-base);
+  }
   .subjects-list-head {
     display: flex;
     height: 120px;
-
+    &.youtube-header {
+      height: auto !important;
+      .subjects-list-head-left {
+        padding: 10px 20px 2px !important;
+        .subjects-list-head-left-title {
+          font-size: $font-size-l;
+        }
+      }
+    }
     &.philosophy {
       background: $cl-philosophy;
     }
