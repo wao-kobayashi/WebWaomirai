@@ -1,0 +1,74 @@
+.menu-modal {
+  position: fixed;
+  z-index: 1002;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gray-color-light);
+  display: inline-table;
+  text-align: center;
+  @include min-responsive-style(768px) {
+    margin: auto;
+    max-width: 450px;
+    border-radius: var(--radius-base);
+  }
+  .menu-modal-logo img {
+    width: 45%;
+    margin: 28px auto;
+  }
+  .menu-modal-navi {
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: center;
+    > div a {
+      background: $cl-white;
+      height: 48px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 4px;
+      box-shadow: var(--shadow-light);
+
+      text-decoration: none;
+      color: var(--text-color);
+    }
+  }
+  .menu-modal-close {
+    height: 56px;
+    background: var(--button-color);
+    width: 70%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    border-radius: $border-radius-full;
+    margin: 25px auto;
+    box-shadow: var(--shadow-light);
+    color: $cl-white;
+    gap: 8px;
+    cursor: pointer;
+    i {
+      font-size: 20px;
+    }
+  }
+}
+
+.bg-modal {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,459 @@
+//mixin
+include _mixins 
+//variable
+include _variables 
+
+//data
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    link(href=`21-lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`../css/21-lp-how-to-join.css?v=${Date.now()}`, rel="stylesheet")
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  // コンテンツをインクルード
+  body
+    .fv
+      .fv-shapes
+        .fv-shapes-01 
+           img(src=ImgFvShape01)
+        .fv-shapes-02
+           img(src=ImgFvShape02)
+        .fv-shapes-03
+           img(src=ImgFvShape03)
+        .fv-shapes-04
+           img(src=ImgFvShape04)
+
+      .fv-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+      .fv-slider-container
+         .fv-slider-wrapper
+            .slide
+              img(src=ImgFvSlidePh)
+            .slide
+              img(src=ImgFvSlideEc)
+            .slide
+              img(src=ImgFvSlideSc)
+            .slide
+              img(src=ImgFvSlidePh)
+            .slide
+              img(src=ImgFvSlideEc)
+            .slide
+              img(src=ImgFvSlideSc)
+    section.intro
+      h1|入会ガイド
+      p.intro-text
+          |ワオ未来塾にご興味をお持ちいただき、
+          br
+          |ありがとうございます。
+          br
+          |このガイドではワオ未来塾の科目/特徴や
+          br
+          |入会手続きまでをご案内します。
+      +cta
+
+    nav 
+      +menu-links 
+    section.bg-white
+     .section-child#subjects
+      h2|学べる科目
+      .subjects-list 
+        .subjects-list-head.philosophy
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |哲学（思考力）
+             .subjects-list-head-left-text
+               |自分の生き方に「軸」を
+               br
+               |持つための学び
+          .subjects-list-head-right
+            img(src=ImgSubject01) 
+        .subjects-list-content.philosophy
+          |哲学と聞くと、抽象的で難解なイメージがあるかもしれません。でも、ワオ未来塾の哲学はシンプルです。
+          br
+          |自分はどんな大人になりたいのか。自分はこの世界でどう生きたいのか。生き方の「軸」を見つけるための学びです。
+          br
+          br
+          a(href="https://waomirai.com/subject/philosophy/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
+      .subjects-list 
+        .subjects-list-head.science
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |科学リテラシー
+             .subjects-list-head-left-text
+               |知らない世界にも視野を
+               br
+               |広げ、知的好奇心を育む
+          .subjects-list-head-right
+            img(src=ImgSubject02) 
+        .subjects-list-content.science
+          |科学とは、主観や個人の思い込みを許さず、事実から原理、法則を見いだす学問です。
+          br
+          |日常的なふとした疑問を科学的視点から考え、議論を重ねることで科学リテラシーを身に着けます。
+          br
+          br
+          a(href="https://waomirai.com/subject/science/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
+      .subjects-list 
+        .subjects-list-head.economy
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |経済（お金）
+             .subjects-list-head-left-text
+               |お金の基礎知識と考え方・
+               br
+               |付き合い方を身につける
+          .subjects-list-head-right
+            img(src=ImgSubject03) 
+        .subjects-list-content.economy
+          |私たちの生活とは切り離せないお金。でも、お金にまつわる経済の仕組みや制度を知らない人は、まだまだ少なくありません。
+          br
+          |生活に役立つ知識、起業・ビジネスに使う知識など、お金にまつわるさまざまなテーマについて、具体的な例を挙げながら広く深く学びます。
+          br
+          br
+          a(href="https://waomirai.com/subject/money/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
+    section.bg-graylight
+     .section-child#features
+      h2|ワオ未来塾の特徴
+      .p-learning__item
+            .p-learning__main
+              .p-learning__head
+                .p-learning__number
+                  img(src=ImgIcnSubject)
+                .p-learning__title
+                  span.p-learning__title01 ライブ参加型の
+
+                  span.p-learning__title02 オンライン授業
+              p.p-learning__text
+                  |ワオ未来塾のオンライン・ライブ授業は生配信形式で行われ、選択問題への回答やリアクションボタンで積極的に授業に参加できます。    
+            .p-learning__image
+              img(src=ImgLearning02 )
+      .p-learning__item
+            .p-learning__main
+              .p-learning__head
+                .p-learning__number
+                  img(src=ImgIcnSubject)
+                .p-learning__title
+                  span.p-learning__title01 学年を超えた学びを実現する
+                  span.p-learning__title02 飛び級制
+              p.p-learning__text
+                  |授業は４レベルに分けられ、それぞれ推奨学年を設定していますが、学年に縛られず、理解度に応じて高いレベルの授業を選択することができます
+              table.p-table
+                tbody
+                  tr
+                    th レベル1
+                    td 小学３,４年生〜推奨
+                  tr
+                    th レベル2
+                    td 小学５,６年生〜推奨
+                  tr
+                    th レベル3
+                    td 中学生〜推奨
+                  tr
+                    th レベル4
+                    td 高校生〜推奨
+              p.c-note|※レベルが合わない場合は途中で変更可能です。
+              .p-learning__image_skip
+                div.p-learning__image_skip_radius
+                  img(src=ImgLearning03 )
+                div
+                  img(src=ImgLevel01 )
+                div
+                  img(src=ImgLevel02 )
+    section.bg-white
+     .section-child#sample
+      h2|授業ダイジェスト動画
+      .c-text|実際の授業の雰囲気を、動画でご確認頂けます
+      .subjects-list 
+        .subjects-list-head.philosophy.youtube-header
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |哲学（思考力）
+        .subjects-list-content.philosophy.youtube.
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/lYRSsrvGhyg?si=kywL2plCJ1zrIiK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      .subjects-list 
+        .subjects-list-head.science.youtube-header
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |科学リテラシー
+        .subjects-list-content.science.youtube.
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_anr_-GKpGE?si=pwo1ShRCCnz0ETJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      .subjects-list 
+        .subjects-list-head.economy.youtube-header
+          .subjects-list-head-left 
+             .subjects-list-head-left-title
+               |経済（お金）
+        .subjects-list-content.economy.youtube.
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZetPoNegLXE?si=nrV-Gj18r3Tw19-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+     .section-child#schedule 
+        h2|ライブ配信スケジュール
+        .c-text|ライブ授業は、年間を通じて平日の夜を中心に配信されます。
+        include _content_schedule.pug
+     .section-child#price 
+      h2|料金
+      .section-child-flex
+        .section-child-flex-content
+          .c-text
+            |ワオ未来塾は、入会金・登録費などの余分な費用は一切かかりません。
+            br
+            |受講したい科目の月額受講費用のみで新しい学びをスタートできます。
+            br
+            |なお、受講する教科数や組み合わせによって費用は変わります。
+          table.p-table.js-hidden.js-visible
+            tbody
+              tr
+                th 入会金
+                td 不要
+
+        .section-child-flex-content
+          h3.c-section-title
+            .c-section-title-img
+              img(src=ImgTitleDecoration) 
+            .c-section-title-text
+              |受講費用について
+          .c-text| 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
+          .p-join__note
+           |初月は「無料」で受講いただけます
+          table.p-table.js-hidden.js-visible
+            tbody
+              tr
+                th 1教科を受講
+                td 6,600円(税込)／月額
+              tr
+                th 2教科を受講
+                td 11,000円(税込)／月額
+              tr
+                th 3教科を受講
+                td 15,400円(税込)／月額
+        .section-child-flex-content 
+          h3.c-section-title
+            .c-section-title-img
+              img(src=ImgTitleDecoration) 
+            .c-section-title-text
+              |お支払い方法について
+          .c-text
+            |以下のクレジットカード決済がご利用いただけます。
+          .p-price-items 
+            img(src=ImgPayment01)
+            img(src=ImgPayment02)
+            img(src=ImgPayment03)
+            img(src=ImgPayment04)
+            img(src=ImgPayment05)
+          .c-note
+            |受講登録した翌月の1日に受講料が決済されます。［例］4月に講座を購入した場合、5月1日に5月分が決済されます。※4月分は無料
+     .section-child#system 
+        h2|推奨環境
+        .c-text
+          | インターネットに接続可能なPC・タブレット・スマートフォンをご用意ください。
+          br
+          | 授業では回答を画面に入力することもありますので、PC・タブレットでの参加を推奨しています。
+        table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") Windowsの場合
+              th OS
+              td Windows10 以降
+            tr
+              th ブラウザ
+              td 最新バージョンの Google Chrome、Firefox、Safari
+        table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") Macの場合
+              th OS
+              td macOS Catalina 10.15 以降
+            tr
+              th ブラウザ
+              td 最新バージョンの Google Chrome、Firefox、Safari
+        table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") タブレット・スマートフォンの場合
+              th OS
+              td 最新のiOSまたはAndroid OSをインストールできる機種
+            tr
+              th ブラウザ
+              td 最新バージョンの Google Chrome、Firefox、Safari
+    section.bg-creamyellow 
+     .section-child#voice
+        h2|お客様の声
+        -
+          const voices = [{
+              img: ImgIllust01,
+              name: '小学５年生 / 男の子',
+              subject: '[受講科目] 哲学/科学',
+              title: '上の学年の受講者に刺激を受け、文章を書く意識も高まっています',
+              text: '学校では扱わないような、普段あまり考えることのないテーマに惹かれて受講を決めました。学年の推奨レベルより高いクラスでも、難しい言葉を自分で調べたり質問したりと、知的好奇心が自然と育っています。'
+            },
+            {
+              img: ImgIllust02,
+              name: '中学１年生 / 女の子',
+              subject: '[受講科目] 哲学/科学',
+              title: '自分の考えを共有したり、他の受講者の意見を聞いたりできる点も魅力',
+              text: '以前から哲学に興味があり、「答えのない問い」を考えることが好きだったため受講を決めました。 科学の講座も学年の推奨レベルより高いクラスを受講していますが、基礎知識がなくても分かりやすく、安心して学べています。'
+            },
+            {
+              img: ImgIllust03,
+              name: '小学６年生 / 女の子',
+              subject: '[受講科目] 経済',
+              title: '送り迎えが不要なオンラインであることに加え、教科書の学習だけでなく、その先につながる思考力の大切さ',
+              text: '受験を意識し始める6年生の時期に受講を決めました。授業中に先生が自分の意見に反応してくれる点が良く、他の生徒の発言を通して、物事を「自分の視点」から考える大切さに気づかされました。'
+            },
+            {
+              img: ImgIllust04,
+              name: '小学３年生 / 男の子',
+              subject: '[受講科目] 哲学/科学',
+              title: '保護者として、テストの点だけでなく「自分の頭で考えられる人」になってほしい',
+              text: '5教科以外の探究的な学びとして哲学などに魅力を感じ、入会を決めました。 また、じっと座ることが得意ではない子どもにとって、多少動きながらでも参加できるオンライン形式が合っていると感じています。'
+            }
+          ]
+        .p-voice-item-wrapper
+         each voice in voices
+          .p-voice-item
+            .p-voice-item-head
+              .p-voice-item-head-left
+                img(src=voice.img)
+              .p-voice-item-head-right
+                .p-voice-item-head-right-name
+                  = voice.name
+                .p-voice-item-head-right-subject
+                  = voice.subject
+            .p-voice-item-content
+              .p-voice-item-content-title
+                = voice.title
+              .p-voice-item-content-text
+                = voice.text
+    section.bg-white
+      .section-child#join 
+        h2|入会手順 
+        ul.p-join__list
+              li.p-join__item.js-hidden.js-visible
+                .p-join__head
+                  .p-join__number
+                    p.p-join__number01 STEP
+                    p.p-join__number02 1
+                    .p-join__number-icn
+                      img(src=ImgIcnSubject)
+                  .p-join__title
+                    | 会員登録しましょう
+                p.p-join__text
+                  | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。
+                .p-join__wrapper
+                  .p-join__wrapper-main
+                    p.p-join__text
+                      span.p-join__text-small
+                        span.p-join__text-small__inner 会員登録するだけでは費用は発生しませんので、ご安心ください。
+                      span.p-join__text-small
+                        span.p-join__text-small__inner 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
+                        span.p-join__text-small
+                      span.p-join__text-small_red
+                         span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
+                    p.p-join__note
+                      i.fa-solid.fa-triangle-exclamation
+                      span
+                        | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
+                        br
+                        | お手数ですが、再度お申し込みをお願いいたします。
+                +cta-blank
+              li.p-join__item.js-hidden.js-visible
+                .p-join__head
+                  .p-join__number
+                    p.p-join__number01 STEP
+                    p.p-join__number02 2
+                    .p-join__number-icn
+                      img(src=ImgIcnSubject)
+                  .p-join__title
+                    | 受けたい授業を
+                    br.u-br-sp
+                    | 申し込みましょう
+                p.p-join__text
+                  | 会員専用の学習ページで、受講したい科目をお申し込みいただけます。
+                  br
+                  | 「今すぐ無料トライアル」ボタンを押すと、決済情報の入力画面に進みます。
+                  br
+                  span.p-join__text-small
+                    span.p-join__text-small__inner.
+                        登録初月は無料となるため、費用は発生しません。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0201)
+              li.p-join__item.js-hidden.js-visible
+                .p-join__head
+                  .p-join__number
+                    p.p-join__number01 STEP
+                    p.p-join__number02 3
+                    .p-join__number-icn
+                      img(src=ImgIcnSubject)
+                  .p-join__title
+                    | 受講レベル
+                    br.u-br-sp
+                    | を選択しましょう
+                p.p-join__text
+                  | 受講レベルを設定すると、授業を受けられるようになります。
+                  br
+                  span.p-join__text-small
+                    span.p-join__text-small__inner
+                       |自分には難しかった…と感じた場合は、あとから受講レベルを変更できます。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0301)
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0302)
+      .section-child#faq
+        h2|よくある質問
+        .c-faq-list__item
+              h3.c-faq-list__question オンライン授業で子どもの顔が出ることはありますか？
+              p.c-faq-list__answer
+                |授業の双方向性を高めるため、原則としてカメラはONにしてご参加をお願いしています。事情により難しい場合はOFFで参加しても構いません。チャットや質問への回答を通して授業にご参加いただきます。
+              p.c-faq-list__answer
+                |（Zoomを使用して実施します）
+              p.c-faq-list__answer
+                |※受講者の映像は講師のみに表示され、他の受講者には表示されません。
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |授業で使用する教材はどのようなものですか？
+              p.c-faq-list__answer
+                |ワオ未来塾が開発した独自教材を使用しています。基礎的なテーマから最新のトピックまで幅広くカバーした内容になっています。
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |月の途中からの受講（入会）はできますか？
+              p.c-faq-list__answer
+                |はい、可能です。
+                br
+                |ただし、カリキュラムが終了している授業につきましては、アーカイブ（録画）視聴となります。
+        .c-faq-list__item
+              h3.c-faq-list__question 
+                |受講にあたりテストや条件はありますか？
+              p.c-faq-list__answer
+                |受講にあたりテストはありません。どなた でも受講可能です。
+        .c-faq-list__item_end
+          |こちらに記載のない内容については、
+          br
+          |公式ラインよりお問い合わせください
+    footer 
+      .footer-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+      .footer-navi 
+        .footer-navi-link 
+           a(href='https://waomirai.com/', target='_blank')|ワオ未来塾公式サイト
+        .footer-navi-link 
+           a(href='https://www.wao-corp.com/', target='_blank')|運営会社
+      .footer-copyright
+        |© ワオ・コーポレーション All rights reserved.
+    +cta-fixed
+    +menu-modal
+    include _js

@@ -1,0 +1,55 @@
+mixin cta 
+  .c-btn
+   a(href="#join")
+    |入会方法をすぐ確認したい方はこちら
+mixin cta-blank
+  .c-btn.c-btn-blank
+   a(href="https://lms.waomirai.com/login/index.php?tenant=lmswaomirai", target='_blank')
+        |無料会員登録
+mixin cta-fixed
+  .fixed-btn(style='display:none;')
+    a(href="#join").fixed-cta
+        |入会方法を確認する
+    .btn-modalmenu
+        img(src=ImgMenuHumberger)
+      
+ 
+mixin menu-links 
+        div
+          a(href="#subjects") 
+            span|学べる科目
+        div
+          a(href="#features") 
+            span|ワオ未来塾
+            span|の特徴
+        div
+          a(href="#sample") 
+            |授業動画
+        div
+          a(href="#schedule") 
+            span|配信
+            span|スケジュール
+        div
+          a(href="#price") 
+            |料金
+        div
+          a(href="#voice") 
+            |お客様の声
+        div
+          a(href="#join") 
+            |入会手順
+        div
+          a(href="#faq") 
+            |よくある質問
+            
+
+mixin menu-modal 
+   .menu-modal(style='display:none;') 
+    .menu-modal-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    .menu-modal-navi
+      +menu-links 
+    .menu-modal-close.modal-close 
+      i.fa-solid.fa-xmark.l-sp-nav__close-icon
+      span|閉じる
+   .bg-modal(style='display:none;')

@@ -1,0 +1,148 @@
+-
+  const schedule = {
+    times: [
+      { start: '17:30', end: '18:15' },
+      { start: '18:30', end: '19:15' },
+      { start: '19:30', end: '20:15' },
+      { start: '20:30', end: '21:15' }
+    ],
+    days: [
+      { name: '月', type: 'single', classes: [null, null, null, null] },
+      { 
+        name: '火', 
+        type: 'single',
+        classes: [
+          [{ subject: '哲学', level: 2, class: 'philosophy' }],
+          [{ subject: '哲学', level: 1, class: 'philosophy' }],
+          [{ subject: '哲学', level: 4, class: 'philosophy' }],
+          [{ subject: '哲学', level: 3, class: 'philosophy' }]
+        ]
+      },
+      { 
+        name: '水', 
+        type: 'double',
+        classes: [
+          [
+            { subject: '経済', level: 2, class: 'economy' },
+            { subject: '科学', level: 1, class: 'science' }
+          ],
+          [
+            { subject: '経済', level: 1, class: 'economy' },
+            { subject: '科学', level: 2, class: 'science' }
+          ],
+          [
+            { subject: '経済', level: 4, class: 'economy' },
+            { subject: '科学', level: 3, class: 'science' }
+          ],
+          [
+            { subject: '経済', level: 3, class: 'economy' },
+            { subject: '科学', level: 4, class: 'science' }
+          ]
+        ]
+      },
+      { 
+        name: '木', 
+        type: 'single',
+        classes: [
+          [{ subject: '経済', level: 1, class: 'economy' }],
+          [{ subject: '経済', level: 2, class: 'economy' }],
+          [{ subject: '経済', level: 3, class: 'economy' }],
+          [{ subject: '経済', level: 4, class: 'economy' }]
+        ]
+      },
+      { 
+        name: '金', 
+        type: 'double',
+        classes: [
+          [
+            { subject: '哲学', level: 1, class: 'philosophy' },
+            { subject: '科学', level: 2, class: 'science' }
+          ],
+          [
+            { subject: '哲学', level: 2, class: 'philosophy' },
+            { subject: '科学', level: 1, class: 'science' }
+          ],
+          [
+            { subject: '哲学', level: 3, class: 'philosophy' },
+            { subject: '科学', level: 4, class: 'science' }
+          ],
+          [
+            { subject: '哲学', level: 4, class: 'philosophy' },
+            { subject: '科学', level: 3, class: 'science' }
+          ]
+        ]
+      }
+    ]
+  }
+
+
+.schedule-tab 
+   .schedule-tab-content#all.active 
+      |全教科
+   .schedule-tab-content#philosophy
+      |哲学
+   .schedule-tab-content#economy
+      |経済
+   .schedule-tab-content#science
+      |科学
+.schedule-table
+  .overlay-swipe 
+   .overlay-swipe-flex 
+    .overlay-swipe-icon
+      .arrow 
+        img(src=ImgIcnSwipeArrow )
+      .hand 
+        img(src=ImgIcnSwipeHand )
+    .overlay-swipe-text 
+      |スワイプで続きの
+      br
+      |時間割が見れます
+  table
+    thead
+      tr
+        th.time
+        each day in schedule.days
+          th(class=day.type)
+            .week= day.name
+    tbody
+      each time, timeIndex in schedule.times
+        tr
+          th.time= time.start
+            br
+            | 〜
+            br
+            | #{time.end}
+          each day in schedule.days
+            td.subject(class=day.type)
+              if day.classes && day.classes[timeIndex]
+                each item in day.classes[timeIndex]
+                  .subject-wrapper(class=item.class)
+                    .subject-content
+                      .name= item.subject
+                      .label レベル
+                      .level= item.level
+.schedule-info
+     table(class="p-details__table")
+          tbody
+            tr
+              th(rowspan="2") 配信に関する基本情報
+            tr
+              td(rowspan="2") 
+                .schedule-info-list 
+                  .schedule-info-list-square 
+                    |◼️
+                  .schedule-info-list-content                   
+                    |毎月３週間の授業配信になります
+                    span|詳細な配信スケジュールは公式HPまたは学習サイト内でご確認いただけます
+                .schedule-info-list 
+                  .schedule-info-list-square 
+                    |◼️
+                  .schedule-info-list-content                   
+                    |各授業は同じ内容を週に2回配信します。どちらかご受講ください
+                .schedule-info-list 
+                  .schedule-info-list-square 
+                    |◼️
+                  .schedule-info-list-content                   
+                    |配信を見逃してもアーカイブで
+                    br
+                    |授業を視聴できます

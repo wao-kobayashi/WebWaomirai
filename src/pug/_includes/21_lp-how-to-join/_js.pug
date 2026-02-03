@@ -1,0 +1,100 @@
+script.
+  $(function () {    
+    //スクロールで追従ボタン表示        
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() > 200) {
+         $(".fixed-btn").fadeIn();
+      } else {
+       $(".fixed-btn").fadeOut();
+      }
+    });
+  });
+  //モーダルメニューのjs
+   $('.menu-modal-navi a, .modal-close, .bg-modal').click(function() {
+      $('.menu-modal, .bg-modal').hide();
+    });
+    $('.btn-modalmenu').click(function() {
+      $('.menu-modal, .bg-modal').show();
+    });
+//教科スクロール＆タブのjs
+script.
+  $(document).ready(function() {
+  // overlay-swipeが消えたかどうかのフラグ
+  var overlayDismissed = false;
+
+  // .schedule-tabをクリックしたときの処理
+  $('.schedule-tab-content').on('click', function() {
+    // クリックされたタブにactiveクラスを追加、他のタブから削除
+    $('.schedule-tab-content').removeClass('active');
+    $(this).addClass('active');
+    
+    // クリックされたタブのIDを取得
+    var selectedClass = $(this).attr('id');
+    
+    // 「全教科」がクリックされた場合
+    if (selectedClass === 'all') {
+      $('.schedule-table table').removeClass('singletable');
+      // すべての subject-wrapper を表示
+      $('.subject-wrapper').show();
+      
+      // overlay-swipeを表示（まだ消されていない場合のみ）
+      if (!overlayDismissed) {
+        $('.overlay-swipe').show();
+      }
+      
+      // 水曜日と金曜日の列を single から double に変更
+      $('.schedule-table thead tr th').each(function(index) {
+        var weekText = $(this).find('.week').text();
+        if (weekText === '水' || weekText === '金') {
+          $(this).removeClass('single').addClass('double');
+        }
+      });
+      
+      $('.schedule-table tbody tr').each(function() {
+        $(this).find('td.subject').each(function(index) {
+          if (index === 2 || index === 4) {
+            $(this).removeClass('double').addClass('single');
+          }
+        });
+      });
+    } 
+    // 特定の教科がクリックされた場合
+    else {
+      $('.schedule-table table').addClass('singletable');
+      // すべての subject-wrapper を非表示
+      $('.subject-wrapper').hide();
+      
+      // overlay-swipeを非表示
+      $('.overlay-swipe').hide();
+      
+      // クリックされた教科のクラスを持つ subject-wrapper のみ表示
+      $('.subject-wrapper.' + selectedClass).show();
+      
+      // 水曜日と金曜日の列を double から single に変更
+      $('.schedule-table thead tr th').each(function(index) {
+        var weekText = $(this).find('.week').text();
+        if (weekText === '水' || weekText === '金') {
+          $(this).removeClass('double').addClass('single');
+        }
+      });
+      
+      $('.schedule-table tbody tr').each(function() {
+        $(this).find('td.subject').each(function(index) {
+          if (index === 2 || index === 4) {
+            $(this).removeClass('double').addClass('single');
+          }
+        });
+      });
+    }
+  });
+
+  // .schedule-table内を横スクロールしたら .overlay-swipe をfadeout（全教科の時のみ）
+  $('.schedule-table').on('scroll', function() {
+    // 全教科タブがactiveの場合のみfadeout
+    if ($('#all').hasClass('active')) {
+      $('.overlay-swipe').fadeOut();
+      overlayDismissed = true; // フラグを立てる
+    }
+  });
+    
+  });
