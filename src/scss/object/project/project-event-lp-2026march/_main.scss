@@ -196,7 +196,7 @@ section.three-features {
     padding: 40px 0 0px;
   }
   .title {
-    margin: 0px 0 -60px;
+    margin: 0px 0 -68px;
 
     img {
       position: relative;
@@ -378,7 +378,7 @@ section.price {
       justify-content: space-between;
       padding: 10px 15px 10px 20px;
       gap: 10px;
-      font-weight: bold;
+
       cursor: pointer;
       &.active {
         background: $cl-black;
@@ -389,15 +389,17 @@ section.price {
       }
       .faq-box-title-text {
         flex: 1;
+        font-weight: bold;
       }
       .faq-box-title-icon {
         width: 35px;
         height: 35px;
-        border: 1px solid $cl-black;
+        border: 2px solid $cl-black;
         display: flex;
         justify-content: center;
         align-items: center;
         background: $cl-white;
+        font-size: 20px;
       }
     }
 
