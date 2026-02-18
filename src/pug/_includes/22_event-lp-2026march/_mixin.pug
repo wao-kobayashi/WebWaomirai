@@ -29,6 +29,27 @@ mixin btn-cta-big
   +conditionalLink('btn-cta')
     img(src=ImgbtnCtaBig)
 
+mixin section-cta
+  //CTA
+  section.cta
+      .cta-loop 
+          div 
+            img(src=ImgCtaLooptext, alt="")
+          div 
+            img(src=ImgCtaLooptext, alt="")
+          div 
+            img(src=ImgCtaLooptext, alt="")
+          div 
+            img(src=ImgCtaLooptext, alt="")
+      .cta-bg 
+        img(src=ImgCta, alt="")
+      .cta-content
+        .cta-content-text 
+          |春休みの5日間で
+          br
+          |考える習慣を身につけよう！
+        +btn-cta-big
+
 //- モーダルウィンドウのmixin
 //- 2種類のモーダルとオーバーレイ背景を含む
 mixin modal
