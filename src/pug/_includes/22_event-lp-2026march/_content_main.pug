@@ -4,7 +4,7 @@
   .fv-btn 
     +btn-cta
 //intro
-section.intro 
+section.intro#content01
   .intro-head
     img(src=ImgIntro01, alt="")
   .intro-subject
@@ -49,21 +49,21 @@ section.intro
          div 
           img(src=ImgSlideIntro04, alt="")
 //こんなお子様におすすめ
-section.recommend 
+section.recommend#content02
    .title 
      img(src=ImgTitle01)
    .img-recommend 
     img(src=ImgRecommend)
 
 //プログラムの流れ
-section.flow 
+section.flow#content03
    .title 
      img(src=ImgTitle02)
    .img-flow 
     img(src=ImgTable)
 
 //プログラムの流れ
-section.mission
+section.mission#content04
    .title 
      img(src=ImgTitle03)
    //科学
@@ -112,7 +112,7 @@ section.mission
 +section-cta
 
 //楽しく学べる3つのポイント
-section.three-features
+section.three-features#content05
    .title 
      img(src=ImgTitle04)
    .three-features-wrapper
@@ -143,7 +143,9 @@ section.three-features
                 br
                 |オンライン授業
             .three-features-content-text 
-                |授業は生配信形式で行われ、チャットで積極的に授業に参加できます。
+                |授業内でのクイズ（問い）をワークシートに書いて提出しよう。
+                br
+                |あなたの考えを先生がピックアップして、表彰式で紹介することがあります
     .three-features-block
         .three-features-content
             .three-features-content-image
@@ -151,17 +153,64 @@ section.three-features
             .three-features-content-subtitle 
                     |POINT 3
             .three-features-content-maintitle
-                |ライブだから
-                br
-                |楽しく参加できる
-                br
-                |オンライン授業
+                 .three-features-content-maintitle-flex 
+                   .three-features-content-maintitle-flex-icon
+                         img(src=ImgIcnLineMini)
+                   .three-features-content-maintitle-text 
+                     |LINEの
+                 .three-features-content-maintitle-normal 
+                   |オープンチャットで
+                   br
+                   |仲間と楽しく学べる
             .three-features-content-text 
-                |授業は生配信形式で行われ、チャットで積極的に授業に参加できます。
-        
+                |ラインを使った匿名で参加できるコミュニティです。普段お使いのアカウントが紐づくことはございませんのでご安心ください
+
+//料金
+section.price#content06
+   .title 
+     img(src=ImgTitle05)
+   .price-content
+     img(src=ImgPrice)
+
+//よくある質問
+section.faq#content07 
+   .title 
+     img(src=ImgTitle07)
+   .faq-box
+      .faq-box-title
+        .faq-box-title-text オンライン授業で子どもの顔が出ることはありますか？
+        .faq-box-title-icon|+
+      .faq-box-content
+            |授業の双方向性を高めるため、原則としてカメラはONにしてご参加をお願いしています。事情により難しい場合はOFFで参加しても構いません。
+            br
+            |チャットや質問への回答を通して授業にご参加いただきます。
+            br
+            |（Zoomを使用して実施します）
+            br
+            |※受講者の映像は講師のみに表示され、他の受講者には表示されません。
+   .faq-box
+      .faq-box-title
+        .faq-box-title-text 一部日程参加できないのですが
+        .faq-box-title-icon|+
+      .faq-box-content
+        |アーカイブを残していてあるので、後日視聴頂けます。
+        br
+        |※なるべくリアルタイムの参加を推奨しております。
+   .faq-box
+      .faq-box-title
+        .faq-box-title-text 子ども同士がLINEのオープンチャットで繋がることに不安があります。
+        .faq-box-title-icon|+
+      .faq-box-content
+        |ワオ未来塾のオープンチャットは、運営が定期的に見守り、不適切な投稿やトラブルの兆しがあれば注意・投稿削除・必要に応じて退出対応などを行います。
+        br
+        |また、安心して参加できるよう 個人情報のやり取り（本名・住所・連絡先・SNSなど）は禁止しています。
+
+//section-cta
++section-cta
+
 //ワオ未来塾って？
 .bg-white
-    section.about-wao
+    section.about-wao#content08
                 .about-wao-title
                     |ワオ未来塾って？
                 .about-wao-img
@@ -236,7 +285,7 @@ section.three-features
                     .about-school-btn-text 
                          |ワオ未来塾の公式サイトへ     
                     .about-school-btn-icn 
-                    img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
+                     img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
 
 //footer
 footer 

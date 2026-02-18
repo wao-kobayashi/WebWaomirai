@@ -83,6 +83,7 @@ body {
     padding: 30px 0 0;
     margin: 30px 0 0;
     border-top: 1px solid $cl-gray;
+    cursor: pointer;
     img {
       width: 95%;
       margin: 0 auto;
@@ -96,11 +97,10 @@ body {
   width: $maincontentWidth;
   margin: 0 auto 0 calc(100% - $maincontentWidth - $rightWidth);
 
-  // @include responsive-style($breakpoint-tablet) {
-  //   width: 90%;
-  // }
   @include responsive-style($breakpoint-sp) {
     width: 100%;
+    margin: 0 auto;
+    border: none;
   }
 }
 

@@ -66,6 +66,13 @@ script.
    new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
   });
 
+  $('.faq-box-title').click(function() {
+        // クリックされたヘッダーの次のコンテンツを開閉
+        $(this).toggleClass('active').next('.faq-box-content').slideToggle();
+        // activeなら「－」、そうでなければ「＋」に切り替え
+        const $icon = $(this).find('.faq-box-title-icon');
+        $(this).hasClass('active') ? $icon.text('-') : $icon.text('+');
+    });
 //- script.
 //-   var ImgBgpcPictureNormal = '!{ImgBgpcPictureNormal}';
 //-   var ImgBgpcPictureEconomy = '!{ImgBgpcPictureEconomy}';
