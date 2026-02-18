@@ -1,9 +1,11 @@
-//mixin
-include _mixin  
 //variable
 include _variables 
-//data
-include _data_seminar
+
+//mixin
+include _mixin  
+
+//navi
+include _navi
 
 doctype html
 html
@@ -21,148 +23,30 @@ html
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssBase = loycus ? '../../../css/' : '../../css/'
     - const cssLocal = loycus ? '../' : ''
-
-    link(href=`${cssBase}22_lp-event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
-    link(href=`${cssLocal}22_lp-event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
-
+    link(href=`${cssBase}22_event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}22_event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
     meta(property="og:image", content=ImgOgp)
     title #{MetaTitle}
-    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://code.jquery.com/jquery-4.0.0.js", integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=", crossorigin="anonymous")
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
-    .pc-left.pcimage
-       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-    .pc-right.pcimage
-     .pc-right-content
-        .pc-right-title 
-          |INDEX
-          span|オンラインセミナー一覧
-        each seminar, index in seminars
-            .pc-right-content-link 
-              a(href=`#${seminar.id}`)
-                .pc-right-content-link-number 
-                  |#0#{index + 1}
-                .pc-right-content-link-text 
-                  if seminar.pcnavititle
-                    !=seminar.pcnavititle
-                    br
-                  if seminar.subtitle
-                    span!=seminar.subtitle
-        .pc-right-content-cta
-          +btn-cta 
-    .main-content
-       .fv 
-          .fv-logo
-             img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-          .fv-subtitle
-           img(src=ImgFvSubtile)
-          h1 
-            span.sub
-              |AI時代を生き抜く
-            span.main
-              |子どもに本当に
-              br
-              |必要な学びとは
-          .fv-img
-            img(src=ImgFv)
-          .fv-blur
-            .bg-blur.pc-bg-blur-01.philosophy
-            .bg-blur.pc-bg-blur-02.science
-            .bg-blur.pc-bg-blur-03.economy
-       .infotable
-        .infotable-column
-          .infotable-column-title   
-            |対象
-          .infotable-column-content
-            |小学3年生以上のお子さまを持つ保護者
-        .infotable-column
-          .infotable-column-title
-            |日時
-          .infotable-column-content
-            |2026年2月
-            br
-            span|※詳細な日程は各セミナー日時をご確認ください
-        .infotable-column
-          .infotable-column-title
-            |費用
-          .infotable-column-content
-            |無料
-        .infotable-column
-          .infotable-column-title
-            |場所
-          .infotable-column-content
-            |Zoomウェビナー(オンライン)
-       .goal
-         .goal-title 
-           |セミナーのゴール
-         .goal-table 
-            .goal-table-row
-              .goal-table-row-number
-                  |1.
-              .goal-table-row-content
-                  |AI時代、企業が本当に求めている
-                  b|「これからの社会に必要な力」
-                  |の正体がわかる。
-            .goal-table-row
-              .goal-table-row-number
-                  |2.
-              .goal-table-row-content
-                  b|大学入試に、その力がどのように必要
-                  |とされているかがわかる。
-            .goal-table-row
-              .goal-table-row-number
-                  |3.
-              .goal-table-row-content
-                  |親として、明日から
-                  b|お子さまに「どんな言葉」をかければよいか
-                  |がわかる。
-       .main-content-wrapper 
-         section.introduction 
-            .introduction-title 
-              |45分で
-              br
-              |お子さまの未来への
-              br
-              span|「
-              |視界
-              span|」
-              |が変わる
-            .introduction-img 
-              .introduction-img-photo
-                 img(src=ImgIntro)
-              .bg-blur.pc-bg-blur-01.philosophy
-              .bg-blur.pc-bg-blur-02.science
-              .bg-blur.pc-bg-blur-03.economy
-            .introduction-text 
-                |AIに「答え」を委ねるか、自ら「価値」を創り出すか。今、教育の世界で大きなパラダイムシフトが起きています 。 かつて高く評価された「決まった業務を効率よく処理する能力」は、今やAIが最も得意とする領域になりました 。
-                br
-                br
-                |「うちの子の将来、どうなってしまうんだろう？」 そんな漠然とした不安を保護者のみなさまはお持ちではないでしょうか。 
-                br
-                br
-                |本セミナーでは、50年の教育実践から導き出した「新しい教育」を提供するワオ未来塾が、大学入試の最前線でも問われ始めている「これからの社会に必要な力」の正体を3つのアプローチからみなさまと一緒に考えます 。            
-         .seminar-blocks 
-             .seminar-blocks-sticky 
-               .seminar-blocks-sticky-title 
-                 |開催セミナー
-               .seminar-blocks-sticky-text 
-                  |聞いてみたいテーマを選んでチェックしよう！
-               .seminar-blocks-sticky-hr
-             ul.seminar-blocks-sticky-links 
-                     //講師紹介は最初で固定
-                     li.teacher
-                       a(href="#teacher")
-                         |講師紹介
-                     each seminar, index in seminars
-                        li(class=seminar.className)
-                          a(href=`#${seminar.id}`)
-                            if seminar.titleShort
-                              !=seminar.titleShort
-                            else
-                              !=seminar.title
-             include _content_seminar
-
+      .pc-left
+        img(src=ImgBgpcPictureNormal, alt="")
+      .pc-right 
+        .pc-right-navi 
+            each item, index in navItems
+              a(href=`#${item.id}`)
+                .pc-right-navi-link-number
+                  | #{String(index + 1).padStart(2, '0')}
+                .pc-right-navi-link-text
+                  | #{item.text}           
+        .pc-right-cta
+            +btn-cta
+      .main-content   
+          img(src=ImgFv, alt="")
+       
+      div(style='display:none;')
          //かんたん5STEP
          section.join-5steps 
             .join-5steps-title 
@@ -275,7 +159,6 @@ html
                    .faq-content-answer-left|A
                    .faq-content-answer-right
                      |恐れ入りますが、本セミナーはライブ参加を前提とした内容のため、後日のアーカイブ配信は行っておりません。ご都合のつく日時の回にてお申込みください。
-
          //ワオ未来塾って？
          section.about-wao
             .about-wao-title
@@ -369,14 +252,6 @@ html
             img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
           .footer-copyright
             |© ワオ・コーポレーション All rights reserved.
-
-    .pc-bg.pcimage
-      .bg-blur.pc-bg-blur-01.philosophy
-      .bg-blur.pc-bg-blur-02.science
-      .bg-blur.pc-bg-blur-03.economy
-      .bg-blur.pc-bg-blur-04.philosophy
-      .bg-blur.pc-bg-blur-05.science
-      .bg-blur.pc-bg-blur-06.economy
   
 //js
 include _js
