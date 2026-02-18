@@ -2,7 +2,7 @@
 
 $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
-$maincontentWidth: 400px;
+$maincontentWidth: 420px;
 $rightWidth: 350px;
 $breakpoint-tablet: 980px;
 
@@ -20,7 +20,8 @@ html {
 }
 
 body {
-  background: $cl-main-neonyellow !important;
+  background: $cl-main-neonyellow;
+  transition: background-color 0.6s ease;
   // overflow-x: hidden;
 }
 
@@ -37,6 +38,7 @@ body {
     max-width: 480px;
     width: 100%;
     margin: 0px auto 0;
+    transition: opacity 0.3s ease;
   }
 }
 

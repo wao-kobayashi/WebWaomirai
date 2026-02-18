@@ -66,71 +66,126 @@ script.
    new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
   });
 
-  $(document).ready(function () {
-    // スクロール連動ナビゲーション
-      // -----------------------------
-      
-      /**
-      * スクロール位置に応じてナビゲーションのアクティブ状態を更新する関数
-      */
-      function updateSeminarNavigation() {
-        const scrollTop = $(window).scrollTop();
-        const navItems = $('.seminar-blocks-sticky-links li');
-        const offset = 50; // アクティブ判定のオフセット(px)
-        
-        let activeId = null;
-        
-        // 講師紹介セクションをチェック
-        const teacherSection = $('#teacher');
-        if (teacherSection.length > 0) {
-          const teacherTop = teacherSection.offset().top;
-          const teacherBottom = teacherTop + teacherSection.outerHeight();
-          
-          if (scrollTop >= teacherTop - offset && scrollTop < teacherBottom) {
-            activeId = 'teacher';
-          }
-        }
-        
-        // セミナーセクションをチェック(講師紹介でアクティブが決まっていない場合)
-        if (!activeId) {
-          const sections = $('.seminar-blocks-content-subject');
-          sections.each(function() {
-            const $section = $(this);
-            const sectionTop = $section.offset().top;
-            const sectionBottom = sectionTop + $section.outerHeight();
-            
-            // スクロール位置がセクションの上端から50px以内に入っているか判定
-            if (scrollTop >= sectionTop - offset && scrollTop < sectionBottom) {
-              activeId = $section.attr('id');
-              return false; // 最初に見つかったセクションで処理を中断
-            }
-          });
-        }
-        
-        // 全てのliからactiveクラスを削除
-        navItems.removeClass('active');
-        
-        // 該当するliにactiveクラスを追加
-        if (activeId) {
-          navItems.find(`a[href="#${activeId}"]`).parent('li').addClass('active');
-        }
-      }
-      
-      // スクロールイベントにリスナーを設定(パフォーマンス最適化のためrequestAnimationFrameを使用)
-      let ticking = false;
-      
-      $(window).on('scroll', function() {
-        if (!ticking) {
-          window.requestAnimationFrame(function() {
-            updateSeminarNavigation();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-      
-      // 初回実行
-      updateSeminarNavigation();
-      
+//- script.
+//-   var ImgBgpcPictureNormal = '!{ImgBgpcPictureNormal}';
+//-   var ImgBgpcPictureEconomy = '!{ImgBgpcPictureEconomy}';
+//-   var ImgBgpcPicturePhilosophy = '!{ImgBgpcPicturePhilosophy}';
+//-   var ImgBgpcPictureScience = '!{ImgBgpcPictureScience}';
 
-    });
+//-   $(document).ready(function () {
+
+//-     // ----------------------------------------
+//-     // スクロール連動ナビゲーション
+//-     // ----------------------------------------
+//-     function updateSeminarNavigation() {
+//-       const scrollTop = $(window).scrollTop();
+//-       const navItems = $('.seminar-blocks-sticky-links li');
+//-       const offset = 50;
+      
+//-       let activeId = null;
+      
+//-       const teacherSection = $('#teacher');
+//-       if (teacherSection.length > 0) {
+//-         const teacherTop = teacherSection.offset().top;
+//-         const teacherBottom = teacherTop + teacherSection.outerHeight();
+//-         if (scrollTop >= teacherTop - offset && scrollTop < teacherBottom) {
+//-           activeId = 'teacher';
+//-         }
+//-       }
+      
+//-       if (!activeId) {
+//-         const sections = $('.seminar-blocks-content-subject');
+//-         sections.each(function() {
+//-           const $section = $(this);
+//-           const sectionTop = $section.offset().top;
+//-           const sectionBottom = sectionTop + $section.outerHeight();
+//-           if (scrollTop >= sectionTop - offset && scrollTop < sectionBottom) {
+//-             activeId = $section.attr('id');
+//-             return false;
+//-           }
+//-         });
+//-       }
+      
+//-       navItems.removeClass('active');
+//-       if (activeId) {
+//-         navItems.find(`a[href="#${activeId}"]`).parent('li').addClass('active');
+//-       }
+//-     }
+
+//-     // ----------------------------------------
+//-     // 背景色・画像切り替え
+//-     // ----------------------------------------
+//-     const sectionConfig = {
+//-       'mission-content-science': {
+//-         bg: '#BBFF89',
+//-         img: ImgBgpcPictureScience
+//-       },
+//-       'mission-content-economy': {
+//-         bg: '#74D6FF',
+//-         img: ImgBgpcPictureEconomy
+//-       },
+//-       'mission-content-philosophy': {
+//-         bg: '#FFCC75',
+//-         img: ImgBgpcPicturePhilosophy
+//-       }
+//-     };
+
+//-     const defaultConfig = {
+//-       bg: '#d8ff33',
+//-       img: ImgBgpcPictureNormal
+//-     };
+
+//-     function updateMissionBackground() {
+//-       const scrollTop = $(window).scrollTop();
+//-       const offset = 50;
+//-       let activeConfig = null;
+
+//-       const sections = $('#mission-content-science, #mission-content-economy, #mission-content-philosophy');
+//-       sections.each(function () {
+//-         const $section = $(this);
+//-         const sectionTop = $section.offset().top;
+//-         const sectionBottom = sectionTop + $section.outerHeight();
+//-         if (scrollTop >= sectionTop - offset && scrollTop < sectionBottom) {
+//-           activeConfig = sectionConfig[$section.attr('id')];
+//-           return false;
+//-         }
+//-       });
+
+//-       const config = activeConfig || defaultConfig;
+
+//-       // 背景色（CSSのtransitionで自動的になめらかに変わる）
+//-       //- $('body').css('background-color', config.bg);
+
+//-       // 画像（フェードアウト→src変更→フェードイン）
+//-       const $img = $('.pc-left-img');
+//-       $img.attr('src', config.img);
+//-       //- if ($img.attr('src') !== config.img) {
+//-       //-   $img.css('opacity', 0);
+//-       //-   setTimeout(function() {
+//-       //-     $img.attr('src', config.img);
+//-       //-     $img.css('opacity', 1);
+//-       //-   }, 100);
+//-       //- }
+//-     }
+
+//-     // ----------------------------------------
+//-     // スクロールイベント（共通）
+//-     // ----------------------------------------
+//-     let ticking = false;
+
+//-     $(window).on('scroll', function() {
+//-       if (!ticking) {
+//-         window.requestAnimationFrame(function() {
+//-           updateSeminarNavigation();
+//-           updateMissionBackground();
+//-           ticking = false;
+//-         });
+//-         ticking = true;
+//-       }
+//-     });
+
+//-     // 初回実行
+//-     updateSeminarNavigation();
+//-     updateMissionBackground();
+
+//-   });

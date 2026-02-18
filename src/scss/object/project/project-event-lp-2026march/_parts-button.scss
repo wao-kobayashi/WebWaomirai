@@ -9,6 +9,9 @@
   display: flex;
   gap: 18px;
   max-width: $maincontentWidth;
+  @include responsive-style($breakpoint-tablet) {
+    width: calc(100% - 60px);
+  }
   .fixed-cta {
     flex: 1;
     position: relative;
