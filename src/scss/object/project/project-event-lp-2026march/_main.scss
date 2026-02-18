@@ -36,98 +36,82 @@
 }
 
 .fv {
-  overflow: hidden;
   position: relative;
-
-  margin: 0 auto;
-  .fv-logo {
-    margin: 28px 25px 0;
-    width: 40%;
-    @include min-responsive-style($breakpoint-sp) {
-      display: none;
-    }
+}
+.fv-btn {
+  width: calc(100% - 30px);
+  margin: 40px auto 0;
+  img {
+    width: 100%;
   }
-  .fv-subtitle img {
-    text-align: center;
-    margin: 23px 22px 10px;
-    @include min-responsive-style($breakpoint-sp) {
-      margin: 17px auto;
-    }
-  }
-  h1 {
-    position: relative;
-    z-index: 10;
-    color: $cl-waogreen;
-    display: flex;
-    flex-direction: column;
-    margin: 0 25px 8px;
-    @include min-responsive-style($breakpoint-sp) {
-      align-items: center;
-      margin: 0 0 20px;
-    }
-    span.sub {
-      color: $cl-waogreen;
-      display: block;
-      font-weight: 900;
-      letter-spacing: 2px;
-      font-size: calc(28 * var(--px));
-      @include min-responsive-style($breakpoint-sp) {
-        font-size: 28px;
-        letter-spacing: 7px;
-      }
-    }
+}
 
-    span.main {
-      @include catch-copytitle;
-      color: $cl-waogreen;
-      display: block;
-      font-weight: 900;
-      letter-spacing: 3px;
-      line-height: 1.44;
-
-      @include min-responsive-style($breakpoint-sp) {
-        letter-spacing: 10px;
-        line-height: 1.4;
-      }
-    }
+section.intro {
+  margin: 40px auto 0;
+  img {
+    width: 100%;
   }
-  .fv-img img {
-    position: relative;
-    z-index: 10;
-    width: 80%;
+  .intro-head {
+    width: calc(100% - 30px);
+    margin: 0 auto 40px;
+  }
+  .intro-subject {
+    width: calc(100% - 30px);
     margin: 0 auto 20px;
-    @include min-responsive-style($breakpoint-sp) {
-      margin: 0 auto 10px;
-      width: 70%;
+    padding: 15px 15px 20px;
+    background: $cl-white;
+    border: 3px solid $cl-black;
+    box-shadow: var(--shadow-base);
+    img {
+      margin: 0 0 15px;
+    }
+    .intro-subject-text {
+      font-size: $font-size-m;
+      font-weight: 700;
+      line-height: $lineheight-relaxed;
     }
   }
-  .fv-blur {
-    @include min-responsive-style($breakpoint-sp) {
-      display: none;
+  .intro-flow {
+    overflow: hidden;
+    width: 100%;
+    img {
+      width: 100%;
     }
-    .bg-blur {
+  }
+  .intro-think {
+    overflow: hidden;
+    width: 100%;
+    background: #eeffa8;
+    padding: 10px 0 50px;
+    position: relative;
+    .intro-think-loop {
+      display: flex;
+      width: fit-content;
+      animation: scroll 20s linear infinite;
+      > div {
+        flex-shrink: 0;
+        width: 200px;
+        margin: 0 -5px;
+      }
+    }
+    .intro-think-illust {
+      width: 45%;
       position: absolute;
-      z-index: 1;
-      filter: blur(30px);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      margin: auto;
     }
-    .bg-blur.pc-bg-blur-01 {
-      top: -180px;
-      right: -20%;
-      @include square-size-px(140);
-      opacity: 0.3;
-    }
-    .bg-blur.pc-bg-blur-02 {
-      bottom: -80px;
-      right: -20%;
-      @include square-size-px(160);
-      opacity: 0.3;
-    }
-    .bg-blur.pc-bg-blur-03 {
-      bottom: -35px;
-      left: -43%;
-      @include square-size-px(160);
-      opacity: 0.2;
-    }
+  }
+}
+/* アニメーション定義 */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 

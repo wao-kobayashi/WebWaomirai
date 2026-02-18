@@ -21,3 +21,7 @@ $border-radius-full: 10000px;
 /* overray */
 
 $overlay: rgba(0, 0, 0, 0.7);
+
+:root {
+  --shadow-base: 0px 2px 0px #262626;
+}
