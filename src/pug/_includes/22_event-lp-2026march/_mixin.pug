@@ -14,7 +14,8 @@ mixin conditionalLink(baseClass)
 mixin fixed-btn
   .fixed-btn-container(style='display:none;')
     +conditionalLink('fixed-cta')
-      |LINEで簡単申込(無料)
+      .fixed-cta-btn
+        img(src=ImgTextCta)
     .btn-modalmenu
         img(src=ImgMenu)
 
