@@ -12,11 +12,12 @@
   cursor: pointer;
   img {
     width: 100%;
+    animation: fuwafuwa-button 2s 0s infinite;
   }
 }
 
 section.intro {
-  margin: 40px auto 0;
+  margin: 90px auto 0;
   img {
     width: 100%;
   }
@@ -41,6 +42,7 @@ section.intro {
     }
   }
   .intro-flow {
+    margin: 45px auto 0;
     overflow: hidden;
     width: 100%;
     img {
@@ -106,6 +108,7 @@ section.flow {
 section.mission {
   margin: 75px auto 0;
   background: $cl-main-neonyellow;
+  overflow: hidden;
   .mission-content {
     margin: 0 0 60px;
     .mission-content-thumnail {
@@ -187,6 +190,7 @@ section.cta {
       margin: 0 auto;
       padding: 20px 0 0;
       cursor: pointer;
+      animation: fuwafuwa-button 2s 0s infinite;
     }
   }
 }
