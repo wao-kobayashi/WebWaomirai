@@ -1,16 +1,24 @@
+.fixed-btn-wrapper {
+  @include min-responsive-style($breakpoint-tablet) {
+    display: none;
+  }
+}
 .fixed-btn-container {
   position: fixed;
   bottom: 20px;
-  left: 0;
-  right: 0;
+  right: $rightWidth + 20px;
   margin: auto;
   width: calc(100% - 40px);
   z-index: 50;
   display: flex;
   gap: 18px;
-  max-width: $maincontentWidth;
+  max-width: calc($maincontentWidth - 40px);
+
   @include responsive-style($breakpoint-tablet) {
     width: calc(100% - 60px);
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   $fixed-cta-height: 54px;

@@ -6,6 +6,7 @@
 .fv {
   position: relative;
   overflow: hidden;
+  padding: 0 0 15px;
   .fv-top {
     position: relative;
     z-index: 10;
@@ -69,7 +70,7 @@
 }
 
 section.intro {
-  margin: 90px auto 0;
+  margin: 75px auto 0;
   img {
     width: 100%;
   }
@@ -113,9 +114,9 @@ section.intro {
       position: relative;
       .intro-flow-subject-list-arrow {
         position: absolute;
-        right: -20px;
+        right: -20%;
         top: 80px;
-        width: 30px;
+        width: 30%;
       }
       &.inview {
         animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -262,7 +263,7 @@ section.cta {
     padding: 30px 0;
     @extend %blocks-margin;
     background: $cl-white;
-    border: 3px solid $cl-black;
+    border: 4px solid $cl-black;
     text-align: center;
     .cta-content-text {
       font-size: $font-size-xxl;
@@ -347,13 +348,19 @@ section.three-features {
 }
 
 section.price {
-  margin: 45px auto 0;
+  margin: 90px auto 0;
+  .title {
+    margin: 0 0 20px;
+    img {
+      width: 100%;
+    }
+  }
   .price-content {
     position: relative;
     @extend %blocks-margin;
-    margin: -20px auto 0;
+    margin: 0px auto 0;
     background: $cl-white;
-    padding: 40px;
+    padding: 40px 30px;
     img {
       width: 100%;
     }
@@ -362,9 +369,13 @@ section.price {
 
 //かんたん5STEPで参加可能
 .join-5steps {
-  padding: 60px 0px 75px;
+  padding: 75px 0px 0px;
+
   .title {
     margin: 0 0 20px;
+    img {
+      width: 100%;
+    }
   }
 
   .join-5steps-box {
@@ -448,11 +459,35 @@ section.price {
   }
 }
 
+.simple-title {
+  position: relative;
+  .simple-title-main {
+    margin: 0 0 20px;
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+  }
+  .simple-title-bg img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: -50%;
+    bottom: 0%;
+    margin: auto;
+    width: 100%;
+  }
+}
+
 //FAQ
 .faq {
-  padding: 0 15px 75px;
+  padding: 75px 0px 75px;
   .title {
-    margin: 0 0 -20px;
+    margin: 0 0 20px;
+    img {
+      width: 100%;
+    }
   }
   .faq-box {
     position: relative;
@@ -460,7 +495,8 @@ section.price {
     border: 2px solid $cl-black;
     box-shadow: var(--shadow-base);
     background: $cl-white;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
+    @extend %blocks-margin;
     .faq-box-title {
       display: flex;
       align-items: center;

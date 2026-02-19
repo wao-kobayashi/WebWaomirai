@@ -2,6 +2,7 @@
 
 $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
+$breakpoint-centeronly: 820px;
 $maincontentWidth: 420px;
 $rightWidth: 350px;
 $breakpoint-tablet: 980px;
@@ -35,6 +36,9 @@ body {
   width: calc(100% - $maincontentWidth - $rightWidth);
   height: 100vh;
   padding: 30px;
+  @include responsive-style(1200px) {
+    padding: 30px 30px 30px 0px;
+  }
   @include responsive-style($breakpoint-tablet) {
     display: none;
   }
@@ -43,6 +47,17 @@ body {
     width: 100%;
     margin: 0px auto 0;
     transition: opacity 0.3s ease;
+    @include responsive-style(1200px) {
+      transform: scale(1.3);
+      transform-origin: right top;
+    }
+    @include responsive-style(1100px) {
+      transform: scale(1.8);
+      transform-origin: right top;
+    }
+    @include responsive-style(1050px) {
+      display: none;
+    }
   }
 }
 
@@ -56,6 +71,12 @@ body {
   flex-direction: column;
   justify-content: center;
   @include responsive-style($breakpoint-tablet) {
+    width: calc($rightWidth * 1.1);
+    right: calc(
+      (100% - $maincontentWidth - calc($rightWidth * 1.1) - 50px) / 2
+    );
+  }
+  @include responsive-style($breakpoint-centeronly) {
     display: none;
   }
   .pc-right-navi {
@@ -70,16 +91,28 @@ body {
       border: 2px solid $cl-black;
       text-decoration: none;
       margin: 0 0 0px;
+
+      transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      &.active {
+        transform: translateX(-10px) skew(-8deg, 0deg);
+        border: 2px solid $cl-sub-parple;
+        .pc-right-navi-link-number {
+          background: $cl-sub-parple;
+        }
+      }
       .pc-right-navi-link-number {
         background: $cl-black;
         color: $cl-white;
-        padding: 3px 8px;
-        font-size: $font-size-xl;
+        padding: 5px 6px 5px 8px;
+        font-size: $font-size-l;
         font-weight: 300;
+        border-right: 2px solid $cl-black;
+        letter-spacing: 1px;
       }
       .pc-right-navi-link-text {
         padding: 0px 10px;
         font-size: $font-size-l;
+        font-weight: bold;
       }
     }
   }
@@ -102,8 +135,10 @@ body {
   margin: 0 auto 0 calc(100% - $maincontentWidth - $rightWidth);
   background: $cl-main-neonyellow;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-
-  @include responsive-style($breakpoint-sp) {
+  @include responsive-style($breakpoint-tablet) {
+    margin: 0 0 0 50px;
+  }
+  @include responsive-style($breakpoint-centeronly) {
     width: 100%;
     margin: 0 auto;
     border: none;
