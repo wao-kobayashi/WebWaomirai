@@ -192,6 +192,8 @@ section.cta {
 }
 
 section.three-features {
+  position: relative;
+  z-index: 10;
   .three-features-block {
     padding: 40px 0 0px;
   }

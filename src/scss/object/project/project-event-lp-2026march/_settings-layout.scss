@@ -25,6 +25,10 @@ body {
   // overflow-x: hidden;
 }
 
+.pc-wrapper {
+  background: #e5ff79;
+}
+
 .pc-left {
   position: fixed;
   left: 0;
@@ -96,11 +100,14 @@ body {
   border-right: 3px solid $cl-black;
   width: $maincontentWidth;
   margin: 0 auto 0 calc(100% - $maincontentWidth - $rightWidth);
+  background: $cl-main-neonyellow;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 
   @include responsive-style($breakpoint-sp) {
     width: 100%;
     margin: 0 auto;
     border: none;
+    box-shadow: none;
   }
 }
 
