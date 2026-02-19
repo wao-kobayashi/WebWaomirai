@@ -1,6 +1,15 @@
 .fv 
-  .fv-img
+  .fv-top
     img(src=ImgFv, alt="")
+  .fv-main
+      .fv-main-logo
+         img(src=ImgFvLogo, alt="")
+      .fv-info
+        img(src=ImgFvInfo, alt="") 
+      .fv-main-sakura
+        img(src=ImgFvSakura, alt="")
+  .fv-target
+        img(src=ImgFvTarget , alt="") 
   .fv-btn 
     +btn-cta
 //intro
@@ -28,9 +37,24 @@ section.intro#content01
      |「自分を知る」体験が、その後の学びを考えるヒントになっていきます。
   .intro-flow
     img(src=ImgIntro05, alt="")
+  .intro-flow-subject 
+    .intro-flow-subject-list.inview-triger
+     .intro-flow-subject-list-arrow
+       img(src=ImgIntroFlowArrow)
+     .intro-flow-subject-list-img
+       img(src=ImgIntroFlow01)
+    .intro-flow-subject-list.inview-triger
+      .intro-flow-subject-list-arrow
+         img(src=ImgIntroFlowArrow)
+      .intro-flow-subject-list-img
+        img(src=ImgIntroFlow02)
+    .intro-flow-subject-list.inview-triger
+      img(src=ImgIntroFlow03)
+  .intro-flow
+    img(src=ImgIntro06, alt="")
   .intro-think
     .intro-think-illust 
-       img(src=ImgIntro06, alt="")
+       img(src=ImgIntro07, alt="")
     .intro-think-loop 
          .inview-triger.scalein
           img(src=ImgSlideIntro01, alt="")
