@@ -41,7 +41,7 @@ html
                 .pc-right-navi-link-number
                   | #{String(index + 1).padStart(2, '0')}
                 .pc-right-navi-link-text
-                  | #{item.text}           
+                  != item.text        
         .pc-right-cta
             +btn-cta
       .main-content   
@@ -50,5 +50,7 @@ html
   
 //js
 include _js
-+modal
++menu-modal
++entry-modal
++bg-modal
 +fixed-btn

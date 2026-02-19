@@ -14,7 +14,13 @@ script.
   
       }
     });
-
+  //モーダルメニューのjs
+   $('.menu-modal-navi a, .modal-close, .bg-modal').click(function() {
+      $('.menu-modal, .bg-modal').hide();
+    });
+    $('.btn-modalmenu').click(function() {
+      $('.menu-modal, .bg-modal').show();
+    });
     /**
     * モーダルウィンドウを開く関数
     * モーダルと背景を表示する

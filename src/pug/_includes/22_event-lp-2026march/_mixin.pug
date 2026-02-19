@@ -52,7 +52,7 @@ mixin section-cta
 
 //- モーダルウィンドウのmixin
 //- 2種類のモーダルとオーバーレイ背景を含む
-mixin modal
+mixin entry-modal
   .modal#modal-alreadyfriend(style='display:none;')
     .modal-wrapper 
       .modal-wrapper-close
@@ -98,4 +98,19 @@ mixin modal
                         |送信されます
          .modal-wrapper-content-close.modal-close 
                 |閉じる
+  
+
+mixin menu-modal 
+   .menu-modal(style='display:none;')
+    .menu-modal-logo 
+        img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+    .menu-modal-navi
+            each item, index in navItems
+              a(href=`#${item.id}`)
+                  != item.text      
+    .menu-modal-close.modal-close 
+      i.fa-solid.fa-xmark.l-sp-nav__close-icon
+      span|閉じる
+
+mixin bg-modal
   .bg-modal(style='display:none;')
