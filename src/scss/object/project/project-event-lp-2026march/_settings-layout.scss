@@ -70,6 +70,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
   @include responsive-style($breakpoint-tablet) {
     width: calc($rightWidth * 1.1);
     right: calc(
@@ -138,6 +139,8 @@ body {
 }
 
 .main-content {
+  position: relative;
+  z-index: 2;
   border-left: 3px solid $cl-black;
   border-right: 3px solid $cl-black;
   width: $maincontentWidth;
@@ -157,4 +160,14 @@ body {
 
 @mixin content-width {
   width: calc(100% - 50px);
+}
+
+.pc-bg {
+  display: none;
+  img {
+    width: 80%;
+  }
+  @include responsive-style($breakpoint-sp) {
+    display: none;
+  }
 }
