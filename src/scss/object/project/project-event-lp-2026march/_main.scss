@@ -319,7 +319,7 @@ section.three-features {
       font-weight: 800;
       line-height: $lineheight-relaxed;
       text-align: left;
-      padding: 0px 8px;
+      padding: 3px 12px;
       transform: skew(-15deg, 0deg);
       background: $cl-black;
       display: inline-block;
@@ -343,6 +343,7 @@ section.three-features {
       font-size: $font-size-m;
       line-height: $lineheight-relaxed;
       margin: 10px 25px 0;
+      font-weight: bold;
     }
   }
 }
