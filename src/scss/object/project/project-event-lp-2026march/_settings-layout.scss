@@ -2,7 +2,7 @@
 
 $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
-$breakpoint-centeronly: 820px;
+$breakpoint-centeronly: 850px;
 $maincontentWidth: 420px;
 $rightWidth: 350px;
 $breakpoint-tablet: 980px;
@@ -93,6 +93,7 @@ body {
       margin: 0 0 0px;
 
       transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      &:hover,
       &.active {
         transform: translateX(-10px) skew(-8deg, 0deg);
         border: 2px solid $cl-sub-parple;
@@ -100,6 +101,7 @@ body {
           background: $cl-sub-parple;
         }
       }
+
       .pc-right-navi-link-number {
         background: $cl-black;
         color: $cl-white;
@@ -112,7 +114,6 @@ body {
       .pc-right-navi-link-text {
         padding: 0px 10px;
         font-size: $font-size-l;
-        font-weight: bold;
       }
     }
   }
@@ -121,9 +122,17 @@ body {
     margin: 30px 0 0;
     border-top: 1px solid $cl-gray;
     cursor: pointer;
+    text-align: center;
+    transition-duration: 0.3s;
+    &:hover {
+      opacity: 0.85;
+    }
     img {
-      width: 95%;
+      @extend %cta-btn-style;
+      width: 95% !important;
+      border-radius: $border-radius-big;
       margin: 0 auto;
+      height: 70px;
     }
   }
 }

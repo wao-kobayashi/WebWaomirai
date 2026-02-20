@@ -14,28 +14,28 @@
     +btn-cta
 //intro
 section.intro#content01
-  .intro-head
+  .intro-head.inview-triger.inview-hide
     img(src=ImgIntro01, alt="")
-  .intro-subject
+  .intro-subject.inview-triger.inview-hide
    .intro-subject-img
      img(src=ImgIntro02, alt="")
    .intro-subject-text
      |身のまわりの不思議を入り口に、「どうしてこうなるのか？」を考えていきます。知識に頼るだけでなく、自分なりに確かめる姿勢を育てます。
-  .intro-subject
+  .intro-subject.inview-triger.inview-hide
    .intro-subject-img
      img(src=ImgIntro03, alt="")
    .intro-subject-text
      |お金の話を入り口に、社会がどんなルールで動いているのかを考えていきます。
      br
      |日常の選択と社会のつながりに気づくことで、世界の見え方が少し変わります。
-  .intro-subject
+  .intro-subject.inview-triger.inview-hide
    .intro-subject-img
      img(src=ImgIntro04, alt="")
    .intro-subject-text
      |自己紹介を通じて、自分のいい所を探ってみる、深掘る、それを言語化します。
      br
      |「自分を知る」体験が、その後の学びを考えるヒントになっていきます。
-  .intro-flow
+  .intro-flow.inview-triger.inview-hide
     img(src=ImgIntro05, alt="")
   .intro-flow-subject 
     .intro-flow-subject-list.inview-triger
@@ -50,11 +50,18 @@ section.intro#content01
         img(src=ImgIntroFlow02)
     .intro-flow-subject-list.inview-triger
       img(src=ImgIntroFlow03)
-  .intro-flow
+  .intro-flow.inview-triger.inview-hide
     img(src=ImgIntro06, alt="")
+  div
+    img(src=ImgIntro07, alt="")
+  .intro-flow-think
+    .intro-flow-think-text.inview-triger.inview-hide
+       img(src=ImgIntro08text, alt="")
+    div
+      img(src=ImgIntro08, alt="")
   .intro-think
     .intro-think-illust 
-       img(src=ImgIntro07, alt="")
+       img(src=ImgIntroChild, alt="")
     .intro-think-loop 
          .inview-triger.scalein
           img(src=ImgSlideIntro01, alt="")
@@ -102,7 +109,10 @@ section.mission#content04
             .mission-content-main-date-text 
             |3/25(水) 19:30~20:15      
         .mission-content-main-description
-            |花粉症をテーマに、体の中にある「免疫」という超最強の防衛システムを探究！生物の基本から最新技術までを学び、知識だけでなく「どう考えて守るか」を体験的に身につけます。
+            |花粉症をテーマに、体の中にある「免疫」という超最強の防衛システムを探究！
+            br
+            br
+            |生物の基本から最新技術までを学び、知識だけでなく「どう考えて守るか」を体験的に身につけます。
     .mission-content-teacher 
         img.inview-triger.slidein(src=ImgTeacherScience)
    //経済
@@ -117,7 +127,10 @@ section.mission#content04
             .mission-content-main-date-text 
             |3/26(木) 19:30~20:15      
         .mission-content-main-description
-            |「1000円で何を選ぶ？」を入り口に、値段はどう決まるのか、本当の価値とは何かを探究。高い＝良いではない理由を考えながら、身近なお金のしくみを楽しく学びます。
+            |「1000円で何を選ぶ？」を入り口に、値段はどう決まるのか、本当の価値とは何かを探究。
+            br
+            br
+            |高い＝良いではない理由を考えながら、身近なお金のしくみを楽しく学びます。
     .mission-content-teacher 
         img.inview-triger.slidein-reverse(src=ImgTeacherEconomy)
    //哲学
@@ -132,7 +145,10 @@ section.mission#content04
             .mission-content-main-date-text 
             |3/27(金) 19:30~20:15      
         .mission-content-main-description
-            |新学期に役立つ「印象に残る自己紹介」に挑戦！問いを通して自分の好きや考えを深掘りし、なぜそう思うのかを言葉に。考える力と伝える力を同時に育てます。
+            |新学期に役立つ「印象に残る自己紹介」に挑戦！
+            br
+            br
+            |問いを通して自分の好きや考えを深掘りし、なぜそう思うのかを言葉に。考える力と伝える力を同時に育てます。
     .mission-content-teacher
         img.inview-triger.slidein(src=ImgTeacherPhilosophy)
 //section-cta
@@ -370,7 +386,7 @@ section.faq#content07
             .about-school-target 
                 |〈対象〉小学3〜6年生／中学生／高校生
             .about-school-4subjects
-                img(src=Img4subject)
+                img(src=Img4subjects)
             .about-school-feature 
                 .about-school-feature-box
                     .about-school-feature-box-title  

@@ -31,6 +31,7 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
+    +fixed-btn
     .pc-wrapper
       .pc-left
         img.pc-left-img(src=ImgBgpcPictureNormal, alt="")
@@ -46,11 +47,8 @@ html
             +btn-cta
       .main-content   
         include _content_main.pug
-       
-  
-//js
-include _js
-+menu-modal
-+entry-modal
-+bg-modal
-+fixed-btn
+      //js
+      include _js
+      +menu-modal
+      +entry-modal
+      +bg-modal

@@ -16,7 +16,7 @@
 
     .fv-main-logo {
       animation: FvfadeInUp 0.65s ease-out;
-      margin: -90px 0 0;
+      margin: -120px 0 0;
       position: relative;
       z-index: 10;
     }
@@ -59,13 +59,21 @@
     width: 100%;
   }
 }
+
 .fv-btn {
-  @extend %blocks-margin;
+  text-align: center;
   margin: 40px auto 0;
-  cursor: pointer;
-  img {
-    width: 100%;
+  a {
+    transition-duration: 0.3s;
+    @extend %cta-btn-style;
+    @extend %blocks-margin;
+    border-radius: $border-radius-big;
+    margin: 0 auto;
+    height: 80px;
     animation: fuwafuwa-button 2s 0s infinite;
+    &:hover {
+      opacity: 0.85;
+    }
   }
 }
 
@@ -129,6 +137,21 @@ section.intro {
         &:nth-child(3) {
           animation-delay: 0.6s;
         }
+      }
+    }
+  }
+  .intro-flow-think {
+    position: relative;
+    width: 100%;
+    .intro-flow-think-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      img {
+        width: 100%;
       }
     }
   }
@@ -242,7 +265,7 @@ section.cta {
   .cta-loop {
     display: flex;
     width: fit-content;
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
     > div {
       flex-shrink: 0;
       width: 230px;
@@ -260,21 +283,44 @@ section.cta {
     position: relative;
     z-index: 10;
     margin: -30px auto 0;
-    padding: 30px 0;
+    padding: 30px 0 45px;
     @extend %blocks-margin;
     background: $cl-white;
     border: 4px solid $cl-black;
     text-align: center;
     .cta-content-text {
-      font-size: $font-size-xxl;
+      font-size: 24px;
       font-weight: 800;
       line-height: $lineheight-normal;
     }
-    img {
-      margin: 0 auto;
-      padding: 20px 0 0;
-      cursor: pointer;
+
+    .btn-cta {
+      position: relative;
+      height: 70px;
+      display: block;
+      margin: 45px 0 0;
       animation: fuwafuwa-button 2s 0s infinite;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      &:hover {
+        opacity: 0.85;
+      }
+
+      .btn-cta-speech img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -35%;
+        margin: auto;
+        z-index: 1;
+      }
+      .btn-cta-button {
+        @extend %cta-btn-style;
+        @extend %blocks-margin;
+        border-radius: $border-radius-big;
+        margin: 0 auto;
+        height: 80px;
+      }
     }
   }
 }
@@ -296,13 +342,13 @@ section.three-features {
 
   .three-features-content {
     @extend %blocks-margin;
-    margin: 0 auto;
-    padding: 0px 0 40px;
+    margin: 0 auto 15px;
+    padding: 0px 0 50px;
     position: relative;
     &:after {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 30px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -312,7 +358,7 @@ section.three-features {
     }
     .three-features-content-image {
       margin: -20px auto -20px;
-      width: calc(100% - 50px);
+      width: calc(100% - 30px);
     }
     .three-features-content-subtitle {
       font-size: $font-size-m;
@@ -504,8 +550,14 @@ section.price {
       justify-content: space-between;
       padding: 10px 15px 10px 20px;
       gap: 10px;
-
+      transition-duration: 0.3s;
       cursor: pointer;
+      &:hover {
+        background: $cl-black;
+        .faq-box-title-text {
+          color: $cl-white;
+        }
+      }
       &.active {
         background: $cl-black;
         color: $cl-white;
@@ -722,7 +774,7 @@ footer {
   .footer-copyright {
     width: 100%;
     border-top: 1px solid $cl-graylight;
-    padding: 15px 0 120px;
+    padding: 15px 0 150px;
     color: $cl-graylight;
     font-size: $font-size-ss;
   }

@@ -26,15 +26,18 @@ mixin fixed-btn
 //- メインの申込ボタンとして使用
 mixin btn-cta 
   +conditionalLink('btn-cta')
-    img(src=ImgbtnCta)
+    img(src=ImgTextCta)
 
 mixin btn-cta-big
   +conditionalLink('btn-cta')
-    img(src=ImgbtnCtaBig)
+    .btn-cta-speech
+       img(src=ImgSpeechCta)
+    .btn-cta-button
+      img(src=ImgTextCtaBig)
 
 mixin section-cta
   //CTA
-  section.cta
+  section.cta.inview-triger.inview-hide
       .cta-loop 
           div 
             img(src=ImgCtaLooptext, alt="")
@@ -50,7 +53,7 @@ mixin section-cta
         .cta-content-text 
           |春休みの5日間で
           br
-          |考える習慣を身につけよう！
+          |考える楽しさを発見しよう！
         +btn-cta-big
 
 //- モーダルウィンドウのmixin
