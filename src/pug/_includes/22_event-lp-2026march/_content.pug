@@ -1,0 +1,54 @@
+//variable
+include _variables 
+
+//mixin
+include _mixin  
+
+//navi
+include _navi
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    - const cssBase = loycus ? '../../../css/' : '../../css/'
+    - const cssLocal = loycus ? '../' : ''
+    link(href=`${cssBase}22_event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}22_event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://code.jquery.com/jquery-4.0.0.js", integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=", crossorigin="anonymous")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  body
+    +fixed-btn
+    .pc-wrapper
+      .pc-left
+        img.pc-left-img(src=ImgBgpcPictureNormal, alt="")
+      .pc-right 
+        .pc-right-navi 
+            each item, index in navItems
+              a(href=`#${item.id}`)
+                .pc-right-navi-link-number
+                  | #{String(index + 1).padStart(2, '0')}
+                .pc-right-navi-link-text
+                  != item.text        
+        .pc-right-cta
+            +btn-cta
+      .main-content   
+        include _content_main.pug
+      //js
+      include _js
+      +menu-modal
+      +entry-modal
+      +bg-modal

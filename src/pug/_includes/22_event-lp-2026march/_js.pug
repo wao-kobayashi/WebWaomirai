@@ -1,0 +1,129 @@
+script.
+  $(document).ready(function() { 
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('inview');
+      }
+    });
+    $(window).on("load scroll", function () {
+       if ($(this).scrollTop() > 600) {
+            $(".fixed-btn-container").fadeIn();
+      } else {
+        $(".fixed-btn-container").fadeOut();
+      }
+    });
+  //モーダルメニューのjs
+   $('.menu-modal-navi a, .modal-close, .bg-modal').click(function() {
+      $('.menu-modal, .bg-modal').hide();
+    });
+    $('.btn-modalmenu').click(function() {
+      $('.menu-modal, .bg-modal').show();
+    });
+    /**
+    * モーダルウィンドウを開く関数
+    * モーダルと背景を表示する
+    */
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+    function ModalAlreadyFriendOpen() {
+      $('#modal-alreadyfriend, .bg-modal').show();
+    }
+
+    /**
+    * ボタン動作の更新関数
+    * 画面幅に応じてボタンの動作を切り替える
+    * PC: モーダルを開く動作
+    * スマホ: 通常のリンク動作
+    */
+  function updateButtonBehavior() {
+    // 769px以上をPC表示とみなす
+    var isWideScreen = $(window).width() >= 769;
+    
+    // 全てのLINEトリガーのボタンに対して処理
+    $('.js-line-trigger').off('click').on('click', function(e) {
+      e.preventDefault(); // リンクを無効化
+      
+      if (isWideScreen) {
+        modalPcLiffOpen(); // PC表示の場合はこちらを実行
+      } else {
+        ModalAlreadyFriendOpen(); // スマホ表示の場合はこちらを実行
+      }
+    });
+  }
+
+  /**
+  * 画面サイズ変更対応
+  * ページ読み込み時とリサイズ時にボタン動作を更新する
+  * これによりPC/スマホの表示切替時に適切な動作になる
+  */
+  $(window).on('load resize', updateButtonBehavior);
+
+    
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+    });
+   new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
+  });
+
+  $('.faq-box-title').click(function() {
+        // クリックされたヘッダーの次のコンテンツを開閉
+        $(this).toggleClass('active').next('.faq-box-content').slideToggle();
+        // activeなら「－」、そうでなければ「＋」に切り替え
+        const $icon = $(this).find('.faq-box-title-icon');
+        $(this).hasClass('active') ? $icon.text('-') : $icon.text('+');
+    });
+  $(document).ready(function () {
+    function updateRightNavigation() {
+      const scrollTop = $(window).scrollTop();
+      const navLinks = $('.pc-right-navi a');
+      const offset = 50;
+      
+      let activeId = null;
+      
+      // content01〜content08のセクションをチェック
+      navLinks.each(function () {
+        const href = $(this).attr('href'); // "#content01" など
+        const targetId = href.replace('#', '');
+        const $section = $('#' + targetId);
+        
+        if ($section.length > 0) {
+          const sectionTop = $section.offset().top;
+          const sectionBottom = sectionTop + $section.outerHeight();
+          
+          if (scrollTop >= sectionTop - offset && scrollTop < sectionBottom) {
+            activeId = targetId;
+            return false; // 最初に見つかったセクションで処理を中断
+          }
+        }
+      });
+      
+      // 全aタグからactiveクラスを削除
+      navLinks.removeClass('active');
+      
+      // 該当するaタグにactiveクラスを追加
+      if (activeId) {
+        navLinks.filter(`[href="#${activeId}"]`).addClass('active');
+      }
+    }
+    
+    // スクロールイベント（requestAnimationFrameでパフォーマンス最適化）
+    let ticking = false;
+    
+    $(window).on('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          updateRightNavigation();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    
+    // 初回実行
+    updateRightNavigation();
+  });
