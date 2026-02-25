@@ -1,0 +1,70 @@
+mixin modal-vimeo
+    .modal-vimeo(style='display:none;')
+        .modal-vimeo-content.
+            <iframe id="vimeoPlayer" src="https://player.vimeo.com/video/1124123259?h=ce7349bb08&badge=0&autopause=0&player_id=0&app_id=58479" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    id="vimeoPlayer"
+                    title="3分でわかる！新感覚英会話レッスン ワオ未来塾 グローバル英語">
+            </iframe>
+        .modal-vimeo-close.modal-close 
+             |閉じる
+mixin modal-close
+    .modal
+        .modal-wrapper 
+            .modal-wrapper-close 
+                .modal-wrapper-close-icon.modal-close
+            .modal-wrapper-content
+                    .modal-wrapper-content-main-text-close(style="text-align: center;")
+                        |A/B日程ともに
+                        br
+                        |募集終了しました
+            .modal-wrapper-content-close.modal-close 
+                |閉じる
+    .bg-modal
+mixin modal
+    .modal(style='display:none;')
+        .modal-wrapper 
+            .modal-wrapper-close 
+                .modal-wrapper-close-icon.modal-close
+            .modal-wrapper-content
+                .modal-wrapper-content-main
+                    .modal-wrapper-content-main-head
+                        .modal-wrapper-content-main-head-img
+                            //LINEアイコン
+                            img(src='https://waomirai.com/lp/assets/lpimages/100phrase-challenge-2025summer/icon_howto_join01.png')
+                        .modal-wrapper-content-main-head-text 
+                            |スマホで
+                            br
+                            |LINEの友だち追加
+                    .modal-wrapper-content-main-qr
+                        img(src=QRLine100Phases)
+                    .modal-wrapper-content-main-text
+                        |追加後に申込フォームが
+                        br
+                        |送信されます
+            .modal-wrapper-content-close.modal-close 
+                |閉じる
+    .bg-modal(style='display:none;')
+mixin cvgreen 
+  section.eng-phase-main-cv-humans.is-green.inview-triger.inview-hide
+    .eng-phase-main-cv-humans-img 
+        img(src=ImgBgCvGreen)
+    .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
+      .eng-phase-main-cv-humans-area-top
+          .eng-phase-main-cv-humans-area-top-text 
+            |＼🕒 定員わずか！／
+            br
+            b|100フレーズチャレンジ 8,800円
+          .eng-phase-main-cv-humans-area-top-button    
+            a.js-btn-cv.js-btn-cv-img(href=UrlLine100Phases)
+              img(src=ImgBtnCvLine)
+      .eng-phase-main-cv-humans-area-bottom
+  mixin faqBox(question, answer)
+    .eng-phase-main-section-green-wrap-faq-box
+      .eng-phase-main-section-green-wrap-faq-box-title 
+        .eng-phase-main-section-green-wrap-faq-box-title-text
+          |#{question}
+        .eng-phase-main-section-green-wrap-faq-box-title-icon
+      .eng-phase-main-section-green-wrap-faq-box-content 
+        != answer
