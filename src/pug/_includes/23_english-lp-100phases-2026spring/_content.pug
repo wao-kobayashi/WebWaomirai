@@ -19,14 +19,13 @@ include _mixins
     .eng-phase-left-wrap-logo
       img(src=ImgLogoEnglish)
     .eng-phase-left-wrap-cv
-      a.c-btn-cv(href=UrlLine100Phases)
+      +conditionalLink('c-btn-cv')
         img(src=ImgBtnCvPrice)
 ////////////////////////////
 //以下メインコンテンツ(PC/スマホ兼用)
 ////////////////////////////
 .eng-phase-main
   include _content-main.pug
-+modal
-if ab_finished
-  +modal-close
+
++entry-modal
 +modal-vimeo

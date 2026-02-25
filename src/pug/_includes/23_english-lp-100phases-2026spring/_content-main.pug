@@ -37,7 +37,7 @@ include _mixins
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
-      a.c-btn-cv.is-contents(href=UrlLine100Phases)
+      +conditionalLink('c-btn-cv')
         img(src=ImgBtnCvPrice)
   
   //blue02 100フレーズクリアで英語の自信がつく!
@@ -88,7 +88,7 @@ include _mixins
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
-      a.c-btn-cv.is-contents(href=UrlLine100Phases)
+      +conditionalLink('c-btn-cv')
         img(src=ImgBtnCvPrice)
     
   //blue05 オープンチャットで仲間と10日間楽しく学ぼう！
@@ -192,7 +192,8 @@ include _mixins
                 //- |・LINEが利用できない場合はこちらから
                 br
                 |・友だち追加は
-                a.js-btn-cv(href=UrlLine100Phases)|こちら
+                +conditionalLink
+                     |こちら
                 |から
 
       //step2

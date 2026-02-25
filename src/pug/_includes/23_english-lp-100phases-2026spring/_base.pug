@@ -14,11 +14,13 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(property="og:image", content="https://waomirai.com/lp/assets/commonimages/ogp.png")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
-    link(href="../../css/23-english-lp-100phases-2026spring.css", rel="stylesheet")
+    - const cssBase = loycus ? '../../../css/' : '../../css/'
+    - const cssLocal = loycus ? '../' : ''
+    link(href=`${cssBase}23-english-lp-100phases-2026spring.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}23-english-lp-100phases-2026spring.css?v=${Date.now()}`, rel="stylesheet")
     title 【2025夏】英語が好きになる100フレーズチャレンジ｜小学生・中学生向け英語プログラム
-    meta(name="robots", content="noindex")
-    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
-    //inviewのjquerycdnをsalesforceにアップしている
+    script(src="https://code.jquery.com/jquery-4.0.0.js", integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=", crossorigin="anonymous")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
     //vimeo API
     script(src="https://player.vimeo.com/api/player.js")
