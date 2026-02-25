@@ -1,0 +1,13 @@
+@import "foundation/_base"; // ベースのCSS、フォントなどの定義
+@import "foundation/_mixin"; // よく使う関数など定義したもの
+@import "foundation/_constant"; // 色などの変数定義
+@import "foundation/_wpstyle"; // WordPressスタイルの定義
+@import "foundation/_reset"; // デフォルトのスタイルをリセットしたもの
+@import "object/project/project-english-lp-100phases-2026spring/_settings-colors.scss"; // 色関連設定
+@import "object/project/project-english-lp-100phases-2026spring/_settings-animation.scss"; // アニメーション設定
+@import "object/project/project-english-lp-100phases-2026spring/_settings-typography.scss"; // タイポグラフィ設定
+@import "object/project/project-english-lp-100phases-2026spring/_settings-effects.scss"; // エフェクト設定
+@import "object/project/project-english-lp-100phases-2026spring/_settings-layout.scss"; // レイアウト設定
+@import "object/project/project-english-lp-100phases-2026spring/_parts-modal.scss"; // モーダルスタイル
+@import "object/project/project-english-lp-100phases-2026spring/_lp-100phases.scss"; //メインスタイル
+
