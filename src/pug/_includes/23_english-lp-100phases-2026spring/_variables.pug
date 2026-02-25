@@ -11,95 +11,122 @@
 //ImagePath
 ////////////////
 
+// ローカル画像パス
+- var pathsCommon = '../../../images/commonimages'
+- var paths23 = '../../../images/23_english-lp-100phases-2026spring'
+- var paths22 = '../../../images/22_event-lp-2026march'
+
+- 
+  function imgCommon(filename) {
+    return `${pathsCommon}/${filename}`;
+  }
+
+  function img23(filename) {
+    return `${paths23}/${filename}`;
+  }
+
+  function img22(filename) {
+    return `${paths22}/${filename}`;
+  }
+
 //Logo
-- var ImgLogoWaoMirai = 'https://waomirai.com/lp/assets/commonimages/logo.svg'
-- var ImgLogoWaoMiraiWhite = 'https://waomirai.com/lp/assets/commonimages/logo_white.svg'
-- var ImgLogoEnglish = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/logo_100phases.png'
-- var ImgLogoWaoCorp = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/logo_wao.svg'
+- var ImgLogoWaoMirai = imgCommon('logo.svg')
+- var ImgLogoWaoMiraiWhite = imgCommon('logo_white.svg')
+- var ImgLogoEnglish = img23('logo_100phases.png')
+- var ImgLogoEnglishSpring = img23('logo_100phases_spring.png')
+- var ImgLogoWaoCorp = imgCommon('logo_wao.svg')
 
 //Fv
-- var ImgFvTarget = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_target_2025summer.png'
-- var ImgFvPersons = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_character_2025summer.png'
-- var ImgFvLogo = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/logo_100phases.png'
-- var ImgFvText = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_text_2025summer.png'
+- var ImgFvTarget = img23('fv_target_spring.png')
+- var ImgFvPersons = img23('fv_character_spring.png')
+- var ImgFvLogo = img23('logo_100phases.png')
+- var ImgFvText = img23('fv_text.png')
 - var ImgFvTextAFinished = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_text_a_finished_2025summer.png'
-- var ImgFvCrowds01 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_bgcrowd001.png'
-- var ImgFvCrowds02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_bgcrowd002.png'
-- var ImgFvBgShine = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/fv_bgshine.png'
+- var ImgFvCrowds01 = img23('fv_bgcrowd001.png')
+- var ImgFvCrowds02 = img23('fv_bgcrowd002.png')
+- var ImgFvBgShine = img23('fv_bgshine.png')
 
 //Section
-- var ImgSectionBlue02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/section02_intro.png'
-- var ImgSectionBlue03 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/blue_section03.png'
-- var ImgSectionBlue04 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/blue_section04.png'
-- var ImgSectionBlue07IconMovie = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icn_play_movie.svg'
+- var ImgSectionBlue02 = img23('section02_intro.png')
+- var ImgSectionBlue03 = img23('blue_section03.png')
+- var ImgSectionBlue04 = img23('blue_section04.png')
+- var ImgSectionBlue07IconMovie = img23('icn_play_movie.svg')
 
 //04 Flow
-- var TitleFlow = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/title_section5.png'
-- var TextFlow = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/text_flow_2025summer.png';
-- var ImgFlowBalloon01 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/ballon_flow01_2025summer.png';
-- var ImgFlowBalloon02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/ballon_flow02_2025summer.png';
+- var TitleFlow = img23('title_section5.png')
+- var TextFlow = img23('text_flow_2025summer.png');
+- var ImgFlowBalloon01 = img23('ballon_flow01_2025summer.png');
+- var ImgFlowBalloon02 = img23('ballon_flow02_2025summer.png');
 - var ImgFlowTab01 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/tab_flow01_2025summer.png';
-- var ImgFlowTab01End = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/tab_flow01_finished_2025summer.png';
+- var ImgFlowTab01End = img23('tab_flow01_finished_2025summer.png');
 - var ImgFlowTab02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/tab_flow02_2025summer.png';
-- var ImgFlowAbout = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/about_flow_2025summer.png';
-- var ImgFlowSchedule01 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/schedule01_flow_2025summer.png';
-- var ImgFlowSchedule02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/schedule02_flow_2025summer.png';
-- var ImgFlowOption = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/option_flow_2025summer.png';
+- var ImgFlowAbout = img23('about_flow_2025summer.png');
+- var ImgFlowSchedule01 = img23('schedule01.png');
+- var ImgFlowSchedule02 = img23('schedule02.png');
+- var ImgFlowSchedule03 = img23('schedule03.png');
+- var ImgFlowSchedule04 = img23('schedule04.png');
+- var ImgFlowSchedule05 = img23('schedule05.png');
+- var ImgFlowScheduleSpeechPresent = img23('schedule-speech-present.png');
+- var ImgIcnFlowScheduleSpeechPresent = img23('icn-schedule-speech-present.svg');
+- var ImgFlowOption = img23('option_flow_2026.png');
 
 //05 Chat
-- var ImgChat = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/chat_2025summer.png';
+- var ImgChat = img23('chat_2026.png');
 
 //06 Voice
-- var ImgVoice = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/voice_2025summer.png';
+- var ImgVoice = img23('voice_2026.png');
 
 //Banner
-- var ImgBannerGlobalEnglish =  'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/banner_global_english.svg'
+- var ImgBannerGlobalEnglish = img23('banner_global_english.svg')
 
 //Button
-- var ImgBtnCvPrice = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/text_btn_cv_2025summer.svg'
-- var ImgBtnCvLine = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/btn_cv_b_noborder.svg'
+- var ImgBtnCvPrice = img23('text_btn_cv_2025summer.svg')
+- var ImgBtnCvLine = img23('btn_cv_b_noborder.svg')
 
 // CTA（2026春イベントLPのビジュアルを共用）
-- var ImgTextCta = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/text_btn_cta.svg'
-- var ImgTextCtaBig = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/text_btn_cta_big.svg'
-- var ImgSpeechCta = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/speech_cta.svg'
-- var ImgMenu = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/menu_humberger.svg'
+- var ImgTextCta = img22('text_btn_cta.svg')
+- var ImgTextCtaBig = img22('btn_cta_big.svg')
+- var ImgSpeechCta = img22('speech_cta.svg')
+- var ImgMenu = img22('menu_humberger.svg')
 - var ImgCtaLooptext = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/cta_looptext.svg'
 - var ImgCta = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/img_cta.png'
 
 //Title
-- var ImgTitleMovie= 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/title_movie_2025summer.png'
-- var ImgTitleRapport = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/title_rapport.svg'
-- var ImgTitle5steps = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/title_5steps.svg'
-- var ImgTitlePrice= 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/title_price.svg'
-- var ImgTitleFaq= 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/title_faq.svg'
-- var ImgTitleVoice= 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/titlevoice.svg'
+- var ImgTitleMovie= img23('title_movie_2025summer.png')
+- var ImgTitleRapport = img23('title_rapport.svg')
+- var ImgTitle5steps = img23('title_5steps.svg')
+- var ImgTitlePrice= img23('title_price.svg')
+- var ImgTitleFaq= img23('title_faq.svg')
+- var ImgTitleVoice= img23('titlevoice.svg')
 
 //Background
-- var ImgBgRapport= 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/bg_lapport.png'
-- var ImgBgCrowdsPc = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/bg_crowds.svg'
-- var ImgBgCrowdsCv = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/bg_crowds.png'
-- var ImgBgCvBlue = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/bg_cv_blue.png'
-- var ImgBgCvGreen = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/bg_cv_green_2025summer.png'
+- var ImgBgRapport= img23('bg_lapport.png')
+- var ImgBgCrowdsPc = img23('bg_crowds.svg')
+- var ImgBgCrowdsCv = img23('bg_crowds.png')
+- var ImgBgCvBlue = img23('bg_cv_blue.png')
+- var ImgBgCvGreen = img23('bg_cv_green_2026spring.png')
 
 // Modal icon（2026春イベントLP共通）
 - var ImgIcnWaoLine = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/icn_line.svg'
 
 
 //Icon
-- var ImgIconSubject =  'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icn_subject.png'
-- var ImgIconBlank = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icn_target.svg'
+- var ImgIconSubject = img23('icn_subject.png')
+- var ImgIconBlank = img23('icn_target.svg')
 
 //Img
-- var ImgRapport =  'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/img_rappport.png'
-- var Img5Steps01 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icon_howto_join01.png'
-- var Img5Steps02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icon_howto_join02.png'
-- var Img5Steps03 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icon_howto_join03.png'
-- var Img5Steps04 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/img_step04.svg'
-- var Img5Steps05 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/icon_howto_join05.png'
-- var Img5SubjectsPc = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/ilust_5subjects_pc.png'
-- var Img5SubjectsSp = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/ilust_5subjects_sp.png'
-- var ImgPrice = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/price_2025summer.png'
+- var ImgRapport = img23('img_rappport.png')
+- var Img5Steps01 = img23('icon_howto_join01.png')
+- var Img5Steps02 = img23('icon_howto_join02.png')
+- var Img5Steps03 = img23('icon_howto_join03.png')
+- var Img5Steps04 = img23('img_step04.svg')
+- var Img5Steps05 = img23('icon_howto_join05.png')
+- var Img5SubjectsPc = img23('ilust_5subjects_pc.png')
+- var Img5SubjectsSp = img23('ilust_5subjects_sp.png')
+- var ImgPrice = img23('price_2026spring.png')
 
 //FixedCv
-- var textFixedCv = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/text_fixed_cv_2025summer.svg';
+- var textFixedCv = img23('text_fixed_cv_2025summer.svg');
+
+// modal image (22春イベントLPから流用しているが、23英語LP用ディレクトリに配置済み)
+- var ImgModalEvent = img23('img_modal_event.png');

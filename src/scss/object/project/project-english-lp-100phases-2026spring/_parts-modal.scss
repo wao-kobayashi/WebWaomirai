@@ -60,6 +60,12 @@ $z-indexes: (
       }
     }
     &-content {
+      padding: 20px;
+      &-main-title {
+        @include font-size-xl;
+        text-align: center;
+        padding: 0 0 15px;
+      }
       &-main {
         position: relative;
         border-radius: 20px 20px 0 0;
@@ -176,4 +182,3 @@ $z-indexes: (
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-

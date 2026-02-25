@@ -142,3 +142,22 @@ mixin modal-vimeo
             </iframe>
         .modal-vimeo-close.modal-close 
              |閉じる
+
+mixin modal-present
+    .modal#modal-present(style='display:none;')
+        .modal-wrapper 
+            .modal-wrapper-close 
+                .modal-wrapper-close-icon.modal-close
+            .modal-wrapper-content
+                .modal-wrapper-content-main-title(style="text-align: center;")
+                    |3/31(土)と4/2(木)の
+                    br
+                    |ライブレッスンは
+                    br
+                    |通年レッスンへの
+                    br
+                    |入会者の早期特典です
+                .modal-wrapper-content-main-text(style="text-align: center;")
+                      |ここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入る
+            .modal-wrapper-content-close.modal-close 
+                |閉じる

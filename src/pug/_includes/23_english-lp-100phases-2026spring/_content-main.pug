@@ -19,11 +19,8 @@ include _mixins
     .eng-phase-main-fv-target 
        img(src=ImgFvTarget)
     .eng-phase-main-fv-logo 
-       img(src=ImgFvLogo)
+       img(src=ImgLogoEnglishSpring )
     .eng-phase-main-fv-text
-      if a_finished
-        img(src=ImgFvTextAFinished)
-      else
         img(src=ImgFvText)
 
     .eng-phase-main-fv-overflow-hidden 
@@ -33,11 +30,11 @@ include _mixins
           img(src=ImgFvCrowds01)
       .eng-phase-main-fv-crowds02
           img(src=ImgFvCrowds02)
-  section.eng-phase-main-cv-crowds.inview-triger.inview-hide
+  section.eng-phase-main-cv-crowds
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
-      +conditionalLink('c-btn-cv')
+      +conditionalLink('c-btn-cv is-contents')
         img(src=ImgBtnCvPrice)
   
   //blue02 100フレーズクリアで英語の自信がつく!
@@ -48,50 +45,51 @@ include _mixins
   section.eng-phase-main-section-blue.inview-triger.inview-hide.fixed-cv-trigger
        img(src=ImgSectionBlue03)
 
-  //blue04 100フレーズチャレンジ 10日間プログラムの流れ
+  //blue04 100フレーズチャレンジ プログラムの流れ
   section.eng-phase-main-section-blue.inview-triger.inview-hide
     .eng-phase-main-flow
       .eng-phase-main-flow-title
         img(src=TitleFlow)
       .eng-phase-main-flow-wrapper
-        if ! a_finished
-          .eng-phase-main-flow-text
-            img(src=TextFlow)
-        .eng-phase-main-flow-tab(class=a_finished ? 'is-finished' : '')
-          .eng-phase-main-flow-tab-item(class=!a_finished ? 'is-active' : 'is-finished')
-            if ! a_finished
-              img(src=ImgFlowBalloon01).image-balloon
-            img(src=ImgFlowTab01).image-tab
-            if a_finished
-              img(src=ImgFlowTab01End).img-finished
-          .eng-phase-main-flow-tab-item(class=a_finished ? 'is-active is-finished' : '')
-            if ! a_finished
-              img(src=ImgFlowBalloon02).image-balloon
-            img(src=ImgFlowTab02).image-tab
         .eng-phase-main-flow-contents
-          if ! a_finished
-            .eng-phase-main-flow-contents-item(class=!a_finished ? 'is-active' : '')
+            .eng-phase-main-flow-contents-item
               .eng-phase-main-flow-about
                 img(src=ImgFlowAbout)
               .eng-phase-main-flow-schedule
-                img(src=ImgFlowSchedule01)
+                div
+                  img(src=ImgFlowSchedule01)
+                .eng-phase-main-flow-schedule-item
+                  .eng-phase-main-flow-schedule-item-img
+                    img(src=ImgFlowSchedule02)
+                  .eng-phase-main-flow-schedule-item-speech
+                   .eng-phase-main-flow-schedule-item-speech-wrap
+                      .eng-phase-main-flow-schedule-item-speech-wrap-icon 
+                        img(src=ImgIcnFlowScheduleSpeechPresent)
+                      .eng-phase-main-flow-schedule-item-speech-wrap-img
+                          img(src=ImgFlowScheduleSpeechPresent)
+                .eng-phase-main-flow-schedule-item
+                    img(src=ImgFlowSchedule03)
+                .eng-phase-main-flow-schedule-item
+                  .eng-phase-main-flow-schedule-item-img
+                    img(src=ImgFlowSchedule04)
+                  .eng-phase-main-flow-schedule-item-speech
+                   .eng-phase-main-flow-schedule-item-speech-wrap
+                      .eng-phase-main-flow-schedule-item-speech-wrap-icon 
+                        img(src=ImgIcnFlowScheduleSpeechPresent)
+                      .eng-phase-main-flow-schedule-item-speech-wrap-img
+                          img(src=ImgFlowScheduleSpeechPresent)
+                .eng-phase-main-flow-schedule-item
+                    img(src=ImgFlowSchedule05)
               .eng-phase-main-flow-option
                 img(src=ImgFlowOption)
-          .eng-phase-main-flow-contents-item(class=a_finished ? 'is-active' : '')
-            .eng-phase-main-flow-about
-              img(src=ImgFlowAbout)
-            .eng-phase-main-flow-schedule
-              img(src=ImgFlowSchedule02)
-            .eng-phase-main-flow-option
-              img(src=ImgFlowOption)
   section.eng-phase-main-cv-crowds.inview-triger.inview-hide
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
     .eng-phase-main-cv-crowds-btn
-      +conditionalLink('c-btn-cv')
+      +conditionalLink('c-btn-cv is-contents')
         img(src=ImgBtnCvPrice)
     
-  //blue05 オープンチャットで仲間と10日間楽しく学ぼう！
+  //blue05 オープンチャットで仲間と楽しく学ぼう！
   section.eng-phase-main-section-blue.inview-triger.inview-hide
        img(src=ImgChat)
 
@@ -119,11 +117,11 @@ include _mixins
           .eng-phase-main-cv-humans-area-top-price
             |100フレーズチャレンジ 8,800円
           .eng-phase-main-cv-humans-area-top-text 
-            |たったの10日で楽しく学ぶ！
+            |春休みに楽しく学ぶ！
             br
             |英語が話せる自分に！
           .eng-phase-main-cv-humans-area-top-button    
-            a.js-btn-cv.js-btn-cv-img(href=UrlLine100Phases)
+             +conditionalLink('c-btn-cv is-contents')
               img(src=ImgBtnCvLine)
       .eng-phase-main-cv-humans-area-bottom
 //////////////////////
@@ -151,12 +149,7 @@ include _mixins
         b|今、子どもたちに本当に必要なのは、ツールとして使える英語力と、それを活かせるコミュニケーション能力です。
         br
         br
-        |たった10日？されど10日！
-        br
-        |夢中になれる10日間です。
-        br
-        br
-        |このチャレンジに参加する皆さんと、先生がチームとなり、「10日でこんなに喋れるようになった！」という驚きの体験を共有しましょう！
+        |このチャレンジに参加する皆さんと、先生がチームとなり、「こんなに喋れるようになった！」という驚きの体験を共有しましょう！
       .eng-phase-main-section-green-wrap-banner
         a(href=UrlGlobalEnglish, target='_blank')
           img(src=ImgBannerGlobalEnglish)
@@ -271,7 +264,7 @@ include _mixins
                 br
                 br
   section.eng-phase-main-section-5steps-cv.inview-triger.inview-hide
-          a.c-btn-cv.is-green(href=UrlLine100Phases)
+           +conditionalLink('c-btn-cv')
               img(src=ImgBtnCvPrice)
 
   //よくある質問
@@ -282,8 +275,8 @@ include _mixins
      .eng-phase-main-section-green-wrap-faq
         //- 全てのFAQ項目を流し込み
         +faqBox(
-          "10日で本当に話せるようになるのですか？", 
-          "<b>はい、話せるようになります！</b> 日本人が英語を話せない最大の理由は、「ネイティブのように話す」という遠すぎる目標を持ってしまうことです。しかし、このプログラムでは <b>たった8種類のフレーズ × 16種類の動作</b> を組み合わせることで、英作文をする必要なく100フレーズが口から出るようになります。<br /><br />一般的な学習法のように「単語を覚える → 文法を学ぶ → 英作文をする」という遠回りをせず、「英語のカタマリを組み合わせる」トレーニング（パーツSwitch）だからこそ、<b>10日で英語が話せる実感が得られるのです！</b><br /><br />「ネイティブのように流暢に」ではなく、<b>30フレーズでも50フレーズでも話せたら、それは立派な'話せる'</b> ということ。お子様が英語を楽しく話せるようになることが、このプログラムのゴールです。"
+          "参加すると本当に話せるようになるのですか？", 
+          "<b>はい、話せるようになります！</b> 日本人が英語を話せない最大の理由は、「ネイティブのように話す」という遠すぎる目標を持ってしまうことです。しかし、このプログラムでは <b>たった8種類のフレーズ × 16種類の動作</b> を組み合わせることで、英作文をする必要なく100フレーズが口から出るようになります。<br /><br />一般的な学習法のように「単語を覚える → 文法を学ぶ → 英作文をする」という遠回りをせず、「英語のカタマリを組み合わせる」トレーニング（パーツSwitch）だからこそ、<b>英語が話せる実感が得られるのです！</b><br /><br />「ネイティブのように流暢に」ではなく、<b>30フレーズでも50フレーズでも話せたら、それは立派な'話せる'</b> ということ。お子様が英語を楽しく話せるようになることが、このプログラムのゴールです。"
         )
 
         +faqBox(
