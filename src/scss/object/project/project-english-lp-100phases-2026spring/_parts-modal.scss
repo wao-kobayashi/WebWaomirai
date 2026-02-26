@@ -4,6 +4,7 @@ $z-indexes: (
   "modal": 1000,
   "modalclose": 1001,
 );
+
 @function z($layer) {
   @return map-get($z-indexes, $layer);
 }
@@ -24,107 +25,121 @@ $z-indexes: (
   padding: 0 0 0px;
   border-radius: 20px;
   // overflow: hidden;
-  &-wrapper {
-    position: relative;
-    &-close {
-      position: absolute;
-      right: -10px;
-      top: -10px;
-      z-index: z("modalclose");
-      width: 40px;
-      height: 40px;
-      &-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        background: rgba(0, 0, 0, 0.9);
-        transition: 0.2s ease-in-out;
-        position: relative;
-        cursor: pointer;
-        &:before,
-        &:after {
-          position: absolute;
-          content: "";
-          top: 50%;
-          left: 50%;
-          width: 20px;
-          height: 4px;
-          border-radius: 2px;
-          background: #fff;
-          transform-origin: center;
-          transform: translate(-50%, -50%) rotate(45deg);
-        }
-        &:after {
-          transform: translate(-50%, -50%) rotate(-45deg);
-        }
-      }
-    }
-    &-content {
-      // padding: 20px;
-      &-main-title {
-        @include font-size-xl;
-        text-align: center;
-        padding: 0 0 15px;
-      }
-      &-main {
-        position: relative;
-        border-radius: 20px 20px 0 0;
-        padding: 20px 0 0;
 
-        &-head {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: $cl-black;
-          @include font-size-l;
-          font-weight: 300;
-          margin: 0px auto 0;
-          text-align: center;
-          line-height: $lineheight-normal;
-          letter-spacing: 2px;
-          gap: 20px;
-          &-img {
-            text-align: center;
-            img {
-              height: 60px;
-              object-fit: cover;
-              margin: 0 auto;
-            }
-          }
-          &-text {
-            text-align: left;
-          }
-        }
-        &-qr {
-          text-align: center;
-          max-width: 270px;
-          margin: 20px auto 25px;
-          img {
-            margin: 0 auto;
-            @include box-shadow-lp();
-            padding: 20px;
-            margin: 0 auto;
-          }
-        }
-        &-text {
-          @include font-size-m;
-          text-align: center;
-        }
-        &-text-close {
-          @include font-size-l;
-          text-align: center;
-          padding: 60px 0 30px;
-        }
-      }
-      &-close {
-        text-align: center;
-        margin: 20px auto 25px;
-        color: $cl-graylight;
-        text-decoration: underline;
-        cursor: pointer;
-      }
+  .modal-wrapper {
+    position: relative;
+  }
+
+  .modal-wrapper-close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: z("modalclose");
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-wrapper-close-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      background: #fff;
+      transform-origin: center;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
+
+  .modal-wrapper-content-main-title {
+    font-size: 19.5px;
+    text-align: center;
+    padding: 20px 0 15px;
+    font-weight: bold;
+  }
+
+  .modal-wrapper-content-main {
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 0 0;
+  }
+
+  .modal-wrapper-content-main-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $cl-black;
+    @include font-size-l;
+    font-weight: 300;
+    margin: 0px auto 0;
+    text-align: center;
+    line-height: $lineheight-normal;
+    letter-spacing: 2px;
+    gap: 20px;
+  }
+
+  .modal-wrapper-content-main-head-img {
+    text-align: center;
+
+    img {
+      height: 60px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  }
+
+  .modal-wrapper-content-main-head-text {
+    text-align: left;
+  }
+
+  .modal-wrapper-content-main-qr {
+    text-align: center;
+    max-width: 270px;
+    margin: 20px auto 25px;
+
+    img {
+      margin: 0 auto;
+      @include box-shadow-lp();
+      padding: 20px;
+      margin: 0 auto;
+    }
+  }
+
+  .modal-wrapper-content-main-text {
+    @include font-size-m;
+    text-align: left;
+  }
+
+  .modal-wrapper-content-main-text-close {
+    @include font-size-l;
+    text-align: center;
+    padding: 60px 0 30px;
+  }
+
+  .modal-wrapper-content-close {
+    text-align: center;
+    margin: 20px auto 25px;
+    color: $cl-graylight;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   .modal-wrapper-content-title-alreadyfriend {
     @include font-size-m;
     background: $cl-waogreen;
@@ -134,34 +149,41 @@ $z-indexes: (
     padding: 14px 0 12px;
     border-radius: 20px 20px 0 0;
     border: 2px solid $cl-waogreen;
-    .modal-wrapper-content-title-alreadyfriend-top {
-      display: flex;
-      justify-content: center;
-      gap: 4px;
-      color: $cl-white;
-      margin: 0 0 0px;
-      div {
-        color: $cl-white;
-      }
-    }
-    .modal-wrapper-content-title-alreadyfriend-bottom {
+  }
+
+  .modal-wrapper-content-title-alreadyfriend-top {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    color: $cl-white;
+    margin: 0 0 0px;
+
+    div {
       color: $cl-white;
     }
   }
+
+  .modal-wrapper-content-title-alreadyfriend-bottom {
+    color: $cl-white;
+  }
+
   .modal-wrapper-content-main-text-alreadyfriend {
     @include font-size-m;
     font-weight: bold;
     text-align: center;
     padding: 0 20px 20px;
     line-height: $lineheight-normal;
+
     b {
       font-weight: bold;
     }
   }
+
   .modal-wrapper-content-main-image-alreadyfriend img {
     width: 80%;
     margin: 0 auto;
   }
+
   .modal-wrapper-content-main-btn-alreadyfriend a {
     position: relative;
     z-index: 9;
@@ -237,6 +259,12 @@ $z-indexes: (
     cursor: pointer;
   }
 }
+#modal-present {
+  .modal-wrapper-content-main-text {
+    padding: 0 20px;
+  }
+}
+
 .bg-modal {
   position: fixed;
   z-index: z("overlay");

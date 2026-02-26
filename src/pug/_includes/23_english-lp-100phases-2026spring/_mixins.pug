@@ -54,7 +54,8 @@ mixin fixed-btn
 mixin btn-cta
   +conditionalLink('btn-cta')
     img(src='https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/text_btn_cv_2025summer.svg')
-
+  a.btn-pagetop(href="#")
+      i.fas.fa-arrow-up
 
 
 mixin section-cta
@@ -148,14 +149,15 @@ mixin modal-present
                 .modal-wrapper-close-icon.modal-close
             .modal-wrapper-content
                 .modal-wrapper-content-main-title(style="text-align: center;")
-                    |3/31(土)と4/2(木)の
-                    br
-                    |ライブレッスンは
-                    br
-                    |通年レッスンへの
-                    br
-                    |入会者の早期特典です
-                .modal-wrapper-content-main-text(style="text-align: center;")
-                      |ここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入るここに説明が入る
+                  |通年レッスンに入会で
+                  br
+                  |3/31(火)・4/2(木)の
+                  br
+                  |ライブレッスンに参加できます
+                .modal-wrapper-content-main-text
+                      |本プログラム申込後に、本プログラムとは別でご提供している通年レッスンへお申し込みいただくと対象となります。
+                      br
+                      br
+                      |詳細はお申し込み後のご案内でお知らせします。
             .modal-wrapper-content-close.modal-close 
                 |閉じる
