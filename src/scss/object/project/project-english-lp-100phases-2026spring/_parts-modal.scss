@@ -60,7 +60,7 @@ $z-indexes: (
       }
     }
     &-content {
-      padding: 20px;
+      // padding: 20px;
       &-main-title {
         @include font-size-xl;
         text-align: center;
@@ -121,6 +121,68 @@ $z-indexes: (
         text-decoration: underline;
         cursor: pointer;
       }
+    }
+  }
+  .modal-wrapper-content-title-alreadyfriend {
+    @include font-size-m;
+    background: $cl-waogreen;
+    color: $cl-white;
+    text-align: center;
+    line-height: $lineheight-normal;
+    padding: 14px 0 12px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid $cl-waogreen;
+    .modal-wrapper-content-title-alreadyfriend-top {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      color: $cl-white;
+      margin: 0 0 0px;
+      div {
+        color: $cl-white;
+      }
+    }
+    .modal-wrapper-content-title-alreadyfriend-bottom {
+      color: $cl-white;
+    }
+  }
+  .modal-wrapper-content-main-text-alreadyfriend {
+    @include font-size-m;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 20px 20px;
+    line-height: $lineheight-normal;
+    b {
+      font-weight: bold;
+    }
+  }
+  .modal-wrapper-content-main-image-alreadyfriend img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .modal-wrapper-content-main-btn-alreadyfriend a {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 55px;
+    margin: 30px auto 30px;
+    padding: 0;
+    border-radius: $border-radius-big;
+    background: $cl-btn-cta;
+    color: $cl-white;
+    @include font-size-l;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 0 #da613b;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background: darken($cl-btn-cta, 10%);
     }
   }
 }
