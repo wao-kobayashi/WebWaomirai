@@ -9,6 +9,17 @@ $cl-bg-leafgreen-darkendeep: #3f871d; //さらに濃い草原の緑
 $cl-bg-eventlp: #fff8e0; //イベントLP専用の背景
 $cl-title-underline: #febcad;
 $cl-btn-cta: #f88c6a;
+
+@mixin gradient-waoorange {
+  background: linear-gradient(93.57deg, #f5942e -3.22%, #ee7a00 104.73%);
+}
+
+/* 旧ファイル更新のため残しているが未使用 */
+
+@mixin gradient-waogreen {
+  background: linear-gradient(283.05deg, #0d825d -0.33%, #1f8c69 89.33%);
+}
+
 $subject-categories: (
   "philosophy": $cl-philosophy,
   "science": $cl-science-darken,

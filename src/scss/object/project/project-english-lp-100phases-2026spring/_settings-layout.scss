@@ -3,6 +3,11 @@ $width-main: 500px; // メインの幅
 $width-main-content: 93%; // メインの幅
 $width-cv-btn: 78%;
 $breakpoint-layout: 980px; //レスポンシブの切り替え
+$breakpoint-sp: 768px;
+
+@mixin content-width {
+  width: calc(100% - 50px);
+}
 
 body#eng-phase {
   background: $cl-bg-skyblue;
@@ -49,16 +54,16 @@ body#eng-phase {
     margin: 0 auto;
     @include responsive-style(1240px) {
       max-width: 83.65%;
-      .c-btn-cv{
+      .c-btn-cv {
         height: 9.68vw;
         min-height: 100px;
-        img{
+        img {
           max-width: 80%;
         }
       }
     }
   }
-  .eng-phase-left-wrap-cv{
+  .eng-phase-left-wrap-cv {
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -122,4 +127,3 @@ body#eng-phase {
     border-radius: 0 !important;
   }
 }
-
