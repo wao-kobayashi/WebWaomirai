@@ -77,6 +77,7 @@ $fvTextSp: 41%;
   position: relative;
   z-index: 10;
   width: 100%;
+  overflow: hidden;
   .eng-phase-main-fv-overflow-hidden {
     position: absolute;
     top: 0;
@@ -116,14 +117,36 @@ $fvTextSp: 41%;
     }
     .eng-phase-main-fv-logo-parts {
       width: 60%;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0px;
-      margin: auto;
+      position: relative;
+      // left: 0;
+      // right: 0;
+      // bottom: 0px;
+      margin: -14% auto 0;
       clip-path: url(#svgPath);
+      overflow: hidden;
       // background: red;
-      animation: FvfadeInUp 1.3s ease-out;
+      // animation: poyon 1s;
+      // animation: FvfadeInUp 1.3s ease-out;
+      &::before {
+        content: "";
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -50%;
+        z-index: 2;
+        display: block;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.4) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-20deg);
+        pointer-events: none; /* hoverの邪魔をしないために追加（任意） */
+        animation: shine 4s infinite; /* 無限ループアニメーション */
+        clip-path: url(#svgPath);
+      }
     }
   }
   .eng-phase-main-fv-text {
@@ -170,23 +193,40 @@ $fvTextSp: 41%;
 }
 
 @keyframes poyon {
-  0%,
-  100% {
-    transform: scale(1) translateY(0);
+  0% {
+    transform: translateY(0) scale(1); /* 通常の位置とサイズ */
   }
   30% {
-    transform: scale(1.1, 0.9) translateY(-20px);
+    transform: translateY(-10px) scale(1.1); /* 少し上にジャンプして大きくなる */
   }
   50% {
-    transform: scale(0.9, 1.1) translateY(0);
+    transform: translateY(0) scale(0.9); /* 元の位置に戻りつつ縮む */
   }
   70% {
-    transform: scale(1.05, 0.95) translateY(-10px);
+    transform: translateY(-5px) scale(1.05); /* 小さくジャンプして大きくなる */
   }
-  90% {
-    transform: scale(0.98, 1.02) translateY(0);
+  100% {
+    transform: translateY(0) scale(1); /* 元のサイズと位置に戻る */
   }
 }
+// @keyframes poyon {
+//   0%,
+//   100% {
+//     transform: scale(1) translateY(0);
+//   }
+//   30% {
+//     transform: scale(1.1, 0.9) translateY(-20px);
+//   }
+//   50% {
+//     transform: scale(0.9, 1.1) translateY(0);
+//   }
+//   70% {
+//     transform: scale(1.05, 0.95) translateY(-10px);
+//   }
+//   90% {
+//     transform: scale(0.98, 1.02) translateY(0);
+//   }
+// }
 .eng-phase-main {
   text-align: center;
 }

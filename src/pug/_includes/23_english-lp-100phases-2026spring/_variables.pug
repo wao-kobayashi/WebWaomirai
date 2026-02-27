@@ -2,6 +2,8 @@
 //URL
 ///////////////
 
+- var MetaTitle = '【2026春】英語が好きになる100フレーズチャレンジ｜小学生・中学生向け英語プログラム';
+
 // loycus連携用（2026春イベントLPと同じ設定）
 - var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHELFnMLBX&whc=173508808725235'
 - var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=VqUFL'
@@ -13,8 +15,8 @@
 
 // ローカル画像パス
 - var pathsCommon = '../../../images/commonimages'
-- var paths23 = '../../../images/23_english-lp-100phases-2026spring'
-- var paths22 = '../../../images/22_event-lp-2026march'
+- var paths23 = 'https://waomirai.com/lp/assets/lpimages/23_english-lp-100phases-2026spring';
+//- - var paths23 = '../../../images/23_english-lp-100phases-2026spring'
 
 - 
   function imgCommon(filename) {
@@ -25,13 +27,10 @@
     return `${paths23}/${filename}`;
   }
 
-  function img22(filename) {
-    return `${paths22}/${filename}`;
-  }
 
 //Logo
-- var ImgLogoWaoMirai = imgCommon('logo.svg')
-- var ImgLogoWaoMiraiWhite = imgCommon('logo_white.svg')
+- var ImgLogoWaoMirai = img23('logo.svg')
+- var ImgLogoWaoMiraiWhite = img23('logo_white.svg')
 - var ImgLogoEnglish = img23('logo_100phases.png')
 - var ImgLogoEnglishSpring = img23('logo_100phases_spring.png')
 - var ImgLogoEnglishSpringParts = img23('logo_100phases_spring_parts.png')
@@ -85,10 +84,6 @@
 - var ImgBtnCvLine = img23('btn_cv_b_noborder.svg')
 
 // CTA（2026春イベントLPのビジュアルを共用）
-- var ImgTextCta = img22('text_btn_cta.svg')
-- var ImgTextCtaBig = img22('btn_cta_big.svg')
-- var ImgSpeechCta = img22('speech_cta.svg')
-- var ImgMenu = img22('menu_humberger.svg')
 - var ImgCtaLooptext = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/cta_looptext.svg'
 - var ImgCta = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/img_cta.png'
 
