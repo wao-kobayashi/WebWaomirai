@@ -77,7 +77,9 @@ $fvTextSp: 41%;
   position: relative;
   z-index: 10;
   width: 100%;
-  overflow: hidden;
+  @include responsive-style(767px) {
+    overflow: hidden;
+  }
   .eng-phase-main-fv-overflow-hidden {
     position: absolute;
     top: 0;
@@ -624,6 +626,32 @@ $fvTextSp: 41%;
           }
         }
       }
+    }
+  }
+}
+
+.eng-phase-main-multi-course {
+  position: relative;
+  .eng-phase-main-multi-cta {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 5px;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    gap: 5px;
+    img {
+      margin: 0 auto;
+      width: 100%;
+    }
+    .eng-phase-main-multi-cta-btn {
+      cursor: pointer;
     }
   }
 }
