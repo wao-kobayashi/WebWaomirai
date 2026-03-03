@@ -1,0 +1,164 @@
+script.
+  $(function () {
+    // ==============================
+    // inview アニメーション
+    // ==============================
+    function initInviewAnimation() {
+      $('.inview-triger').on('inview', function (event, isInView) {
+        if (isInView) {
+          $(this).addClass('inview');
+        }
+      });
+    }
+
+    // ==============================
+    // LINE 申込導線（PC/SP で挙動切替）
+    // ==============================
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+    function modalPresent() {
+      $(' .eng-phase-main-flow-schedule-item-speech').on('click', function () {
+           $('#modal-present, .bg-modal').show();
+      });
+     
+    }
+
+    function modalAlreadyFriendOpen() {
+          $('#modal-alreadyfriend, .bg-modal').show();
+
+    }
+
+    function updateButtonBehavior() {
+      var isWideScreen = $(window).width() >= 769;
+
+      $('.js-line-trigger')
+        .off('click')
+        .on('click', function (e) {
+          e.preventDefault();
+
+          if (isWideScreen) {
+            modalPcLiffOpen();
+          } else {
+            modalAlreadyFriendOpen();
+          }
+        });
+    }
+
+    function initLineEntry() {
+      $(window).on('load resize', updateButtonBehavior);
+    }
+
+    // ==============================
+    // Vimeo モーダル
+    // ==============================
+    function initVimeoModal() {
+      var iframe = document.getElementById('vimeoPlayer');
+      if (!iframe) return;
+
+      var player = new Vimeo.Player(iframe);
+
+      $('#playButton').on('click', function () {
+        $('.modal-vimeo, .bg-modal').show();
+
+        setTimeout(function () {
+          player
+            .play()
+            .then(function () {
+              console.log('動画が再生されました');
+            })
+            .catch(function (error) {
+              console.error('再生エラー:', error);
+            });
+        }, 1500);
+      });
+
+      $('.modal-close, .bg-modal').on('click', function () {
+        $('.modal-vimeo, .modal, .bg-modal').hide();
+
+        player
+          .pause()
+          .then(function () {
+            console.log('動画が停止しました');
+          })
+          .catch(function (error) {
+            console.error('停止エラー:', error);
+          });
+      });
+    }
+
+    // ==============================
+    // LIFF QR（PC 用）
+    // ==============================
+    function initLiffQr() {
+      var el = document.getElementById('liffqr');
+      if (!el) return;
+      new QRCode(el, "#{UrlLiffAddFriend}");
+    }
+
+    // ==============================
+    // FAQ アコーディオン
+    // ==============================
+    function initFaqAccordion() {
+      $('.eng-phase-main-section-green-wrap-faq-box-title').on('click', function () {
+        $(this)
+          .toggleClass('active')
+          .next('.eng-phase-main-section-green-wrap-faq-box-content')
+          .slideToggle();
+
+        $('.accordion-header')
+          .not(this)
+          .removeClass('active')
+          .next('.eng-phase-main-section-green-wrap-faq-box-content')
+          .slideUp();
+      });
+    }
+
+    // ==============================
+    // 10日間プログラム タブ切り替え
+    // ==============================
+    function initFlowTabs() {
+      $('.eng-phase-main-flow-tab-item').on('click', function () {
+        if ($('.eng-phase-main-flow-tab').hasClass('is-finished')) return;
+
+        $('.eng-phase-main-flow-tab-item, .eng-phase-main-flow-contents-item').removeClass('is-active');
+        $(this).addClass('is-active');
+
+        $('.eng-phase-main-flow-contents-item')
+          .eq($('.eng-phase-main-flow-tab-item').index(this))
+          .addClass('is-active');
+      });
+    }
+
+    // ==============================
+    // スマホ追従 CV ボタン
+    // ==============================
+    function initFixedCv() {
+      $(window).on('load scroll', function () {
+        if (!window.matchMedia('(max-width: 767px)').matches) return;
+
+        var $trigger = $('.fixed-cv-trigger');
+        if ($trigger.length === 0) return;
+
+        var threshold = $trigger.offset().top - $(window).height();
+
+        if ($(window).scrollTop() < threshold) {
+          $('#fixed-cv').fadeOut();
+        } else {
+          $('#fixed-cv').fadeIn();
+        }
+      });
+    }
+
+    // ==============================
+    // 初期化
+    // ==============================
+    initInviewAnimation();
+    initLineEntry();
+    initVimeoModal();
+    initLiffQr();
+    initFaqAccordion();
+    initFlowTabs();
+    initFixedCv();
+    modalPresent();
+  });

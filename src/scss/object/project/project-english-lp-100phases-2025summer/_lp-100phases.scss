@@ -109,7 +109,7 @@ $fvTextSp: 41%;
     z-index: 3;
     animation: FvfadeInUp 0.65s ease-out;
     width: 93%;
-    margin: -18.667vw auto 0;
+    margin: -18.667vw auto 30px;
     @include min-responsive-style(768px) {
       margin-top: -100px;
     }

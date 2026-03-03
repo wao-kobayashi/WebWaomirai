@@ -1,0 +1,442 @@
+
+
+// ミックスイン
+include _mixins
+
+//////////////////////
+// ブルーエリア（FV〜プログラム流れ)
+//////////////////////
+.eng-phase-bg-blue
+  //blue01 FV
+  .eng-phase-main-fv 
+    //- .eng-phase-main-fv-logo 
+    //-   |ここワオのロゴ
+    .eng-phase-main-fv-waologo.spimage 
+       img(src=ImgLogoWaoMirai)
+    .eng-phase-main-fv-persons
+       img(src=ImgFvPersons)
+    .eng-phase-main-fv-target 
+       img(src=ImgFvTarget)
+    .eng-phase-main-fv-logo 
+      .eng-phase-main-fv-logo-main
+        img(src=ImgLogoEnglish )
+      .eng-phase-main-fv-logo-parts
+        img(src=ImgLogoEnglishSpringParts )
+    .eng-phase-main-fv-text
+        img(src=ImgFvText)
+
+    .eng-phase-main-fv-overflow-hidden 
+      .eng-phase-main-fv-shine
+        img(src=ImgFvBgShine)
+      .eng-phase-main-fv-crowds01
+          img(src=ImgFvCrowds01)
+      .eng-phase-main-fv-crowds02
+          img(src=ImgFvCrowds02)
+  section.eng-phase-main-cv-crowds
+    .eng-phase-main-cv-crowds-img
+      img(src=ImgBgCrowdsCv)
+    .eng-phase-main-cv-crowds-btn
+      +conditionalLink('c-btn-cv is-contents')
+        img(src=ImgBtnCvPrice)
+  
+  //blue02 100フレーズクリアで英語の自信がつく!
+  section.eng-phase-main-section-blue.eng-phase-main-section-blue-first.inview-triger.inview-hide
+       img(src=ImgSectionBlue02)
+  
+  //blue03 こんなお子様におすすめ
+  section.eng-phase-main-section-blue.inview-triger.inview-hide.fixed-cv-trigger
+       img(src=ImgSectionBlue03)
+
+  //blue04 100フレーズチャレンジ プログラムの流れ
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+    .eng-phase-main-flow
+      .eng-phase-main-flow-title
+        img(src=TitleFlow)
+      .eng-phase-main-flow-wrapper
+        .eng-phase-main-flow-contents
+            .eng-phase-main-flow-contents-item
+              .eng-phase-main-flow-about
+                img(src=ImgFlowAbout)
+              .eng-phase-main-flow-schedule
+                div
+                  img(src=ImgFlowSchedule01)
+                .eng-phase-main-flow-schedule-item
+                  .eng-phase-main-flow-schedule-item-img
+                    img(src=ImgFlowSchedule02)
+                  .eng-phase-main-flow-schedule-item-speech
+                   .eng-phase-main-flow-schedule-item-speech-wrap
+                      .eng-phase-main-flow-schedule-item-speech-wrap-icon 
+                        img(src=ImgIcnFlowScheduleSpeechPresent)
+                      .eng-phase-main-flow-schedule-item-speech-wrap-img
+                          img(src=ImgFlowScheduleSpeechPresent)
+                .eng-phase-main-flow-schedule-item
+                    img(src=ImgFlowSchedule03)
+                .eng-phase-main-flow-schedule-item
+                  .eng-phase-main-flow-schedule-item-img
+                    img(src=ImgFlowSchedule04)
+                  .eng-phase-main-flow-schedule-item-speech
+                   .eng-phase-main-flow-schedule-item-speech-wrap
+                      .eng-phase-main-flow-schedule-item-speech-wrap-icon 
+                        img(src=ImgIcnFlowScheduleSpeechPresent)
+                      .eng-phase-main-flow-schedule-item-speech-wrap-img
+                          img(src=ImgFlowScheduleSpeechPresent)
+                .eng-phase-main-flow-schedule-item
+                    img(src=ImgFlowSchedule05)
+              .eng-phase-main-flow-option
+                img(src=ImgFlowOption)
+
+  //blue05 
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+    div 
+       img(src=ImgMultiCourseBonus) 
+    .eng-phase-main-multi-course
+       .eng-phase-main-multi-cta 
+         .eng-phase-main-multi-cta-text 
+            img(src=ImgMultiCourseBonusCtaTxt) 
+         .eng-phase-main-multi-cta-btn  
+           a(href=UrlFullYearLessons, target='_blank') 
+            img(src=ImgMultiCourseBonusCtaButton)        
+       .eng-phase-main-multi-course-bg
+        img(src=ImgMultiCourseBonus02) 
+  section.eng-phase-main-cv-crowds.inview-triger.inview-hide
+    .eng-phase-main-cv-crowds-img
+      img(src=ImgBgCrowdsCv)
+    .eng-phase-main-cv-crowds-btn
+      +conditionalLink('c-btn-cv is-contents')
+        img(src=ImgBtnCvPrice)
+    
+  //blue05 オープンチャットで仲間と楽しく学ぼう！
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+       img(src=ImgChat)
+
+  //blue06 前回参加者の声
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+       img(src=ImgVoice)
+  
+  //blue07 「カタマリ」で学べば英語は簡単に話せる
+  section.eng-phase-main-section-movie.inview-triger.inview-hide
+    .eng-phase-main-section-movie-title
+      img(src=ImgTitleMovie)
+    .eng-phase-main-section-movie-content
+      .eng-phase-main-section-movie-content-btn#playButton
+          img(src=ImgSectionBlue07IconMovie)
+      .eng-phase-main-section-movie-content-vimeo.
+           <iframe src="https://player.vimeo.com/video/1124123259?h=ce7349bb08&autoplay=1&muted=1&background=1&playsinline=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  section.eng-phase-main-section-blue.inview-triger.inview-hide
+       img(src=ImgSectionBlue04)
+
+  section.eng-phase-main-cv-humans.inview-triger.inview-hide
+    .eng-phase-main-cv-humans-img 
+        img(src=ImgBgCvBlue)
+    .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-blue
+      .eng-phase-main-cv-humans-area-top
+          .eng-phase-main-cv-humans-area-top-price
+            |100フレーズチャレンジ 8,800円
+          .eng-phase-main-cv-humans-area-top-text 
+            |春休みに楽しく学ぶ！
+            br
+            |英語が話せる自分に！
+          .eng-phase-main-cv-humans-area-top-button    
+             +conditionalLink('c-btn-cv')
+                img(src=ImgBtnCvPrice)
+      .eng-phase-main-cv-humans-area-bottom
+//////////////////////
+// グリーンエリア（ラポール〜FAQ)
+//////////////////////
+.eng-phase-bg-green
+  .inview-triger.inview-hide
+    img(src=ImgBgRapport)
+  //レッスン担当ラポール22
+  section.eng-phase-main-section-green.eng-phase-main-section-green-rapport.inview-hide.inview-triger
+    .eng-phase-main-section-green-wrap
+      .eng-phase-main-section-green-wrap-title
+        img(src=ImgTitleRapport)
+      .eng-phase-main-section-green-wrap-img
+        img(src=ImgRapport)
+      .eng-phase-main-section-green-wrap-text
+        |日本の環境は今、大きく変化しています。かつて「グローバル」は一部のエリートに関わる言葉でした。しかし現在では日常的に外国人と接する機会が増え、ネットやSNSでは海外の情報が表示され、さらにAIの利用でも英語が有利となっています。
+        br
+        b|今や「グローバル」であることが当たり前なのです。
+        br
+        br
+        |こうした新しい世界で、日本の子どもたちは果たして楽しく働き、生活できるでしょうか？AIに仕事を奪われないための選択肢を持てるでしょうか？現状の英語教育ではそれが難しいと感じざるを得ません。残念ながら、実際に使える英語が身についていないばかりか、英語嫌いの子どもが増えているのが現状です。
+        br
+        br
+        b|今、子どもたちに本当に必要なのは、ツールとして使える英語力と、それを活かせるコミュニケーション能力です。
+        br
+        br
+        |このチャレンジに参加する皆さんと、先生がチームとなり、「こんなに喋れるようになった！」という驚きの体験を共有しましょう！
+      .eng-phase-main-section-green-wrap-banner
+        a(href=UrlGlobalEnglish, target='_blank')
+          img(src=ImgBannerGlobalEnglish)
+  //受講費用
+  section.eng-phase-main-section-green.eng-phase-main-section-green-price.inview-hide.inview-triger
+    .eng-phase-main-section-green-wrap
+     .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
+        img(src=ImgTitlePrice)
+     .eng-phase-main-section-green-wrap-content 
+        img(src=ImgPrice)
+  //CV
+  +cvgreen 
+
+  //かんたん5ステップ
+  section.eng-phase-main-section-5steps 
+      .eng-phase-main-section-5steps-title.inview-triger.inview-hide 
+        img(src=ImgTitle5steps)
+      //step1
+      .eng-phase-main-section-5steps-box.inview-hide.inview-triger
+        .eng-phase-main-section-5steps-box-wrap
+          .eng-phase-main-section-5steps-box-wrap-head 
+            .eng-phase-main-section-5steps-box-wrap-head-step
+                |STEP 
+                span|1
+            .eng-phase-main-section-5steps-box-wrap-head-img
+                img(src=Img5Steps01)
+          .eng-phase-main-section-5steps-box-wrap-title 
+                |LINEで公式アカウントを
+                br
+                |友だち追加
+          .eng-phase-main-section-5steps-box-wrap-text 
+                |まず公式アカウントを友だちに追加してください。
+                //- |・LINEが利用できない場合はこちらから
+                br
+                |・友だち追加は
+                +conditionalLink
+                     |こちら
+                |から
+
+      //step2
+      .eng-phase-main-section-5steps-box.inview-hide.inview-triger
+        .eng-phase-main-section-5steps-box-wrap
+          .eng-phase-main-section-5steps-box-wrap-head 
+            .eng-phase-main-section-5steps-box-wrap-head-step
+                |STEP 
+                span|2
+            .eng-phase-main-section-5steps-box-wrap-head-img
+                img(src=Img5Steps02)
+          .eng-phase-main-section-5steps-box-wrap-title 
+                |友だち登録後、LINEのトーク
+                br
+                |画面に送られる申し込み
+                br
+                |フォームをタップ！
+      
+      //step3
+      .eng-phase-main-section-5steps-box.inview-hide.inview-triger
+        .eng-phase-main-section-5steps-box-wrap
+          .eng-phase-main-section-5steps-box-wrap-head 
+            .eng-phase-main-section-5steps-box-wrap-head-step
+                |STEP 
+                span|3
+            .eng-phase-main-section-5steps-box-wrap-head-img
+                img(src=Img5Steps03)
+          .eng-phase-main-section-5steps-box-wrap-title 
+                |必要な情報を入力して
+                br
+                |「申込」をタップ
+      //step4
+      .eng-phase-main-section-5steps-box.inview-hide.inview-triger
+        .eng-phase-main-section-5steps-box-wrap
+          .eng-phase-main-section-5steps-box-wrap-head 
+            .eng-phase-main-section-5steps-box-wrap-head-step
+                |STEP 
+                span|4
+            .eng-phase-main-section-5steps-box-wrap-head-img.step4
+                img(src=Img5Steps04)
+          .eng-phase-main-section-5steps-box-wrap-title 
+                |申し込みタップ後に、
+                br
+                |LINEで送られてくる
+                br
+                |「支払い」ボタンを
+                br
+                |タップしてお支払い！
+      //step5
+      .eng-phase-main-section-5steps-box.inview-hide.inview-triger
+        .eng-phase-main-section-5steps-box-wrap
+          .eng-phase-main-section-5steps-box-wrap-head 
+            .eng-phase-main-section-5steps-box-wrap-head-step
+                |STEP 
+                span|5
+            .eng-phase-main-section-5steps-box-wrap-head-img
+                img(src=Img5Steps05)
+          .eng-phase-main-section-5steps-box-wrap-title 
+                |[前日]
+                br
+                |イベント専用コミュニティ
+                br
+                span.small|（LINEオープンチャット）
+                |に参加
+          .eng-phase-main-section-5steps-box-wrap-text 
+                |オンラインレッスンのお知らせや、課題の取り組み方、先生からのアドバイスはすべてこのコミュニティで共有しますので、必ず参加してください。
+      //step2
+      .eng-phase-main-section-5steps-box.inview-hide.inview-triger
+        .eng-phase-main-section-5steps-box-wrap
+
+          .eng-phase-main-section-5steps-box-wrap-title 
+                |スタート！
+          .eng-phase-main-section-5steps-box-wrap-text 
+                |イベント専用コミュニティの案内に従ってレッスン＆トレーニング開始！
+                br
+                br
+  section.eng-phase-main-section-5steps-cv.inview-triger.inview-hide
+           +conditionalLink('c-btn-cv')
+              img(src=ImgBtnCvPrice)
+
+  //よくある質問
+  section.eng-phase-main-section-green.eng-phase-main-section-green-faq.inview-hide.inview-triger
+    .eng-phase-main-section-green-wrap
+     .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
+        img(src=ImgTitleFaq)
+     .eng-phase-main-section-green-wrap-faq
+        //- 全てのFAQ項目を流し込み
+        +faqBox(
+          "参加すると本当に話せるようになるのですか？", 
+          "<b>はい、話せるようになります！</b> 日本人が英語を話せない最大の理由は、「ネイティブのように話す」という遠すぎる目標を持ってしまうことです。しかし、このプログラムでは <b>たった8種類のフレーズ × 16種類の動作</b> を組み合わせることで、英作文をする必要なく100フレーズが口から出るようになります。<br /><br />一般的な学習法のように「単語を覚える → 文法を学ぶ → 英作文をする」という遠回りをせず、「英語のカタマリを組み合わせる」トレーニング（パーツSwitch）だからこそ、<b>英語が話せる実感が得られるのです！</b><br /><br />「ネイティブのように流暢に」ではなく、<b>30フレーズでも50フレーズでも話せたら、それは立派な'話せる'</b> ということ。お子様が英語を楽しく話せるようになることが、このプログラムのゴールです。"
+        )
+
+        +faqBox(
+          "英語を習ったことがなく、単語もほとんど知りませんが、大丈夫ですか？", 
+          "<b>大丈夫です！</b> <br />このプログラムでは、<b>単語単位ではなく、英語をカタマリ単位の音で練習</b>します。<br /><br />たとえば、「What's your name?」を初めて聞いたとき、文法やスペルを考えずに「ワッチュアネーム？」と音で覚えましたよね？これと同じように、<b>音から学ぶことで、単語を知らなくても自然に文が組み立てられます。</b><br /><br />また、独自の「ひらがなEnglish」メソッドを使い、「shopping」を「ショッピング」ではなく<b>「しゃぁぴん」</b>のように、<b>ネイティブに通じる音</b>で練習。カタカナ英語ではなく、<b>実際に通じる英語</b>を身につけられるので、単語を知らないお子様でも安心して参加できます。"
+        )
+
+        +faqBox(
+          "文法を勉強しなくても大丈夫ですか？", 
+          "<b>まずは「話せる」を優先！</b><br /><br />赤ちゃんが言葉を覚えるとき、まず<b>音を真似て簡単なフレーズを話す</b>ところから始めますよね？その後、自然とルールを理解していきます。<br /><br />このプログラムも同じです。文法を学ぶ前に<b>英語をカタマリで覚えることで、「in だっけ？ at だっけ？」と悩まずに話せるようになります。</b> そして、話せるようになってから文法を学ぶと、「なるほど！」と理解できるようになります。"
+        )
+
+        +faqBox(
+          "人前で話すのが苦手ですが、オンラインレッスンで大丈夫ですか？", 
+          "<b>はい、大丈夫です！このプログラムなら、プレッシャーなく安心して話せます。</b><br /><br />一般のオンライン英会話では、「相手に伝わるように英語で話さなきゃいけない」というプレッシャーがあり、「上手く発音できなかったらどうしよう」と緊張して言えないこともあります。しかし、このプログラムではそれがありません。レッスン中は 生徒側の音声がミュート になっているため、<b>人の目を気にせず たくさん話すトレーニングができます。</b><br /><br />さらに、<b>録音した音声をあとで先生がチェック</b>するので、発音やフレーズの定着をしっかり確認でき、通常のオンライン英会話以上の効果が期待できます。<br /><br />また、画面オフでの参加もOK！ 移動中や外出先でも受講できるので、スキマ時間を活用可能。もちろん、<b>画面オンなら先生が口の動きや発音をチェック</b>できるので、より効果的に学べます。"
+        )
+
+        +faqBox(
+          "1日どのくらい勉強すればいいですか？", 
+          "<b>1日2～4回、英語を口に出すことが理想！</b><br />英語は<b>スポーツやピアノと同じで、練習量が大切</b>です。<br /><br /><b>【理想のスケジュール</b>】<br /> ✅ <b>朝・昼・夜・寝る前の4回、30分ずつ練習（計2時間）</b> <br />✅ 最低でも<b>朝と寝る前の2回</b>は口に出す習慣をつける<b>寝る前の練習は特に重要！</b><br /><br />睡眠中に脳が情報を整理し、学んだフレーズがしっかり定着します。また、<b>朝に英語を口にすると、その日1日ふとした瞬間に思い出しやすくなり、自然と口ずさむ機会が増えます。</b>動画レッスンは<b>1回20～30分</b>なので、1日2回でもOK！また、<b>5～10分に分割した動画</b>もあるので、短い時間でも毎日続けることが大切です。"
+        )
+
+        +faqBox(
+          "録音した英語は他の参加者に公開されますか？", 
+          "<b>一般公開はされません！</b><br />録音した英語は<b>担当の先生がチェック</b>し、みんなの苦手なポイントをまとめた<b>アドバイス動画をLINEグループ内</b>で配信します。<br /><br />また、最後の発表会で受賞したお子様の録音は、<b>事前の許可を得た場合のみ</b>使用しますので、ご安心ください。"
+        )
+
+        +faqBox(
+          "100フレーズを覚えただけで、英語が話せるとは言えませんよね？", 
+          "<b>実は、会話に必要なフレーズは意外と少ない！</b> 旅行で必要な基本フレーズは<b>10種類ほど</b>。それでも旅行は楽しめます。<br /><br />日本の英語教育では「何でも英語に訳せること」を目標にしがちですが、<b>実際の会話は「日本語を訳す」のではなく「場面に合う英語を選ぶ」ことが大切。</b><br /><br />例えば、「お疲れ様でした」を英語に訳そうとすると難しいですが、<b>「会社帰りの挨拶」＝ \"See you tomorrow!\"</b> と考えれば、すぐに英語が出てきますよね？<br /><br />この「場面から英語を選ぶ力（フレーズChoice）」を鍛えることで、<b>100フレーズでも十分に英語が使える場面が広がります！</b><br /><br />もちろん、さらに100フレーズ、200フレーズと増やしていけば、もっと話せる幅が広がりますが、<b>まずは100フレーズを使いこなすことが大切</b>です。"
+        )
+  //CV
+  +cvgreen 
+//////////////////////
+// waoエリア(ワオ未来塾って？〜footer)
+//////////////////////
+//ワオ未来塾って？
+.bg-white
+    section.about-wao#content08
+                .about-wao-title
+                    |ワオ未来塾って？
+                .about-wao-img
+                    img(src=ImgLogoWao)
+                .about-wao-text
+                    |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。
+                    br
+                    br
+                    |21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。
+                    br
+                    br
+                    |半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
+    //授業の特徴
+    section.about-feature
+            .about-feature-title
+                |授業の特長
+            .about-feature-point
+                i.fa-solid.fa-earth-americas
+                .about-feature-point-text
+                    |オンライン授業で
+                    br
+                    |全国どこからでも参加OK
+            .about-feature-point
+                i.fa-regular.fa-comments
+                .about-feature-point-text
+                    |ライブだからチャットで
+                    br
+                    |授業に参加できる!
+            .about-feature-point
+                i.fa-solid.fa-laptop
+                .about-feature-point-text
+                    |必要なのは
+                    br
+                    |PCかタブレットだけ！                 
+    //ワオ未来塾
+    section.about-school
+            .about-school-catch 
+                |社会で役立つ学びを、オンラインで今始めよう
+            .about-school-logo 
+                img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+            .about-school-target 
+                |〈対象〉小学3〜6年生／中学生／高校生
+            .about-school-4subjects
+                img(src=Img4Subjects)
+            .about-school-feature 
+                .about-school-feature-box
+                    .about-school-feature-box-title  
+                        .about-school-feature-box-title-icon   
+                            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                        .about-school-feature-box-title-text 
+                            |新しい学び
+                    .about-school-feature-box-text 
+                        |これから必要になる自己肯定感を養う「哲学」、正しく物事を見る目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」を身につけます。
+                .about-school-feature-box
+                    .about-school-feature-box-title  
+                        .about-school-feature-box-title-icon   
+                            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                        .about-school-feature-box-title-text 
+                            |飛び級制
+                    .about-school-feature-box-text 
+                        |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+                .about-school-feature-box
+                    .about-school-feature-box-title  
+                        .about-school-feature-box-title-icon   
+                            img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                        .about-school-feature-box-title-text 
+                            |オンラインライブ授業
+                    .about-school-feature-box-text 
+                        |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+            .about-school-btn
+                a(href='https://waomirai.com/', target='_blank')
+                    .about-school-btn-text 
+                         |ワオ未来塾の公式サイトへ     
+                    .about-school-btn-icn 
+                     img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
+
+//footer
+footer 
+          ul 
+            li 
+              a(href="https://www.wao-corp.com/", target='_blank')
+                |会社概要
+            li 
+              a(href="https://www.wao-corp.com/kojin/", target='_blank')
+                |プライバシーポリシー
+            li
+              a(href="https://waomirai.com/commerce_law/", target='_blank')
+                |特定商取引に基づく表記
+          .footer-logo 
+            img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+          .footer-copyright
+            |© ワオ・コーポレーション All rights reserved.
+#fixed-cv
+  .fixed-cv-wrapper
+    +conditionalLink('fixed-cv-btn')
+      img(src=textFixedCv)
+    a.btn-pagetop(href="#")
+      i.fas.fa-arrow-up
+div(style='position:absolute; z-index:-99999; bottom:0;').
+  <!-- SVGはdefs専用・非表示 -->
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="svgPath" clipPathUnits="objectBoundingBox" transform="scale(0.005173, 0.020487)">
+        <path
+          d="M193.03,22.53l-1.49-5.36c-.1-.37-.23-.74-.38-1.09.08-1.66-.31-3.31-1.12-4.78-.11-.26-.24-.51-.37-.75-.11-.26-.24-.51-.37-.75-.11-.26-.23-.51-.37-.75-.11-.26-.23-.51-.37-.75-.11-.26-.23-.51-.37-.75-.11-.26-.23-.51-.36-.75-.63-1.49-1.66-2.84-3.07-3.85-2.05-1.47-4.39-2.4-6.96-2.77-.77-.11-1.55-.16-2.34-.16-1.59,0-3.22.22-4.86.67-2.08.56-3.97,1.44-5.65,2.62-.31.22-.6.46-.9.7-.81-.23-1.65-.36-2.51-.36-.63,0-1.27.07-1.91.2l-4.22.9c-.83.18-1.63.47-2.37.86-.2-.01-.4-.02-.61-.02-.64,0-1.27.07-1.91.2l-3.56.76c-.71.15-1.38.39-2.01.69-.29-.03-.57-.07-.86-.07-.51,0-1.02.04-1.53.13l-4.37.74c-1.52.26-2.89.88-4.04,1.76-1.21-.28-2.47-.43-3.81-.43-.83,0-1.69.06-2.57.17l-6.09.77c-1.44.18-2.75.7-3.88,1.44-1.47-.43-3.04-.66-4.68-.66-.45,0-.91.02-1.38.05l-6.31.45c-1.09.08-2.13.36-3.11.8-.54-.16-1.09-.31-1.65-.42-1.37-.27-2.78-.41-4.18-.41h-.39c-2.62.05-4.99.56-7.05,1.51-.88.41-1.67.9-2.41,1.44-1.56-1.26-3.47-1.98-5.49-2.06-.11,0-.25,0-.36,0-.16,0-.32,0-.48.01-.2-.01-.4-.02-.59-.02-2.06,0-4.01.68-5.62,1.91-.19-.17-.38-.34-.58-.5-1.25-.99-2.73-1.8-4.37-2.38-1.41-.5-2.89-.82-4.4-.97-.6-.06-1.21-.09-1.8-.09-2.25,0-4.4.41-6.4,1.23,0,0,0,0,0,0-.39-.29-.79-.58-1.22-.84-1.79-1.08-3.84-1.79-6.07-2.11-.87-.12-1.74-.19-2.58-.19-1.57,0-3.08.22-4.51.65-1.8-1.34-3.88-2.25-6.2-2.7-1-.19-2.01-.29-2.99-.29-1.48,0-2.92.23-4.31.65-.29-.25-.57-.51-.88-.75-1.67-1.25-3.63-2.15-5.83-2.7-1.42-.35-2.82-.52-4.17-.52-1.48,0-2.92.21-4.29.62-2.69.81-4.97,2.25-6.78,4.29-.66.74-1.19,1.59-1.57,2.49-.13.25-.26.5-.37.75-.13.25-.26.5-.37.75-.13.25-.26.5-.37.75-.14.25-.26.5-.37.75-.14.25-.26.5-.37.75-.14.25-.26.5-.37.75-.84,1.51-1.24,3.22-1.12,4.96.05.66.17,1.3.36,1.93-.13.23-.24.46-.35.7-.39.69-.68,1.42-.88,2.19l-.67,2.64c-.6,2.35-.21,4.84,1.08,6.91,1.29,2.07,3.37,3.56,5.79,4.14l10.51,2.52c.75.18,1.51.27,2.25.27s1.49-.09,2.21-.26c1.74,1.17,3.72,1.96,5.92,2.38,1.03.19,2.07.29,3.08.29,1.08,0,2.14-.12,3.18-.34,1.19.8,2.56,1.34,4.02,1.55l10.72,1.49c.45.06.9.09,1.34.09,1.06,0,2.09-.18,3.06-.51,1.91.98,4.03,1.6,6.33,1.81.53.05,1.07.07,1.59.07,1.81,0,3.58-.29,5.25-.87,1.29-.44,2.47-1.05,3.54-1.79.07.05.13.1.2.14.15.12.3.24.45.36h0c.1.07.19.14.29.21.24.16.48.31.73.45h0c1.44.8,3.11,1.24,4.75,1.24.49,0,1-.04,1.48-.11.54-.08,1.07-.21,1.59-.36.51.16,1.02.29,1.55.38.1.02.19.03.29.05.46.07.94.1,1.4.1,1.15,0,2.26-.2,3.31-.58,1.3.63,2.74,1.12,4.38,1.48,1.64.36,3.35.54,5.07.54h.44c2.71-.05,5.15-.56,7.24-1.52,1.22.56,2.57.88,3.99.88.22,0,.45,0,.68-.02l4.54-.31c2.48-.17,4.79-1.3,6.43-3.12.05-.06.1-.13.15-.19.13.11.26.23.41.34,1.65,1.25,3.68,1.92,5.75,1.92.39,0,.78-.02,1.18-.07l4.52-.55c.6-.07,1.18-.2,1.73-.38.2.01.4.02.59.02.39,0,.78-.02,1.18-.07l4.82-.59c1-.12,1.95-.41,2.83-.82.35.04.71.07,1.07.07.52,0,1.05-.04,1.58-.13l4.49-.74c.95-.16,1.86-.46,2.71-.88.39.05.78.08,1.18.08.65,0,1.31-.07,1.97-.2l4.34-.9c.86-.18,1.68-.47,2.44-.86.21.01.42.02.62.02.65,0,1.31-.07,1.96-.2l3.66-.76c1.93-.4,3.6-1.36,4.86-2.66.6.12,1.21.21,1.84.27.51.04,1.03.07,1.55.07,1.59,0,3.2-.21,4.8-.64,1.78-.47,3.52-1.2,5.2-2.17,1.8-1.04,3.37-2.31,4.67-3.77,2.04-2.29,2.78-5.43,1.97-8.36Z" />
+      </clipPath>
+    </defs>
+  </svg>
