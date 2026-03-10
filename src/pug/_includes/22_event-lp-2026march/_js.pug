@@ -1,4 +1,5 @@
 script.
+  var waomember = '#{waomember}'
   $(document).ready(function() { 
     $('.inview-triger').on('inview', function(event, isInView) {
       if (isInView) {
@@ -47,7 +48,13 @@ script.
       if (isWideScreen) {
         modalPcLiffOpen(); // PC表示の場合はこちらを実行
       } else {
-        ModalAlreadyFriendOpen(); // スマホ表示の場合はこちらを実行
+        //ワオ会員の時はliffに直接飛ばす（モーダルの注意が逆に正規価格に行ってしまう）
+        if (waomember){
+          window.open('#{UrlLiffAddFriend}', '_blank')
+        } else {
+          //通常時はモーダルに飛ばす
+          modalAlreadyFriendOpen();
+        }
       }
     });
   }

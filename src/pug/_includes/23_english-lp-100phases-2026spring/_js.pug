@@ -1,5 +1,8 @@
+
 script.
   $(function () {
+     var waomember = '#{waomember}'
+    
     // ==============================
     // inview アニメーション
     // ==============================
@@ -40,7 +43,13 @@ script.
           if (isWideScreen) {
             modalPcLiffOpen();
           } else {
-            modalAlreadyFriendOpen();
+              //ワオ会員の時はliffに直接飛ばす（モーダルの注意が逆に正規価格に行ってしまう）
+              if (waomember){
+                window.open('#{UrlLiffAddFriend}', '_blank')
+              } else {
+                //通常時はモーダルに飛ばす
+                modalAlreadyFriendOpen();
+              }
           }
         });
     }
