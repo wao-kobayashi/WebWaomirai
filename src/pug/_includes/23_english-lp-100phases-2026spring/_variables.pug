@@ -10,6 +10,24 @@
 // 通常URL
 - var UrlFullYearLessons = 'https://waomirai.com/subject/english/'
 
+////////////////
+//ImagePath
+////////////////
+
+// ローカル画像パス
+- var pathsCommon = '../../../images/commonimages'
+- var paths23 = 'https://waomirai.com/lp/assets/lpimages/23_english-lp-100phases-2026spring';
+//- - var paths23 = '../../../images/23_english-lp-100phases-2026spring'
+
+- 
+  function imgCommon(filename) {
+    return `${pathsCommon}/${filename}`;
+  }
+
+  function img23(filename) {
+    return `${paths23}/${filename}`;
+  }
+
 
 ////////////////
 //Price
@@ -21,36 +39,26 @@
     var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dH7g5y0UBU&whc=173508808725235'
     var UrlLiffAddFriend    = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=befnqi'
     var UrlLiffForm         = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=wbuxZAetR'
+    var ImgCtaFirstview = img23('btn_cta_firstview.png');
     var ImgPrice            = img23('price_2026spring_waomember.png')
     var ImgBtnCvPrice       = img23('text_btn_cv_2025summer_waomember.svg')
+    var textFixedCv = img23('text_fixed_cv_2025summer_waomember.svg');
     var price               = 5500
+    var ImgMultiCourseBonus = img23('img_multi_course_bonus_waomember.png')
   } else {
     //通常時
     var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHELFnMLBX&whc=173508808725235'
     var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=VqUFL'
     var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8CJn8Dr7'
+    var ImgCtaFirstview = img23('btn_cta_firstview.png');
     var ImgPrice            = img23('price_2026spring.png')
     var ImgBtnCvPrice       = img23('text_btn_cv_2025summer.svg')
+    var textFixedCv = img23('text_fixed_cv_2025summer.svg');
     var price               = 8800
+    var ImgMultiCourseBonus = img23('img_multi_course_bonus.png')
   }
 
-////////////////
-//ImagePath
-////////////////
 
-// ローカル画像パス
-- var pathsCommon = '../../../images/commonimages'
-//- - var paths23 = 'https://waomirai.com/lp/assets/lpimages/23_english-lp-100phases-2026spring';
-- var paths23 = '../../../images/23_english-lp-100phases-2026spring'
-
-- 
-  function imgCommon(filename) {
-    return `${pathsCommon}/${filename}`;
-  }
-
-  function img23(filename) {
-    return `${paths23}/${filename}`;
-  }
 
 
 //Logo
@@ -144,13 +152,11 @@
 - var Img4Subjects = img23('img_4subjects.svg')
 
 //Multi Course Bonus
-- var ImgMultiCourseBonus = img23('img_multi_course_bonus.png')
 - var ImgMultiCourseBonus02 = img23('img_multi_course_bonus02.png')
 - var ImgMultiCourseBonusCtaButton = img23('multi_course_bonus_cta_button.svg')
 - var ImgMultiCourseBonusCtaTxt = img23('multi_course_bonus_cta_txt.svg')
 
-//FixedCv
-- var textFixedCv = img23('text_fixed_cv_2025summer.svg');
+
 
 // modal image (22春イベントLPから流用しているが、23英語LP用ディレクトリに配置済み)
 - var ImgModalEvent = img23('img_modal_event.png');

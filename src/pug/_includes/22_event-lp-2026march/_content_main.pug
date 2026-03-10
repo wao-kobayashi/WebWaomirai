@@ -9,9 +9,15 @@
       .fv-main-sakura
         img(src=ImgFvSakura, alt="")
   .fv-target
+    div
         img(src=ImgFvTarget , alt="") 
+    if waomember   
+      +conditionalLink
+        div(style='margin:20px 0 0; cursor:pointer;')
+          img(src=ImgCtaFirstview)
   .fv-btn 
-    +btn-cta
+    if ! waomember   
+      +btn-cta
 //intro
 section.intro#content01
   .intro-head.inview-triger.inview-hide

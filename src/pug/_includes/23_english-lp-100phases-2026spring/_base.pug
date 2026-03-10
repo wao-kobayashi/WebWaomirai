@@ -16,8 +16,23 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     meta(property="og:image", content="https://waomirai.com/lp/assets/commonimages/ogp.png")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    //ローカル
     - const cssBase = loycus ? '../../../css/' : '../../css/'
-    - const cssLocal = loycus ? '../' : ''
+    //サーバー
+    -
+      if (waomember) {
+        if (loycus) {
+          cssLocal = '../../100phrase-challenge-2026spring/'
+        } else {
+          cssLocal = '../100phrase-challenge-2026spring/'
+        }
+      } else {
+        if (loycus) {
+          cssLocal = '../'
+        } else {
+          cssLocal = ''
+        }
+      }
     link(href=`${cssBase}23-english-lp-100phases-2026spring.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}23-english-lp-100phases-2026spring.css?v=${Date.now()}`, rel="stylesheet")
     title #{MetaTitle}

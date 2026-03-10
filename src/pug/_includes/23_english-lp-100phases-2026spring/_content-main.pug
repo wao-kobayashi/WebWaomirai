@@ -35,9 +35,15 @@ include _mixins
   section.eng-phase-main-cv-crowds
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
-    .eng-phase-main-cv-crowds-btn
-      +conditionalLink('c-btn-cv is-contents')
-        img(src=ImgBtnCvPrice)
+    if waomember 
+        .eng-phase-main-cv-crowds-btn(style='margin:20px auto 45px;')
+            div(style="position:absolute;top: 20%;left: 0;right: 0;margin: auto; width:88%;")
+              +conditionalLink
+                img(src=ImgCtaFirstview)
+    else 
+       .eng-phase-main-cv-crowds-btn
+        +conditionalLink('c-btn-cv is-contents')
+          img(src=ImgBtnCvPrice)
   
   //blue02 100フレーズクリアで英語の自信がつく!
   section.eng-phase-main-section-blue.eng-phase-main-section-blue-first.inview-triger.inview-hide
@@ -131,7 +137,7 @@ include _mixins
     .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-blue
       .eng-phase-main-cv-humans-area-top
           .eng-phase-main-cv-humans-area-top-price
-              | 100フレーズチャレンジ #{price.toLocaleString()}円
+            | 100フレーズチャレンジ #{price.toLocaleString()}円
           .eng-phase-main-cv-humans-area-top-text 
             |春休みに楽しく学ぶ！
             br
