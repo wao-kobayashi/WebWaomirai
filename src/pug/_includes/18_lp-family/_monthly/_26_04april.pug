@@ -1,0 +1,103 @@
+
+//- LINE URL
+- var UrlLine = ''
+- var UrlEndpointAddFriend = ''
+- var UrlLiffAddFriend = ''
+- var UrlLiffForm = ''
+
+//- レッスン日程
+- var lessondate = '4/1(水)〜4/3(金)'
+
+
+//- 画像パス設定
+//- - var paths = '../../../images/18_lp-family'
+- var paths = 'https://waomirai.com/lp/assets/lpimages/18_lp-family';
+- var monthly_paths = '2026_04_april'
+
+//- 画像パス生成関数
+-
+  function img(filename) {
+    return `${paths}/${filename}`;
+  }
+
+
+//- サムネイル画像パス
+- var ImgThumbEconomyKids = img(monthly_paths + '/thumbnail-economy-kids.jpg')
+- var ImgThumbEconomyTeens = img(monthly_paths + '/thumbnail-economy-teens.jpg')
+- var ImgThumbScienceKids = img(monthly_paths + '/thumbnail-science-kids.jpg')
+- var ImgThumbScienceTeens = img(monthly_paths + '/thumbnail-science-teens.jpg')
+- var ImgThumbPhilosophyKids = img(monthly_paths + '/thumbnail-philosophy-kids.jpg')
+- var ImgThumbPhilosophyTeens = img(monthly_paths + '/thumbnail-philosophy-teens.jpg')
+
+
+//- イベントデータ
+-
+  var events = [
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyKids,
+      target: 'kids',
+      titleShort: '友だちを作る「まほう図鑑」',
+      title: '友だちを作る「まほう図鑑」～友だちを作る"まほうのコトバ"～',
+      dateRaw: '2026-04-03',
+      time: '17:30～18:15',
+      description: '「友だちになりたいけど、なんて声をかければいいか分からない…」そんなモヤモヤを、楽しい"まほうのコトバ"さがしで考える授業です。「あそぼう」「ありがとう」など、気持ちを伝える言葉をみんなで考え、自分も相手も大事にできる関わり方を学びます。はじめてのお子さまでも安心して参加できます。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+    },
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceKids,
+      target: 'kids',
+      titleShort: '朝ごはんと集中力の関係',
+      title: '朝ごはんと集中力の関係～朝ごはんを食べないとどうなる？～',
+      dateRaw: '2026-04-01',
+      time: '17:30～18:15',
+      description: '朝ごはんを食べないと、頭はどうなるのでしょうか？この講座では、集中力や気分、体のリズムと朝ごはんの関係を科学的に探ります。ただ「食べなさい」ではなく、自分で理由を考え、納得して行動できる力を育てます。朝の過ごし方をふり返りながら、自分に合った朝ごはんとの付き合い方を一緒に考えていきます。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+    },
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyKids,
+      target: 'kids',
+      titleShort: 'なんでこんなにCM流れてくるの！？',
+      title: 'なんでこんなにCM流れてくるの！？～CMでほんとうに売れるの？～',
+      dateRaw: '2026-04-02',
+      time: '17:30～18:15',
+      description: 'テレビや動画に、どうしてこんなにCMが出てくるんだろう？この講座では、お菓子やゲームのCMを題材に、「なぜこんな見せ方をするのか」「本当に買ってもらえるのか」をじっくり一緒に考えます。身近なCMから、お金の動きやお店の工夫に気づく講座です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+    },
+    {
+      id: 'economy',
+      thumbnail: ImgThumbEconomyTeens,
+      target: 'teens',
+      titleShort: 'アナタが店長！売れるお店のつくり方',
+      title: 'アナタが店長！売れるお店のつくり方～売上ランキングのナゾにせまる！～',
+      dateRaw: '2026-04-02',
+      time: '18:30～19:15',
+      description: '売れるお店ってなぜあるんだろう？この授業ではキミが「お店の店長」になって、どうすれば商品が売れるのかを考えます。売上ランキングをヒントに、値段・並べ方・人気の理由などを分析しながら、売れるしくみを学びます。身近なお店を例に、経済の基本である「需要と供給」や「選ばれる理由」を楽しく体験的に理解できる講座です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+    },
+    {
+      id: 'philosophy',
+      thumbnail: ImgThumbPhilosophyTeens,
+      target: 'teens',
+      titleShort: '転校生がやってきたら？',
+      title: '転校生がやってきたら？～あなたが転校生だったら～',
+      dateRaw: '2026-04-03',
+      time: '18:30～19:15',
+      description: 'クラスにもし転校生が来たら、あなたの子どもはどう声をかけるでしょうか。この講座では、自分が転校生だったらどう感じるかを想像しながら、「言われてうれしい言葉」「されてうれしい行動」を考えます。相手の気持ちを想像する力や、自分から一歩ふみ出す勇気を育てる哲学の時間です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+    },
+    {
+      id: 'science',
+      thumbnail: ImgThumbScienceTeens,
+      target: 'teens',
+      titleShort: '月に住むには何が必要！？',
+      title: '月に住むには何が必要！？～月の極に氷がある理由は？～',
+      dateRaw: '2026-04-01',
+      time: '18:30～19:15',
+      description: 'もし本当に月に町をつくるとしたら、何が必要になると思いますか？空気や水、重力、太陽の光……。この講座では、月に氷が見つかった理由や月の環境のナゾを科学的に探りながら、「人間が月で暮らす未来」を想像します。理科と宇宙がもっと好きになる探究の時間です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+    }
+
+  ]
