@@ -8,7 +8,7 @@ const MONTH_JA = {
 };
 
 module.exports = function () {
-  const baseDir = path.join(__dirname, '../18_lp-family');
+  const baseDir = __dirname;
 
   const dirs = fs.readdirSync(baseDir).filter((d) => {
     return (
