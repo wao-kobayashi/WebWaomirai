@@ -1,41 +1,41 @@
-
+ 
 //- LINE URL
 - var UrlLine = ''
 - var UrlEndpointAddFriend = ''
 - var UrlLiffAddFriend = ''
 - var UrlLiffForm = ''
-
+ 
 //- レッスン日程
 - var lessondate = '4/1(水)〜4/3(金)'
-
-
+ 
+ 
 //- 画像パス設定
 //- - var paths = '../../../images/18_lp-family'
 - var paths = 'https://waomirai.com/lp/assets/lpimages/18_lp-family';
 - var monthly_paths = '2026_04_april'
-
+ 
 //- 画像パス生成関数
 -
   function img(filename) {
     return `${paths}/${filename}`;
   }
-
-
+ 
+ 
 //- サムネイル画像パス
-- var ImgThumbEconomyKids = img(monthly_paths + '/thumbnail-economy-kids.jpg')
-- var ImgThumbEconomyTeens = img(monthly_paths + '/thumbnail-economy-teens.jpg')
-- var ImgThumbScienceKids = img(monthly_paths + '/thumbnail-science-kids.jpg')
-- var ImgThumbScienceTeens = img(monthly_paths + '/thumbnail-science-teens.jpg')
-- var ImgThumbPhilosophyKids = img(monthly_paths + '/thumbnail-philosophy-kids.jpg')
-- var ImgThumbPhilosophyTeens = img(monthly_paths + '/thumbnail-philosophy-teens.jpg')
-
-
+- var ImgThumbEconomylevel1 = img(monthly_paths + '/thumbnail-economy-level1.jpg')
+- var ImgThumbEconomylevel2 = img(monthly_paths + '/thumbnail-economy-level2.jpg')
+- var ImgThumbSciencelevel1 = img(monthly_paths + '/thumbnail-science-level1.jpg')
+- var ImgThumbSciencelevel2 = img(monthly_paths + '/thumbnail-science-level2.jpg')
+- var ImgThumbPhilosophylevel1 = img(monthly_paths + '/thumbnail-philosophy-level1.jpg')
+- var ImgThumbPhilosophylevel2 = img(monthly_paths + '/thumbnail-philosophy-level2.jpg')
+ 
+ 
 //- イベントデータ
 -
   var events = [
     {
       id: 'philosophy',
-      thumbnail: ImgThumbPhilosophyKids,
+      thumbnail: ImgThumbPhilosophylevel1,
       target: 'kids',
       titleShort: '友だちを作る「まほう図鑑」',
       title: '友だちを作る「まほう図鑑」～友だちを作る"まほうのコトバ"～',
@@ -46,7 +46,7 @@
     },
     {
       id: 'science',
-      thumbnail: ImgThumbScienceKids,
+      thumbnail: ImgThumbSciencelevel1,
       target: 'kids',
       titleShort: '朝ごはんと集中力の関係',
       title: '朝ごはんと集中力の関係～朝ごはんを食べないとどうなる？～',
@@ -57,7 +57,7 @@
     },
     {
       id: 'economy',
-      thumbnail: ImgThumbEconomyKids,
+      thumbnail: ImgThumbEconomylevel1,
       target: 'kids',
       titleShort: 'なんでこんなにCM流れてくるの！？',
       title: 'なんでこんなにCM流れてくるの！？～CMでほんとうに売れるの？～',
@@ -68,7 +68,7 @@
     },
     {
       id: 'economy',
-      thumbnail: ImgThumbEconomyTeens,
+      thumbnail: ImgThumbEconomylevel2,
       target: 'teens',
       titleShort: 'アナタが店長！売れるお店のつくり方',
       title: 'アナタが店長！売れるお店のつくり方～売上ランキングのナゾにせまる！～',
@@ -79,7 +79,7 @@
     },
     {
       id: 'philosophy',
-      thumbnail: ImgThumbPhilosophyTeens,
+      thumbnail: ImgThumbPhilosophylevel2,
       target: 'teens',
       titleShort: '転校生がやってきたら？',
       title: '転校生がやってきたら？～あなたが転校生だったら～',
@@ -90,7 +90,7 @@
     },
     {
       id: 'science',
-      thumbnail: ImgThumbScienceTeens,
+      thumbnail: ImgThumbSciencelevel2,
       target: 'teens',
       titleShort: '月に住むには何が必要！？',
       title: '月に住むには何が必要！？～月の極に氷がある理由は？～',
@@ -99,5 +99,5 @@
       description: 'もし本当に月に町をつくるとしたら、何が必要になると思いますか？空気や水、重力、太陽の光……。この講座では、月に氷が見つかった理由や月の環境のナゾを科学的に探りながら、「人間が月で暮らす未来」を想像します。理科と宇宙がもっと好きになる探究の時間です。',
       note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
     }
-
+ 
   ]
