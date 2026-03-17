@@ -5,13 +5,10 @@
 - var MetaTitle = '【2026春】英語が好きになる100フレーズチャレンジ｜小学生・中学生向け英語プログラム';
 
 // loycus連携用（2026春イベントLPと同じ設定）
-- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHELFnMLBX&whc=173508808725235'
-- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=VqUFL'
-- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8CJn8Dr7'
+
 
 // 通常URL
 - var UrlFullYearLessons = 'https://waomirai.com/subject/english/'
-
 
 ////////////////
 //ImagePath
@@ -30,6 +27,38 @@
   function img23(filename) {
     return `${paths23}/${filename}`;
   }
+
+
+////////////////
+//Price
+///////////////
+
+-
+  if (waomember) {
+    //ワオ会員5500円
+    var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dH7g5y0UBU&whc=173508808725235'
+    var UrlLiffAddFriend    = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=befnqi'
+    var UrlLiffForm         = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=wbuxZAetR'
+    var ImgCtaFirstview = img23('btn_cta_firstview.png');
+    var ImgPrice            = img23('price_2026spring_waomember.png')
+    var ImgBtnCvPrice       = img23('text_btn_cv_2025summer_waomember.svg')
+    var textFixedCv = img23('text_fixed_cv_2025summer_waomember.svg');
+    var price               = 5500
+    var ImgMultiCourseBonus = img23('img_multi_course_bonus_waomember.png')
+  } else {
+    //通常時
+    var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHELFnMLBX&whc=173508808725235'
+    var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=VqUFL'
+    var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8CJn8Dr7'
+    var ImgCtaFirstview = img23('btn_cta_firstview.png');
+    var ImgPrice            = img23('price_2026spring.png')
+    var ImgBtnCvPrice       = img23('text_btn_cv_2025summer.svg')
+    var textFixedCv = img23('text_fixed_cv_2025summer.svg');
+    var price               = 8800
+    var ImgMultiCourseBonus = img23('img_multi_course_bonus.png')
+  }
+
+
 
 
 //Logo
@@ -84,7 +113,6 @@
 - var ImgBannerGlobalEnglish = img23('banner_global_english.svg')
 
 //Button
-- var ImgBtnCvPrice = img23('text_btn_cv_2025summer.svg')
 - var ImgBtnCvLine = img23('btn_cv_b_noborder.svg')
 
 // CTA（2026春イベントLPのビジュアルを共用）
@@ -122,16 +150,13 @@
 - var Img5Steps04 = img23('icn_step04.svg')
 - var Img5Steps05 = img23('icn_step05.svg')
 - var Img4Subjects = img23('img_4subjects.svg')
-- var ImgPrice = img23('price_2026spring.png')
 
 //Multi Course Bonus
-- var ImgMultiCourseBonus = img23('img_multi_course_bonus.png')
 - var ImgMultiCourseBonus02 = img23('img_multi_course_bonus02.png')
 - var ImgMultiCourseBonusCtaButton = img23('multi_course_bonus_cta_button.svg')
 - var ImgMultiCourseBonusCtaTxt = img23('multi_course_bonus_cta_txt.svg')
 
-//FixedCv
-- var textFixedCv = img23('text_fixed_cv_2025summer.svg');
+
 
 // modal image (22春イベントLPから流用しているが、23英語LP用ディレクトリに配置済み)
 - var ImgModalEvent = img23('img_modal_event.png');

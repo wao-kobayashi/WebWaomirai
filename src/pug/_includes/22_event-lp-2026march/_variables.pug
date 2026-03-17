@@ -4,13 +4,6 @@
 - var MetaTitle = '春の3大探究ミッション！2026/3/24(火)〜3/28(土)｜ワオ未来塾';
 
 
-//- LINE URL
-- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHEHCkjGrO&whc=173508808725235'
-- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=IDS8I'
-- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8BFTyd2z'
-
-
-
 //- 画像パス設定
 //- - var paths = '../../../images/22_event-lp-2026march'
 - var paths = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march';
@@ -21,6 +14,33 @@
   function img(filename) {
     return `${paths}/${filename}`;
   }
+
+-
+  if (waomember) {
+    //ワオ会員5500円
+    var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dH7gUEfVss&whc=173508808725235'
+    var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=5Q5kl'
+    var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8B1I5V9O'
+    var ImgCtaFirstview = img('btn_cta_firstview.png');
+    var ImgTextCta = img('text_btn_cta_waomember.svg');
+    var ImgSpeechCta = img('speech_cta_waomember.svg');
+    var ImgPrice = img('img_price_waomember.png');
+  } else {
+    //通常時
+    var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHEHCkjGrO&whc=173508808725235'
+    var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=IDS8I'
+    var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8BFTyd2z'
+    var ImgCtaFirstview = img('')
+    var ImgTextCta = img('text_btn_cta.svg')
+    var ImgSpeechCta = img('speech_cta.svg');
+    var ImgPrice = img('img_price.svg');
+  }
+
+
+
+
+
+
 
 //-//////////////
 //- background / picture
@@ -37,9 +57,8 @@
 //- ボタンとかメニュー画像
 //-//////////////
 
-- var ImgTextCta = img('text_btn_cta.svg');
+
 - var ImgTextCtaBig = img('text_btn_cta_big.svg');
-- var ImgSpeechCta = img('speech_cta.svg');
 - var ImgbtnCta = img('btn_cta.svg');
 - var ImgbtnCtaBig = img('btn_cta_big.svg');
 - var ImgMenu = img('menu_humberger.svg');
@@ -137,11 +156,7 @@
 - var ImgPoint03 = img('img_point03.png');
 
 
-//-//////////////
-//- 料金
-//-//////////////
 
-- var ImgPrice = img('img_price.svg');
 
 
 //-//////////////

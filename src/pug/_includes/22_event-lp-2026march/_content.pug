@@ -22,7 +22,21 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssBase = loycus ? '../../../css/' : '../../css/'
-    - const cssLocal = loycus ? '../' : ''
+    //サーバー
+    -
+      if (waomember) {
+        if (loycus) {
+          cssLocal = '../../event-2026march/'
+        } else {
+          cssLocal = '../event-2026march/'
+        }
+      } else {
+        if (loycus) {
+          cssLocal = '../'
+        } else {
+          cssLocal = ''
+        }
+      }
     link(href=`${cssBase}22_event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}22_event-lp-2026march.css?v=${Date.now()}`, rel="stylesheet")
     meta(property="og:image", content=ImgOgp)

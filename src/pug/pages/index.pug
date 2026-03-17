@@ -25,13 +25,24 @@ html(lang="jp")
     //- wrapper
     div.page-list-wrapper
       ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: a(href="/23_english-lp-100phases-2026spring/") 23_100フレーズチャレンジ 2026年春
-        li: a(href="/23_english-lp-100phases-2026spring/loyucs") 23_100フレーズチャレンジ 2026年春：LOYCUS
-        li: a(href="/23_english-lp-100phases-2026spring/test.html") TEST
+        li: |23_100フレーズチャレンジ
+          ul 
+            li: |通常価格
+            li: a(href="/23_english-lp-100phases-2026spring/") 23_100フレーズチャレンジ 2026年春
+            li: a(href="/23_english-lp-100phases-2026spring/loycus/index.html") 23_100フレーズチャレンジ 2026年春：LOYCUS
+            li(style="margin:20px 0 0;"): |★特別価格
+            li: a(href="/23_english-lp-100phases-2026spring-waomember/") 23_100フレーズチャレンジ 2026年春（WAO会員向け）
+            li: a(href="/23_english-lp-100phases-2026spring-waomember/loycus/index.html") 23_100フレーズチャレンジ 2026年春（WAO会員向け）：LOYCUS
       ul.page-list
         // ── 上位ページ ───────────────────────
-        li: a(href="22_event-lp-2026march/") 22_2026年春有料LP3月
+        li: | 22_2026年春有料
+          ul 
+            li: |通常価格
+            li: a(href="/22_event-lp-2026march/") 22_2026年春有料LP3月
+            li: a(href="/22_event-lp-2026march/loycus/index.html") 22_2026年春有料LP3月）｜Loycus
+            li(style="margin:20px 0 0;"): |★特別価格
+            li: a(href="/22_event-lp-2026march-waomember/") 22_2026年春有料LP3月（WAO会員向け）
+            li: a(href="/22_event-lp-2026march-waomember/loycus/index.html") 22_2026年春有料LP3月（WAO会員向け）｜Loycus
       ul.page-list
         // ── 上位ページ ───────────────────────
         li: a(href="21_lp-how-to-join/") 21_入会LP
