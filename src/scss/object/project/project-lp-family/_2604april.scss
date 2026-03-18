@@ -1,8 +1,8 @@
 // ============================================================
 // 設定変数（ここだけ変えれば全体に反映）
 // ============================================================
-$item-width: 254px; // バナー1枚の横幅
-$item-margin: 10px; // 左右マージン（片側）
+$item-width: 204px; // バナー1枚の横幅
+$item-margin: 13px; // 左右マージン（片側）
 $item-count: 6; // 元のアイテム数
 $duration: 30s; // スクロール速度（大きいほど遅い）
 $padding-top: 10px;
@@ -74,18 +74,18 @@ $track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
   }
   .fvlogo {
     margin: -30px auto 20px;
-    padding: 0px 20px 0px;
+    padding: 0px 30px 0px;
     position: relative;
     z-index: 10;
   }
 
   .fvinfo {
     margin: 0px auto 20px;
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     position: relative;
     z-index: 10;
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 0px 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -99,17 +99,17 @@ $track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
       color: $cl-white;
       align-self: center;
       justify-self: center;
-      width: 70px;
+      width: 60px;
       text-align: center;
       letter-spacing: 2px;
-      font-size: $font-size-m;
+      font-size: $font-size-s;
       &.first {
         border-bottom: 1px dashed $cl-white;
       }
     }
     .fvinfo-content {
       padding: 8px 12px;
-      font-size: $font-size-m;
+      font-size: $font-size-s;
       &.first {
         border-bottom: 1px dashed $cl-black;
       }
@@ -121,47 +121,121 @@ $track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
     font-size: $font-size-m;
     margin: 15px auto 30px;
     line-height: $lineheight-relaxed;
-    padding: 0 20px;
+    padding: 0 30px;
     letter-spacing: 1px;
   }
 }
-//PC
-$pc-left: 60%;
-$pc-right: 30%;
+
+// ============================================================
+// 縦スクロール用キーフレーム（既存のscrollとは別で追加）
+// ============================================================
+@keyframes scroll-y {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+// ============================================================
+// PC レイアウト
+// ============================================================
+$pc-left: 45%;
+$pc-right: calc(40% - 40px); // padding 20px × 2 分を引く
 
 .lp-family-fvpc-2604april {
-  position: relative;
   background-color: #fff8e0;
   background-image:
     linear-gradient(to right, #cabe36 0.5px, transparent 0.5px),
     linear-gradient(to bottom, #cabe36 0.5px, transparent 0.5px);
   background-size: 20px 20px;
   width: 100%;
-  height: fit-content; /* or min-height: 100% */
-  padding: 20px;
-  // display: none !important;
+  padding: 0 20px;
+  box-sizing: border-box;
+
   @include responsive-style($breakpoint-sp) {
     display: none !important;
   }
+  .lp-family-fvpc-2604april-wrapper {
+    max-width: 800px;
+    width: 90%;
+    height: 80vh;
+    display: flex; // 左右flex
+    align-items: stretch; // 右を左の高さに合わせる
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  // ----------------------------------------
+  // 左カラム
+  // ----------------------------------------
   .lp-family-fvpc-2604april-left {
     width: $pc-left;
+    flex-shrink: 0;
+    align-self: center;
     img {
       width: 100%;
     }
+    .fvinfo {
+      margin: 30px auto 20px;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      border-radius: $border-radius-middle;
+      overflow: hidden;
+      background: $cl-white;
+      border: 1px solid $cl-black;
+      .fvinfo-title {
+        padding: 8px 12px;
+        background: $cl-black;
+        color: $cl-white;
+        align-self: center;
+        justify-self: center;
+        width: 70px;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: $font-size-m;
+        &.first {
+          border-bottom: 1px dashed $cl-white;
+        }
+      }
+      .fvinfo-content {
+        padding: 8px 12px;
+        font-size: $font-size-m;
+        &.first {
+          border-bottom: 1px dashed $cl-black;
+        }
+      }
+    }
   }
+
+  // ----------------------------------------
+  // 右カラム（縦スクロールエリア）
+  // ----------------------------------------
   .lp-family-fvpc-2604april-right {
-    display: block;
     width: $pc-right;
-    height: 100%;
-    background: red;
+    flex-shrink: 0;
+    overflow: hidden; // はみ出しを隠す
+    position: relative;
+    // heightは align-items: stretch で左に自動追従
   }
+
+  // ----------------------------------------
+  // 縦スライダー
+  // ----------------------------------------
   .slider {
     overflow: hidden;
     width: 100%;
-    padding: $padding-top 0 $padding-bottom;
+    height: 100%; // 右カラムいっぱいに広げる
     position: relative;
 
-    // ホバー・フォーカス時に一時停止
     &:hover .slider-content,
     &:focus-within .slider-content {
       animation-play-state: paused;
@@ -169,74 +243,28 @@ $pc-right: 30%;
 
     .slider-content {
       display: flex;
-      width: fit-content;
       flex-direction: column;
+      width: 100%;
       animation: scroll-y $duration linear infinite;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
 
       > div {
         flex-shrink: 0;
-        width: $item-width;
+        width: 100%; // 右カラム幅に追従
         margin: $item-margin 0;
+
         img {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1620 / 1080; // バナー比率でレスポンシブに高さ確定
+          object-fit: cover;
+          display: block;
           border-radius: $border-radius-big;
         }
       }
     }
-  }
-
-  .fvinfo {
-    margin: 0px auto 20px;
-    width: calc(100% - 40px);
-    position: relative;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    border-radius: $border-radius-middle;
-    overflow: hidden;
-    background: $cl-white;
-    border: 1px solid $cl-black;
-    .fvinfo-title {
-      padding: 8px 12px;
-      background: $cl-black;
-      color: $cl-white;
-      align-self: center;
-      justify-self: center;
-      width: 70px;
-      text-align: center;
-      letter-spacing: 2px;
-      font-size: $font-size-m;
-      &.first {
-        border-bottom: 1px dashed $cl-white;
-      }
-    }
-    .fvinfo-content {
-      padding: 8px 12px;
-      font-size: $font-size-m;
-      &.first {
-        border-bottom: 1px dashed $cl-black;
-      }
-    }
-  }
-
-  .fvtext {
-    padding: 0px 20px 0px;
-    font-size: $font-size-m;
-    margin: 15px auto 30px;
-    line-height: $lineheight-relaxed;
-    padding: 0 20px;
-    letter-spacing: 1px;
-  }
-}
-
-/* アニメーション定義 */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
   }
 }

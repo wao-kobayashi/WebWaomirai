@@ -32,7 +32,8 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
     //01メインビジュアル(PC)
-    header 
+    //2026aprilの時は少しスタイル変える
+    header(class=PageMonth === '26-04april' ? '26-04april' : '')
       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
     //26年3月用
     if PageMonth === '26-04april'
@@ -67,23 +68,23 @@ html
                 |一緒に体感してみませんか？
             
       .lp-family-fvpc-2604april
-
-        .lp-family-fvpc-2604april-left
-          .fvlogo
-            img(src=ImgFvText)
-          .fvinfo 
-            .fvinfo-title.first 
-                |期間
-            .fvinfo-content.first
-              =lessondate
-            .fvinfo-title 
-                |学年
-            .fvinfo-content 
-                |新小学3年生以上とその保護者
-        .lp-family-fvpc-2604april-right
-        //- .slider
-        //-   .slider-content  
-        //-     +BannerSlider2604-April                           
+        .lp-family-fvpc-2604april-wrapper
+            .lp-family-fvpc-2604april-left
+                  .fvlogo
+                    img(src=ImgFvText)
+                  .fvinfo 
+                    .fvinfo-title.first 
+                        |期間
+                    .fvinfo-content.first
+                      =lessondate
+                    .fvinfo-title 
+                        |学年
+                    .fvinfo-content 
+                        |新小学3年生以上とその保護者
+            .lp-family-fvpc-2604april-right                         
+                .slider
+                    .slider-content  
+                      +BannerSlider2604-April  
     else
       section.lp-family-fvpc
           .lp-family-fvpc-main 
@@ -141,6 +142,7 @@ html
                 =lessondate
         .lp-family-fvsp-main-target
                 |対象：小〜高校生とその保護者
+
     // イベント一覧セクション
     section.lp-family-eventlist 
       .lp-family-eventlist-section.inview-hide.inview-triger
@@ -195,7 +197,11 @@ html
                   
                   // イベントタイトル
                   .lp-family-eventlist-wrapper-grid-item-content-title
-                    = event.titleShort
+                   if PageMonth === '26-04april'
+                      = event.title
+                   else 
+                     = event.titleShort
+                    
                   
                   // 日時情報
                   .lp-family-eventlist-wrapper-grid-item-content-datetime
