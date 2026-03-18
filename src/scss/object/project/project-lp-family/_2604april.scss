@@ -34,6 +34,7 @@ $track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
   } // JSなしで正確に計算
 }
 
+//SP
 .lp-family-fvsp-2604april {
   background-color: #fff8e0;
   background-image:
@@ -124,18 +125,36 @@ $track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
     letter-spacing: 1px;
   }
 }
+//PC
+$pc-left: 60%;
+$pc-right: 30%;
+
 .lp-family-fvpc-2604april {
+  position: relative;
   background-color: #fff8e0;
   background-image:
     linear-gradient(to right, #cabe36 0.5px, transparent 0.5px),
     linear-gradient(to bottom, #cabe36 0.5px, transparent 0.5px);
   background-size: 20px 20px;
   width: 100%;
-  display: flex;
+  height: fit-content; /* or min-height: 100% */
+  padding: 20px;
+  // display: none !important;
   @include responsive-style($breakpoint-sp) {
     display: none !important;
   }
-
+  .lp-family-fvpc-2604april-left {
+    width: $pc-left;
+    img {
+      width: 100%;
+    }
+  }
+  .lp-family-fvpc-2604april-right {
+    display: block;
+    width: $pc-right;
+    height: 100%;
+    background: red;
+  }
   .slider {
     overflow: hidden;
     width: 100%;
@@ -163,12 +182,6 @@ $track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
         }
       }
     }
-  }
-  .fvlogo {
-    margin: -30px auto 20px;
-    padding: 0px 20px 0px;
-    position: relative;
-    z-index: 10;
   }
 
   .fvinfo {
