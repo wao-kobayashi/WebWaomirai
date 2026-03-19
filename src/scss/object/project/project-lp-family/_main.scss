@@ -572,7 +572,7 @@ section.lp-family-eventdetail {
       margin: 20px 0 20px;
       @include responsive-style($breakpoint-sp) {
         font-size: $font-size-xxl;
-        font-weight: 500;
+        font-weight: 600;
       }
     }
     .lp-family-eventdetail-content-top-right-datetime {
@@ -1061,6 +1061,7 @@ section.lp-family-howto {
 
   .lp-family-howto-step-child-text-title {
     font-size: $font-size-xl;
+    font-weight: 600;
     @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xxl;
     }
@@ -1113,6 +1114,16 @@ section.lp-family-about {
 .lp-family-start2025 {
   @include section-maxwidth;
   padding: 90px 0 30px;
+  .lp-family-start2025-subject-pc img {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 40px;
+  }
+  .lp-family-start2025-subject-sp img {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 40px;
+  }
   .lp-family-start2025-catch {
     font-size: $font-size-xxxl;
     margin: 0 auto 30px;
@@ -1172,6 +1183,8 @@ section.lp-family-about {
     justify-content: center;
     gap: 15px;
     margin: 0 auto 20px;
+    font-weight: bold;
+    font-size: $font-size-xl;
     @include responsive-style($breakpoint-sp) {
       font-size: $font-size-xl;
     }
