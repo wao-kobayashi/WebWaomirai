@@ -1,4 +1,8 @@
+const familyEvents = require('./src/pug/pages/18_lp-family/familyEvents.js');
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addGlobalData('familyEvents', familyEvents);
+
   // src/static/img を丸ごと dist/img にコピー
   // eleventyConfig.addPassthroughCopy({ "src/static/img": "img" });
   return {

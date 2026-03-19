@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&display=swap");
+
+body.month-26-04april * {
+  font-family:
+    "LINE Seed JP", "Be Vietnam Pro", "Font Awesome 6 Free", sans-serif !important;
+}
+
+// ============================================================
+// 設定変数
+// ============================================================
+$fv-width: 1060px;
+
+$item-width: 220px; // バナー1枚の横幅
+$item-margin: 15px; // 左右マージン（片側）
+$item-count: 6; // 元のアイテム数
+$duration: 40s; // スクロール速度（大きいほど遅い）
+$padding-top: 30px;
+$padding-bottom: 15px;
+
+// 計算（変更不要）
+$item-outer: $item-width + ($item-margin * 2); // 1枚あたりの占有幅
+$track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
+
+// PCレイアウト用
+$pc-left: 44%;
+$pc-right: 42%; // padding 20px × 2 分を引く
+
+// ============================================================
+// キーフレーム
+// ============================================================
+
+// 横スクロール（SP用）
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-$track-width);
+  }
+}
+
+// 縦スクロール（PC用）
+@keyframes scroll-y {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+// ============================================================
+// ヘッダー
+// ============================================================
+
+header.header-26-04april {
+  @include min-responsive-style($breakpoint-sp) {
+    height: 50px;
+    justify-content: flex-start;
+  }
+
+  img {
+    @include min-responsive-style($breakpoint-sp) {
+      height: 20px;
+      margin-left: calc((100% - $fv-width) / 2) !important;
+    }
+  }
+}
+
+// ============================================================
+// SP レイアウト
+// ============================================================
+
+.lp-family-fvsp-2604april {
+  background-color: #fff8e0;
+  background-image:
+    linear-gradient(to right, #f1e87f 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, #f1e87f 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  padding: 0 0 60px;
+
+  @include min-responsive-style($breakpoint-sp) {
+    display: none !important;
+  }
+}
+
+.lp-family-fvsp-2604april .fvlogo {
+  margin: -40px auto 20px;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+// 横スライダー
+.lp-family-fvsp-2604april .slider {
+  overflow: hidden;
+  width: 100%;
+  padding: $padding-top 0 $padding-bottom;
+  position: relative;
+}
+
+.lp-family-fvsp-2604april .slider .slider-content {
+  display: flex;
+  width: fit-content;
+  animation: scroll $duration linear infinite;
+}
+
+.lp-family-fvsp-2604april .slider .slider-content > div {
+  flex-shrink: 0;
+  width: $item-width;
+  margin: 0 $item-margin;
+}
+
+.lp-family-fvsp-2604april .slider .slider-content > div img {
+  border-radius: $border-radius-middle;
+  border: 1px solid #000000;
+}
+
+// 日程・場所 情報ブロック
+$fvinfo-sp: 60px;
+
+.lp-family-fvsp-2604april .fvinfo {
+  margin: 20px auto 30px;
+  width: calc(100% - 80px);
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: $fvinfo-sp 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  border-radius: $border-radius-middle;
+  overflow: hidden;
+  background: $cl-white;
+  border: 1px solid $cl-black;
+}
+
+.lp-family-fvsp-2604april .fvinfo .fvinfo-title {
+  padding: 8px 12px;
+  background: $cl-black;
+  color: $cl-white;
+  align-self: center;
+  justify-self: center;
+  width: $fvinfo-sp;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: $font-size-s;
+}
+
+.lp-family-fvsp-2604april .fvinfo .fvinfo-title.first {
+  border-bottom: 1px dashed $cl-white;
+}
+
+.lp-family-fvsp-2604april .fvinfo .fvinfo-content {
+  padding: 8px 12px;
+  font-size: $font-size-s;
+}
+
+.lp-family-fvsp-2604april .fvinfo .fvinfo-content.first {
+  border-bottom: 1px dashed $cl-black;
+}
+
+// テキストエリア
+.lp-family-fvsp-2604april .fvtext {
+  font-size: $font-size-m;
+  margin: 15px auto 30px;
+  line-height: $lineheight-relaxed;
+  padding: 0 40px;
+  letter-spacing: 1px;
+}
+
+// ============================================================
+// PC レイアウト
+// ============================================================
+
+.lp-family-fvpc-2604april {
+  background-color: #fff8e0;
+  background-image:
+    linear-gradient(to right, #cabe36 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, #cabe36 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+
+  @include responsive-style($breakpoint-sp) {
+    display: none !important;
+  }
+}
+
+// ラッパー（左右flex）
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-wrapper {
+  max-width: $fv-width;
+  width: 90%;
+  height: 85vh;
+  display: flex;
+  align-items: stretch; // 右カラムを左の高さに合わせる
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+// 左カラム
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-left {
+  width: $pc-left;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-left img {
+  width: 100%;
+}
+
+// 日程・場所 情報ブロック
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-left .fvinfo {
+  margin: 30px auto 20px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  border-radius: $border-radius-middle;
+  overflow: hidden;
+  background: $cl-white;
+  border: 1px solid $cl-black;
+}
+
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-left .fvinfo .fvinfo-title {
+  padding: 8px 12px;
+  background: $cl-black;
+  color: $cl-white;
+  align-self: center;
+  justify-self: center;
+  width: 60px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: $font-size-s;
+}
+
+.lp-family-fvpc-2604april
+  .lp-family-fvpc-2604april-left
+  .fvinfo
+  .fvinfo-content {
+  padding: 8px 12px;
+  font-size: $font-size-s;
+}
+
+.lp-family-fvpc-2604april
+  .lp-family-fvpc-2604april-left
+  .fvinfo
+  .fvinfo-content.first {
+  border-bottom: 1px solid $cl-black;
+}
+
+// 右カラム（縦スクロールエリア）
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-right {
+  width: $pc-right;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  // height は align-items: stretch で左に自動追従
+}
+
+// 縦スライダー
+.lp-family-fvpc-2604april .lp-family-fvpc-2604april-right .slider {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.lp-family-fvpc-2604april
+  .lp-family-fvpc-2604april-right
+  .slider
+  .slider-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: scroll-y $duration linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.lp-family-fvpc-2604april
+  .lp-family-fvpc-2604april-right
+  .slider
+  .slider-content
+  > div {
+  flex-shrink: 0;
+  width: 100%;
+  margin: $item-margin 0;
+}
+
+.lp-family-fvpc-2604april
+  .lp-family-fvpc-2604april-right
+  .slider
+  .slider-content
+  > div
+  img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1620 / 1080;
+  object-fit: cover;
+  display: block;
+  border-radius: $border-radius-big;
+  border: 1px solid #000000;
+}

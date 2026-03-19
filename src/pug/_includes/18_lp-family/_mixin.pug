@@ -2,6 +2,7 @@
 mixin fixed-btn
   .fixed-btn
     a(
+      style='display:none;'
       class=loycus ? '' : 'js-line-trigger'
       href=loycus ? UrlLiffForm : false
       target=loycus ? '_blank' : false
@@ -48,7 +49,7 @@ mixin modal
             .modal-wrapper-content-main-image-alreadyfriend
               img(src=ImgModalEvent)
             .modal-wrapper-content-main-btn-alreadyfriend
-                a(href=UrlLine, target='_blank')
+                a(href=UrlEndpointAddFriend, target='_blank')
                   |OKです(イベント申込へ)
   .modal#modal-pc-liff(style='display:none;')
     .modal-wrapper 

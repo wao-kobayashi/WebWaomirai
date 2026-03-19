@@ -20,7 +20,7 @@ html
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssBase = loycus ? '../../../css/' : '../../css/'
-    - const cssLocal = loycus ? '' : ''
+    - const cssLocal = loycus ? '../' : ''
 
     link(href=`${cssBase}18_lp-family.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}18_lp-family.css?v=${Date.now()}`, rel="stylesheet")
@@ -30,66 +30,122 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
-  body
+  - const monthClass = 'month-' + PageMonth
+  body(class=monthClass)
     //01メインビジュアル(PC)
-    header 
+    //2026aprilの時は少しスタイル変える
+    header(class=PageMonth === '26-04april' ? 'header-26-04april' : '')
       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-    section.lp-family-fvpc
-        .lp-family-fvpc-main 
-          .lp-family-fvpc-main-logo 
-              img(src=ImgLogoFvPc)
-          .lp-family-fvpc-main-text 
-              |親子で楽しめるワオ未来塾の“考える力”の体験授業。
-              br
-              |哲学で問いを深め、科学で世界を探り、経済で社会をひもとく。
-              br
-              |未来を生きる力を一緒に体感してみませんか？
-          .lp-family-fvpc-main-target 
-              |日時：
-              =lessondate
-          .lp-family-fvpc-main-target
-              |対象：小〜高校生とその保護者
-        .lp-family-fvpc-main-illust01
-          img(src=ImgIllustFv01FamilyNormal)
-        .lp-family-fvpc-main-illust02
-          img(src=ImgIllustFv02FamilyStand)
-        .lp-family-fvpc-main-illust03
-            img(src=ImgIllustFv03Online)
-        .lp-family-fvpc-main-illust04
-            img(src=ImgIllustFv04Question)
-        .lp-family-fvpc-main-illust05
-          img(src=ImgIllustFv05Book)
-        .lp-family-fvpc-main-illust06
-            img(src=ImgIllustFv06Bank)
-    section.lp-family-fvsp
-      .lp-family-fvsp-img 
-        .lp-family-fvsp-img-main
-          img(src=ImgFvSp)
-        .lp-family-fvsp-img-illust01
-            img(src=ImgIllustFv04Question)
-        .lp-family-fvsp-img-illust02
-          img(src=ImgIllustFv05Book)
-        .lp-family-fvsp-img-illust03
-            img(src=ImgIllustFv06Bank)
-      .lp-family-fvsp-main-text 
-              |親子で楽しめるワオ未来塾の
-              br
-              |“考える力”の体験授業。
-              br
-              br
-              |哲学で問いを深め、科学で世界を探り、
-              br
-              |経済で社会をひもとく。
-              br
-              br
-              |未来を生きる力を
-              br
-              |一緒に体感してみませんか？
-      .lp-family-fvsp-main-target 
-              |日時：
-              =lessondate
-      .lp-family-fvsp-main-target
-              |対象：小〜高校生とその保護者
+    //26年3月末イベント用のヘッダ
+    if PageMonth === '26-04april'
+      .lp-family-fvsp-2604april
+        .slider
+          .slider-content  
+            +BannerSlider2604-April 
+        .fvlogo
+          img(src=ImgFvText)
+
+        .fvinfo 
+          .fvinfo-title.first 
+              |期間
+          .fvinfo-content.first
+             =lessondate
+          .fvinfo-title 
+              |対象
+          .fvinfo-content 
+              |新小学3年生以上とその保護者
+        .fvtext 
+                |親子で楽しめるワオ未来塾の
+                br
+                |“考える力”の体験授業。
+                br
+                br
+                |哲学で問いを深め、科学で世界を探り、
+                br
+                |経済で社会をひもとく。
+                br
+                br
+                |未来を生きる力を
+                br
+                |一緒に体感してみませんか？
+            
+      .lp-family-fvpc-2604april
+        .lp-family-fvpc-2604april-wrapper
+            .lp-family-fvpc-2604april-left
+                  .fvlogo
+                    img(src=ImgFvText)
+                  .fvinfo 
+                    .fvinfo-title.first 
+                        |期間
+                    .fvinfo-content.first
+                      =lessondate
+                    .fvinfo-title 
+                        |対象
+                    .fvinfo-content 
+                        |新小学3年生以上とその保護者
+            .lp-family-fvpc-2604april-right                         
+                .slider
+                    .slider-content  
+                      +BannerSlider2604-April  
+    //26年3月末以外の通常ヘッダ
+    unless PageMonth === '26-04april'
+      section.lp-family-fvpc
+          .lp-family-fvpc-main 
+            .lp-family-fvpc-main-logo 
+                img(src=ImgLogoFvPc)
+            .lp-family-fvpc-main-text 
+                |親子で楽しめるワオ未来塾の“考える力”の体験授業。
+                br
+                |哲学で問いを深め、科学で世界を探り、経済で社会をひもとく。
+                br
+                |未来を生きる力を一緒に体感してみませんか？
+            .lp-family-fvpc-main-target 
+                |日時：
+                =lessondate
+            .lp-family-fvpc-main-target
+                |対象：小〜高校生とその保護者
+          .lp-family-fvpc-main-illust01
+            img(src=ImgIllustFv01FamilyNormal)
+          .lp-family-fvpc-main-illust02
+            img(src=ImgIllustFv02FamilyStand)
+          .lp-family-fvpc-main-illust03
+              img(src=ImgIllustFv03Online)
+          .lp-family-fvpc-main-illust04
+              img(src=ImgIllustFv04Question)
+          .lp-family-fvpc-main-illust05
+            img(src=ImgIllustFv05Book)
+          .lp-family-fvpc-main-illust06
+              img(src=ImgIllustFv06Bank)
+      section.lp-family-fvsp
+        .lp-family-fvsp-img 
+          .lp-family-fvsp-img-main
+            img(src=ImgFvSp)
+          .lp-family-fvsp-img-illust01
+              img(src=ImgIllustFv04Question)
+          .lp-family-fvsp-img-illust02
+            img(src=ImgIllustFv05Book)
+          .lp-family-fvsp-img-illust03
+              img(src=ImgIllustFv06Bank)
+        .lp-family-fvsp-main-text 
+                |親子で楽しめるワオ未来塾の
+                br
+                |“考える力”の体験授業。
+                br
+                br
+                |哲学で問いを深め、科学で世界を探り、
+                br
+                |経済で社会をひもとく。
+                br
+                br
+                |未来を生きる力を
+                br
+                |一緒に体感してみませんか？
+        .lp-family-fvsp-main-target 
+                |日時：
+                =lessondate
+        .lp-family-fvsp-main-target
+                |対象：小〜高校生とその保護者
+
     // イベント一覧セクション
     section.lp-family-eventlist 
       .lp-family-eventlist-section.inview-hide.inview-triger
@@ -118,7 +174,10 @@ html
               .lp-family-eventlist-wrapper-grid-item(class=event.id)
                 // サムネイル画像
                 .lp-family-eventlist-wrapper-grid-item-img
-                  img(src=event.thumbnail)
+                  if PageMonth === '26-04april'
+                     img(src=event.thumbnailPhoto)
+                  else 
+                     img(src=event.thumbnail)
                 
                 // カードコンテンツ
                 .lp-family-eventlist-wrapper-grid-item-content
@@ -141,7 +200,11 @@ html
                   
                   // イベントタイトル
                   .lp-family-eventlist-wrapper-grid-item-content-title
-                    = event.titleShort
+                   if PageMonth === '26-04april'
+                      = event.title
+                   else 
+                     = event.titleShort
+                    
                   
                   // 日時情報
                   .lp-family-eventlist-wrapper-grid-item-content-datetime
@@ -186,11 +249,11 @@ html
                 // 科目ラベル（詳細版）
                 .lp-family-eventdetail-content-top-right-category-child.subject 
                       if event.id === 'science'
-                        |科学リテラシー
+                        |🧪 科学リテラシー
                       else if event.id === 'economy'
-                        |経済(お金)
+                        |💰 経済(お金)
                       else if event.id === 'philosophy'
-                        |哲学（思考力）
+                        |📚 哲学（思考力）
                 // 対象学年ラベル（詳細版）
                 .lp-family-eventdetail-content-top-right-category-child.target
                       if event.target === 'kids'
@@ -346,7 +409,13 @@ html
             .lp-family-about-box-left 
               img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/logo_wao.svg')
             .lp-family-about-box-right
-                |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
+                |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。
+                br
+                br
+                |21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。
+                br
+                br
+                |半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
     //07 授業の特徴
     section.lp-family-feature
       .c-title-25feb-lp 
@@ -371,10 +440,16 @@ html
                 
     //08 2025年4月開講
     section.lp-family-start2025
+
+
         .lp-family-start2025-catch 
           |社会で役立つ学びを、
           br.spimage
           |オンラインで今始めよう
+        .lp-family-start2025-subject-pc.pcimage
+          img(src=Img4subjectPc)
+        .lp-family-start2025-subject-sp.spimage
+          img(src=Img4subjectSp)
         .lp-family-start2025-logo 
           img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
         .lp-family-start2025-target 
