@@ -47,8 +47,8 @@ html
                   if seminar.pcnavititle
                     !=seminar.pcnavititle
                     br
-                  if seminar.subtitle
-                    span!=seminar.subtitle
+                  //- if seminar.subtitle
+                  //-   span!=seminar.subtitle
         .pc-right-content-cta
           +btn-cta 
     .main-content
@@ -80,9 +80,9 @@ html
           .infotable-column-title
             |日時
           .infotable-column-content
-            |2026年2月〜3月
-            br
-            span|※詳細な日程は各セミナー日時をご確認ください
+            |2026/4/3(金) 12:10～12:55
+            //- br
+            //- span|※詳細な日程は各セミナー日時をご確認ください
         .infotable-column
           .infotable-column-title
             |費用
@@ -141,27 +141,27 @@ html
                 |「うちの子の将来、どうなってしまうんだろう？」 そんな漠然とした不安を保護者のみなさまはお持ちではないでしょうか。 
                 br
                 br
-                |本セミナーでは、50年の教育実践から導き出した「新しい教育」を提供するワオ未来塾が、大学入試の最前線でも問われ始めている「これからの社会に必要な力」の正体を3つのアプローチからみなさまと一緒に考えます 。            
+                |本セミナーでは、50年の教育実践から導き出した「新しい教育」を提供するワオ未来塾が、本講座である「哲学（思考力）」「科学リテラシー」「経済（お金）」の観点から 、大学入試の最前線でも問われ始めている「これからの社会に必要な力」の正体をみなさまと一緒に考えます。          
          .seminar-blocks 
-             .seminar-blocks-sticky 
-               .seminar-blocks-sticky-title 
-                 |開催セミナー
-               .seminar-blocks-sticky-text 
-                  |聞いてみたいテーマを選んでチェックしよう！
-               .seminar-blocks-sticky-hr
-             ul.seminar-blocks-sticky-links 
-                     //講師紹介は最初で固定
-                     li.teacher
-                       a(href="#teacher")
-                         |講師紹介
-                     each seminar, index in seminars
-                        li(class=seminar.className)
-                          a(href=`#${seminar.id}`)
-                            if seminar.titleShort
-                              !=seminar.titleShort
-                            else
-                              !=seminar.title
-             include _content_seminar
+            //-  .seminar-blocks-sticky 
+            //-    .seminar-blocks-sticky-title 
+            //-      |開催セミナー
+            //-    .seminar-blocks-sticky-text 
+            //-       |聞いてみたいテーマを選んでチェックしよう！
+            //-    .seminar-blocks-sticky-hr
+            //-     ul.seminar-blocks-sticky-links 
+            //-             //講師紹介は最初で固定
+            //-             li.teacher
+            //-               a(href="#teacher")
+            //-                 |講師紹介
+            //-             each seminar, index in seminars
+            //-                li(class=seminar.className)
+            //-                  a(href=`#${seminar.id}`)
+            //-                    if seminar.titleShort
+            //-                      !=seminar.titleShort
+            //-                    else
+            //-                      !=seminar.title
+            include _content_seminar
 
          //かんたん5STEP
          section.join-5steps 
@@ -248,15 +248,15 @@ html
          section.faq 
              .faq-title 
                |よくある質問
-             .faq-content 
-                .faq-content-question 
-                   .faq-content-question-left|Q
-                   .faq-content-question-right
-                     |複数のテーマは申し込むことはできますか？
-                .faq-content-answer 
-                   .faq-content-answer-left|A
-                   .faq-content-answer-right
-                     |はい、可能です。
+             //-  .faq-content 
+             //-     .faq-content-question 
+             //-        .faq-content-question-left|Q
+             //-        .faq-content-question-right
+             //-          |複数のテーマは申し込むことはできますか？
+             //-     .faq-content-answer 
+             //-        .faq-content-answer-left|A
+             //-        .faq-content-answer-right
+             //-          |はい、可能です。
              .faq-content 
                 .faq-content-question 
                    .faq-content-question-left|Q
