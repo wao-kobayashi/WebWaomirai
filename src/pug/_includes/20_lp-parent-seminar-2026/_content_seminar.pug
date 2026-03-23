@@ -27,10 +27,10 @@ each seminar, index in seminars
   section.seminar-blocks-content.seminar-blocks-content-subject(id=seminar.id)
     .seminar-blocks-content-box
       .seminar-blocks-content-box-subtitle-eng
-        |SEMINAR #0#{index + 1}
-      if seminar.subtitle
-        .seminar-blocks-content-box-subtitle-seminar
-          |#{seminar.subtitle}
+        //- |SEMINAR #0#{index + 1}
+      //- if seminar.subtitle
+      //-   .seminar-blocks-content-box-subtitle-seminar
+      //-     |#{seminar.subtitle}
       if seminar.title
         .seminar-blocks-content-box-title
           !=seminar.title
@@ -68,8 +68,8 @@ each seminar, index in seminars
               each schedule in seminar.schedules
                 .seminar-blocks-content-box-note-content-schedule-date
                   |#{schedule}
-            .seminar-blocks-content-box-note-content-note
-              |※同じ内容です。お好きな日程をお選びください
+            //- .seminar-blocks-content-box-note-content-note
+            //-   |※同じ内容です。お好きな日程をお選びください
       
       if seminar.description
         .seminar-blocks-content-box-text
