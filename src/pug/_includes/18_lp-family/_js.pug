@@ -41,7 +41,7 @@ script.
       if (isWideScreen) {
         modalPcLiffOpen(); // PC表示の場合はこちらを実行
       } else {
-        ModalAlreadyFriendOpen(); // スマホ表示の場合はこちらを実行
+        window.open('#{UrlLiffAddFriend}', '_blank')
       }
     });
   }

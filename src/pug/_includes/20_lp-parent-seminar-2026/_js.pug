@@ -1,5 +1,8 @@
 script.
   $(document).ready(function() { 
+    //loycusかどうか判定
+    var loycus = '#{loycus}'
+
     $('.inview-triger').on('inview', function(event, isInView) {
       if (isInView) {
         $(this).addClass('inview');
@@ -32,21 +35,22 @@ script.
     * PC: モーダルを開く動作
     * スマホ: 通常のリンク動作
     */
-  function updateButtonBehavior() {
-    // 769px以上をPC表示とみなす
-    var isWideScreen = $(window).width() >= 769;
-    
-    // 全てのLINEトリガーのボタンに対して処理
-    $('.js-line-trigger').off('click').on('click', function(e) {
-      e.preventDefault(); // リンクを無効化
-      
-      if (isWideScreen) {
-        modalPcLiffOpen(); // PC表示の場合はこちらを実行
-      } else {
-        ModalAlreadyFriendOpen(); // スマホ表示の場合はこちらを実行
+
+    function updateButtonBehavior() {
+      // 769px以上をPC表示とみなす
+      var isWideScreen = $(window).width() >= 769;
+      //loycusではない時に発火
+      if (!loycus) {
+        // locyus=false の時：js-line-trigger が有効
+        $('.js-line-trigger').off('click').on('click', function(e) {
+          if (isWideScreen) {
+            e.preventDefault(); // PC：リンク無効化してモーダルを開く
+            modalPcLiffOpen();
+          }
+          // スマホ：preventDefault() しないので href へそのまま遷移
+        });
       }
-    });
-  }
+    }
 
   /**
   * 画面サイズ変更対応
