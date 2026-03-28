@@ -1,10 +1,11 @@
 //- 条件付きリンクを生成するmixin
 //- loycus変数の値によって、通常のリンク or LIFFフォームへのリンクを切り替える
 //- @param {string} baseClass - リンクに適用する基本CSSクラス名
+
 mixin conditionalLink(baseClass)
   a(
     class=baseClass + (loycus ? '' : ' js-line-trigger')
-    href=loycus ? UrlLiffForm : false
+    href=loycus ? UrlLiffForm : UrlEndpointAddFriend
     target=loycus ? '_blank' : false
   )
     block

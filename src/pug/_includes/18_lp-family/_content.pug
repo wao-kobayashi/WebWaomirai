@@ -195,6 +195,8 @@ html
                     .lp-family-eventlist-wrapper-grid-item-content-category-child.target
                       if event.target === 'kids'
                         |小学生
+                      else if event.target === 'kidsteens'
+                        |小・中学生
                       else if event.target === 'teens'
                         |中高生
                   
@@ -258,6 +260,8 @@ html
                 .lp-family-eventdetail-content-top-right-category-child.target
                       if event.target === 'kids'
                         |小学生向け
+                      if event.target === 'kidsteens'
+                        |小・中学生向け
                       else if event.target === 'teens'
                         |中高校生向け
               
