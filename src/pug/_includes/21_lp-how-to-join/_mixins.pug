@@ -43,6 +43,70 @@ mixin menu-links
             |よくある質問
             
 
+mixin campaign-block 
+      .js-campaign.campaign-block(style='display:none;') 
+        style.
+          .campaign-block {
+            background: linear-gradient(135deg, #fff7e8 0%, #fefbee 100%);
+            border: 2px solid #f5a300;
+            border-radius: 12px;
+            padding: 18px 20px 20px;
+            margin: 20px auto 40px;
+            max-width: 480px;
+            //- text-align: center;
+          }
+          .campaign-block__label {
+            display: table;
+            background: #f5a300;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            padding: 4px 16px;
+            border-radius: 20px;
+            margin:0 auto 12px;
+          }
+          .campaign-block__title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #005c3f;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+          }
+          .campaign-block__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            display: inline-block;
+          }
+          .campaign-block__list li {
+            font-size: 15px;
+            font-weight: 400;
+            color: #262626;
+            padding: 5px 0 5px 20px;
+            position: relative;
+            line-height: 1.6;
+          }
+          .campaign-block__list li::before {
+            content: '・';
+            position: absolute;
+            left: 0;
+            color: #f5a300;
+          }
+          .campaign-block__note{
+            font-size: 13px;
+            font-weight: 400;
+            color: #4d4d4d;
+            margin:15px 0 0;
+          }
+        span.campaign-block__label ✨ 特典キャンペーン中
+        ul.campaign-block__list
+          li まずは１ヶ月お試し！４月は授業料無料
+          li さらに５月まで継続すると
+            br
+            |Amazonギフト3000円分プレゼント
+        p.campaign-block__note|※お申し込みは4/5(日)23:59まで！
 mixin menu-modal 
    .menu-modal(style='display:none;') 
     .menu-modal-logo 

@@ -1,5 +1,10 @@
 script.
-  $(function () {    
+  $(function () {
+    // キャンペーン期間中（〜4/5 23:59）のみ .js-campaign を表示
+    var deadline = new Date('2026-04-05T23:59:59+09:00');
+    if (new Date() <= deadline) {
+      $('.js-campaign').show();
+    }
     //スクロールで追従ボタン表示        
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 200) {
