@@ -118,19 +118,23 @@ body {
     margin: 10px auto 20px;
   }
 }
-.fv-logo img {
-  height: 60px;
-  width: 200px;
+.fv-logo {
   position: absolute;
   left: 20px;
   top: 3px;
+  z-index: 10;
   @include responsive-style(768px) {
-    width: 145px;
-    height: auto;
     padding: 17px 0 0 17px;
-    position: relative;
     left: 0px;
     top: 0px;
+  }
+  img {
+    height: 60px;
+    width: 200px;
+    @include responsive-style(768px) {
+      width: 145px;
+      height: auto;
+    }
   }
 }
 .fvpc {
@@ -288,6 +292,8 @@ body {
     height: 620px;
     right: 0;
     border-radius: 0 0 0 40px;
+    z-index: -1;
+    top: 0;
   }
 
   .fvsp-bg {
