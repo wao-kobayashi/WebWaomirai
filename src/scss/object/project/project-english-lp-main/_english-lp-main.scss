@@ -118,18 +118,30 @@ body {
     margin: 10px auto 20px;
   }
 }
-
+.fv-logo {
+  position: absolute;
+  left: 20px;
+  top: 3px;
+  z-index: 10;
+  @include responsive-style(768px) {
+    padding: 17px 0 0 17px;
+    left: 0px;
+    top: 0px;
+  }
+  img {
+    height: 60px;
+    width: 200px;
+    @include responsive-style(768px) {
+      width: 145px;
+      height: auto;
+    }
+  }
+}
 .fvpc {
   position: relative;
   // min-height: 600px;
   // margin: 0 0 190px;
-  .fvpc-logo {
-    height: 60px;
-    width: 200px;
-    position: absolute;
-    left: 20px;
-    top: 40px;
-  }
+
   .fvpc-left {
     position: absolute;
     left: 4.8%;
@@ -280,12 +292,10 @@ body {
     height: 620px;
     right: 0;
     border-radius: 0 0 0 40px;
+    z-index: -1;
+    top: 0;
   }
-  .fvsp-logo {
-    width: 145px;
-    padding: 17px 0 0 17px;
-    position: relative;
-  }
+
   .fvsp-bg {
     position: absolute;
     right: 0px;
