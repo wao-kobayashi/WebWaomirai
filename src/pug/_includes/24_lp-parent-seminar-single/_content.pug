@@ -2,8 +2,6 @@
 include _mixin  
 //variable
 include _variables 
-//data
-include _data_seminar
 
 doctype html
 html
@@ -35,20 +33,6 @@ html
        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
     .pc-right.pcimage
      .pc-right-content
-        .pc-right-title 
-          |INDEX
-          span|オンラインセミナー一覧
-        each seminar, index in seminars
-            .pc-right-content-link 
-              a(href=`#${seminar.id}`)
-                .pc-right-content-link-number 
-                  |#0#{index + 1}
-                .pc-right-content-link-text 
-                  if seminar.pcnavititle
-                    !=seminar.pcnavititle
-                    br
-                  //- if seminar.subtitle
-                  //-   span!=seminar.subtitle
         .pc-right-content-cta
           +btn-cta 
     .main-content
