@@ -77,8 +77,8 @@ html
             |場所
           .infotable-column-content
             |Zoomウェビナー(オンライン)
-       .reviews
-         .reviews-title
+       .concern
+         .concern-title
             .reviews-title-sub01 
                |こんなお悩みありませんか？
             .reviews-title-sub02
@@ -88,7 +88,7 @@ html
                br
                |育っているだろうか？
          .voice
-            .voice-box.voice-reviews.left
+            .voice-box.voice-concern.left
                 .voice-box-person
                     img(src=ImgPersonConcerns01)
                 .voice-box-text
@@ -98,7 +98,7 @@ html
                     b|自分から工夫したり考えようと
                     br
                     |しない…
-            .voice-box.voice-reviews.right
+            .voice-box.voice-concern.right
                 .voice-box-person
                     img(src=ImgPersonConcerns02)
                 .voice-box-text
@@ -108,7 +108,7 @@ html
                     |と毎日こちらから指示を
                     br
                     |出している…
-            .voice-box.voice-reviews.left
+            .voice-box.voice-concern.left
                 .voice-box-person
                   img(src=ImgPersonConcerns03)
                 .voice-box-text
@@ -157,6 +157,7 @@ html
               .introduction-content-text 
                |本セミナーでは、50年の教育実践から導き出した「新しい教育」を提供するワオ未来塾が、国が掲げる重要スキルを整理し、お子さまの知性の土台を育てるための指針となる「3つの力」について、みなさまと一緒に考えます。
          .seminar-blocks 
+              //セミナー概要
               section.seminar-blocks-content
                 .seminar-blocks-content-title 
                   |セミナー概要
@@ -199,7 +200,7 @@ html
                             |その日から実践できる、お子さまの自律的な思考を引き出すための具体的な問いかけを提案。
                           .seminar-blocks-content-info-item-right-img 
                             img(src=ImgSeminarInfo03)   
-         .seminar-blocks 
+              //セミナーの詳細（日時とか）
               section.seminar-blocks-content
                 .seminar-blocks-content-title 
                   |セミナーの詳細
@@ -220,8 +221,8 @@ html
                       |Zoomウェビナー
                       br
                       |(オンライン)                                                         
+              //講師紹介
               section.seminar-blocks-content
-                .seminar-blocks-content-box
                   .seminar-blocks-content-title 
                         |今回のセミナーを
                         br
@@ -241,8 +242,7 @@ html
                       br
                       br
                       |現在はワオ未来塾の事業責任者を務めるとともに、科学リテラシー講師として授業も担当しています。知識の習得にとどまらず、思考力を育てる教育を日々実践しています。
-
-         .seminar-blocks 
+              //参加者の声
               section.seminar-blocks-content
                 .seminar-blocks-content-title 
                   |参加者の声
@@ -251,145 +251,143 @@ html
                           .voice-box-person
                               img(src=ImgPersonVoice01)
                           .voice-box-text
-                              |言われたことはやるけれど、
-                              br
-                              b|自分から工夫したり考えようと
-                              br
-                              |しない…
+                            p.voice-box-text-left
+                              |ちょうど哲学ってなに？という話をしていたところ、とても興味深くまた
+                              b|これから必要になってくるものだと感じました。
                       .voice-box.reviews.right
                           .voice-box-person
                               img(src=ImgPersonVoice02)
                           .voice-box-text
-                          b|「明日の準備をしなさい！」
-                          br
-                          |と毎日こちらから指示を
-                          br
-                          |出している…
+                            p.voice-box-text-left
+                              |社会に出てからではなく入試の段階で文理の概念がなく、
+                              b|総合的に考える力が必要であることが分かり、その力の伸ばし方も考えるきっかけになりました。
+                              |セミナーを受けてよかったです。
                       .voice-box.reviews.left
                           .voice-box-person
                             img(src=ImgPersonVoice03)
                           .voice-box-text
-                            |今の学校の勉強や習い事だけで、
-                            br
-                            |将来AIに仕事を
-                            br
-                            |奪われないか不安…         
+                            p.voice-box-text-left
+                              |今日のセミナーを聞いて
+                              b|未来塾の内容は時代の変化に対応する力につながる事がよく分かりました。
+                              br
+                              br
+                              |去年から受講していますが始めてからの子どもの変化と照らし合わせ、楽しく無意識にその力が付いてきたんだな、と感じ、改めてやらせて良かった！と思いました。
                 .seminar-blocks-content-voicebg
                     .bg-blur.pc-bg-blur-01.philosophy
                     .bg-blur.pc-bg-blur-02.science
                     .bg-blur.pc-bg-blur-03.economy
-         //かんたん5STEP
-         section.join-5steps 
-            .join-5steps-title 
-              |かんたん5STEPで
-              br
-              |参加可能
-            //step1
-            .join-5steps-box
-                .join-5steps-box-head 
-                  .join-5steps-box-head-step
-                      |STEP 
-                      span|1
-                  .join-5steps-box-head-img
-                      img(src=ImgIcnStep01)
-                .join-5steps-box-title 
-                      |LINEで公式アカウントを
-                      br
-                      |友だち追加
-                .join-5steps-box-text 
-                      span.spimage|まず公式アカウントを友だちに追加してください。
-                      span.pcimage|まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。
-                      //- |・LINEが利用できない場合はこちらから
-                      |・友だち追加は
-                      +conditionalLink
-                        |こちら
-                      |から
+              //かんたん5STEP
+              section.join-5steps 
+                  .join-5steps-title 
+                    |かんたん5STEPで
+                    br
+                    |参加可能
+                  //step1
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        .join-5steps-box-head-step
+                            |STEP 
+                            span|1
+                        .join-5steps-box-head-img
+                            img(src=ImgIcnStep01)
+                      .join-5steps-box-title 
+                            |LINEで公式アカウントを
+                            br
+                            |友だち追加
+                      .join-5steps-box-text 
+                            span.spimage|まず公式アカウントを友だちに追加してください。
+                            span.pcimage|まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。
+                            //- |・LINEが利用できない場合はこちらから
+                            |・友だち追加は
+                            +conditionalLink
+                              |こちら
+                            |から
 
-            //step2
-            .join-5steps-box
-                .join-5steps-box-head 
-                  .join-5steps-box-head-step
-                      |STEP 
-                      span|2
-                  .join-5steps-box-head-img
-                       img(src=ImgIcnStep02)
-                .join-5steps-box-title 
-                      |友だち登録後、LINEのトーク
-                      br
-                      |画面に送られる申し込み
-                      br
-                      |フォームをタップ！
-            
-            //step3
-            .join-5steps-box
-                .join-5steps-box-head 
-                  .join-5steps-box-head-step
-                      |STEP 
-                      span|3
-                  .join-5steps-box-head-img
-                       img(src=ImgIcnStep03)
-                .join-5steps-box-title 
-                  |Zoomをインストール
-                .join-5steps-box-text 
-                  |お手持ちの端末にzoomのインストールをお願いします。パソコンまたはタブレットが推奨です
-            //step4
-            .join-5steps-box
-                .join-5steps-box-head 
-                  .join-5steps-box-head-step
-                      |STEP 
-                      span|4
-                  .join-5steps-box-head-img.step4
-                     img(src=ImgIcnStep04)
-                .join-5steps-box-title 
-                      |イベント前日に
-                      br
-                      |LINEメッセージで
-                      br
-                      |イベントURLをお送りします
-            //step5
-            .join-5steps-box
-                .join-5steps-box-head 
-                  .join-5steps-box-head-step
-                      |STEP 
-                      span|5
-                  .join-5steps-box-head-img
-                     img(src=ImgIcnStep05)
-                .join-5steps-box-title 
-                      |開催時間になったら
-                      br
-                      |届いたイベントURLから
-                      br
-                      |参加しましょう！
-         section.faq 
-             .faq-title 
-               |よくある質問
-             //-  .faq-content 
-             //-     .faq-content-question 
-             //-        .faq-content-question-left|Q
-             //-        .faq-content-question-right
-             //-          |複数のテーマは申し込むことはできますか？
-             //-     .faq-content-answer 
-             //-        .faq-content-answer-left|A
-             //-        .faq-content-answer-right
-             //-          |はい、可能です。
-             .faq-content 
-                .faq-content-question 
-                   .faq-content-question-left|Q
-                   .faq-content-question-right
-                     |カメラオンで参加は必要ですか？？
-                .faq-content-answer 
-                   .faq-content-answer-left|A
-                   .faq-content-answer-right
-                     |ウェビナー形式ですので顔出しは不要です
-             .faq-content 
-                .faq-content-question 
-                   .faq-content-question-left|Q
-                   .faq-content-question-right
-                     |当日参加できなかった場合、後日アーカイブ視聴はできますか？
-                .faq-content-answer 
-                   .faq-content-answer-left|A
-                   .faq-content-answer-right
-                     |恐れ入りますが、本セミナーはライブ参加を前提とした内容のため、後日のアーカイブ配信は行っておりません。ご都合のつく日時の回にてお申込みください。
+                  //step2
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        .join-5steps-box-head-step
+                            |STEP 
+                            span|2
+                        .join-5steps-box-head-img
+                            img(src=ImgIcnStep02)
+                      .join-5steps-box-title 
+                            |友だち登録後、LINEのトーク
+                            br
+                            |画面に送られる申し込み
+                            br
+                            |フォームをタップ！
+                  
+                  //step3
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        .join-5steps-box-head-step
+                            |STEP 
+                            span|3
+                        .join-5steps-box-head-img
+                            img(src=ImgIcnStep03)
+                      .join-5steps-box-title 
+                        |Zoomをインストール
+                      .join-5steps-box-text 
+                        |お手持ちの端末にzoomのインストールをお願いします。パソコンまたはタブレットが推奨です
+                  //step4
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        .join-5steps-box-head-step
+                            |STEP 
+                            span|4
+                        .join-5steps-box-head-img.step4
+                          img(src=ImgIcnStep04)
+                      .join-5steps-box-title 
+                            |イベント前日に
+                            br
+                            |LINEメッセージで
+                            br
+                            |イベントURLをお送りします
+                  //step5
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        .join-5steps-box-head-step
+                            |STEP 
+                            span|5
+                        .join-5steps-box-head-img
+                          img(src=ImgIcnStep05)
+                      .join-5steps-box-title 
+                            |開催時間になったら
+                            br
+                            |届いたイベントURLから
+                            br
+                            |参加しましょう！
+              section.faq 
+                  .faq-title 
+                    |よくある質問
+                  //-  .faq-content 
+                  //-     .faq-content-question 
+                  //-        .faq-content-question-left|Q
+                  //-        .faq-content-question-right
+                  //-          |複数のテーマは申し込むことはできますか？
+                  //-     .faq-content-answer 
+                  //-        .faq-content-answer-left|A
+                  //-        .faq-content-answer-right
+                  //-          |はい、可能です。
+                  .faq-content 
+                      .faq-content-question 
+                        .faq-content-question-left|Q
+                        .faq-content-question-right
+                          |カメラオンで参加は必要ですか？？
+                      .faq-content-answer 
+                        .faq-content-answer-left|A
+                        .faq-content-answer-right
+                          |ウェビナー形式ですので顔出しは不要です
+                  .faq-content 
+                      .faq-content-question 
+                        .faq-content-question-left|Q
+                        .faq-content-question-right
+                          |当日参加できなかった場合、後日アーカイブ視聴はできますか？
+                      .faq-content-answer 
+                        .faq-content-answer-left|A
+                        .faq-content-answer-right
+                          |恐れ入りますが、本セミナーはライブ参加を前提とした内容のため、後日のアーカイブ配信は行っておりません。ご都合のつく日時の回にてお申込みください。
 
          //ワオ未来塾って？
          section.about-wao
