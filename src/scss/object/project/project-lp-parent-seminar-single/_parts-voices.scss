@@ -2,7 +2,6 @@
 .voice-box {
   display: flex;
   @include content-width;
-  margin: 0 auto 40px;
 
   //////////////
   //通常時
@@ -33,7 +32,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    line-height: $lineheight-relaxed;
     padding: 20px 0;
   }
 }
@@ -42,6 +41,7 @@
 .concern {
   .voice-box {
     align-items: center;
+    margin: 0 auto 25px;
   }
 }
 
@@ -52,6 +52,7 @@
     width: 100% !important;
     position: relative;
     z-index: 30;
+    margin: 0 auto 40px;
     .voice-box-person img {
       @include box-shadow-small;
       border-radius: $border-radius-full;

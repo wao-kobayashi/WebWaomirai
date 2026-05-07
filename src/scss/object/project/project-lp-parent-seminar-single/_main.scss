@@ -51,30 +51,18 @@
     text-align: center;
     margin: 23px 22px 10px;
     @include min-responsive-style($breakpoint-sp) {
-      margin: 17px auto;
+      margin: 17px 0;
     }
   }
   h1 {
     position: relative;
     z-index: 10;
     color: $cl-waogreen;
-    display: flex;
-    flex-direction: column;
-    margin: 0 25px 8px;
+    margin: 0 25px 15px;
+
     @include min-responsive-style($breakpoint-sp) {
-      align-items: center;
+      align-items: left;
       margin: 0 0 20px;
-    }
-    span.sub {
-      color: $cl-waogreen;
-      display: block;
-      font-weight: 900;
-      letter-spacing: 2px;
-      font-size: calc(28 * var(--px));
-      @include min-responsive-style($breakpoint-sp) {
-        font-size: 28px;
-        letter-spacing: 7px;
-      }
     }
 
     span.main {
@@ -84,24 +72,46 @@
       font-weight: 900;
       letter-spacing: 0.5px;
       line-height: 1.44;
-
+      letter-spacing: 2px;
       @include min-responsive-style($breakpoint-sp) {
         letter-spacing: 6px;
         line-height: 1.4;
-        text-align: center;
+        font-size: 50px !important;
+        // text-align: center;
       }
     }
   }
-  .fv-img img {
-    position: relative;
-    z-index: 10;
-    width: 80%;
-    margin: 0 auto 20px;
+  .fv-date img {
+    margin: 0 25px 45px;
+    width: 70%;
     @include min-responsive-style($breakpoint-sp) {
-      margin: 0 auto 10px;
-      width: 70%;
+      margin: 0 0px 45px;
     }
   }
+  .fv-img {
+    position: relative;
+    margin: 0 0 50px;
+    .fv-img-main {
+      z-index: 10;
+      width: 90%;
+      margin: 0 auto 20px;
+      @include min-responsive-style($breakpoint-sp) {
+        margin: 0 auto 10px;
+        width: 80%;
+      }
+    }
+    .fv-img-sub {
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      z-index: 10;
+      width: 78%;
+      @include responsive-style($breakpoint-sp) {
+        left: 20px;
+      }
+    }
+  }
+
   .fv-blur {
     @include min-responsive-style($breakpoint-sp) {
       display: none;
@@ -203,20 +213,46 @@
     margin: 0 auto;
     @include content-width;
     .reviews-title-sub01 {
-      font-size: $font-size-s;
       margin: 0 0 7px;
+      @include min-responsive-style(900px) {
+        font-size: min(100px, calc(14 * var(--px))) !important;
+      }
+      @include responsive-style(899px) {
+        font-size: 20px !important;
+      }
+      @include responsive-style($breakpoint-sp) {
+        font-size: min(100px, calc(14 * var(--px))) !important;
+      }
     }
     .reviews-title-sub02 {
-      font-size: $font-size-xl;
+      // font-size: $font-size-xl;
+
       font-weight: bold;
       margin: 0 0 5px;
+      @include min-responsive-style(900px) {
+        font-size: min(30px, calc(25 * var(--px)));
+      }
+      @include responsive-style(899px) {
+        font-size: 25px !important;
+      }
+      @include responsive-style($breakpoint-sp) {
+        font-size: calc(20 * var(--px)) !important;
+      }
     }
     .reviews-title-main {
-      font-size: $font-size-xxl;
-      margin: 0 0 10px;
+      margin: 0 0 30px;
       color: $cl-waogreen;
       font-weight: 600;
       line-height: 1.35;
+      @include min-responsive-style(900px) {
+        font-size: min(40px, calc(32 * var(--px)));
+      }
+      @include responsive-style(899px) {
+        font-size: 37px !important;
+      }
+      @include responsive-style($breakpoint-sp) {
+        font-size: min(40px, calc(32 * var(--px))) !important;
+      }
     }
   }
 }
@@ -231,6 +267,7 @@
   @include min-responsive-style($breakpoint-sp) {
     border-radius: $border-radius-big;
     margin: 30px auto 0;
+    padding: 45px 0 0;
     @include box-shadow-small;
     @include content-width;
   }
@@ -316,8 +353,8 @@ section.introduction {
     border-radius: $border-radius-middle;
     padding: 30px 20px;
     .seminar-blocks-content-title {
-      font-weight: 500;
-      font-size: $font-size-l;
+      font-weight: 600;
+      font-size: $font-size-xl;
       line-height: $lineheight-relaxed;
       letter-spacing: 2px;
       color: $cl-black;

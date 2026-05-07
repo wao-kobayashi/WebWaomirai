@@ -40,7 +40,7 @@ html
           .fv-logo
              img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
           .fv-subtitle
-           img(src=ImgFvSubtile)
+            img(src=ImgFvSubtile)
           h1 
             //- span.sub
             //-   |AI時代を生き抜く
@@ -48,8 +48,15 @@ html
               |AI時代の子どもに
               br
               |必要な3つの力
+          .fv-date
+            img(src=ImgFvDate)
+
           .fv-img
-            img(src=ImgFv)
+            .fv-img-sub
+              img(src=ImgFvTeacher)
+            .fv-img-main
+              img(src=ImgFv)
+
           .fv-blur
             .bg-blur.pc-bg-blur-01.philosophy
             .bg-blur.pc-bg-blur-02.science
@@ -60,13 +67,13 @@ html
             |対象
           .infotable-column-content
             |小学3年生以上のお子さまを持つ保護者
-        .infotable-column
-          .infotable-column-title
-            |日時
-          .infotable-column-content
-            |2026/6/2(火) 12:10～12:55
-            //- br
-            //- span|※詳細な日程は各セミナー日時をご確認ください
+        //- .infotable-column
+        //-   .infotable-column-title
+        //-     |日時
+        //-   .infotable-column-content
+        //-     |2026/6/2(火) 12:10～12:55
+        //-     //- br
+        //-     //- span|※詳細な日程は各セミナー日時をご確認ください
         .infotable-column
           .infotable-column-title
             |費用
@@ -115,9 +122,9 @@ html
                   p
                     |今の学校の勉強や習い事だけで、
                     br
-                    |将来AIに仕事を
+                    b|将来AIに仕事を
                     br
-                    |奪われないか不安…
+                    b|奪われないか不安…
 
        .main-content-wrapper 
          section.introduction 
