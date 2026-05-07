@@ -18,6 +18,10 @@ $breakpoint-tablet: 980px;
   height: #{$vw-percentage}px;
 }
 
+@mixin content-width {
+  width: calc(100% - 50px);
+}
+
 html {
   overflow-x: hidden;
 }

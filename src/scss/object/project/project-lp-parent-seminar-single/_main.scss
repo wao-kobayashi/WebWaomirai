@@ -131,12 +131,13 @@
   }
 }
 
+//概要(FV直下)
 .infotable {
   position: relative;
   z-index: 1;
   background: $cl-white;
-  width: calc(100% - 50px);
-  margin: 30px auto 0;
+  @include content-width;
+  margin: 30px auto 45px;
   @include box-shadow-small;
   padding: 2px 0 3px;
   overflow: hidden;
@@ -188,48 +189,64 @@
   }
 }
 
-.goal {
-  position: relative;
-  z-index: 1;
-  background: $cl-white;
-  width: calc(100% - 50px);
-  margin: 30px auto 0;
-  padding: 20px 25px 10px;
-  @include box-shadow-small;
-  // padding: 6px 0 3px;
-  overflow: hidden;
-  border-radius: $border-radius-big;
-  .goal-title {
-    font-size: $font-size-l;
-    font-weight: 400;
-    margin: 0px 0 0px;
-    text-align: left;
-  }
-  .goal-table {
-    .goal-table-row {
-      display: flex;
-      gap: 20px;
-      margin: 0px 0;
-      padding: 20px 0 20px;
-
-      &:not(:last-child) {
-        border-bottom: 1px dashed $cl-graylight;
-      }
-      .goal-table-row-number {
-        font-size: $font-size-xxl;
-        font-style: italic;
-        margin: -3px 0 0;
-        font-weight: 300;
-        color: $cl-graylight;
-      }
-      .goal-table-row-content {
-        font-size: $font-size-m;
-        line-height: $lineheight-relaxed;
-        @include min-responsive-style($breakpoint-sp) {
-          font-size: $font-size-m;
-        }
-      }
+//こんなお悩みありませんか？
+.reviews {
+  background: $cl-graylightest;
+  padding: 60px 0;
+  .reviews-title {
+    margin: 0 auto;
+    @include content-width;
+    .reviews-title-sub01 {
+      font-size: $font-size-s;
+      margin: 0 0 10px;
     }
+    .reviews-title-sub02 {
+      font-size: $font-size-xl;
+      margin: 0 0 10px;
+    }
+    .reviews-title-main {
+      font-size: $font-size-xxl;
+      margin: 0 0 10px;
+      color: $cl-waogreen;
+      font-weight: 600;
+    }
+  }
+}
+
+.voice-box {
+  display: flex;
+  @include content-width;
+  margin: 0 auto 30px;
+
+  &.left {
+    flex-direction: row-reverse;
+    .voice-box-text {
+      margin-right: -20px;
+    }
+  }
+  &.right {
+    flex-direction: reverse;
+    .voice-box-text {
+      margin-left: -20px;
+    }
+  }
+  .voice-box-person {
+    width: 20%;
+    position: relative;
+    z-index: 1;
+    margin: 15px 0 0;
+  }
+
+  .voice-box-text {
+    background: $cl-white;
+    border-radius: $border-radius-big;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 25px 0;
   }
 }
 
@@ -243,7 +260,7 @@
   @include min-responsive-style($breakpoint-sp) {
     margin: 30px auto 0;
     @include box-shadow-small;
-    width: calc(100% - 50px);
+    @include content-width;
   }
 }
 
@@ -294,11 +311,18 @@ section.introduction {
       opacity: 0.2;
     }
   }
-  .introduction-text {
-    font-size: $font-size-m;
-    line-height: $lineheight-very-relaxed;
-    margin: 0px auto 90px;
-    text-align: left;
+  .introduction-content {
+    .introduction-content-title {
+      font-size: $font-size-xl;
+      font-weight: bold;
+      line-height: $lineheight-relaxed;
+    }
+    .introduction-content-text {
+      font-size: $font-size-m;
+      line-height: $lineheight-very-relaxed;
+      margin: 0px auto 40px;
+      text-align: left;
+    }
   }
 }
 
@@ -427,7 +451,7 @@ section.introduction {
 .seminar-blocks {
   position: relative;
   background: $cl-graylightest;
-
+  padding: 30px 0 0;
   .seminar-blocks-sticky {
     background: $cl-white;
     .seminar-blocks-sticky-title {
@@ -450,10 +474,58 @@ section.introduction {
     }
   }
   .seminar-blocks-content {
-    padding: 60px 0 0;
     position: relative;
     z-index: 10;
     overflow: hidden;
+    @include content-width;
+    margin: 0px auto 0;
+    background: $cl-white;
+    border-radius: $border-radius-middle;
+    padding: 30px 20px;
+    .seminar-blocks-content-title {
+      font-weight: 500;
+      font-size: $font-size-l;
+      line-height: $lineheight-relaxed;
+      letter-spacing: 2px;
+      color: $cl-black;
+      margin: 0 0 20px;
+    }
+    hr.seminar-blocks-content-info-hr {
+      border: none;
+      border-top: dashed 1px $cl-graylight;
+      height: 0.5px;
+      width: 100%;
+      margin: 40px auto;
+    }
+    .seminar-blocks-content-info {
+      .seminar-blocks-content-info-item {
+        display: flex;
+        gap: 20px;
+
+        .seminar-blocks-content-info-item-left {
+          font-size: $font-size-xxl;
+          font-style: italic;
+          color: $cl-graylight;
+          font-weight: 300;
+        }
+        .seminar-blocks-content-info-item-right {
+          flex: 1;
+          .seminar-blocks-content-info-item-right-title {
+            font-size: $font-size-xl;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 0 0 5px;
+          }
+          .seminar-blocks-content-info-item-right-text {
+            line-height: $lineheight-relaxed;
+            margin: 0 0 15px;
+          }
+          .seminar-blocks-content-info-item-right-img img {
+            border-radius: $border-radius-big;
+          }
+        }
+      }
+    }
   }
   .seminar-blocks-content-box {
     position: relative;
@@ -462,7 +534,7 @@ section.introduction {
     @extend %seminar-blocks-margin;
     background: $cl-white;
     margin: 0px auto 0px;
-    border-radius: $border-radius-middle;
+
     padding: 0 20px 0px;
 
     .seminar-blocks-content-box-subtitle-eng {
@@ -472,14 +544,7 @@ section.introduction {
       color: $cl-graylight;
       padding: 25px 0 0 !important;
     }
-    .seminar-blocks-content-box-title-teacher {
-      font-weight: 500;
-      font-size: $font-size-l;
-      line-height: $lineheight-relaxed;
-      letter-spacing: 4px;
-      color: $cl-black;
-      padding: 20px 0 0 !important;
-    }
+
     .seminar-blocks-content-box-teacher {
       display: flex;
       margin: 30px 0 30px;
@@ -608,6 +673,41 @@ section.introduction {
   .seminar-blocks-content-box-btn {
     margin: 0 auto 60px;
     text-align: center;
+  }
+}
+
+//セミナー詳細
+dl.seminar-blocks-content-details {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.8;
+  dt {
+    font-size: $font-size-s;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  dd {
+    margin: 0;
+    font-size: $font-size-s;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  > dt:first-of-type,
+  > dd:first-of-type {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  > dt:last-of-type,
+  > dd:last-of-type {
+    border-bottom: none;
   }
 }
 
