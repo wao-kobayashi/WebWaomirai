@@ -82,10 +82,10 @@
     }
   }
   .fv-date img {
-    margin: 0 25px 45px;
+    margin: 0 25px 30px;
     width: 70%;
     @include min-responsive-style($breakpoint-sp) {
-      margin: 0 0px 45px;
+      margin: 0 0px 30px;
     }
   }
   .fv-img {
@@ -93,7 +93,7 @@
     margin: 0 0 50px;
     .fv-img-main {
       z-index: 10;
-      width: 90%;
+      width: 80%;
       margin: 0 auto 20px;
       @include min-responsive-style($breakpoint-sp) {
         margin: 0 auto 10px;
@@ -202,7 +202,7 @@
 
 .concern {
   background: $cl-graylightest;
-  padding: 60px 0;
+  padding: 45px 0;
   @include min-responsive-style($breakpoint-sp) {
     margin: 30px auto 0;
     @include box-shadow-small;
@@ -261,7 +261,7 @@
 .main-content-wrapper {
   width: 100%;
   // overflow: hidden;
-  margin: 90px auto 0;
+  margin: 45px auto 0;
   background: $cl-white;
 
   @include min-responsive-style($breakpoint-sp) {
@@ -348,7 +348,7 @@ section.introduction {
     z-index: 10;
     overflow: hidden;
     @include content-width;
-    margin: 0px auto 40px;
+    margin: 0px auto 30px;
     background: $cl-white;
     border-radius: $border-radius-middle;
     padding: 30px 20px;
@@ -358,7 +358,7 @@ section.introduction {
       line-height: $lineheight-relaxed;
       letter-spacing: 2px;
       color: $cl-black;
-      margin: 0 0 28px;
+      margin: 0 0 18px;
     }
     hr.seminar-blocks-content-info-hr {
       border: none;
@@ -507,7 +507,7 @@ section.introduction {
 //かんたん5STEPで参加可能
 .join-5steps {
   background: $cl-graylightest;
-  padding: 75px 0px 75px;
+  padding: 45px 0px 45px;
   .join-5steps-title {
     @extend %underbar-title;
   }
