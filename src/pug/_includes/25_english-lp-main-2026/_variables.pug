@@ -1,25 +1,25 @@
+//-//////////////////////////////////////////
+//- meta情報
+//-//////////////////////////////////////////
 
 //SEO
 - var MetaTitle = '子どもオンライン英会話｜グローバル英語（ワオ未来塾）'
 
 //PRICE
-- var price = '9,400'
+- var LessonPrice = '9,400'
 
 //URL
-- var linkUrl = 'https://waomirai.com/lp/howto-signup-english'
+- var UrlCv = 'https://waomirai.com/lp/howto-signup-english'
 
 
 
-//- LINE URL
-- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dH7tWoDFWg&whc=173508808725235'
-- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=CO2T8'
-- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=wbwPTJ8IA'
-
-
+//-//////////////////////////////////////////
+//- 画像
+//-//////////////////////////////////////////
 
 //- 画像パス設定
 - var paths = '../../../images/25_english-lp-main-2026'
-//- - var paths = 'https://waomirai.com/lp/assets/lpimages/24_lp-parent-seminar-single';
+//- - var paths = 'https://waomirai.com/lp/assets/lpimages/25_english-lp-main-2026';
 
 //- 画像パス生成関数
 -
@@ -27,12 +27,19 @@
     return `${paths}/${filename}`;
   }
 
-
 //-//////////////
 //- ogp
 //-//////////////
 
 - var ImgOgp = img('ogp.png');
+
+
+//-//////////////
+//- FV動画
+//-//////////////
+
+- var VideoFvPc = img('');
+- var VideoFvSp = img('');
 
 //-//////////////
 //- コースバナー
@@ -124,22 +131,23 @@
 - var ImgTeacherMoviePaulo = img('img_teacher_movie_paulo.png');
 - var ImgTeacherMovieRyan = img('img_teacher_movie_ryan.png');
 
-//-//////////////
-//- 動画
-//-//////////////
 
+
+//-//////////////////////////////////////////
+//- 動画
+//-//////////////////////////////////////////
+
+//- カリキュラム
 - var movie00Page = 'https://player.vimeo.com/video/1085580950?h=7d74fc6e97&autoplay=1&muted=1&background=1'
 - var movie00Placeholder = 'https://waomirai.com/lp/assets/lpimages/06_english-lp-main-2025may/img_process_movie.jpg'
-- var movie00Modal = 'https://player.vimeo.com/video/1085580950?h=7d74fc6e97&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-- var movie01Modal = 'https://player.vimeo.com/video/1085580961?h=df2f5be8e2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-- var movie02Modal = 'https://player.vimeo.com/video/1086635561?h=7f5632b1a1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-- var movie03Modal = 'https://player.vimeo.com/video/1086635650?h=1121072936&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-- var movie04Modal = 'https://player.vimeo.com/video/1086635823?h=c277ad4694&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-- var movie05Modal = 'https://player.vimeo.com/video/1086636122?h=5928de2b02&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-- var movie06Modal = 'https://player.vimeo.com/video/1087651878?h=304d8cfdcb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum00Modal = 'https://player.vimeo.com/video/1085580950?h=7d74fc6e97&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum01Modal = 'https://player.vimeo.com/video/1085580961?h=df2f5be8e2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum02Modal = 'https://player.vimeo.com/video/1086635561?h=7f5632b1a1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum03Modal = 'https://player.vimeo.com/video/1086635650?h=1121072936&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum04Modal = 'https://player.vimeo.com/video/1086635823?h=c277ad4694&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum05Modal = 'https://player.vimeo.com/video/1086636122?h=5928de2b02&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+- var movieCurriculum06Modal = 'https://player.vimeo.com/video/1087651878?h=304d8cfdcb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
 
-//- 講師紹介動画（パウロ）
+//- 講師紹介動画
 - var movieTeacherPauloModal = 'https://player.vimeo.com/video/1193819978?h=39eb104546&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-
-//- 講師紹介動画（ライアン）
 - var movieTeacherRyanModal = 'https://player.vimeo.com/video/1193820009?h=43801fef63&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
