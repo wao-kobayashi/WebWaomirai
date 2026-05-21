@@ -1,0 +1,244 @@
+/* ─── セクション自体で横スクロール ─── */
+.section-comparison {
+  padding: 60px 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section-comparison::-webkit-scrollbar {
+  height: 6px;
+}
+
+.section-comparison::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.section-comparison::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* ─── Grid本体 ─── */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr 1fr;
+  min-width: 900px;
+  max-width: 1060px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ─── ヘッダー行 ─── */
+.grid-head {
+  display: contents;
+}
+
+.grid-head-corner {
+  /* 空セル */
+}
+
+.grid-head-cell {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-align: center;
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1列目ヘッダー（推し） */
+.grid-head-cell--primary {
+  background: $cl-english;
+  flex-direction: column;
+  padding-top: 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.grid-head-cell--primary .sub-label {
+  display: inline-block;
+  background: #fff;
+  color: $cl-english;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 18px;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 8px;
+  letter-spacing: 0.06em;
+}
+
+.grid-head-cell--primary .main-label {
+  font-size: 18px;
+  padding-bottom: 4px;
+}
+
+/* 2・3列目ヘッダー */
+.grid-head-cell--sub {
+  background: #555;
+}
+
+/* ─── ボディ行 ─── */
+.grid-row {
+  display: contents;
+}
+
+/* 全セル共通 */
+.grid-cell {
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 最終行はボーダーなし */
+.grid-row:last-child .grid-cell {
+  border-bottom: none;
+}
+
+/* 行見出し */
+.grid-cell--label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  background: #fafafa;
+  padding: 28px 12px;
+}
+
+/* 推しカラム強調枠 */
+.grid-cell--primary {
+  background: #fdfaff;
+  border-left: 3px solid $cl-english;
+  border-right: 3px solid $cl-english;
+}
+
+.grid-row:last-child .grid-cell--primary {
+  border-bottom: 3px solid $cl-english;
+}
+
+/* ─── セル内パーツ ─── */
+.cell-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+.cell-title--primary {
+  color: $cl-english;
+}
+
+/* ダミーイラスト */
+.illust-placeholder {
+  width: 160px;
+  height: 100px;
+  background: #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 12px;
+}
+
+/* チェックリスト */
+.check-list {
+  list-style: none;
+  text-align: left;
+  max-width: 280px;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.check-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* チェックアイコン（img差し替え用） */
+.check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  background: $cl-english;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon::after {
+  content: "✓";
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* img差し替え時 ──
+.check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+}
+.check-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+── */
+
+.bold-text {
+  font-weight: 700;
+}
+
+.underline-text {
+  text-decoration: underline;
+  text-decoration-color: #d4a8e0;
+  text-underline-offset: 3px;
+}
+
+/* 講師セル */
+.instructor-main {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.instructor-main--primary {
+  color: $cl-english;
+}
+
+.instructor-note {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* おすすめセル */
+.recommend-text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.recommend-text--primary {
+  color: $cl-english;
+}
