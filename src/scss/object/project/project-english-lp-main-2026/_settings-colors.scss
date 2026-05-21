@@ -1,8 +1,10 @@
 /* color */
 
-$cl-philosophy-pale: #f4c66d;
-$cl-science-pale: #66cb88;
-$cl-economy-pale: #67d2e9;
+$lp-yellow: #ffde53;
+$lp-eng-parple-pale: #fff4ff;
+$lp-line-green: #00b900;
+
+/* 旧ファイル更新のため残しているが未使用 */
 
 @mixin gradient-waogreen {
   background: linear-gradient(283.05deg, #0d825d -0.33%, #1f8c69 89.33%);
@@ -12,7 +14,9 @@ $cl-economy-pale: #67d2e9;
   background: linear-gradient(93.57deg, #f5942e -3.22%, #ee7a00 104.73%);
 }
 
-/* 旧ファイル更新のため残しているが未使用 */
+$cl-philosophy-pale: #f4c66d;
+$cl-science-pale: #66cb88;
+$cl-economy-pale: #67d2e9;
 $cl-bg-creamyellow: #fff8e0;
 $cl-bg-creamyellow-dark: #fff2c4;
 $cl-border-brown: #d8d2bc;
@@ -35,7 +39,6 @@ $categories: (
   "economy": (
     main-color: $cl-economy,
     sp-main-color: $cl-economy,
-    pale-color: #eaf6ff
-      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    pale-color: #eaf6ff, // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );

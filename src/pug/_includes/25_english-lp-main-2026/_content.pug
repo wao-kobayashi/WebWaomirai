@@ -45,33 +45,37 @@ html
         .englp-fv-img
           img(src=FvPc)
       .englp-reviews 
-        .englp-reviews-box 
-          .englp-reviews-box-title 
-            |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
-          .englp-reviews-box-name 
-            |小学校 3年生
-        .englp-reviews-box 
-          .englp-reviews-box-title 
-            |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
-          .englp-reviews-box-name 
-            |小学校 3年生
-        .englp-reviews-box 
-          .englp-reviews-box-title 
-            |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
-          .englp-reviews-box-name 
-            |小学校 3年生
-        .englp-reviews-box 
-          .englp-reviews-box-title 
-            |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
-          .englp-reviews-box-name 
-            |小学校 3年生  
+        .englp-reviews-track
+          - for (var i = 1; i < 3; i++)
+            .englp-reviews-box 
+              .englp-reviews-box-title 
+                |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+              .englp-reviews-box-name 
+                |小学校 3年生
+            .englp-reviews-box 
+              .englp-reviews-box-title 
+                |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+              .englp-reviews-box-name 
+                |小学校 3年生
+            .englp-reviews-box 
+              .englp-reviews-box-title 
+                |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+              .englp-reviews-box-name 
+                |小学校 3年生
+            .englp-reviews-box 
+              .englp-reviews-box-title 
+                |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+              .englp-reviews-box-name 
+                |小学校 3年生  
       //英語学習のお悩み
-      section.englp-section.englp-bg-yellow 
-        .englp-section-title 
+      section.englp-section.englp-bg-yellow.englp-section-concern
+        .englp-section-concern-subtitle
+          |Having Trouble?
+        .englp-section-concern-title
            |子どもの英語学習でこんな
            span|お悩み
            |はありませんか？
-        .englp-section-concern 
+        .englp-section-concern-content
            .englp-section-concern-box 
              .englp-section-concern-box-number 
                |01
@@ -96,7 +100,7 @@ html
                img(src=ImgIllustConcern02)
            .englp-section-concern-box 
              .englp-section-concern-box-number 
-               |02
+               |03
              .englp-section-concern-box-subtitle 
                |学校の英語のテストは平均点を取れるが、
              .englp-section-concern-box-title
@@ -113,6 +117,8 @@ html
           |でその
           span|お悩みを
           |解決します！ 
+        .englp-solve-subtitle
+          |Having Trouble?
       //ワオ未来塾・グローバル英語で楽しく学べる仕組み    
       section.englp-section-solution 
          .englp-section-solution-  

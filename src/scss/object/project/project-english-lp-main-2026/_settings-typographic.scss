@@ -7,16 +7,37 @@
   font-family: "Figtree", "Noto Sans JP", sans-serif;
 }
 
-// Font size variables
-$font-size-sss: 10px;
-$font-size-ss: 12px;
-$font-size-s: 14px;
-$font-size-m: 15px;
-$font-size-l: 18px;
-$font-size-xl: 20px;
-$font-size-xxl: 30px;
-$font-size-xxxl: 40px;
-$font-size-huge: 56px;
+@mixin font-size-xl {
+  font-size: 27px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 20px;
+  }
+}
+
+@mixin font-size-l {
+  font-size: 24px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 20px;
+  }
+}
+
+@mixin font-size-m {
+  font-size: 20px;
+  @include responsive-style($breakpoint-sp) {
+  }
+}
+@mixin font-size-s {
+  font-size: 15px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 14px;
+  }
+}
+@mixin font-size-ss {
+  font-size: 15px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 14px;
+  }
+}
 
 /* line-height */
 
@@ -39,6 +60,19 @@ $lineheight-very-relaxed: 2;
     --px: min(2px, calc(100vw / 375));
   }
 }
+
+/* 以下使わないがとりあえず取っておく */
+
+// Font size variables
+$font-size-sss: 10px;
+$font-size-ss: 12px;
+$font-size-s: 14px;
+$font-size-m: 15px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 30px;
+$font-size-xxxl: 40px;
+$font-size-huge: 56px;
 
 @mixin catch-copytitle {
   font-size: min(44px, calc(36 * var(--px)));
