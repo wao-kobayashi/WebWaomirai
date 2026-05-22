@@ -58,3 +58,9 @@ nav {
     }
   }
 }
+
+@mixin lp-eng-2column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 50px;
+}

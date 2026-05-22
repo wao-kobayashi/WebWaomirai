@@ -432,6 +432,7 @@ section.englp-section-concern {
   max-width: $widewidth;
   margin: 0 auto;
   .englp-section-price-main {
+    position: relative;
     padding: 35px 0;
     display: flex;
     justify-content: center;
@@ -439,6 +440,19 @@ section.englp-section-concern {
     gap: 30px;
     background: $cl-white;
     border-radius: $border-radius-big;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      transform: rotate(45deg);
+    }
     .englp-section-price-main-free {
       @include font-size-m;
       background: $cl-english;
@@ -507,3 +521,58 @@ section.englp-section-concern {
     color: $cl-english;
   }
 }
+
+/* 講師紹介 */
+.englp-section-teacher-box {
+  padding: 55px 3cqmax;
+  background: $cl-white;
+  max-width: $widewidth;
+  margin: 0 auto;
+  @include lp-eng-2column;
+  .englp-section-teacher-box-left {
+    position: relative;
+    .englp-section-teacher-box-left-sub {
+      position: absolute;
+      right: 0;
+      bottom: -45px;
+      width: 150px;
+    }
+  }
+  .englp-section-teacher-box-right-title {
+    display: flex;
+    align-items: flex-end;
+    line-height: $lineheight-none;
+    gap: 20px;
+    margin: 0 0 30px;
+    .englp-section-teacher-box-right-title-main {
+      font-size: 60px;
+      font-weight: 800;
+      line-height: $lineheight-none;
+    }
+    .englp-section-teacher-box-right-title-sub {
+      @include font-size-s;
+      font-weight: 600;
+      line-height: $lineheight-none;
+      margin: 0 0 10px;
+    }
+  }
+  .englp-section-teacher-box-right-text {
+    line-height: $lineheight-relaxed;
+  }
+}
+
+/* 他社との違い */
+
+/* 受講生の声 */
+
+/* 授業コース */
+
+/* レッスンスケジュール */
+
+/* カリキュラム説明動画 */
+
+/* よくある質問 */
+
+/* LINE */
+
+/* ラポール22 */

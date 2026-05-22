@@ -1,10 +1,17 @@
 /* 見出し */
-.englp-section-title h2 {
-  text-align: center;
-  @include font-size-xl;
-  letter-spacing: 0.08em;
-  line-height: $lineheight-none;
+.englp-section-title {
   margin: 0 auto 65px;
+  h2 {
+    text-align: center;
+    @include font-size-xl;
+    letter-spacing: 0.08em;
+    line-height: $lineheight-none;
+  }
+  .englp-section-title-sub {
+    @include font-size-m;
+    margin: 20px auto 0;
+    text-align: center;
+  }
 }
 .englp-section-common {
   padding: 0 0 90px;
