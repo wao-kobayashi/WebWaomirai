@@ -19,7 +19,6 @@ html
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssBase = '../../css/'
     - const cssLocal = ''
-
     link(href=`${cssBase}25_english-lp-main-2026.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}25_english-lp-main-2026.css.css?v=${Date.now()}`, rel="stylesheet")
     meta(property="og:image", content=ImgOgp)
@@ -112,16 +111,20 @@ html
 
       //お悩み解決
       .englp-solve
+        .englp-solve-arrow
+          i.fa-solid.fa-angles-down
         .englp-solve-title
           span|ワオ未来塾・グローバル英語
           |でその
           span|お悩みを
           |解決します！ 
         .englp-solve-subtitle
-          |Having Trouble?
+           |ENJOY ENGLISH
       //ワオ未来塾・グローバル英語で楽しく学べる仕組み    
       section.englp-section-solution 
-         .englp-section-solution-  
+
+         .englp-section-solution-head 
+           img(src=ImgStructurePc)
          //01ライブレッスン
          .englp-section-solution-grid 
            .englp-section-solution-grid-title
@@ -138,40 +141,46 @@ html
                      .englp-section-solution-grid-content-left-merits-list-icon
                         img(src=IcnCheckPerple)
                      .englp-section-solution-grid-content-left-merits-list-text  
-                          |授業の中でみんなで一緒に英語を 口に出すので、発音力がアップ！
+                          |授業の中でみんなで一緒に英語を
+                          br
+                          |口に出すので、発音力がアップ！
                    .englp-section-solution-grid-content-left-merits-list  
                      .englp-section-solution-grid-content-left-merits-list-icon
                         img(src=IcnCheckPerple)
                      .englp-section-solution-grid-content-left-merits-list-text  
-                          |一方的な座学形式ではなく、ゲーム性を取り入れながら
-                          b|楽しく学べる
-              .englp-section-solution-grid-content-right 
-                 img(src=ImgStructure02)
-         //02トレーニング動画
-         .englp-section-solution-grid 
-           .englp-section-solution-grid-title
-              .englp-section-solution-grid-title-number|02
-              .englp-section-solution-grid-title-title|トレーニング動画
-           .englp-section-solution-grid-content
-              .englp-section-solution-grid-content-left
-                .englp-section-solution-grid-content-left-title 
-                    |ライブ形式のレッスンで
-                    br
-                    |英語を楽しく学べる
-                .englp-section-solution-grid-content-left-merits 
-                  .englp-section-solution-grid-content-left-merits-list  
-                     .englp-section-solution-grid-content-left-merits-list-icon
-                        img(src=IcnCheckPerple)
-                     .englp-section-solution-grid-content-left-merits-list-text  
-                          |授業の中でみんなで一緒に英語を 口に出すので、発音力がアップ！
-                  .englp-section-solution-grid-content-left-merits-list  
-                     .englp-section-solution-grid-content-left-merits-list-icon
-                        img(src=IcnCheckPerple)
-                     .englp-section-solution-grid-content-left-merits-list-text  
-                          |一方的な座学形式ではなく、ゲーム性を取り入れながら
+                          |一方的な座学形式ではなく、
+                          br
+                          |ゲーム性を取り入れながら
                           b|楽しく学べる
               .englp-section-solution-grid-content-right 
                  img(src=ImgStructure03)
+           .englp-section-solution-grid-title
+              .englp-section-solution-grid-title-number| 
+              .englp-section-solution-grid-title-title|
+           .englp-section-solution-grid-content
+              .englp-section-solution-grid-content-left
+                .englp-section-solution-grid-content-left-title 
+                    |子どもの心を掴むのが
+                    br
+                    |上手な講師陣
+                .englp-section-solution-grid-content-left-merits 
+                   .englp-section-solution-grid-content-left-merits-list  
+                     .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                     .englp-section-solution-grid-content-left-merits-list-text  
+                          |子どもが大好きな講師陣
+                          br
+                          |先生は固定の先生なので安心
+                   .englp-section-solution-grid-content-left-merits-list  
+                     .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                     .englp-section-solution-grid-content-left-merits-list-text  
+                          |日本語も完璧！
+                          br
+                          |なので安心して学べる
+              .englp-section-solution-grid-content-right 
+                 img(src=ImgStructure04)
+
          //02トレーニング動画
          .englp-section-solution-grid 
            .englp-section-solution-grid-title
@@ -196,10 +205,9 @@ html
                         img(src=IcnCheckPerple)
                      .englp-section-solution-grid-content-left-merits-list-text  
                           |反復練習で自然と
-                          br
                           b|英語が口になじむ
               .englp-section-solution-grid-content-right 
-                 img(src=ImgStructure04)
+                 img(src=ImgStructure05)
          //03トレーニング動画
          .englp-section-solution-grid 
            .englp-section-solution-grid-title
@@ -228,7 +236,7 @@ html
                         b|明確
                         |になるのでより学習が効率的に
               .englp-section-solution-grid-content-right 
-                 img(src=ImgStructure04)
+                 img(src=ImgStructure06)
       //3分でわかる ワオ未来塾グローバル英語
       .englp-movie 
          .englp-movie-left 

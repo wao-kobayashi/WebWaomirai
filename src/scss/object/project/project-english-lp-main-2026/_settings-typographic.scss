@@ -7,6 +7,17 @@
   font-family: "Figtree", "Noto Sans JP", sans-serif;
 }
 
+@mixin font-size-engtitle {
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  @include responsive-style($breakpoint-sp) {
+    font-size: 20px;
+  }
+}
+
 @mixin font-size-xl {
   font-size: 27px;
   @include responsive-style($breakpoint-sp) {

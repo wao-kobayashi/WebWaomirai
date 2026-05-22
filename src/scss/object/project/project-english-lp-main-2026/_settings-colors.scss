@@ -2,6 +2,7 @@
 
 $lp-yellow: #ffde53;
 $lp-eng-parple-pale: #fff4ff;
+$lp-eng-parple-sub: #ffdfff;
 $lp-line-green: #00b900;
 
 /* 旧ファイル更新のため残しているが未使用 */
@@ -39,6 +40,7 @@ $categories: (
   "economy": (
     main-color: $cl-economy,
     sp-main-color: $cl-economy,
-    pale-color: #eaf6ff, // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    pale-color: #eaf6ff,
+    // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
