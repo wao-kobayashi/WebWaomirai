@@ -311,7 +311,7 @@ html
                     |・録音課題を元に個別のフィードバック動画をお子様にお届け
 
       //講師紹介
-      section.englp-section.englp-bg-purplelight.englp-section-common 
+      section.englp-section.englp-bg-purplelight.englp-section-common.englp-section-borderbottom
         .section-engtitle.head-purple.head-bg-gray
             .section-engtitle-main
               |TEACHER
@@ -325,7 +325,9 @@ html
           .englp-section-teacher-box 
              .englp-section-teacher-box-left 
                .englp-section-teacher-box-left-movie 
-                 img(src=ImgTeacherMovieRyan )
+                 +playbutton
+                 .englp-section-teacher-box-left-movie-person
+                      video(src=MovieRyan autoplay muted loop playsinline)
                .englp-section-teacher-box-left-sub 
                  img(src=ImgTeacherRyan)
              .englp-section-teacher-box-right   
@@ -347,9 +349,11 @@ html
           .englp-section-teacher-box 
              .englp-section-teacher-box-left 
                .englp-section-teacher-box-left-movie 
-                 img(src=ImgTeacherMovieRyan )
+                 +playbutton
+                 .englp-section-teacher-box-left-movie-person
+                      video(src=MoviePaulo autoplay muted loop playsinline)
                .englp-section-teacher-box-left-sub 
-                 img(src=ImgTeacherRyan)
+                 img(src=ImgTeacherPaulo)
              .englp-section-teacher-box-right   
                .englp-section-teacher-box-right-title 
                   .englp-section-teacher-box-right-title-main
@@ -365,11 +369,16 @@ html
                     |生徒からのコメント
                  .englp-section-teacher-box-right-comment-content 
                     |「優しいお父さんみたいでたくさん褒めてくれる」
-
+      //中間の写真
+      section.large-photo 
+        .large-photo-img
+           img(src=FvPc)
+        .large-photo-title-bg
+        .large-photo-title-text
+               |FEATURE
       //「ワオ未来塾・グローバル英語」と「他英語スクール」との違い
       section.englp-section.englp-bg-white 
-        .englp-section-titleeng 
-           |FEATURE
+
         .englp-section-title 
           h2.englp-section-title-main
            |「ワオ未来塾・グローバル英語」と

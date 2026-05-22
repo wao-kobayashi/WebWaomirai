@@ -523,44 +523,150 @@ section.englp-section-concern {
 }
 
 /* 講師紹介 */
-.englp-section-teacher-box {
-  padding: 55px 3cqmax;
+.englp-section-teacher {
+  border-radius: $border-radius-bigplus;
+  overflow: hidden;
   background: $cl-white;
   max-width: $widewidth;
   margin: 0 auto;
-  @include lp-eng-2column;
-  .englp-section-teacher-box-left {
-    position: relative;
-    .englp-section-teacher-box-left-sub {
-      position: absolute;
-      right: 0;
-      bottom: -45px;
-      width: 150px;
+  .englp-section-teacher-box {
+    padding: 55px 55px;
+
+    margin: 0 auto;
+    @include lp-eng-2column;
+    .englp-section-teacher-box-left {
+      position: relative;
+      .englp-section-teacher-box-left-movie {
+        position: relative;
+        overflow: hidden;
+        border-radius: $border-radius-big;
+        .englp-section-teacher-box-left-movie-person {
+          width: 500px;
+          height: 400px;
+          overflow: hidden;
+          &:before {
+            width: 500px;
+            height: 400px;
+            content: "";
+            display: block;
+            background: $cl-white;
+            opacity: 0.3;
+            position: absolute;
+            z-index: 1;
+          }
+          video {
+            position: absolute;
+            left: -100px;
+            top: 0;
+            width: 150%;
+            margin: auto;
+            border-radius: $border-radius-big;
+          }
+        }
+
+        .playbutton {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          z-index: 10;
+          svg {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+          }
+          &::before,
+          ::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: $cl-english;
+            animation: ripple-animation 2.3s infinite;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+
+          &::after {
+            animation-delay: 1s;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+      .englp-section-teacher-box-left-sub {
+        position: absolute;
+        right: -20px;
+        bottom: -45px;
+        width: 170px;
+        z-index: 2;
+      }
     }
-  }
-  .englp-section-teacher-box-right-title {
-    display: flex;
-    align-items: flex-end;
-    line-height: $lineheight-none;
-    gap: 20px;
-    margin: 0 0 30px;
-    .englp-section-teacher-box-right-title-main {
-      font-size: 60px;
-      font-weight: 800;
+    .englp-section-teacher-box-right-title {
+      display: flex;
+      align-items: flex-end;
       line-height: $lineheight-none;
+      gap: 20px;
+      margin: 0 0 30px;
+      .englp-section-teacher-box-right-title-main {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: $lineheight-none;
+      }
+      .englp-section-teacher-box-right-title-sub {
+        @include font-size-s;
+        font-weight: 600;
+        line-height: $lineheight-none;
+        margin: 0 0 10px;
+      }
     }
-    .englp-section-teacher-box-right-title-sub {
-      @include font-size-s;
-      font-weight: 600;
-      line-height: $lineheight-none;
-      margin: 0 0 10px;
+    .englp-section-teacher-box-right-text {
+      line-height: $lineheight-relaxed;
     }
-  }
-  .englp-section-teacher-box-right-text {
-    line-height: $lineheight-relaxed;
   }
 }
 
+section.large-photo {
+  position: relative;
+  margin: 0 0 65px;
+  .large-photo-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .large-photo-title-text {
+    text-align: center;
+    @include font-size-engtitle;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  .large-photo-title-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    background: $cl-white;
+    z-index: 1;
+    border-radius: $border-radius-extrabig $border-radius-extrabig 0 0;
+
+    margin: -20px auto 0 !important;
+  }
+}
 /* 他社との違い */
 
 /* 受講生の声 */

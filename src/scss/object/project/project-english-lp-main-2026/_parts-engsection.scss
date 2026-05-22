@@ -5,13 +5,16 @@
     text-align: center;
     @include font-size-xl;
     letter-spacing: 0.08em;
-    line-height: $lineheight-none;
+    line-height: $lineheight-normal;
   }
   .englp-section-title-sub {
     @include font-size-m;
     margin: 20px auto 0;
     text-align: center;
   }
+}
+.englp-section-borderbottom {
+  border-radius: 0 0 $border-radius-extrabig $border-radius-extrabig;
 }
 .englp-section-common {
   padding: 0 0 90px;
