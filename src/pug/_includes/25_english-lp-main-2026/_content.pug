@@ -472,20 +472,24 @@ html
               b|好きな教科を聞かれると「英語！」と答えるようになりました。
       // 授業コース〜カリキュラムの説明動画
       section.englp-section.englp-bg-white
-        .englp-section-titleeng 
-           |COURSE
+        .section-engtitle.head-white.head-bg-creamyellow 
+            .section-engtitle-main
+              |COURSE
         .englp-section-title 
             h2.englp-section-title-main
-              |よくある質問
-        .englp-section-faq 
-          .englp-section-faq-head
-            .englp-section-faq-head-question|Q 
-            .englp-section-faq-head-title 
-              |英語の歌をたくさん聞かせています。これも効果ありますか？
-            .englp-section-faq-head-toggle
-              |-
-          .englp-section-faq-content(style='display:none;')   
-            |リズムと音で英語の発音になれることができるのでとてもいい練習方法です。ただ、英語の歌にはあまり日常的に使ってほしくない表現が含まれていることがあります。ワオ未来塾のグローバル英語では、必要なフレーズをリズムに乗せて練習しますので、歌や九九を覚える感覚で覚えることができます。
+              |授業コース
+        .englp-section-course 
+           .englp-section-course-banner 
+             img(src=ImgCourseBanner01)
+           .englp-section-course-comingsoon
+             .englp-section-course-comingsoon-title 
+               |今後もコースは追加予定です。
+               br
+               |お楽しみに              
+        .englp-section-title 
+            h2.englp-section-title-main
+              |カリキュラムの説明動画
+        include _curriculum
       // 授業コース〜カリキュラムの説明動画
       section.englp-section.englp-bg-white
         .englp-section-titleeng 

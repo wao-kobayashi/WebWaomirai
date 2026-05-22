@@ -754,11 +754,60 @@ section.englp-section.englp-bg-creamyellow {
 }
 
 /* 授業コース */
+.englp-section-course {
+  width: 100%;
+  max-width: $middlewidth;
+  display: flex;
+  gap: 50px;
+  margin: 0 auto 70px;
 
+  > div {
+    flex: 1;
+  }
+  .englp-section-course-banner img {
+    border-radius: $border-radius-bigplus;
+  }
+  .englp-section-course-comingsoon {
+    border: 2px solid $cl-english;
+    border-radius: $border-radius-bigplus;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .englp-section-course-comingsoon-title {
+      color: $cl-english;
+      @include font-size-m;
+      text-align: center;
+      line-height: $lineheight-relaxed;
+      letter-spacing: 0.05em;
+    }
+  }
+}
 /* レッスンスケジュール */
 
 /* カリキュラム説明動画 */
+.englp-section-movie-curriculum-main {
+  width: 100%;
 
+  background: linear-gradient(
+    to bottom,
+    $cl-white 50%,
+    $lp-eng-purple-pale 50%
+  );
+  .englp-section-movie-curriculum-main-video {
+    margin: 0 auto;
+    max-width: $widewidth;
+    padding: 0px 60px 60px;
+    border-radius: $border-radius-extrabig;
+    overflow: hidden;
+    iframe {
+      border-radius: $border-radius-extrabig;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
 /* よくある質問 */
 
 /* LINE */
