@@ -184,6 +184,7 @@ section.englp-section-concern {
       line-height: $lineheight-none;
       padding: 8px 10px;
       border-radius: 4px;
+      margin: 0 0 0 20px;
     }
   }
   .englp-section-concern-content {
@@ -806,6 +807,194 @@ section.englp-section.englp-bg-creamyellow {
       overflow: hidden;
       aspect-ratio: 16 / 9;
     }
+  }
+}
+
+.englp-section-movie-curriculum-scroll {
+  background: $lp-eng-purple-pale;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  padding: 10px 25px 70px;
+  margin: 0 auto;
+  max-width: 100%;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $cl-graylight;
+    border-radius: $border-radius-small;
+  }
+
+  @include responsive-style($breakpoint-sp) {
+    gap: 24px;
+    padding: 10px 20px 50px;
+  }
+}
+
+.englp-section-movie-curriculum-scroll-block {
+  position: relative;
+  flex: 0 0 auto;
+  width: 630px;
+  min-width: 520px;
+
+  &.first {
+    margin-left: calc((100% - $widewidth) / 2);
+  }
+  @include responsive-style($breakpoint-sp) {
+    width: min(320px, 85vw);
+    min-width: 280px;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-title {
+    @include font-size-m;
+
+    letter-spacing: 0.05em;
+    line-height: $lineheight-normal;
+    padding-left: 2px;
+    height: 20px;
+    margin: 0 0 0 28px;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-line {
+    position: relative;
+    height: 18px;
+    margin: 14px 0 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      right: 0;
+      height: 2px;
+      background: $cl-english;
+      transform: translateY(-50%);
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: $cl-english;
+      margin: 0 0 0 28px;
+    }
+  }
+
+  &:not(:last-child) {
+    .englp-section-movie-curriculum-scroll-block-line::before {
+      right: -40px;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content {
+    position: relative;
+
+    background: $cl-white;
+    border-radius: $border-radius-big;
+    padding: 28px 24px 24px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      transform: rotate(-45deg);
+      border-radius: 0 0 0px 0;
+    }
+    @include responsive-style($breakpoint-sp) {
+      padding: 24px 18px 18px;
+      gap: 16px;
+    }
+  }
+  .englp-section-movie-curriculum-scroll-block-content-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-title {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    background: $cl-english;
+    color: $cl-white;
+    @include font-size-s;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: $lineheight-none;
+    padding: 10px 30px 8px 18px;
+    margin: 0 0 20px;
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 100%, 0 100%);
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 220px;
+    background: $cl-graylightest;
+    border-radius: $border-radius-big;
+    padding: 20px 18px 18px;
+
+    @include responsive-style($breakpoint-sp) {
+      flex: 1 1 100%;
+      min-width: 0;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-movie {
+    border-radius: $border-radius-big;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius-big;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-subtitle {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 10px 5px;
+    color: $cl-english;
+    background: $cl-white;
+    border: 1px solid $cl-english;
+    border-radius: $border-radius-small;
+    @include font-size-ss;
+    line-height: $lineheight-none;
+    letter-spacing: 0.05em;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-maintitle {
+    @include font-size-m;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: $lineheight-normal;
+    letter-spacing: 0.02em;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-text {
+    @include font-size-s;
+    margin-top: 8px;
+    line-height: $lineheight-relaxed;
+    color: $cl-gray;
   }
 }
 /* よくある質問 */

@@ -44,7 +44,7 @@
   }
 }
 @mixin font-size-ss {
-  font-size: 15px;
+  font-size: 13.5px;
   @include responsive-style($breakpoint-sp) {
     font-size: 14px;
   }
