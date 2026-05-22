@@ -6,30 +6,37 @@
             span.sub-label 英語を喋ることに特化
             span.main-label ワオ未来塾グローバル英語
           .grid-head-cell.grid-head-cell--sub マンツーマン英会話
-          .grid-head-cell.grid-head-cell--sub 通学型英会話スクール
+          .grid-head-cell.grid-head-cell--sub(style='border-radius:0 12px 0 0px; ight:1px solid #ebebeb;') 通学型英会話スクール
         // ── 授業形式 ──
         .grid-row
-          .grid-cell.grid-cell--label 授業形式
-          .grid-cell.grid-cell--primary
+          .grid-cell.grid-cell-flex.grid-cell--label(style='border-left:1px solid #ebebeb; border-top:1px solid #ebebeb; border-radius:12px 0 0 0;') 授業形式
+          .grid-cell.grid-cell--primary.grid-cell-flex
             .cell-title.cell-title--primary グループレッスン
-            .illust-placeholder イラスト
-          .grid-cell
+            .illust  
+               img(src=ImgIllustFeature01)
+              
+          .grid-cell.grid-cell-flex
             .cell-title 外国人とマンツーマンで喋る
-            .illust-placeholder イラスト
-          .grid-cell
+            .illust  
+               img(src=ImgIllustFeature02)
+          .grid-cell.grid-cell-flex(style='border-right:1px solid #ebebeb;')
             .cell-title 講義＋グループレッスン
-            .illust-placeholder イラスト
+            .illust  
+               img(src=ImgIllustFeature03)
         // ── 特徴 ──
         .grid-row
-          .grid-cell.grid-cell--label 特徴
+          .grid-cell.grid-cell--label.grid-cell-flex(style='border-left:1px solid #ebebeb;')
+             |特徴
           .grid-cell.grid-cell--primary
             ul.check-list
               li
                 span.check-icon
+                 img(src=IcnCheckPerple)
                 span グループで楽しく口が疲れるほど英語を喋ることで
                   span.underline-text.bold-text 飽きずに定着しやすい
               li
                 span.check-icon
+                 img(src=IcnCheckPerple)
                 span 毎月の個別フィードバックでリエゾンや
                   span.underline-text.bold-text 強弱
                   | などを改善できるため、成果が目に見えやすい。
@@ -37,18 +44,21 @@
             ul.check-list
               li
                 span.check-icon
+                 img(src=IcnCheckGray)
                 span 英語をしゃべる機会は多い
               li
                 span.check-icon
+                 img(src=IcnCheckGray)
                 span 英語の音に慣れていないとそもそも相手が言っていることが理解しづらい
-          .grid-cell
+          .grid-cell(style='border-right:1px solid #ebebeb;')
             ul.check-list
               li
                 span.check-icon
+                  img(src=IcnCheckGray)
                 span 文法など幅広く学べる反面、会話の機会が少ないため英会話力は伸びにくい
         // ── 講師 ──
         .grid-row
-          .grid-cell.grid-cell--label 講師
+          .grid-cell.grid-cell--label.grid-cell-flex(style='border-left:1px solid #ebebeb;') 講師
           .grid-cell.grid-cell--primary
             .instructor-main.instructor-main--primary 日本語の通じるネイティブ
               br
@@ -56,20 +66,20 @@
           .grid-cell
             .instructor-main 外国人（日本語NG）
             p.instructor-note 多彩な先生がいる反面講師によって教え方が異なる
-          .grid-cell
+          .grid-cell(style='border-right:1px solid #ebebeb;')
             .instructor-main 日本人 or 外国人（固定の先生）
         // ── こんな人におすすめ ──
         .grid-row
-          .grid-cell.grid-cell--label こんな人に
+          .grid-cell.grid-cell--label.grid-cell-flex(style='border-left:1px solid #ebebeb; border-bottom:1px solid #ebebeb;') こんな人に
             br
             | おすすめ
           .grid-cell.grid-cell--primary
             p.recommend-text.recommend-text--primary 英語をネイティブのように
               br
               | すらすらと喋れるようになりたい人
-          .grid-cell
+          .grid-cell(style='border-bottom:1px solid #ebebeb;')
             p.recommend-text すでに英語が基礎知識があり
               br
               | いっぱい喋る機会が欲しい
-          .grid-cell
+          .grid-cell(style='border-bottom:1px solid #ebebeb; border-right:1px solid #ebebeb; border-radius: 0 0 12px 0; overflow:hidden;')
             p.recommend-text 英語を幅広く学びたい人向け

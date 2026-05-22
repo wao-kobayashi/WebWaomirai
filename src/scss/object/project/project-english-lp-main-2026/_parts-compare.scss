@@ -22,13 +22,11 @@
 .compare-grid {
   display: grid;
   grid-template-columns: 130px 1fr 1fr 1fr;
-  min-width: 900px;
-  max-width: 1060px;
+  max-width: $widewidth;
   margin: 0 auto;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 /* ─── ヘッダー行 ─── */
@@ -57,30 +55,29 @@
 .grid-head-cell--primary {
   background: $cl-english;
   flex-direction: column;
-  padding-top: 0;
   border-radius: 12px 12px 0 0;
+  display: inline-flex;
+  flex-direction: column;
+  height: 80px;
 }
 
 .grid-head-cell--primary .sub-label {
+  background: $cl-gray;
   display: inline-block;
-  background: #fff;
-  color: $cl-english;
-  font-size: 12px;
+  color: $cl-white;
+  @include font-size-s;
   font-weight: 700;
-  padding: 4px 18px;
-  border-radius: 0 0 8px 8px;
-  margin-bottom: 8px;
-  letter-spacing: 0.06em;
 }
 
 .grid-head-cell--primary .main-label {
   font-size: 18px;
-  padding-bottom: 4px;
+  color: $cl-white;
 }
 
 /* 2・3列目ヘッダー */
 .grid-head-cell--sub {
-  background: #555;
+  align-self: end;
+  background: $cl-gray;
 }
 
 /* ─── ボディ行 ─── */
@@ -92,9 +89,11 @@
 .grid-cell {
   padding: 28px 20px;
   text-align: center;
-  font-size: 14px;
+  @include font-size-s;
   line-height: 1.8;
   border-bottom: 1px solid #ebebeb;
+}
+.grid-cell-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,11 +107,9 @@
 
 /* 行見出し */
 .grid-cell--label {
-  font-size: 13px;
-  font-weight: 700;
-  color: #555;
+  @include font-size-s;
   background: #fafafa;
-  padding: 28px 12px;
+  text-align: left;
 }
 
 /* 推しカラム強調枠 */
@@ -128,10 +125,8 @@
 
 /* ─── セル内パーツ ─── */
 .cell-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  color: #333;
+  @include font-size-s;
+  text-align: left;
 }
 
 .cell-title--primary {
@@ -139,16 +134,8 @@
 }
 
 /* ダミーイラスト */
-.illust-placeholder {
-  width: 160px;
-  height: 100px;
-  background: #eee;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #bbb;
-  font-size: 12px;
+.illust {
+  width: 70%;
 }
 
 /* チェックリスト */
@@ -163,7 +150,7 @@
   align-items: flex-start;
   gap: 8px;
   margin-bottom: 10px;
-  font-size: 14px;
+  @include font-size-s;
   line-height: 1.7;
 }
 
@@ -177,18 +164,9 @@
   width: 22px;
   height: 22px;
   margin-top: 2px;
-  background: $cl-english;
-  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.check-icon::after {
-  content: "✓";
-  color: #fff;
-  font-size: 13px;
-  line-height: 1;
 }
 
 /* img差し替え時 ──

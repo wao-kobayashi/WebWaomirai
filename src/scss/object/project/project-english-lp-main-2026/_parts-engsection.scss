@@ -26,7 +26,7 @@
   @include font-size-engtitle;
 
   position: relative;
-  margin: 0 0 20px;
+  margin: 0 0 0px;
 
   /* memo: 現状、高さ20pxに対して背景装飾は80px */
   &::before {
@@ -82,4 +82,7 @@ section.englp-bg-gray {
 
 section.englp-bg-purplelight {
   background: $lp-eng-purple-pale;
+}
+.englp-bg-creamyellow {
+  background: $cl-bg-creamyellow;
 }

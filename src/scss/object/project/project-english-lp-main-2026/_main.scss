@@ -670,6 +670,88 @@ section.large-photo {
 /* 他社との違い */
 
 /* 受講生の声 */
+section.englp-section.englp-bg-creamyellow {
+  padding: 0 0 90px;
+}
+
+.englp-section-voice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 50px;
+  max-width: $widewidth;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+
+  @include responsive-style($breakpoint-sp) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.englp-section-voice-box {
+  background: $cl-white;
+  overflow: hidden;
+  border-radius: $border-radius-bigplus;
+  @include box-shadow-small;
+  width: 100%;
+  display: block;
+
+  .englp-section-voice-box-title {
+    display: flex;
+    align-items: center;
+    padding: 0px 35px 5px;
+    gap: 20px;
+    background: #fffdf3;
+
+    .englp-section-voice-box-title-left {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+      width: 70px;
+      .englp-section-voice-box-title-left-img img {
+        width: 50px;
+        margin: 10px 0 0;
+      }
+
+      .englp-section-voice-box-title-left-tag {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        z-index: 9;
+        font-size: $font-size-sss;
+        line-height: $lineheight-normal;
+        border: 1px solid $cl-english;
+        border-radius: $border-radius-full;
+        padding: 2px 10px;
+        white-space: nowrap;
+        letter-spacing: 0.05em;
+        background: #fffdf3;
+        background: $cl-white;
+      }
+    }
+
+    .englp-section-voice-box-title-right {
+      @include font-size-m;
+      font-weight: bold;
+      line-height: $lineheight-normal;
+      margin: 10px 0 0;
+    }
+  }
+
+  .englp-section-voice-box-text {
+    padding: 25px 35px 40px;
+    @include font-size-s;
+    line-height: 2.1;
+
+    b {
+      font-weight: bold;
+    }
+  }
+}
 
 /* 授業コース */
 
