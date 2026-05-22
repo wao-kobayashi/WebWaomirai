@@ -238,20 +238,27 @@ html
               .englp-section-solution-grid-content-right 
                  img(src=ImgStructure06)
       //3分でわかる ワオ未来塾グローバル英語
-      .englp-movie 
-         .englp-movie-left 
-           .englp-movie-left-title 
-             span|3
-             |分でわかる ワオ未来塾グローバル英語
-           .englp-movie-left-text 
-               |「カタマリ」でしゃべるってどういうこと？
-         .englp-movie-right(style='width:30%; margin:0;')
-           div(style="padding:56.25% 0 0 0;position:relative;").
-            <iframe src="https://player.vimeo.com/video/1123798516?h=0cea059661&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="3分でわかる！新感覚英会話レッスン ワオ未来塾 グローバル英語"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+      .englp-movie
+         .section-engtitle.head-purple.head-bg-white 
+           .section-engtitle-main
+             |MOVIE
+         .englp-movie-flex
+          .englp-movie-flex-left 
+            .englp-movie-flex-left-title 
+              span|3
+              |分でわかる
+              br
+              |ワオ未来塾グローバル英語
+            .englp-movie-left-text 
+                |「カタマリ」でしゃべるってどういうこと？
+          .englp-movie-flex-right
+            div(style="padding:56.25% 0 0 0;position:relative;").
+              <iframe src="https://player.vimeo.com/video/1123798516?h=0cea059661&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="3分でわかる！新感覚英会話レッスン ワオ未来塾 グローバル英語"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
       //料金システム
-      section.englp-section.englp-bg-lightgray 
-        .englp-section-titleeng 
-           |PRICE
+      section.englp-section.englp-bg-gray.englp-section-common
+        .section-engtitle.head-gray.head-bg-white 
+            .section-engtitle-main
+              |PRICE
         .englp-section-title 
           h2.englp-section-title-main
              |料金システム
@@ -267,40 +274,47 @@ html
                  |グループレッスンとマンツーマンの
                  br
                  |良いとこどりの内容です
-              //01  
-              .englp-section-price-detail-grid 
-                .englp-section-price-detail-grid-icon 
-                  img(src=IcnPrice01)
-                .englp-section-price-detail-grid-title
-                  |ライブレッスン
-                .englp-section-price-detail-grid-text
-                  |・平日コース：25分 X 月6回
-                  br
-                  |・土曜日コース：50分 X 月3回
-                  br
-                  |・アーカイブあり
-              //02
-              .englp-section-price-detail-grid 
-                .englp-section-price-detail-grid-icon 
-                  img(src=IcnPrice02)
-                .englp-section-price-detail-grid-title
-                  |トレーニング動画＋録音提出
-                .englp-section-price-detail-grid-text
-                  |・いつでも、どこでも活用できる
-                  br
-                  |・毎日口に出して練習できる！
-              //03
-              .englp-section-price-detail-grid 
-                .englp-section-price-detail-grid-icon 
-                  img(src=IcnPrice03)
-                .englp-section-price-detail-grid-title
-                  |個別フィードバック動画
-                .englp-section-price-detail-grid-text
-                  |・録音課題を元に個別のフィードバック動画をお子様にお届け
+              .englp-section-price-detail-wrapper
+                //01  
+                .englp-section-price-detail-grid 
+                  .englp-section-price-detail-grid-icon 
+                    img(src=IcnPrice01)
+                  .englp-section-price-detail-grid-title
+                    |ライブレッスン
+                  .englp-section-price-detail-grid-text
+                    |・平日コース：25分 X 月6回
+                    br
+                    |・土曜日コース：50分 X 月3回
+                    br
+                    |・アーカイブあり
+                .englp-section-price-detail-plus
+                  |+
+                //02
+                .englp-section-price-detail-grid 
+                  .englp-section-price-detail-grid-icon 
+                    img(src=IcnPrice02)
+                  .englp-section-price-detail-grid-title
+                    |トレーニング動画＋録音提出
+                  .englp-section-price-detail-grid-text
+                    |・いつでも、どこでも活用できる
+                    br
+                    |・毎日口に出して練習できる！
+                .englp-section-price-detail-plus
+                  |+
+                //03
+                .englp-section-price-detail-grid 
+                  .englp-section-price-detail-grid-icon 
+                    img(src=IcnPrice03)
+                  .englp-section-price-detail-grid-title
+                    |個別フィードバック動画
+                  .englp-section-price-detail-grid-text
+                    |・録音課題を元に個別のフィードバック動画をお子様にお届け
+
       //講師紹介
-      section.englp-section.englp-bg-parplelight 
-        .englp-section-titleeng 
-           |TEACHER
+      section.englp-section.englp-bg-purplelight.englp-section-common 
+        .section-engtitle.head-purple.head-bg-gray
+            .section-engtitle-main
+              |TEACHER
         .englp-section-title 
           h2.englp-section-title-main
              |講師紹介

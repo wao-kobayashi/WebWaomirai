@@ -237,6 +237,7 @@ section.englp-section-concern {
   }
 }
 
+/* こんな悩みはありませんか */
 .englp-solve {
   .englp-solve-arrow {
     text-align: center;
@@ -262,12 +263,13 @@ section.englp-section-concern {
   }
 }
 
+/* 解決策 */
 .englp-section-solution {
   max-width: $max-width;
   width: 100%;
-  background: $lp-eng-parple-pale;
-  margin: 0 auto;
-  padding: 80px 44px 0;
+  background: $lp-eng-purple-pale;
+  margin: 0 auto 90px;
+  padding: 80px 44px 44px;
   border-radius: $border-radius-bigplus;
 }
 
@@ -288,7 +290,7 @@ section.englp-section-concern {
     flex-direction: column;
     border-right: 1px dotted $cl-english;
     font-weight: 500;
-    background: $lp-eng-parple-sub;
+    background: $lp-eng-purple-sub;
 
     &:nth-of-type(3) {
       border-top: 1px dotted $cl-english;
@@ -383,5 +385,125 @@ section.englp-section-concern {
         border-radius: 16px;
       }
     }
+  }
+}
+
+/* 動画 */
+.englp-movie {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto 90px;
+  padding: 0 0 55px;
+  background: $lp-eng-purple-pale;
+  border-radius: $border-radius-bigplus;
+  .englp-movie-flex {
+    padding: 0 55px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .englp-movie-flex-left {
+      flex: 1;
+      .englp-movie-flex-left-title {
+        @include font-size-xl;
+        text-align: center;
+        font-weight: 500;
+        line-height: $lineheight-tight;
+        letter-spacing: 0.15em;
+        margin: 0 0 20px;
+        span {
+          font-size: 60px;
+        }
+      }
+      .englp-movie-left-text {
+        @include font-size-m;
+        text-align: center;
+      }
+    }
+    .englp-movie-flex-right {
+      flex: 1.4;
+      border-radius: $border-radius-bigplus;
+      overflow: hidden;
+    }
+  }
+}
+/* 料金*/
+.englp-section-price {
+  width: 100%;
+  max-width: $widewidth;
+  margin: 0 auto;
+  .englp-section-price-main {
+    padding: 35px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    background: $cl-white;
+    border-radius: $border-radius-big;
+    .englp-section-price-main-free {
+      @include font-size-m;
+      background: $cl-english;
+      padding: 8px 10px;
+      line-height: $lineheight-none;
+      color: $cl-white;
+      border-radius: $border-radius-middle;
+      letter-spacing: 0.05em;
+      box-shadow: 3px 3px 0px $lp-yellow;
+    }
+    .englp-section-price-main-price {
+      line-height: $lineheight-none;
+      letter-spacing: 0.1em;
+      @include font-size-m;
+      span {
+        color: $cl-english;
+        font-size: 40px;
+        font-weight: bold;
+      }
+    }
+  }
+  .englp-section-price-detail {
+    text-align: center;
+    margin: 15px 0 0;
+    @include font-size-m;
+  }
+  .englp-section-price-detail-subtitle {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 40px 0 20px;
+  }
+}
+
+.englp-section-price-detail-wrapper {
+  display: flex;
+  align-items: stretch;
+  .englp-section-price-detail-grid {
+    flex: 3.3;
+    background: $cl-white;
+    border-radius: $border-radius-big;
+    padding: 40px 20px 35px;
+    border: 1px solid $cl-english;
+    box-shadow: 1px 1px 0px $lp-yellow;
+    img {
+      margin: 0 auto 30px;
+      width: 30%;
+    }
+    .englp-section-price-detail-grid-text {
+      text-align: left;
+      font-size: $font-size-m;
+      line-height: $lineheight-relaxed;
+    }
+    .englp-section-price-detail-grid-title {
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+  }
+
+  .englp-section-price-detail-plus {
+    flex: 1;
+    font-size: 50px;
+    font-weight: 200;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $cl-english;
   }
 }
