@@ -114,7 +114,7 @@
 }
 
 .englp-reviews {
-  margin: -40px 0 0;
+  margin: -25px 0 0;
   position: relative;
   z-index: 100;
   overflow: hidden;
@@ -162,8 +162,8 @@
 }
 
 section.englp-section-concern {
-  margin: 60px 0 0;
-  padding: 90px 0 135px;
+  margin: 40px 0 0;
+  padding: 75px 0 90px;
   background: $lp-yellow;
   border-radius: $border-radius-section;
   position: relative;
@@ -176,7 +176,7 @@ section.englp-section-concern {
     justify-content: center;
     letter-spacing: 1px;
     gap: 4px;
-    margin: 0 auto 60px;
+    margin: 0 auto 40px;
     span {
       display: inline-block;
       background: $cl-english;
@@ -184,7 +184,7 @@ section.englp-section-concern {
       line-height: $lineheight-none;
       padding: 8px 10px;
       border-radius: 4px;
-      margin: 0 0 0 20px;
+      margin: 0 5px 0 5px;
     }
   }
   .englp-section-concern-content {
@@ -200,7 +200,7 @@ section.englp-section-concern {
       border-radius: $border-radius-bigplus;
 
       .englp-section-concern-box-number {
-        font-size: 30px;
+        font-size: 25px;
         color: $cl-english;
         font-weight: 300;
         text-align: center;
@@ -220,6 +220,11 @@ section.englp-section-concern {
         letter-spacing: 0.05em;
         line-height: $lineheight-normal;
         margin: 0 auto 20px;
+      }
+
+      img {
+        width: 85%;
+        margin: 0 auto;
       }
     }
   }
@@ -243,8 +248,8 @@ section.englp-section-concern {
   .englp-solve-arrow {
     text-align: center;
     i.fa-solid.fa-angles-down {
-      margin: 69px auto 45px;
-      font-size: 50px;
+      margin: 30px auto 20px;
+      font-size: 40px;
       color: $cl-graylight;
     }
   }
@@ -269,11 +274,13 @@ section.englp-section-concern {
   max-width: $max-width;
   width: 100%;
   background: $lp-eng-purple-pale;
-  margin: 0 auto 90px;
-  padding: 80px 44px 44px;
+  margin: 0 auto 45px;
+  padding: 80px 44px 24px;
   border-radius: $border-radius-bigplus;
 }
-
+.englp-section-solution-head {
+  margin: 0 auto 20px;
+}
 .englp-section-solution-grid {
   display: grid;
   grid-template-columns: 46px minmax(0, 1fr);
@@ -282,7 +289,7 @@ section.englp-section-concern {
   border: 1px solid $cl-english;
   border-radius: 18px;
   background: #fff;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
   .englp-section-solution-grid-title {
     display: flex;
     align-items: center;
@@ -322,7 +329,7 @@ section.englp-section-concern {
     justify-content: space-between;
     gap: 48px;
     min-width: 0;
-    padding: 65px 50px;
+    padding: 60px 50px;
 
     &:nth-of-type(4) {
       border-top: 1px dotted $cl-english;
@@ -393,7 +400,7 @@ section.englp-section-concern {
 .englp-movie {
   width: 100%;
   max-width: $max-width;
-  margin: 0 auto 90px;
+  margin: 0 auto 75px;
   padding: 0 0 55px;
   background: $lp-eng-purple-pale;
   border-radius: $border-radius-bigplus;
@@ -434,7 +441,7 @@ section.englp-section-concern {
   margin: 0 auto;
   .englp-section-price-main {
     position: relative;
-    padding: 35px 0;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -449,8 +456,8 @@ section.englp-section-concern {
       left: 0px;
       right: 0px;
       margin: auto;
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       background: #fff;
       transform: rotate(45deg);
     }
@@ -483,7 +490,7 @@ section.englp-section-concern {
   .englp-section-price-detail-subtitle {
     font-weight: 600;
     letter-spacing: 0.05em;
-    margin: 40px 0 20px;
+    margin: 30px 0 15px;
   }
 }
 
@@ -494,12 +501,12 @@ section.englp-section-concern {
     flex: 3.3;
     background: $cl-white;
     border-radius: $border-radius-big;
-    padding: 40px 20px 35px;
+    padding: 35px 20px 25px;
     border: 1px solid $cl-english;
     box-shadow: 1px 1px 0px $lp-yellow;
     img {
-      margin: 0 auto 30px;
-      width: 30%;
+      margin: 0 auto 20px;
+      width: 28%;
     }
     .englp-section-price-detail-grid-text {
       text-align: left;
@@ -638,7 +645,7 @@ section.englp-section-concern {
 
 section.large-photo {
   position: relative;
-  margin: 0 0 65px;
+  margin: 0 0 45px;
   .large-photo-img img {
     width: 100%;
     height: 500px;
@@ -766,11 +773,11 @@ section.englp-section.englp-bg-creamyellow {
     flex: 1;
   }
   .englp-section-course-banner img {
-    border-radius: $border-radius-bigplus;
+    border-radius: $border-radius-big;
   }
   .englp-section-course-comingsoon {
     border: 2px solid $cl-english;
-    border-radius: $border-radius-bigplus;
+    border-radius: $border-radius-big;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -949,7 +956,7 @@ section.englp-section.englp-bg-creamyellow {
     min-width: 220px;
     background: $cl-graylightest;
     border-radius: $border-radius-big;
-    padding: 20px 18px 18px;
+    padding: 25px 25px 18px;
 
     @include responsive-style($breakpoint-sp) {
       flex: 1 1 100%;
@@ -958,14 +965,14 @@ section.englp-section.englp-bg-creamyellow {
   }
 
   .englp-section-movie-curriculum-scroll-block-content-card-movie {
-    border-radius: $border-radius-big;
+    border-radius: $border-radius-middle;
     overflow: hidden;
 
     img {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: $border-radius-big;
+      border-radius: $border-radius-middle;
     }
   }
 
