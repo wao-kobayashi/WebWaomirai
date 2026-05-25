@@ -62,7 +62,10 @@
 }
 
 /* decoration background */
-.section-engtitle.head-purple::before {
+.section-engtitle.head-bg-purple::before {
+  background: $lp-eng-purple-pale;
+}
+.section-engtitle.head-bg-purple {
   background: $lp-eng-purple-pale;
 }
 
@@ -76,6 +79,9 @@
 
 .section-engtitle.head-creamyellow::before {
   background: $cl-bg-creamyellow;
+}
+.section-engtitle.head-purple::before {
+  background: $lp-eng-purple-pale;
 }
 
 /* sections */

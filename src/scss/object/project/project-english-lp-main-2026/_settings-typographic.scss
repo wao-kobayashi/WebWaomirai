@@ -37,6 +37,11 @@
   @include responsive-style($breakpoint-sp) {
   }
 }
+@mixin font-size-ms {
+  font-size: 18px;
+  @include responsive-style($breakpoint-sp) {
+  }
+}
 @mixin font-size-s {
   font-size: 15px;
   @include responsive-style($breakpoint-sp) {

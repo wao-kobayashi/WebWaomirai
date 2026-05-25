@@ -1004,8 +1004,208 @@ section.englp-section.englp-bg-creamyellow {
     color: $cl-gray;
   }
 }
+
+.englp-section-movie-curriculum-cta {
+  background: $lp-eng-purple-pale;
+  display: flex;
+  justify-content: center;
+  padding: 45px 0 60px;
+  margin: 0px auto 0;
+  gap: 20px;
+  a {
+    text-decoration: none;
+  }
+  .englp-section-movie-curriculum-cta-button {
+    position: relative;
+    width: 450px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    border: 1px solid $cl-btn-ctaorange;
+    span {
+      color: $cl-btn-ctaorange;
+    }
+    .englp-section-movie-curriculum-cta-button-sub {
+      position: absolute;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
+      height: 27px;
+      background: $cl-white;
+      color: $cl-btn-ctaorange;
+      left: 0;
+      right: 0;
+      top: -15px;
+      margin: auto;
+      font-size: $font-size-s;
+      z-index: 10;
+      text-align: center;
+      border: 1px solid $cl-btn-ctaorange;
+      border-radius: $border-radius-full;
+      font-size: 12px;
+      @include responsive-style($breakpoint-sp) {
+        font-size: 12px;
+      }
+    }
+    .englp-section-movie-curriculum-cta-button-text {
+      font-size: 16px;
+      @include responsive-style($breakpoint-sp) {
+        font-size: 14px;
+      }
+    }
+  }
+  .englp-section-movie-curriculum-cta-button-icn span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  /* 年間カリキュラム */
+  .englp-section-movie-curriculum-cta-button-pdf {
+    background: $cl-white;
+    .englp-section-movie-curriculum-cta-button-text {
+      color: $cl-btn-ctaorange;
+      font-weight: 600;
+    }
+  }
+  .englp-section-movie-curriculum-cta-button-cta {
+    background: $cl-btn-ctaorange;
+    .englp-section-movie-curriculum-cta-button-text {
+      color: $cl-white;
+    }
+    span {
+      color: $cl-white;
+    }
+  }
+  /* CTA */
+}
 /* よくある質問 */
 
+$faq-gap: 30px;
+$faq-icn: 45px;
+.englp-section-faq {
+  max-width: 100%;
+  width: 750px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  background: $cl-white;
+  border-radius: $border-radius-big;
+
+  .englp-section-faq-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $faq-gap;
+    cursor: pointer;
+    .englp-section-faq-head-question {
+      width: $faq-icn;
+      height: $faq-icn;
+      border-radius: $border-radius-big;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      background: $cl-english;
+      color: $cl-white;
+    }
+    .englp-section-faq-head-title {
+      @include font-size-ms;
+      font-weight: bold;
+      flex: 1;
+    }
+    .englp-section-faq-head-toggle span {
+      font-size: 30px;
+    }
+  }
+  .englp-section-faq-content {
+    display: none;
+    padding: 15px calc($faq-gap + $faq-icn) 15px calc($faq-gap + $faq-icn);
+    line-height: $lineheight-relaxed;
+  }
+}
+
+.englp-section-faq.is-open .englp-section-faq-content {
+  display: block;
+}
+
+.englp-section-faq-head-toggle {
+  transition: transform 0.3s;
+}
+
+.englp-section-faq.is-open .englp-section-faq-head-toggle {
+  transform: rotate(180deg);
+}
+
 /* LINE */
+.englp-line {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto 75px;
+  padding: 0 0 55px;
+  background: $cl-graylightest;
+  border-radius: $border-radius-bigplus;
+  .englp-line-flex {
+    padding: 0 55px;
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+    .englp-line-flex-right {
+      flex: 1;
+      .englp-line-right-title {
+        @include font-size-xl;
+        text-align: center;
+        font-weight: 500;
+        line-height: $lineheight-tight;
+        letter-spacing: 0.15em;
+        margin: 0 0 20px;
+        span {
+          font-size: 60px;
+        }
+      }
+      .englp-line-right-text {
+        @include font-size-m;
+        text-align: center;
+      }
+    }
+    .englp-line-flex-left {
+      flex: 1;
+      border-radius: $border-radius-bigplus;
+      overflow: hidden;
+    }
+  }
+  .englp-line-right-btn {
+    width: 80%;
+    height: 60px;
+    background: $lp-line-green;
+    border-radius: $border-radius-full;
+    display: flex;
+    align-items: center;
+    margin: 30px auto 0;
+    justify-content: space-between;
+    padding: 0 18px;
+    font-size: 16px;
+    text-decoration: none;
+    @include responsive-style($breakpoint-sp) {
+      font-size: 14px;
+    }
+    .englp-line-right-btn-txt {
+      color: $cl-white;
+    }
+    .englp-line-right-btn-icn {
+      width: 30px;
+    }
+    .englp-line-right-btn-arrow span {
+      color: white;
+    }
+  }
+}
 
 /* ラポール22 */
