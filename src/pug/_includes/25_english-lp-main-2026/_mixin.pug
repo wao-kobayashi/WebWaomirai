@@ -5,6 +5,12 @@ mixin playbutton
   <path d="M53.3438 43.3438L34.5938 54.1691V32.5184L53.3438 43.3438Z" fill="white"/>
   </svg>
 
+mixin playbutton-black
+ .playbutton.
+  <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle opacity="0.6" cx="41.6667" cy="41.6667" r="41.6667" fill="#000000"/>
+  <path d="M53.3438 43.3438L34.5938 54.1691V32.5184L53.3438 43.3438Z" fill="white"/>
+  </svg>
 
 mixin cta-fixed
   //ここに内容
@@ -35,4 +41,12 @@ mixin menu-links
         li
           a(href="#faq") 
             |よくある質問
+.modal-video
+  .modal-video-wrapper
+    .modal-video-wrapper-content
+      div(style="padding:56.25% 0 0 0;position:relative;")
+        iframe(frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%").modal-video-iframe
+    .modal-video-close
+      |閉じる
 .bg-modal(style='display:none;')
+script(src="https://player.vimeo.com/api/player.js")
