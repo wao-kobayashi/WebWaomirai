@@ -1198,6 +1198,7 @@ $faq-icn: 45px;
     }
     .englp-line-right-btn-txt {
       color: $cl-white;
+      text-decoration: none;
     }
     .englp-line-right-btn-icn {
       width: 30px;
@@ -1209,3 +1210,73 @@ $faq-icn: 45px;
 }
 
 /* ラポール22 */
+.englp-section-rapport22 {
+  max-width: $max-width;
+  background: $cl-white;
+  padding: 55px;
+  margin: 0 auto 90px;
+  border-radius: $border-radius-bigplus;
+  display: flex;
+  gap: 50px;
+  .englp-section-rapport22-left {
+    flex: 1;
+
+    img {
+      border-radius: $border-radius-bigplus;
+      overflow: hidden;
+    }
+  }
+  .englp-section-rapport22-right {
+    flex: 1;
+    .englp-section-rapport22-right-title {
+      @include font-size-xl;
+      font-weight: 600;
+      margin: 0 0 15px;
+    }
+    .englp-section-rapport22-right-text {
+      line-height: $lineheight-relaxed;
+    }
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 75px 0px 0px;
+  text-align: center;
+  background: $cl-black;
+  color: white;
+  position: relative;
+  z-index: 2;
+  border-radius: $border-radius-extrabig $border-radius-extrabig 0 0;
+  @include responsive-style($breakpoint-sp) {
+    padding: 60px 0px 60px;
+  }
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  li {
+    list-style: none;
+    padding: 10px 0;
+    a {
+      color: white;
+      text-decoration: none;
+      @include font-size-m;
+    }
+  }
+  .footer-logo img {
+    width: 170px;
+    margin: 120px auto 45px;
+    @include responsive-style($breakpoint-sp) {
+      margin: 60px auto 45px;
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid $cl-graylight;
+    padding: 15px 0 150px;
+    color: $cl-graylight;
+    @include font-size-ss;
+  }
+}
