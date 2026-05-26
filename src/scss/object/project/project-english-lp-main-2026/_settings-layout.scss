@@ -35,12 +35,18 @@ header {
   position: fixed;
   background: $cl-white;
   width: 100%;
-  height: 48px;
+  height: 60px;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
+  @include responsive-style($breakpoint-sp) {
+    padding: 20px 10px;
+  }
+  h1 {
+    height: 32px;
+  }
 }
 
 nav {
@@ -57,6 +63,10 @@ nav {
       letter-spacing: 0.8px;
     }
   }
+}
+.humberger img {
+  position: relative;
+  width: 40px;
 }
 
 @mixin lp-eng-2column {

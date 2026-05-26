@@ -2,16 +2,23 @@
 .englp-fv {
   position: relative;
   height: 100vh;
+  @include responsive-style($breakpoint-sp) {
+    height: 80vh !important;
+  }
   .englp-fv-text {
     position: absolute;
-    left: calc((100% - 1200px) / 2);
+
     bottom: 80px;
     z-index: 10;
-    @media (max-width: 1230px) {
+    @include responsive-style($breakpoint-sp) {
+      left: 20px !important;
+    }
+    @include responsive-style(1230px) {
       left: 3%;
     }
+
+    left: calc((100% - 1200px) / 2);
     .englp-fv-subtitle {
-      font-size: 22px;
       background: $cl-english;
       color: $cl-white;
       letter-spacing: 0.07em;
@@ -21,6 +28,11 @@
       border-radius: 8px;
       display: inline-block;
       margin: 0 0 12px;
+      font-size: 22px;
+      @include responsive-style($breakpoint-sp) {
+        padding: 10px 14px !important;
+        font-size: 14px !important;
+      }
     }
     .englp-fv-title {
       font-size: min(88px, calc(60 * var(--px)));
@@ -28,12 +40,18 @@
       letter-spacing: 8px;
       line-height: 1.35;
       font-weight: 600;
+      @include responsive-style($breakpoint-sp) {
+        font-size: min(45px, calc(45 * var(--px))) !important;
+      }
     }
   }
   .englp-fv-img img {
     height: 100vh;
     width: 100%;
     object-fit: cover;
+    @include responsive-style($breakpoint-sp) {
+      height: 80vh !important;
+    }
   }
   &:before {
     position: absolute;
@@ -163,11 +181,17 @@
 
 section.englp-section-concern {
   margin: 40px 0 0;
-  padding: 75px 0 90px;
+
   background: $lp-yellow;
-  border-radius: $border-radius-section;
+
   position: relative;
-  .englp-section-concern-title {
+  padding: 75px 0 90px;
+  border-radius: $border-radius-section;
+  @include responsive-style($breakpoint-sp) {
+    padding: 40px 0 15px;
+    border-radius: $border-radius-extrabig;
+  }
+  .englp-section-concern-title-pc {
     position: relative;
     @include font-size-xl;
     font-weight: 600;
@@ -187,17 +211,52 @@ section.englp-section-concern {
       margin: 0 5px 0 5px;
     }
   }
+  .englp-section-concern-title-sp {
+    margin: 0 0 20px;
+    .englp-section-concern-title-sp-text {
+      position: relative;
+      @include font-size-xl;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+      gap: 4px;
+      margin: 0 auto 5px;
+      span {
+        display: inline-block;
+        background: $cl-english;
+        color: $cl-white;
+        line-height: $lineheight-none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin: 0 5px 0 5px;
+      }
+    }
+  }
   .englp-section-concern-content {
     display: flex;
     max-width: $widewidth;
     width: 100%;
     margin: 0 auto;
     gap: 40px;
+    padding: 45px 0;
+    @include responsive-style($breakpoint-sp) {
+      flex-direction: column;
+      background: $cl-white;
+      border-radius: $border-radius-bigplus;
+      width: calc(100% - 30px);
+      margin: 0 auto;
+      gap: 60px;
+    }
     .englp-section-concern-box {
       flex: 1;
       background: $cl-white;
       padding: 35px 0 40px;
       border-radius: $border-radius-bigplus;
+      @include responsive-style($breakpoint-sp) {
+        padding: 0px 0px 0px;
+      }
 
       .englp-section-concern-box-number {
         font-size: 25px;
@@ -220,6 +279,9 @@ section.englp-section-concern {
         letter-spacing: 0.05em;
         line-height: $lineheight-normal;
         margin: 0 auto 20px;
+        @include responsive-style($breakpoint-sp) {
+          margin: 0 auto 10px;
+        }
       }
 
       img {
@@ -251,21 +313,35 @@ section.englp-section-concern {
       margin: 30px auto 20px;
       font-size: 40px;
       color: $cl-graylight;
+      @include min-responsive-style($breakpoint-sp) {
+        margin: 20px auto 20px;
+      }
     }
   }
   .englp-solve-title {
     text-align: center;
     letter-spacing: 0.05em;
     @include font-size-l;
+
+    @include responsive-style($breakpoint-sp) {
+      margin: 0 0 20px;
+    }
     span {
       @include font-size-xl;
-      color: $cl-english;
-      font-weight: 600;
+
+      @include min-responsive-style($breakpoint-sp) {
+        font-weight: 600;
+        color: $cl-english;
+      }
     }
   }
   .englp-solve-subtitle {
     margin: 0 0 -70px;
     @include font-size-engtitle;
+
+    @include responsive-style($breakpoint-sp) {
+      margin: 0 0 -70px;
+    }
   }
 }
 
@@ -277,31 +353,137 @@ section.englp-section-concern {
   margin: 0 auto 45px;
   padding: 80px 44px 24px;
   border-radius: $border-radius-bigplus;
+  overflow: hidden;
+  @include responsive-style($breakpoint-sp) {
+    padding: 80px 0px 24px;
+  }
 }
 .englp-section-solution-head {
   margin: 0 auto 20px;
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    margin: 20px auto 20px;
+    padding: 30px 15px 30px;
+    border-radius: $border-radius-big;
+    background: $cl-white;
+  }
+  .englp-section-solution-head-title {
+    @include font-size-l;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+  .englp-section-solution-head-sp01 {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .englp-section-solution-head-sp02 {
+    padding: 20px 5px 0;
+  }
+  img {
+    width: 100%;
+  }
 }
 .englp-section-solution-grid {
   display: grid;
-  grid-template-columns: 46px minmax(0, 1fr);
+
   grid-template-rows: auto auto;
-  overflow: hidden;
-  border: 1px solid $cl-english;
+
   border-radius: 18px;
-  background: #fff;
   margin: 0 auto 30px;
+  grid-template-columns: 46px minmax(0, 1fr);
+
+  @include min-responsive-style($breakpoint-sp) {
+    border: 1px solid $cl-english;
+    background: #fff;
+    overflow: hidden;
+  }
+  @include responsive-style($breakpoint-sp) {
+    grid-template-columns: 30px minmax(0, 1fr) !important;
+    width: calc(100% - 15px);
+    margin: 15px auto 0 0;
+  }
+
+  @include responsive-style($breakpoint-sp) {
+    .item-a {
+      grid-column: 1 / -1; // 全幅
+      grid-row: 1;
+      position: relative;
+      &:before {
+        position: absolute;
+
+        content: "";
+        width: 10px;
+        height: 10px;
+        display: block;
+        background: $cl-english;
+        top: 20px;
+        left: 11px;
+        border-radius: $border-radius-full;
+      }
+      &:after {
+        position: absolute;
+        top: 24px;
+        left: 11px;
+        content: "";
+        width: 35px;
+        height: 2px;
+        display: block;
+        background: $cl-english;
+        left: 15px;
+      }
+    }
+    .item-c {
+      grid-column: 1;
+      grid-row: 2 / 4; // 2〜3行目を縦に結合
+      position: relative;
+      &:before {
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        content: "";
+        width: 2px;
+        height: 1000px;
+        display: block;
+        background: $cl-english;
+        left: 15px;
+      }
+    }
+    .item-c02:before {
+      top: -70px !important;
+    }
+    .item-b {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .item-d {
+      grid-column: 2;
+      grid-row: 3;
+    }
+  }
+
   .englp-section-solution-grid-title {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 0 20px 0;
     flex-direction: column;
-    border-right: 1px dotted $cl-english;
-    font-weight: 500;
-    background: $lp-eng-purple-sub;
 
-    &:nth-of-type(3) {
-      border-top: 1px dotted $cl-english;
+    font-weight: 500;
+    @include responsive-style($breakpoint-sp) {
+      padding: 0 0px 0 !important;
+      flex-direction: row !important;
+      height: 50px;
+      padding: 0 0 0 60px !important;
+    }
+    @include min-responsive-style($breakpoint-sp) {
+      border-right: 1px dotted $cl-english;
+      background: $lp-eng-purple-sub;
+    }
+    @include min-responsive-style($breakpoint-sp) {
+      &:nth-of-type(3) {
+        border-top: 1px dotted $cl-english;
+      }
     }
 
     .englp-section-solution-grid-title-number {
@@ -311,15 +493,26 @@ section.englp-section-concern {
       margin: 22px 0px 0 3px;
       text-align: center;
       color: $cl-english;
+      @include responsive-style($breakpoint-sp) {
+        margin: 0px 0px 0 0px;
+        font-size: 30px;
+        font-weight: 300;
+      }
     }
 
     .englp-section-solution-grid-title-title {
       @include font-size-ss;
       letter-spacing: 0;
-      writing-mode: vertical-rl;
-      text-orientation: upright;
+
       letter-spacing: 2px;
       color: $cl-english;
+      @include min-responsive-style($breakpoint-sp) {
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+      }
+      @include responsive-style($breakpoint-sp) {
+        color: $cl-black;
+      }
     }
   }
 
@@ -331,8 +524,18 @@ section.englp-section-concern {
     min-width: 0;
     padding: 60px 50px;
 
-    &:nth-of-type(4) {
-      border-top: 1px dotted $cl-english;
+    @include responsive-style($breakpoint-sp) {
+      gap: 0px !important;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      padding: 20px 20px;
+      background: $cl-white;
+      border-radius: $border-radius-big;
+    }
+    @include min-responsive-style($breakpoint-sp) {
+      &:nth-of-type(4) {
+        border-top: 1px dotted $cl-english;
+      }
     }
 
     .englp-section-solution-grid-content-left {
@@ -345,22 +548,34 @@ section.englp-section-concern {
         letter-spacing: 0.1em;
         margin-bottom: 35px;
         line-height: $lineheight-normal;
+        @include responsive-style($breakpoint-sp) {
+          margin-bottom: 20px !important;
+          line-height: 1.45 !important;
+        }
       }
 
       .englp-section-solution-grid-content-left-merits {
         display: grid;
         gap: 28px;
-
+        @include responsive-style($breakpoint-sp) {
+          gap: 15px;
+        }
         .englp-section-solution-grid-content-left-merits-list {
           display: flex;
           align-items: flex-start;
           gap: 16px;
-
+          @include responsive-style($breakpoint-sp) {
+            gap: 12px;
+          }
           .englp-section-solution-grid-content-left-merits-list-icon {
             flex: 0 0 38px;
             width: 38px;
             height: 38px;
-
+            @include responsive-style($breakpoint-sp) {
+              flex: 0 0 20px;
+              width: 20px;
+              height: 20px;
+            }
             img {
               display: block;
               width: 100%;
@@ -369,11 +584,12 @@ section.englp-section-concern {
           }
 
           .englp-section-solution-grid-content-left-merits-list-text {
-            font-size: 18px;
-
-            line-height: 1.75;
+            @include font-size-ms;
+            line-height: $lineheight-normal;
             letter-spacing: 0;
-
+            @include responsive-style($breakpoint-sp) {
+              margin: -2px 0 0;
+            }
             b {
             }
           }
@@ -383,16 +599,23 @@ section.englp-section-concern {
 
     .englp-section-solution-grid-content-right {
       flex: 0 1 50%;
-      max-width: 492px;
-      min-width: 320px;
 
       img {
         display: block;
         width: 100%;
         height: auto;
         border-radius: 16px;
+        @include responsive-style($breakpoint-sp) {
+          margin: 0 0 20px;
+        }
       }
     }
+  }
+  .englp-section-solution-grid-content02 {
+    border-radius: $border-radius-big $border-radius-big 0 0 !important;
+  }
+  .englp-section-solution-grid-content03 {
+    border-radius: 0 0 $border-radius-big $border-radius-big !important;
   }
 }
 
