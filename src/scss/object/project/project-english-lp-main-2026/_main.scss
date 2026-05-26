@@ -134,7 +134,7 @@
 .englp-reviews {
   margin: -25px 0 0;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   overflow: hidden;
   .englp-reviews-track {
     display: flex;
@@ -1215,6 +1215,7 @@ section.englp-section.englp-bg-creamyellow {
 .englp-section-course-schedule-img {
   text-align: center;
   margin: 30px auto 70px;
+  max-width: $middlewidth;
   @include responsive-style($breakpoint-sp) {
     width: calc(100% - 30px);
     margin: 10px auto 70px;

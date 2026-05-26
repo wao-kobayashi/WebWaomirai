@@ -14,6 +14,14 @@ script.
     });
 script.
     $(function () {
+        // メニューモーダル
+        $('.humberger').on('click', function () {
+            $('.menu-modal, .bg-modal').fadeIn();
+        });
+
+        $('.menu-modal-navi a, .menu-modal-close,.bg-modal').on('click', function () {
+            $('.menu-modal, .bg-modal').fadeOut();
+        });
 
         $('.englp-section-voice-box-text-button button').on('click', function () {
             var $box = $(this).closest('.englp-section-voice-box-text');

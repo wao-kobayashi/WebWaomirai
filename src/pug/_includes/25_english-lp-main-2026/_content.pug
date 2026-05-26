@@ -143,7 +143,7 @@ html
            |ENGLISH
 
       //ワオ未来塾・グローバル英語で楽しく学べる仕組み    
-      section.englp-section-solution 
+      section.englp-section-solution#solution
 
         .englp-section-solution-head
           .pcimage 
@@ -300,7 +300,7 @@ html
               </iframe>
             </div>
       //料金システム
-      section.englp-section.englp-bg-gray.englp-section-common
+      section.englp-section.englp-bg-gray.englp-section-common#price
         .section-engtitle.head-gray.head-bg-white 
             .section-engtitle-main
               |PRICE
@@ -355,7 +355,7 @@ html
                   .englp-section-price-detail-grid-text
                     |・録音課題を元に個別のフィードバック動画をお子様にお届け
       //講師紹介
-      section.englp-section.englp-bg-purplelight.englp-section-common.englp-section-borderbottom
+      section.englp-section.englp-bg-purplelight.englp-section-common.englp-section-borderbottom#teacher
         .section-engtitle.head-purple.head-bg-gray
             .section-engtitle-main
               |TEACHER
@@ -421,7 +421,7 @@ html
         .large-photo-title-text
               |FEATURE
       //「ワオ未来塾・グローバル英語」と「他英語スクール」との違い
-      section.englp-section.englp-bg-white.englp-section-common
+      section.englp-section.englp-bg-white.englp-section-common#feature
         .englp-section-title 
           h2.englp-section-title-main
             |「ワオ未来塾・グローバル英語」と
@@ -429,7 +429,7 @@ html
             |「他英語スクール」との違い
         include _compare
       //「受講生の声
-      section.englp-section.englp-bg-creamyellow
+      section.englp-section.englp-bg-creamyellow#voice
         .section-engtitle.head-creamyellow.head-bg-white 
             .section-engtitle-main
               |VOICE
@@ -531,7 +531,7 @@ html
                 button(type='button' aria-expanded='false')
                   |続きを読む +
       // 授業コース〜カリキュラムの説明動画
-      section.englp-section.englp-bg-white
+      section.englp-section.englp-bg-white#schedule
         .section-engtitle.head-white.head-bg-creamyellow 
             .section-engtitle-main
               |COURSE
@@ -565,7 +565,7 @@ html
               |カリキュラムの説明動画
         include _curriculum
       // FAQ,
-      section.englp-section.englp-bg-gray.englp-section-common
+      section.englp-section.englp-bg-gray.englp-section-common#faq
         .section-engtitle.head-gray.head-bg-purple 
             .section-engtitle-main
               |FAQ
@@ -649,6 +649,7 @@ html
             img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
           .footer-copyright
             |© ワオ・コーポレーション All rights reserved.
-      
+
+    +menu-modal
 //js
 include _js

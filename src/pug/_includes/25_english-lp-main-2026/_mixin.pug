@@ -21,7 +21,7 @@ mixin menu-links
           a(href="#") 
             |トップ
         li
-          a(href="#feature") 
+          a(href="#solution") 
             |特徴
         li
           a(href="#price") 
@@ -41,6 +41,17 @@ mixin menu-links
         li
           a(href="#faq") 
             |よくある質問
+
+mixin menu-modal
+  .menu-modal(style='display:none;')
+    .menu-modal-logo
+      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    .menu-modal-navi
+      +menu-links
+    .menu-modal-close.modal-close
+      i.fa-solid.fa-xmark
+      span|閉じる
+
 .modal-video
   .modal-video-wrapper
     .modal-video-wrapper-content

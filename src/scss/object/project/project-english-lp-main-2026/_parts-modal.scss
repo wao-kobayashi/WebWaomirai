@@ -2,9 +2,92 @@
 .modal-video {
   display: none;
 }
+.menu-modal {
+  position: fixed;
+  z-index: 1003;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $cl-graylightest;
+  display: inline-table;
+  text-align: center;
+  overflow-y: auto;
+
+  @include min-responsive-style($breakpoint-sp) {
+    margin: auto;
+    max-width: 450px;
+    border-radius: $border-radius-big;
+  }
+
+  .menu-modal-logo img {
+    width: 45%;
+    max-width: 200px;
+    margin: 28px auto;
+    display: block;
+  }
+
+  .menu-modal-navi {
+    padding: 0 20px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    li a {
+      background: $cl-white;
+      min-height: 48px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      @include font-size-s;
+      border-radius: $border-radius-small;
+      @include box-shadow-small;
+      text-decoration: none;
+      color: $cl-black;
+      padding: 8px 10px;
+      line-height: $lineheight-normal;
+    }
+  }
+
+  .menu-modal-close {
+    height: 56px;
+    background: $cl-english;
+    width: 70%;
+    max-width: 320px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include font-size-s;
+    border-radius: $border-radius-full;
+    margin: 25px auto 30px;
+    @include box-shadow-small;
+    color: $cl-white;
+    gap: 8px;
+    cursor: pointer;
+    color: $cl-white;
+    i {
+      font-size: 20px;
+      color: $cl-white;
+    }
+    span {
+      color: $cl-white;
+    }
+  }
+}
+
 .modal-video-wrapper {
   position: fixed;
-  z-index: 1000;
+  z-index: 1002;
   top: 0;
   left: 0;
   right: 0;
@@ -52,7 +135,7 @@
 .bg-modal {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 1001;
   top: 0;
   left: 0;
   right: 0;
