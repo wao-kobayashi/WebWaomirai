@@ -21,6 +21,10 @@
         width: 120px;
         height: 120px;
         margin: auto;
+        @include responsive-style($breakpoint-sp) {
+          width: 60px;
+          height: 60px;
+        }
       }
       //   &::before,
       //   ::after {
@@ -50,11 +54,18 @@
     position: relative;
     margin: 0 auto;
     max-width: $widewidth;
+    width: 100%;
     padding: 0px 60px 60px;
     border-radius: $border-radius-extrabig;
     overflow: hidden;
-
+    @include responsive-style($breakpoint-sp) {
+      border-radius: $border-radius-bigplus;
+      padding: 0px 15px 0px;
+    }
     iframe {
+      @include responsive-style($breakpoint-sp) {
+        border-radius: $border-radius-big;
+      }
       border-radius: $border-radius-extrabig;
       overflow: hidden;
       aspect-ratio: 16 / 9;
@@ -68,11 +79,12 @@
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-wrap: nowrap;
-  gap: 40px;
   padding: 10px 25px 70px;
   margin: 0 auto;
   max-width: 100%;
-
+  @include responsive-style($breakpoint-sp) {
+    padding: 60px 0px 30px !important;
+  }
   &::-webkit-scrollbar {
     height: 6px;
   }
@@ -85,37 +97,33 @@
     background: $cl-graylight;
     border-radius: $border-radius-small;
   }
-
-  @include responsive-style($breakpoint-sp) {
-    gap: 24px;
-    padding: 10px 20px 50px;
-  }
 }
 
 .englp-section-movie-curriculum-scroll-block {
   position: relative;
   flex: 0 0 auto;
   width: 630px;
-  min-width: 520px;
+  &.main {
+    margin: 0 40px 0 0;
+  }
+  // min-width: 520px;
 
-  &.first {
-    margin-left: calc((100% - $widewidth) / 2);
-  }
-  @include responsive-style($breakpoint-sp) {
-    width: min(320px, 85vw);
-    min-width: 280px;
-  }
+  // &.first {
+  //   margin-left: calc((100% - $widewidth) / 2);
+  // }
 
   .englp-section-movie-curriculum-scroll-block-title {
-    @include font-size-m;
+    @include font-size-s;
 
     letter-spacing: 0.05em;
     line-height: $lineheight-normal;
     padding-left: 2px;
-    height: 20px;
-    margin: 0 0 0 28px;
+    height: 16px;
+    margin: 0 0 0 32px;
     span {
       font-weight: bold;
+      @include font-size-l;
+      margin: 0 3px 0 0;
     }
   }
 
@@ -139,11 +147,11 @@
       position: relative;
       z-index: 1;
       display: block;
-      width: 18px;
-      height: 18px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background: $cl-english;
-      margin: 0 0 0 28px;
+      margin: 0 0 0 33px;
     }
   }
 
@@ -201,11 +209,6 @@
     background: $cl-graylightest;
     border-radius: $border-radius-big;
     padding: 25px 25px 18px;
-
-    @include responsive-style($breakpoint-sp) {
-      flex: 1 1 100%;
-      min-width: 0;
-    }
   }
 
   .englp-section-movie-curriculum-scroll-block-content-card-movie {
@@ -294,8 +297,11 @@
   padding: 45px 0 60px;
   margin: 0px auto 0;
   gap: 20px;
+
   @include responsive-style($breakpoint-sp) {
     flex-direction: column;
+    padding: 30px 15px 0;
+    gap: 30px;
   }
   a {
     text-decoration: none;
@@ -310,6 +316,9 @@
     align-items: center;
     border-radius: $border-radius-full;
     border: 1px solid $cl-btn-ctaorange;
+    @include responsive-style($breakpoint-sp) {
+      height: 60px;
+    }
     span {
       color: $cl-btn-ctaorange;
     }
@@ -339,7 +348,7 @@
     .englp-section-movie-curriculum-cta-button-text {
       font-size: 16px;
       @include responsive-style($breakpoint-sp) {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }

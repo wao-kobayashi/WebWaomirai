@@ -2,7 +2,7 @@
 .englp-section-title {
   margin: 0 auto 40px;
   @include responsive-style($breakpoint-sp) {
-    margin: 20px auto 40px;
+    margin: 20px auto 20px;
   }
   h2 {
     text-align: center;
@@ -18,9 +18,15 @@
 }
 .englp-section-borderbottom {
   border-radius: 0 0 $border-radius-extrabig $border-radius-extrabig;
+  @include responsive-style($breakpoint-sp) {
+    border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+  }
 }
 .englp-section-common {
   padding: 0 0 90px;
+  @include responsive-style($breakpoint-sp) {
+    padding: 0 0 60px;
+  }
 }
 
 /* セクションの繋ぎ目 */
@@ -44,6 +50,7 @@
     height: 60px;
     @include responsive-style($breakpoint-sp) {
       height: 25px;
+      border-radius: $border-radius-big $border-radius-big 0 0;
     }
   }
 

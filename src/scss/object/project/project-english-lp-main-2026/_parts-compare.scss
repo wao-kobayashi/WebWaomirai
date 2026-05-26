@@ -19,14 +19,23 @@
 }
 
 /* ─── Grid本体 ─── */
+.compare-grid-wrapper {
+  overflow-x: scroll;
+  position: relative;
+}
 .compare-grid {
   display: grid;
   grid-template-columns: 130px 1fr 1fr 1fr;
   max-width: $widewidth;
+  min-width: 800px;
   margin: 0 auto;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
+  @include responsive-style($breakpoint-sp) {
+    grid-template-columns: 100px 1fr 1fr 1fr;
+    margin: 0 120px 0 15px;
+  }
 }
 
 /* ─── ヘッダー行 ─── */
@@ -70,9 +79,12 @@
 }
 
 .grid-head-cell--primary .main-label {
-  font-size: 18px;
   color: $cl-white;
   margin: 4px 0 0;
+  font-size: 18px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 16px;
+  }
 }
 
 /* 2・3列目ヘッダー */
@@ -93,6 +105,9 @@
   @include font-size-s;
   line-height: 1.8;
   border-bottom: 1px solid #ebebeb;
+  @include responsive-style($breakpoint-sp) {
+    padding: 12px 12px;
+  }
 }
 .grid-cell-flex {
   display: flex;
@@ -111,6 +126,7 @@
   @include font-size-s;
   background: #fafafa;
   text-align: left;
+  line-height: $lineheight-normal;
 }
 
 /* 推しカラム強調枠 */
@@ -185,6 +201,9 @@
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 14px;
+  }
 }
 
 .instructor-main--primary {
@@ -199,9 +218,13 @@
 
 /* おすすめセル */
 .recommend-text {
-  font-size: 15px;
   font-weight: 700;
-  line-height: 1.8;
+  line-height: 1.75;
+  font-size: 15px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 14px;
+    line-height: $lineheight-normal;
+  }
 }
 
 .recommend-text--primary {

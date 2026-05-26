@@ -260,14 +260,14 @@ html
                         img(src=IcnCheckPerple)
                     .englp-section-solution-grid-content-left-merits-list-text  
                           |お子さまの英語録音課題を元に先生が
-                          br.pcimimage
+                          br.pcimage
                           b|毎月フィードバック動画をお届け
                   .englp-section-solution-grid-content-left-merits-list  
                     .englp-section-solution-grid-content-left-merits-list-icon
                         img(src=IcnCheckPerple)
                     .englp-section-solution-grid-content-left-merits-list-text  
                         b|何が得意で何が苦手なのかが
-                        br
+                        br.pcimage
                         b|明確
                         |になるのでより学習が効率的に
               .englp-section-solution-grid-content-right 
@@ -278,7 +278,7 @@ html
       //3分でわかる ワオ未来塾グローバル英語
       .englp-movie
         .section-engtitle.head-purple.head-bg-white 
-          .section-engtitle-main
+          .section-engtitle-main(style='color:transparent;')
             |MOVIE
         .englp-movie-flex
           .englp-movie-flex-left 
@@ -322,7 +322,7 @@ html
               .englp-section-price-detail-wrapper
                 //01  
                 .englp-section-price-detail-grid 
-                  .englp-section-price-detail-grid-icon 
+                  .englp-section-price-detail-grid-icon.pcimage 
                     img(src=IcnPrice01)
                   .englp-section-price-detail-grid-title
                     |ライブレッスン
@@ -336,7 +336,7 @@ html
                   |+
                 //02
                 .englp-section-price-detail-grid 
-                  .englp-section-price-detail-grid-icon 
+                  .englp-section-price-detail-grid-icon.pcimage 
                     img(src=IcnPrice02)
                   .englp-section-price-detail-grid-title
                     |トレーニング動画＋録音提出
@@ -348,7 +348,7 @@ html
                   |+
                 //03
                 .englp-section-price-detail-grid 
-                  .englp-section-price-detail-grid-icon 
+                  .englp-section-price-detail-grid-icon.pcimage 
                     img(src=IcnPrice03)
                   .englp-section-price-detail-grid-title
                     |個別フィードバック動画
@@ -414,28 +414,28 @@ html
                 .englp-section-teacher-box-right-comment-content 
                     |「優しいお父さんみたいでたくさん褒めてくれる」
       //中間の写真
-      section.large-photo(style='display:none;')
+      section.large-photo
         .large-photo-img
           img(src=FvPc)
         .large-photo-title-bg
         .large-photo-title-text
               |FEATURE
       //「ワオ未来塾・グローバル英語」と「他英語スクール」との違い
-      section.englp-section.englp-bg-white.englp-section-common(style='display:none;') 
+      section.englp-section.englp-bg-white.englp-section-common
         .englp-section-title 
           h2.englp-section-title-main
-          |「ワオ未来塾・グローバル英語」と
-          br
-          |「他英語スクール」との違い
+            |「ワオ未来塾・グローバル英語」と
+            br
+            |「他英語スクール」との違い
         include _compare
       //「受講生の声
-      section.englp-section.englp-bg-creamyellow(style='display:none;')
+      section.englp-section.englp-bg-creamyellow
         .section-engtitle.head-creamyellow.head-bg-white 
             .section-engtitle-main
               |VOICE
         .englp-section-title 
           h2.englp-section-title-main
-          |受講生の声
+            |受講生の声
         .englp-section-voice 
           .englp-section-voice-box 
             .englp-section-voice-box-title 
@@ -447,14 +447,18 @@ html
               .englp-section-voice-box-title-right
                 |およそ半年で英検3級に合格
             .englp-section-voice-box-text  
-              |別のオンライン英会話では先生が何を言っているかわからず、会話が続かないのが悩みでした。
-              br
-              br
-              b|ワオ未来塾のライブレッスンはリアルタイムの参加がとにかく楽しいです。
-              |耳に残るフレーズのおかげで、英検のリスニングでも「聞いたことあるフレーズ！」が多く、高得点を獲得しリエゾンの凄さを実感しました。
-              br
-              |学校では担任の先生に褒められたり、英語施設への遠足では友達に「何を聞かれてるか」を教えてあげられるほどになり、
-              b|好きな教科を聞かれると「英語！」と答えるようになりました。
+              p
+                |別のオンライン英会話では先生が何を言っているかわからず、会話が続かないのが悩みでした。
+                br
+                br
+                b|ワオ未来塾のライブレッスンはリアルタイムの参加がとにかく楽しいです。
+                |耳に残るフレーズのおかげで、英検のリスニングでも「聞いたことあるフレーズ！」が多く、高得点を獲得しリエゾンの凄さを実感しました。
+                br
+                |学校では担任の先生に褒められたり、英語施設への遠足では友達に「何を聞かれてるか」を教えてあげられるほどになり、
+                b|好きな教科を聞かれると「英語！」と答えるようになりました。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
           .englp-section-voice-box 
             .englp-section-voice-box-title 
               .englp-section-voice-box-title-left 
@@ -467,14 +471,18 @@ html
                 br
                 |発音がみるみる上達
             .englp-section-voice-box-text  
-              |英語は聞き取れるのに上手に喋れなかったのが悩みでした。ワオ未来塾を始めてからは毎日トレーニング動画の練習も欠かさず続けたところ、夏休みのイベントで優秀賞を獲得したり、塾の先生が認識できないぐらいのネイティブ発音になり、本人も大きな自信を持つようになりました。
-              br
-              br
-              b|リアルタイムの授業は、先生や他の生徒ともお友達とコミュニケーションを取ったり、リズミカルに英語を楽しく学んでいます。
-              |さらにクイズ形式や点数制などで競争心も刺激されて頑張っています。
-              br
-              br
-              |子供が楽しく授業を受けている様子を目の前で見ていると、親としても微笑ましく感じています。
+              p
+                |英語は聞き取れるのに上手に喋れなかったのが悩みでした。ワオ未来塾を始めてからは毎日トレーニング動画の練習も欠かさず続けたところ、夏休みのイベントで優秀賞を獲得したり、塾の先生が認識できないぐらいのネイティブ発音になり、本人も大きな自信を持つようになりました。
+                br
+                br
+                b|リアルタイムの授業は、先生や他の生徒ともお友達とコミュニケーションを取ったり、リズミカルに英語を楽しく学んでいます。
+                |さらにクイズ形式や点数制などで競争心も刺激されて頑張っています。
+                br
+                br
+                |子供が楽しく授業を受けている様子を目の前で見ていると、親としても微笑ましく感じています。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
           .englp-section-voice-box 
             .englp-section-voice-box-title 
               .englp-section-voice-box-title-left 
@@ -487,13 +495,17 @@ html
                 br
                 |「続けたい」に変化
             .englp-section-voice-box-text  
-              |以前受講していたオンライン英会話では外国人の先生とのコミュニケーションに苦手意識がありました。ワオ未来塾の先生は楽しく教えてくれるので、レッスンをいつも楽しみにしています。
-              br
-              br
-              b|「楽しいし英語は大事だから続けたい」と自分から言ってくれています。
-              |他塾との併用で毎日忙しい日々ながらも、「いつか留学したい」「英語は大事だし楽しいから続けたい」という想いで頑張っています。
-              br
-              |前向きな気持ちで英語学習に取り組めているのでありがたいです。
+              p
+                |以前受講していたオンライン英会話では外国人の先生とのコミュニケーションに苦手意識がありました。ワオ未来塾の先生は楽しく教えてくれるので、レッスンをいつも楽しみにしています。
+                br
+                br
+                b|「楽しいし英語は大事だから続けたい」と自分から言ってくれています。
+                |他塾との併用で毎日忙しい日々ながらも、「いつか留学したい」「英語は大事だし楽しいから続けたい」という想いで頑張っています。
+                br
+                |前向きな気持ちで英語学習に取り組めているのでありがたいです。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
           .englp-section-voice-box 
             .englp-section-voice-box-title 
               .englp-section-voice-box-title-left 
@@ -506,16 +518,20 @@ html
                 br
                 |楽しく英語に触れる
             .englp-section-voice-box-text  
-              |別のオンライン英会話では先生が何を言っているかわからず、会話が続かないのが悩みでした。
-              br
-              br
-              b|ワオ未来塾のライブレッスンはリアルタイムの参加がとにかく楽しいです。
-              |耳に残るフレーズのおかげで、英検のリスニングでも「聞いたことあるフレーズ！」が多く、高得点を獲得しリエゾンの凄さを実感しました。
-              br
-              |学校では担任の先生に褒められたり、英語施設への遠足では友達に「何を聞かれてるか」を教えてあげられるほどになり、
-              b|好きな教科を聞かれると「英語！」と答えるようになりました。
+              p
+                |別のオンライン英会話では先生が何を言っているかわからず、会話が続かないのが悩みでした。
+                br
+                br
+                b|ワオ未来塾のライブレッスンはリアルタイムの参加がとにかく楽しいです。
+                |耳に残るフレーズのおかげで、英検のリスニングでも「聞いたことあるフレーズ！」が多く、高得点を獲得しリエゾンの凄さを実感しました。
+                br
+                |学校では担任の先生に褒められたり、英語施設への遠足では友達に「何を聞かれてるか」を教えてあげられるほどになり、
+                b|好きな教科を聞かれると「英語！」と答えるようになりました。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
       // 授業コース〜カリキュラムの説明動画
-      section.englp-section.englp-bg-white(style='display:none;')
+      section.englp-section.englp-bg-white
         .section-engtitle.head-white.head-bg-creamyellow 
             .section-engtitle-main
               |COURSE
@@ -529,13 +545,27 @@ html
             .englp-section-course-comingsoon-title 
               |今後もコースは追加予定です。
               br
-              |お楽しみに              
+              |お楽しみに         
+        .englp-section-title 
+            h2.englp-section-title-main
+              |ライブレッスンスケジュール 
+        .englp-section-course-schedule-text 
+          |授業は平日に2回受講する「平日スタイル」と
+          br
+          |土曜にまとめて受講する「土曜スタイル」など、そのつどご自身のスケジュールに合わせて自由に参加が可能！
+          br
+          |どちらも都合がつかない場合は、アーカイブで授業を受けることができます。
+        .englp-section-course-schedule-img
+             .pcimage
+               img(src=SchedulePc)
+             .spimage
+               img(src=ScheduleSp)
         .englp-section-title 
             h2.englp-section-title-main
               |カリキュラムの説明動画
         include _curriculum
       // FAQ,
-      section.englp-section.englp-bg-gray.englp-section-common(style='display:none;')
+      section.englp-section.englp-bg-gray.englp-section-common
         .section-engtitle.head-gray.head-bg-purple 
             .section-engtitle-main
               |FAQ
@@ -562,15 +592,18 @@ html
         +faq("年度の途中での入会をしても授業についていけますか？", "1年を通して様々なフレーズを学ぶので、どの月から受講いただいても問題ありません。")
         +faq("平日と土曜を組み合わせて受講することはできませんか？", "授業開始時に「受講レベル」を選択いただきます。選択したレベルの授業は平日・土曜いずれも受講可能です。ただし火曜日と土曜日前半／木曜日と土曜日後半は同じレッスンを実施していますので、平日と土曜で別のレッスンを受講できるようご参加日時をご調整ください。")
       //LINE
-      .englp-line(style='display:none;')
+      .englp-line
         .section-engtitle.head-gray.head-bg-white 
           .section-engtitle-main
             |LINE
         .englp-line-flex
+          h2.englp-section-title-main.spimage
+              |LINEでお問い合わせ
           .englp-line-flex-left
               img(src=ImgLine)
           .englp-line-flex-right 
-            .englp-line-right-title 
+          
+            .englp-line-right-title.pcimage
                 |LINEでお問い合わせ
             .englp-line-right-text 
                 |「ワオ未来塾」LINE公式アカウントから
@@ -585,7 +618,7 @@ html
                   |LINEでお問い合わせ
                 .englp-line-right-btn-arrow.
                     <span class="material-symbols-outlined">keyboard_arrow_right</span>      
-      section.englp-section.englp-bg-purplelight.englp-section-common(style='display:none;')
+      section.englp-section.englp-bg-purplelight.englp-section-common
         .section-engtitle.head-purple.head-bg-white
             .section-engtitle-main
               |WHO WE ARE
@@ -593,13 +626,13 @@ html
             .englp-section-rapport22-left
               img(src=ImgRapport22)
             .englp-section-rapport22-right 
-            .englp-section-rapport22-right-title 
-              |レッスン担当　ラポール22
-            .englp-section-rapport22-right-text 
-              |日本の環境は今、大きく変化しています。かつて「グローバル」は一部のエリートに関わる言葉でした。しかし現在では日常的に外国人と接する機会が増え、ネットやSNSでは海外の情報が表示され、さらにAIの利用でも英語が有利となっています。今や「グローバル」であることが当たり前なのです。こうした新しい世界で、日本の子どもたちは果たして楽しく働き、生活できるでしょうか？
-              br
-              br
-              |AIに仕事を奪われないための選択肢を持てるでしょうか？現状の英語教育ではそれが難しいと感じざるを得ません。残念ながら、実際に使える英語が身についていないばかりか、英語嫌いの子どもが増えているのが現状です。  今、子どもたちに本当に必要なのは、ツールとして使える英語と、それを活かせるコミュニケーション能力です。                   
+              .englp-section-rapport22-right-title 
+                |レッスン担当　ラポール22
+              .englp-section-rapport22-right-text 
+                |日本の環境は今、大きく変化しています。かつて「グローバル」は一部のエリートに関わる言葉でした。しかし現在では日常的に外国人と接する機会が増え、ネットやSNSでは海外の情報が表示され、さらにAIの利用でも英語が有利となっています。今や「グローバル」であることが当たり前なのです。こうした新しい世界で、日本の子どもたちは果たして楽しく働き、生活できるでしょうか？
+                br
+                br
+                |AIに仕事を奪われないための選択肢を持てるでしょうか？現状の英語教育ではそれが難しいと感じざるを得ません。残念ながら、実際に使える英語が身についていないばかりか、英語嫌いの子どもが増えているのが現状です。  今、子どもたちに本当に必要なのは、ツールとして使える英語と、それを活かせるコミュニケーション能力です。                   
       //footer
       footer 
           ul 

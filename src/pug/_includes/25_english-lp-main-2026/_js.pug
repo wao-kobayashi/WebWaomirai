@@ -2,9 +2,24 @@ script.
     $('.englp-section-faq').on('click', function () {
     $(this).toggleClass('is-open').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
     });
-
+    // overlay-swipeが消えたかどうかのフラグ
+    var overlayDismissed = false;
+    // .schedule-table内を横スクロールしたら .overlay-swipe をfadeout（全教科の時のみ）
+    $('.compare-grid-wrapper').on('scroll', function() {
+        // 全教科タブがactiveの場合のみfadeout
+      
+        $('.overlay-swipe').fadeOut();
+        overlayDismissed = true; // フラグを立てる
+      
+    });
 script.
     $(function () {
+
+        $('.englp-section-voice-box-text-button button').on('click', function () {
+            var $box = $(this).closest('.englp-section-voice-box-text');
+            $box.addClass('is-expanded');
+            $(this).attr('aria-expanded', 'true');
+        });
         // ビデオのモーダルを開く
         $('.modal-video-trigger').on('click', function () {
             // 動画のURLを指定
@@ -34,4 +49,37 @@ script.
         player.on('play', function () {
             $('.section-el-second-process-movie-head').addClass('is-loaded');
         });
+
+        // 受講生の声「続きを読む」（SPのみ）
+        var voiceReadMoreBreakpoint = 768;
+
+        function initVoiceReadMore() {
+            $('.englp-section-voice-box-text').each(function () {
+                var $box = $(this);
+                var $p = $box.children('p').first();
+
+                if (window.innerWidth > voiceReadMoreBreakpoint) {
+                    $box.removeClass('is-no-more is-expanded');
+                    return;
+                }
+
+                if ($box.hasClass('is-expanded')) {
+                    return;
+                }
+
+                $box.removeClass('is-no-more');
+
+                if (!$p.length) {
+                    return;
+                }
+
+                if ($p[0].scrollHeight <= $p[0].clientHeight + 1) {
+                    $box.addClass('is-no-more');
+                }
+            });
+        }
+
+
+        initVoiceReadMore();
+        $(window).on('resize', initVoiceReadMore);
     }); 

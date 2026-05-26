@@ -1,4 +1,16 @@
-.compare-grid
+.compare-grid-wrapper
+  .overlay-swipe 
+    .overlay-swipe-flex 
+      .overlay-swipe-icon
+        .arrow 
+          img(src=ImgIcnSwipeArrow )
+        .hand 
+          img(src=ImgIcnSwipeHand )
+      .overlay-swipe-text 
+        |スワイプで続きの
+        br
+        |時間割が見れます
+  .compare-grid
         // ━━ ヘッダー ━━
         .grid-head
           .grid-head-corner
@@ -59,27 +71,27 @@
         // ── 講師 ──
         .grid-row
           .grid-cell.grid-cell--label.grid-cell-flex(style='border-left:1px solid #ebebeb;') 講師
-          .grid-cell.grid-cell--primary
+          .grid-cell.grid-cell--primary.grid-cell-flex
             .instructor-main.instructor-main--primary 日本語の通じるネイティブ
               br
               | ＆日本人講師
-          .grid-cell
+          .grid-cell.grid-cell-flex
             .instructor-main 外国人（日本語NG）
             p.instructor-note 多彩な先生がいる反面講師によって教え方が異なる
-          .grid-cell(style='border-right:1px solid #ebebeb;')
+          .grid-cell.grid-cell-flex(style='border-right:1px solid #ebebeb;')
             .instructor-main 日本人 or 外国人（固定の先生）
         // ── こんな人におすすめ ──
         .grid-row
           .grid-cell.grid-cell--label.grid-cell-flex(style='border-left:1px solid #ebebeb; border-bottom:1px solid #ebebeb;') こんな人に
             br
             | おすすめ
-          .grid-cell.grid-cell--primary
+          .grid-cell.grid-cell--primary.grid-cell-flex
             p.recommend-text.recommend-text--primary 英語をネイティブのように
               br
               | すらすらと喋れるようになりたい人
-          .grid-cell(style='border-bottom:1px solid #ebebeb;')
+          .grid-cell.grid-cell-flex(style='border-bottom:1px solid #ebebeb;')
             p.recommend-text すでに英語が基礎知識があり
               br
               | いっぱい喋る機会が欲しい
-          .grid-cell(style='border-bottom:1px solid #ebebeb; border-right:1px solid #ebebeb; border-radius: 0 0 12px 0; overflow:hidden;')
+          .grid-cell.grid-cell-flex(style='border-bottom:1px solid #ebebeb; border-right:1px solid #ebebeb; border-radius: 0 0 12px 0; overflow:hidden;')
             p.recommend-text 英語を幅広く学びたい人向け

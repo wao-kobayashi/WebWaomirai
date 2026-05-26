@@ -215,7 +215,7 @@ section.englp-section-concern {
     margin: 0 0 20px;
     .englp-section-concern-title-sp-text {
       position: relative;
-      @include font-size-xl;
+
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -223,6 +223,10 @@ section.englp-section-concern {
       letter-spacing: 1px;
       gap: 4px;
       margin: 0 auto 5px;
+      font-size: 27px !important;
+      @include responsive-style($breakpoint-sp) {
+        font-size: 24px !important;
+      }
       span {
         display: inline-block;
         background: $cl-english;
@@ -351,11 +355,11 @@ section.englp-section-concern {
   width: 100%;
   background: $lp-eng-purple-pale;
   margin: 0 auto 45px;
-  padding: 80px 44px 24px;
+  padding: 80px 45px 24px;
   border-radius: $border-radius-bigplus;
   overflow: hidden;
   @include responsive-style($breakpoint-sp) {
-    padding: 80px 0px 24px;
+    padding: 80px 0px 44px;
     margin: 0 auto 30px !important;
   }
 }
@@ -402,7 +406,7 @@ section.englp-section-concern {
   @include responsive-style($breakpoint-sp) {
     grid-template-columns: 30px minmax(0, 1fr) !important;
     width: calc(100% - 15px);
-    margin: 15px auto 0 0;
+    margin: 30px auto 0 0;
   }
 
   @include responsive-style($breakpoint-sp) {
@@ -529,7 +533,7 @@ section.englp-section-concern {
       gap: 0px !important;
       align-items: flex-start;
       flex-direction: column-reverse;
-      padding: 20px 20px;
+      padding: 25px 25px;
       background: $cl-white;
       border-radius: $border-radius-big;
     }
@@ -630,7 +634,8 @@ section.englp-section-concern {
 
   border-radius: $border-radius-bigplus;
   @include responsive-style($breakpoint-sp) {
-    margin: 0 auto 30px;
+    width: calc(100% - 30px);
+    margin: 0 auto 60px;
     padding: 0 0 30px;
   }
   .englp-movie-flex {
@@ -796,23 +801,38 @@ section.englp-section-concern {
 .englp-section-teacher {
   border-radius: $border-radius-bigplus;
   overflow: hidden;
-  background: $cl-white;
+
   max-width: $widewidth;
   margin: 0 auto;
   .englp-section-teacher-box {
+    border-radius: $border-radius-big2;
     padding: 55px 55px;
-
+    background: $cl-white;
     margin: 0 auto;
-    @include lp-eng-2column;
+    display: flex;
+    gap: 0px 50px;
+    &:first-child {
+      @include responsive-style($breakpoint-sp) {
+        margin: 0 auto 30px;
+      }
+    }
+    @include responsive-style($breakpoint-sp) {
+      gap: 0px 0px;
+      flex-direction: column;
+      padding: 25px;
+      width: calc(100% - 30px);
+    }
     .englp-section-teacher-box-left {
       position: relative;
+      flex: 1;
       .englp-section-teacher-box-left-movie {
         position: relative;
         overflow: hidden;
         border-radius: $border-radius-big;
         .englp-section-teacher-box-left-movie-person {
-          // width: 500px;
-          // height: 400px;
+          max-width: 500px;
+          width: 100%;
+          aspect-ratio: 5 / 4; // height は自動で 400px になる
           overflow: hidden;
           &:before {
             // width: 500px;
@@ -879,7 +899,13 @@ section.englp-section-concern {
         bottom: -45px;
         width: 170px;
         z-index: 2;
+        @include responsive-style($breakpoint-sp) {
+          display: none;
+        }
       }
+    }
+    .englp-section-teacher-box-right {
+      flex: 1;
     }
     .englp-section-teacher-box-right-title {
       display: flex;
@@ -887,10 +913,16 @@ section.englp-section-concern {
       line-height: $lineheight-none;
       gap: 20px;
       margin: 0 0 30px;
+      @include responsive-style($breakpoint-sp) {
+        margin: 25px 0 20px;
+      }
       .englp-section-teacher-box-right-title-main {
         font-size: 60px;
         font-weight: 800;
         line-height: $lineheight-none;
+        @include responsive-style($breakpoint-sp) {
+          font-size: 50px;
+        }
       }
       .englp-section-teacher-box-right-title-sub {
         @include font-size-s;
@@ -901,6 +933,9 @@ section.englp-section-concern {
     }
     .englp-section-teacher-box-right-text {
       line-height: $lineheight-relaxed;
+    }
+    .englp-section-teacher-box-right-comment {
+      margin: 30px 0 0;
     }
   }
 }
@@ -955,24 +990,31 @@ section.englp-section.englp-bg-creamyellow {
   @include responsive-style($breakpoint-sp) {
     grid-template-columns: 1fr;
     gap: 30px;
+    width: calc(100% - 30px);
   }
 }
 
 .englp-section-voice-box {
   background: $cl-white;
   overflow: hidden;
-  border-radius: $border-radius-bigplus;
+
   @include box-shadow-small;
   width: 100%;
   display: block;
-
+  border-radius: $border-radius-bigplus;
+  @include responsive-style($breakpoint-sp) {
+    border-radius: $border-radius-big;
+  }
   .englp-section-voice-box-title {
     display: flex;
     align-items: center;
     padding: 0px 35px 5px;
     gap: 20px;
     background: #fffdf3;
-
+    @include responsive-style($breakpoint-sp) {
+      gap: 15px;
+      padding: 0px 25px 5px;
+    }
     .englp-section-voice-box-title-left {
       flex-shrink: 0;
       display: flex;
@@ -1005,20 +1047,115 @@ section.englp-section.englp-bg-creamyellow {
     }
 
     .englp-section-voice-box-title-right {
-      @include font-size-m;
       font-weight: bold;
       line-height: $lineheight-normal;
       margin: 10px 0 0;
+      @include font-size-m;
+      @include responsive-style($breakpoint-sp) {
+        font-size: 18px !important;
+      }
     }
   }
 
   .englp-section-voice-box-text {
-    padding: 25px 35px 40px;
+    padding: 25px 35px 50px;
     @include font-size-s;
-    line-height: 2.1;
+    line-height: 2;
+
+    p {
+      margin: 0;
+    }
 
     b {
       font-weight: bold;
+    }
+
+    @include responsive-style($breakpoint-sp) {
+      position: relative;
+      font-size: 15px !important;
+      padding: 25px 25px 85px;
+      line-height: $lineheight-relaxed;
+
+      p {
+        max-height: 9.5em;
+        overflow: hidden;
+        position: relative;
+        transition: max-height 0.35s ease;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4.5em;
+          background: linear-gradient(
+            to bottom,
+            rgba($cl-white, 0) 0%,
+            $cl-white 72%
+          );
+          pointer-events: none;
+        }
+      }
+
+      &.is-expanded {
+        padding-bottom: 25px;
+
+        p {
+          max-height: none;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        .englp-section-voice-box-text-button {
+          display: none;
+        }
+      }
+
+      &.is-no-more {
+        padding-bottom: 25px;
+
+        p::after {
+          display: none;
+        }
+
+        .englp-section-voice-box-text-button {
+          display: none;
+        }
+      }
+    }
+
+    .englp-section-voice-box-text-button {
+      @include responsive-style($breakpoint-sp) {
+        position: static;
+        height: 0;
+      }
+
+      button {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 28px;
+        margin: auto;
+        display: inline-flex;
+        width: 75%;
+        max-width: 280px;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        appearance: none;
+        border: 2px solid $cl-english;
+        border-radius: $border-radius-full;
+        background: $cl-white;
+        color: $cl-english;
+        @include font-size-s;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        z-index: 1;
+      }
     }
   }
 }
@@ -1030,9 +1167,16 @@ section.englp-section.englp-bg-creamyellow {
   display: flex;
   gap: 50px;
   margin: 0 auto 70px;
-
+  @include responsive-style($breakpoint-sp) {
+    flex-direction: column;
+    width: calc(100% - 30px);
+    margin: 0 auto 60px;
+    align-items: stretch;
+    gap: 20px;
+  }
   > div {
     flex: 1;
+    aspect-ratio: 47 / 20;
   }
   .englp-section-course-banner img {
     border-radius: $border-radius-big;
@@ -1051,15 +1195,42 @@ section.englp-section.englp-bg-creamyellow {
       text-align: center;
       line-height: $lineheight-relaxed;
       letter-spacing: 0.05em;
+      @include responsive-style($breakpoint-sp) {
+        @include font-size-ms;
+      }
     }
   }
 }
 /* レッスンスケジュール */
+.englp-section-course-schedule-text {
+  text-align: center;
+  @include font-size-ms;
+  line-height: $lineheight-relaxed;
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+.englp-section-course-schedule-img {
+  text-align: center;
+  margin: 30px auto 70px;
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    margin: 10px auto 70px;
+  }
+  img {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 
 /* よくある質問 */
 
 $faq-gap: 30px;
+$faq-gap-sp: 20px;
 $faq-icn: 45px;
+$faq-icn-sp: 35px;
 .englp-section-faq {
   max-width: 100%;
   width: 750px;
@@ -1067,13 +1238,20 @@ $faq-icn: 45px;
   margin: 0 auto 30px;
   background: $cl-white;
   border-radius: $border-radius-big;
-
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    padding: 15px 12px 15px 20px;
+  }
   .englp-section-faq-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: $faq-gap;
     cursor: pointer;
+    @include responsive-style($breakpoint-sp) {
+      gap: $faq-gap-sp;
+      align-items: flex-start;
+    }
     .englp-section-faq-head-question {
       width: $faq-icn;
       height: $faq-icn;
@@ -1084,6 +1262,12 @@ $faq-icn: 45px;
       font-size: 30px;
       background: $cl-english;
       color: $cl-white;
+      @include responsive-style($breakpoint-sp) {
+        width: $faq-icn-sp;
+        height: $faq-icn-sp;
+        font-size: 20px;
+        display: none;
+      }
     }
     .englp-section-faq-head-title {
       @include font-size-ms;
@@ -1096,8 +1280,12 @@ $faq-icn: 45px;
   }
   .englp-section-faq-content {
     display: none;
-    padding: 15px calc($faq-gap + $faq-icn) 15px calc($faq-gap + $faq-icn);
+    padding: 15px calc($faq-gap + $faq-icn);
     line-height: $lineheight-relaxed;
+    @include font-size-s;
+    @include responsive-style($breakpoint-sp) {
+      padding: 15px 20px 0 0;
+    }
   }
 }
 
@@ -1121,12 +1309,20 @@ $faq-icn: 45px;
   padding: 0 0 55px;
   background: $cl-graylightest;
   border-radius: $border-radius-bigplus;
+  @include responsive-style($breakpoint-sp) {
+    padding: 0 0 30px;
+    width: calc(100% - 30px);
+  }
   .englp-line-flex {
     padding: 0 55px;
     display: flex;
     align-items: center;
-
     gap: 50px;
+    @include responsive-style($breakpoint-sp) {
+      flex-direction: column;
+      padding: 25px 25px;
+      gap: 30px;
+    }
     .englp-line-flex-right {
       flex: 1;
       .englp-line-right-title {
@@ -1143,12 +1339,19 @@ $faq-icn: 45px;
       .englp-line-right-text {
         @include font-size-m;
         text-align: center;
+        @include responsive-style($breakpoint-sp) {
+          @include font-size-ms;
+          text-align: left;
+        }
       }
     }
     .englp-line-flex-left {
       flex: 1;
       border-radius: $border-radius-bigplus;
       overflow: hidden;
+      @include responsive-style($breakpoint-sp) {
+        border-radius: $border-radius-big;
+      }
     }
   }
   .englp-line-right-btn {
@@ -1164,7 +1367,8 @@ $faq-icn: 45px;
     font-size: 16px;
     text-decoration: none;
     @include responsive-style($breakpoint-sp) {
-      font-size: 14px;
+      width: 100%;
+      font-size: 16px;
     }
     .englp-line-right-btn-txt {
       color: $cl-white;
@@ -1188,6 +1392,12 @@ $faq-icn: 45px;
   border-radius: $border-radius-bigplus;
   display: flex;
   gap: 50px;
+  @include responsive-style($breakpoint-sp) {
+    padding: 25px;
+    width: calc(100% - 30px);
+    flex-direction: column;
+    gap: 0px;
+  }
   .englp-section-rapport22-left {
     flex: 1;
 

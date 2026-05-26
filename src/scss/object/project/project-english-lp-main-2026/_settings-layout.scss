@@ -45,7 +45,10 @@ header {
     padding: 20px 10px;
   }
   h1 {
-    height: 32px;
+    height: 20px;
+    @include responsive-style($breakpoint-sp) {
+      height: 32px;
+    }
   }
 }
 
@@ -70,7 +73,4 @@ nav {
 }
 
 @mixin lp-eng-2column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0px 50px;
 }
