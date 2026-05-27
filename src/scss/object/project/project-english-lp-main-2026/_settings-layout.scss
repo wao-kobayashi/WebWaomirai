@@ -43,7 +43,8 @@ header {
   justify-content: space-between;
   padding: 20px 30px;
   @include responsive-style($breakpoint-sp) {
-    padding: 20px 10px;
+    padding: 5px 10px;
+    height: 60px;
   }
   h1 {
     height: 20px;

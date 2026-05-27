@@ -20,13 +20,14 @@ html
     - const cssBase = '../../css/'
     - const cssLocal = ''
     link(href=`${cssBase}25_english-lp-main-2026.css?v=${Date.now()}`, rel="stylesheet")
-    link(href=`${cssLocal}25_english-lp-main-2026.css.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}25_english-lp-main-2026.css?v=${Date.now()}`, rel="stylesheet")
     meta(property="og:image", content=ImgOgp)
     title #{MetaTitle}
     script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
     link(href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined' rel='stylesheet')
+    meta(name="robots", content="noindex")
   body
     header
        h1.pcimage
@@ -40,7 +41,8 @@ html
     main 
       .englp-fv 
         .englp-fv-text
-          .englp-fv-subtitle
+          .englp-fv-subtitle.grid-a
+           span
             |子どもオンライン英会話
           .englp-fv-title
             |お子様の
@@ -50,11 +52,27 @@ html
             |悩みを
             br.spimage
             |楽しく解決！
-        .englp-fv-img
+          .englp-fv-cta-wrap
+            a(href=UrlCv, target='_blank').englp-fv-cta-button
+              //- .englp-fv-cta-button-sub
+              //-   |無料期間中のみの受講もOK
+              .englp-fv-cta-button-free
+                img(src=IcnCta)
+              .englp-fv-cta-button-text
+                |受講申し込みはこちら
+              .englp-fv-cta-button-icn.
+                <span class="material-symbols-outlined">keyboard_arrow_right </span>
+        .englp-fv-img.pcimage
           .slideshow-image
-            img(src=FvPc)
+            img(src=FvPc01)
           .slideshow-image
-            img(src=FvPc)
+            img(src=FvPc02)
+        .englp-fv-img.spimage
+          .slideshow-image
+            img(src=FvSp01)
+          .slideshow-image
+            img(src=FvSp02)
+
       .englp-reviews 
         .englp-reviews-track
           - for (var i = 1; i < 3; i++)
@@ -419,7 +437,7 @@ html
       //中間の写真
       section.large-photo
         .large-photo-img
-          img(src=FvPc)
+          img(src=MiddleImage)
         .large-photo-title-bg
         .large-photo-title-text
               |FEATURE

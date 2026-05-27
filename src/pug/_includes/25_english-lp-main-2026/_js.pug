@@ -17,7 +17,7 @@ script.
         function toggleEnglpFixedCta() {
             var $cta = $('.englp-fixed-cta-wrap');
             if ($cta.length === 0) return;
-            if ($(window).scrollTop() > 200) {
+            if ($(window).scrollTop() > 600) {
                 $cta.stop(true).fadeIn(200);
             } else {
                 $cta.stop(true).fadeOut(200);
@@ -122,3 +122,39 @@ script.
     }
 
     $(window).on('load resize', equalizeAll);
+
+script.
+    $(function () {
+    // localhost 判定
+    const isLocalhost =
+        location.hostname === 'localhost' ||
+        location.hostname === '127.0.0.1';
+
+    // noindex 判定
+    const hasNoindex =
+        $('meta[name="robots"]').attr('content')?.includes('noindex') ||
+        $('meta[name="googlebot"]').attr('content')?.includes('noindex');
+
+    // 両方満たしたら表示
+    if (isLocalhost && hasNoindex) {
+        $('body').append(`
+        <div id="noindex-alert" class="pcimage">
+            noindex 有効中
+        </div>
+        `);
+
+        $('#noindex-alert').css({
+        position: 'fixed',
+        bottom: '20px',
+        left: '20px',
+        zIndex: '99999',
+        background: '#fff',
+        color: '#ccc',
+        padding: '12px 16px',
+        borderRadius: '8px',
+        fontSize: '14px',
+        fontWeight: 'bold',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+        });
+    }
+    });
