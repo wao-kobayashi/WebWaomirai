@@ -8,6 +8,7 @@ $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
 $maincontentWidth: 500px;
 $breakpoint-tablet: 980px;
+$breakpoint-header-nav: 1100px;
 
 @mixin square-size($vw-percentage) {
   width: #{$vw-percentage}vw;
@@ -53,6 +54,12 @@ header {
 }
 
 nav {
+  @include responsive-style($breakpoint-header-nav) {
+    display: none;
+  }
+  @include responsive-style($breakpoint-sp) {
+    height: 32px;
+  }
   ul {
     display: flex;
     margin: 0;
@@ -68,6 +75,9 @@ nav {
   }
 }
 .humberger {
+  @include min-responsive-style($breakpoint-header-nav) {
+    display: none;
+  }
   cursor: pointer;
 }
 

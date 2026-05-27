@@ -14,6 +14,19 @@ script.
     });
 script.
     $(function () {
+        function toggleEnglpFixedCta() {
+            var $cta = $('.englp-fixed-cta-wrap');
+            if ($cta.length === 0) return;
+            if ($(window).scrollTop() > 200) {
+                $cta.stop(true).fadeIn(200);
+            } else {
+                $cta.stop(true).fadeOut(200);
+            }
+        }
+
+        $(window).on('scroll', toggleEnglpFixedCta);
+        toggleEnglpFixedCta();
+
         // メニューモーダル
         $('.humberger').on('click', function () {
             $('.menu-modal, .bg-modal').fadeIn();
@@ -91,3 +104,21 @@ script.
         initVoiceReadMore();
         $(window).on('resize', initVoiceReadMore);
     }); 
+   function equalizeHeight($elements) {
+    var maxHeight = 0;
+    $elements.css('height', 'auto');
+    $elements.each(function() {
+        var h = $(this).outerHeight();
+        if (h > maxHeight) maxHeight = h;
+    });
+    $elements.css('height', maxHeight + 'px');
+    }
+
+    function equalizeAll() {
+    var $cards = $('.englp-section-movie-curriculum-scroll-block-content-card');
+    var $titles = $('.englp-section-movie-curriculum-scroll-block-content-card-maintitle');
+    equalizeHeight($titles);
+    equalizeHeight($cards);
+    }
+
+    $(window).on('load resize', equalizeAll);

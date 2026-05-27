@@ -118,7 +118,7 @@
     letter-spacing: 0.05em;
     line-height: $lineheight-normal;
     padding-left: 2px;
-    height: 16px;
+    height: 22px;
     margin: 0 0 0 32px;
     span {
       font-weight: bold;
@@ -269,7 +269,7 @@
     background: $cl-white;
     border: 1px solid $cl-english;
     border-radius: $border-radius-small;
-    @include font-size-ss;
+    @include font-size-sss;
     line-height: $lineheight-none;
     letter-spacing: 0.05em;
   }
@@ -283,7 +283,7 @@
   }
 
   .englp-section-movie-curriculum-scroll-block-content-card-text {
-    @include font-size-s;
+    @include font-size-ss;
     margin-top: 8px;
     line-height: $lineheight-relaxed;
     color: $cl-gray;
@@ -352,12 +352,23 @@
       }
     }
   }
+  .englp-section-movie-curriculum-cta-button-free {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 62px;
+  }
   .englp-section-movie-curriculum-cta-button-icn span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 18px;
+    right: 15px;
     top: 0;
     bottom: 0;
     margin: auto;

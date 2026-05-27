@@ -55,6 +55,12 @@
     font-size: 14px;
   }
 }
+@mixin font-size-sss {
+  font-size: 11px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 11px;
+  }
+}
 
 /* line-height */
 

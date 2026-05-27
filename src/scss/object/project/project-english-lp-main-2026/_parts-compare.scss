@@ -20,8 +20,11 @@
 
 /* ─── Grid本体 ─── */
 .compare-grid-wrapper {
-  overflow-x: scroll;
   position: relative;
+  // Chrome, Safari, Edge (Blink/WebKit系)
+  @include responsive-style($breakpoint-sp) {
+    overflow-x: scroll;
+  }
 }
 .compare-grid {
   display: grid;
