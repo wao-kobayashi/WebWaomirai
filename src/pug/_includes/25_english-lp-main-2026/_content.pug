@@ -472,10 +472,13 @@ html
       //中間の写真
       section.large-photo
         .large-photo-img
-          img(src=MiddleImage)
+          video(src=MiddleMovie autoplay muted loop playsinline)
+          //- img(src=MiddleImage)
         .large-photo-title-bg
         .large-photo-title-text
               |FEATURE
+        //- .large-photo-title-text(style='color:transparent;')
+        //-       |FEATURE
       //「ワオ未来塾・グローバル英語」と「他英語スクール」との違い
       section.englp-section.englp-bg-white.englp-section-common#feature
         .englp-section-title 

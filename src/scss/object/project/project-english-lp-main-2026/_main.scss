@@ -152,6 +152,10 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     grid-template-areas:
       "grid-a grid-a"
       ". .";
+      @include responsive-style(1250px) {
+        bottom: 100px;
+        width: 92%;
+      }
     @include responsive-style($breakpoint-sp) {
       display: block;
       left: 20px;
@@ -185,8 +189,12 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
       line-height: 1.35;
       font-weight: bold;
       font-size: min(88px, calc(50 * var(--px)));
+       @include responsive-style(1000px) {
+        font-size:  40px;
+        margin: 0 0 20px;
+      }
       @include responsive-style($breakpoint-sp) {
-        font-size: min(88px, calc(40 * var(--px)));
+        font-size:  calc(40 * var(--px));
         margin: 0 0 20px;
       }
     }
@@ -203,6 +211,8 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     img {
       position: absolute;
       top: 40px;
+      // height: 100vh;
+      // object-fit:cover;
       @include responsive-style($breakpoint-sp) {
         height: 100vh;
         object-fit: cover;
@@ -1132,6 +1142,9 @@ section.englp-section-concern {
     &:first-child {
       margin: 0 auto 30px;
     }
+    &:last-child {
+      margin: 0 auto 60px;
+    }
     @include responsive-style($breakpoint-sp) {
       gap: 0px 0px;
       flex-direction: column;
@@ -1158,8 +1171,9 @@ section.englp-section-concern {
             background: $cl-white;
             opacity: 0.3;
             position: absolute;
-            z-index: 1;
+            z-index: 2;
           }
+
           video {
             position: absolute;
             left: -100px;
@@ -1306,15 +1320,40 @@ section.large-photo {
   @include responsive-style($breakpoint-sp) {
     margin: -30px 0 0px;
   }
-  .large-photo-img img {
+  &:after {
+    // width: 500px;
+    // height: 400px;
+    content: "";
+    display: block;
+    background: #000;
+    opacity: 0.1;
+    width:100%;
+    height:100%;
+    position: absolute;
+    z-index: 1;
+    left:0;
+    top:0;
+  }
+  .large-photo-img video {
     width: 100%;
-    height: 700px;
+    height: 450px;
     object-fit: cover;
     @include responsive-style($breakpoint-sp) {
       height: 500px;
       position: relative;
       z-index: 3;
     }
+  }
+  .large-photo-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    @include responsive-style($breakpoint-sp) {
+      height: 500px;
+      position: relative;
+      z-index: 3;
+    }
+    
   }
   .large-photo-title-text {
     text-align: center;
@@ -1330,6 +1369,7 @@ section.large-photo {
     }
   }
   .large-photo-title-bg {
+
     position: absolute;
     bottom: 0;
     left: 0;
