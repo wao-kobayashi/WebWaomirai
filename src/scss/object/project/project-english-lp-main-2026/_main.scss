@@ -75,7 +75,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-380px * 5 - 40px * 5));
+    transform: translateX(-50%);
   }
 }
 
@@ -349,31 +349,43 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
   background: $cl-white;
   .englp-reviews-track {
     display: flex;
-    gap: 40px;
     width: max-content;
     animation: scroll-loop 45s linear infinite;
     padding: 0 0 30px;
+  }
+  .englp-reviews-list {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 40px;
+    padding-right: 40px;
     @include responsive-style($breakpoint-sp) {
       gap: 20px;
-      animation: scroll-loop 30s linear infinite;
+      padding-right: 20px;
+    }
+  }
+  .englp-reviews-track {
+    @include responsive-style($breakpoint-sp) {
+      animation-duration: 30s;
     }
   }
   .englp-reviews-box {
     position: relative;
+    flex: 0 0 370px;
     background: #fff;
     border-radius: $border-radius-big;
-    @include font-size-ms;
+    @include font-size-s;
     padding: 30px 30px 30px;
     width: 370px;
     height: 190px;
     max-width: 380px;
-    width: 100%;
     /* 吹き出しのしっぽ（下三角） */
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.06));
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     @include responsive-style($breakpoint-sp) {
+      @include font-size-ms;
+      flex-basis: 250px;
       width: 250px;
       height: 170px;
     }
@@ -1046,7 +1058,7 @@ section.englp-section-concern {
     align-items: center;
 
     .englp-section-course-comingsoon-title {
-      color: $cl-english;
+      color: $cl-graylight;
       @include font-size-m;
       text-align: center;
       line-height: $lineheight-relaxed;
@@ -1058,6 +1070,7 @@ section.englp-section-concern {
   }
 }
 /* レッスンスケジュール */
+
 .englp-section-course-schedule-text {
   text-align: center;
   @include font-size-ms;
@@ -1090,6 +1103,17 @@ section.englp-section-concern {
   }
 }
 
+.englp-section-course-schedule-note {
+  margin: 18px auto 0px;
+  @include font-size-s;
+  max-width: $middlewidth;
+  color: $cl-graylight;
+  text-align: right;
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    margin: 10px auto 0px;
+  }
+}
 /* 講師紹介 */
 .englp-section-teacher {
   border-radius: $border-radius-bigplus;
@@ -1536,6 +1560,7 @@ $faq-icn-sp: 35px;
     @include responsive-style($breakpoint-sp) {
       width: calc(100% - 30px);
       padding: 15px 12px 15px 20px;
+      margin: 0 auto 20px;
     }
     .englp-section-faq-head {
       display: flex;
@@ -1700,6 +1725,9 @@ $faq-icn-sp: 35px;
     img {
       border-radius: $border-radius-bigplus;
       overflow: hidden;
+      @include responsive-style($breakpoint-sp) {
+        border-radius: $border-radius-big;
+      }
     }
   }
   .englp-section-rapport22-right {

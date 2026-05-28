@@ -115,6 +115,9 @@
   iframe {
     aspect-ratio: 16 / 9;
   }
+  @include responsive-style(768px) {
+    width: 95%;
+  }
 }
 .modal-video-close {
   width: 100%;
@@ -129,6 +132,7 @@
   text-align: center;
   @include responsive-style(768px) {
     font-size: 17px;
+    bottom: 0px;
   }
 }
 

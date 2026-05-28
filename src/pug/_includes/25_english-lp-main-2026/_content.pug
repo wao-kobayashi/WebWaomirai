@@ -54,8 +54,8 @@ html
             |楽しく解決！
           .englp-fv-cta-wrap
             a(href=UrlCv, target='_blank').englp-fv-cta-button
-              //- .englp-fv-cta-button-sub
-              //-   |無料期間中のみの受講もOK
+              .englp-fv-cta-button-sub
+                |無料期間中のみの受講もOK
               .englp-fv-cta-button-free
                 img(src=IcnCta)
               .englp-fv-cta-button-text
@@ -75,29 +75,30 @@ html
 
       .englp-reviews 
         .englp-reviews-track
-          - for (var i = 1; i < 3; i++)
-            .englp-reviews-box 
-              .englp-reviews-box-title 
-                |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
-              .englp-reviews-box-name 
-                |小学校 3年生
-            .englp-reviews-box 
-              .englp-reviews-box-title 
-                |英検３級に受かりました
-              .englp-reviews-box-name 
-                |小学校 3年生
-            .englp-reviews-box 
-              .englp-reviews-box-title 
-                |子どもがいつの間にかかっこいい英語を話してました
-              .englp-reviews-box-name 
-                |小学校 3年生
-            .englp-reviews-box 
-              .englp-reviews-box-title 
-                |リアルタイムでの参加が
-                br
-                |楽しすぎる
-              .englp-reviews-box-name 
-                |小学校 3年生  
+          - for (var i = 0; i < 2; i++)
+            .englp-reviews-list(aria-hidden=i === 1 ? 'true' : false)
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+                .englp-reviews-box-name 
+                  |小学校 3年生
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |英検３級に受かりました
+                .englp-reviews-box-name 
+                  |小学校 3年生
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |子どもがいつの間にかかっこいい英語を話してました
+                .englp-reviews-box-name 
+                  |小学校 3年生
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |リアルタイムでの参加が
+                  br
+                  |楽しすぎる
+                .englp-reviews-box-name 
+                  |小学校 3年生  
       //英語学習のお悩み
       section.englp-section.englp-bg-yellow.englp-section-concern
         .englp-section-concern-subtitle.pcimage
@@ -388,7 +389,7 @@ html
               |今後もコースは追加予定です。
               br
               |お楽しみに         
-        .englp-section-title 
+        .englp-section-title#schedule
             h2.englp-section-title-main
               |ライブレッスンスケジュール 
         .englp-section-course-schedule-text 
@@ -402,7 +403,8 @@ html
                img(src=SchedulePc)
              .spimage
                img(src=ScheduleSp)
-
+        .englp-section-course-schedule-note 
+          |※土曜配信は平日と同内容
       //講師紹介
       section.englp-section.englp-bg-purplelight.englp-section-common.englp-section-borderbottom#teacher
         .section-engtitle.head-purple.head-bg-gray
@@ -585,7 +587,7 @@ html
                 button(type='button' aria-expanded='false')
                   |続きを読む +
       // 授業コース〜カリキュラムの説明動画
-      section.englp-section.englp-bg-white#schedule
+      section.englp-section.englp-bg-white
         .section-engtitle.head-white.head-bg-creamyellow 
             .section-engtitle-main
               |PROCESS

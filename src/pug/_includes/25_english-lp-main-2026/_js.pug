@@ -33,7 +33,8 @@ script.
         });
 
         $('.menu-modal-navi a, .menu-modal-close,.bg-modal').on('click', function () {
-            $('.menu-modal, .bg-modal').fadeOut();
+            $('.menu-modal, .bg-modal, .modal-video').fadeOut();
+            $('.modal-video-iframe').attr('src','');
         });
 
         $('.englp-section-voice-box-text-button button').on('click', function () {
