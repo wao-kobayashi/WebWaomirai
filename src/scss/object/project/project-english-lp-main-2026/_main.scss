@@ -353,12 +353,16 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     width: max-content;
     animation: scroll-loop 45s linear infinite;
     padding: 0 0 30px;
+    @include responsive-style($breakpoint-sp) {
+      gap: 20px;
+      animation: scroll-loop 30s linear infinite;
+    }
   }
   .englp-reviews-box {
     position: relative;
     background: #fff;
     border-radius: $border-radius-big;
-    @include font-size-s;
+    @include font-size-ms;
     padding: 30px 30px 30px;
     width: 370px;
     height: 190px;
@@ -366,10 +370,13 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     width: 100%;
     /* 吹き出しのしっぽ（下三角） */
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.06));
-
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    @include responsive-style($breakpoint-sp) {
+      width: 250px;
+      height: 170px;
+    }
     .englp-reviews-box-title {
       line-height: $lineheight-relaxed;
     }
@@ -902,8 +909,8 @@ section.englp-section-concern {
 /* 料金*/
 .englp-section-price {
   width: 100%;
-  max-width: $widewidth;
-  margin: 0 auto;
+  max-width: $middlewidth;
+  margin: 0 auto 90px;
   padding: 0 15px;
   .englp-section-price-main {
     position: relative;
@@ -962,6 +969,7 @@ section.englp-section-concern {
     font-weight: 600;
     letter-spacing: 0.05em;
     margin: 30px 0 15px;
+    @include font-size-ms;
   }
 }
 
@@ -972,12 +980,12 @@ section.englp-section-concern {
     flex-direction: column;
   }
   .englp-section-price-detail-grid {
-    flex: 3.3;
+    flex: 3.8;
     background: $cl-white;
     border-radius: $border-radius-big;
     padding: 35px 20px 25px;
-    border: 1px solid $cl-english;
-    box-shadow: 1px 1px 0px $lp-yellow;
+    // border: 1px solid $cl-english;
+    // box-shadow: 1px 1px 0px $lp-yellow;
     img {
       margin: 0 auto 20px;
       width: 28%;
@@ -995,7 +1003,7 @@ section.englp-section-concern {
 
   .englp-section-price-detail-plus {
     flex: 1;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 200;
     display: inline-flex;
     align-items: center;
@@ -1003,6 +1011,81 @@ section.englp-section-concern {
     color: $cl-english;
     @include responsive-style($breakpoint-sp) {
       font-size: 40px;
+    }
+  }
+}
+
+/* 授業コース */
+.englp-section-course {
+  width: 100%;
+  max-width: $middlewidth;
+  display: flex;
+  gap: 40px;
+  margin: 0 auto 105px;
+  @include responsive-style($breakpoint-sp) {
+    flex-direction: column;
+    width: calc(100% - 30px);
+    margin: 0 auto 60px;
+    align-items: stretch;
+    gap: 20px;
+  }
+  > div {
+    flex: 1;
+    aspect-ratio: 47 / 20;
+  }
+  .englp-section-course-banner img {
+    border-radius: $border-radius-big;
+  }
+  .englp-section-course-comingsoon {
+    // border: 2px solid $cl-english;
+    background: $cl-white;
+    border-radius: $border-radius-big;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .englp-section-course-comingsoon-title {
+      color: $cl-english;
+      @include font-size-m;
+      text-align: center;
+      line-height: $lineheight-relaxed;
+      letter-spacing: 0.05em;
+      @include responsive-style($breakpoint-sp) {
+        @include font-size-ms;
+      }
+    }
+  }
+}
+/* レッスンスケジュール */
+.englp-section-course-schedule-text {
+  text-align: center;
+  @include font-size-ms;
+  line-height: $lineheight-relaxed;
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+.englp-section-course-schedule-img {
+  text-align: center;
+  margin: 30px auto 0px;
+  max-width: $middlewidth;
+  @include responsive-style($breakpoint-sp) {
+    width: calc(100% - 30px);
+    margin: 10px auto 0px;
+    background: $cl-white;
+    padding: 10px 5px 20px;
+    border-radius: $border-radius-big;
+  }
+
+  img {
+    margin: 0 auto;
+
+    @include min-responsive-style($breakpoint-sp) {
+      border-radius: $border-radius-big;
     }
   }
 }
@@ -1028,7 +1111,7 @@ section.englp-section-concern {
     @include responsive-style($breakpoint-sp) {
       gap: 0px 0px;
       flex-direction: column;
-      padding: 25px;
+      padding: 25px 25px 40px;
       width: calc(100% - 30px);
     }
     .englp-section-teacher-box-left {
@@ -1149,6 +1232,7 @@ section.englp-section-concern {
     }
     .englp-section-teacher-box-right-text {
       line-height: $lineheight-relaxed;
+      @include font-size-ms;
     }
     .englp-section-teacher-box-right-comment {
       position: relative;
@@ -1323,6 +1407,7 @@ section.englp-section.englp-bg-creamyellow {
       margin: 10px 0 0;
       @include font-size-m;
       @include responsive-style($breakpoint-sp) {
+        margin: 15px 0 5px;
         font-size: 18px !important;
       }
     }
@@ -1428,72 +1513,6 @@ section.englp-section.englp-bg-creamyellow {
         z-index: 1;
       }
     }
-  }
-}
-
-/* 授業コース */
-.englp-section-course {
-  width: 100%;
-  max-width: $middlewidth;
-  display: flex;
-  gap: 50px;
-  margin: 0 auto 70px;
-  @include responsive-style($breakpoint-sp) {
-    flex-direction: column;
-    width: calc(100% - 30px);
-    margin: 0 auto 60px;
-    align-items: stretch;
-    gap: 20px;
-  }
-  > div {
-    flex: 1;
-    aspect-ratio: 47 / 20;
-  }
-  .englp-section-course-banner img {
-    border-radius: $border-radius-big;
-  }
-  .englp-section-course-comingsoon {
-    border: 2px solid $cl-english;
-    border-radius: $border-radius-big;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .englp-section-course-comingsoon-title {
-      color: $cl-english;
-      @include font-size-m;
-      text-align: center;
-      line-height: $lineheight-relaxed;
-      letter-spacing: 0.05em;
-      @include responsive-style($breakpoint-sp) {
-        @include font-size-ms;
-      }
-    }
-  }
-}
-/* レッスンスケジュール */
-.englp-section-course-schedule-text {
-  text-align: center;
-  @include font-size-ms;
-  line-height: $lineheight-relaxed;
-  @include responsive-style($breakpoint-sp) {
-    width: calc(100% - 30px);
-    margin: 0 auto;
-    text-align: left;
-  }
-}
-.englp-section-course-schedule-img {
-  text-align: center;
-  margin: 30px auto 70px;
-  max-width: $middlewidth;
-  @include responsive-style($breakpoint-sp) {
-    width: calc(100% - 30px);
-    margin: 10px auto 70px;
-  }
-  img {
-    width: 95%;
-    margin: 0 auto;
   }
 }
 

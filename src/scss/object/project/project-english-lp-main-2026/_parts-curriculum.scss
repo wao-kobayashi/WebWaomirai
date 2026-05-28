@@ -347,6 +347,7 @@
     }
     .englp-section-movie-curriculum-cta-button-text {
       font-size: 16px;
+      font-weight: bold;
       @include responsive-style($breakpoint-sp) {
         font-size: 16px;
       }
