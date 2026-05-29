@@ -1,21 +1,66 @@
 script.
+    // ==============================
+    // FAQ アコーディオン
+    // ==============================
     $('.englp-section-faq').on('click', function () {
-    $(this).toggleClass('is-open').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
+        $(this).toggleClass('is-open').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
     });
-    // overlay-swipeが消えたかどうかのフラグ
+
+    // ==============================
+    // 比較表 横スクロール → swipe ガイド非表示
+    // ==============================
     var overlayDismissed = false;
-    // .schedule-table内を横スクロールしたら .overlay-swipe をfadeout（全教科の時のみ）
-    $('.compare-grid-wrapper').on('scroll', function() {
-        // 全教科タブがactiveの場合のみfadeout
-      
+    $('.compare-grid-wrapper').on('scroll', function () {
         $('.overlay-swipe').fadeOut();
-        overlayDismissed = true; // フラグを立てる
-      
+        overlayDismissed = true;
     });
+
 script.
     $(function () {
+
         // ==============================
-        // LINE 申込導線（PC/SP で挙動切替）
+        // 固定 CTA フェードイン / アウト
+        // ==============================
+        function toggleEnglpFixedCta() {
+            var $cta = $('.englp-fixed-cta-wrap');
+            if ($cta.length === 0) return;
+            if ($(window).scrollTop() > 600) {
+                $cta.stop(true).fadeIn(200);
+            } else {
+                $cta.stop(true).fadeOut(200);
+            }
+        }
+
+        $(window).on('scroll', toggleEnglpFixedCta);
+        toggleEnglpFixedCta();
+
+        // ==============================
+        // メニューモーダル
+        // ==============================
+        $('.humberger').on('click', function () {
+            $('.menu-modal, .bg-modal').fadeIn();
+        });
+
+        $('.menu-modal-navi a, .menu-modal-close, .bg-modal').on('click', function () {
+            $('.menu-modal, .bg-modal, .modal-video, .modal').fadeOut();
+            $('.modal-video-iframe').attr('src', '');
+        });
+
+        // ==============================
+        // 動画モーダル（講師紹介 etc.）
+        // ==============================
+        $('.modal-video-trigger').on('click', function () {
+            $('.modal-video-iframe').attr('src', $(this).attr('data-video'));
+            $('.bg-modal, .modal-video').fadeIn();
+        });
+
+        $('.modal-video-close').on('click', function () {
+            $('.bg-modal, .modal-video').fadeOut();
+            $('.modal-video-iframe').attr('src', '');
+        });
+
+        // ==============================
+        // LINE 申込導線（PC: QR モーダル / SP: 直遷移）
         // ==============================
         function modalPcLiffOpen() {
             $('#modal-pc-liff, .bg-modal').show();
@@ -38,78 +83,34 @@ script.
 
         $(window).on('load resize', updateButtonBehavior);
 
-        // ==============================
-        // LIFF QR（PC 用）
-        // ==============================
+        // LIFF QR コード生成（PC 用）
         var el = document.getElementById('liffqr');
-        if (el) {
-            new QRCode(el, '#{UrlLine}');
-        }
+        if (el) new QRCode(el, '#{UrlLine}');
 
-        // LINE QR モーダルの「閉じる」
+        // LINE QR モーダルを閉じる
         $(document).on('click', '#modal-pc-liff .modal-close', function () {
             $('#modal-pc-liff, .bg-modal').hide();
         });
 
-        function toggleEnglpFixedCta() {
-            var $cta = $('.englp-fixed-cta-wrap');
-            if ($cta.length === 0) return;
-            if ($(window).scrollTop() > 600) {
-                $cta.stop(true).fadeIn(200);
-            } else {
-                $cta.stop(true).fadeOut(200);
-            }
-        }
-
-        $(window).on('scroll', toggleEnglpFixedCta);
-        toggleEnglpFixedCta();
-
-        // メニューモーダル
-        $('.humberger').on('click', function () {
-            $('.menu-modal, .bg-modal').fadeIn();
-        });
-
-        $('.menu-modal-navi a, .menu-modal-close,.bg-modal').on('click', function () {
-            $('.menu-modal, .bg-modal, .modal-video, .modal').fadeOut();
-            $('.modal-video-iframe').attr('src','');
-        });
-
-        $('.englp-section-voice-box-text-button button').on('click', function () {
-            var $box = $(this).closest('.englp-section-voice-box-text');
-            $box.addClass('is-expanded');
-            $(this).attr('aria-expanded', 'true');
-        });
-        // ビデオのモーダルを開く
-        $('.modal-video-trigger').on('click', function () {
-            // 動画のURLを指定
-            $('.modal-video-iframe').attr('src',$(this).attr('data-video'));
-            // フェードイン
-            $('.bg-modal, .modal-video').fadeIn();
-        });
-
-        // ビデオのモーダルを閉じる
-        $('.modal-video-close').on('click', function () {
-            // フェードアウト
-            $('.bg-modal, .modal-video').fadeOut();
-            // 動画のURLを空にする
-            $('.modal-video-iframe').attr('src','');
-        });
-
-        // 年間の授業カリキュラムのタブ切り替え
+        // ==============================
+        // カリキュラムタブ切り替え
+        // ==============================
         $('.section-el-second-content-crclm-tab-item').on('click', function () {
             $('.section-el-second-content-crclm-tab-item').removeClass('is-active');
             $(this).addClass('is-active');
-            $('.section-el-second-content-crclm-tab-contents').hide();
-            $('.section-el-second-content-crclm-tab-contents').eq($('.section-el-second-content-crclm-tab-item').index($(this))).show();
+            var idx = $('.section-el-second-content-crclm-tab-item').index($(this));
+            $('.section-el-second-content-crclm-tab-contents').hide().eq(idx).show();
         });
 
-        // カリキュラムの説明動画が読み込み完了したらクラスを付ける
+        // カリキュラム説明動画の再生開始を検知
         const player = new Vimeo.Player($('.section-el-second-process-movie-head iframe')[0]);
         player.on('play', function () {
             $('.section-el-second-process-movie-head').addClass('is-loaded');
         });
 
-        // 受講生の声「続きを読む」（SPのみ）
+        // ==============================
+        // 受講生の声「続きを読む」（SP のみ）
+        // ==============================
         var voiceReadMoreBreakpoint = 768;
 
         function initVoiceReadMore() {
@@ -122,15 +123,11 @@ script.
                     return;
                 }
 
-                if ($box.hasClass('is-expanded')) {
-                    return;
-                }
+                if ($box.hasClass('is-expanded')) return;
 
                 $box.removeClass('is-no-more');
 
-                if (!$p.length) {
-                    return;
-                }
+                if (!$p.length) return;
 
                 if ($p[0].scrollHeight <= $p[0].clientHeight + 1) {
                     $box.addClass('is-no-more');
@@ -138,61 +135,68 @@ script.
             });
         }
 
-
         initVoiceReadMore();
         $(window).on('resize', initVoiceReadMore);
-    }); 
-   function equalizeHeight($elements) {
-    var maxHeight = 0;
-    $elements.css('height', 'auto');
-    $elements.each(function() {
-        var h = $(this).outerHeight();
-        if (h > maxHeight) maxHeight = h;
+
+        $('.englp-section-voice-box-text-button button').on('click', function () {
+            var $box = $(this).closest('.englp-section-voice-box-text');
+            $box.addClass('is-expanded');
+            $(this).attr('aria-expanded', 'true');
+        });
+
+        // ==============================
+        // カード高さ揃え
+        // ==============================
+        function equalizeHeight($elements) {
+            var maxHeight = 0;
+            $elements.css('height', 'auto');
+            $elements.each(function () {
+                var h = $(this).outerHeight();
+                if (h > maxHeight) maxHeight = h;
+            });
+            $elements.css('height', maxHeight + 'px');
+        }
+
+        function equalizeAll() {
+            var $cards  = $('.englp-section-movie-curriculum-scroll-block-content-card');
+            var $titles = $('.englp-section-movie-curriculum-scroll-block-content-card-maintitle');
+            equalizeHeight($titles);
+            equalizeHeight($cards);
+        }
+
+        $(window).on('load resize', equalizeAll);
+
     });
-    $elements.css('height', maxHeight + 'px');
-    }
-
-    function equalizeAll() {
-    var $cards = $('.englp-section-movie-curriculum-scroll-block-content-card');
-    var $titles = $('.englp-section-movie-curriculum-scroll-block-content-card-maintitle');
-    equalizeHeight($titles);
-    equalizeHeight($cards);
-    }
-
-    $(window).on('load resize', equalizeAll);
 
 script.
     $(function () {
-    // localhost 判定
-    const isLocalhost =
-        location.hostname === 'localhost' ||
-        location.hostname === '127.0.0.1';
 
-    // noindex 判定
-    const hasNoindex =
-        $('meta[name="robots"]').attr('content')?.includes('noindex') ||
-        $('meta[name="googlebot"]').attr('content')?.includes('noindex');
+        // ==============================
+        // noindex アラート（ローカル開発用）
+        // ==============================
+        const isLocalhost =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
 
-    // 両方満たしたら表示
-    if (isLocalhost && hasNoindex) {
-        $('body').append(`
-        <div id="noindex-alert" class="pcimage">
-            noindex 有効中
-        </div>
-        `);
+        const hasNoindex =
+            $('meta[name="robots"]').attr('content')?.includes('noindex') ||
+            $('meta[name="googlebot"]').attr('content')?.includes('noindex');
 
-        $('#noindex-alert').css({
-        position: 'fixed',
-        bottom: '20px',
-        left: '20px',
-        zIndex: '99999',
-        background: '#fff',
-        color: '#ccc',
-        padding: '12px 16px',
-        borderRadius: '8px',
-        fontSize: '14px',
-        fontWeight: 'bold',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-        });
-    }
+        if (isLocalhost && hasNoindex) {
+            $('body').append('<div id="noindex-alert" class="pcimage">noindex 有効中</div>');
+            $('#noindex-alert').css({
+                position:     'fixed',
+                bottom:       '20px',
+                left:         '20px',
+                zIndex:       '99999',
+                background:   '#fff',
+                color:        '#ccc',
+                padding:      '12px 16px',
+                borderRadius: '8px',
+                fontSize:     '14px',
+                fontWeight:   'bold',
+                boxShadow:    '0 4px 12px rgba(0,0,0,0.2)'
+            });
+        }
+
     });
