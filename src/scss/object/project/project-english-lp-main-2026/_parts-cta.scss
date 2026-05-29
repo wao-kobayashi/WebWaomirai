@@ -1,22 +1,67 @@
+@keyframes englp-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+$negative-margin-cta:40px;
+
 .englp-cta{
+  margin-top: -$negative-margin-cta;
+  position:relative;
   background:$lp-yellow;
-  padding:75px 0;
+  padding:calc(120px + $negative-margin-cta) 0 105px;
+  @include responsive-style($breakpoint-sp){
+   
+    padding:calc(60px + $negative-margin-cta) 0 75px;
+   }
   .englp-cta-title{
     @include font-size-l;
     font-weight:bold;
     text-align:center;
-    letter-spacing:1px;
+    letter-spacing:0.05em;
+    position:relative;
+    z-index:2;
+  
+  }
+  .englp-cta-subtitle {
+    overflow: hidden;
+    margin: 20px 0 0;
+    position:absolute;
+    width:100%;
+    top:75px;
+    z-index:0;
+    .englp-cta-subtitle-track {
+      display: flex;
+      white-space: nowrap;
+      animation: englp-marquee 12s linear infinite;
+
+      span {
+        display: inline-block;
+        font-size: 100px;
+        font-weight: 800;
+        letter-spacing: 8px;
+        color: $cl-white;
+        opacity:0.3;
+        line-height: 1;
+      }
+    }
   }
   .englp-cta-content{
     margin: 30px auto 0px;
     max-width: $middlewidth;
     display:flex;
     gap: 40px;
+    @include responsive-style($breakpoint-sp){
+      flex-direction:column;
+    }
     .englp-cta-content-box{
       flex:1;
       border-radius:$border-radius-big;
       background:$cl-white;
       padding:50px 0;
+      @include responsive-style($breakpoint-sp){
+       width:calc(100% - 30px);
+       margin:0 auto;
+      }
       .englp-cta-content-box-icn img{
         height:68px;
         margin:0 auto 15px;
@@ -39,6 +84,10 @@
         border: 2px solid #ee7a00;
         margin:30px auto 0;
         text-decoration:none;
+        @include responsive-style($breakpoint-sp){
+          width:calc(100% - 30px);
+     
+         }
         &.cta{
           
           background:$cl-btn-ctaorange;  

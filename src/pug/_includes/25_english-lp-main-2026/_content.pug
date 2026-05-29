@@ -322,7 +322,7 @@ html
               </iframe>
             </div>
       //料金システム
-      section.englp-section.englp-bg-gray.englp-section-common#price
+      section.englp-section.englp-bg-gray.englp-section-common.englp-section-borderbottom#price
         .section-engtitle.head-gray.head-bg-white 
             .section-engtitle-main
               |COURSE
@@ -405,39 +405,10 @@ html
                img(src=ScheduleSp)
         .englp-section-course-schedule-note 
           |※土曜配信は平日と同内容
-      section.englp-cta
-            .englp-cta-title
-              |ワオ未来塾・グローバル英語に興味がある方はコチラ！
-            .englp-cta-subtitle 
-              |TRY! TRY! TRY! TRY!
-            .englp-cta-content
-               .englp-cta-content-box
-                 .englp-cta-content-box-icn
-                   img(src=IcnPrice01)
-                 .englp-cta-content-box-title
-                    |まずは初月無料で
-                    br
-                    |レッスンを体験してみる
-                 a.englp-cta-content-box-btn.cta(href=UrlCv, target='_blank')
-                    .englp-cta-content-box-btn-main
-                       |受講申し込みはこちら
-                    .englp-cta-content-box-btn-arrow.
-                        <span class="material-symbols-outlined">keyboard_arrow_right </span>          
-               .englp-cta-content-box
-                 .englp-cta-content-box-icn
-                    img(src=IcnPrice03)
-                 .englp-cta-content-box-title
-                    |英検3級フレーズがスラスラ話せる！
-                    br
-                    |レッスン動画プレゼント！
-                 a.englp-cta-content-box-btn.movie(href=UrlLine,target='_blank')
-                    .englp-cta-content-box-btn-main
-                       |LINE限定の特別動画プレゼント
-                    .englp-cta-content-box-btn-arrow.
-                        <span class="material-symbols-outlined">keyboard_arrow_right </span>    
-                       
+      //CTA
+      +section-cta                 
       //講師紹介
-      section.englp-section.englp-bg-purplelight.englp-section-common.englp-section-borderbottom#teacher
+      section.englp-section.englp-bg-purplelight.englp-section-common#teacher
         .section-engtitle.head-purple.head-bg-yellow
             .section-engtitle-main
               |TEACHER
@@ -500,18 +471,12 @@ html
                     |生徒からのコメント
                 .englp-section-teacher-box-right-comment-content 
                     |「優しいお父さんみたいでたくさん褒めてくれる」
-      //中間の写真
-      section.large-photo
-        .large-photo-img
-          video(src=MiddleMovie autoplay muted loop playsinline)
-          //- img(src=MiddleImage)
-        .large-photo-title-bg
-        .large-photo-title-text
-              |FEATURE
-        //- .large-photo-title-text(style='color:transparent;')
-        //-       |FEATURE
+
       //「ワオ未来塾・グローバル英語」と「他英語スクール」との違い
       section.englp-section.englp-bg-white.englp-section-common#feature
+        .section-engtitle.head-white.head-bg-purple
+            .section-engtitle-main
+              |TEACHER
         .englp-section-title 
           h2.englp-section-title-main
             |「ワオ未来塾・グローバル英語」と
@@ -519,7 +484,7 @@ html
             |「他英語スクール」との違い
         include _compare
       //「受講生の声
-      section.englp-section.englp-bg-creamyellow#voice
+      section.englp-section.englp-bg-creamyellow.englp-section-borderbottom#voice
         .section-engtitle.head-creamyellow.head-bg-white 
             .section-engtitle-main
               |VOICE
@@ -620,9 +585,11 @@ html
               .englp-section-voice-box-text-button.spimage
                 button(type='button' aria-expanded='false')
                   |続きを読む +
+      //CTA
+      +section-cta
       // 授業コース〜カリキュラムの説明動画
       section.englp-section.englp-bg-white
-        .section-engtitle.head-white.head-bg-creamyellow 
+        .section-engtitle.head-white.head-bg-yellow 
             .section-engtitle-main
               |PROCESS
         .englp-section-title 
