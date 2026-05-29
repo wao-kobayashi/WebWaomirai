@@ -195,7 +195,7 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
       }
       @include responsive-style($breakpoint-sp) {
         font-size:  calc(40 * var(--px));
-        margin: 0 0 20px;
+        margin: 0 0 45px;
       }
     }
   }
@@ -271,7 +271,7 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     z-index: 200;
     right: calc((100% - 1200px) / 2);
     bottom: 94px;
-    width: min(380px, calc(100vw - 48px));
+    width: min(400px, calc(100vw - 48px));
     margin: 0;
 
     margin-left: auto;
@@ -283,7 +283,7 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
   .englp-fv-cta-button {
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,11 +316,19 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     border: 1px solid $cl-btn-ctaorange;
     border-radius: $border-radius-full;
     font-size: 12px;
+    @include responsive-style($breakpoint-sp) {
+      height: 24px;
+      font-size: 11px;
+    }
   }
 
   .englp-fv-cta-button-text {
     color: $cl-white;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight:bold;
+    @include responsive-style($breakpoint-sp) {
+      font-size: 18px !important;
+    }
   }
 
   .englp-fv-cta-button-free {
@@ -332,7 +340,10 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 44px;
+    width: 54px;
+    @include responsive-style($breakpoint-sp) {
+      width: 44px;
+    }
   }
 
   .englp-fv-cta-button-icn span {
@@ -1697,9 +1708,19 @@ $faq-icn-sp: 35px;
           font-size: 60px;
         }
       }
+      .englp-line-right-catch{
+        margin:0 auto 10px;
+        text-align:center;
+        @include font-size-ss;
+        @include responsive-style($breakpoint-sp) {
+         font-size:12px !important;
+          
+        }
+      }
       .englp-line-right-text {
         @include font-size-m;
         text-align: center;
+        margin:0 auto 30px;
         @include responsive-style($breakpoint-sp) {
           @include font-size-ms;
           text-align: left;

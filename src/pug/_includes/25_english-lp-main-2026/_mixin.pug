@@ -40,8 +40,10 @@ mixin section-cta
                  .englp-cta-content-box-title
                     |個別の無料説明会(30分)で
                     br
-                    |お子様の英会話のお悩みを解決しませんか？
-                 a.englp-cta-content-box-btn.js-line-trigger(href=UrlLine,target='_blank')
+                    |お子様の英会話のお悩みを
+                    br.spimage
+                    |解決しませんか？
+                 a.englp-cta-content-box-btn.consultation.js-line-trigger(href=UrlLine,target='_blank')
                     .englp-cta-content-box-btn-sub
                        |特別トレーニング動画もプレゼント
                     .englp-cta-content-box-btn-main
@@ -98,12 +100,31 @@ mixin menu-modal
       i.fa-solid.fa-xmark
       span|閉じる
 
-.modal-video
-  .modal-video-wrapper
-    .modal-video-wrapper-content
-      div(style="padding:56.25% 0 0 0;position:relative;")
-        iframe(frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%").modal-video-iframe
-    .modal-video-close
-      |閉じる
-.bg-modal(style='display:none;')
-script(src="https://player.vimeo.com/api/player.js")
+mixin modal-video-player
+  .modal-video
+    .modal-video-wrapper
+      .modal-video-wrapper-content
+        div(style="padding:56.25% 0 0 0;position:relative;")
+          iframe(frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%").modal-video-iframe
+      .modal-video-close
+        |閉じる
+
+mixin modal-line-qr
+  .modal#modal-pc-liff(style='display:none;')
+    .modal-wrapper
+      .modal-wrapper-content
+        .modal-wrapper-content-main
+          .modal-wrapper-content-main-head
+            .modal-wrapper-content-main-head-img
+              img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png')
+            .modal-wrapper-content-main-head-text
+              |スマホで
+              br
+              |LINEの友だち追加
+          .modal-wrapper-content-main-qr#liffqr
+          .modal-wrapper-content-main-text
+                        |追加後に申込フォームが
+                        br
+                        |送信されます
+        .modal-wrapper-content-close.modal-close
+          |閉じる

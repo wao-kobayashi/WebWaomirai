@@ -7,6 +7,8 @@ doctype html
 html
   head
     meta(charset="utf-8")
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -14,8 +16,6 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-W3X8CG9C');
     // End Google Tag Manager
-    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
-    meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssBase = '../../css/'
     - const cssLocal = ''
@@ -79,7 +79,10 @@ html
             .englp-reviews-list(aria-hidden=i === 1 ? 'true' : false)
               .englp-reviews-box 
                 .englp-reviews-box-title 
-                  |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+                  .pcimage
+                    |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+                  .spimage
+                    |好きな教科で英語！と答えるようになりました。
                 .englp-reviews-box-name 
                   |小学校 3年生
               .englp-reviews-box 
@@ -645,7 +648,7 @@ html
                 br
                 |お悩み・ご相談にお答えいたします！
             .englp-line-right-catch
-              |今なら英検3級フレーズがスラスラ話せる！レッスン動画プレゼント！    
+              |＼今なら特別トレーニング動画をプレゼント！ ／ 
             a(href=UrlLine,target='_blank').englp-line-right-btn
                 .englp-line-right-btn-icn
                   img(src='https://waomirai.com/lp/assets/lpimages/06_english-lp-main-2025may/icn_line.svg')
@@ -705,5 +708,9 @@ html
             |© ワオ・コーポレーション All rights reserved.
     +menu-modal
     +cta-fixed
+    +modal-video-player
+    +modal-line-qr
+    .bg-modal(style='display:none;')
+    script(src="https://player.vimeo.com/api/player.js")
 //js
 include _js
