@@ -28,22 +28,26 @@ mixin section-cta
                     br
                     |レッスンを体験してみる
                  a.englp-cta-content-box-btn.cta(href=UrlCv, target='_blank')
+                    .englp-cta-content-box-btn-sub
+                       |料期間中のみの受講もOK
                     .englp-cta-content-box-btn-main
                        |受講申し込みはこちら
                     .englp-cta-content-box-btn-arrow.
                         <span class="material-symbols-outlined">keyboard_arrow_right </span>          
                .englp-cta-content-box
                  .englp-cta-content-box-icn
-                    img(src=IcnPrice03)
+                    img(src=IcnPrice04)
                  .englp-cta-content-box-title
-                    |英検3級フレーズがスラスラ話せる！
+                    |個別の無料説明会(30分)で
                     br
-                    |レッスン動画プレゼント！
-                 a.englp-cta-content-box-btn.movie(href=UrlLine,target='_blank')
+                    |お子様の英会話のお悩みを解決しませんか？
+                 a.englp-cta-content-box-btn.js-line-trigger(href=UrlLine,target='_blank')
+                    .englp-cta-content-box-btn-sub
+                       |特別トレーニング動画もプレゼント
                     .englp-cta-content-box-btn-main
-                       |LINE限定の特別動画プレゼント
+                       |LINEで無料相談をする
                     .englp-cta-content-box-btn-arrow.
-                        <span class="material-symbols-outlined">live_tv </span>    
+                        <span class="material-symbols-outlined">keyboard_arrow_right </span>      
  
 mixin cta-fixed
     .englp-fixed-cta-wrap(style='display:none;')

@@ -31,8 +31,9 @@ $negative-margin-cta:40px;
     z-index:0;
     .englp-cta-subtitle-track {
       display: flex;
+      width: max-content;
       white-space: nowrap;
-      animation: englp-marquee 12s linear infinite;
+      animation: englp-marquee 30s linear infinite;
 
       span {
         display: inline-block;
@@ -88,11 +89,31 @@ $negative-margin-cta:40px;
           width:calc(100% - 30px);
      
          }
+         .englp-cta-content-box-btn-sub{
+          position: absolute;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 240px;
+          height: 25px;
+          background: $cl-white;
+          color: $cl-btn-ctaorange;
+          left: 0;
+          right: 0;
+          top: -18px;
+          margin: auto;
+          z-index: 10;
+          text-align: center;
+          border: 2px solid $cl-btn-ctaorange;
+          border-radius: $border-radius-full;
+          font-size: 12px;
+         }
         &.cta{
           
           background:$cl-btn-ctaorange;  
           .englp-cta-content-box-btn-main{
             color:$cl-white;
+            font-weight:bold;
           }
           span{
             color:$cl-white;
