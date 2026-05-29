@@ -68,6 +68,12 @@
   background: $cl-graylightest;
 }
 
+.section-engtitle.head-bg-yellow {
+  background: $lp-yellow;
+}
+
+
+
 .section-engtitle.head-bg-transparent {
   background: transparent;
 }
@@ -78,6 +84,9 @@
 /* decoration background */
 .section-engtitle.head-bg-purple::before {
   background: $lp-eng-purple-pale;
+}
+.section-engtitle.head-bg-yellow::before {
+  background:  $lp-yellow;
 }
 .section-engtitle.head-bg-purple {
   background: $lp-eng-purple-pale;
