@@ -152,10 +152,10 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     grid-template-areas:
       "grid-a grid-a"
       ". .";
-      @include responsive-style(1250px) {
-        bottom: 100px;
-        width: 92%;
-      }
+    @include responsive-style(1250px) {
+      bottom: 100px;
+      width: 92%;
+    }
     @include responsive-style($breakpoint-sp) {
       display: block;
       left: 20px;
@@ -189,12 +189,12 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
       line-height: 1.35;
       font-weight: bold;
       font-size: min(88px, calc(50 * var(--px)));
-       @include responsive-style(1000px) {
-        font-size:  40px;
+      @include responsive-style(1000px) {
+        font-size: 40px;
         margin: 0 0 20px;
       }
       @include responsive-style($breakpoint-sp) {
-        font-size:  calc(40 * var(--px));
+        font-size: calc(40 * var(--px));
         margin: 0 0 45px;
       }
     }
@@ -216,6 +216,9 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
       @include responsive-style($breakpoint-sp) {
         height: 100vh;
         object-fit: cover;
+      }
+      @include responsive-style(375px) {
+        top: 0px;
       }
     }
     .slideshow-image {
@@ -325,7 +328,7 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
   .englp-fv-cta-button-text {
     color: $cl-white;
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     @include responsive-style($breakpoint-sp) {
       font-size: 18px !important;
     }
@@ -394,7 +397,7 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     flex: 0 0 370px;
     background: #fff;
     border-radius: $border-radius-big;
-    @include font-size-s;
+    @include font-size-ms;
     padding: 30px 30px 30px;
     width: 370px;
     height: 190px;
@@ -503,6 +506,8 @@ section.englp-section-concern {
       gap: 60px;
     }
     .englp-section-concern-box {
+      position: relative;
+      z-index: 10;
       flex: 1;
       background: $cl-white;
       padding: 35px 0 40px;
@@ -555,6 +560,7 @@ section.englp-section-concern {
     opacity: 0.3;
     text-align: center;
     letter-spacing: 8px;
+    user-select: none; /* 標準 */
   }
 }
 
@@ -593,8 +599,13 @@ section.englp-section-concern {
     margin: 0 0 -50px;
     @include font-size-engtitle;
 
+    @include min-responsive-style($breakpoint-sp) {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
     @include responsive-style($breakpoint-sp) {
-      margin: 0 0 -70px;
+      margin: 0 0 -88px;
     }
   }
 }
@@ -605,7 +616,7 @@ section.englp-section-concern {
   width: 100%;
   background: $lp-eng-purple-pale;
   margin: 0 auto 45px;
-  padding: 80px 45px 24px;
+  padding: 95px 45px 24px;
   border-radius: $border-radius-bigplus;
   overflow: hidden;
   @include responsive-style($breakpoint-sp) {
@@ -800,7 +811,7 @@ section.englp-section-concern {
       .englp-section-solution-grid-content-left-title {
         @include font-size-xl;
         font-weight: 600;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.07em;
         margin-bottom: 35px;
         line-height: $lineheight-normal;
         @include responsive-style($breakpoint-sp) {
@@ -1338,12 +1349,12 @@ section.large-photo {
     display: block;
     background: #000;
     opacity: 0.1;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: 1;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
   }
   .large-photo-img video {
     width: 100%;
@@ -1364,7 +1375,6 @@ section.large-photo {
       position: relative;
       z-index: 3;
     }
-    
   }
   .large-photo-title-text {
     text-align: center;
@@ -1380,7 +1390,6 @@ section.large-photo {
     }
   }
   .large-photo-title-bg {
-
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1708,19 +1717,18 @@ $faq-icn-sp: 35px;
           font-size: 60px;
         }
       }
-      .englp-line-right-catch{
-        margin:0 auto 10px;
-        text-align:center;
+      .englp-line-right-catch {
+        margin: 0 auto 10px;
+        text-align: center;
         @include font-size-ss;
         @include responsive-style($breakpoint-sp) {
-         font-size:12px !important;
-          
+          font-size: 12px !important;
         }
       }
       .englp-line-right-text {
         @include font-size-m;
         text-align: center;
-        margin:0 auto 30px;
+        margin: 0 auto 30px;
         @include responsive-style($breakpoint-sp) {
           @include font-size-ms;
           text-align: left;

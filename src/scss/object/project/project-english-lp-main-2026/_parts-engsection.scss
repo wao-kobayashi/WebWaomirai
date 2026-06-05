@@ -17,8 +17,8 @@
   }
 }
 .englp-section-borderbottom {
-  position:relative;
-  z-index:2;
+  position: relative;
+  z-index: 2;
   border-radius: 0 0 $border-radius-extrabig $border-radius-extrabig;
   @include responsive-style($breakpoint-sp) {
     border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
@@ -32,6 +32,14 @@
 }
 
 /* セクションの繋ぎ目 */
+.englp-rapport22 .section-engtitle {
+  &::before {
+    @include responsive-style($breakpoint-sp) {
+      height: 90px;
+      border-radius: $border-radius-big $border-radius-big 0 0;
+    }
+  }
+}
 
 .section-engtitle {
   @include font-size-engtitle;
@@ -74,8 +82,6 @@
   background: $lp-yellow;
 }
 
-
-
 .section-engtitle.head-bg-transparent {
   background: transparent;
 }
@@ -88,7 +94,7 @@
   background: $lp-eng-purple-pale;
 }
 .section-engtitle.head-bg-yellow::before {
-  background:  $lp-yellow;
+  background: $lp-yellow;
 }
 .section-engtitle.head-bg-purple {
   background: $lp-eng-purple-pale;
