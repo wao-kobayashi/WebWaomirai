@@ -103,10 +103,13 @@ script.
         });
 
         // カリキュラム説明動画の再生開始を検知
-        const player = new Vimeo.Player($('.section-el-second-process-movie-head iframe')[0]);
-        player.on('play', function () {
-            $('.section-el-second-process-movie-head').addClass('is-loaded');
-        });
+        var $vimeoIframe = $('.section-el-second-process-movie-head iframe')[0];
+        if ($vimeoIframe) {
+            var player = new Vimeo.Player($vimeoIframe);
+            player.on('play', function () {
+                $('.section-el-second-process-movie-head').addClass('is-loaded');
+            });
+        }
 
         // ==============================
         // 受講生の声「続きを読む」（SP のみ）
