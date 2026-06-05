@@ -34,7 +34,7 @@
   margin: 0 auto;
   background: #fff;
   border-radius: 16px;
-  overflow: hidden;
+  // overflow: hidden;
   @include responsive-style($breakpoint-sp) {
     grid-template-columns: 80px 1fr 1fr 1fr;
     margin: 0 120px 0 15px;

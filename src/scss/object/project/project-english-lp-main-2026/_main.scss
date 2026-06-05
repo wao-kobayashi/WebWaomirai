@@ -211,6 +211,9 @@ $scale-reset: $scale-from - ($scale-to - $scale-from) * 0.05882;
     img {
       position: absolute;
       top: 40px;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
       // height: 100vh;
       // object-fit:cover;
       @include responsive-style($breakpoint-sp) {
