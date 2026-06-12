@@ -3,8 +3,7 @@
     times: [
       { start: '17:30', end: '18:15' },
       { start: '18:30', end: '19:15' },
-      { start: '19:30', end: '20:15' },
-      { start: '20:30', end: '21:15' }
+      { start: '19:30', end: '20:15' }
     ],
     days: [
       { name: '月', type: 'single', classes: [null, null, null, null] },
@@ -12,32 +11,23 @@
         name: '火', 
         type: 'single',
         classes: [
-          [{ subject: '哲学', level: 2, class: 'philosophy' }],
-          [{ subject: '哲学', level: 1, class: 'philosophy' }],
-          [{ subject: '哲学', level: 4, class: 'philosophy' }],
-          [{ subject: '哲学', level: 3, class: 'philosophy' }]
-        ]
+          null,null,
+          [{ subject: '哲学', level: 3, class: 'philosophy' }],
+           null]
       },
       { 
         name: '水', 
-        type: 'double',
+        type: 'single',
         classes: [
           [
-            { subject: '経済', level: 2, class: 'economy' },
-            { subject: '科学', level: 1, class: 'science' }
+            { subject: '経済', level: 2, class: 'economy' }
           ],
           [
-            { subject: '経済', level: 1, class: 'economy' },
-            { subject: '科学', level: 2, class: 'science' }
+            { subject: '経済', level: 1, class: 'economy' }
           ],
-          [
-            { subject: '経済', level: 4, class: 'economy' },
+           [
             { subject: '科学', level: 3, class: 'science' }
-          ],
-          [
-            { subject: '経済', level: 3, class: 'economy' },
-            { subject: '科学', level: 4, class: 'science' }
-          ]
+          ],null
         ]
       },
       { 
@@ -46,37 +36,27 @@
         classes: [
           [{ subject: '経済', level: 1, class: 'economy' }],
           [{ subject: '経済', level: 2, class: 'economy' }],
-          [{ subject: '経済', level: 3, class: 'economy' }],
-          [{ subject: '経済', level: 4, class: 'economy' }]
+          null,null
         ]
       },
       { 
         name: '金', 
-        type: 'double',
+        type: 'single',
         classes: [
           [
-            { subject: '哲学', level: 1, class: 'philosophy' },
             { subject: '科学', level: 2, class: 'science' }
           ],
           [
-            { subject: '哲学', level: 2, class: 'philosophy' },
             { subject: '科学', level: 1, class: 'science' }
           ],
-          [
-            { subject: '哲学', level: 3, class: 'philosophy' },
-            { subject: '科学', level: 4, class: 'science' }
-          ],
-          [
-            { subject: '哲学', level: 4, class: 'philosophy' },
-            { subject: '科学', level: 3, class: 'science' }
-          ]
+          null,null
         ]
       }
     ]
   }
 
 
-.schedule-tab 
+.schedule-tab(style='display:none;')
    .schedule-tab-content#all.active 
       |全教科
    .schedule-tab-content#philosophy
@@ -86,17 +66,17 @@
    .schedule-tab-content#science
       |科学
 .schedule-table
-  .overlay-swipe 
-   .overlay-swipe-flex 
-    .overlay-swipe-icon
-      .arrow 
-        img(src=ImgIcnSwipeArrow )
-      .hand 
-        img(src=ImgIcnSwipeHand )
-    .overlay-swipe-text 
-      |スワイプで続きの
-      br
-      |時間割が見れます
+  //- .overlay-swipe 
+  //-  .overlay-swipe-flex 
+  //-   .overlay-swipe-icon
+  //-     .arrow 
+  //-       img(src=ImgIcnSwipeArrow )
+  //-     .hand 
+  //-       img(src=ImgIcnSwipeHand )
+  //-   .overlay-swipe-text 
+  //-     |スワイプで続きの
+  //-     br
+  //-     |時間割が見れます
   table
     thead
       tr
@@ -138,7 +118,7 @@
                   .schedule-info-list-square 
                     |◼️
                   .schedule-info-list-content                   
-                    |各授業は同じ内容を週に2回配信します。どちらかご受講ください
+                    |経済のみ同じ内容を週に2回配信します。どちらかご受講ください
                 .schedule-info-list 
                   .schedule-info-list-square 
                     |◼️
