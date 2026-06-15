@@ -14,20 +14,21 @@ $fvTextSp: 41%;
 
 // 共通CVボタン（金額記載あり）
 .c-btn-cv {
-  width: 333px;
-  height: 85px;
+  // width: 333px;
+  // height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 9px 0px #000000;
-  border: 3.5px solid #000;
+  margin: 0 auto;
+  // box-shadow: 0 9px 0px #000000;
+  // border: 3.5px solid #000;
   border-radius: $border-radius-full;
   background: #ec3f42;
   cursor: pointer;
-  img {
-    width: auto;
-    height: 26px;
-  }
+  // img {
+  //   width: auto;
+  //   height: 26px;
+  // }
   &:hover {
     opacity: 0.9;
   }
@@ -77,6 +78,7 @@ $fvTextSp: 41%;
   position: relative;
   z-index: 10;
   width: 100%;
+  margin: 0 auto 60px;
   // @include responsive-style(767px) {
   //   overflow: hidden;
   // }
@@ -113,10 +115,12 @@ $fvTextSp: 41%;
     z-index: 3;
     animation: FvfadeInUp 0.65s ease-out;
     width: 93%;
-    margin: -19.667vw auto 20px;
-    @include min-responsive-style(768px) {
-      margin-top: -100px;
-    }
+    margin: 0px auto 0;
+    padding: 20px 0 0;
+    // margin: -19.667vw auto 20px;
+    // @include min-responsive-style(768px) {
+    //   margin-top: -100px;
+    // }
     .eng-phase-main-fv-logo-parts {
       width: 60%;
       position: relative;
@@ -153,10 +157,11 @@ $fvTextSp: 41%;
   }
   .eng-phase-main-fv-text {
     width: 92%;
-    margin: -1vw auto 0;
-    @include min-responsive-style(768px) {
-      margin-top: 0;
-    }
+    margin: 10px auto 0;
+  }
+  .eng-phase-main-fv-button {
+    width: 92%;
+    margin: 20px auto 0;
   }
   .eng-phase-main-fv-persons {
     padding-top: 28.53vw;
@@ -244,7 +249,7 @@ $fvTextSp: 41%;
   position: relative;
   z-index: 100 !important;
 }
-.eng-phase-main-section-green {
+.eng-phase-main-section-green-main {
   width: $width-main-content;
   margin: 0 auto 60px;
   border-radius: $border-radius-bigplus;
@@ -257,12 +262,12 @@ $fvTextSp: 41%;
     height: $shadow-height;
     z-index: 0;
     display: block;
-    border: 4px solid $cl-bg-skyblue-darkendeep;
-    background: $cl-bg-skyblue-darken;
+    border: 3px solid #15572e;
+    background: #1a9262;
     margin: -20px 0 0;
     border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
     @include responsive-style(767px) {
-      border: 3px solid $cl-bg-skyblue-darkendeep;
+      border: 3px solid #15572e;
       height: $shadow-height-sp;
       border-radius: 0 0 $border-radius-big $border-radius-big;
     }
@@ -436,11 +441,10 @@ $fvTextSp: 41%;
   }
 }
 
-// 100フレーズチャレンジ 10日間プログラムの流れ
-.eng-phase-main-flow-wrapper {
+@mixin contents-main-layout {
   background: #fff;
   position: relative;
-  border: 4px solid #185b7f;
+  border: 4px solid #15572e;
   border-top: none;
   border-radius: 0 0 24px 24px;
   z-index: 1;
@@ -449,6 +453,11 @@ $fvTextSp: 41%;
     border-width: 3px;
     border-radius: 0 0 12px 12px;
   }
+}
+
+// 100フレーズチャレンジ 10日間プログラムの流れ
+.eng-phase-main-flow-wrapper {
+  @include contents-main-layout;
 }
 .eng-phase-main-flow-text {
   width: 78.483%;
@@ -523,7 +532,7 @@ $fvTextSp: 41%;
     z-index: 1;
   }
   &.is-active {
-    background: #c094c0;
+    background: #15572e;
     .image-balloon {
       display: none;
     }
@@ -561,10 +570,11 @@ $fvTextSp: 41%;
 }
 
 .eng-phase-main-flow-contents {
-  width: 98%;
+  width: 96%;
   margin: 0 auto;
-  border: 3px solid $cl-white;
+  border: 3px solid #15572e;
   border-radius: 16px;
+  padding: 0 0 20px;
 }
 .eng-phase-main-flow-contents-item:not(.is-active) {
   display: none;
@@ -685,6 +695,15 @@ $fvTextSp: 41%;
   padding: 30px 0 15px;
 }
 
+.eng-phase-main-section-green-3points {
+  padding: 30px 0 0;
+  @include contents-main-layout;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+// movie
 .eng-phase-main-section-movie {
   width: 100%;
   margin: -20px auto 60px;
@@ -965,6 +984,53 @@ $fvTextSp: 41%;
 }
 .eng-phase-main-section-green-faq {
   margin: 0 auto 20px;
+}
+
+//////////////////////
+// ループアニメーション
+//////////////////////
+.eng-phase-loop {
+  overflow: hidden;
+  margin: -30px 0 45px;
+}
+
+.eng-phase-loop-track {
+  display: flex;
+  width: max-content;
+  animation: loop-scroll 24s linear infinite;
+  padding: 45px 0 0;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.eng-phase-loop-wrapper-item {
+  flex-shrink: 0;
+  padding: 0 10px;
+
+  &.yellow {
+    margin: -20px 0 0;
+  }
+  img {
+    width: 220px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    border: 3px solid $cl-black;
+    @include responsive-style(767px) {
+      width: 220px;
+      border-radius: 16px;
+    }
+  }
+}
+
+@keyframes loop-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 //カンタン5stepで参加可能

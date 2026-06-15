@@ -20,31 +20,27 @@ include _mixins
         img(src=ImgFvLogoFv)
     .eng-phase-main-fv-text
         img(src=ImgFvText)
-
     .eng-phase-main-fv-overflow-hidden 
       .eng-phase-main-fv-shine
         img(src=ImgFvBgShine)
-      .eng-phase-main-fv-crowds01
-          img(src=ImgFvCrowds01)
-      .eng-phase-main-fv-crowds02
-          img(src=ImgFvCrowds02)
-  section.eng-phase-main-cv-crowds
-    .eng-phase-main-cv-crowds-img
-      img(src=ImgBgCrowdsCv)
-    .eng-phase-main-cv-crowds-btn
-        +conditionalLink('c-btn-cv is-contents')
-          img(src=ImgBtnCvPrice)
-  
+    .eng-phase-main-fv-button
+        +conditionalLink('c-btn-cv')
+          img(src=ImgBtnCv)
+
   //02 5日間のプログラムで楽しく喋れる
-  section.eng-phase-main-section-green.eng-phase-main-section-green-first.inview-triger.inview-hide
+  section.eng-phase-main-section-green-main.eng-phase-main-section-green-first.inview-triger.inview-hide
        img(src=ImgSectionMainIntro)
 
   //03 プログラムの流れ
-  section.eng-phase-main-section-green.inview-triger.inview-hide
+  section.eng-phase-main-section-green-main.inview-triger.inview-hide
     .eng-phase-main-flow
       .eng-phase-main-flow-title
         img(src=TitleFlow2026summer)
       .eng-phase-main-flow-wrapper
+        .eng-phase-main-flow-text
+          |A日程、B日程のいずれか、
+          br
+          |または両方お申込いただけます
         if !a_finished
           .eng-phase-main-flow-text
             img(src=TextFlow)
@@ -74,31 +70,42 @@ include _mixins
                 img(src=ImgFlowSchedule02_2026summer)
   
   //loopanimation
-  .eng-phase-loop 
-     .eng-phase-loop-wrapper 
-       .eng-phase-loop-wrapper-item
-            img(src=ImgScrol01)
-       .eng-phase-loop-wrapper-item
-            img(src=ImgScrol02)
-       .eng-phase-loop-wrapper-item
-            img(src=ImgScrol03)
+  .eng-phase-loop
+    .eng-phase-loop-track
+      .eng-phase-loop-wrapper-item.yellow
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item
+        img(src=ImgScrol02)
+      .eng-phase-loop-wrapper-item.yellow
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item
+        img(src=ImgScrol03)
+      .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item(aria-hidden="true")
+        img(src=ImgScrol02)
+      .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item(aria-hidden="true")
+        img(src=ImgScrol03)
             
   //３つのポイント
-  section.eng-phase-main-section-green.inview-triger.inview-hide
+  section.eng-phase-main-section-green-main.inview-triger.inview-hide
     div 
        img(src=ImgTitleSectionPoint)
-    div 
-       img(src=ImgPoint01) 
-    div 
-       img(src=ImgPoint02) 
-    div 
-       img(src=ImgPoint03) 
+    .eng-phase-main-section-green-3points
+      div 
+        img(src=ImgPoint01) 
+      div 
+        img(src=ImgPoint02) 
+      div 
+        img(src=ImgPoint03) 
   //学習プラン
-  section.eng-phase-main-section-green.inview-triger.inview-hide
+  section.eng-phase-main-section-green-mainn.inview-triger.inview-hide
     div 
        img(src=ImgSectionPlan)
   //blue06 前回参加者の声
-  section.eng-phase-main-section-green.inview-triger.inview-hide
+  section.eng-phase-main-section-green-main.inview-triger.inview-hide
        img(src=ImgSectionVoice)
 
   section.eng-phase-main-cv-humans.inview-triger.inview-hide
