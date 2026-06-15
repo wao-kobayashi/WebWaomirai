@@ -1,7 +1,6 @@
 
 script.
   $(function () {
-     var waomember = '#{waomember}'
     
     // ==============================
     // inview アニメーション
@@ -37,13 +36,7 @@ script.
           if (isWideScreen) {
             modalPcLiffOpen();
           } else {
-              //ワオ会員の時はliffに直接飛ばす（モーダルの注意が逆に正規価格に行ってしまう）
-              if (waomember){
-                window.open('#{UrlLiffAddFriend}', '_blank')
-              } else {
-                //通常時はモーダルに飛ばす
-                modalAlreadyFriendOpen();
-              }
+            window.open('#{UrlLiffAddFriend}', '_blank')
           }
         });
     }
@@ -154,6 +147,31 @@ script.
     }
 
     // ==============================
+    // ラポール「続きを読む」
+    // ==============================
+    function initRapportReadMore() {
+      var $box = $('.eng-phase-rapport-read-more');
+      if ($box.hasClass('is-expanded')) return;
+      $box.removeClass('is-no-more');
+      var $p = $box.children('p').first();
+      if (!$p.length) return;
+      if ($p[0].scrollHeight <= $p[0].clientHeight + 1) {
+        $box.addClass('is-no-more');
+      }
+    }
+
+    $('.eng-phase-rapport-read-more-button button').on('click', function () {
+      var $box = $(this).closest('.eng-phase-rapport-read-more');
+      if ($box.hasClass('is-expanded')) {
+        $box.removeClass('is-expanded');
+        $(this).attr('aria-expanded', 'false').text('続きを読む ＋');
+      } else {
+        $box.addClass('is-expanded');
+        $(this).attr('aria-expanded', 'true').text('閉じる');
+      }
+    });
+
+    // ==============================
     // 初期化
     // ==============================
     initInviewAnimation();
@@ -163,4 +181,6 @@ script.
     initFaqAccordion();
     initFlowTabs();
     initFixedCv();
+    initRapportReadMore();
+    $(window).on('resize', initRapportReadMore);
   });

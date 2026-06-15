@@ -850,8 +850,8 @@ $fvTextSp: 41%;
       padding: 20px 20px 30px;
     }
     .eng-phase-main-section-green-wrap-button-readmore {
-      border: 2px solid $cl-gray;
-      color: $cl-gray;
+      border: 2px solid $cl-black;
+      color: $cl-black;
       appearance: none;
       width: 70%;
       height: 55px;
@@ -1008,6 +1008,103 @@ $fvTextSp: 41%;
 }
 
 //////////////////////
+// ラポール「続きを読む」
+//////////////////////
+///
+
+.is-expanded {
+  .eng-phase-rapport-read-more-button {
+    bottom: -10px !important;
+  }
+}
+
+.eng-phase-rapport-read-more {
+  position: relative;
+  padding-bottom: 60px;
+
+  p {
+    max-height: 9.5em;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.35s ease;
+    margin: 0;
+    @include font-size-l;
+    text-align: left;
+    line-height: $lineheight-very-relaxed;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4.5em;
+      background: linear-gradient(
+        to bottom,
+        rgba($cl-white, 0) 0%,
+        $cl-white 72%
+      );
+      pointer-events: none;
+    }
+  }
+
+  &.is-expanded {
+    padding-bottom: 60px;
+
+    p {
+      max-height: none;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &.is-no-more {
+    padding-bottom: 0;
+
+    p::after {
+      display: none;
+    }
+
+    .eng-phase-rapport-read-more-button {
+      display: none;
+    }
+  }
+  /* 閉じている時 */
+
+  .eng-phase-rapport-read-more-button {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    button {
+      display: inline-flex;
+      width: 75%;
+      max-width: 280px;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      appearance: none;
+      border: 2px solid $cl-black;
+      border-radius: $border-radius-full;
+      background: $cl-white;
+      color: $cl-black;
+      @include font-size-m;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+//////////////////////
 // ループアニメーション
 //////////////////////
 .eng-phase-loop {
@@ -1057,7 +1154,7 @@ $fvTextSp: 41%;
 //カンタン5stepで参加可能
 .eng-phase-main-section-5steps {
   .eng-phase-main-section-5steps-title img {
-    width: 100%;
+    width: 90%;
     margin: 60px auto 20px;
   }
   .eng-phase-main-section-5steps-box {
@@ -1150,6 +1247,7 @@ $fvTextSp: 41%;
 .eng-phase-main-section-5steps-cv {
   margin: 0 auto 105px;
   text-align: center;
+  width: 92%;
   a {
     margin: 0 auto;
   }

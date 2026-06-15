@@ -2,21 +2,6 @@
 
 
 
-mixin cvgreen 
-  section.eng-phase-main-cv-humans.is-green.inview-triger.inview-hide
-    .eng-phase-main-cv-humans-img 
-        img(src=ImgBgCvGreen)
-    .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
-      .eng-phase-main-cv-humans-area-top
-          .eng-phase-main-cv-humans-area-top-text 
-            |＼🕒 定員わずか！／
-            br
-            |100フレーズチャレンジ #{price.toLocaleString()}円
-          .eng-phase-main-cv-humans-area-top-button    
-            a.js-btn-cv.js-btn-cv-img(href=UrlLine100Phases)
-              img(src=ImgBtnCvLine)
-      .eng-phase-main-cv-humans-area-bottom
-
 mixin faqBox(question, answer)
   .eng-phase-main-section-green-wrap-faq-box
     .eng-phase-main-section-green-wrap-faq-box-title 
@@ -78,6 +63,10 @@ mixin section-cta
           br
           |考える楽しさを発見しよう！
         +btn-cta 
+
+
+
+
 
 //- モーダルウィンドウのmixin
 //- 2種類のモーダルとオーバーレイ背景を含む
