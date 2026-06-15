@@ -70,25 +70,29 @@ include _mixins
             |※ZOOMライブは当日のご参加が難しい場合、
             br
             |アーカイブでご視聴いただけます
+  section(style='margin:0 auto 75px; width:92%;')
+      .eng-phase-main-fv-button
+        +conditionalLink('c-btn-cv')
+          img(src=ImgBtnCv)
   //04 loopanimation
-  .eng-phase-loop
-    .eng-phase-loop-track
-      .eng-phase-loop-wrapper-item.yellow
-        img(src=ImgScrol01)
-      .eng-phase-loop-wrapper-item
-        img(src=ImgScrol02)
-      .eng-phase-loop-wrapper-item.yellow
-        img(src=ImgScrol01)
-      .eng-phase-loop-wrapper-item
-        img(src=ImgScrol03)
-      .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
-        img(src=ImgScrol01)
-      .eng-phase-loop-wrapper-item(aria-hidden="true")
-        img(src=ImgScrol02)
-      .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
-        img(src=ImgScrol01)
-      .eng-phase-loop-wrapper-item(aria-hidden="true")
-        img(src=ImgScrol03)
+  //- .eng-phase-loop
+  //-   .eng-phase-loop-track
+  //-     .eng-phase-loop-wrapper-item.yellow
+  //-       img(src=ImgScrol01)
+  //-     .eng-phase-loop-wrapper-item
+  //-       img(src=ImgScrol02)
+  //-     .eng-phase-loop-wrapper-item.yellow
+  //-       img(src=ImgScrol01)
+  //-     .eng-phase-loop-wrapper-item
+  //-       img(src=ImgScrol03)
+  //-     .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
+  //-       img(src=ImgScrol01)
+  //-     .eng-phase-loop-wrapper-item(aria-hidden="true")
+  //-       img(src=ImgScrol02)
+  //-     .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
+  //-       img(src=ImgScrol01)
+  //-     .eng-phase-loop-wrapper-item(aria-hidden="true")
+  //-       img(src=ImgScrol03)
             
   //05 ３つのポイント
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
@@ -433,7 +437,7 @@ footer
 #fixed-cv
   .fixed-cv-wrapper
     +conditionalLink('fixed-cv-btn')
-      p|a
+      img(src=ImgCtaFixed)
     a.btn-pagetop(href="#")
       i.fas.fa-arrow-up
 div(style='position:absolute; z-index:-99999; bottom:0;').

@@ -79,6 +79,7 @@ $fvTextSp: 41%;
   z-index: 10;
   width: 100%;
   margin: 0 auto 60px;
+  background: $cl-lp-5days-bg-green;
   // @include responsive-style(767px) {
   //   overflow: hidden;
   // }
@@ -1449,14 +1450,14 @@ footer {
 //追従バナー
 //////////////////////
 #fixed-cv {
-  display: none;
+  // display: none;
   @include responsive-style(767px) {
     position: fixed;
     bottom: 10px;
     right: 0;
     left: 0;
     margin: auto;
-    z-index: 100;
+    z-index: 200;
     width: calc(100% - 30px);
 
     .fixed-cv-wrapper {
@@ -1464,18 +1465,22 @@ footer {
       gap: 10px;
     }
     .fixed-cv-btn {
-      background: #ec3f42;
+      background: #ff861c;
+      box-shadow:
+        inset 0 2px 0px rgba(255, 255, 255, 0.35),
+        inset 0 -2px 0px #8e3906,
+        0 5px 0 0px #4d7a33;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 3px solid #000;
+      border: 3px solid #0f5137;
       border-radius: $border-radius-full;
       height: 54px;
       flex: 1;
-      box-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+      // box-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
       cursor: pointer;
       img {
-        height: 22px;
+        height: 30px;
       }
     }
     .btn-pagetop {
@@ -1483,17 +1488,17 @@ footer {
       width: 54px;
       height: 54px;
       background: $cl-white;
-      box-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+      box-shadow: 0px 2px 0px #0f5137;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border: 3px solid #000;
+      border: 3px solid #0f5137;
       text-decoration: none;
       &:hover {
         opacity: 0.85;
       }
       i {
-        color: $cl-black;
+        color: #0f5137;
         font-size: 20px;
       }
     }

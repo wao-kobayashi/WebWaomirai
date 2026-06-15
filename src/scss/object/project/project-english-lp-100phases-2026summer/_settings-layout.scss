@@ -100,7 +100,8 @@ body#eng-phase {
   padding: 0;
   max-width: $width-main;
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  background: $cl-lp-5days-bg-green;
   border-left: 10px solid $cl-white;
   // border-top: 10px solid $cl-white;
   border-right: 10px solid $cl-white;
