@@ -19,7 +19,7 @@
 //- - var paths23 = 'https://waomirai.com/lp/assets/lpimages/26_english-lp-100phases-2026summer';
 - var paths23 = '../../../images/26_english-lp-100phases-2026summer'
 
-- 
+-
   function imgCommon(filename) {
     return `${pathsCommon}/${filename}`;
   }
@@ -34,29 +34,16 @@
 ///////////////
 
 -
-  if (waomember) {
-    //ワオ会員5500円
-    var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dH7g5y0UBU&whc=173508808725235'
-    var UrlLiffAddFriend    = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=befnqi'
-    var UrlLiffForm         = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=wbuxZAetR'
-    var ImgCtaFirstview = img23('btn_cta_firstview.png');
-    var ImgPrice            = img23('price_2026summer_waomember.png')
-    var ImgBtnCvPrice       = img23('text_btn_cv_2025summer_waomember.svg')
-    var textFixedCv = img23('text_fixed_cv_2025summer_waomember.svg');
-    var price               = 5500
-    var ImgMultiCourseBonus = img23('img_multi_course_bonus_waomember.png')
-  } else {
-    //通常時
-    var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHELFnMLBX&whc=173508808725235'
-    var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=VqUFL'
-    var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8CJn8Dr7'
-    var ImgCtaFirstview = img23('btn_cta_firstview.png');
-    var ImgPrice            = img23('price_2026summer.png')
-    var ImgBtnCvPrice       = img23('text_btn_cv_2025summer.svg')
-    var textFixedCv = img23('text_fixed_cv_2025summer.svg');
-    var price               = 8800
-    var ImgMultiCourseBonus = img23('img_multi_course_bonus.png')
-  }
+
+  //通常時
+  var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHELFnMLBX&whc=173508808725235'
+  var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=VqUFL'
+  var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8CJn8Dr7'
+  var ImgBtnCvPrice       = img23('text_fixed_cv_2026summer.svg')
+  var textFixedCv = img23('text_fixed_cv_2025summer.svg');
+  var price               = 8800
+  var ImgMultiCourseBonus = img23('img_multi_course_bonus.png')
+  
 
 
 
@@ -64,16 +51,11 @@
 //Logo
 - var ImgLogoWaoMirai = img23('logo.svg')
 - var ImgLogoWaoMiraiWhite = img23('logo_white.svg')
-- var ImgLogoEnglish = img23('logo_100phases.png')
-- var ImgLogoEnglishSpring = img23('logo_100phases_spring.png')
-- var ImgLogoEnglishSpringParts = img23('logo_100phases_spring_parts.png')
+- var ImgLogoEnglishSpringParts = img23('_logo_100phases_spring.png')
 - var ImgLogoWao = img23('logo_wao.svg')
 
 //Fv
-- var ImgFvTarget = img23('fv_target_spring.png')
-- var ImgFvPersons = img23('fv_character_spring.png')
 - var ImgFvCharacter2026summer = img23('fv_character.png')
-- var ImgFvLogo = img23('logo_100phases.png')
 - var ImgFvLogoFv = img23('logo_fv.png')
 - var ImgFvLogoPc = img23('logo_pc.png')
 - var ImgFvText = img23('fv_text.png.png')
@@ -84,7 +66,6 @@
 - var ImgFvBgShine = img23('fv_bgshine.png')
 
 //Section
-- var ImgSectionBlue02 = img23('section02_intro.png')
 - var ImgSectionMainIntro = img23('main_section_intro.png')
 - var ImgSectionBlue03 = img23('blue_section03.png')
 - var ImgSectionBlue04 = img23('blue_section04.png')
@@ -96,28 +77,15 @@
 //04 Flow
 - var TitleFlow = img23('title_section5.png')
 - var TitleFlow2026summer = img23('title_section5_flow.png')
-- var TextFlow = img23('text_flow_2025summer.png');
-- var ImgFlowBalloon01 = img23('ballon_flow01_2025summer.png');
 - var ImgFlowBalloon01_2026summer = img23('ballon_flow01_2026summer.png');
-- var ImgFlowBalloon02 = img23('ballon_flow02_2025summer.png');
 - var ImgFlowBalloon02_2026summer = img23('ballon_flow02_2026summer.png');
-- var ImgFlowTab01 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/tab_flow01_2025summer.png';
 - var ImgFlowTab01_2026summer = img23('tab_flow01_2026summer.png');
 - var ImgFlowTab01End = img23('tab_flow01_finished_2025summer.png');
-- var ImgFlowTab02 = 'https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/tab_flow02_2025summer.png';
 - var ImgFlowTab02_2026summer = img23('tab_flow02_2026summer.png');
-- var ImgFlowAbout = img23('about_flow_2025summer.png');
 - var ImgFlowAbout2026summer = img23('about_flow_2026summer.png');
-- var ImgFlowSchedule01 = img23('schedule01.png');
 - var ImgFlowSchedule01_2026summer = img23('schedule01_flow_2026summer.png');
-- var ImgFlowSchedule02 = img23('schedule02.png');
 - var ImgFlowSchedule02_2026summer = img23('schedule02_flow_2026summer.png');
-- var ImgFlowSchedule03 = img23('schedule03.png');
-- var ImgFlowSchedule04 = img23('schedule04.png');
-- var ImgFlowSchedule05 = img23('schedule05.png');
-- var ImgFlowScheduleSpeechPresent = img23('schedule-speech-present.png');
 - var ImgIcnFlowScheduleSpeechPresent = img23('icn-schedule-speech-present.svg');
-- var ImgFlowOption = img23('option_flow_2026.png');
 
 //05 Chat
 - var ImgChat = img23('chat_2026.png');
@@ -129,15 +97,14 @@
 - var ImgBannerGlobalEnglish = img23('banner_global_english.svg')
 
 //Button
-- var ImgBtnCvLine = img23('btn_cv_b_noborder.svg')
-- var ImgBtnCv = img23('btn-cv.png')
+- var ImgBtnCvLine = img23('text_fixed_cv_2026summer.svg')
+- var ImgBtnCv = img23('text_fixed_cv_2026summer.svg')
 
 // CTA（2026春イベントLPのビジュアルを共用）
 - var ImgCtaLooptext = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/cta_looptext.svg'
 - var ImgCta = 'https://waomirai.com/lp/assets/lpimages/22_event-lp-2026march/img_cta.png'
 
 //Title
-- var ImgTitleMovie= img23('title_movie_2025summer.png')
 - var ImgTitleMovie2026summer = img23('title_movie_2026summer.png')
 - var ImgTitleRapport = img23('title_rapport.svg')
 - var ImgTitle5steps = img23('title_5steps.svg')
@@ -149,8 +116,6 @@
 //Background
 - var ImgBgRapport= img23('bg_lapport.png')
 - var ImgBgCrowdsPc = img23('bg_crowds.svg')
-- var ImgBgCrowdsCv = img23('bg_crowds.png')
-- var ImgBgCvBlue = img23('bg_cv_blue.png')
 - var ImgBgCvGreen = img23('bg_cv_green_2026summer.png')
 - var ImgBgCvGreen02 = img23('bg_cv_green_2026summer02.png')
 

@@ -1,5 +1,9 @@
 /* color */
 
+$cl-lp-5days-green: #12d084;
+
+/* old */
+
 $cl-bg-skyblue: #2e9eda; //空の青
 $cl-bg-skyblue-darken: #1e709d; //濃い空の青
 $cl-bg-skyblue-darkendeep: #185b7f; //さらに濃い空の青
@@ -11,7 +15,7 @@ $cl-title-underline: #febcad;
 $cl-btn-cta: #f88c6a;
 
 @mixin gradient-waoorange {
-  background: linear-gradient(93.57deg, #f5942e -3.22%, #ee7a00 104.73%);
+  backsground: linear-gradient(93.57deg, #f5942e -3.22%, #ee7a00 104.73%);
 }
 
 /* 旧ファイル更新のため残しているが未使用 */

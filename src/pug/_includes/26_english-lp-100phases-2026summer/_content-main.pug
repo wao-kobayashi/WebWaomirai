@@ -13,15 +13,11 @@ include _mixins
     //-   |ここワオのロゴ
     .eng-phase-main-fv-waologo.spimage 
        img(src=ImgLogoWaoMirai)
-    .eng-phase-main-fv-persons
-       img(src=ImgFvPersons)
-    .eng-phase-main-fv-target 
-       img(src=ImgFvTarget)
     .eng-phase-main-fv-logo 
-      .eng-phase-main-fv-logo-main
-        img(src=ImgLogoEnglish )
-      .eng-phase-main-fv-logo-parts
-        img(src=ImgLogoEnglishSpringParts )
+      div 
+       img(src=ImgFvCharacter2026summer)
+      div 
+        img(src=ImgFvLogoFv)
     .eng-phase-main-fv-text
         img(src=ImgFvText)
 
@@ -35,29 +31,19 @@ include _mixins
   section.eng-phase-main-cv-crowds
     .eng-phase-main-cv-crowds-img
       img(src=ImgBgCrowdsCv)
-    if waomember 
-        .eng-phase-main-cv-crowds-btn(style='margin:20px auto 45px;')
-            div(style="position:absolute;top: 20%;left: 0;right: 0;margin: auto; width:88%;")
-              +conditionalLink
-                img(src=ImgCtaFirstview)
-    else 
-       .eng-phase-main-cv-crowds-btn
+    .eng-phase-main-cv-crowds-btn
         +conditionalLink('c-btn-cv is-contents')
           img(src=ImgBtnCvPrice)
   
-  //blue02 100フレーズクリアで英語の自信がつく!
-  section.eng-phase-main-section-blue.eng-phase-main-section-blue-first.inview-triger.inview-hide
-       img(src=ImgSectionBlue02)
-  
-  //blue03 こんなお子様におすすめ
-  section.eng-phase-main-section-blue.inview-triger.inview-hide.fixed-cv-trigger
-       img(src=ImgSectionBlue03)
+  //02 5日間のプログラムで楽しく喋れる
+  section.eng-phase-main-section-green.eng-phase-main-section-green-first.inview-triger.inview-hide
+       img(src=ImgSectionMainIntro)
 
-  //blue04 100フレーズチャレンジ プログラムの流れ
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
+  //03 プログラムの流れ
+  section.eng-phase-main-section-green.inview-triger.inview-hide
     .eng-phase-main-flow
       .eng-phase-main-flow-title
-        img(src=TitleFlow)
+        img(src=TitleFlow2026summer)
       .eng-phase-main-flow-wrapper
         if !a_finished
           .eng-phase-main-flow-text
@@ -65,91 +51,55 @@ include _mixins
         .eng-phase-main-flow-tab(class=a_finished ? 'is-finished' : '')
           .eng-phase-main-flow-tab-item(class=!a_finished ? 'is-active' : 'is-finished')
             if !a_finished
-              img(src=ImgFlowBalloon01).image-balloon
-            img(src=ImgFlowTab01).image-tab
+              img(src=ImgFlowBalloon01_2026summer).image-balloon
+            img(src=ImgFlowTab01_2026summer).image-tab
             if a_finished
-              img(src=ImgFlowTab01End).img-finished
+              img(src=ImgFlowTab01_2026summer).img-finished
           .eng-phase-main-flow-tab-item(class=a_finished ? 'is-active is-finished' : '')
             if !a_finished
-              img(src=ImgFlowBalloon02).image-balloon
-            img(src=ImgFlowTab02).image-tab
+              img(src=ImgFlowBalloon02_2026summer).image-balloon
+            img(src=ImgFlowTab02_2026summer).image-tab
         .eng-phase-main-flow-contents
           .eng-phase-main-flow-contents-item(class=!a_finished ? 'is-active' : '')
             .eng-phase-main-flow-about
-              img(src=ImgFlowAbout)
+              img(src=ImgFlowAbout2026summer)
             .eng-phase-main-flow-schedule
               div
-                img(src=ImgFlowSchedule01)
-              .eng-phase-main-flow-schedule-item
-                .eng-phase-main-flow-schedule-item-img
-                  img(src=ImgFlowSchedule02)
-              .eng-phase-main-flow-schedule-item
-                img(src=ImgFlowSchedule03)
-              .eng-phase-main-flow-schedule-item
-                .eng-phase-main-flow-schedule-item-img
-                  img(src=ImgFlowSchedule04)
-              .eng-phase-main-flow-schedule-item
-                img(src=ImgFlowSchedule05)
-            .eng-phase-main-flow-option
-              img(src=ImgFlowOption)
+                img(src=ImgFlowSchedule01_2026summer)
           .eng-phase-main-flow-contents-item(class=a_finished ? 'is-active' : '')
             .eng-phase-main-flow-about
-              img(src=ImgFlowAbout)
+              img(src=ImgFlowAbout2026summer)
             .eng-phase-main-flow-schedule
               div
-                img(src=ImgFlowSchedule01)
-              .eng-phase-main-flow-schedule-item
-                .eng-phase-main-flow-schedule-item-img
-                  img(src=ImgFlowSchedule02)
-              .eng-phase-main-flow-schedule-item
-                img(src=ImgFlowSchedule03)
-              .eng-phase-main-flow-schedule-item
-                .eng-phase-main-flow-schedule-item-img
-                  img(src=ImgFlowSchedule04)
-              .eng-phase-main-flow-schedule-item
-                img(src=ImgFlowSchedule05)
-            .eng-phase-main-flow-option
-              img(src=ImgFlowOption)
-
-  //blue05 
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
-    div 
-       img(src=ImgMultiCourseBonus) 
-    .eng-phase-main-multi-course
-       .eng-phase-main-multi-cta 
-         .eng-phase-main-multi-cta-text 
-            img(src=ImgMultiCourseBonusCtaTxt) 
-         .eng-phase-main-multi-cta-btn  
-           a(href=UrlFullYearLessons, target='_blank') 
-            img(src=ImgMultiCourseBonusCtaButton)        
-       .eng-phase-main-multi-course-bg
-        img(src=ImgMultiCourseBonus02) 
-  section.eng-phase-main-cv-crowds.inview-triger.inview-hide
-    .eng-phase-main-cv-crowds-img
-      img(src=ImgBgCrowdsCv)
-    .eng-phase-main-cv-crowds-btn
-      +conditionalLink('c-btn-cv is-contents')
-        img(src=ImgBtnCvPrice)
-    
-  //blue05 オープンチャットで仲間と楽しく学ぼう！
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
-       img(src=ImgChat)
-
-  //blue06 前回参加者の声
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
-       img(src=ImgVoice)
+                img(src=ImgFlowSchedule02_2026summer)
   
-  //blue07 「カタマリ」で学べば英語は簡単に話せる
-  section.eng-phase-main-section-movie.inview-triger.inview-hide
-    .eng-phase-main-section-movie-title
-      img(src=ImgTitleMovie)
-    .eng-phase-main-section-movie-content
-      .eng-phase-main-section-movie-content-btn#playButton
-          img(src=ImgSectionBlue07IconMovie)
-      .eng-phase-main-section-movie-content-vimeo.
-           <iframe src="https://player.vimeo.com/video/1124123259?h=ce7349bb08&autoplay=1&muted=1&background=1&playsinline=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  section.eng-phase-main-section-blue.inview-triger.inview-hide
-       img(src=ImgSectionBlue04)
+  //loopanimation
+  .eng-phase-loop 
+     .eng-phase-loop-wrapper 
+       .eng-phase-loop-wrapper-item
+            img(src=ImgScrol01)
+       .eng-phase-loop-wrapper-item
+            img(src=ImgScrol02)
+       .eng-phase-loop-wrapper-item
+            img(src=ImgScrol03)
+            
+  //３つのポイント
+  section.eng-phase-main-section-green.inview-triger.inview-hide
+    div 
+       img(src=ImgTitleSectionPoint)
+    div 
+       img(src=ImgPoint01) 
+    div 
+       img(src=ImgPoint02) 
+    div 
+       img(src=ImgPoint03) 
+  //学習プラン
+  section.eng-phase-main-section-green.inview-triger.inview-hide
+    div 
+       img(src=ImgSectionPlan)
+  //blue06 前回参加者の声
+  section.eng-phase-main-section-green.inview-triger.inview-hide
+       img(src=ImgSectionVoice)
 
   section.eng-phase-main-cv-humans.inview-triger.inview-hide
     .eng-phase-main-cv-humans-img 
@@ -192,18 +142,6 @@ include _mixins
         br
         br
         |このチャレンジに参加する皆さんと、先生がチームとなり、「こんなに喋れるようになった！」という驚きの体験を共有しましょう！
-      .eng-phase-main-section-green-wrap-banner
-        a(href=UrlGlobalEnglish, target='_blank')
-          img(src=ImgBannerGlobalEnglish)
-  //受講費用
-  section.eng-phase-main-section-green.eng-phase-main-section-green-price.inview-hide.inview-triger
-    .eng-phase-main-section-green-wrap
-     .eng-phase-main-section-green-wrap-title.eng-phase-main-section-5steps-title-price
-        img(src=ImgTitlePrice)
-     .eng-phase-main-section-green-wrap-content 
-        img(src=ImgPrice)
-  //CV
-  +cvgreen 
 
   //かんたん5ステップ
   section.eng-phase-main-section-5steps 
