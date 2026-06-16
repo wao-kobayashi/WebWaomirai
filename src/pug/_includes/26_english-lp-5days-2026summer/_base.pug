@@ -20,19 +20,11 @@ html
     - const cssBase = loycus ? '../../../css/' : '../../css/'
     //サーバー
     -
-      if (waomember) {
-        if (loycus) {
-          cssLocal = '../../100phrase-challenge-2026summer/'
-        } else {
-          cssLocal = '../100phrase-challenge-2026summer/'
-        }
-      } else {
         if (loycus) {
           cssLocal = '../'
         } else {
           cssLocal = ''
         }
-      }
     link(href=`${cssBase}26-english-lp-5days-2026summer.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}26-english-lp-5days-2026summer.css?v=${Date.now()}`, rel="stylesheet")
     title #{MetaTitle}

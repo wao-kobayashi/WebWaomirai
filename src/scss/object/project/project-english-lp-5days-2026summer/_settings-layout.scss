@@ -1,9 +1,10 @@
 /* width */
-$width-main: 480px; // メインの幅
+$width-main: 500px; // メインの幅
 $width-main-content: 93%; // メインの幅
 $width-cv-btn: 78%;
 $breakpoint-layout: 980px; //レスポンシブの切り替え
 $breakpoint-sp: 768px;
+$eng-phase-main-width: 500px;
 
 @mixin content-width {
   width: calc(100% - 50px);
@@ -37,20 +38,19 @@ body#eng-phase {
 }
 
 .eng-phase-left {
-  width: calc(92% - $width-main);
   position: fixed;
   left: 0;
-  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: calc((100% - $eng-phase-main-width) / 2);
   height: 100vh;
   @include responsive-style($breakpoint-layout) {
     display: none;
   }
   .eng-phase-left-wrap {
-    max-width: 400px;
+    width: 60%;
     margin: 0 auto;
     @include responsive-style(1240px) {
       max-width: 83.65%;
@@ -81,6 +81,22 @@ body#eng-phase {
   }
 }
 
+.eng-phase-right {
+  position: fixed;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - $eng-phase-main-width) / 2);
+  height: 100vh;
+  @include responsive-style($breakpoint-layout) {
+    display: none;
+  }
+  img {
+    width: 60%;
+  }
+}
+
 .eng-phase-waomirai img {
   position: fixed;
   left: 20px;
@@ -96,15 +112,13 @@ body#eng-phase {
 }
 
 .eng-phase-main {
-  margin: 0px auto;
-  padding: 0;
-  max-width: $width-main;
+  width: $eng-phase-main-width;
+  margin: 0 auto;
   position: relative;
   z-index: 100;
   background: $cl-lp-5days-bg-green;
-  border-left: 10px solid $cl-white;
-  // border-top: 10px solid $cl-white;
-  border-right: 10px solid $cl-white;
+  border-left: 5px solid #0a784c;
+  border-right: 5px solid #0a784c;
   // border-radius: 80px 80px 0 0;
   // overflow: hidden;
 
@@ -112,10 +126,9 @@ body#eng-phase {
   @include responsive-style($breakpoint-layout) {
     margin: 30px auto 0 !important;
   }
-  @include responsive-style(767px) {
+  @include responsive-style($breakpoint-sp) {
     margin: 0 auto !important;
-    max-width: 100% !important;
-    width: 100% !important;
+    width: 100%;
     border: none;
     border-radius: 0 !important;
   }
