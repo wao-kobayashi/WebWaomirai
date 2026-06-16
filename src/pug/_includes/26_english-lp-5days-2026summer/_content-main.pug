@@ -13,9 +13,10 @@ include _mixins
     //-   |ここワオのロゴ
     .eng-phase-main-fv-waologo.spimage 
        img(src=ImgLogoWaoMirai)
-    .eng-phase-main-fv-logo 
+    .eng-phase-main-fv-illust
       div 
        img(src=ImgFvCharacter2026summer)
+    .eng-phase-main-fv-logo 
       div 
         img(src=ImgFvLogoFv)
     .eng-phase-main-fv-text
@@ -49,13 +50,15 @@ include _mixins
           .eng-phase-main-flow-tab-item(class=!a_finished ? 'is-active' : 'is-finished')
             if !a_finished
               img(src=ImgFlowBalloon01_2026summer).image-balloon
-            img(src=ImgFlowTab01_2026summer).image-tab
+            img(src=ImgFlowTab01_2026summer).image-tab.image-tab--default
+            img(src=ImgFlowTab01_2026summer_Active).image-tab.image-tab--active
             if a_finished
               img(src=ImgFlowTab01End).img-finished
           .eng-phase-main-flow-tab-item(class=a_finished ? 'is-active is-finished' : '')
             if !a_finished
               img(src=ImgFlowBalloon02_2026summer).image-balloon
-            img(src=ImgFlowTab02_2026summer).image-tab
+            img(src=ImgFlowTab02_2026summer).image-tab.image-tab--default
+            img(src=ImgFlowTab02_2026summer_Active).image-tab.image-tab--active
         .eng-phase-main-flow-contents
           .eng-phase-main-flow-contents-item(class=!a_finished ? 'is-active' : '')
             .eng-phase-main-flow-about
@@ -77,25 +80,7 @@ include _mixins
       .eng-phase-main-fv-button
         +conditionalLink('c-btn-cv')
           img(src=ImgBtnCv)
-  //04 loopanimation
-  //- .eng-phase-loop
-  //-   .eng-phase-loop-track
-  //-     .eng-phase-loop-wrapper-item.yellow
-  //-       img(src=ImgScrol01)
-  //-     .eng-phase-loop-wrapper-item
-  //-       img(src=ImgScrol02)
-  //-     .eng-phase-loop-wrapper-item.yellow
-  //-       img(src=ImgScrol01)
-  //-     .eng-phase-loop-wrapper-item
-  //-       img(src=ImgScrol03)
-  //-     .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
-  //-       img(src=ImgScrol01)
-  //-     .eng-phase-loop-wrapper-item(aria-hidden="true")
-  //-       img(src=ImgScrol02)
-  //-     .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
-  //-       img(src=ImgScrol01)
-  //-     .eng-phase-loop-wrapper-item(aria-hidden="true")
-  //-       img(src=ImgScrol03)
+
             
   //05 ３つのポイント
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
@@ -108,6 +93,25 @@ include _mixins
         img(src=ImgPoint02) 
       div 
         img(src=ImgPoint03) 
+  //04 loopanimation
+  .eng-phase-loop
+    .eng-phase-loop-track
+      .eng-phase-loop-wrapper-item.yellow
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item
+        img(src=ImgScrol02)
+      .eng-phase-loop-wrapper-item.yellow
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item
+        img(src=ImgScrol03)
+      .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item(aria-hidden="true")
+        img(src=ImgScrol02)
+      .eng-phase-loop-wrapper-item.yellow(aria-hidden="true")
+        img(src=ImgScrol01)
+      .eng-phase-loop-wrapper-item(aria-hidden="true")
+        img(src=ImgScrol03)
   //06 学習プラン
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
     div 

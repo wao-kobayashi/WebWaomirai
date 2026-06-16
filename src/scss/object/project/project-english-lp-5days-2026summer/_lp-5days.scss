@@ -14,21 +14,12 @@ $fvTextSp: 41%;
 
 // 共通CVボタン（金額記載あり）
 .c-btn-cv {
-  // width: 333px;
-  // height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  // box-shadow: 0 9px 0px #000000;
-  // border: 3.5px solid #000;
   border-radius: $border-radius-full;
-  background: #ec3f42;
   cursor: pointer;
-  // img {
-  //   width: auto;
-  //   height: 26px;
-  // }
   &:hover {
     opacity: 0.9;
   }
@@ -93,9 +84,9 @@ $fvTextSp: 41%;
     z-index: -1;
   }
   .eng-phase-main-fv-waologo {
-    width: 150px;
+    width: 120px;
     z-index: 3;
-    padding-top: 18px;
+    padding-top: 15px;
     margin-left: calc((100% - 93%) / 2);
   }
   .eng-phase-main-fv-target {
@@ -110,17 +101,21 @@ $fvTextSp: 41%;
       left: 10px;
     }
   }
+  .eng-phase-main-fv-illust {
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    margin: 0px auto 0;
+    padding: 12px 0 0;
+  }
   .eng-phase-main-fv-logo {
     position: relative;
     z-index: 3;
     animation: FvfadeInUp 0.65s ease-out;
-    width: 93%;
-    margin: 0px auto 0;
-    padding: 16px 0 0;
-    // margin: -19.667vw auto 20px;
-    // @include min-responsive-style(768px) {
-    //   margin-top: -100px;
-    // }
+    width: 95%;
+    margin: -35px auto 0;
+    padding: 0px 0 0;
+
     .eng-phase-main-fv-logo-parts {
       width: 60%;
       position: relative;
@@ -355,7 +350,7 @@ $fvTextSp: 41%;
 .eng-phase-main-cv-humans {
   margin: 100px auto 0;
   position: relative;
-  z-index: 999;
+  z-index: 100;
   &.is-green {
     margin-top: 0;
   }
@@ -447,7 +442,7 @@ $fvTextSp: 41%;
   border-top: none;
   border-radius: 0 0 24px 24px;
   z-index: 1;
-  padding-bottom: 15px;
+  padding-bottom: 35px;
   @include responsive-style(767px) {
     border-width: 3px;
     border-radius: 0 0 12px 12px;
@@ -530,8 +525,17 @@ $fvTextSp: 41%;
     position: relative;
     z-index: 1;
   }
+  .image-tab--active {
+    display: none;
+  }
   &.is-active {
     background: #15572e;
+    .image-tab--default {
+      display: none;
+    }
+    .image-tab--active {
+      display: block;
+    }
     .image-balloon {
       display: none;
     }
@@ -715,7 +719,10 @@ $fvTextSp: 41%;
   border-radius: $border-radius-bigplus;
   position: relative;
   z-index: 10;
-
+  .eng-phase-main-section-movie-title {
+    width: 93%;
+    margin: 0 auto 10px;
+  }
   .eng-phase-main-section-movie-content {
     width: $width-main-content;
     margin: 0 auto;
@@ -1468,7 +1475,7 @@ footer {
       box-shadow:
         inset 0 2px 0px rgba(255, 255, 255, 0.35),
         inset 0 -2px 0px #8e3906,
-        0 5px 0 0px #4d7a33;
+        0 2px 0 0px #0f5137;
       display: flex;
       align-items: center;
       justify-content: center;
