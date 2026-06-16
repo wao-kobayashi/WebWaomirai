@@ -1450,7 +1450,7 @@ footer {
 //追従バナー
 //////////////////////
 #fixed-cv {
-  // display: none;
+  display: none;
   @include responsive-style(767px) {
     position: fixed;
     bottom: 10px;

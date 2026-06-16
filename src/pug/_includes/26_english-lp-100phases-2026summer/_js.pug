@@ -130,18 +130,11 @@ script.
     // スマホ追従 CV ボタン
     // ==============================
     function initFixedCv() {
-      $(window).on('load scroll', function () {
-        if (!window.matchMedia('(max-width: 767px)').matches) return;
-
-        var $trigger = $('.fixed-cv-trigger');
-        if ($trigger.length === 0) return;
-
-        var threshold = $trigger.offset().top - $(window).height();
-
-        if ($(window).scrollTop() < threshold) {
-          $('#fixed-cv').fadeOut();
+      $(window).on("load scroll resize", function () {
+        if ($(window).width() <= 768 && $(window).scrollTop() > 600) {
+          $("#fixed-cv").fadeIn();
         } else {
-          $('#fixed-cv').fadeIn();
+          $("#fixed-cv").fadeOut();
         }
       });
     }
