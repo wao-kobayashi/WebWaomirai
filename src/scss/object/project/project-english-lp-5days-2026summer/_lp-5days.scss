@@ -393,7 +393,7 @@ $fvTextSp: 41%;
         font-weight: bold;
       }
       .eng-phase-main-cv-humans-area-top-text {
-        @include font-size-l;
+        @include font-size-xl;
         margin: 0 auto 25px;
       }
       .eng-phase-main-cv-humans-area-top-button {
@@ -710,6 +710,10 @@ $fvTextSp: 41%;
   display: flex;
   flex-direction: column;
   gap: 60px;
+  img {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 
 // movie
@@ -839,6 +843,9 @@ $fvTextSp: 41%;
   position: absolute;
   right: 0;
   top: -50px;
+  @include responsive-style(767px) {
+    top: -20px;
+  }
 }
 
 .eng-phase-main-section-green {
