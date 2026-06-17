@@ -34,39 +34,6 @@ mixin fixed-btn
       .btn-modalmenu
           img(src=ImgMenu)
 
-//- CTA（Call To Action）ボタンのmixin
-//- メインの申込ボタンとして使用
-mixin btn-cta
-  +conditionalLink('btn-cta')
-    img(src='https://waomirai.com/lp/assets/lpimages/13_english-lp-100phases-2025summer/text_btn_cv_2025summer.svg')
-  a.btn-pagetop(href="#")
-      i.fas.fa-arrow-up
-
-
-mixin section-cta
-  //CTA
-  section.cta.inview-triger.inview-hide
-      .cta-loop 
-          div 
-            img(src=ImgCtaLooptext, alt="")
-          div 
-            img(src=ImgCtaLooptext, alt="")
-          div 
-            img(src=ImgCtaLooptext, alt="")
-          div 
-            img(src=ImgCtaLooptext, alt="")
-      .cta-bg 
-        img(src=ImgCta, alt="")
-      .cta-content
-        .cta-content-text 
-          |春休みの5日間で
-          br
-          |考える楽しさを発見しよう！
-        +btn-cta 
-
-
-
-
 
 //- モーダルウィンドウのmixin
 //- 2種類のモーダルとオーバーレイ背景を含む

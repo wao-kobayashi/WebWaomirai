@@ -78,15 +78,28 @@ body#eng-phase {
   position: fixed;
   right: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: calc((100% - $eng-phase-main-width) / 2);
   height: 100vh;
+  gap: 30px;
+  @include responsive-style(1240px) {
+    gap: 20px;
+  }
 
   @include responsive-style($breakpoint-layout) {
     display: none;
   }
-  img {
+  .eng-phase-right-waologo img {
+    margin: 0 auto;
+    @include responsive-style(1240px) {
+      width: 70%;
+    }
+    width: 80%;
+  }
+  .eng-phase-right-illust img {
+    margin: 0 auto;
     @include responsive-style(1240px) {
       width: 80%;
     }

@@ -24,9 +24,9 @@
 }
 
 @mixin font-size-l {
-  font-size: 22px;
+  font-size: 20px;
   @include responsive-style(767px) {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
