@@ -55,7 +55,7 @@
   z-index: 50;
   display: flex;
   gap: 18px;
-  max-width: $maincontentWidth;
+  max-width: calc($maincontentWidth * 0.9);
 
   .fixed-cta {
     flex: 1;
@@ -99,4 +99,11 @@
       font-size: 20px;
     }
   }
+}
+
+.btn-cta-note {
+  text-align: center;
+  font-size: 13px;
+  color: $cl-graylight;
+  margin: 15px auto 0;
 }
