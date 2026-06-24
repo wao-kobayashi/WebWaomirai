@@ -9,15 +9,16 @@
 
 
 
-//- 画像パス設定
-//- - var paths = '../../../images/27_lp-event-2026summer'
-- var paths = 'https://waomirai.com/lp/assets/lpimages/27_lp-event-2026summer';
+//- 画像パス設定（basePathで local / server を切り替え）
+//- ページ側で `- var basePath = "local"` or `"server"` を指定する。未指定時は server。
+- if (typeof basePath === 'undefined') var basePath = 'server';
+- var paths = { local: '../../../images/27_lp-event-2026summer', server: 'https://waomirai.com/lp/assets/lpimages/27_lp-event-2026summer' };
 
 
 //- 画像パス生成関数
 -
   function img(filename) {
-    return `${paths}/${filename}`;
+    return `${paths[basePath]}/${filename}`;
   }
 
 
