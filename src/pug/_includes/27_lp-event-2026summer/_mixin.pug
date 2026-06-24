@@ -10,14 +10,17 @@ mixin conditionalLink(baseClass)
   )
     block
 
+//- Material Symbols アイコンを生成するmixin
+//- @param {string} name - アイコン名（例: 'schedule'）
+mixin micon(name)
+  span.material-symbols-outlined= name
+
 //- 固定フッターボタンのmixin
 //- ページ下部に固定表示される申込ボタンとページトップへ戻るボタン
 mixin fixed-btn
   .fixed-btn-container(style='display:none;')
     +conditionalLink('fixed-cta')
       |LINEで簡単申込(無料)
-    a.btn-pagetop(href="#")
-      i.fas.fa-arrow-up
 
 
 
@@ -26,8 +29,6 @@ mixin fixed-btn
 mixin btn-cta 
   +conditionalLink('btn-cta')
     .btn-cta-text|LINEで簡単申込(無料)
-    .btn-cta-line
-    .btn-cta-icn.fa-solid.fa-angle-right
 
 //- モーダルウィンドウのmixin
 //- 2種類のモーダルとオーバーレイ背景を含む

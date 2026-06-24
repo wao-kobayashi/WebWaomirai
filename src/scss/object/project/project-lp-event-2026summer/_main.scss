@@ -44,6 +44,7 @@ nav {
   justify-content: center;
   gap: 12px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.14);
+  z-index: 100;
   li {
     background: $cl-white;
     padding: 10px 0;
@@ -59,11 +60,175 @@ nav {
   }
 }
 
+.summer-event#science {
+  background: #fbffec;
+  .summer-event-teacher {
+    border: 1px solid $cl-science;
+  }
+}
+.summer-event#economy {
+  background: #eafffc;
+  .summer-event-teacher {
+    border: 1px solid $cl-economy;
+  }
+}
+
+.summer-event {
+  padding: 0 0 60px;
+}
+
 .summer-event-info {
   width: 85%; //100% - 7.5*2:
   margin: 0 auto;
+
+  // 日付＋曜日
+  .summer-event-info-time-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+
+    .summer-event-info-time-top-date {
+      font-size: calc(34 * var(--px));
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: $lineheight-tight;
+      color: $cl-black;
+    }
+
+    .summer-event-info-time-top-weekday {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $cl-gray;
+      border-radius: $border-radius-small;
+      padding: calc(4 * var(--px)) calc(10 * var(--px));
+      font-size: calc(16 * var(--px));
+      font-weight: 700;
+      line-height: $lineheight-none;
+      color: $cl-black;
+    }
+  }
+
+  // アイコン＋テキストのgridレイアウト
+  .summer-event-info-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 18px;
+    row-gap: 12px;
+
+    .summer-event-info-grid-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $cl-gray;
+
+      .material-symbols-outlined {
+        font-size: 20px;
+      }
+    }
+
+    .summer-event-info-grid-text {
+      font-size: 16px;
+      line-height: $lineheight-normal;
+      color: $cl-black;
+      letter-spacing: 1px;
+      b {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // 2つ目以降のgridとの間に点線の区切り
+  .summer-event-info-grid + .summer-event-info-grid {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px dashed $cl-graylight;
+  }
+
+  // 最後のgridの下にも点線
+  .summer-event-info-grid:last-of-type {
+    padding-bottom: 24px;
+    border-bottom: 1px dashed $cl-graylight;
+  }
+}
+.summer-event-text {
+  font-size: 16px;
+  width: 85%; //100% - 7.5*2:
+  margin: 30px auto 0;
+  line-height: $lineheight-very-relaxed;
+  span {
+    margin: 30px 0 0;
+    display: block;
+    color: $cl-graylight !important;
+    font-size: 15px;
+  }
 }
 
+// 担当講師カード
+.summer-event-teacher {
+  width: 85%; //100% - 7.5*2:
+  margin: 30px auto 60px;
+  background: $cl-white;
+  border: 1px solid $cl-science;
+  border-radius: $border-radius-big;
+  padding: 24px;
+
+  // 講師画像＋肩書き・名前
+  .summer-event-teacher-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .summer-event-teacher-top-left {
+      flex-shrink: 0;
+
+      .summer-event-teacher-top-left-img {
+        width: 75px;
+
+        img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+          border-radius: $border-radius-middle;
+        }
+      }
+    }
+
+    .summer-event-teacher-top-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .summer-event-teacher-top-right-job {
+        font-size: 16px;
+        line-height: $lineheight-none;
+        color: $cl-gray;
+      }
+
+      .summer-event-teacher-top-right-name {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: $lineheight-tight;
+        color: $cl-black;
+      }
+    }
+  }
+
+  // 講師紹介テキスト（点線で区切り）
+  .summer-event-teacher-text {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed $cl-graylight;
+    font-size: 14.5px;
+    line-height: $lineheight-very-relaxed;
+    color: $cl-black;
+  }
+}
 // .fv {
 //   overflow: hidden;
 //   position: relative;
