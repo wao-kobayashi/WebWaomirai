@@ -18,7 +18,7 @@ mixin micon(name)
 //- 固定フッターボタンのmixin
 //- ページ下部に固定表示される申込ボタンとページトップへ戻るボタン
 mixin fixed-btn
-  .fixed-btn-container(style='display:none;')
+  .fixed-btn-container
     +conditionalLink('fixed-cta')
       |LINEで簡単申込(無料)
 

@@ -8,15 +8,7 @@ script.
         $(this).addClass('inview');
       }
     });
-    $(window).on("load scroll", function () {
-       if ($(this).scrollTop() > 600) {
-        $(".fixed-btn-container").fadeIn();
 
-      } else {
-        $(".fixed-btn-container").fadeOut();
-  
-      }
-    });
 
     /**
     * モーダルウィンドウを開く関数
@@ -84,7 +76,7 @@ script.
 
     function updateSummerNavigation() {
       const scrollTop = $(window).scrollTop();
-      const navItems = $('nav li');
+      const navItems = $('nav a');
 
       let activeId = null;
       $('.summer-event[id]').each(function () {
@@ -100,7 +92,7 @@ script.
 
       navItems.removeClass('active');
       if (activeId) {
-        navItems.find('a[href="#' + activeId + '"]').parent('li').addClass('active');
+        navItems.filter('[href="#' + activeId + '"]').addClass('active');
       }
     }
 
