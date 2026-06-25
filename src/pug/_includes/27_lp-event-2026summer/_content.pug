@@ -45,6 +45,8 @@ html
           nav 
               a.science(href="#science")|カラフルマジック 7/29(水)
               a.economy(href="#economy")|たこ焼き屋台 7/30(木)
+          div 
+            img(src=ImgIntro)
           .summer-event#science 
               .summer-event-head 
                 img(src=ImgHeadSc)
@@ -69,28 +71,40 @@ html
                   .summer-event-info-grid-icon
                     +micon('currency_yen')
                   .summer-event-info-grid-text 無料
-              .summer-event-text
-                |科学の魔法使いになろう！
-                br
-                |目の前で水の色が次々と変わる！？
-                br
-                |不思議な実験室へようこそ！
-                br
-                |身の回りの「なぜ？」を解き明かす、ワクワクの45分。どんな色が飛び出すかは、当日のお楽しみ！
-                br
-                br
-                |おうちでもできる、カラフルで楽しい科学の世界へ飛び込もう！
-                span|※授業終了後に保護者さま向けの説明会を開催致します。
-              .summer-event-teacher 
-                .summer-event-teacher-top 
-                  .summer-event-teacher-top-left 
-                    .summer-event-teacher-top-left-img 
-                      img(src=ImgScTeacher)
-                  .summer-event-teacher-top-right 
-                    .summer-event-teacher-top-right-job|担当講師
-                    .summer-event-teacher-top-right-name|犬飼 紀香
-                .summer-event-teacher-text 
-                  |身の回りのふしぎから最新の科学まで、さまざまな疑問を解き明かしていきましょう。     
+              .summer-event-block-wrapper
+                .summer-event-block
+                  .summer-event-title    
+                    |授業内容
+                  .summer-event-text
+                    |科学の魔法使いになろう！
+                    br
+                    |目の前で水の色が次々と変わる！？
+                    br
+                    |不思議な実験室へようこそ！
+                    br
+                    |身の回りの「なぜ？」を解き明かす、ワクワクの45分。どんな色が飛び出すかは、当日のお楽しみ！
+                    br
+                    |おうちでもできる、カラフルで楽しい科学の世界へ飛び込もう！
+                    span|※授業終了後に保護者さま向けの説明会を開催致します。
+                .summer-event-block
+                  .summer-event-title    
+                    |こんな子におすすめ
+                  ul.summer-event-lists   
+                    li|夏休みの自由研究のテーマがまだ決まっていない子
+                    li|科学や実験に興味がある子
+                    li|目の前で起こるふしぎや変化に、ワクワクする子
+                .summer-event-block
+                  .summer-event-title    
+                    |担当講師
+                  .summer-event-teacher 
+                      .summer-event-teacher-left 
+                          img(src=ImgScTeacher)
+                      .summer-event-teacher-right 
+                        .summer-event-teacher-right-name
+                          |犬飼 紀香
+                        .summer-event-teacher-right-text
+                          |身の回りのふしぎから最新の科学まで、さまざまな疑問を解き明かしていきましょう。  
+   
               +btn-cta  
           .summer-event#economy 
               .summer-event-head 
@@ -116,26 +130,37 @@ html
                   .summer-event-info-grid-icon
                     +micon('currency_yen')
                   .summer-event-info-grid-text 無料
-              .summer-event-text
-                |キミだけのたこ焼き屋台を作ってみよう！
-                br
-                |どんな名前にする？材料はどうする？どこで屋台を出して、いくらで売る？
-                br
-                br
-                |「あ、となりにライバルのたこ焼き屋台ができちゃった...」たこ焼きの売り方を考えながら、アイデアを実現することや、工夫することの楽しさ、値段の仕組みを学びましょう！
-                span|※授業終了後に保護者さま向けの説明会を開催致します。
-              .summer-event-teacher 
-                .summer-event-teacher-top 
-                  .summer-event-teacher-top-left 
-                    .summer-event-teacher-top-left-img 
-                      img(src=ImgEcTeacher)
-                  .summer-event-teacher-top-right 
-                    .summer-event-teacher-top-right-job|担当講師
-                    .summer-event-teacher-top-right-name|河原 大和
-                .summer-event-teacher-text 
-                  |「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！
-              .summer-event-cta        
-                 +btn-cta  
+              .summer-event-block-wrapper
+                .summer-event-block
+                  .summer-event-title
+                    |授業内容
+                  .summer-event-text
+                    |キミだけのたこ焼き屋台を作ってみよう！
+                    br
+                    |どんな名前にする？材料はどうする？どこで屋台を出して、いくらで売る？
+                    br
+                    |「あ、となりにライバルのたこ焼き屋台ができちゃった...」たこ焼きの売り方を考えながら、アイデアを実現することや、工夫することの楽しさ、値段の仕組みを学びましょう！
+                    span|※授業終了後に保護者さま向けの説明会を開催致します。
+                .summer-event-block
+                  .summer-event-title
+                    |こんな子におすすめ
+                  ul.summer-event-lists
+                    li|夏休みの自由研究のテーマがまだ決まっていない子
+                    li|お店づくりやお金に興味がある子
+                    li|自分のアイデアを形にするのが好きな子
+                .summer-event-block
+                  .summer-event-title
+                    |担当講師
+                  .summer-event-teacher
+                      .summer-event-teacher-left
+                          img(src=ImgEcTeacher)
+                      .summer-event-teacher-right
+                        .summer-event-teacher-right-name
+                          |河原 大和
+                        .summer-event-teacher-right-text
+                          |「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！
+
+              +btn-cta
         //かんたん5STEP
         section.join-5steps 
             .join-5steps-title 
