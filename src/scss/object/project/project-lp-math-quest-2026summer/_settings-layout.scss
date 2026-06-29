@@ -7,6 +7,7 @@ $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
 $maincontentWidth: 800px;
 $breakpoint-tablet: 980px;
+$wrapper-sp: 89.334%;
 
 @mixin square-size($vw-percentage) {
   width: #{$vw-percentage}vw;
@@ -18,7 +19,7 @@ $breakpoint-tablet: 980px;
 }
 
 body {
-  min-width: calc($maincontentWidth + 40px);
+  min-width: calc($widewidth + 40px);
   background: $cl-white !important;
 }
 @include responsive-style($breakpoint-sp) {

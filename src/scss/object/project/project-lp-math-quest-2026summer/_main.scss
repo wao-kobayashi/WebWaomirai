@@ -13,14 +13,76 @@ a{
 
 // ヘッダー
 header{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header img{
-    width: 180px;
+  width: 180px;
+  height: auto;
+}
+
+// FV
+.p-fv{
+  position: relative;
+  background: $cl-main;
+  img{
+    width: 100%;
     height: auto;
+  }
+}
+.p-fv__text{
+  width: 230px;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 105px);
+}
+.p-fv__title{
+  width: 86.667vw;
+  position: absolute;
+  top: 46.5vw;
+  left: 4.534vw;
+}
+.p-fv__details{
+  width: $wrapper-sp;
+  margin: 119px auto 0;
+  font-size: var(--fs-l);
+  line-height: var(--lh-m);
+  color: #fff;
+}
+.p-fv__details + .p-fv__details{
+  margin-top: calc(var(--fs-m) * var(--lh-m));
+}
+.p-fv__decoration{
+  width: 142px;
+  position: absolute;
+  top: 154vw;
+  left: 6.5%;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-fv{
+    width: $widewidth;
+    margin: 0 auto;
+  }
+  .p-fv__text{
+    width: 415px;
+    top: 80px;
+    left: 110px;
+  }
+  .p-fv__title{
+    width: 888px;
+    top: 410px;
+    left: 60px;
+  }
+  .p-fv__details{
+    width: $maincontentWidth;
+    margin-top: 150px;
+  }
+  .p-fv__decoration{
+    top: 650px;
+    left: 800px;
+  }
 }
 
 // 5step〜よくある質問のタイトル

@@ -35,6 +35,24 @@ html
           // ヘッダー
           header
             img(src='https://waomirai.com/lp/assets/commonimages/logo.svg', width='180', height='20', alt='ワオ未来塾')
+          // FV
+          section.p-fv
+            .p-fv__bg
+              picture
+                source(media='(min-width: 768px)', srcset=ImgBgFvPc)
+                img(src=ImgBgFv, alt='')
+            p.p-fv__text 
+                img(src=ImgTextFv, alt='きっと、もっと数学にハマる夏になる！')
+            p.p-fv__title
+              picture
+                source(media='(min-width: 768px)', srcset=ImgTitleFvPc)
+                img(src=ImgTitleFv, alt='数学探究')
+            p.p-fv__details
+              | テキストを開くのも嫌がっていた子が、「なぜ？」のおもしろさに目覚める！
+            p.p-fv__details
+              | 身近な事例から考えるから、数学が苦手な子も、もっと得意になりたい子も、保護者も夢中になれる特別な授業です。
+            .p-fv__decoration
+                img(src=ImgDecorationFv, alt='')
           // かんたん5STEP
           section.join-5steps
               .join-5steps-title 
