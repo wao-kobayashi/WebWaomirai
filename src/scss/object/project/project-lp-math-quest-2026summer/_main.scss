@@ -4,17 +4,7 @@
 }
 
 .main-content-wrapper {
-  width: 100%;
-  // overflow: hidden;
-  margin: 90px auto 0;
   background: $cl-white;
-  border-radius: $border-radius-big;
-
-  @include min-responsive-style($breakpoint-sp) {
-    margin: 30px auto 0;
-    @include box-shadow-small;
-    width: calc(100% - 50px);
-  }
 }
 
 //5step〜よくある質問のタイトル
@@ -168,7 +158,6 @@
 
 %wao-title {
   text-align: center;
-  font-weight: 800;
   font-size: $font-size-xxl;
   letter-spacing: 2px;
   margin: 0 auto 20px;
