@@ -3,17 +3,24 @@
   width: calc(100% - 30px);
 }
 
-// ページ全体
-.main-content-wrapper {
-  background: $cl-white;
-}
-
 // リンク全体
 a{
   transition: 0.2s ease-in-out;
   &:hover{
     opacity: 0.7;
   }
+}
+
+// ヘッダー
+header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header img{
+    width: 180px;
+    height: auto;
 }
 
 // 5step〜よくある質問のタイトル
