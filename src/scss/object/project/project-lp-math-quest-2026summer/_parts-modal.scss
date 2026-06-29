@@ -62,8 +62,8 @@ $z-indexes: (
       background: $cl-waogreen;
       color: $cl-white;
       text-align: center;
-      font-size: $font-size-m;
-      line-height: $lineheight-normal;
+      font-size: var(--fs-m);
+      line-height: var(--lh-m);
       padding: 14px 0 12px;
       border-radius: 20px 20px 0 0;
       border: 2px solid $cl-waogreen;
@@ -82,11 +82,11 @@ $z-indexes: (
       }
     }
     .modal-wrapper-content-main-text-alreadyfriend {
-      font-size: $font-size-m;
+      font-size: var(--fs-m);
       font-weight: bold;
       text-align: center;
       padding: 0 20px 20px;
-      line-height: $lineheight-normal;
+      line-height: var(--lh-m);
       b {
         font-weight: bold;
       }
@@ -105,10 +105,10 @@ $z-indexes: (
       height: 55px;
       margin: 30px auto 30px;
       padding: 0;
-      border-radius: $border-radius-big;
+      border-radius: var(--br-l);
       background: $cl-btn-cta;
       color: $cl-white;
-      font-size: $font-size-l;
+      font-size: var(--fs-l);
       font-weight: 500;
       text-align: center;
       text-decoration: none;
@@ -130,11 +130,11 @@ $z-indexes: (
         align-items: center;
         justify-content: center;
         color: $cl-black;
-        font-size: $font-size-xl;
+        font-size: var(--fs-2l);
         font-weight: 300;
         margin: 0px auto 0;
         text-align: center;
-        line-height: $lineheight-normal;
+        line-height: var(--lh-m);
         letter-spacing: 2px;
         gap: 20px;
 
@@ -164,7 +164,7 @@ $z-indexes: (
       }
 
       .modal-wrapper-content-main-text {
-        font-size: $font-size-m;
+        font-size: var(--fs-m);
         text-align: center;
       }
     }

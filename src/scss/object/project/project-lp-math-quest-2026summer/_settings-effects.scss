@@ -10,13 +10,16 @@
 }
 
 /* border-radius */
-
-$border-radius-small: 4px;
-$border-radius-middle: 8px;
-$border-radius-big: 12px;
-$border-radius-bigplus: 24px;
-$border-radius-extrabig: 64px;
-$border-radius-full: 10000px;
+:root {
+  --br-m: 8px;
+  --br-l: 12px;
+}
+@include min-responsive-style($breakpoint-sp) {
+  :root {
+    --br-m: 16px;
+    --br-l: 24px;
+  }
+}
 
 /* overray */
 

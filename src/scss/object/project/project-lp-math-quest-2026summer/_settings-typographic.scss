@@ -7,49 +7,35 @@
   font-family: "Figtree", "Noto Sans JP", sans-serif;
 }
 
-// Font size variables
-$font-size-sss: 10px;
-$font-size-ss: 12px;
-$font-size-s: 14px;
-$font-size-m: 15px;
-$font-size-l: 18px;
-$font-size-xl: 20px;
-$font-size-xxl: 30px;
-$font-size-xxxl: 40px;
-$font-size-huge: 56px;
+:root {
+  // 文字サイズ
+  --fs-2s: 12px;
+  --fs-s: 14px;
+  --fs-m: 15px;
+  --fs-l: 18px;
+  --fs-2l: 20px;
+  --fs-3l: 30px; 
 
-/* line-height */
-
-$lineheight-none: 1;
-$lineheight-tight: 1.25;
-$lineheight-normal: 1.5;
-$lineheight-relaxed: 1.75;
-$lineheight-very-relaxed: 2;
+  // 行間
+  --lh-s: 1.25;
+  --lh-m: 1.5;
+  --lh-l: 1.75;
+  --lh-2l: 2;
+}
+@include min-responsive-style($breakpoint-sp) {
+  :root {
+    // 文字サイズ
+    --fs-2s: 14px;
+    --fs-s: 16px;
+    --fs-m: 17px;
+    --fs-l: 20px;
+    --fs-2l: 22px;
+    --fs-3l: 32px; 
+  }
+}
 
 /* title-underline */
 @mixin title-underline {
   text-decoration: underline wavy;
   text-decoration-color: $cl-title-underline;
-}
-
-:root {
-  /* PC用（デザイン基準幅: 1200px）*/
-  --px: min(1.5px, calc(100vw / 1200));
-  @include responsive-style(1000px) {
-    --px: min(2px, calc(100vw / 375));
-  }
-}
-
-@mixin catch-copytitle {
-  font-size: min(44px, calc(36 * var(--px)));
-  @include responsive-style(768px) {
-    font-size: calc(40 * var(--px));
-  }
-}
-
-@mixin catch-copytitle-intro {
-  font-size: min(44px, calc(36 * var(--px)));
-  @include responsive-style(768px) {
-    font-size: calc(34 * var(--px));
-  }
 }

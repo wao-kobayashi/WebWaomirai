@@ -3,40 +3,49 @@
   width: calc(100% - 30px);
 }
 
+// ページ全体
 .main-content-wrapper {
   background: $cl-white;
 }
 
-//5step〜よくある質問のタイトル
+// リンク全体
+a{
+  transition: 0.2s ease-in-out;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+// 5step〜よくある質問のタイトル
 %underbar-title {
-  font-size: $font-size-xxl;
+  font-size: var(--fs-3l);
   letter-spacing: 2.5px;
   text-align: center;
   font-weight: 300;
-  margin: 0 0 30px;
+  margin: 0 0 var(--mb-underbar-title);
   &::after {
     content: "";
     display: block;
     width: 30px;
     height: 2px;
     background: $cl-waogreen;
-    margin: 20px auto 0;
+    margin: var(--mt-title-border) auto 0;
   }
 }
-//かんたん5STEPで参加可能
+
+// かんたん5STEPで参加可能
 .join-5steps {
   background: $cl-graylightest;
-  padding: 75px 0px 75px;
+  padding: var(--m-section) 0;
   .join-5steps-title {
     @extend %underbar-title;
   }
-
   .join-5steps-box {
     @extend %blocks-margin;
     background: $cl-white;
     margin: 0 auto 30px;
     padding: 25px 0;
-    border-radius: $border-radius-middle;
+    border-radius: var(--br-m);
     &:last-child {
       margin: 0 auto 0px !important;
     }
@@ -51,9 +60,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        line-height: $lineheight-tight;
+        line-height: var(--lh-s);
         position: relative;
-        font-size: $font-size-l;
+        font-size: var(--fs-l);
         &::before {
           content: "";
           display: block;
@@ -83,7 +92,7 @@
     }
     .join-5steps-box-title {
       font-weight: bold;
-      font-size: $font-size-l;
+      font-size: var(--fs-l);
       text-align: center;
       letter-spacing: 1.5px;
     }
@@ -92,8 +101,8 @@
       font-weight: normal;
       width: calc(100% - 40px);
       margin: 20px auto 0;
-      font-size: $font-size-m;
-      line-height: $lineheight-relaxed;
+      font-size: var(--fs-m);
+      line-height: var(--lh-l);
       a {
         text-decoration: underline;
         color: $cl-black;
@@ -107,11 +116,36 @@
     }
   }
 }
+@include min-responsive-style($breakpoint-sp) {
+    .join-5steps-list{
+      width: $maincontentWidth;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .join-5steps-box{
+        width: calc(50% - 25px);
+        margin: 50px 50px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:nth-child(2n){
+          margin-right: 0;
+        }
+        &:nth-child(-n+2){
+          margin-top: 0;
+        }
+        &:last-child{
+          margin: 50px 0 0 0 !important;
+        }
+      }
+    }
+}
 
-//FAQ
+// FAQ
 .faq {
   background: $cl-graylightest;
-  padding: 0 15px 75px;
+  padding: 0 0 var(--m-section);
   .faq-title {
     @extend %underbar-title;
   }
@@ -119,20 +153,27 @@
     background: $cl-white;
     padding: 20px;
     margin: 0 auto 30px;
-    border-radius: $border-radius-middle;
+    border-radius: var(--br-m);
     .faq-content-question {
       display: flex;
       gap: 20px;
       margin: 0 0 4px;
       .faq-content-question-left {
-        width: 20px;
-        font-size: $font-size-xxl;
+        width: 25px;
+        font-size: var(--fs-3l);
         font-weight: 500;
-        line-height: $lineheight-tight;
+        line-height: var(--lh-s);
         color: $cl-waogreen;
+        padding-bottom: 3px;
+        margin-top: -2px;
+        text-align: center;
+        flex-shrink: 0;
+        @include min-responsive-style($breakpoint-sp) {
+          margin-top: -3px;
+        }
       }
       .faq-content-question-right {
-        font-size: $font-size-m;
+        font-size: var(--fs-m);
         font-weight: bold;
         padding: 5px 0 0;
       }
@@ -141,30 +182,45 @@
       display: flex;
       gap: 20px;
       .faq-content-answer-left {
-        width: 20px;
-        font-size: $font-size-xl;
+        width: 25px;
+        font-size: var(--fs-2l);
         font-weight: 500;
-        line-height: $lineheight-tight;
-        padding: 0 0 0 3px;
+        line-height: var(--lh-s);
         color: $cl-gray;
+        margin-top: -2px;
+        text-align: center;
+        flex-shrink: 0;
       }
       .faq-content-answer-right {
-        font-size: $font-size-s;
+        font-size: var(--fs-s);
         padding: 0px 0 0;
       }
+    }
+  }
+}
+@include min-responsive-style($breakpoint-sp) {
+  .faq {
+    .faq-content {
+      width: $maincontentWidth;
+      margin: 0 auto;
+    }
+    .faq-content + .faq-content{
+      margin-top: 30px;
     }
   }
 }
 
 %wao-title {
   text-align: center;
-  font-size: $font-size-xxl;
+  font-size: var(--fs-3l);
   letter-spacing: 2px;
-  margin: 0 auto 20px;
+  margin: 0 auto var(--mb-title);
 }
+
+// ワオ未来塾って？
 .about-wao {
   @include content-width;
-  margin: 90px auto 75px;
+  margin: 90px auto var(--m-section);
   .about-wao-title {
     @extend %wao-title;
   }
@@ -174,9 +230,9 @@
     margin: 0 auto 20px;
     display: flex;
     align-items: center;
-    border-radius: $border-radius-big;
+    border-radius: var(--br-l);
     justify-content: center;
-    border-radius: $border-radius-big;
+    border-radius: var(--br-l);
     @include box-shadow-small;
     img {
       margin: 0 auto;
@@ -184,19 +240,44 @@
     }
   }
   .about-wao-text {
-    font-size: $font-size-m;
-    line-height: $lineheight-very-relaxed;
+    font-size: var(--fs-m);
+    line-height: var(--lh-2l);
     text-align: left;
   }
 }
+@include min-responsive-style($breakpoint-sp) {
+  .about-wao {
+    width: $maincontentWidth;
+    margin: var(--m-section) auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .about-wao-title{
+      width: 100%;
+    }
+    .about-wao-img{
+      width: 30%;
+      margin: 0;
+    }
+    .about-wao-text{
+      width: 65%;
+    }
+    .about-wao-text--line{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// 授業の特長
 .about-feature {
   @include content-width;
-  margin: 0px auto 75px;
+  margin: 0px auto var(--m-section);
   .about-feature-title {
     @extend %wao-title;
   }
   .about-feature-point {
-    border-radius: $border-radius-middle;
+    border-radius: var(--br-m);
     @include box-shadow-small;
     display: flex;
     align-items: center;
@@ -209,20 +290,32 @@
     }
     .about-feature-point-text {
       font-weight: bold;
-      font-size: $font-size-m;
+      font-size: var(--fs-m);
       letter-spacing: 0.5px;
       @include min-responsive-style($breakpoint-sp) {
-        font-size: $font-size-l;
+        font-size: var(--fs-l);
       }
     }
   }
 }
+@include min-responsive-style($breakpoint-sp) {
+  .about-feature {
+    width: $maincontentWidth;
+    margin: 0 auto var(--m-section);
+    .about-feature-point{
+      width: 75%;
+      margin-inline: auto;
+      justify-content: center
+    }
+  }
+}
 
+// ワオ未来塾
 .about-school {
   @include content-width;
   margin: 0px auto 105px;
   .about-school-catch {
-    font-size: $font-size-m;
+    font-size: var(--fs-m);
     text-align: center;
     margin: 0 0 10px;
   }
@@ -230,7 +323,7 @@
     margin: 0 0 10px;
   }
   .about-school-target {
-    font-size: $font-size-m;
+    font-size: var(--fs-m);
     text-align: center;
     margin: 0 0 20px;
   }
@@ -242,7 +335,7 @@
     .about-school-feature-box {
       background: $cl-white;
       padding: 20px 25px;
-      border-radius: $border-radius-middle;
+      border-radius: var(--br-m);
       margin: 0 auto 30px;
       @include box-shadow-small;
       .about-school-feature-box-title {
@@ -254,14 +347,14 @@
           height: 30px;
         }
         .about-school-feature-box-title-text {
-          font-size: $font-size-l;
+          font-size: var(--fs-l);
           font-weight: bold;
-          line-height: $lineheight-very-relaxed;
+          line-height: var(--lh-2l);
         }
       }
       .about-school-feature-box-text {
-        font-size: $font-size-m;
-        line-height: $lineheight-relaxed;
+        font-size: var(--fs-m);
+        line-height: var(--lh-l);
       }
     }
   }
@@ -275,20 +368,16 @@
     height: 64px;
     margin: 0 auto;
     padding: 0;
-    border-radius: $border-radius-middle;
+    border-radius: var(--br-m);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     @include gradient-waogreen;
-    transition: 0.2s ease-in-out;
     gap: 14px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    &:hover {
-      opacity: 0.7;
-    }
     .about-school-btn-text {
       color: $cl-white;
-      font-size: $font-size-l;
+      font-size: var(--fs-l);
     }
 
     .about-school-btn-icn {
@@ -297,10 +386,44 @@
     }
   }
 }
+@include min-responsive-style($breakpoint-sp) {
+  .about-school {
+    width: $maincontentWidth;
+    margin: 0 auto var(--m-section);
+    .about-school-catch,
+    .about-school-target{
+      font-size: var(--fs-l);
+    }
+    .about-school-logo{
+      width: 700px;
+      margin: 40px auto;
+    }
+    .about-school-target{
+      margin-bottom: 40px;
+    }
+    .about-school-4subjects{
+      width: 700px;
+      margin: 0 auto;
+    }
+    .about-school-feature{
+      display: flex;
+      justify-content: space-between;
+      margin: 50px auto;
+    }
+    .about-school-feature-box{
+      width: calc(33.333% - 33.333px);
+      margin: 0 !important;
+    }
+    .about-school-btn a{
+      width: 400px;
+    }
+  }
+}
 
+// フッター
 footer {
   width: 100%;
-  padding: 75px 0px 0px;
+  padding: var(--m-section) 0px 0px;
   text-align: center;
   background: $cl-black;
   color: white;
@@ -319,7 +442,7 @@ footer {
     a {
       color: white;
       text-decoration: none;
-      font-size: $font-size-m;
+      font-size: var(--fs-m);
     }
   }
   .footer-logo img {
@@ -334,6 +457,11 @@ footer {
     border-top: 1px solid $cl-graylight;
     padding: 15px 0 120px;
     color: $cl-graylight;
-    font-size: $font-size-ss;
+    font-size: var(--fs-2s);
+  }
+}
+@include min-responsive-style($breakpoint-sp) {
+  footer {
+    border-radius: 100px 100px 0 0;
   }
 }
