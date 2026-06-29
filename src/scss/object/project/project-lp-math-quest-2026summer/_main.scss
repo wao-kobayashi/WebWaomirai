@@ -46,10 +46,10 @@ header img{
 }
 .p-fv__details{
   width: $wrapper-sp;
-  margin: 119px auto 0;
+  margin: 31.734vw auto 0;
   font-size: var(--fs-l);
   line-height: var(--lh-m);
-  color: #fff;
+  color: $cl-white;
 }
 .p-fv__details + .p-fv__details{
   margin-top: calc(var(--fs-m) * var(--lh-m));
@@ -85,9 +85,132 @@ header img{
   }
 }
 
+// 今回のテーマ
+.p-theme{
+  background: $cl-main;
+  padding-top: 45px;
+  overflow: hidden;
+}
+.p-theme__wrapper{
+  width: $wrapper-sp;
+  margin: 0 auto;
+}
+.p-theme__main{
+  position: relative;
+}
+.p-theme__main-head{
+  color: $cl-white;
+  font-size: var(--fs-m);
+  text-align: center;
+}
+.p-theme__main-decoration{
+  width: 56px;
+  position: absolute;
+  top: -30px;
+  left: calc(50% + 85px);
+}
+.p-theme__main-title{
+  width: 104%;
+  margin-top: 17px;
+}
+.p-theme__main-text01,
+.p-theme__main-text02{
+  color: $cl-white;
+  font-size: var(--fs-3l);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.p-theme__main-text01{
+  margin-top: 7px;
+}
+.p-theme__main-text01-num{
+  color: $cl-white;
+  font-size: var(--fs-4l);
+  margin: 0 4px;
+}
+.p-theme__details-border{
+  color: $cl-white;
+  font-size: var(--fs-2l);
+  text-align: center;
+  margin-top: 7px;
+}
+.p-theme__details-title{
+  color: $cl-white;
+  font-size: var(--fs-3l);
+  text-align: center;
+  margin-top: 20px;
+  line-height: var(--lh-m);
+}
+.p-theme__details-title-point{
+  color: $cl-white;
+  font-size: var(--fs-4l);
+}
+.p-theme__details-text01,
+.p-theme__details-text03{
+  color: $cl-white;
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+  margin-top: 16px;
+}
+.p-theme__details-text02{
+  width: 110vw;
+  margin-left: -9vw;
+}
+.p-theme__details-text03{
+  margin-top: 21px;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-theme{
+    width: $widewidth;
+    margin: 0 auto;
+    padding-top: 62px;
+  }
+  .p-theme__wrapper{
+    width: 934px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .p-theme__main,
+  .p-theme__details{
+    width: 452px;
+  }
+  .p-theme__main-title{
+    margin-top: 45px;
+    width: 104.21%;
+  }
+  .p-theme__main-text01{
+    margin-top: 22px;
+  }
+  .p-theme__main-text01-num{
+    margin: 0 2px;
+  }
+  .p-theme__main-text02{
+    margin-top: 7px;
+  }
+  .p-theme__details-border{
+    margin-top: -15px;
+    .p-theme__details-border-pc{
+      color: $cl-white;
+    }
+  }
+  .p-theme__details-text01,
+  .p-theme__details-text03{
+    width: 402px;
+    margin: 10px auto 0;
+  }
+  .p-theme__details-text02{
+    width: 409px !important;
+    width: 100%;
+    margin: 22px auto 0;
+  }
+  .p-theme__details-text03{
+    margin-top: 20px;
+  }
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
-  font-size: var(--fs-3l);
+  font-size: var(--fs-4l);
   letter-spacing: 2.5px;
   text-align: center;
   font-weight: 300;
@@ -229,7 +352,7 @@ header img{
       margin: 0 0 4px;
       .faq-content-question-left {
         width: 25px;
-        font-size: var(--fs-3l);
+        font-size: var(--fs-4l);
         font-weight: 500;
         line-height: var(--lh-s);
         color: $cl-waogreen;
@@ -281,7 +404,7 @@ header img{
 
 %wao-title {
   text-align: center;
-  font-size: var(--fs-3l);
+  font-size: var(--fs-4l);
   letter-spacing: 2px;
   margin: 0 auto var(--mb-title);
 }

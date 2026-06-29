@@ -117,7 +117,7 @@ $z-indexes: (
       transition: 0.2s ease-in-out;
 
       &:hover {
-        background: darken($cl-btn-cta, 10%);
+        background: color-mix(in srgb, $cl-btn-cta, #000 10%);
       }
     }
     .modal-wrapper-content-main {

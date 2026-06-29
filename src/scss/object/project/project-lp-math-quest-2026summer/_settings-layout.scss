@@ -45,14 +45,16 @@ body {
 }
 
 // 改行
-.u-br-sp{
+.u-br-pc,
+.u-text-pc{
     display: none;
 }
-@include responsive-style($breakpoint-sp) {
-    .u-br-sp{
+@include min-responsive-style($breakpoint-sp) {
+    .u-br-pc,
+    .u-text-pc{
         display: inline;
     }
-    .u-br-pc{
+    .u-br-sp{
         display: none;
     }
 }
