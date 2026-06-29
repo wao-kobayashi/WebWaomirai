@@ -1,0 +1,214 @@
+/* width */
+
+$max-width: 1200px;
+$widewidth: 1000px;
+$middlewidth: 800px;
+$smallwidth: 700px;
+$ctabuttonwidth: 500px;
+$breakpoint-sp: 768px;
+$maincontentWidth: 500px;
+$breakpoint-tablet: 980px;
+
+@mixin square-size($vw-percentage) {
+  width: #{$vw-percentage}vw;
+  height: #{$vw-percentage}vw;
+}
+@mixin square-size-px($vw-percentage) {
+  width: #{$vw-percentage}px;
+  height: #{$vw-percentage}px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: $cl-white !important;
+  // overflow-x: hidden;
+}
+
+.c-bg-section-white {
+  background: white;
+}
+
+.pc-left {
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - $maincontentWidth) / 2);
+  height: 100vh;
+  @include responsive-style($breakpoint-tablet) {
+    display: none;
+  }
+  img {
+    width: 50%;
+    max-width: 300px;
+  }
+}
+
+.pc-right {
+  position: fixed;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - $maincontentWidth) / 2);
+  height: 100vh;
+  @include responsive-style($breakpoint-tablet) {
+    display: none;
+  }
+  .pc-right-title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $cl-waogreen;
+    line-height: $lineheight-normal;
+    margin: 0 0 3px;
+    span {
+      color: $cl-waogreen;
+      letter-spacing: 0px;
+      padding: 0 0 0 4px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .pc-right-content {
+    max-width: 300px;
+    .pc-right-content-link {
+      font-weight: 600;
+      background: $cl-white;
+      margin: 0 0 14px;
+      border: $cl-waogreen 1px solid;
+      border-radius: $border-radius-small;
+      a {
+        display: flex;
+        gap: 15px;
+        padding: 8px 10px;
+        text-decoration: none;
+        &:hover {
+          opacity: 0.7;
+        }
+        div {
+          color: $cl-waogreen !important;
+        }
+        .pc-right-content-link-number {
+          font-style: italic;
+          font-weight: normal;
+        }
+        .pc-right-content-link-text {
+          line-height: $lineheight-normal;
+          font-size: $font-size-s;
+          span {
+            color: $cl-waogreen !important;
+            font-size: $font-size-ss;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+  img {
+    width: 70%;
+    max-width: 300px;
+  }
+  .pc-right-content-cta {
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+    border-top: 0.5px solid $cl-graylight;
+  }
+}
+
+.main-content {
+  width: $maincontentWidth;
+  margin: 0 auto;
+
+  // @include responsive-style($breakpoint-tablet) {
+  //   width: 90%;
+  // }
+  @include responsive-style($breakpoint-sp) {
+    width: 100%;
+  }
+}
+
+// .pc-bg.lighten {
+//   .bg-blur {
+//     opacity: 0.1 !important;
+//   }
+// }
+
+.pc-bg {
+  z-index: -1;
+
+  .bg-blur {
+    z-index: -1;
+    position: absolute;
+    // position: fixed;
+    opacity: 0.4;
+  }
+  .pc-bg-blur-01 {
+    top: -15%;
+    left: -10%;
+    @include square-size(12);
+    filter: blur(30px);
+    @include responsive-style(1000px) {
+      top: -5%;
+      left: -10%;
+    }
+  }
+
+  .pc-bg-blur-02 {
+    top: 50%;
+    left: -12%;
+    @include square-size(17);
+    filter: blur(30px);
+    animation: float2 25s ease-in-out infinite;
+  }
+  .pc-bg-blur-03 {
+    top: 0%;
+    left: 15%;
+    @include square-size(12);
+    filter: blur(30px);
+    animation: float3 22s ease-in-out infinite;
+    @include responsive-style(1000px) {
+      top: 20%;
+      left: 3%;
+    }
+  }
+  .pc-bg-blur-04 {
+    top: 48%;
+    right: -8%;
+
+    @include square-size(12);
+    filter: blur(30px);
+    animation: float4 28s ease-in-out infinite;
+    @include responsive-style(1000px) {
+      top: 38%;
+    }
+  }
+  .pc-bg-blur-05 {
+    top: 20%;
+    right: 28%;
+    @include square-size(14);
+    filter: blur(30px);
+    @include responsive-style(1000px) {
+      right: 18%;
+    }
+  }
+
+  .pc-bg-blur-06 {
+    top: -25%;
+    right: 26%;
+    @include responsive-style(1000px) {
+      top: -5%;
+      right: -8%;
+    }
+    @include square-size(12);
+    filter: blur(36px);
+  }
+}
+
+@mixin content-width {
+  width: calc(100% - 50px);
+}

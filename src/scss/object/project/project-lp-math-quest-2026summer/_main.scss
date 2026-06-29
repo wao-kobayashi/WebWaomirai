@@ -1,0 +1,944 @@
+.lp-waomirai-start2025-btn {
+  text-align: center;
+  a {
+    text-align: center;
+    margin: 30px auto 120px;
+    background: $cl-btn-cta;
+    background: $cl-main-orange;
+    text-decoration: none;
+    height: 78px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    width: 100%;
+    max-width: $ctabuttonwidth;
+    position: relative;
+    line-height: $lineheight-normal;
+    gap: 12px;
+    @include responsive-style($breakpoint-sp) {
+      width: 100%;
+    }
+    @include box-shadow-lp;
+
+    .lp-waomirai-start2025-btn-text {
+      margin: 0px 0 0;
+      font-size: $font-size-xl;
+      letter-spacing: 1px;
+      color: $cl-white;
+    }
+    .lp-waomirai-start2025-btn-icn {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+.fv {
+  overflow: hidden;
+  position: relative;
+
+  margin: 0 auto;
+  .fv-logo {
+    margin: 28px 25px 0;
+    width: 40%;
+    @include min-responsive-style($breakpoint-sp) {
+      display: none;
+    }
+  }
+  .fv-subtitle img {
+    text-align: center;
+    margin: 23px 22px 10px;
+    @include min-responsive-style($breakpoint-sp) {
+      margin: 17px auto;
+    }
+  }
+  h1 {
+    position: relative;
+    z-index: 10;
+    color: $cl-waogreen;
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 8px;
+    @include min-responsive-style($breakpoint-sp) {
+      align-items: center;
+      margin: 0 0 20px;
+    }
+    span.sub {
+      color: $cl-waogreen;
+      display: block;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: calc(28 * var(--px));
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: 28px;
+        letter-spacing: 7px;
+      }
+    }
+
+    span.main {
+      @include catch-copytitle;
+      color: $cl-waogreen;
+      display: block;
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 1.44;
+
+      @include min-responsive-style($breakpoint-sp) {
+        letter-spacing: 10px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .fv-img img {
+    position: relative;
+    z-index: 10;
+    width: 80%;
+    margin: 0 auto 20px;
+    @include min-responsive-style($breakpoint-sp) {
+      margin: 0 auto 10px;
+      width: 70%;
+    }
+  }
+  .fv-blur {
+    @include min-responsive-style($breakpoint-sp) {
+      display: none;
+    }
+    .bg-blur {
+      position: absolute;
+      z-index: 1;
+      filter: blur(30px);
+    }
+    .bg-blur.pc-bg-blur-01 {
+      top: -180px;
+      right: -20%;
+      @include square-size-px(140);
+      opacity: 0.3;
+    }
+    .bg-blur.pc-bg-blur-02 {
+      bottom: -80px;
+      right: -20%;
+      @include square-size-px(160);
+      opacity: 0.3;
+    }
+    .bg-blur.pc-bg-blur-03 {
+      bottom: -35px;
+      left: -43%;
+      @include square-size-px(160);
+      opacity: 0.2;
+    }
+  }
+}
+
+.infotable {
+  position: relative;
+  z-index: 1;
+  background: $cl-white;
+  width: calc(100% - 50px);
+  margin: 30px auto 0;
+  @include box-shadow-small;
+  padding: 2px 0 3px;
+  overflow: hidden;
+  $info-tabletitle-width: 60px;
+  border-radius: $border-radius-big;
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: $info-tabletitle-width;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    @include gradient-waogreen;
+    z-index: -1;
+  }
+  .infotable-column {
+    display: flex;
+    &:not(:last-child) {
+      border-bottom: 1px dashed $cl-graylight;
+    }
+    > div {
+      padding: 10px 15px;
+      font-size: 13px;
+      font-weight: bold;
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: $font-size-m;
+      }
+    }
+    .infotable-column-title {
+      width: $info-tabletitle-width;
+      display: flex;
+      justify-content: center;
+      letter-spacing: 1px;
+      text-align: center;
+      color: $cl-white;
+      @include min-responsive-style($breakpoint-sp) {
+        letter-spacing: 0px;
+      }
+    }
+    .infotable-column-content {
+      flex: 1;
+      span {
+        font-size: $font-size-ss;
+        color: $cl-graylight;
+      }
+      // padding: 0px 15px;
+    }
+  }
+}
+
+.goal {
+  position: relative;
+  z-index: 1;
+  background: $cl-white;
+  width: calc(100% - 50px);
+  margin: 30px auto 0;
+  padding: 20px 25px 10px;
+  @include box-shadow-small;
+  // padding: 6px 0 3px;
+  overflow: hidden;
+  border-radius: $border-radius-big;
+  .goal-title {
+    font-size: $font-size-l;
+    font-weight: 400;
+    margin: 0px 0 0px;
+    text-align: left;
+  }
+  .goal-table {
+    .goal-table-row {
+      display: flex;
+      gap: 20px;
+      margin: 0px 0;
+      padding: 20px 0 20px;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed $cl-graylight;
+      }
+      .goal-table-row-number {
+        font-size: $font-size-xxl;
+        font-style: italic;
+        margin: -3px 0 0;
+        font-weight: 300;
+        color: $cl-graylight;
+      }
+      .goal-table-row-content {
+        font-size: $font-size-m;
+        line-height: $lineheight-relaxed;
+        @include min-responsive-style($breakpoint-sp) {
+          font-size: $font-size-m;
+        }
+      }
+    }
+  }
+}
+
+.main-content-wrapper {
+  width: 100%;
+  // overflow: hidden;
+  margin: 90px auto 0;
+  background: $cl-white;
+  border-radius: $border-radius-big;
+
+  @include min-responsive-style($breakpoint-sp) {
+    margin: 30px auto 0;
+    @include box-shadow-small;
+    width: calc(100% - 50px);
+  }
+}
+
+section.introduction {
+  padding: 30px 30px 0;
+  margin: 30px auto 0;
+  overflow: hidden;
+  .introduction-title {
+    @include catch-copytitle-intro;
+    font-weight: 800;
+    margin: 0px 0 20px;
+    text-align: left;
+    color: $cl-waogreen;
+    letter-spacing: -1px;
+    span {
+      font-weight: normal;
+      color: $cl-waogreen;
+    }
+  }
+  .introduction-img {
+    position: relative;
+    margin: 0px auto 30px;
+    .introduction-img-photo {
+      position: relative;
+      z-index: 10;
+    }
+    .bg-blur {
+      position: absolute;
+      z-index: 1;
+      filter: blur(30px);
+    }
+    .bg-blur.pc-bg-blur-01 {
+      top: -5%;
+      right: -10%;
+      @include square-size-px(200);
+      opacity: 0.3;
+    }
+    .bg-blur.pc-bg-blur-02 {
+      top: -23%;
+      left: -43%;
+      @include square-size-px(200);
+      opacity: 0.2;
+    }
+    .bg-blur.pc-bg-blur-03 {
+      bottom: -23%;
+      left: -43%;
+      @include square-size-px(160);
+      opacity: 0.2;
+    }
+  }
+  .introduction-text {
+    font-size: $font-size-m;
+    line-height: $lineheight-very-relaxed;
+    margin: 0px auto 90px;
+    text-align: left;
+  }
+}
+
+//セミナーとかのマージン変数
+%seminar-blocks-margin {
+  width: calc(100% - 30px);
+}
+
+.seminar-blocks-sticky-links {
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: $cl-white;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+  margin: 0px auto 0px !important;
+  padding: 9px 20px !important;
+
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+  li {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $cl-graylightest;
+    border-radius: $border-radius-small;
+
+    &.teacher.active,
+    &.teacher:hover {
+      font-weight: 500;
+      background: #e7ffe0;
+    }
+    &.philosophy.active,
+    &.philosophy:hover {
+      font-weight: 500;
+      background: #fffbe2;
+    }
+    &.science.active,
+    &.science:hover {
+      font-weight: 500;
+      background: #f3ffc4;
+    }
+    &.economy.active,
+    &.economy:hover {
+      font-weight: 500;
+      background: #daf1ff;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      padding: 5px 0;
+    }
+  }
+}
+
+//blurのデザイン
+.seminar-blocks-content#teacher {
+  overflow: hidden;
+  .bg-blur {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    filter: blur(30px);
+  }
+  .pc-bg-blur-01 {
+    top: -15%;
+    right: -10%;
+    @include square-size-px(200);
+
+    opacity: 0.3;
+  }
+  .pc-bg-blur-02 {
+    top: 2%;
+    left: -37%;
+    width: 37vw;
+    height: 37vw;
+    @include square-size-px(200);
+    opacity: 0.5;
+  }
+  .pc-bg-blur-03 {
+    top: 15%;
+    right: -37%;
+    width: 37vw;
+    height: 37vw;
+    @include square-size-px(140);
+    opacity: 0.5;
+  }
+}
+.seminar-blocks-content-subject {
+  .bg-blur {
+    position: absolute;
+    z-index: 1;
+    filter: blur(30px);
+  }
+  .pc-bg-blur-01 {
+    top: -7%;
+    right: -10%;
+    @include square-size-px(200);
+
+    opacity: 0.3;
+  }
+  .pc-bg-blur-02 {
+    top: 5%;
+    left: -37%;
+    width: 37vw;
+    height: 37vw;
+    @include square-size-px(200);
+    opacity: 0.5;
+  }
+}
+
+.seminar-blocks-content-box-btn {
+  margin: 0 auto 60px;
+}
+
+.seminar-blocks {
+  position: relative;
+  background: $cl-graylightest;
+
+  .seminar-blocks-sticky {
+    background: $cl-white;
+    .seminar-blocks-sticky-title {
+      font-size: $font-size-xxl;
+      color: $cl-waogreen;
+      @include content-width;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 0 auto 5px;
+    }
+    .seminar-blocks-sticky-text {
+      margin: 0 auto 25px;
+      font-size: $font-size-s;
+      @include content-width;
+    }
+    .seminar-blocks-sticky-hr {
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+    }
+  }
+  .seminar-blocks-content {
+    padding: 60px 0 0;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .seminar-blocks-content-box {
+    position: relative;
+    display: table;
+    z-index: 100;
+    @extend %seminar-blocks-margin;
+    background: $cl-white;
+    margin: 0px auto 0px;
+    border-radius: $border-radius-middle;
+    padding: 0 20px 0px;
+
+    .seminar-blocks-content-box-subtitle-eng {
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: $cl-graylight;
+      padding: 25px 0 0 !important;
+    }
+    .seminar-blocks-content-box-title-teacher {
+      font-weight: 500;
+      font-size: $font-size-l;
+      line-height: $lineheight-relaxed;
+      letter-spacing: 4px;
+      color: $cl-black;
+      padding: 20px 0 0 !important;
+    }
+    .seminar-blocks-content-box-teacher {
+      display: flex;
+      margin: 30px 0 30px;
+      gap: 20px;
+      .seminar-blocks-content-box-teacher-left img {
+        width: 123px;
+        border-radius: $border-radius-big;
+      }
+      .seminar-blocks-content-box-teacher-right-job {
+        font-size: $font-size-ss;
+        margin: 0 0 6px;
+      }
+      .seminar-blocks-content-box-teacher-right-name {
+        font-size: $font-size-xl;
+        font-weight: 500;
+        margin: 0 0 3px;
+      }
+      .seminar-blocks-content-box-teacher-right-english {
+        font-size: $font-size-s;
+        color: $cl-graylight;
+        letter-spacing: 1px;
+      }
+    }
+    .seminar-blocks-content-box-text {
+      font-size: $font-size-m;
+      line-height: $lineheight-very-relaxed;
+      padding: 0px 0 45px;
+      text-align: left;
+    }
+    .seminar-blocks-content-box-subtitle-seminar {
+      margin: 20px 0 0;
+      font-size: $font-size-l;
+    }
+    .seminar-blocks-content-box-title {
+      margin: 7px 0 0;
+      font-size: $font-size-xxl;
+      line-height: 1.4;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    .seminar-blocks-content-box-img {
+      position: relative;
+      margin: 15px 0 30px;
+      border-radius: $border-radius-middle;
+      overflow: hidden;
+      .seminar-blocks-content-box-img-overray {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        .seminar-blocks-content-box-img-overray-large {
+          color: $cl-white;
+          font-size: $font-size-xl;
+          letter-spacing: 2px;
+          margin: 0 0 7px;
+        }
+        .seminar-blocks-content-box-img-overray-small {
+          color: $cl-white;
+          font-size: $font-size-ss;
+          letter-spacing: 1px;
+        }
+      }
+      .seminar-blocks-content-box-img-main img {
+        border-radius: $border-radius-middle;
+      }
+    }
+  }
+  .seminar-blocks-content-box-note {
+    border-radius: $border-radius-middle;
+    border: 1px solid #ccc;
+    margin: 0 0 30px;
+    .seminar-blocks-content-box-note-head {
+      display: flex;
+      align-items: center;
+      padding: 13px 20px;
+      gap: 15px;
+      border-bottom: 1px dashed #ccc;
+      font-weight: bold;
+      font-size: $font-size-m;
+      .seminar-blocks-content-box-note-head-icn {
+        width: 18px;
+      }
+    }
+    .seminar-blocks-content-box-note-content {
+      padding: 15px 20px;
+      p {
+        line-height: $lineheight-relaxed;
+        font-size: $font-size-s;
+      }
+      .seminar-blocks-content-box-note-content-schedule {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        @include min-responsive-style($breakpoint-sp) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+        .seminar-blocks-content-box-note-content-schedule-date {
+          display: inline-block;
+          padding: 5px 11px;
+          @include box-shadow-small;
+          font-size: $font-size-s;
+          border-radius: $border-radius-small;
+          letter-spacing: 0px;
+          @include responsive-style($breakpoint-sp) {
+            padding: 5px 15px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+      .seminar-blocks-content-box-note-content-note {
+        font-size: 11px;
+        color: $cl-graylight;
+        margin: 10px 0 0;
+      }
+    }
+  }
+  .seminar-blocks-content-box-btn {
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+}
+
+//5step〜よくある質問のタイトル
+%underbar-title {
+  font-size: $font-size-xxl;
+  letter-spacing: 2.5px;
+  text-align: center;
+  font-weight: 300;
+  margin: 0 0 30px;
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: $cl-waogreen;
+    margin: 20px auto 0;
+  }
+}
+//かんたん5STEPで参加可能
+.join-5steps {
+  background: $cl-graylightest;
+  padding: 75px 0px 75px;
+  .join-5steps-title {
+    @extend %underbar-title;
+  }
+
+  .join-5steps-box {
+    @extend %seminar-blocks-margin;
+    background: $cl-white;
+    margin: 0 auto 30px;
+    padding: 25px 0;
+    border-radius: $border-radius-middle;
+    &:last-child {
+      margin: 0 auto 0px !important;
+    }
+    .join-5steps-box-head {
+      display: flex;
+      margin: 0 auto 20px;
+      > div {
+        flex: 1;
+      }
+      .join-5steps-box-head-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: $lineheight-tight;
+        position: relative;
+        font-size: $font-size-l;
+        &::before {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 45px;
+          background: $cl-graylight;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          margin: auto;
+        }
+        span {
+          display: block;
+          font-size: 40px;
+        }
+      }
+      .join-5steps-box-head-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 60px;
+        }
+      }
+    }
+    .join-5steps-box-title {
+      font-weight: bold;
+      font-size: $font-size-l;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+    .join-5steps-box-text {
+      text-align: left;
+      font-weight: normal;
+      width: calc(100% - 40px);
+      margin: 20px auto 0;
+      font-size: $font-size-m;
+      line-height: $lineheight-relaxed;
+      a {
+        text-decoration: underline;
+        color: $cl-black;
+        cursor: pointer;
+      }
+    }
+    .eng-phase-main-section-5steps-box {
+      .eng-phase-main-section-5steps-box-wrap {
+        padding: 30px 30px 30px;
+      }
+    }
+  }
+}
+
+//FAQ
+.faq {
+  background: $cl-graylightest;
+  padding: 0 15px 75px;
+  .faq-title {
+    @extend %underbar-title;
+  }
+  .faq-content {
+    background: $cl-white;
+    padding: 20px;
+    margin: 0 auto 30px;
+    border-radius: $border-radius-middle;
+    .faq-content-question {
+      display: flex;
+      gap: 20px;
+      margin: 0 0 4px;
+      .faq-content-question-left {
+        width: 20px;
+        font-size: $font-size-xxl;
+        font-weight: 500;
+        line-height: $lineheight-tight;
+        color: $cl-waogreen;
+      }
+      .faq-content-question-right {
+        font-size: $font-size-m;
+        font-weight: bold;
+        padding: 5px 0 0;
+      }
+    }
+    .faq-content-answer {
+      display: flex;
+      gap: 20px;
+      .faq-content-answer-left {
+        width: 20px;
+        font-size: $font-size-xl;
+        font-weight: 500;
+        line-height: $lineheight-tight;
+        padding: 0 0 0 3px;
+        color: $cl-gray;
+      }
+      .faq-content-answer-right {
+        font-size: $font-size-s;
+        padding: 0px 0 0;
+      }
+    }
+  }
+}
+
+%wao-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: $font-size-xxl;
+  letter-spacing: 2px;
+  margin: 0 auto 20px;
+}
+.about-wao {
+  @include content-width;
+  margin: 90px auto 75px;
+  .about-wao-title {
+    @extend %wao-title;
+  }
+  .about-wao-img {
+    width: 100%;
+    padding: 20px 10px 25px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius-big;
+    justify-content: center;
+    border-radius: $border-radius-big;
+    @include box-shadow-small;
+    img {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  .about-wao-text {
+    font-size: $font-size-m;
+    line-height: $lineheight-very-relaxed;
+    text-align: left;
+  }
+}
+.about-feature {
+  @include content-width;
+  margin: 0px auto 75px;
+  .about-feature-title {
+    @extend %wao-title;
+  }
+  .about-feature-point {
+    border-radius: $border-radius-middle;
+    @include box-shadow-small;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 20px;
+    margin: 0 auto 20px;
+    i {
+      font-size: 30px;
+      color: $cl-waogreen;
+    }
+    .about-feature-point-text {
+      font-weight: bold;
+      font-size: $font-size-m;
+      letter-spacing: 0.5px;
+      @include min-responsive-style($breakpoint-sp) {
+        font-size: $font-size-l;
+      }
+    }
+  }
+}
+
+.about-school {
+  @include content-width;
+  margin: 0px auto 105px;
+  .about-school-catch {
+    font-size: $font-size-m;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+  .about-school-logo {
+    margin: 0 0 10px;
+  }
+  .about-school-target {
+    font-size: $font-size-m;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  .about-school-4subjects img {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+  .about-school-feature {
+    .about-school-feature-box {
+      background: $cl-white;
+      padding: 20px 25px;
+      border-radius: $border-radius-middle;
+      margin: 0 auto 30px;
+      @include box-shadow-small;
+      .about-school-feature-box-title {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin: 0 auto 10px;
+        img {
+          height: 30px;
+        }
+        .about-school-feature-box-title-text {
+          font-size: $font-size-l;
+          font-weight: bold;
+          line-height: $lineheight-very-relaxed;
+        }
+      }
+      .about-school-feature-box-text {
+        font-size: $font-size-m;
+        line-height: $lineheight-relaxed;
+      }
+    }
+  }
+  .about-school-btn a {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 64px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: $border-radius-middle;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    @include gradient-waogreen;
+    transition: 0.2s ease-in-out;
+    gap: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &:hover {
+      opacity: 0.7;
+    }
+    .about-school-btn-text {
+      color: $cl-white;
+      font-size: $font-size-l;
+    }
+
+    .about-school-btn-icn {
+      width: 15px;
+      color: $cl-white;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 75px 0px 0px;
+  text-align: center;
+  background: $cl-black;
+  color: white;
+  position: relative;
+  z-index: 2;
+  @include responsive-style($breakpoint-sp) {
+    padding: 60px 0px 60px;
+  }
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  li {
+    list-style: none;
+    padding: 10px 0;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: $font-size-m;
+    }
+  }
+  .footer-logo img {
+    width: 170px;
+    margin: 120px auto 45px;
+    @include responsive-style($breakpoint-sp) {
+      margin: 60px auto 45px;
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 1px solid $cl-graylight;
+    padding: 15px 0 120px;
+    color: $cl-graylight;
+    font-size: $font-size-ss;
+  }
+}
