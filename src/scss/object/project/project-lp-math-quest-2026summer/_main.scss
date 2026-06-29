@@ -227,7 +227,7 @@ header img{
 // ワオ未来塾って？
 .about-wao {
   @include content-width;
-  margin: 90px auto var(--m-section);
+  margin: var(--m-section) auto;
   .about-wao-title {
     @extend %wao-title;
   }
@@ -255,22 +255,16 @@ header img{
 @include min-responsive-style($breakpoint-sp) {
   .about-wao {
     width: $maincontentWidth;
-    margin: var(--m-section) auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    .about-wao-img{
+      margin-bottom: 40px;
+      img{
+        width: 30%;
+      }
+    }
     .about-wao-title{
       width: 100%;
     }
-    .about-wao-img{
-      width: 30%;
-      margin: 0;
-    }
-    .about-wao-text{
-      width: 65%;
-    }
     .about-wao-text--line{
-      width: 100%;
       text-align: center;
     }
   }
@@ -324,10 +318,10 @@ header img{
   .about-school-catch {
     font-size: var(--fs-m);
     text-align: center;
-    margin: 0 0 10px;
+    margin: 0 0 20px;
   }
   .about-school-logo {
-    margin: 0 0 10px;
+    margin: 0 0 20px;
   }
   .about-school-target {
     font-size: var(--fs-m);
@@ -402,24 +396,18 @@ header img{
       font-size: var(--fs-l);
     }
     .about-school-logo{
-      width: 700px;
+      width: 600px;
       margin: 40px auto;
     }
     .about-school-target{
       margin-bottom: 40px;
     }
     .about-school-4subjects{
-      width: 700px;
+      width: 600px;
       margin: 0 auto;
     }
     .about-school-feature{
-      display: flex;
-      justify-content: space-between;
       margin: 50px auto;
-    }
-    .about-school-feature-box{
-      width: calc(33.333% - 33.333px);
-      margin: 0 !important;
     }
     .about-school-btn a{
       width: 400px;
