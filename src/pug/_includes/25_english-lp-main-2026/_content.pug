@@ -1,0 +1,705 @@
+//mixin
+include _mixin  
+//variable
+include _variables 
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    - const cssBase = '../../css/'
+    - const cssLocal = ''
+    link(href=`${cssBase}25_english-lp-main-2026.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}25_english-lp-main-2026.css?v=${Date.now()}`, rel="stylesheet")
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+    link(href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined' rel='stylesheet')
+    //- meta(name="robots", content="noindex")
+  body
+    header
+       h1.pcimage
+          img(src=ImgHeadLogoPc)
+       h1.spimage
+           img(src=ImgHeadLogoSp)          
+       .humberger
+          img(src=ImgHumbgerMenu)
+       nav
+         +menu-links 
+    main 
+      .englp-fv 
+        .englp-fv-text
+          .englp-fv-subtitle.grid-a
+           span
+            |子どもオンライン英会話
+          .englp-fv-title
+            |お子様の
+            br.spimage
+            |英会話の
+            br.pcimage
+            |悩みを
+            br.spimage
+            |楽しく解決！
+          .englp-fv-cta-wrap.btn-hover
+            a(href=UrlCv, target='_blank').englp-fv-cta-button
+              .englp-fv-cta-button-sub
+                |無料期間中のみの受講もOK
+              .englp-fv-cta-button-free
+                img(src=IcnCta)
+              .englp-fv-cta-button-text
+                |受講申し込みはこちら
+              .englp-fv-cta-button-icn.
+                <span class="material-symbols-outlined">keyboard_arrow_right </span>
+        .englp-fv-img.pcimage
+          .slideshow-image
+            img(src=FvPc01)
+          .slideshow-image
+            img(src=FvPc02)
+        .englp-fv-img.spimage
+          .slideshow-image
+            img(src=FvSp01)
+          .slideshow-image
+            img(src=FvSp02)
+
+      .englp-reviews 
+        .englp-reviews-track
+          - for (var i = 0; i < 2; i++)
+            .englp-reviews-list(aria-hidden=i === 1 ? 'true' : false)
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  .pcimage
+                    |友達に何聞かれてるか教えてあげられるほどになり、好きな教科で英語！と答えるようになりました。
+                  .spimage
+                    |好きな教科で英語！と答えるようになりました。
+                .englp-reviews-box-name 
+                  |小学校 3年生
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |英検３級に受かりました
+                .englp-reviews-box-name 
+                  |小学校 3年生
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |子どもがいつの間にかかっこいい英語を話してました
+                .englp-reviews-box-name 
+                  |小学校 3年生
+              .englp-reviews-box 
+                .englp-reviews-box-title 
+                  |リアルタイムでの参加が
+                  br
+                  |楽しすぎる
+                .englp-reviews-box-name 
+                  |小学校 3年生  
+      //英語学習のお悩み
+      section.englp-section.englp-bg-yellow.englp-section-concern
+        .englp-section-concern-subtitle.pcimage
+          |Having Trouble?
+        .englp-section-concern-title-pc.pcimage
+           |子どもの英語学習でこんな
+           span|お悩み
+           |はありませんか？
+        .englp-section-concern-title-sp.spimage
+          .englp-section-concern-title-sp-text
+            |子どもの英語学習でこんな
+          .englp-section-concern-title-sp-text
+            span|お悩み
+            |はありませんか？           
+        .englp-section-concern-content
+           .englp-section-concern-box 
+             .englp-section-concern-box-number.pcimage
+               |01
+             .englp-section-concern-box-subtitle 
+               |オンライン英語を始めたが、
+             .englp-section-concern-box-title
+                |先生が英語だけで何を
+                br
+                |言っているかが聞き取れない
+             .englp-section-concern-box-img
+               img(src=ImgIllustConcern01)
+           .englp-section-concern-box 
+             .englp-section-concern-box-number.pcimage
+               |02
+             .englp-section-concern-box-subtitle 
+               |英語を勉強させたいが、
+             .englp-section-concern-box-title
+                |英語がそもそも嫌いで、
+                br
+                |単語帳を見るだけで嫌になる
+             .englp-section-concern-box-img
+               img(src=ImgIllustConcern02)
+           .englp-section-concern-box 
+             .englp-section-concern-box-number.pcimage 
+               |03
+             .englp-section-concern-box-subtitle 
+               |学校の英語のテストは平均点を取れるが、
+             .englp-section-concern-box-title
+                |英語が全く喋れず、
+                br
+                |リスニングは非常に苦手
+             .englp-section-concern-box-img
+               img(src=ImgIllustConcern03)
+
+      //お悩み解決
+      .englp-solve
+        .englp-solve-arrow
+          i.fa-solid.fa-angles-down
+        .englp-solve-title
+          span|ワオ未来塾・グローバル英語
+          |で
+          br.spimage
+          |その
+          span|お悩みを
+          |解決します！ 
+        .englp-solve-subtitle
+           span|ENJOY
+           br.spimage
+           span|ENGLISH
+
+      //ワオ未来塾・グローバル英語で楽しく学べる仕組み    
+      section.englp-section-solution#solution
+
+        .englp-section-solution-head
+          .pcimage 
+            img(src=ImgStructurePc)
+          .spimage 
+            .englp-section-solution-head-title 
+                |ワオ未来塾・グローバル英語で
+                br
+                |楽しく学べる仕組み
+            .englp-section-solution-head-sp01
+              img(src=ImgStructureSp01)
+            .englp-section-solution-head-sp02
+              img(src=ImgStructureSp02)
+        //01ライブレッスン
+        .englp-section-solution-grid 
+          .englp-section-solution-grid-title.item-a 
+              .englp-section-solution-grid-title-number|01 
+              .englp-section-solution-grid-title-title|ライブレッスン
+          .englp-section-solution-grid-content.englp-section-solution-grid-content02.item-b
+              .englp-section-solution-grid-content-left
+                .englp-section-solution-grid-content-left-title 
+                    |ライブ形式のレッスンで
+                    br
+                    |英語を楽しく学べる
+                .englp-section-solution-grid-content-left-merits 
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |授業の中でみんなで一緒に英語を
+                          br.pcimage
+                          |口に出すので、
+                          b|発音力がアップ！
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |一方的な座学形式ではなく、
+                          br
+                          |ゲーム性を取り入れながら
+                          b|楽しく学べる
+              .englp-section-solution-grid-content-right 
+                img(src=ImgStructure03)
+          .englp-section-solution-grid-title.item-c
+              .englp-section-solution-grid-title-number| 
+              .englp-section-solution-grid-title-title|
+          .englp-section-solution-grid-content.englp-section-solution-grid-content03.item-d
+              .englp-section-solution-grid-content-left
+                .englp-section-solution-grid-content-left-title 
+                    |子どもの心を掴むのが
+                    br
+                    |上手な講師陣
+                .englp-section-solution-grid-content-left-merits 
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |子どもが大好きな講師陣
+                          br
+                          |先生は
+                          b|固定の先生なので安心
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |日本語も完璧！
+                          br
+                          |なので
+                          b|安心して学べる
+              .englp-section-solution-grid-content-right 
+                img(src=ImgStructure04)
+
+        //02トレーニング動画
+        .englp-section-solution-grid 
+          .englp-section-solution-grid-title.item-a 
+              .englp-section-solution-grid-title-number|02
+              .englp-section-solution-grid-title-title|トレーニング動画
+          .englp-section-solution-grid-content.item-b
+              .englp-section-solution-grid-content-left
+                .englp-section-solution-grid-content-left-title 
+                    |英語が口に自然になじむ
+                    br
+                    |トレーニング動画＋録音提出
+                .englp-section-solution-grid-content-left-merits 
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |授業外でもいつでも
+                          br
+                          b|トレーニング可能
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |反復練習で自然と
+                          b|英語が口になじむ
+              .englp-section-solution-grid-content-right 
+                img(src=ImgStructure05)
+          .englp-section-solution-grid-title.item-c.item-c02.spimage
+              .englp-section-solution-grid-title-number| 
+              .englp-section-solution-grid-title-title|
+        //03トレーニング動画
+        .englp-section-solution-grid 
+          .englp-section-solution-grid-title.item-a 
+              .englp-section-solution-grid-title-number|03
+              .englp-section-solution-grid-title-title|アドバイス動画
+          .englp-section-solution-grid-content.item-b
+              .englp-section-solution-grid-content-left
+                .englp-section-solution-grid-content-left-title 
+                    |お子さま専用のアドバイス
+                    br
+                    |動画を先生が作成して毎月お届け
+                .englp-section-solution-grid-content-left-merits 
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                          |お子さまの英語録音課題を元に先生が
+                          br.pcimage
+                          b|毎月フィードバック動画をお届け
+                  .englp-section-solution-grid-content-left-merits-list  
+                    .englp-section-solution-grid-content-left-merits-list-icon
+                        img(src=IcnCheckPerple)
+                    .englp-section-solution-grid-content-left-merits-list-text  
+                        b|何が得意で何が苦手なのかが
+                        br.pcimage
+                        b|明確
+                        |になるのでより学習が効率的に
+              .englp-section-solution-grid-content-right 
+                img(src=ImgStructure06)
+          .englp-section-solution-grid-title.item-c.item-c02.spimage
+              .englp-section-solution-grid-title-number| 
+              .englp-section-solution-grid-title-title|
+      //3分でわかる ワオ未来塾グローバル英語
+      .englp-movie
+        .section-engtitle.head-purple.head-bg-white 
+          .section-engtitle-main(style='color:transparent;')
+            |MOVIE
+        .englp-movie-flex
+          .englp-movie-flex-left 
+            .englp-movie-flex-left-title 
+              span|3
+              |分でわかる
+              br
+              |ワオ未来塾グローバル英語
+            .englp-movie-left-text 
+                |「カタマリ」でしゃべるってどういうこと？
+          .englp-movie-flex-right.
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/930561537?h=9685ee59ac&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="3分でわかる！新感覚英会話レッスン ワオ未来塾 グローバル英語">
+              </iframe>
+            </div>
+      //料金システム
+      section.englp-section.englp-bg-gray.englp-section-common.englp-section-borderbottom#price
+        .section-engtitle.head-gray.head-bg-white 
+            .section-engtitle-main
+              |COURSE
+        .englp-section-title 
+          h2.englp-section-title-main
+            |料金
+        .englp-section-price
+            .englp-section-price-main
+              .englp-section-price-main-free 
+                |入会月無料
+              .englp-section-price-main-price 
+                span|9,400
+                |円(税込)/月
+            .englp-section-price-detail
+              .englp-section-price-detail-subtitle 
+                |グループレッスンとマンツーマンの
+                br
+                |良いとこどりの内容です
+              .englp-section-price-detail-wrapper
+                //01  
+                .englp-section-price-detail-grid 
+                  .englp-section-price-detail-grid-icon.pcimage 
+                    img(src=IcnPrice01)
+                  .englp-section-price-detail-grid-title
+                    |ライブレッスン
+                  .englp-section-price-detail-grid-text
+                    |・平日コース：25分 X 月6回
+                    br
+                    |・土曜日コース：50分 X 月3回
+                    br
+                    |・アーカイブあり
+                .englp-section-price-detail-plus
+                  |+
+                //02
+                .englp-section-price-detail-grid 
+                  .englp-section-price-detail-grid-icon.pcimage 
+                    img(src=IcnPrice02)
+                  .englp-section-price-detail-grid-title
+                    |トレーニング動画
+                    br
+                    |＋録音提出
+                  .englp-section-price-detail-grid-text
+                    |・いつでも、どこでも活用できる
+                    br
+                    |・毎日口に出して練習できる！
+                .englp-section-price-detail-plus
+                  |+
+                //03
+                .englp-section-price-detail-grid 
+                  .englp-section-price-detail-grid-icon.pcimage 
+                    img(src=IcnPrice03)
+                  .englp-section-price-detail-grid-title
+                    |個別フィードバック動画
+                  .englp-section-price-detail-grid-text
+                    |・録音課題を元に個別のフィードバック動画をお子様にお届け
+        .englp-section-title 
+            h2.englp-section-title-main
+              |授業コース
+        .englp-section-course 
+          .englp-section-course-banner 
+            img(src=ImgCourseBanner01)
+          .englp-section-course-comingsoon
+            .englp-section-course-comingsoon-title 
+              |今後もコースは追加予定です。
+              br
+              |お楽しみに         
+        .englp-section-title#schedule
+            h2.englp-section-title-main
+              |ライブレッスンスケジュール 
+        .englp-section-course-schedule-text 
+          |授業は平日に2回受講する「平日スタイル」と
+          br
+          |土曜にまとめて受講する「土曜スタイル」など、そのつどご自身のスケジュールに合わせて自由に参加が可能！
+          br
+          |どちらも都合がつかない場合は、アーカイブで授業を受けることができます。
+        .englp-section-course-schedule-img
+             .pcimage
+               img(src=SchedulePc)
+             .spimage
+               img(src=ScheduleSp)
+        .englp-section-course-schedule-note 
+          |※土曜配信は平日と同内容
+      //CTA
+      +section-cta                 
+      //講師紹介
+      section.englp-section.englp-bg-purplelight.englp-section-common#teacher
+        .section-engtitle.head-purple.head-bg-yellow
+            .section-engtitle-main
+              |TEACHER
+        .englp-section-title 
+          h2.englp-section-title-main
+            |講師紹介
+          .englp-section-title-sub
+            |子どもたちを楽しませる愉快な先生
+        .englp-section-teacher
+          //ryan
+          .englp-section-teacher-box 
+            .englp-section-teacher-box-left 
+              .englp-section-teacher-box-left-movie.modal-video-trigger(data-video=movieTeacherRyanModal) 
+                +playbutton
+                .englp-section-teacher-box-left-movie-person
+                      video(src=MovieRyan autoplay muted loop playsinline)
+              .englp-section-teacher-box-left-sub 
+                img(src=ImgTeacherRyan)
+            .englp-section-teacher-box-right   
+              .englp-section-teacher-box-right-title 
+                  .englp-section-teacher-box-right-title-main
+                    |Ryan
+                  .englp-section-teacher-box-right-title-sub
+                    |[ライアン]
+              .englp-section-teacher-box-right-text 
+                  |こんにちは、日本人とアメリカ人のハーフ、ライアンです！ワオ未来塾のグローバルイングリッシュのコースで「普通」とは違った、楽しい英語のレッスンを一緒にやりましょう！
+                  |こんな英語の勉強ありなの！？って思うはずだよ！よろしくね！
+              .englp-section-teacher-box-right-comment 
+                .englp-section-teacher-box-right-comment-title 
+                    |生徒からのコメント
+                .englp-section-teacher-box-right-comment-content 
+                    |「ゲーム好きでお兄ちゃんみたいで楽しい」
+          //pauro
+          .englp-section-teacher-box 
+            .englp-section-teacher-box-left 
+              .englp-section-teacher-box-left-movie.modal-video-trigger(data-video=movieTeacherPauloModal) 
+                +playbutton
+                .englp-section-teacher-box-left-movie-person
+                      video(src=MoviePaulo autoplay muted loop playsinline)
+              .englp-section-teacher-box-left-sub 
+                img(src=ImgTeacherPaulo)
+            .englp-section-teacher-box-right   
+              .englp-section-teacher-box-right-title 
+                  .englp-section-teacher-box-right-title-main
+                    |Pauro
+                  .englp-section-teacher-box-right-title-sub
+                    |[パウロ]
+              .englp-section-teacher-box-right-text 
+                      |What's up, guys!! My name is PAURO!
+                      br
+                      |みんな元気かな！ワオ未来塾の先生のパウロです！東京生まれ、テキサス育ちのアメリカ人です！大好きなのは、アメフト、ギター、とハンバーガー！
+                      |みんなと一緒に楽しく英語をトレーニングしていきたいです。
+                      br
+                      |Have a great day and I hope to see you soon!
+              .englp-section-teacher-box-right-comment 
+                .englp-section-teacher-box-right-comment-title 
+                    |生徒からのコメント
+                .englp-section-teacher-box-right-comment-content 
+                    |「優しいお父さんみたいでたくさん褒めてくれる」
+
+      //「ワオ未来塾・グローバル英語」と「他英語スクール」との違い
+      section.englp-section.englp-bg-white.englp-section-common#feature
+        .section-engtitle.head-white.head-bg-purple
+            .section-engtitle-main
+              |FEATURE
+        .englp-section-title 
+          h2.englp-section-title-main
+            |「ワオ未来塾・グローバル英語」と
+            br
+            |「他英語スクール」との違い
+        include _compare
+      //「受講生の声
+      section.englp-section.englp-bg-creamyellow.englp-section-borderbottom#voice
+        .section-engtitle.head-creamyellow.head-bg-white 
+            .section-engtitle-main
+              |VOICE
+        .englp-section-title 
+          h2.englp-section-title-main
+            |受講生の声
+        .englp-section-voice 
+          .englp-section-voice-box 
+            .englp-section-voice-box-title 
+              .englp-section-voice-box-title-left 
+                .englp-section-voice-box-title-left-img
+                  img(src=ImgIllustVoice01)
+                .englp-section-voice-box-title-left-tag
+                  |中1 保護者
+              .englp-section-voice-box-title-right
+                |およそ半年で英検3級に合格
+            .englp-section-voice-box-text  
+              p
+                |別のオンライン英会話では先生が何を言っているかわからず、会話が続かないのが悩みでした。
+                br
+                br
+                b|ワオ未来塾のライブレッスンはリアルタイムの参加がとにかく楽しいです。
+                |耳に残るフレーズのおかげで、英検のリスニングでも「聞いたことあるフレーズ！」が多く、高得点を獲得しリエゾンの凄さを実感しました。
+                br
+                |学校では担任の先生に褒められたり、英語施設への遠足では友達に「何を聞かれてるか」を教えてあげられるほどになり、
+                b|好きな教科を聞かれると「英語！」と答えるようになりました。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
+          .englp-section-voice-box 
+            .englp-section-voice-box-title 
+              .englp-section-voice-box-title-left 
+                .englp-section-voice-box-title-left-img
+                  img(src=ImgIllustVoice02)
+                .englp-section-voice-box-title-left-tag
+                  |小4 保護者
+              .englp-section-voice-box-title-right
+                |夢中になれる授業で
+                br
+                |発音がみるみる上達
+            .englp-section-voice-box-text  
+              p
+                |英語は聞き取れるのに上手に喋れなかったのが悩みでした。ワオ未来塾を始めてからは毎日トレーニング動画の練習も欠かさず続けたところ、夏休みのイベントで優秀賞を獲得したり、塾の先生が認識できないぐらいのネイティブ発音になり、本人も大きな自信を持つようになりました。
+                br
+                br
+                b|リアルタイムの授業は、先生や他の生徒ともお友達とコミュニケーションを取ったり、リズミカルに英語を楽しく学んでいます。
+                |さらにクイズ形式や点数制などで競争心も刺激されて頑張っています。
+                br
+                br
+                |子供が楽しく授業を受けている様子を目の前で見ていると、親としても微笑ましく感じています。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
+          .englp-section-voice-box 
+            .englp-section-voice-box-title 
+              .englp-section-voice-box-title-left 
+                .englp-section-voice-box-title-left-img
+                  img(src=ImgIllustVoice03)
+                .englp-section-voice-box-title-left-tag
+                  |小6 保護者
+              .englp-section-voice-box-title-right
+                |英会話が苦手だった子が
+                br
+                |「続けたい」に変化
+            .englp-section-voice-box-text  
+              p
+                |以前受講していたオンライン英会話では外国人の先生とのコミュニケーションに苦手意識がありました。ワオ未来塾の先生は楽しく教えてくれるので、レッスンをいつも楽しみにしています。
+                br
+                br
+                b|「楽しいし英語は大事だから続けたい」と自分から言ってくれています。
+                |他塾との併用で毎日忙しい日々ながらも、「いつか留学したい」「英語は大事だし楽しいから続けたい」という想いで頑張っています。
+                br
+                |前向きな気持ちで英語学習に取り組めているのでありがたいです。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
+          .englp-section-voice-box 
+            .englp-section-voice-box-title 
+              .englp-section-voice-box-title-left 
+                .englp-section-voice-box-title-left-img
+                  img(src=ImgIllustVoice04)
+                .englp-section-voice-box-title-left-tag
+                  |小4 保護者
+              .englp-section-voice-box-title-right
+                |遊びの延長のような感覚で
+                br
+                |楽しく英語に触れる
+            .englp-section-voice-box-text  
+              p
+                |別のオンライン英会話では先生が何を言っているかわからず、会話が続かないのが悩みでした。
+                br
+                br
+                b|ワオ未来塾のライブレッスンはリアルタイムの参加がとにかく楽しいです。
+                |耳に残るフレーズのおかげで、英検のリスニングでも「聞いたことあるフレーズ！」が多く、高得点を獲得しリエゾンの凄さを実感しました。
+                br
+                |学校では担任の先生に褒められたり、英語施設への遠足では友達に「何を聞かれてるか」を教えてあげられるほどになり、
+                b|好きな教科を聞かれると「英語！」と答えるようになりました。
+              .englp-section-voice-box-text-button.spimage
+                button(type='button' aria-expanded='false')
+                  |続きを読む +
+      //CTA
+      +section-cta
+      // 授業コース〜カリキュラムの説明動画
+      section.englp-section.englp-bg-white
+        .section-engtitle.head-white.head-bg-yellow 
+            .section-engtitle-main
+              |PROCESS
+        .englp-section-title 
+            h2.englp-section-title-main
+              |カリキュラムの説明動画
+        include _curriculum
+      // FAQ,
+      section.englp-section.englp-bg-gray.englp-section-common#faq
+        .section-engtitle.head-gray.head-bg-purple 
+            .section-engtitle-main
+              |FAQ
+        .englp-section-title 
+            h2.englp-section-title-main
+              |よくある質問
+        mixin faq(question, answer)
+          .englp-section-faq
+            .englp-section-faq-head
+              .englp-section-faq-head-question Q
+              .englp-section-faq-head-title
+                =question
+              .englp-section-faq-head-toggle.
+                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            .englp-section-faq-content
+              p!= answer
+        .englp-section-faq-wrapper
+          +faq("英語の歌をたくさん聞かせています。これも効果ありますか？", "リズムと音で英語の発音になれることができるのでとてもいい練習方法です。ただ、英語の歌にはあまり日常的に使ってほしくない表現が含まれていることがあります。ワオ未来塾のグローバル英語では、必要なフレーズをリズムに乗せて練習しますので、歌や九九を覚える感覚で覚えることができます。")
+          +faq("英語はまだ習っていないので単語をほぼ知らないのですが、大丈夫ですか？", "はじめて出てくる単語はレッスンで解説をします。そして、ネイティブの子どもたちと同じように、画像やアクションと単語を結び付けて、フレーズの中で覚えていきますのでご安心ください。")
+          +faq("文法は勉強しなくて大丈夫ですか？", "赤ちゃんだった子どもたちはどうやって言葉を話せるようになるのでしょうか<br /><br />？まずは文字を覚えて、単語を暗記して、文法を学んだ？ いいえ、聞こえてくる「音」を何度も真似をして、簡単なフレーズから話せるようになったはずです。同じように、ワオ未来塾グローバル英語では、フレーズを九九のように覚える練習をしていきます。<br /><br />また、英語をカタマリで覚えるので、日本人が話すときに助詞で悩まないのと同じように、英語でも「inだっけ？atだっけ？」と悩むことがなくなります。そして、しゃべれるようになってから文法を学ぶと、なるほど！と理解することができるようになります。")
+          +faq("週に数回のレッスンで本当に話せるようになるんですか？", "英語は見ているだけ、聞いているだけでは話せるようになりません。ワオ未来塾のグローバル英語では、レッスンがない日もレッスンで習ったフレーズを体にしみこませるため動画でトレーニングが毎日できます！動画ではリズムと音を活用して練習するので、歌や九九を覚える感覚で楽しく英語のフレーズを覚えることができますよ。")
+          +faq("オンラインなので、子どもが楽しく続けることができるか心配です。", "指導は子どもが大好きで元気な日本語の通じるネイティブ講師＆日本人講師が行います。アクションをつけながらリズムに合わせて発音したり、クイズ形式で得点を競ったり、お子様が楽しく参加できる工夫がたくさんあります。")
+          +faq("英検に挑戦したいと考えています。対策になりますか？", "グローバル英語のレッスンは英検の「リスニング問題」の対策に有効です。英語が聞き取れない原因は単語と単語をつなげて発音する「リエゾン」に慣れていないことが原因です。グローバル英語ではこの単語と単語のカタマリを音（リエゾン）で練習しますので、英語特有の発音も聞き取れるようになります。<br /><br />またレッスンは音から英語を習得する'喋る練習'を中心に進めますが、音が体にしみこむ最終段階ではフレーズをアルファベットで表示します。これによって音と文字がつながり、アルファベットで表記された英語も読むことができるよう設計された教材を使用しています。")
+          +faq("受講を始めるのはいつが最適ですか？", "どの月から初めていただいても、その月内でテーマとなるフレーズが完結するように教材を作成していますが、２ヶ月ごとにプレゼンター、インタビュアー、レポーター、とシーンがかわりますので、しいていうならば偶数月スタートをおすすめしています。とはいえ『思い立ったが吉日』！お子様の「やってみよう！」「がんばろう！」という気持ちが合うタイミングでスタートしていただくのが一番です。")
+          +faq("年度の途中での入会をしても授業についていけますか？", "1年を通して様々なフレーズを学ぶので、どの月から受講いただいても問題ありません。")
+          +faq("平日と土曜を組み合わせて受講することはできませんか？", "授業開始時に「受講レベル」を選択いただきます。選択したレベルの授業は平日・土曜いずれも受講可能です。ただし火曜日と土曜日前半／木曜日と土曜日後半は同じレッスンを実施していますので、平日と土曜で別のレッスンを受講できるようご参加日時をご調整ください。")
+      //LINE
+      .englp-line
+        .section-engtitle.head-gray.head-bg-white 
+          .section-engtitle-main(style='color:transparent;')
+            |LINE
+        .englp-line-flex
+          h2.englp-section-title-main.spimage
+              |LINEでお問い合わせ
+          .englp-line-flex-left
+              img(src=ImgLine)
+          .englp-line-flex-right 
+          
+            .englp-line-right-title.pcimage
+                |LINEでお問い合わせ
+            .englp-line-right-text 
+                |「ワオ未来塾」LINE公式アカウントから
+                br
+                |グローバル英語のレッスンや受講に関しての
+                br
+                |お悩み・ご相談にお答えいたします！
+            .englp-line-right-catch
+              |＼今なら特別トレーニング動画をプレゼント！ ／ 
+            a(href=UrlLine,target='_blank').englp-line-right-btn.btn-hover.js-line-trigger
+                .englp-line-right-btn-icn
+                  img(src='https://waomirai.com/lp/assets/lpimages/06_english-lp-main-2025may/icn_line.svg')
+                .englp-line-right-btn-txt 
+                  |LINEでお問い合わせ
+                .englp-line-right-btn-arrow.
+                    <span class="material-symbols-outlined">keyboard_arrow_right</span>      
+      section.englp-section.englp-bg-purplelight.englp-section-common.englp-rapport22
+        .section-engtitle.head-purple.head-bg-white
+            .section-engtitle-main
+              |WHO 
+              br.spimage
+              |WE ARE
+        .englp-section-rapport22
+            .englp-section-rapport22-left
+              img(src=ImgRapport22)
+            .englp-section-rapport22-right 
+              .englp-section-rapport22-right-title 
+                |レッスン担当　ラポール22
+              .englp-section-rapport22-right-text 
+                    |かつて「グローバル」は一部のエリートに関わる言葉でした。しかし今や、日常的に外国人と接する機会が増え、AIの活用でも英語が有利となり、「グローバル」であることが当たり前の時代です。
+                    br
+                    br
+                    |こうした新しい世界で、今の子どもたちが楽しく働き、生活していくために、本当に必要なのはツールとして使える英語とコミュニケーション能力です。しかし現状の英語教育では実際に使える英語が身につかず、英語嫌いの子どもが増えているのが実情です。
+                    br
+                    br
+                    |海外の人々とコミュニケーションを取るためには3つの力が必要です。人前で自分の意見を語る「表現力」、異文化・異なる考えを理解して反応できる「聞く力」、内容を簡潔にまとめて伝える「伝える力」。こうした実践的なコミュニケーション力は、英検やTOEFLにも直結します。
+                    br
+                    br
+                    |私たちはこれらを英語と共に育てるために、「Presenter（表現力）」「Interviewer（聞く力）」「Reporter（伝える力）」の3つのプログラムを開発しました。
+      //footer
+      footer 
+          ul 
+            li 
+              a(href="https://www.wao-corp.com/", target='_blank')
+                |会社概要
+            li 
+              a(href="https://www.wao-corp.com/kojin/", target='_blank')
+                |プライバシーポリシー
+            li
+              a(href="https://waomirai.com/commerce_law/", target='_blank')
+                |特定商取引に基づく表記
+          .footer-logo 
+            img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+          .footer-copyright
+            |© ワオ・コーポレーション All rights reserved.
+    +menu-modal
+    +cta-fixed
+    +modal-video-player
+    +modal-line-qr
+    .bg-modal(style='display:none;')
+    script(src="https://player.vimeo.com/api/player.js")
+//js
+include _js

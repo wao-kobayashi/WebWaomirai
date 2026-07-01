@@ -1,0 +1,179 @@
+
+script.
+  $(function () {
+    
+    // ==============================
+    // inview アニメーション
+    // ==============================
+    function initInviewAnimation() {
+      $('.inview-triger').on('inview', function (event, isInView) {
+        if (isInView) {
+          $(this).addClass('inview');
+        }
+      });
+    }
+
+    // ==============================
+    // LINE 申込導線（PC/SP で挙動切替）
+    // ==============================
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+
+    function modalAlreadyFriendOpen() {
+          $('#modal-alreadyfriend, .bg-modal').show();
+
+    }
+
+    function updateButtonBehavior() {
+      var isWideScreen = $(window).width() >= 769;
+
+      $('.js-line-trigger')
+        .off('click')
+        .on('click', function (e) {
+          e.preventDefault();
+
+          if (isWideScreen) {
+            modalPcLiffOpen();
+          } else {
+            window.open('#{UrlLiffAddFriend}', '_blank')
+          }
+        });
+    }
+
+    function initLineEntry() {
+      $(window).on('load resize', updateButtonBehavior);
+    }
+
+    // ==============================
+    // Vimeo モーダル
+    // ==============================
+    function initVimeoModal() {
+      var iframe = document.getElementById('vimeoPlayer');
+      if (!iframe) return;
+
+      var player = new Vimeo.Player(iframe);
+
+      $('#playButton').on('click', function () {
+        $('.modal-vimeo, .bg-modal').show();
+
+        setTimeout(function () {
+          player
+            .play()
+            .then(function () {
+              console.log('動画が再生されました');
+            })
+            .catch(function (error) {
+              console.error('再生エラー:', error);
+            });
+        }, 1500);
+      });
+
+      $('.modal-close, .bg-modal').on('click', function () {
+        $('.modal-vimeo, .modal, .bg-modal').hide();
+
+        player
+          .pause()
+          .then(function () {
+            console.log('動画が停止しました');
+          })
+          .catch(function (error) {
+            console.error('停止エラー:', error);
+          });
+      });
+    }
+
+    // ==============================
+    // LIFF QR（PC 用）
+    // ==============================
+    function initLiffQr() {
+      var el = document.getElementById('liffqr');
+      if (!el) return;
+      new QRCode(el, "#{UrlLiffAddFriend}");
+    }
+
+    // ==============================
+    // FAQ アコーディオン
+    // ==============================
+    function initFaqAccordion() {
+      $('.eng-phase-main-section-green-wrap-faq-box-title').on('click', function () {
+        $(this)
+          .toggleClass('active')
+          .next('.eng-phase-main-section-green-wrap-faq-box-content')
+          .slideToggle();
+
+        $('.accordion-header')
+          .not(this)
+          .removeClass('active')
+          .next('.eng-phase-main-section-green-wrap-faq-box-content')
+          .slideUp();
+      });
+    }
+
+    // ==============================
+    // 10日間プログラム タブ切り替え
+    // ==============================
+    function initFlowTabs() {
+      $('.eng-phase-main-flow-tab-item').on('click', function () {
+        if ($('.eng-phase-main-flow-tab').hasClass('is-finished')) return;
+
+        $('.eng-phase-main-flow-tab-item, .eng-phase-main-flow-contents-item').removeClass('is-active');
+        $(this).addClass('is-active');
+
+        $('.eng-phase-main-flow-contents-item')
+          .eq($('.eng-phase-main-flow-tab-item').index(this))
+          .addClass('is-active');
+      });
+    }
+
+    // ==============================
+    // スマホ追従 CV ボタン
+    // ==============================
+    function initFixedCv() {
+      $(window).on("load scroll resize", function () {
+        if ($(window).width() <= 768 && $(window).scrollTop() > 600) {
+          $("#fixed-cv").fadeIn();
+        } else {
+          $("#fixed-cv").fadeOut();
+        }
+      });
+    }
+
+    // ==============================
+    // ラポール「続きを読む」
+    // ==============================
+    function initRapportReadMore() {
+      var $box = $('.eng-phase-rapport-read-more');
+      if ($box.hasClass('is-expanded')) return;
+      $box.removeClass('is-no-more');
+      var $p = $box.children('p').first();
+      if (!$p.length) return;
+      if ($p[0].scrollHeight <= $p[0].clientHeight + 1) {
+        $box.addClass('is-no-more');
+      }
+    }
+
+    $('.eng-phase-rapport-read-more-button button').on('click', function () {
+      var $box = $(this).closest('.eng-phase-rapport-read-more');
+      if ($box.hasClass('is-expanded')) {
+        $box.removeClass('is-expanded');
+        $(this).attr('aria-expanded', 'false').text('続きを読む ＋');
+      } else {
+        $box.addClass('is-expanded');
+        $(this).attr('aria-expanded', 'true').text('閉じる');
+      }
+    });
+
+    // ==============================
+    // 初期化
+    // ==============================
+    initInviewAnimation();
+    initLineEntry();
+    initVimeoModal();
+    initLiffQr();
+    initFaqAccordion();
+    initFlowTabs();
+    initFixedCv();
+    initRapportReadMore();
+    $(window).on('resize', initRapportReadMore);
+  });

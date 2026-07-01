@@ -1,0 +1,128 @@
+/* 見出し */
+.englp-section-title {
+  margin: 20px auto 20px;
+  @include responsive-style($breakpoint-sp) {
+    margin: 20px auto 20px;
+  }
+  h2 {
+    text-align: center;
+    @include font-size-xl;
+    letter-spacing: 0.08em;
+    line-height: $lineheight-normal;
+  }
+  .englp-section-title-sub {
+    @include font-size-m;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+}
+.englp-section-borderbottom {
+  position: relative;
+  z-index: 2;
+  border-radius: 0 0 $border-radius-extrabig $border-radius-extrabig;
+  @include responsive-style($breakpoint-sp) {
+    border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+  }
+}
+.englp-section-common {
+  padding: 0 0 90px;
+  @include responsive-style($breakpoint-sp) {
+    padding: 0 0 75px;
+  }
+}
+
+/* セクションの繋ぎ目 */
+.englp-rapport22 .section-engtitle {
+  &::before {
+    @include responsive-style($breakpoint-sp) {
+      height: 90px;
+      border-radius: $border-radius-big $border-radius-big 0 0;
+    }
+  }
+}
+
+.section-engtitle {
+  @include font-size-engtitle;
+
+  position: relative;
+  margin: 0 0 0px;
+
+  /* memo: 現状、高さ20pxに対して背景装飾は80px */
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+
+    border-radius: $border-radius-bigplus $border-radius-bigplus 0 0;
+    content: "";
+    height: 60px;
+    @include responsive-style($breakpoint-sp) {
+      height: 25px;
+      border-radius: $border-radius-big $border-radius-big 0 0;
+    }
+  }
+
+  .section-engtitle-main {
+    position: relative;
+  }
+}
+
+/* title background */
+.section-engtitle.head-bg-white {
+  background: $cl-white;
+}
+
+.section-engtitle.head-bg-gray {
+  background: $cl-graylightest;
+}
+
+.section-engtitle.head-bg-yellow {
+  background: $lp-yellow;
+}
+
+.section-engtitle.head-bg-transparent {
+  background: transparent;
+}
+.section-engtitle.head-bg-creamyellow {
+  background: $cl-bg-creamyellow;
+}
+
+/* decoration background */
+.section-engtitle.head-bg-purple::before {
+  background: $lp-eng-purple-pale;
+}
+.section-engtitle.head-bg-yellow::before {
+  background: $lp-yellow;
+}
+.section-engtitle.head-bg-purple {
+  background: $lp-eng-purple-pale;
+}
+
+.section-engtitle.head-gray::before {
+  background: $cl-graylightest;
+}
+
+.section-engtitle.head-white::before {
+  background: $cl-white;
+}
+
+.section-engtitle.head-creamyellow::before {
+  background: $cl-bg-creamyellow;
+}
+.section-engtitle.head-purple::before {
+  background: $lp-eng-purple-pale;
+}
+
+/* sections */
+section.englp-bg-gray {
+  background: $cl-graylightest;
+}
+
+section.englp-bg-purplelight {
+  background: $lp-eng-purple-pale;
+}
+.englp-bg-creamyellow {
+  background: $cl-bg-creamyellow;
+}

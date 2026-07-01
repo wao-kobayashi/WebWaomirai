@@ -24,8 +24,7 @@ script.
 //教科スクロール＆タブのjs
 script.
   $(document).ready(function() {
-  // overlay-swipeが消えたかどうかのフラグ
-  var overlayDismissed = false;
+  
 
   // .schedule-tabをクリックしたときの処理
   $('.schedule-tab-content').on('click', function() {
@@ -92,7 +91,9 @@ script.
       });
     }
   });
-
+  
+// overlay-swipeが消えたかどうかのフラグ
+  var overlayDismissed = false;
   // .schedule-table内を横スクロールしたら .overlay-swipe をfadeout（全教科の時のみ）
   $('.schedule-table').on('scroll', function() {
     // 全教科タブがactiveの場合のみfadeout

@@ -1,0 +1,205 @@
+script.
+    // ==============================
+    // FAQ アコーディオン
+    // ==============================
+    $('.englp-section-faq').on('click', function () {
+        $(this).toggleClass('is-open').next('.eng-phase-main-section-green-wrap-faq-box-content').slideToggle();
+    });
+
+    // ==============================
+    // 比較表 横スクロール → swipe ガイド非表示
+    // ==============================
+    var overlayDismissed = false;
+    $('.compare-grid-wrapper').on('scroll', function () {
+        $('.overlay-swipe').fadeOut();
+        overlayDismissed = true;
+    });
+
+script.
+    $(function () {
+
+        // ==============================
+        // 固定 CTA フェードイン / アウト
+        // ==============================
+        function toggleEnglpFixedCta() {
+            var $cta = $('.englp-fixed-cta-wrap');
+            if ($cta.length === 0) return;
+            if ($(window).scrollTop() > 600) {
+                $cta.stop(true).fadeIn(200);
+            } else {
+                $cta.stop(true).fadeOut(200);
+            }
+        }
+
+        $(window).on('scroll', toggleEnglpFixedCta);
+        toggleEnglpFixedCta();
+
+        // ==============================
+        // メニューモーダル
+        // ==============================
+        $('.humberger').on('click', function () {
+            $('.menu-modal, .bg-modal').fadeIn();
+        });
+
+        $('.menu-modal-navi a, .menu-modal-close, .bg-modal').on('click', function () {
+            $('.menu-modal, .bg-modal, .modal-video, .modal').fadeOut();
+            $('.modal-video-iframe').attr('src', '');
+        });
+
+        // ==============================
+        // 動画モーダル（講師紹介 etc.）
+        // ==============================
+        $('.modal-video-trigger').on('click', function () {
+            $('.modal-video-iframe').attr('src', $(this).attr('data-video'));
+            $('.bg-modal, .modal-video').fadeIn();
+        });
+
+        $('.modal-video-close').on('click', function () {
+            $('.bg-modal, .modal-video').fadeOut();
+            $('.modal-video-iframe').attr('src', '');
+        });
+
+        // ==============================
+        // LINE 申込導線（PC: QR モーダル / SP: 直遷移）
+        // ==============================
+        function modalPcLiffOpen() {
+            $('#modal-pc-liff, .bg-modal').show();
+        }
+
+        function updateButtonBehavior() {
+            var isWideScreen = $(window).width() >= 769;
+
+            $('.js-line-trigger')
+                .off('click.line')
+                .on('click.line', function (e) {
+                    e.preventDefault();
+                    if (isWideScreen) {
+                        modalPcLiffOpen();
+                    } else {
+                        window.open('#{UrlLine}', '_blank');
+                    }
+                });
+        }
+
+        $(window).on('load resize', updateButtonBehavior);
+
+        // LIFF QR コード生成（PC 用）
+        var el = document.getElementById('liffqr');
+        if (el) new QRCode(el, '#{UrlLine}');
+
+        // LINE QR モーダルを閉じる
+        $(document).on('click', '#modal-pc-liff .modal-close', function () {
+            $('#modal-pc-liff, .bg-modal').hide();
+        });
+
+        // ==============================
+        // カリキュラムタブ切り替え
+        // ==============================
+        $('.section-el-second-content-crclm-tab-item').on('click', function () {
+            $('.section-el-second-content-crclm-tab-item').removeClass('is-active');
+            $(this).addClass('is-active');
+            var idx = $('.section-el-second-content-crclm-tab-item').index($(this));
+            $('.section-el-second-content-crclm-tab-contents').hide().eq(idx).show();
+        });
+
+        // カリキュラム説明動画の再生開始を検知
+        var $vimeoIframe = $('.section-el-second-process-movie-head iframe')[0];
+        if ($vimeoIframe) {
+            var player = new Vimeo.Player($vimeoIframe);
+            player.on('play', function () {
+                $('.section-el-second-process-movie-head').addClass('is-loaded');
+            });
+        }
+
+        // ==============================
+        // 受講生の声「続きを読む」（SP のみ）
+        // ==============================
+        var voiceReadMoreBreakpoint = 768;
+
+        function initVoiceReadMore() {
+            $('.englp-section-voice-box-text').each(function () {
+                var $box = $(this);
+                var $p = $box.children('p').first();
+
+                if (window.innerWidth > voiceReadMoreBreakpoint) {
+                    $box.removeClass('is-no-more is-expanded');
+                    return;
+                }
+
+                if ($box.hasClass('is-expanded')) return;
+
+                $box.removeClass('is-no-more');
+
+                if (!$p.length) return;
+
+                if ($p[0].scrollHeight <= $p[0].clientHeight + 1) {
+                    $box.addClass('is-no-more');
+                }
+            });
+        }
+
+        initVoiceReadMore();
+        $(window).on('resize', initVoiceReadMore);
+
+        $('.englp-section-voice-box-text-button button').on('click', function () {
+            var $box = $(this).closest('.englp-section-voice-box-text');
+            $box.addClass('is-expanded');
+            $(this).attr('aria-expanded', 'true');
+        });
+
+        // ==============================
+        // カード高さ揃え
+        // ==============================
+        function equalizeHeight($elements) {
+            var maxHeight = 0;
+            $elements.css('height', 'auto');
+            $elements.each(function () {
+                var h = $(this).outerHeight();
+                if (h > maxHeight) maxHeight = h;
+            });
+            $elements.css('height', maxHeight + 'px');
+        }
+
+        function equalizeAll() {
+            var $cards  = $('.englp-section-movie-curriculum-scroll-block-content-card');
+            var $titles = $('.englp-section-movie-curriculum-scroll-block-content-card-maintitle');
+            equalizeHeight($titles);
+            equalizeHeight($cards);
+        }
+
+        $(window).on('load resize', equalizeAll);
+
+    });
+
+script.
+    $(function () {
+
+        // ==============================
+        // noindex アラート（ローカル開発用）
+        // ==============================
+        const isLocalhost =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
+
+        const hasNoindex =
+            $('meta[name="robots"]').attr('content')?.includes('noindex') ||
+            $('meta[name="googlebot"]').attr('content')?.includes('noindex');
+
+        if (isLocalhost && hasNoindex) {
+            $('body').append('<div id="noindex-alert" class="pcimage">noindex 有効中</div>');
+            $('#noindex-alert').css({
+                position:     'fixed',
+                bottom:       '20px',
+                left:         '20px',
+                zIndex:       '99999',
+                background:   '#fff',
+                color:        '#ccc',
+                padding:      '12px 16px',
+                borderRadius: '8px',
+                fontSize:     '14px',
+                fontWeight:   'bold',
+                boxShadow:    '0 4px 12px rgba(0,0,0,0.2)'
+            });
+        }
+
+    });

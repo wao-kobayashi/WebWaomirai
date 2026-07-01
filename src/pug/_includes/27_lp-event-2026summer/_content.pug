@@ -1,0 +1,265 @@
+//mixin
+include _mixin  
+//variable
+include _variables 
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined", rel="stylesheet")
+    - const cssBase = loycus ? '../../../css/' : '../../css/'
+    - const cssLocal = loycus ? '../' : ''
+
+    link(href=`${cssBase}27_lp-event-2026summer.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}27_lp-event-2026summer.css?v=${Date.now()}`, rel="stylesheet")
+
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  body
+    .pc-left.pcimage
+      //-  img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    .pc-right.pcimage
+    //-  .pc-right-content
+    //-     .pc-right-content-cta
+    //-       +btn-cta 
+    .main-content
+        header
+          img(src=ImgHeader)
+        .summer-event-wrapper
+          nav 
+              a.science(href="#science")|カラフルマジック 7/29(水)
+              a.economy(href="#economy")|たこ焼き屋台 7/30(木)
+          div 
+            img(src=ImgIntro)
+          .summer-event#science 
+              .summer-event-head 
+                img(src=ImgHeadSc)
+              .summer-event-info
+                .summer-event-info-time-top 
+                   .summer-event-info-time-top-date 
+                      |2026.07.29
+                   .summer-event-info-time-top-weekday  
+                      |水
+                .summer-event-info-grid
+                  .summer-event-info-grid-icon
+                    +micon('schedule')
+                  .summer-event-info-grid-text
+                    b 19:30-20:15
+                .summer-event-info-grid
+                  .summer-event-info-grid-icon
+                    +micon('account_circle')
+                  .summer-event-info-grid-text 小1~6年生(保護者様もぜひ！)
+                  .summer-event-info-grid-icon
+                    +micon('location_on')
+                  .summer-event-info-grid-text オンライン(zoom)
+                  .summer-event-info-grid-icon
+                    +micon('currency_yen')
+                  .summer-event-info-grid-text 無料
+              .summer-event-block-wrapper
+                .summer-event-block
+                  .summer-event-title    
+                    |授業内容
+                  .summer-event-text
+                    |科学の魔法使いになろう！
+                    br
+                    |目の前で水の色が次々と変わる！？
+                    br
+                    |不思議な実験室へようこそ！
+                    br
+                    |身の回りの「なぜ？」を解き明かす、ワクワクの授業。どんな色が飛び出すかは、当日のお楽しみ！
+                    br
+                    |おうちでもできる、カラフルで楽しい科学の世界へ飛び込もう！
+                    span|※授業終了後に保護者さま向けの説明会を開催いたします。
+                .summer-event-block
+                  .summer-event-title    
+                    |こんな子におすすめ
+                  ul.summer-event-lists   
+                    li|夏休みの自由研究のテーマがまだ決まっていない子
+                    li|科学や実験に興味がある子
+                    li|目の前で起こるふしぎや変化に、ワクワクする子
+                .summer-event-block
+                  .summer-event-title    
+                    |担当講師
+                  .summer-event-teacher 
+                      .summer-event-teacher-left 
+                          img(src=ImgScTeacher)
+                      .summer-event-teacher-right 
+                        .summer-event-teacher-right-name
+                          |犬飼 紀香
+                        .summer-event-teacher-right-text
+                          |身の回りのふしぎから最新の科学まで、さまざまな疑問を解き明かしていきましょう。  
+   
+              +btn-cta  
+          .summer-event#economy 
+              .summer-event-head 
+                img(src=ImgHeadEc)
+              .summer-event-info
+                .summer-event-info-time-top 
+                   .summer-event-info-time-top-date 
+                      |2026.07.30
+                   .summer-event-info-time-top-weekday  
+                      |木
+                .summer-event-info-grid
+                  .summer-event-info-grid-icon
+                    +micon('schedule')
+                  .summer-event-info-grid-text
+                    b 19:30-20:15
+                .summer-event-info-grid
+                  .summer-event-info-grid-icon
+                    +micon('account_circle')
+                  .summer-event-info-grid-text 小1~6年生(保護者様もぜひ！)
+                  .summer-event-info-grid-icon
+                    +micon('location_on')
+                  .summer-event-info-grid-text オンライン(zoom)
+                  .summer-event-info-grid-icon
+                    +micon('currency_yen')
+                  .summer-event-info-grid-text 無料
+              .summer-event-block-wrapper
+                .summer-event-block
+                  .summer-event-title
+                    |授業内容
+                  .summer-event-text
+                    |キミだけのたこ焼き屋台を作ってみよう！
+                    br
+                    |どんな名前にする？材料はどうする？どこで屋台を出して、いくらで売る？
+                    br
+                    |「あ、となりにライバルのたこ焼き屋台ができちゃった...」たこ焼きの売り方を考えながら、アイデアを実現することや、工夫することの楽しさ、値段の仕組みを学びましょう！
+                    span|※授業終了後に保護者さま向けの説明会を開催いたします。
+                .summer-event-block
+                  .summer-event-title
+                    |こんな子におすすめ
+                  ul.summer-event-lists
+                    li|夏休みの自由研究のテーマがまだ決まっていない子
+                    li|お店づくりやお金に興味がある子
+                    li|自分のアイデアを形にするのが好きな子
+                .summer-event-block
+                  .summer-event-title
+                    |担当講師
+                  .summer-event-teacher
+                      .summer-event-teacher-left
+                          img(src=ImgEcTeacher)
+                      .summer-event-teacher-right
+                        .summer-event-teacher-right-name
+                          |河原 大和
+                        .summer-event-teacher-right-text
+                          |「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！
+
+              +btn-cta
+        //かんたん5STEP
+        section.join-5steps 
+            .join-5steps-title 
+              |かんたん5STEPで
+              br
+              |参加可能
+            //step1
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|1
+                  .join-5steps-box-head-img
+                      img(src=ImgIcnStep01)
+                .join-5steps-box-title 
+                      |LINEで公式アカウントを
+                      br
+                      |友だち追加
+                .join-5steps-box-text 
+                      span.spimage|まず公式アカウントを友だちに追加してください。
+                      span.pcimage|まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。
+                      //- |・LINEが利用できない場合はこちらから
+                      |・友だち追加は
+                      +conditionalLink
+                        |こちら
+                      |から
+
+            //step2
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|2
+                  .join-5steps-box-head-img
+                       img(src=ImgIcnStep02)
+                .join-5steps-box-title 
+                      |友だち登録後、LINEのトーク
+                      br
+                      |画面に送られる申し込み
+                      br
+                      |フォームをタップ！
+            
+            //step3
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|3
+                  .join-5steps-box-head-img
+                       img(src=ImgIcnStep03)
+                .join-5steps-box-title 
+                  |Zoomをインストール
+                .join-5steps-box-text 
+                  |お手持ちの端末にzoomのインストールをお願いします。パソコンまたはタブレットが推奨です
+            //step4
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|4
+                  .join-5steps-box-head-img.step4
+                     img(src=ImgIcnStep04)
+                .join-5steps-box-title 
+                      |イベント前日に
+                      br
+                      |LINEメッセージで
+                      br
+                      |イベントURLをお送りします
+            //step5
+            .join-5steps-box
+                .join-5steps-box-head 
+                  .join-5steps-box-head-step
+                      |STEP 
+                      span|5
+                  .join-5steps-box-head-img
+                     img(src=ImgIcnStep05)
+                .join-5steps-box-title 
+                      |開催時間になったら
+                      br
+                      |届いたイベントURLから
+                      br
+                      |参加しましょう！
+
+        //footer
+        footer 
+          ul 
+            li 
+              a(href="https://www.wao-corp.com/", target='_blank')
+                |会社概要
+            li 
+              a(href="https://www.wao-corp.com/kojin/", target='_blank')
+                |プライバシーポリシー
+            li
+              a(href="https://waomirai.com/commerce_law/", target='_blank')
+                |特定商取引に基づく表記
+          .footer-logo 
+            img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+          .footer-copyright
+            |© ワオ・コーポレーション All rights reserved.
+
+  
+//js
+include _js
++modal
++fixed-btn
