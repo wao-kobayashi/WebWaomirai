@@ -208,6 +208,120 @@ header img{
   }
 }
 
+// 講師・対象・会場・参加費
+.p-guide{
+  background: $cl-main;
+  padding-bottom: 50px;
+}
+.p-guide__wrapper{
+  width: $wrapper-sp;
+  margin: 0 auto;
+}
+.p-guide__border{
+  text-align: center;
+  font-size: var(--fs-2l);
+  text-align: center;
+  color: $cl-white;
+  padding-top: 35px;
+}
+.p-guide__border-pc{
+  color: $cl-white;
+}
+.p-guide__left,
+.p-guide__right{
+  margin-top: 20px;
+}
+.p-guide__list-item{
+  display: flex;
+  align-items: center;
+}
+.p-guide__list-item:nth-child(n+2){
+  margin-top: 15px;
+}
+.p-guide__list-item--place{
+  align-items: flex-start;
+  margin-bottom: -7px;
+}
+.p-guide__list-title{
+  width: 87px;
+  height: 29px;
+  background: $cl-white;
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+  padding-top: 4px;
+  text-align: center;
+  border-radius: 15px;
+  color: $cl-main;
+  flex-shrink: 0;
+}
+.p-guide__list-text{
+  font-size: var(--fs-2l);
+  line-height: var(--lh-s);
+  margin-left: 15px;
+  color: $cl-white;
+}
+.p-guide__list-kana{
+  font-size: var(--fs-s);
+  color: $cl-white;
+  padding-top: 2px;
+}
+.p-guide__teacher{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 20px 0 0;
+}
+.p-guide__teacher-wrapper{
+  flex-shrink: 0;
+}
+.p-guide__teacher-title{
+  font-size: var(--fs-s);
+  color: $cl-white;
+}
+.p-guide__teacher-text{
+  font-size: var(--fs-m);
+  color: $cl-white;
+  margin-top: 16px;
+  font-weight: bold;
+}
+.p-guide__teacher-image{
+  width: 40.534vw;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-guide{
+    width: $widewidth;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+  .p-guide__wrapper{
+    width: 824px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .p-guide__left{
+    width: 437px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .p-guide__right{
+    width: 340px;
+  }
+  .p-guide__teacher{
+    padding-right: 0;
+  }
+  .p-guide__teacher-wrapper{
+    padding-right: 20px;
+  }
+  .p-guide__teacher-image{
+    width: 152px;
+  }
+  .p-guide__teacher-text{
+    margin-top: 12px;
+  }
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
   font-size: var(--fs-4l);
