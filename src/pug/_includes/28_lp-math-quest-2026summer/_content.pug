@@ -146,6 +146,46 @@ html
               | 丸暗記する
               br.u-br-sp
               | 講座ではありません。
+          // 探究3ステップ
+          section.p-step 
+            .p-step__background
+              picture
+                source(media='(min-width: 768px)', srcset=ImgBgStepPc)
+                img(src=ImgBgStep, alt='')
+            p.p-step_balloon
+              picture
+                source(media='(min-width: 768px)', srcset=ImgBalloonStepPc)
+                img(src=ImgBalloonStep, alt='ワオ未来塾はちょっと違う！')
+            h2.p-step__title 
+              | 数にふれるのが
+              br.u-br-sp
+              | 楽しくなる！
+              br
+              | 探究3ステップ
+            p.p-step__text01
+              picture
+                source(media='(min-width: 768px)', srcset=ImgTextStepPc)
+                img(src=ImgTextStep, alt='【STEP1】身のまわりのことから考える・【STEP2】負（マイナス）の数の正体を突き止める・【STEP3】全国の仲間といっしょに計算ルールの謎に挑む')
+            .p-step__wrapper
+              .p-step__decoration 
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgDecorationStepPc)
+                  img(src=ImgDecorationStep, alt='')
+              p.p-step__text02
+                  img(src=ImgBgStepText, alt='')
+                  | 数学のマイナスイメージを
+                  br
+                  | プラスに転換！
+            p.p-step__text03 
+              | 参加したあとは
+              br.u-br-sp
+              | きっと、もっと、
+              br
+              | 数学が好きになる！
+          // 今すぐ申し込む
+          .p-cta
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
           // かんたん5STEP
           section.join-5steps
               .join-5steps-title 

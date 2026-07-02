@@ -396,6 +396,106 @@ header img{
   }
 }
 
+.p-step{
+  margin-top: 100px;
+  position: relative;
+}
+.p-step__background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.p-step_balloon{
+  width: 135px;
+  position: absolute;
+  top: -43px;
+  left: calc(50% - 67.5px);
+}
+.p-step__title,
+.p-step__text03{
+  text-align: center;
+  font-weight: normal;
+  color: $cl-main;
+  font-size: var(--fs-4l);
+  line-height: var(--lh-s);
+}
+.p-step__title{
+  padding-top: 125px;
+}
+.p-step__text01{
+  width: 100.534vw;
+  position: relative;
+  left: -2vw;
+  margin-top: 5px;
+}
+.p-step__text02{
+  width: 86.934vw;
+  height: 36.8vw;
+  margin: 20px auto 0;
+  position: relative;
+  color: $cl-white;
+  font-size: var(--fs-3l);
+  line-height: var(--lh-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.p-step__text02 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.p-step__text03{
+  padding-top: 27px;
+}
+.p-step__wrapper{
+  position: relative;
+}
+.p-step__decoration{
+  width: 40.534vw;
+  position: absolute;
+  bottom: 100%;
+  left: 9vw;
+  pointer-events: none;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-step{
+    width: 911px;
+    margin: 105px auto 0;
+    padding-bottom: 17px;
+  }
+  .p-step_balloon{
+    left: calc(50% - 370px);
+    top: -30px;
+  }
+  .p-step__title{
+    padding-top: 0;
+  }
+  .p-step__text01{
+    width: 742px;
+    position: static;
+    margin: 41px auto 0;
+  }
+  .p-step__text02{
+    width: 326px;
+    height: 138px;
+  }
+  .p-step__text03{
+    padding-top: 23px;
+    position: relative;
+    z-index: 1;
+  }
+  .p-step__decoration{
+    width: 146px;
+    left: calc(50% - 350px);
+    bottom: auto;
+    top: -95px;
+  }
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
   font-size: var(--fs-4l);
