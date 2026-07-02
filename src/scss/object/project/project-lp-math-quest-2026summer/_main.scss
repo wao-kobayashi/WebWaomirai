@@ -322,6 +322,22 @@ header img{
   }
 }
 
+// 今すぐ申し込む
+.p-cta__button{
+  width: 314px;
+  height: 60px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $cl-btn-cta;
+  color: $cl-white;
+  font-size: var(--fs-4l);
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 60px;
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
   font-size: var(--fs-4l);

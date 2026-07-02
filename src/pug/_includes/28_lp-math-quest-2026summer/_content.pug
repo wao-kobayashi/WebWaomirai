@@ -111,6 +111,10 @@ html
                   li.p-guide__list-item
                     p.p-guide__list-title 参加費
                     p.p-guide__list-text 無料（先着300名）
+          // 今すぐ申し込む
+          .p-cta
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
           // かんたん5STEP
           section.join-5steps
               .join-5steps-title 
