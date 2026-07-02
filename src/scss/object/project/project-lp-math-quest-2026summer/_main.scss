@@ -338,6 +338,64 @@ header img{
   margin-top: 60px;
 }
 
+// こんなお子さんにオススメ
+.p-recommend__title{
+  color: $cl-main;
+  font-size: var(--fs-4l);
+  line-height: var(--lh-s);
+  text-align: center;
+  margin-top: 65px;
+}
+.p-recommend__wrapper{
+  width: $wrapper-sp;
+  margin: 27px auto 0;
+}
+.p-recommend__item{
+  display: flex;
+  align-items: flex-start;
+  font-size: var(--fs-2l);
+  line-height: var(--lh-s);
+}
+.p-recommend__item:nth-child(n+2){
+  margin-top: 24px;
+}
+.p-recommend__item img{
+  margin-right: 10px;
+}
+.p-recommend__image{
+  width: 93.732%;
+  margin: 35px auto 0;
+}
+.p-recommend__decoration{
+  width: 62px;
+  margin: 38px auto 0;
+}
+.p-recommend__decoration + .p-recommend__title{
+  margin-top: 15px;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-recommend__title{
+    margin-top: 100px;
+  }
+  .p-recommend__wrapper{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .p-recommend__list{
+    width: 335px;
+  }
+  .p-recommend__image{
+    width: 314px;
+    margin: 0;
+  }
+  .p-recommend__decoration + .p-recommend__title{
+    margin-top: 5px;
+  }
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
   font-size: var(--fs-4l);

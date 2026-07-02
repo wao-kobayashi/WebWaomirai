@@ -115,6 +115,37 @@ html
           .p-cta
             +conditionalLink('p-cta__button')
               | 今すぐ申し込む
+          // こんなお子さんにオススメ
+          .p-recommend
+            .p-recommend__title
+              | こんなお子さんに
+              br.u-br-sp
+              | オススメ
+            .p-recommend__wrapper
+              ul.p-recommend__list 
+                li.p-recommend__item
+                  img(src=ImgRecommendItem, alt='')
+                  | 夏休みのあいだに、ふだん触れられない学びを深めたい
+                li.p-recommend__item
+                  img(src=ImgRecommendItem, alt='')
+                  | 数学（算数）が苦手だけど、
+                  br.u-br-sp
+                  | なんとか克服してほしい
+                li.p-recommend__item
+                  img(src=ImgRecommendItem, alt='')
+                  | 学校の勉強（計算の暗記）だけでは物足りなさを感じている
+              .p-recommend__image
+                img(src=ImgRecommend, alt='')
+            .p-recommend__decoration
+                img(src=ImgDecorationRecommend, alt='')
+            .p-recommend__title
+              | 計算のやり方（公式）
+              br.u-br-sp
+              | だけを
+              br.u-br-pc
+              | 丸暗記する
+              br.u-br-sp
+              | 講座ではありません。
           // かんたん5STEP
           section.join-5steps
               .join-5steps-title 
