@@ -44,17 +44,22 @@ body {
   }
 }
 
-// 改行
+// PC・SPの表示切り替え
 .u-br-pc,
-.u-text-pc{
-    display: none;
+.u-text-pc,
+.u-pc-block{
+  display: none;
 }
 @include min-responsive-style($breakpoint-sp) {
     .u-br-pc,
     .u-text-pc{
         display: inline;
     }
-    .u-br-sp{
-        display: none;
+    .u-br-sp,
+    .u-sp-block{
+      display: none;
+    }
+    .u-pc-block{
+      display: block;
     }
 }

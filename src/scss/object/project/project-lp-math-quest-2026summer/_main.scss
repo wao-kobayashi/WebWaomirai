@@ -520,6 +520,10 @@ header img{
 .p-reason__a img{
   margin-right: 15px;
 }
+.p-reason__text{
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+}
 .p-reason__wrapper{
   margin-top: 23px;
 }
@@ -563,6 +567,76 @@ header img{
     width: 141px;
     right: calc(50% - 370px);
     top: 67px;
+  }
+}
+
+ // これからの社会を生き抜く力
+.p-power{
+  width: $wrapper-sp;
+  margin: 45px auto 0;
+}
+.p-power__title{
+  font-weight: normal;
+  text-align: center;
+  font-size: var(--fs-3l);
+  line-height: var(--lh-s);
+}
+.p-power__text{
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+  margin-top: 27px;
+}
+.p-power__point{
+  width: 85%;
+  background: $cl-main-light;
+  margin: 30px auto 0 3%;
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+}
+.p-power__point-item{
+  font-size: var(--fs-l);
+  line-height: var(--lh-m);
+}
+.p-power__point-item + .p-power__point-item{
+  margin-top: 8px;
+}
+.p-power__point-image{
+  width: 112px;
+  position: absolute;
+  right: -8vw;
+  bottom: 0;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-power{
+    margin-top: 90px;
+  }
+  .p-power__wrapper{
+    width: $middlewidth;
+    margin: 57px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    padding-right: 25px;
+  }
+  .p-power__details{
+    width: 403px;
+  }
+  .p-power__details .p-power__text:nth-child(1),
+  .p-power__details .p-power__text:nth-child(3){
+    margin-top: 0;
+  }
+  .p-power__details .p-power__text:nth-child(2){
+    margin-top: 47px;
+  }
+  .p-power__point{
+    width: 314px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .p-power__point-image{
+    right: -25px;
   }
 }
 
