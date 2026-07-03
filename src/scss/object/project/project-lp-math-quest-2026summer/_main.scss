@@ -102,6 +102,7 @@ header img{
   color: $cl-white;
   font-size: var(--fs-m);
   text-align: center;
+  font-weight: normal;
 }
 .p-theme__main-decoration{
   width: 56px;
@@ -140,6 +141,7 @@ header img{
   text-align: center;
   margin-top: 20px;
   line-height: var(--lh-m);
+  font-weight: normal;
 }
 .p-theme__details-title-point{
   color: $cl-white;
@@ -345,6 +347,7 @@ header img{
   line-height: var(--lh-s);
   text-align: center;
   margin-top: 65px;
+  font-weight: normal;
 }
 .p-recommend__wrapper{
   width: $wrapper-sp;
