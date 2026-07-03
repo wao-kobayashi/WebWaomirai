@@ -23,6 +23,7 @@
   --lh-m: 1.5;
   --lh-l: 1.75;
   --lh-2l: 2;
+  --lh-3l: 2.5;
 }
 @include min-responsive-style($breakpoint-sp) {
   :root {

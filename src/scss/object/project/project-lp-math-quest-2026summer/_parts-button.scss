@@ -92,7 +92,7 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    @include gradient-waoorange;
+    background: $cl-btn-cta;
     transition: 0.2s ease-in-out;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }

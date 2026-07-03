@@ -761,6 +761,46 @@ header img{
   }
 }
 
+// イベント開催概要
+.p-event{
+  background: $cl-main;
+  padding: 23px 0 26px;
+}
+.p-event__title{
+  text-align: center;
+  font-size: var(--fs-4l);
+  color: $cl-white;
+  line-height: var(--lh-s);
+  font-weight: normal;
+}
+.p-event__text{
+  width: 73%;
+  min-width: 245px;
+  margin: 10px auto 0;
+  font-size: var(--fs-m);
+  line-height: var(--lh-3l);
+  color: $cl-white;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-event{
+    width: $middlewidth;
+    margin: 48px auto 0;
+    padding: 67px 40px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .p-event__title{
+    width: 375px;
+    flex-shrink: 0;
+  }
+  .p-event__text{
+    border-left: 1px solid $cl-white;
+    padding-left: 45px;
+    margin-top: 0;
+  }
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
   font-size: var(--fs-4l);
@@ -782,6 +822,7 @@ header img{
 .join-5steps {
   background: $cl-graylightest;
   padding: var(--m-section) 0;
+  margin-top: var(--m-section);
   .join-5steps-title {
     @extend %underbar-title;
   }

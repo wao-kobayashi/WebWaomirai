@@ -267,6 +267,28 @@ html
                 | このイベントでは、暗記や計算よりも『なぜそうなるの？』という原理をワクワクしながら紐解くことを大事にしています。数学が得意な子はもちろん、テキストを開くのもイヤな苦手な子も大歓迎！ ぜひ親子で、公式の裏にあるおもしろい世界をのぞきにきてください！
             .p-teacher__decoration
               img.p-teacher__decoration(src=ImgDecorationTeacher02, alt='')
+          // イベント開催概要
+          .p-event
+            h2.p-event__title 
+              | 「夏の数学探究」
+              br
+              | イベント開催概要
+            .p-event__text
+              | 日時｜2026年8月5日（水）
+              br
+              | 対象｜小学6年〜中学生
+              br
+              | 形式｜オンライン
+              br
+              | 参加費｜無料
+              br
+              | 定員｜先着300名
+              br
+              | 締切｜2026年8月4日（火） 17:45
+          // 今すぐ申し込む
+          .p-cta
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
           // かんたん5STEP
           .join-5steps
               .join-5steps-title 
