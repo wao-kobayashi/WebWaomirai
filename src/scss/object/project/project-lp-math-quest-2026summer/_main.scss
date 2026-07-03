@@ -496,6 +496,76 @@ header img{
   }
 }
 
+// なぜいま、数学探究なの？
+.p-reason{
+  width: $wrapper-sp;
+  margin: 70px auto 0;
+  position: relative;
+}
+.p-reason__q{
+  font-size: var(--fs-4l);
+  font-weight: normal;
+}
+.p-reason__a{
+  margin-top: 20px;
+  font-size: var(--fs-3l);
+}
+.p-reason__q,
+.p-reason__a{
+  display: flex;
+  align-items: flex-start;
+  line-height: var(--lh-s);
+}
+.p-reason__q img,
+.p-reason__a img{
+  margin-right: 15px;
+}
+.p-reason__wrapper{
+  margin-top: 23px;
+}
+.p-reason__image{
+  width: 78.667vw;
+  margin: 38px auto 0;
+}
+.p-reason__decoration{
+  width: 135px;
+  position: absolute;
+  right: 0;
+  top: -12px;
+}
+@include min-responsive-style($breakpoint-sp) {
+  .p-reason{
+    margin-top: 83px;
+  }
+  .p-reason__q,
+  .p-reason__a{
+    align-items: center;
+    justify-content: center;
+  }
+  .p-reason__a{
+    margin-top: 45px;
+  }
+  .p-reason__wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: $maincontentWidth;
+    margin: 66px auto 0;
+  }
+  .p-reason__text{
+    width: 388px;
+  }
+  .p-reason__image{
+    width: 363px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .p-reason__decoration{
+    width: 141px;
+    right: calc(50% - 370px);
+    top: 67px;
+  }
+}
+
 // 5step〜よくある質問のタイトル
 %underbar-title {
   font-size: var(--fs-4l);

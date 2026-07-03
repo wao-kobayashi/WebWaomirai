@@ -36,7 +36,7 @@ html
           header
             img(src='https://waomirai.com/lp/assets/commonimages/logo.svg', width='180', height='20', alt='ワオ未来塾')
           // FV
-          section.p-fv
+          .p-fv
             .p-fv__bg
               picture
                 source(media='(min-width: 768px)', srcset=ImgBgFvPc)
@@ -54,7 +54,7 @@ html
             .p-fv__decoration
                 img(src=ImgDecorationFv, alt='')
           // 今回のテーマ
-          section.p-theme
+          .p-theme
             .p-theme__wrapper 
               .p-theme__main
                 p.p-theme__main-head 〈今回のテーマ〉
@@ -78,7 +78,7 @@ html
                 p.p-theme__details-text03
                   | 全国の仲間と一緒に頭をひねって、試行錯誤するワクワクの時間を楽しもう！
           // 講師・対象・会場・参加費
-          section.p-guide 
+          .p-guide 
             .p-guide__wrapper
               .p-guide__border ＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー
                 span.p-guide__border-pc.u-text-pc ＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋
@@ -147,7 +147,7 @@ html
               br.u-br-sp
               | 講座ではありません。
           // 探究3ステップ
-          section.p-step 
+          .p-step 
             .p-step__background
               picture
                 source(media='(min-width: 768px)', srcset=ImgBgStepPc)
@@ -172,10 +172,10 @@ html
                   source(media='(min-width: 768px)', srcset=ImgDecorationStepPc)
                   img(src=ImgDecorationStep, alt='')
               p.p-step__text02
-                  img(src=ImgBgStepText, alt='')
-                  | 数学のマイナスイメージを
-                  br
-                  | プラスに転換！
+                img(src=ImgBgStepText, alt='')
+                | 数学のマイナスイメージを
+                br
+                | プラスに転換！
             p.p-step__text03 
               | 参加したあとは
               br.u-br-sp
@@ -186,8 +186,31 @@ html
           .p-cta
             +conditionalLink('p-cta__button')
               | 今すぐ申し込む
+          // なぜいま、数学探究なの？
+          .p-reason
+            h2.p-reason__q
+              img(src=ImgTextReasonQ, alt='Q')
+              | なぜいま、
+              br.u-br-sp
+              | 数学探究なの？
+            p.p-reason__a
+              img(src=ImgTextReasonA, alt='A')
+              | 理系人材が不足する
+              br.u-br-sp
+              | と予測されているから！
+            .p-reason__wrapper 
+              p.p-reason__text 
+                | 文部科学省の調査によると、いまの小中学生が社会に出る2040年には、なんと約100万人もの理系人材が不足すると予測されています。
+                br
+                | しかしその一方で、多くの学校教育現場では、分数や割合といった「数の基本ルール」でつまずいてしまい、自分の頭で論理的に説明することが苦手な子どもたちが増えているのが現状です。
+              .p-reason__image 
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgReasonPc)
+                  img(src=ImgReason, alt='理系人材の不足数')
+            .p-reason__decoration
+                img(src=ImgDecorationReason, alt='')
           // かんたん5STEP
-          section.join-5steps
+          .join-5steps
               .join-5steps-title 
                 |かんたん5STEPで
                 br.u-br-sp
@@ -274,7 +297,7 @@ html
                         br
                         |参加しましょう！
           // よくある質問
-          section.faq 
+          .faq 
             .faq-title 
               |よくある質問
             //-  .faq-content 
@@ -308,7 +331,7 @@ html
                     |ご都合のつく日時の回にてお申込みください。
 
           // ワオ未来塾って？
-          section.about-wao
+          .about-wao
             .about-wao-title
               |ワオ未来塾って？
             .about-wao-img
@@ -322,7 +345,7 @@ html
                 br
                 |半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
           // 授業の特長
-          section.about-feature
+          .about-feature
             .about-feature-title
               |授業の特長
             .about-feature-point
@@ -344,7 +367,7 @@ html
                   br.u-br-sp
                   |PCかタブレットだけ！                 
           // ワオ未来塾
-          section.about-school
+          .about-school
             .about-school-catch 
                 |社会で役立つ学びを、オンラインで今始めよう
             .about-school-logo 
@@ -385,7 +408,7 @@ html
                   .about-school-btn-icn 
                     img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
           // ワオ未来塾って？
-          section.about-wao
+          .about-wao
             .about-wao-title
               |LINEの
               br.u-br-sp
