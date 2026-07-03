@@ -244,6 +244,29 @@ html
           .p-cta
             +conditionalLink('p-cta__button')
               | 今すぐ申し込む
+          // 講師紹介
+          .p-teacher
+            .p-teacher__summary
+              h2.p-teacher__title 〈講師紹介〉
+              p.p-teacher__name-kanji 東田 大志
+              p.p-teacher__name-kana （ひがしだ ひろし）
+              p.p-teacher__profile 京都大学総合人間学部卒業、同大学院人間・環境学研究科博士後期課程修了。日本で唯一の「パズル学博士号」を取得。
+              p.p-teacher__text01.u-sp-block 
+                | 高校3年の夏から本格的な受験勉強を始め、パズルで培った論理力を活かしてわずか1か月で数学の偏差値を劇的にアップさせ京都大学へ現役合格。フジテレビ系『今夜はナゾトレ』などメディア出演や著書多数、子どもたちに大人気の先生です。
+              .p-teacher__image
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgDecorationTeacher01Pc)
+                  img.p-teacher__image-decoration(src=ImgDecorationTeacher01, alt='')
+                img.p-teacher__image-photo(src=ImgTeacher, alt='')
+            .p-teacher__details
+              p.p-teacher__text01.u-pc-block 
+                | 高校3年の夏から本格的な受験勉強を始め、パズルで培った論理力を活かしてわずか1か月で数学の偏差値を劇的にアップさせ京都大学へ現役合格。フジテレビ系『今夜はナゾトレ』などメディア出演や著書多数、子どもたちに大人気の先生です。
+              p.p-teacher__text02
+                | 私自身、子どもの頃はパズルばかりしていましたが、そのおかげで数学をパズルのように楽しむ『自分で考える力』が身につきました。
+                br
+                | このイベントでは、暗記や計算よりも『なぜそうなるの？』という原理をワクワクしながら紐解くことを大事にしています。数学が得意な子はもちろん、テキストを開くのもイヤな苦手な子も大歓迎！ ぜひ親子で、公式の裏にあるおもしろい世界をのぞきにきてください！
+            .p-teacher__decoration
+              img.p-teacher__decoration(src=ImgDecorationTeacher02, alt='')
           // かんたん5STEP
           .join-5steps
               .join-5steps-title 
