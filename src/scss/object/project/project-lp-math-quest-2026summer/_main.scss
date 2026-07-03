@@ -574,12 +574,18 @@ header img{
 .p-power{
   width: $wrapper-sp;
   margin: 45px auto 0;
+  position: relative;
 }
 .p-power__title{
   font-weight: normal;
   text-align: center;
   font-size: var(--fs-3l);
   line-height: var(--lh-s);
+}
+.p-power_decoration{
+  position: absolute;
+  top: -25px;
+  left: 14px;
 }
 .p-power__text{
   font-size: var(--fs-m);
@@ -610,6 +616,10 @@ header img{
 @include min-responsive-style($breakpoint-sp) {
   .p-power{
     margin-top: 90px;
+  }
+  .p-power_decoration{
+    top: 30px;
+    left: calc(50% - 400px);
   }
   .p-power__wrapper{
     width: $middlewidth;
