@@ -28,7 +28,7 @@ body {
   }
 }
 @mixin content-width {
-  width: calc(100% - 50px);
+  width: $wrapper-sp;
 }
 
 // 余白
