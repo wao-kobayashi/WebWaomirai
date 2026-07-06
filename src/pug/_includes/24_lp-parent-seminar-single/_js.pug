@@ -141,3 +141,19 @@ script.
       
 
     });
+    $(function() {
+
+      // 最初のスライドにズーム開始
+      $('#slide-1 img').addClass('scale');
+
+      // スライド切り替え前：次のスライドにズーム付与
+      $('.cycle-slideshow').on('cycle-before', function(event, optionHash, outgoingSlideEl, incomingSlideEl) {
+        $(incomingSlideEl).find('img').addClass('scale');
+      });
+
+      // スライド切り替え後：前のスライドのズームをリセット
+      $('.cycle-slideshow').on('cycle-after', function(event, optionHash, outgoingSlideEl, incomingSlideEl) {
+        $(outgoingSlideEl).find('img').removeClass('scale');
+      });
+
+    });

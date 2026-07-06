@@ -1,0 +1,238 @@
+/* ─── セクション自体で横スクロール ─── */
+.section-comparison {
+  padding: 60px 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section-comparison::-webkit-scrollbar {
+  height: 6px;
+}
+
+.section-comparison::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.section-comparison::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* ─── Grid本体 ─── */
+.compare-grid-wrapper {
+  position: relative;
+  // Chrome, Safari, Edge (Blink/WebKit系)
+  @include responsive-style($breakpoint-sp) {
+    overflow-x: scroll;
+  }
+}
+.compare-grid {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr 1fr;
+  max-width: $widewidth;
+  min-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  // overflow: hidden;
+  @include responsive-style($breakpoint-sp) {
+    grid-template-columns: 80px 1fr 1fr 1fr;
+    margin: 0 120px 0 15px;
+  }
+}
+
+/* ─── ヘッダー行 ─── */
+.grid-head {
+  display: contents;
+}
+
+.grid-head-corner {
+  /* 空セル */
+}
+
+.grid-head-cell {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-align: center;
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1列目ヘッダー（推し） */
+.grid-head-cell--primary {
+  background: $cl-english;
+  flex-direction: column;
+  border-radius: 12px 12px 0 0;
+  display: inline-flex;
+  flex-direction: column;
+  height: 80px;
+}
+
+.grid-head-cell--primary .sub-label {
+  // background: $cl-gray;
+  display: inline-block;
+  color: $cl-white;
+  @include font-size-ss;
+  font-weight: 700;
+}
+
+.grid-head-cell--primary .main-label {
+  color: $cl-white;
+  margin: 4px 0 0;
+  font-size: 18px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 16px;
+  }
+}
+
+/* 2・3列目ヘッダー */
+.grid-head-cell--sub {
+  align-self: end;
+  background: $cl-gray;
+}
+
+/* ─── ボディ行 ─── */
+.grid-row {
+  display: contents;
+}
+
+/* 全セル共通 */
+.grid-cell {
+  padding: 28px 20px;
+  text-align: center;
+  @include font-size-s;
+  line-height: 1.8;
+  border-bottom: 1px solid #ebebeb;
+  @include responsive-style($breakpoint-sp) {
+    padding: 12px 12px;
+  }
+}
+.grid-cell-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 最終行はボーダーなし */
+.grid-row:last-child .grid-cell {
+  border-bottom: none;
+}
+
+/* 行見出し */
+.grid-cell--label {
+  background: #fafafa;
+  text-align: left;
+  line-height: $lineheight-normal;
+  @include font-size-s;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 11.5px !important;
+  }
+}
+
+/* 推しカラム強調枠 */
+.grid-cell--primary {
+  background: #fdfaff;
+  border-left: 3px solid $cl-english;
+  border-right: 3px solid $cl-english;
+}
+
+.grid-row:last-child .grid-cell--primary {
+  border-bottom: 3px solid $cl-english;
+}
+
+/* ─── セル内パーツ ─── */
+.cell-title {
+  @include font-size-s;
+  text-align: left;
+}
+
+.cell-title--primary {
+  color: $cl-english;
+}
+
+/* ダミーイラスト */
+.illust {
+  width: 70%;
+}
+
+/* チェックリスト */
+.check-list {
+  list-style: none;
+  text-align: left;
+  max-width: 280px;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  @include font-size-s;
+  line-height: 1.7;
+}
+
+.check-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* チェックアイコン（img差し替え用） */
+.check-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.underline-text {
+  text-decoration: underline;
+  text-decoration-color: #d4a8e0;
+  text-underline-offset: 3px;
+}
+
+/* 講師セル */
+.instructor-main {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 14px;
+  }
+}
+
+.instructor-main--primary {
+  color: $cl-english;
+}
+
+.instructor-note {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* おすすめセル */
+.recommend-text {
+  font-weight: 700;
+  line-height: 1.75;
+  font-size: 15px;
+  @include responsive-style($breakpoint-sp) {
+    font-size: 14px;
+    line-height: $lineheight-normal;
+  }
+}
+
+.recommend-text--primary {
+  color: $cl-english;
+}

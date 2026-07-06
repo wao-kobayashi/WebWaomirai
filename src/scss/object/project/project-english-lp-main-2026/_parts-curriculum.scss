@@ -1,0 +1,404 @@
+/* カリキュラム説明動画 */
+.englp-section-movie-curriculum-main {
+  width: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    $cl-white 50%,
+    $lp-eng-purple-pale 50%
+  );
+
+  .englp-section-movie-curriculum-main-video {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    .playbutton {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      z-index: 10;
+      svg {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        @include responsive-style($breakpoint-sp) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      //   &::before,
+      //   ::after {
+      //     content: "";
+      //     position: absolute;
+      //     width: 100px;
+      //     height: 100px;
+      //     border-radius: 50%;
+      //     cursor: pointer;
+      //     background: $cl-english;
+      //     animation: ripple-animation 2.3s infinite;
+      //     z-index: 1;
+      //     top: 0;
+      //     bottom: 0;
+      //     left: 0;
+      //     right: 0;
+      //     margin: auto;
+      //   }
+
+      //   &::after {
+      //     animation-delay: 1s;
+      //   }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    position: relative;
+    margin: 0 auto;
+    max-width: $widewidth;
+    width: 100%;
+    padding: 0px 60px 60px;
+    border-radius: $border-radius-extrabig;
+    overflow: hidden;
+    @include responsive-style($breakpoint-sp) {
+      border-radius: $border-radius-bigplus;
+      padding: 0px 15px 0px;
+    }
+    img {
+      border-radius: $border-radius-bigplus;
+    }
+    iframe {
+      @include responsive-style($breakpoint-sp) {
+        border-radius: $border-radius-big;
+      }
+      border-radius: $border-radius-extrabig;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+.englp-section-movie-curriculum-scroll {
+  background: $lp-eng-purple-pale;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px 25px 70px;
+  margin: 0 auto;
+  max-width: 100%;
+  @include responsive-style($breakpoint-sp) {
+    padding: 60px 0px 30px !important;
+  }
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $cl-graylight;
+    border-radius: $border-radius-small;
+  }
+}
+
+.englp-section-movie-curriculum-scroll-block {
+  position: relative;
+  flex: 0 0 auto;
+  width: 630px;
+  &.main {
+    margin: 0 40px 0 0;
+  }
+  // min-width: 520px;
+
+  // &.first {
+  //   margin-left: calc((100% - $widewidth) / 2);
+  // }
+
+  .englp-section-movie-curriculum-scroll-block-title {
+    @include font-size-s;
+
+    letter-spacing: 0.05em;
+    line-height: $lineheight-normal;
+    padding-left: 2px;
+    height: 22px;
+    margin: 0 0 0 32px;
+    span {
+      font-weight: bold;
+      @include font-size-l;
+      margin: 0 3px 0 0;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-line {
+    position: relative;
+    height: 18px;
+    margin: 14px 0 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      right: 0;
+      height: 2px;
+      background: $cl-english;
+      transform: translateY(-50%);
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: $cl-english;
+      margin: 0 0 0 33px;
+    }
+  }
+
+  &:not(:last-child) {
+    .englp-section-movie-curriculum-scroll-block-line::before {
+      right: -40px;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content {
+    position: relative;
+    background: $cl-white;
+    border-radius: $border-radius-big;
+    padding: 28px 24px 24px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      transform: rotate(-45deg);
+      border-radius: 0 0 0px 0;
+    }
+    @include responsive-style($breakpoint-sp) {
+      padding: 24px 18px 18px;
+      gap: 16px;
+    }
+  }
+  .englp-section-movie-curriculum-scroll-block-content-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-title {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    background: $cl-english;
+    color: $cl-white;
+    @include font-size-s;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: $lineheight-none;
+    padding: 10px 30px 8px 18px;
+    margin: 0 0 20px;
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 100%, 0 100%);
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 220px;
+    background: $cl-graylightest;
+    border-radius: $border-radius-big;
+    padding: 25px 25px 18px;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-movie {
+    position: relative;
+    border-radius: $border-radius-middle;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    .playbutton {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      z-index: 10;
+      svg {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+      }
+      //   &::before,
+      //   ::after {
+      //     content: "";
+      //     position: absolute;
+      //     width: 100px;
+      //     height: 100px;
+      //     border-radius: 50%;
+      //     cursor: pointer;
+      //     background: $cl-english;
+      //     animation: ripple-animation 2.3s infinite;
+      //     z-index: 1;
+      //     top: 0;
+      //     bottom: 0;
+      //     left: 0;
+      //     right: 0;
+      //     margin: auto;
+      //   }
+
+      //   &::after {
+      //     animation-delay: 1s;
+      //   }
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius-middle;
+    }
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-subtitle {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 10px 5px;
+    color: $cl-english;
+    background: $cl-white;
+    border: 1px solid $cl-english;
+    border-radius: $border-radius-small;
+    @include font-size-sss;
+    line-height: $lineheight-none;
+    letter-spacing: 0.05em;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-maintitle {
+    @include font-size-m;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: $lineheight-normal;
+    letter-spacing: 0.02em;
+  }
+
+  .englp-section-movie-curriculum-scroll-block-content-card-text {
+    @include font-size-ss;
+    margin-top: 8px;
+    line-height: $lineheight-relaxed;
+    color: $cl-gray;
+  }
+}
+
+.englp-section-movie-curriculum-cta {
+  background: $lp-eng-purple-pale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0 90px;
+  margin: 0px auto 0;
+  gap: 45px;
+  flex-direction: column;
+  @include responsive-style($breakpoint-sp) {
+    padding: 30px 15px 75px;
+    gap: 45px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .englp-section-movie-curriculum-cta-button {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-full;
+    border: 1px solid $cl-btn-ctaorange;
+    @include responsive-style($breakpoint-sp) {
+      height: 70px;
+    }
+    span {
+      color: $cl-btn-ctaorange;
+    }
+    .englp-section-movie-curriculum-cta-button-sub {
+      position: absolute;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
+      height: 27px;
+      background: $cl-white;
+      color: $cl-btn-ctaorange;
+      left: 0;
+      right: 0;
+      top: -15px;
+      margin: auto;
+      font-size: $font-size-s;
+      z-index: 10;
+      text-align: center;
+      border: 1px solid $cl-btn-ctaorange;
+      border-radius: $border-radius-full;
+      font-size: 12px;
+      @include responsive-style($breakpoint-sp) {
+        font-size: 12px;
+      }
+    }
+    .englp-section-movie-curriculum-cta-button-text {
+      font-size: 16px;
+      font-weight: bold;
+      @include responsive-style($breakpoint-sp) {
+        font-size: 16px;
+      }
+    }
+  }
+  .englp-section-movie-curriculum-cta-button-free {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 62px;
+  }
+  .englp-section-movie-curriculum-cta-button-icn span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  /* 年間カリキュラム */
+  .englp-section-movie-curriculum-cta-button-pdf {
+    background: $cl-white;
+    .englp-section-movie-curriculum-cta-button-text {
+      color: $cl-btn-ctaorange;
+      font-weight: 600;
+    }
+  }
+  .englp-section-movie-curriculum-cta-button-cta {
+    background: $cl-btn-ctaorange;
+    .englp-section-movie-curriculum-cta-button-text {
+      color: $cl-white;
+    }
+    span {
+      color: $cl-white;
+    }
+  }
+  /* CTA */
+}
