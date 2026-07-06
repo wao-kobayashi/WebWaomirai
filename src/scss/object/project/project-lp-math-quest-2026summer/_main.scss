@@ -49,6 +49,15 @@ header img{
   top: 46.5vw;
   left: 4.534vw;
 }
+.p-fv.js-visible .p-fv__text{
+  transition-delay: 0.2s;
+}
+.p-fv.js-visible .p-fv__title{
+  transition-delay: 0.4s;
+}
+.p-fv.js-visible .p-fv__wrapper{
+  transition-delay: 0.6s;
+}
 .p-fv__details{
   width: $wrapper-sp;
   margin: 31.734vw auto 0;
@@ -826,9 +835,12 @@ header img{
   }
 }
 
+.join-faq{
+  background: $cl-graylightest;
+}
+
 // かんたん5STEPで参加可能
 .join-5steps {
-  background: $cl-graylightest;
   padding: var(--m-section) 0;
   margin-top: var(--m-section);
   .join-5steps-title {
@@ -938,7 +950,6 @@ header img{
 
 // FAQ
 .faq {
-  background: $cl-graylightest;
   padding: 0 0 var(--m-section);
   .faq-title {
     @extend %underbar-title;

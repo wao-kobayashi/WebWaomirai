@@ -3,11 +3,6 @@ script.
     //loycusかどうか判定
     var loycus = '#{loycus}'
 
-    $('.inview-triger').on('inview', function(event, isInView) {
-      if (isInView) {
-        $(this).addClass('inview');
-      }
-    });
     $(window).on("load scroll", function () {
        if ($(this).scrollTop() > 200) {
         $(".fixed-btn-container").fadeIn();
@@ -17,6 +12,24 @@ script.
   
       }
     });
+
+    /**
+    * スクロールによるアニメーション
+    */
+    const callback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $(entry.target).addClass('js-visible');
+            }
+        })
+    }
+    const options = {}
+    let observer = new IntersectionObserver(callback, options)
+    let targets = document.querySelectorAll('.js-hidden, .js-hidden-parent');
+    targets.forEach(target => {
+        observer.observe(target);
+    });
+
 
     /**
     * モーダルウィンドウを開く関数
