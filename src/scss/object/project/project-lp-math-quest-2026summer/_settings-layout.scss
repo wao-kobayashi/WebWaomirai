@@ -1,0 +1,65 @@
+// 幅
+$max-width: 1200px;
+$widewidth: 1000px;
+$middlewidth: 800px;
+$smallwidth: 700px;
+$ctabuttonwidth: 500px;
+$breakpoint-sp: 768px;
+$maincontentWidth: 800px;
+$breakpoint-tablet: 980px;
+$wrapper-sp: 89.334%;
+
+@mixin square-size($vw-percentage) {
+  width: #{$vw-percentage}vw;
+  height: #{$vw-percentage}vw;
+}
+@mixin square-size-px($vw-percentage) {
+  width: #{$vw-percentage}px;
+  height: #{$vw-percentage}px;
+}
+
+body {
+  min-width: calc($widewidth + 40px);
+  background: $cl-white !important;
+}
+@include responsive-style($breakpoint-sp) {
+  body{
+    min-width: auto;
+  }
+}
+@mixin content-width {
+  width: $wrapper-sp;
+}
+
+// 余白
+:root{
+  --mb-title: 30px;
+  --mb-underbar-title: 30px;
+  --mt-title-border: 20px;
+  --m-section: 50px;
+}
+@include min-responsive-style($breakpoint-sp) {
+  :root{
+    --m-section: 75px;
+  }
+}
+
+// PC・SPの表示切り替え
+.u-br-pc,
+.u-text-pc,
+.u-pc-block{
+  display: none;
+}
+@include min-responsive-style($breakpoint-sp) {
+    .u-br-pc,
+    .u-text-pc{
+        display: inline;
+    }
+    .u-br-sp,
+    .u-sp-block{
+      display: none;
+    }
+    .u-pc-block{
+      display: block;
+    }
+}

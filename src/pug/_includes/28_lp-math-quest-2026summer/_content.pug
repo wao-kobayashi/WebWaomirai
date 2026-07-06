@@ -1,0 +1,528 @@
+//mixin
+include _mixin  
+//variable
+include _variables 
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    - const cssBase = loycus ? '../../../css/' : '../../css/'
+    - const cssLocal = loycus ? '../' : ''
+
+    link(href=`${cssBase}28_lp-math-quest-2026summer.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}28_lp-math-quest-2026summer.css?v=${Date.now()}`, rel="stylesheet")
+
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  body
+    .main-content
+
+       .main-content-wrapper 
+          // ヘッダー
+          header
+            img(src='https://waomirai.com/lp/assets/commonimages/logo.svg', width='180', height='20', alt='ワオ未来塾')
+          
+          // 赤い背景部分（FV〜講師・対象・会場・参加費）
+          .main-content-fv.js-hidden
+            // FV
+            .p-fv.js-hidden-parent
+              .p-fv__bg
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgBgFvPc)
+                  img(src=ImgBgFv, alt='')
+              p.p-fv__text.js-hidden-child
+                  img(src=ImgTextFv, alt='きっと、もっと数学にハマる夏になる！')
+              h1.p-fv__title.js-hidden-child
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgTitleFvPc)
+                  img(src=ImgTitleFv, alt='数学探究')
+              .p-fv__wrapper.js-hidden-child
+                p.p-fv__details
+                  | テキストを開くのも嫌がっていた子が、「なぜ？」のおもしろさに目覚める！
+                p.p-fv__details
+                  | 身近な事例から考えるから、数学が苦手な子も、もっと得意になりたい子も、保護者も夢中になれる特別な授業です。
+                .p-fv__decoration
+                    img(src=ImgDecorationFv, alt='')
+            // 今回のテーマ
+            .p-theme
+              .p-theme__wrapper.js-hidden
+                .p-theme__main
+                  h2.p-theme__main-head 〈今回のテーマ〉
+                  .p-theme__main-decoration
+                    img(src=ImgDecorationTheme, alt='')
+                  p.p-theme__main-title
+                    img(src=ImgTitleTheme, alt='マイナス×マイナスはなぜプラス？')
+                  p.p-theme__main-text01 #[span.p-theme__main-text01-num 8]月#[span.p-theme__main-text01-num 5]日（水）#[span.p-theme__main-text01-num 19:30]予定
+                  p.p-theme__main-text02 参加無料！
+                .p-theme__details 
+                  p.p-theme__details-border ＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー
+                    span.p-theme__details-border-pc.u-text-pc ＋ー＋
+                  h3.p-theme__details-title
+                    | 45分で解き明かす
+                    br
+                    span.p-theme__details-title-point “マイナス”の3つの謎
+                  p.p-theme__details-text01
+                    | このイベントでみんなが挑戦するのは、計算方法の暗記ではなく、不思議な「数の世界」を旅する大冒険！
+                  p.p-theme__details-text02
+                    img(src=ImgTextTheme, alt='謎1：身のまわりにある「隠れたマイナス」を見つけ出せ！ 謎2：負（マイナス）の数っていったい何なんだ？ 謎3：マイナス×マイナス＝マイナスではダメ？計算ルールは何のため？')
+                  p.p-theme__details-text03
+                    | 全国の仲間と一緒に頭をひねって、試行錯誤するワクワクの時間を楽しもう！
+            // 講師・対象・会場・参加費
+            .p-guide 
+              .p-guide__wrapper.js-hidden
+                p.p-guide__border ＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー
+                  span.p-guide__border-pc.u-text-pc ＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋ー＋
+                .p-guide__left
+                  ul.p-guide__list
+                    li.p-guide__list-item
+                      p.p-guide__list-title 講　師
+                      p.p-guide__list-text 東田 大志
+                      p.p-guide__list-kana （ひがしだ ひろし）
+                  .p-guide__teacher
+                    .p-guide__teacher-wrapper
+                      .p-guide__teacher-title 試行錯誤のプロ
+                      .p-guide__teacher-text
+                        | 日本唯一の
+                        br
+                        | パズル学博士です！
+                    .p-guide__teacher-image
+                      img(src=ImgGuideTeacher, alt='')
+                .p-guide__right
+                  ul.p-guide__list
+                    li.p-guide__list-item
+                      p.p-guide__list-title 対　象
+                      p.p-guide__list-text 小学6年〜中学生
+                    li.p-guide__list-item.p-guide__list-item--place
+                      p.p-guide__list-title 会　場
+                      p.p-guide__list-text
+                        | オンラインなので全国
+                        br
+                        | どこからでも参加可能！
+                    li.p-guide__list-item
+                      p.p-guide__list-title 参加費
+                      p.p-guide__list-text 無料（先着300名）
+          // 今すぐ申し込む
+          .p-cta.js-hidden
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
+          // こんなお子さんにオススメ
+          .p-recommend.js-hidden
+            h2.p-recommend__title
+              | こんなお子さんに
+              br.u-br-sp
+              | オススメ
+            .p-recommend__wrapper
+              ul.p-recommend__list 
+                li.p-recommend__item
+                  img(src=ImgRecommendItem, alt='')
+                  | 夏休みのあいだに、ふだん触れられない学びを深めたい
+                li.p-recommend__item
+                  img(src=ImgRecommendItem, alt='')
+                  | 数学（算数）が苦手だけど、
+                  br.u-br-sp
+                  | なんとか克服してほしい
+                li.p-recommend__item
+                  img(src=ImgRecommendItem, alt='')
+                  | 学校の勉強（計算の暗記）だけでは物足りなさを感じている
+              .p-recommend__image
+                img(src=ImgRecommend, alt='')
+            .p-recommend__decoration
+                img(src=ImgDecorationRecommend, alt='')
+            p.p-recommend__title
+              | 計算のやり方（公式）
+              br.u-br-sp
+              | だけを
+              br.u-br-pc
+              | 丸暗記する
+              br.u-br-sp
+              | 講座ではありません。
+          // 探究3ステップ
+          .p-step.js-hidden
+            .p-step__background
+              picture
+                source(media='(min-width: 768px)', srcset=ImgBgStepPc)
+                img(src=ImgBgStep, alt='')
+            p.p-step_balloon
+              picture
+                source(media='(min-width: 768px)', srcset=ImgBalloonStepPc)
+                img(src=ImgBalloonStep, alt='ワオ未来塾はちょっと違う！')
+            h2.p-step__title 
+              | 数にふれるのが
+              br.u-br-sp
+              | 楽しくなる！
+              br
+              | 探究3ステップ
+            p.p-step__text01
+              picture
+                source(media='(min-width: 768px)', srcset=ImgTextStepPc)
+                img(src=ImgTextStep, alt='【STEP1】身のまわりのことから考える・【STEP2】負（マイナス）の数の正体を突き止める・【STEP3】全国の仲間といっしょに計算ルールの謎に挑む')
+            .p-step__wrapper
+              .p-step__decoration 
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgDecorationStepPc)
+                  img(src=ImgDecorationStep, alt='')
+              p.p-step__text02
+                img(src=ImgBgStepText, alt='')
+                | 数学のマイナスイメージを
+                br
+                | プラスに転換！
+            p.p-step__text03 
+              | 参加したあとは
+              br.u-br-sp
+              | きっと、もっと、
+              br
+              | 数学が好きになる！
+          // 今すぐ申し込む
+          .p-cta.js-hidden
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
+          // なぜいま、数学探究なの？
+          .p-reason.js-hidden
+            h2.p-reason__q
+              img(src=ImgTextReasonQ, alt='Q')
+              | なぜいま、
+              br.u-br-sp
+              | 数学探究なの？
+            p.p-reason__a
+              img(src=ImgTextReasonA, alt='A')
+              | 理系人材が不足する
+              br.u-br-sp
+              | と予測されているから！
+            .p-reason__wrapper 
+              p.p-reason__text 
+                | 文部科学省の調査によると、いまの小中学生が社会に出る2040年には、なんと約100万人もの理系人材が不足すると予測されています。
+                br
+                | しかしその一方で、多くの学校教育現場では、分数や割合といった「数の基本ルール」でつまずいてしまい、自分の頭で論理的に説明することが苦手な子どもたちが増えているのが現状です。
+              .p-reason__image 
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgReasonPc)
+                  img(src=ImgReason, alt='理系人材の不足数')
+            .p-reason__decoration
+                img(src=ImgDecorationReason, alt='')
+          // これからの社会を生き抜く力
+          .p-power.js-hidden
+            h3.p-power__title
+              | ワオ未来塾の数学は
+              br
+              | 「これからの社会を生き抜く力」
+            .p-power_decoration
+                img(src=ImgDecorationPower, alt='')
+            p.p-power__text.u-sp-block
+              | だからこそ今回の数学探究では、ただの「計算手順の丸暗記」ではなく、次の2つのことを大切にしています。
+            .p-power__wrapper
+              .p-power__point
+                p.p-power__point-item 
+                  | ①数と数の世界を
+                  br
+                  | &emsp;好きになること
+                p.p-power__point-item 
+                  | ②数を知ることで、
+                  br
+                  | &emsp;世界の仕組み（原理）
+                  br
+                  | &emsp;を知ること
+                .p-power__point-image
+                  img(src=ImgPower, alt='')
+              .p-power__details
+                p.p-power__text.u-pc-block
+                  | だからこそ今回の数学探究では、ただの「計算手順の丸暗記」ではなく、次の2つのことを大切にしています。
+                p.p-power__text 
+                  | 単なるテスト対策にとどまらず、日常生活や社会のなかに隠れた数学を考える。 
+                p.p-power__text 
+                  | この体験が、これからの時代に文系・理系を問わず必ず求められる「自分の頭で論理的に考える力（理数系の力）」をしっかりと養う土台になります。
+          // 今すぐ申し込む
+          .p-cta.js-hidden
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
+          // 講師紹介
+          .p-teacher.js-hidden
+            .p-teacher__summary
+              h2.p-teacher__title 〈講師紹介〉
+              p.p-teacher__name-kanji 東田 大志
+              p.p-teacher__name-kana （ひがしだ ひろし）
+              p.p-teacher__profile 京都大学総合人間学部卒業、同大学院人間・環境学研究科博士後期課程修了。日本で唯一の「パズル学博士号」を取得。
+              p.p-teacher__text01.u-sp-block 
+                | 高校3年の夏から本格的な受験勉強を始め、パズルで培った論理力を活かしてわずか1か月で数学の偏差値を劇的にアップさせ京都大学へ現役合格。フジテレビ系『今夜はナゾトレ』などメディア出演や著書多数、子どもたちに大人気の先生です。
+              .p-teacher__image
+                picture
+                  source(media='(min-width: 768px)', srcset=ImgDecorationTeacher01Pc)
+                  img.p-teacher__image-decoration(src=ImgDecorationTeacher01, alt='')
+                img.p-teacher__image-photo(src=ImgTeacher, alt='')
+            .p-teacher__details
+              p.p-teacher__text01.u-pc-block 
+                | 高校3年の夏から本格的な受験勉強を始め、パズルで培った論理力を活かしてわずか1か月で数学の偏差値を劇的にアップさせ京都大学へ現役合格。フジテレビ系『今夜はナゾトレ』などメディア出演や著書多数、子どもたちに大人気の先生です。
+              p.p-teacher__text02
+                | 私自身、子どもの頃はパズルばかりしていましたが、そのおかげで数学をパズルのように楽しむ『自分で考える力』が身につきました。
+                br
+                | このイベントでは、暗記や計算よりも『なぜそうなるの？』という原理をワクワクしながら紐解くことを大事にしています。数学が得意な子はもちろん、テキストを開くのもイヤな苦手な子も大歓迎！ ぜひ親子で、公式の裏にあるおもしろい世界をのぞきにきてください！
+            .p-teacher__decoration
+              img.p-teacher__decoration(src=ImgDecorationTeacher02, alt='')
+          // イベント開催概要
+          .p-event.js-hidden
+            h2.p-event__title 
+              | 「夏の数学探究」
+              br
+              | イベント開催概要
+            p.p-event__text
+              | 日時｜2026年8月5日（水）
+              br
+              | 対象｜小学6年〜中学生
+              br
+              | 形式｜オンライン
+              br
+              | 参加費｜無料
+              br
+              | 定員｜先着300名
+              br
+              | 締切｜2026年8月4日（火） 17:45
+          // 今すぐ申し込む
+          .p-cta.js-hidden
+            +conditionalLink('p-cta__button')
+              | 今すぐ申し込む
+
+          // かんたん5STEP・よくある質問
+          .join-faq.js-hidden
+            // かんたん5STEP
+            .join-5steps.js-hidden
+                h2.join-5steps-title 
+                  |かんたん5STEPで
+                  br.u-br-sp
+                  |参加可能
+                .join-5steps-list
+                  //step1
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        p.join-5steps-box-head-step
+                            |STEP 
+                            span|1
+                        .join-5steps-box-head-img
+                            img(src=ImgIcnStep01)
+                      h3.join-5steps-box-title 
+                            |LINEで公式アカウントを
+                            br
+                            |友だち追加
+                      p.join-5steps-box-text 
+                            span.spimage|まず公式アカウントを友だちに追加してください。
+                            span.pcimage|まず、二次元コードからスマートフォンで公式アカウントを友だちに追加してください。
+                            //- |・LINEが利用できない場合はこちらから
+                            |・友だち追加は
+                            +conditionalLink
+                              |こちら
+                            |から
+                            br
+                      p(style='margin:20px auto 0; width: calc(100% - 40px); color:#999999 !important; font-size:87%;')
+                              |LINEの友達追加等でお困りのことがございましたら下記までお問い合わせください。
+                              br
+                              a(href="mailto:mirai-waoug@waomirai.com" style="color:#999999 !important;")
+                                |mirai-waoug@waomirai.com
+                  //step2
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        p.join-5steps-box-head-step
+                            |STEP 
+                            span|2
+                        .join-5steps-box-head-img
+                            img(src=ImgIcnStep02)
+                      h3.join-5steps-box-title 
+                            |友だち登録後、LINEのトーク
+                            br
+                            |画面に送られる申し込み
+                            br
+                            |フォームをタップ！
+                  //step3
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        p.join-5steps-box-head-step
+                            |STEP 
+                            span|3
+                        .join-5steps-box-head-img
+                            img(src=ImgIcnStep03)
+                      h3.join-5steps-box-title 
+                        |Zoomをインストール
+                      p.join-5steps-box-text 
+                        |お手持ちの端末にzoomのインストールをお願いします。パソコンまたはタブレットが推奨です
+                  //step4
+                  .join-5steps-box
+                      .join-5steps-box-head 
+                        p.join-5steps-box-head-step
+                            |STEP 
+                            span|4
+                        .join-5steps-box-head-img.step4
+                          img(src=ImgIcnStep04)
+                      h3.join-5steps-box-title 
+                            |イベント前日に
+                            br
+                            |LINEメッセージで
+                            br
+                            |イベントURLをお送りします
+                  //step5
+                  .join-5steps-box
+                    .join-5steps-box-head 
+                      p.join-5steps-box-head-step
+                          |STEP 
+                          span|5
+                      .join-5steps-box-head-img
+                        img(src=ImgIcnStep05)
+                    h3.join-5steps-box-title 
+                          |開催時間になったら
+                          br
+                          |届いたイベントURLから
+                          br
+                          |参加しましょう！
+            // よくある質問
+            .faq.js-hidden
+              h2.faq-title 
+                |よくある質問
+              //-  .faq-content 
+              //-     .faq-content-question 
+              //-        .faq-content-question-left|Q
+              //-        .faq-content-question-right
+              //-          |複数のテーマは申し込むことはできますか？
+              //-     .faq-content-answer 
+              //-        .faq-content-answer-left|A
+              //-        .faq-content-answer-right
+              //-          |はい、可能です。
+              .faq-content 
+                  .faq-content-question 
+                    p.faq-content-question-left|Q
+                    p.faq-content-question-right
+                      |カメラオンで参加は必要ですか？？
+                  .faq-content-answer 
+                    p.faq-content-answer-left|A
+                    p.faq-content-answer-right
+                      |ウェビナー形式ですので顔出しは不要です
+              .faq-content 
+                  .faq-content-question 
+                    p.faq-content-question-left|Q
+                    p.faq-content-question-right
+                      |当日参加できなかった場合、後日アーカイブ視聴はできますか？
+                  .faq-content-answer 
+                    p.faq-content-answer-left|A
+                    p.faq-content-answer-right
+                      |恐れ入りますが、本セミナーはライブ参加を前提とした内容のため、後日のアーカイブ配信は行っておりません。
+                      br.u-br-pc
+                      |ご都合のつく日時の回にてお申込みください。
+
+          // ワオ未来塾って？
+          .about-wao.js-hidden
+            h2.about-wao-title
+              |ワオ未来塾って？
+            .about-wao-img
+              img(src=ImgLogoWao)
+            p.about-wao-text
+                |全国で能開センターや個別指導Axisを展開、知育アプリ『ワオっち！』も手がける株式会社ワオ・コーポレーションがお送りする新しい学びの場「ワオ未来塾」。
+                br
+                br
+                |21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない“自分の軸”が求められていきます。
+                br
+                br
+                |半世紀にわたり子どもたちの教育に携わってきた当社は、こうした考えのもと、社会で活躍できる力を育む新しい学びの場、「ワオ未来塾」を開校いたします。
+          // 授業の特長
+          .about-feature.js-hidden
+            h2.about-feature-title
+              |授業の特長
+            .about-feature-point
+                i.fa-solid.fa-earth-americas
+                p.about-feature-point-text
+                  |オンライン授業で
+                  br.u-br-sp
+                  |全国どこからでも参加OK
+            .about-feature-point
+                i.fa-regular.fa-comments
+                p.about-feature-point-text
+                  |ライブだからチャットで
+                  br.u-br-sp
+                  |授業に参加できる!
+            .about-feature-point
+                i.fa-solid.fa-laptop
+                p.about-feature-point-text
+                  |必要なのは
+                  br.u-br-sp
+                  |PCかタブレットだけ！                 
+          // ワオ未来塾
+          .about-school.js-hidden
+            h2.about-school-catch 
+                |社会で役立つ学びを、オンラインで今始めよう
+            .about-school-logo 
+                img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+            p.about-school-target 
+                |〈対象〉小学3〜6年生／中学生／高校生
+            .about-school-4subjects
+                img(src=Img4subject)
+            .about-school-feature 
+              .about-school-feature-box
+                .about-school-feature-box-title  
+                  .about-school-feature-box-title-icon   
+                      img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                  h3.about-school-feature-box-title-text 
+                      |新しい学び
+                p.about-school-feature-box-text 
+                    |これから必要になる自己肯定感を養う「哲学」、正しく物事目を育む「科学」、社会を支える仕組みを学ぶ「経済」、世界共通言語の「英語」を身につけます。
+              .about-school-feature-box
+                .about-school-feature-box-title  
+                  .about-school-feature-box-title-icon   
+                      img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                  h3.about-school-feature-box-title-text 
+                      |飛び級制
+                p.about-school-feature-box-text 
+                    |授業は推奨学年を設定していますが、理解度に応じて高いレベルの授業を選ぶことができます。 そのため学年に縛られず、自由なペースで学びを深めることができます。
+              .about-school-feature-box
+                .about-school-feature-box-title  
+                  .about-school-feature-box-title-icon   
+                      img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_subject.png')
+                  h3.about-school-feature-box-title-text 
+                      |オンラインライブ授業
+                p.about-school-feature-box-text 
+                    |授業はライブ形式で行われ、チャットやリアクションボタンで積極的に授業に参加できます。自分の意見が授業で取り上げられることも！
+            .about-school-btn
+                a(href='https://waomirai.com/', target='_blank')
+                  .about-school-btn-text 
+                    |ワオ未来塾の公式サイトへ     
+                  .about-school-btn-icn 
+                    img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icn_target.svg')    
+          // LINEの友だち追加について
+          .about-wao.js-hidden
+            h2.about-wao-title
+              |LINEの
+              br.u-br-sp
+              |友だち追加について
+            p.about-wao-text.about-wao-text--line
+                |LINEの友達追加等でお困りのことがございましたら下記までお問い合わせください。
+                br
+                a(href="mailto:mirai-waoug@waomirai.com")
+                  |mirai-waoug@waomirai.com
+          // フッター
+          footer 
+            ul 
+              li 
+                a(href="https://www.wao-corp.com/", target='_blank')
+                  |会社概要
+              li 
+                a(href="https://www.wao-corp.com/kojin/", target='_blank')
+                  |プライバシーポリシー
+              li
+                a(href="https://waomirai.com/commerce_law/", target='_blank')
+                  |特定商取引に基づく表記
+            .footer-logo 
+              img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
+            p.footer-copyright
+              | &copy; ワオ・コーポレーション All rights reserved.
+  
+  //js
+  include _js
+  +modal
+  +fixed-btn
