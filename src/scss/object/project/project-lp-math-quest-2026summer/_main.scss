@@ -102,7 +102,7 @@ header img{
 // 今回のテーマ
 .p-theme{
   background: $cl-main;
-  padding-top: 45px;
+  padding-top: 60px;
   overflow: hidden;
 }
 .p-theme__wrapper{
@@ -136,7 +136,7 @@ header img{
   letter-spacing: 0.5px;
 }
 .p-theme__main-text01{
-  margin-top: 7px;
+  margin-top: 15px;
 }
 .p-theme__main-text01-num{
   color: $cl-white;
@@ -147,7 +147,7 @@ header img{
   color: $cl-white;
   font-size: var(--fs-2l);
   text-align: center;
-  margin-top: 7px;
+  margin-top: 15px;
 }
 .p-theme__details-title{
   color: $cl-white;
@@ -166,14 +166,14 @@ header img{
   color: $cl-white;
   font-size: var(--fs-m);
   line-height: var(--lh-m);
-  margin-top: 16px;
+  margin-top: 25px;
 }
 .p-theme__details-text02{
   width: 110vw;
   margin-left: -9vw;
 }
 .p-theme__details-text03{
-  margin-top: 21px;
+  margin-top: 25px;
 }
 @include min-responsive-style($breakpoint-sp) {
   .p-theme{
@@ -227,7 +227,7 @@ header img{
 // 講師・対象・会場・参加費
 .p-guide{
   background: $cl-main;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .p-guide__wrapper{
   width: $wrapper-sp;
@@ -238,21 +238,21 @@ header img{
   font-size: var(--fs-2l);
   text-align: center;
   color: $cl-white;
-  padding-top: 35px;
+  padding-top: 50px;
 }
 .p-guide__border-pc{
   color: $cl-white;
 }
 .p-guide__left,
 .p-guide__right{
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .p-guide__list-item{
   display: flex;
   align-items: center;
 }
 .p-guide__list-item:nth-child(n+2){
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .p-guide__list-item--place{
   align-items: flex-start;
@@ -351,7 +351,7 @@ header img{
   font-size: var(--fs-4l);
   margin: 0 auto;
   border-radius: 30px;
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 // こんなお子さんにオススメ
@@ -365,7 +365,7 @@ header img{
 }
 .p-recommend__wrapper{
   width: $wrapper-sp;
-  margin: 27px auto 0;
+  margin: 35px auto 0;
 }
 .p-recommend__item{
   display: flex;
@@ -374,7 +374,7 @@ header img{
   line-height: var(--lh-s);
 }
 .p-recommend__item:nth-child(n+2){
-  margin-top: 24px;
+  margin-top: 35px;
 }
 .p-recommend__item img{
   margin-right: 10px;
@@ -524,7 +524,7 @@ header img{
   font-weight: normal;
 }
 .p-reason__a{
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: var(--fs-3l);
 }
 .p-reason__q,
@@ -542,11 +542,11 @@ header img{
   line-height: var(--lh-m);
 }
 .p-reason__wrapper{
-  margin-top: 23px;
+  margin-top: 25px;
 }
 .p-reason__image{
   width: 78.667vw;
-  margin: 38px auto 0;
+  margin: 30px auto 0;
 }
 .p-reason__decoration{
   width: 135px;
@@ -590,7 +590,7 @@ header img{
  // これからの社会を生き抜く力
 .p-power{
   width: $wrapper-sp;
-  margin: 45px auto 0;
+  margin: 70px auto 0;
   position: relative;
 }
 .p-power__title{
@@ -607,15 +607,18 @@ header img{
 .p-power__text{
   font-size: var(--fs-m);
   line-height: var(--lh-m);
-  margin-top: 27px;
+  margin-top: 25px;
 }
 .p-power__point{
   width: 85%;
   background: $cl-main-light;
-  margin: 30px auto 0 3%;
+  margin: 35px auto 0 3%;
   border-radius: 8px;
   padding: 15px;
   position: relative;
+}
+.p-power__point + .p-power__details{
+  margin-top: 35px;
 }
 .p-power__point-item{
   font-size: var(--fs-l);
@@ -662,6 +665,9 @@ header img{
     flex-shrink: 0;
     margin: 0;
   }
+  .p-power__point + .p-power__details{
+    margin-top: 0;
+  }
   .p-power__point-image{
     right: -25px;
   }
@@ -671,7 +677,7 @@ header img{
 .p-teacher{
   background: $cl-main-light;
   margin-top: 83px;
-  padding-block: 33px;
+  padding: 35px 0 40px;
   position: relative;
 }
 .p-teacher__summary,
@@ -704,13 +710,13 @@ header img{
   line-height: var(--lh-m);
   border: 1px solid #000;
   border-radius: 8px;
-  margin-top: 17px;
+  margin-top: 25px;
   padding: 8px 11px;
 }
 .p-teacher__text01{
   font-size: var(--fs-m);
   line-height: var(--lh-m);
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .p-teacher__image{
   width: 96%;
@@ -781,7 +787,7 @@ header img{
 // イベント開催概要
 .p-event{
   background: $cl-main;
-  padding: 23px 0 26px;
+  padding: 40px 0;
 }
 .p-event__title{
   text-align: center;
@@ -793,7 +799,7 @@ header img{
 .p-event__text{
   width: 73%;
   min-width: 245px;
-  margin: 10px auto 0;
+  margin: 20px auto 0;
   font-size: var(--fs-m);
   line-height: var(--lh-3l);
   color: $cl-white;
@@ -954,6 +960,8 @@ header img{
 
 // FAQ
 .faq {
+  width: $wrapper-sp;
+  margin: 0 auto;
   padding: 0 0 var(--m-section);
   .faq-title {
     @extend %underbar-title;
@@ -1009,6 +1017,7 @@ header img{
 }
 @include min-responsive-style($breakpoint-sp) {
   .faq {
+    width: 100%;
     .faq-content {
       width: $maincontentWidth;
       margin: 0 auto;
