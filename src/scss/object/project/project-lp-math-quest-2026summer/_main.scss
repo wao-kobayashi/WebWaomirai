@@ -141,7 +141,7 @@ header img{
 .p-theme__main-text01-num{
   color: $cl-white;
   font-size: var(--fs-4l);
-  margin: 0 4px;
+  margin: 0 2px;
 }
 .p-theme__details-border{
   color: $cl-white;
@@ -159,7 +159,7 @@ header img{
 }
 .p-theme__details-title-point{
   color: $cl-white;
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
 }
 .p-theme__details-text01,
 .p-theme__details-text03{
@@ -198,7 +198,7 @@ header img{
     margin-top: 22px;
   }
   .p-theme__main-text01-num{
-    margin: 0 2px;
+    margin: 0 4px;
   }
   .p-theme__main-text02{
     margin-top: 7px;
@@ -348,7 +348,7 @@ header img{
   justify-content: center;
   background: $cl-btn-cta;
   color: $cl-white;
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   margin: 0 auto;
   border-radius: 30px;
   margin-top: 55px;
@@ -357,7 +357,7 @@ header img{
 // こんなお子さんにオススメ
 .p-recommend__title{
   color: $cl-main;
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   line-height: var(--lh-s);
   text-align: center;
   margin-top: 65px;
@@ -434,7 +434,7 @@ header img{
   text-align: center;
   font-weight: normal;
   color: $cl-main;
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   line-height: var(--lh-s);
 }
 .p-step__title{
@@ -520,7 +520,7 @@ header img{
   position: relative;
 }
 .p-reason__q{
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   font-weight: normal;
 }
 .p-reason__a{
@@ -695,7 +695,7 @@ header img{
   font-weight: normal;
 }
 .p-teacher__name-kanji{
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   text-align: center;
   line-height: var(--lh-none);
 }
@@ -791,7 +791,7 @@ header img{
 }
 .p-event__title{
   text-align: center;
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   color: $cl-white;
   line-height: var(--lh-s);
   font-weight: normal;
@@ -826,7 +826,7 @@ header img{
 
 // 5step〜よくある質問のタイトル
 %underbar-title {
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   letter-spacing: 2.5px;
   text-align: center;
   font-weight: 300;
@@ -977,7 +977,7 @@ header img{
       margin: 0 0 4px;
       .faq-content-question-left {
         width: 25px;
-        font-size: var(--fs-4l);
+        font-size: var(--fs-5l);
         font-weight: 500;
         line-height: var(--lh-s);
         color: $cl-waogreen;
@@ -1030,7 +1030,7 @@ header img{
 
 %wao-title {
   text-align: center;
-  font-size: var(--fs-4l);
+  font-size: var(--fs-5l);
   letter-spacing: 2px;
   margin: 0 auto var(--mb-title);
 }
