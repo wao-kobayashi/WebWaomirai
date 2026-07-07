@@ -18,7 +18,7 @@ mixin faqBox(question, answer)
 mixin conditionalLink(baseClass)
   a(
     class=baseClass + (loycus ? '' : ' js-line-trigger')
-    href=loycus ? UrlLiffForm : false
+    href=loycus ? UrlLiffForm : UrlLiffAddFriend
     target=loycus ? '_blank' : false
   )
     block
