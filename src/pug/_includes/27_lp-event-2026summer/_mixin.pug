@@ -5,7 +5,7 @@
 mixin conditionalLink(baseClass)
   a(
     class=baseClass + (loycus ? '' : ' js-line-trigger')
-    href=loycus ? UrlLiffForm : UrlEndpointAddFriend
+    href=loycus ? UrlLiffForm : UrlLiffAddFriend
     target=loycus ? '_blank' : false
   )
     block

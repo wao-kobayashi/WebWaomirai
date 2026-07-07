@@ -31,6 +31,21 @@ script.
     function updateButtonBehavior() {
       // 769px以上をPC表示とみなす
       var isWideScreen = $(window).width() >= 769;
+
+      // Android かつ IG/FB/TikTok のアプリ内ブラウザ判定
+      var ua = navigator.userAgent;
+      var isAndroid   = /Android/i.test(ua);
+      var isInstagram = /Instagram/i.test(ua);
+      var isFacebook  = /(FBAN|FBAV|FB_IAB)/i.test(ua);
+      var isTiktok    = /(BytedanceWebview|musical_ly|TikTok|aweme)/i.test(ua);
+      var isNg = isAndroid && (isInstagram || isFacebook || isTiktok);
+
+      // NG環境（Android かつ IG/FB/TikTok アプリ内ブラウザ）では
+      // js-line-trigger の遷移先を UrlEndpointAddFriend に差し替える
+      if (isNg) {
+        $('.js-line-trigger').attr('href', '#{UrlEndpointAddFriend}');
+      }
+
       //loycusではない時に発火
       if (!loycus) {
         // locyus=false の時：js-line-trigger が有効
