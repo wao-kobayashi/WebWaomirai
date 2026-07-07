@@ -34,7 +34,7 @@ script.
       var isAndroid   = /Android/i.test(ua);
       var isInstagram = /Instagram/i.test(ua);
       var isFacebook  = /(FBAN|FBAV|FB_IAB)/i.test(ua);
-      var isTiktok    = /(BytedanceWebview|musical_ly|TikTok|aweme)/i.test(ua);
+      var isTiktok = /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua);
       var isNg = isAndroid && (isInstagram || isFacebook || isTiktok);
 
       // NG環境（Android かつ IG/FB/TikTok アプリ内ブラウザ）では
