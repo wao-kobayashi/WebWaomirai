@@ -1,7 +1,32 @@
 script.
+  (function () {
+    var ua = navigator.userAgent;
+    var isNg =
+        /Android/i.test(ua) &&
+        (
+            /Instagram/i.test(ua) ||
+            /(FBAN|FBAV|FB_IAB)/i.test(ua) ||
+            /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua)
+        );
+    if (!isNg) return;
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".js-line-trigger").forEach(function (el) {
+            el.href = "#{UrlEndpointAddFriend}";
+        });
+    });
+  })();
+
+script.
   $(document).ready(function() { 
     //loycusかどうか判定
     var loycus = '#{loycus}'
+
+    /**
+    * NG環境判定＋LINE遷移先の差し替え
+    * Android かつ IG/FB/TikTok アプリ内ブラウザでは
+    * js-line-trigger の遷移先を UrlEndpointAddFriend に差し替える
+    * ページ読み込み直後（ready）にすぐ実行する
+    */
 
     $('.inview-triger').on('inview', function(event, isInView) {
       if (isInView) {
@@ -31,20 +56,6 @@ script.
     function updateButtonBehavior() {
       // 769px以上をPC表示とみなす
       var isWideScreen = $(window).width() >= 769;
-
-      // Android かつ IG/FB/TikTok のアプリ内ブラウザ判定
-      var ua = navigator.userAgent;
-      var isAndroid   = /Android/i.test(ua);
-      var isInstagram = /Instagram/i.test(ua);
-      var isFacebook  = /(FBAN|FBAV|FB_IAB)/i.test(ua);
-      var isTiktok = /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua);
-      var isNg = isAndroid && (isInstagram || isFacebook || isTiktok);
-
-      // NG環境（Android かつ IG/FB/TikTok アプリ内ブラウザ）では
-      // js-line-trigger の遷移先を UrlEndpointAddFriend に差し替える
-      if (isNg) {
-        $('.js-line-trigger').attr('href', '#{UrlEndpointAddFriend}');
-      }
 
       //loycusではない時に発火
       if (!loycus) {

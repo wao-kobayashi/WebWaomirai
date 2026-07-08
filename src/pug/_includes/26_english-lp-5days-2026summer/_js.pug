@@ -25,11 +25,13 @@ script.
 
     }
 
-    function updateButtonBehavior() {
-      // 769px以上をPC表示とみなす
-      var isWideScreen = $(window).width() >= 769;
-
-      // Android かつ IG/FB/TikTok のアプリ内ブラウザ判定
+    // ==============================
+    // NG環境判定＋LINE遷移先の差し替え
+    // Android かつ IG/FB/TikTok アプリ内ブラウザでは
+    // js-line-trigger の遷移先を UrlEndpointAddFriend に差し替える
+    // ページ読み込み直後（ready）にすぐ実行する
+    // ==============================
+    function applyNgLineTrigger() {
       var ua = navigator.userAgent;
       var isAndroid   = /Android/i.test(ua);
       var isInstagram = /Instagram/i.test(ua);
@@ -37,11 +39,14 @@ script.
       var isTiktok = /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua);
       var isNg = isAndroid && (isInstagram || isFacebook || isTiktok);
 
-      // NG環境（Android かつ IG/FB/TikTok アプリ内ブラウザ）では
-      // js-line-trigger の遷移先を UrlEndpointAddFriend に差し替える
       if (isNg) {
         $('.js-line-trigger').attr('href', '#{UrlEndpointAddFriend}');
       }
+    }
+
+    function updateButtonBehavior() {
+      // 769px以上をPC表示とみなす
+      var isWideScreen = $(window).width() >= 769;
 
       //loycusではない時に発火
       if (!loycus) {
@@ -183,6 +188,7 @@ script.
     // 初期化
     // ==============================
     initInviewAnimation();
+    applyNgLineTrigger();
     initLineEntry();
     initVimeoModal();
     initLiffQr();
