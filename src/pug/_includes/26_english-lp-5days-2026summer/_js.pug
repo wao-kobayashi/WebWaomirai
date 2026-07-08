@@ -1,5 +1,33 @@
 
 script.
+  // ------------------------------------------------------------
+  // NG環境でのLINE遷移先の差し替え
+  //   Android の Instagram / Facebook / TikTok アプリ内ブラウザでは
+  //   通常のLINE遷移が正しく動かないため、対象リンク(.js-line-trigger)の
+  //   遷移先を友だち追加用エンドポイント(UrlEndpointAddFriend)に差し替える。
+  //   UA判定のみ即時実行し、リンク書き換えはDOM構築後(DOMContentLoaded)に行う。
+  // ------------------------------------------------------------
+  (function () {
+    // 端末・アプリ内ブラウザの判定（UAはセッション中変化しないので即時判定でよい）
+    var ua = navigator.userAgent;
+    var isNg =
+        /Android/i.test(ua) &&
+        (
+            /Instagram/i.test(ua) ||                                          // Instagram アプリ内ブラウザ
+            /(FBAN|FBAV|FB_IAB)/i.test(ua) ||                                 // Facebook アプリ内ブラウザ
+            /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua)  // TikTok アプリ内ブラウザ
+        );
+    // NG環境でなければ何もしない
+    if (!isNg) return;
+    // DOM構築後、対象リンクの遷移先を差し替える
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".js-line-trigger").forEach(function (el) {
+            el.href = "#{UrlEndpointAddFriend}";
+        });
+    });
+  })();
+
+script.
   $(function () {
     
     // ==============================
@@ -23,25 +51,6 @@ script.
     function modalAlreadyFriendOpen() {
           $('#modal-alreadyfriend, .bg-modal').show();
 
-    }
-
-    // ==============================
-    // NG環境判定＋LINE遷移先の差し替え
-    // Android かつ IG/FB/TikTok アプリ内ブラウザでは
-    // js-line-trigger の遷移先を UrlEndpointAddFriend に差し替える
-    // ページ読み込み直後（ready）にすぐ実行する
-    // ==============================
-    function applyNgLineTrigger() {
-      var ua = navigator.userAgent;
-      var isAndroid   = /Android/i.test(ua);
-      var isInstagram = /Instagram/i.test(ua);
-      var isFacebook  = /(FBAN|FBAV|FB_IAB)/i.test(ua);
-      var isTiktok = /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua);
-      var isNg = isAndroid && (isInstagram || isFacebook || isTiktok);
-
-      if (isNg) {
-        $('.js-line-trigger').attr('href', '#{UrlEndpointAddFriend}');
-      }
     }
 
     function updateButtonBehavior() {
@@ -188,7 +197,6 @@ script.
     // 初期化
     // ==============================
     initInviewAnimation();
-    applyNgLineTrigger();
     initLineEntry();
     initVimeoModal();
     initLiffQr();
