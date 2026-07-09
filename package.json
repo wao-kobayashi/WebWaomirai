@@ -9,7 +9,7 @@
     "build:vite": "vite build",
     "build": "npm run build:eleventy && npm run build:vite && node delete-scss-js.js",
     "sass": "sass src/scss:dist/css --no-source-map --style=compressed",
-    "sass:watch": "sass --watch src/scss:dist/css src/scss/26-english-lp-5days-2026summer.scss:dist/5days-challenge-2026summer/26-english-lp-5days-2026summer.css --no-source-map"
+    "sass:watch": "sass --watch src/scss:dist/css src/scss/26-english-lp-5days-2026summer.scss:dist/5days-challenge-2026summer/26-english-lp-5days-2026summer.css src/scss/27_lp-event-2026summer.scss:dist/event-2026summer/27_lp-event-2026summer.css --no-source-map"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

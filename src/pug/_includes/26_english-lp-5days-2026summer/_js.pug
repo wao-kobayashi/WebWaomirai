@@ -8,6 +8,10 @@ script.
   //   UA判定のみ即時実行し、リンク書き換えはDOM構築後(DOMContentLoaded)に行う。
   // ------------------------------------------------------------
   (function () {
+    // loycus環境では実行しない（loycus=false のときだけリンク差し替えを行う）
+    var loycus = '#{loycus}';
+    if (loycus) return;
+
     // 端末・アプリ内ブラウザの判定（UAはセッション中変化しないので即時判定でよい）
     var ua = navigator.userAgent;
     var isNg =
@@ -17,12 +21,13 @@ script.
             /(FBAN|FBAV|FB_IAB)/i.test(ua) ||                                 // Facebook アプリ内ブラウザ
             /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua)  // TikTok アプリ内ブラウザ
         );
-    // NG環境でなければ何もしない
-    if (!isNg) return;
+    // NG環境の場合はreturnを返す。そうでない場合はendpointをliffにする
+    if (isNg) return;
+
     // DOM構築後、対象リンクの遷移先を差し替える
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".js-line-trigger").forEach(function (el) {
-            el.href = "#{UrlEndpointAddFriend}";
+            el.href = "#{UrlLiffAddFriend}";
         });
     });
   })();
