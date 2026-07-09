@@ -15,15 +15,19 @@ script.
     // 端末・アプリ内ブラウザの判定（UAはセッション中変化しないので即時判定でよい）
     var ua = navigator.userAgent;
     var isNg =
-        /Android/i.test(ua) &&
-        (
-            /Instagram/i.test(ua) ||                                          // Instagram アプリ内ブラウザ
-            /(FBAN|FBAV|FB_IAB)/i.test(ua) ||                                 // Facebook アプリ内ブラウザ
-            /(TikTok|TTWebView|BytedanceWebView|musical_ly|aweme)/i.test(ua)  // TikTok アプリ内ブラウザ
-        );
+    /Android/i.test(ua) &&
+    (
+        // Instagram
+        /(Instagram|InstagramLite|IGAN|IGAPPID)/i.test(ua) ||
+
+        // Facebook / Messenger
+        /(FBAN|FBAV|FB_IAB|FB4A|FBMD|FBSV|FBBV|FBSS|FBCR|FBLC|MessengerForAndroid)/i.test(ua) ||
+
+        // TikTok
+        /(TikTok|TTWebView|BytedanceWebView|BytedanceWebview|trill_|AppName=trill|AppName=musical_ly|musical_ly|aweme|ByteLocale|ByteFullLocale|NewsArticle)/i.test(ua)
+    );
     // NG環境の場合はreturnを返す。そうでない場合はendpointをliffにする
     if (isNg) return;
-
     // DOM構築後、対象リンクの遷移先を差し替える
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".js-line-trigger").forEach(function (el) {
