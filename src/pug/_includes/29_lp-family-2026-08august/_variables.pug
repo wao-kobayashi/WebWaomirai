@@ -75,81 +75,45 @@ mixin BannerSlider2608-August
     div
       img(src=ImgSlider04)
 
-//- イベントデータ
+//- イベントデータ（lp-family-eventdetail のループ元）
 -
   var events = [
-      {
-      id: 'science',
-      thumbnailPhoto:  ImgThumbSciencelevel1Photo,
-      thumbnail: ImgThumbSciencelevel1,
-      target: 'kids',
-      titleShort: '（タイトルを入力）',
-      title: '（タイトルを入力）',
-      dateRaw: '2026-08-04',
-      time: '17:30～18:15',
-      description: '（説明を入力）',
-      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
-    },
-      {
-      id: 'science',
-      thumbnailPhoto: ImgThumbSciencelevel2Photo,
-      thumbnail: ImgThumbSciencelevel2,
-      target: 'kidsteens',
-      titleShort: '（タイトルを入力）',
-      title: '（タイトルを入力）',
-      dateRaw: '2026-08-04',
-      time: '18:30～19:15',
-      description: '（説明を入力）',
-      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
-    },
-
     {
       id: 'economy',
-      thumbnailPhoto: ImgThumbEconomylevel1Photo,
-      thumbnail: ImgThumbEconomylevel1,
-      target: 'kids',
-      titleShort: '（タイトルを入力）',
-      title: '（タイトルを入力）',
-      dateRaw: '2026-08-05',
-      time: '17:30～18:15',
-      description: '（説明を入力）',
-      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+      anchorId: 'event01',
+      thumbnail: ImgThumbMainEc,
+      subject: '💰 経済(お金)',
+      target: '小学生向け',
+      title: '「モノの値段はどう決まる?～セールに隠されたヒミツとは～」',
+      date: '2026年8月27日(木)',
+      time: '19:30～20:15',
+      description: '同じ商品でも、店やタイミングによって値段がちがうのはなぜ？この講座では、モノの値段がどう決まるのか、セールや割引に隠されたお店の工夫をわかりやすく学びます。お金の流れを知ることで、かしこく買い物する力を育てる、楽しい経済入門の授業です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        'お買いものやお金のしくみに興味がある子',
+        '将来かしこくお金とつきあう力をつけたい子'
+      ],
+      teacherImg: ImgEcTeacher,
+      teacherName: '河原 大和',
+      teacherComment: '「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！'
     },
     {
-      id: 'economy',
-      thumbnailPhoto: ImgThumbEconomylevel2Photo,
-      thumbnail: ImgThumbEconomylevel2,
-      target: 'kidsteens',
-      titleShort: '（タイトルを入力）',
-      title: '（タイトルを入力）',
-      dateRaw: '2026-08-05',
-      time: '18:30～19:15',
-      description: '（説明を入力）',
-      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
-    },
-      {
-      id: 'philosophy',
-       thumbnailPhoto: ImgThumbPhilosophylevel1Photo,
-      thumbnail: ImgThumbPhilosophylevel1,
-      target: 'kids',
-      titleShort: '（タイトルを入力）',
-      title: '（タイトルを入力）',
-      dateRaw: '2026-08-06',
-      time: '17:30～18:15',
-      description: '（説明を入力）',
-      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
-    },
-    {
-      id: 'philosophy',
-      thumbnailPhoto: ImgThumbPhilosophylevel2Photo,
-      thumbnail: ImgThumbPhilosophylevel2,
-      target: 'kidsteens',
-      titleShort: '（タイトルを入力）',
-      title: '（タイトルを入力）',
-      dateRaw: '2026-08-06',
-      time: '18:30～19:15',
-      description: '（説明を入力）',
-      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。'
+      id: 'science',
+      anchorId: 'event02',
+      thumbnail: ImgThumbMainSc,
+      subject: '🧪 科学リテラシー',
+      target: '小学生向け',
+      title: '「太陽はなくなるとどうなる？～太陽はなにからできているの？～」',
+      date: '2026年8月28日(金)',
+      time: '19:30～20:15',
+      description: '「太陽がなくなったらどうなる？」私たちの命に不可欠な太陽の正体を探る！「物は何からできているの？」という基本から、固体・液体・気体を超えた状態の秘密、さらに最新ロケットやオーロラの仕組みまで幅広く学べます。クイズで楽しく宇宙のナゾに挑戦！親子で驚きの科学を体感しませんか？',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        '科学探究が好きな子',
+        '太陽についてもっと知ってみたい子'
+      ],
+      teacherImg: ImgScTeacher,
+      teacherName: '河原 大和',
+      teacherComment: '「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！'
     }
-
   ]
