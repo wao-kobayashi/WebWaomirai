@@ -30,15 +30,13 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
-  - const monthClass = 'month-' + PageMonth
-  body(class=monthClass)
+  body
     //01メインビジュアル(PC)
     //2026aprilの時は少しスタイル変える
-    header(class=PageMonth === '26-08august' ? 'header-26-08august' : '')
+    header
       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
     //26年3月末イベント用のヘッダ
-    if PageMonth === '26-08august'
-      .lp-family-fvsp-2608august 
+    .lp-family-fvsp-2608august 
         .slider
           .slider-content  
             +BannerSlider2608-August 
@@ -69,7 +67,7 @@ html
                 br
                 |一緒に体感してみませんか？
             
-      .lp-family-fvpc-2608august
+    .lp-family-fvpc-2608august
         .lp-family-fvpc-wrapper
             .lp-family-fvpc-left
                   .fvlogo
