@@ -110,152 +110,80 @@ html
           .lp-family-eventtoc-item-icon
             i.fa-solid.fa-chevron-down
 
-    //03 イベントの詳細：経済
-    section.lp-family-eventdetail.economy 
-      //- 一旦経済のみ固定（static）で記述。あとで変数化するかもしれない
-      // 経済
-      .lp-family-eventdetail-content.inview-hide.inview-triger.economy(id="event01")
-        // 上部エリア（画像・基本情報）
-        .lp-family-eventdetail-content-top
-          // 左側：サムネイル画像（PC表示のみ）
-          .lp-family-eventdetail-content-top-left.pcimage
-            .lp-family-eventdetail-content-top-left-img
-              img(src=ImgThumbMainEc)
+    //03 イベントの詳細（events をループ）
+    each event in events
+      section.lp-family-eventdetail(class=event.id)
+        .lp-family-eventdetail-content.inview-hide.inview-triger(class=event.id, id=event.anchorId)
+          // 上部エリア（画像・基本情報）
+          .lp-family-eventdetail-content-top
+            // 左側：サムネイル画像（PC表示のみ）
+            .lp-family-eventdetail-content-top-left.pcimage
+              .lp-family-eventdetail-content-top-left-img
+                img(src=event.thumbnail)
 
-          // 右側：詳細情報
-          .lp-family-eventdetail-content-top-right
-            // カテゴリー表示
-            .lp-family-eventdetail-content-top-right-category
-              // 科目ラベル（詳細版）
-              .lp-family-eventdetail-content-top-right-category-child.subject
-                |💰 経済(お金)
-              // 対象学年ラベル（詳細版）
-              .lp-family-eventdetail-content-top-right-category-child.target
-                |小学生向け
+            // 右側：詳細情報
+            .lp-family-eventdetail-content-top-right
+              // カテゴリー表示
+              .lp-family-eventdetail-content-top-right-category
+                // 科目ラベル（詳細版）
+                .lp-family-eventdetail-content-top-right-category-child.subject
+                  = event.subject
+                // 対象学年ラベル（詳細版）
+                .lp-family-eventdetail-content-top-right-category-child.target
+                  = event.target
 
-            // イベントタイトル
-            .lp-family-eventdetail-content-top-right-title
-              |「モノの値段はどう決まる?～セールに隠されたヒミツとは～」
+              // イベントタイトル
+              .lp-family-eventdetail-content-top-right-title
+                = event.title
 
-            // サムネイル画像（SP表示のみ）
-            .lp-family-eventdetail-content-top-right-img.spimage
-              img(src=ImgThumbMainEc)
+              // サムネイル画像（SP表示のみ）
+              .lp-family-eventdetail-content-top-right-img.spimage
+                img(src=event.thumbnail)
 
-            // 日時情報
-            .lp-family-eventdetail-content-top-right-datetime
-              // 日付（完全形式）
-              .lp-family-eventdetail-content-top-right-datetime-date
-                |2026年8月27日(木)
-              // 時計アイコン
-              .lp-family-eventdetail-content-top-right-datetime-icon
-                img(src=ImgIcnClock)
-              // 時刻
-              .lp-family-eventdetail-content-top-right-datetime-time
-                |19:30～20:15
+              // 日時情報
+              .lp-family-eventdetail-content-top-right-datetime
+                // 日付（完全形式）
+                .lp-family-eventdetail-content-top-right-datetime-date
+                  = event.date
+                // 時計アイコン
+                .lp-family-eventdetail-content-top-right-datetime-icon
+                  img(src=ImgIcnClock)
+                // 時刻
+                .lp-family-eventdetail-content-top-right-datetime-time
+                  = event.time
 
-            // イベント説明文
-            .lp-family-eventdetail-content-top-right-text
-              |同じ商品でも、店やタイミングによって値段がちがうのはなぜ？この講座では、モノの値段がどう決まるのか、セールや割引に隠されたお店の工夫をわかりやすく学びます。お金の流れを知ることで、かしこく買い物する力を育てる、楽しい経済入門の授業です。
-              p.lp-family-eventdetail-content-top-right-text-note
-                |※授業終了後にワオ未来塾の保護者向け説明会を開催致します。
+              // イベント説明文
+              .lp-family-eventdetail-content-top-right-text
+                = event.description
+                if event.note
+                  p.lp-family-eventdetail-content-top-right-text-note
+                    = event.note
 
-            // こんな子におすすめ
-            .lp-family-eventdetail-content-recommend
-              .lp-family-eventdetail-content-recommend-title
-                |こんな子におすすめ
-              ul.lp-family-eventdetail-content-recommend-list
-                li お買いものやお金のしくみに興味がある子
-                li 将来かしこくお金とつきあう力をつけたい子
+              // こんな子におすすめ
+              if event.recommend && event.recommend.length
+                .lp-family-eventdetail-content-recommend
+                  .lp-family-eventdetail-content-recommend-title
+                    |こんな子におすすめ
+                  ul.lp-family-eventdetail-content-recommend-list
+                    each item in event.recommend
+                      li= item
 
-            // 担当講師
-            .lp-family-eventdetail-content-teacher
-              .lp-family-eventdetail-content-teacher-title
-                |担当講師
-              .lp-family-eventdetail-content-teacher-body
-                .lp-family-eventdetail-content-teacher-body-img
-                  img(src=ImgEcTeacher)
-                .lp-family-eventdetail-content-teacher-body-info
-                  .lp-family-eventdetail-content-teacher-body-info-name
-                    |河原 大和
-                  .lp-family-eventdetail-content-teacher-body-info-comment
-                    |「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！
+              // 担当講師
+              .lp-family-eventdetail-content-teacher
+                .lp-family-eventdetail-content-teacher-title
+                  |担当講師
+                .lp-family-eventdetail-content-teacher-body
+                  .lp-family-eventdetail-content-teacher-body-img
+                    img(src=event.teacherImg)
+                  .lp-family-eventdetail-content-teacher-body-info
+                    .lp-family-eventdetail-content-teacher-body-info-name
+                      = event.teacherName
+                    .lp-family-eventdetail-content-teacher-body-info-comment
+                      = event.teacherComment
 
-            // CTAボタン
-            .lp-family-eventdetail-content-cta
-              +btn-cta
-    //03 イベントの詳細：経済
-    section.lp-family-eventdetail.science 
-      //- 一旦経済のみ固定（static）で記述。あとで変数化するかもしれない
-      // 経済
-      .lp-family-eventdetail-content.inview-hide.inview-triger.economy(id="event01")
-        // 上部エリア（画像・基本情報）
-        .lp-family-eventdetail-content-top
-          // 左側：サムネイル画像（PC表示のみ）
-          .lp-family-eventdetail-content-top-left.pcimage
-            .lp-family-eventdetail-content-top-left-img
-              img(src=ImgThumbMainEc)
-
-          // 右側：詳細情報
-          .lp-family-eventdetail-content-top-right
-            // カテゴリー表示
-            .lp-family-eventdetail-content-top-right-category
-              // 科目ラベル（詳細版）
-              .lp-family-eventdetail-content-top-right-category-child.subject
-                |💰 経済(お金)
-              // 対象学年ラベル（詳細版）
-              .lp-family-eventdetail-content-top-right-category-child.target
-                |小学生向け
-
-            // イベントタイトル
-            .lp-family-eventdetail-content-top-right-title
-              |「モノの値段はどう決まる?～セールに隠されたヒミツとは～」
-
-            // サムネイル画像（SP表示のみ）
-            .lp-family-eventdetail-content-top-right-img.spimage
-              img(src=ImgThumbMainEc)
-
-            // 日時情報
-            .lp-family-eventdetail-content-top-right-datetime
-              // 日付（完全形式）
-              .lp-family-eventdetail-content-top-right-datetime-date
-                |2026年8月27日(木)
-              // 時計アイコン
-              .lp-family-eventdetail-content-top-right-datetime-icon
-                img(src=ImgIcnClock)
-              // 時刻
-              .lp-family-eventdetail-content-top-right-datetime-time
-                |19:30～20:15
-
-            // イベント説明文
-            .lp-family-eventdetail-content-top-right-text
-              |同じ商品でも、店やタイミングによって値段がちがうのはなぜ？この講座では、モノの値段がどう決まるのか、セールや割引に隠されたお店の工夫をわかりやすく学びます。お金の流れを知ることで、かしこく買い物する力を育てる、楽しい経済入門の授業です。
-              p.lp-family-eventdetail-content-top-right-text-note
-                |※授業終了後にワオ未来塾の保護者向け説明会を開催致します。
-
-            // こんな子におすすめ
-            .lp-family-eventdetail-content-recommend
-              .lp-family-eventdetail-content-recommend-title
-                |こんな子におすすめ
-              ul.lp-family-eventdetail-content-recommend-list
-                li お買いものやお金のしくみに興味がある子
-                li 将来かしこくお金とつきあう力をつけたい子
-
-            // 担当講師
-            .lp-family-eventdetail-content-teacher
-              .lp-family-eventdetail-content-teacher-title
-                |担当講師
-              .lp-family-eventdetail-content-teacher-body
-                .lp-family-eventdetail-content-teacher-body-img
-                  img(src=ImgEcTeacher)
-                .lp-family-eventdetail-content-teacher-body-info
-                  .lp-family-eventdetail-content-teacher-body-info-name
-                    |河原 大和
-                  .lp-family-eventdetail-content-teacher-body-info-comment
-                    |「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！
-
-            // CTAボタン
-            .lp-family-eventdetail-content-cta
-              +btn-cta
+              // CTAボタン
+              .lp-family-eventdetail-content-cta
+                +btn-cta
 
 
     .join-faq
