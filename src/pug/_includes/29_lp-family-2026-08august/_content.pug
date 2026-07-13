@@ -93,27 +93,28 @@ html
 
     //02 目次
     section.lp-family-eventtoc
-      .lp-family-eventtoc-list
-        a.lp-family-eventtoc-item.economy(href="#event01")
-          .lp-family-eventtoc-item-img
-            img(src=ImgThumbSmallEc)
-          .lp-family-eventtoc-item-body
-            .lp-family-eventtoc-item-body-title
-              |モノの値段はどう決まる? (経済)
-            .lp-family-eventtoc-item-body-date
-              |8/27(水) 19:30-20:15
-          .lp-family-eventtoc-item-icon
-            i.fa-solid.fa-chevron-down
-        a.lp-family-eventtoc-item.science(href="#event02")
-          .lp-family-eventtoc-item-img
-            img(src=ImgThumbSmallSc)
-          .lp-family-eventtoc-item-body
-            .lp-family-eventtoc-item-body-title
-              |太陽はなくなるとどうなる？(科学)
-            .lp-family-eventtoc-item-body-date
-              |8/28(金) 19:30-20:15
-          .lp-family-eventtoc-item-icon
-            i.fa-solid.fa-chevron-down
+      .lp-family-eventtoc-content
+        .lp-family-eventtoc-list
+          a.lp-family-eventtoc-item.economy(href="#event01")
+            .lp-family-eventtoc-item-img
+              img(src=ImgThumbSmallEc)
+            .lp-family-eventtoc-item-body
+              .lp-family-eventtoc-item-body-title
+                |モノの値段はどう決まる? (経済)
+              .lp-family-eventtoc-item-body-date
+                |8/27(水) 19:30-20:15
+            .lp-family-eventtoc-item-icon
+              i.fa-solid.fa-chevron-down
+          a.lp-family-eventtoc-item.science(href="#event02")
+            .lp-family-eventtoc-item-img
+              img(src=ImgThumbSmallSc)
+            .lp-family-eventtoc-item-body
+              .lp-family-eventtoc-item-body-title
+                |太陽はなくなるとどうなる？(科学)
+              .lp-family-eventtoc-item-body-date
+                |8/28(金) 19:30-20:15
+            .lp-family-eventtoc-item-icon
+              i.fa-solid.fa-chevron-down
 
     //03 イベントの詳細（events をループ）
     each event in events
