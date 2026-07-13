@@ -187,9 +187,9 @@ $fvinfo-sp: 60px;
 .lp-family-fvpc-2608august {
   background-color: #fff8e0;
   background-image:
-    linear-gradient(to right, #cabe36 0.5px, transparent 0.5px),
-    linear-gradient(to bottom, #cabe36 0.5px, transparent 0.5px);
-  background-size: 20px 20px;
+    linear-gradient(to right, #e2d764 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, #e2d764 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
   width: 100%;
   padding: 0;
   box-sizing: border-box;
@@ -203,7 +203,7 @@ $fvinfo-sp: 60px;
 .lp-family-fvpc-2608august .lp-family-fvpc-wrapper {
   max-width: $fv-width;
   width: 90%;
-  height: 85vh;
+  height: 100vh;
   display: flex;
   align-items: stretch; // 右カラムを左の高さに合わせる
   justify-content: space-between;
@@ -221,11 +221,12 @@ $fvinfo-sp: 60px;
 
 .lp-family-fvpc-2608august .lp-family-fvpc-left img {
   width: 100%;
+  margin: -30px 0 2cqb !important;
 }
 
 // 日程・場所 情報ブロック
 .lp-family-fvpc-2608august .lp-family-fvpc-left .fvinfo {
-  margin: 30px auto 20px;
+  margin: 10px auto 20px;
   width: 100%;
   position: relative;
   z-index: 10;
@@ -255,6 +256,11 @@ $fvinfo-sp: 60px;
 .lp-family-fvpc-2608august .lp-family-fvpc-left .fvinfo .fvinfo-content {
   padding: 8px 12px;
   font-size: $font-size-s;
+}
+
+.fvtext {
+  font-size: $font-size-m;
+  line-height: $lineheight-relaxed;
 }
 
 .lp-family-fvpc-2608august .lp-family-fvpc-left .fvinfo .fvinfo-content.first {
@@ -350,7 +356,7 @@ section.lp-family-eventtoc {
   @include section-maxwidth;
   margin: 50px auto 50px;
   @include responsive-style($breakpoint-sp) {
-    margin: 0 auto 30px;
+    margin: 40px auto 40px;
   }
   .lp-family-eventtoc-list {
     display: flex;
@@ -364,8 +370,8 @@ section.lp-family-eventtoc {
     flex: 1;
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 12px 16px;
+    gap: 18px;
+    padding: 16px 20px;
     background: $cl-white;
     box-shadow: inset 0 0 0 3px #f5f5f5; // 内側の薄グレー 1px
     border-radius: $border-radius-big;
@@ -377,13 +383,21 @@ section.lp-family-eventtoc {
     &.science {
       border: 2px solid $cl-science;
     }
-
+    @include responsive-style($breakpoint-sp) {
+      gap: 16px;
+    }
     .lp-family-eventtoc-item-img {
       width: 64px;
       height: 64px;
       flex-shrink: 0;
       border-radius: $border-radius-middle;
       overflow: hidden;
+      @include responsive-style($breakpoint-sp) {
+        width: 60px;
+        height: 60px;
+        border-radius: $border-radius-middle;
+        align-self: flex-start;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -393,15 +407,21 @@ section.lp-family-eventtoc {
     .lp-family-eventtoc-item-body {
       flex: 1;
       .lp-family-eventtoc-item-body-title {
-        font-size: $font-size-m;
+        font-size: $font-size-l;
         font-weight: bold;
         line-height: $lineheight-tight;
         color: $cl-black;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-m;
+        }
       }
       .lp-family-eventtoc-item-body-date {
-        font-size: $font-size-s;
+        font-size: $font-size-m;
         color: $cl-gray;
         margin: 6px 0 0;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-ss;
+        }
       }
     }
     .lp-family-eventtoc-item-icon {
@@ -434,8 +454,11 @@ section.lp-family-eventtoc {
 
 //03 イベントの詳細
 section.lp-family-eventdetail {
-  padding: 60px 0;
   margin: 0 0 0 !important;
+  padding: 60px 0;
+  @include responsive-style($breakpoint-sp) {
+    padding: 30px 0;
+  }
   &.economy {
     background: #e4f7ff;
   }
@@ -450,9 +473,10 @@ section.lp-family-eventdetail {
     padding: 36px 36px 48px;
     background: $cl-white;
     @include responsive-style($breakpoint-sp) {
-      margin: 0 auto 30px;
-      padding: 30px 20px 30px;
-      border-radius: $border-radius-bigplus;
+      width: calc(100% - 40px);
+      margin: 0 auto 0px;
+      padding: 20px 20px 20px;
+      border-radius: $border-radius-big;
     }
   }
 
@@ -704,7 +728,7 @@ section.lp-family-eventdetail {
     }
     .lp-family-eventdetail-content-teacher-body {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
       .lp-family-eventdetail-content-teacher-body-img {
         width: 80px;
@@ -724,11 +748,17 @@ section.lp-family-eventdetail {
           font-size: $font-size-l;
           font-weight: bold;
           margin: 0 0 4px;
+          @include responsive-style($breakpoint-sp) {
+            font-size: $font-size-m;
+          }
         }
         .lp-family-eventdetail-content-teacher-body-info-comment {
           font-size: $font-size-m;
           line-height: $lineheight-relaxed;
           color: $cl-gray;
+          @include responsive-style($breakpoint-sp) {
+            font-size: $font-size-s;
+          }
         }
       }
     }
@@ -746,11 +776,18 @@ section.lp-family-eventdetail {
     .btn-cta {
       margin: 60px 0 20px !important;
       width: 90% !important;
+      @include responsive-style($breakpoint-sp) {
+        margin: 30px auto 20px !important;
+        width: 100% !important;
+      }
     }
     .lp-family-eventdetail-content-cta-note {
       color: $cl-graylight;
       font-size: $font-size-s;
       margin: 0 0 20px;
+      @include responsive-style($breakpoint-sp) {
+        text-align: center;
+      }
     }
   }
 }
@@ -779,14 +816,10 @@ section.lp-family-eventdetail {
 
 // -----------------------------------------------------------
 
-.join-faq {
-  // background: $cl-graylightest;
-}
-
 // かんたん5STEPで参加可能
 .join-5steps {
-  padding: 50px 0;
-  margin-top: 50px;
+  padding: 60px 0;
+  margin-top: 0px;
   .join-5steps-title {
     @extend %underbar-title;
   }
@@ -794,11 +827,11 @@ section.lp-family-eventdetail {
     @extend %blocks-margin;
     background: $cl-white;
     margin: 0 auto 30px;
-    padding: 25px 0;
+    padding: 35px 25px;
     border-radius: 8px;
-    &:last-child {
-      margin: 0 auto 0px !important;
-    }
+    // &:last-child {
+    //   margin: 0 auto 0px !important;
+    // }
     .join-5steps-box-head {
       display: flex;
       margin: 0 auto 20px;
@@ -843,7 +876,7 @@ section.lp-family-eventdetail {
     }
     .join-5steps-box-title {
       font-weight: bold;
-      font-size: 17px;
+      font-size: $font-size-xl;
       text-align: center;
       letter-spacing: 1.5px;
     }
@@ -852,7 +885,7 @@ section.lp-family-eventdetail {
       font-weight: normal;
       width: calc(100% - 40px);
       margin: 20px auto 0;
-      font-size: 15px;
+      font-size: $font-size-l;
       line-height: 1.75;
       a {
         text-decoration: underline;
@@ -872,23 +905,28 @@ section.lp-family-eventdetail {
     width: $maincontentWidth;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .join-5steps-box {
-      width: calc(50% - 25px);
-      margin: 50px 50px 0 0;
+      max-width: 900px;
+      width: 100%;
+      margin: 45px auto 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      &:nth-child(2n) {
-        margin-right: 0;
+      justify-content: flex-start;
+      &:first-child {
+        margin: 0px auto 0;
       }
-      &:nth-child(-n + 2) {
-        margin-top: 0;
-      }
-      &:last-child {
-        margin: 50px 0 0 0 !important;
-      }
+      // &:nth-child(2n) {
+      //   margin-right: 0;
+      // }
+      // &:nth-child(-n + 2) {
+      //   margin-top: 0;
+      // }
+      // &:last-child {
+      //   margin: 50px 0 0 0 !important;
+      // }
       .join-5steps-box-head {
         width: 100%;
       }
@@ -898,7 +936,8 @@ section.lp-family-eventdetail {
 
 // FAQ
 .faq {
-  width: $wrapper-sp;
+  max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 0 50px;
   .faq-title {
@@ -906,6 +945,7 @@ section.lp-family-eventdetail {
   }
   .faq-content {
     background: $cl-white;
+    max-width: 900px;
     padding: 20px;
     margin: 0 auto 30px;
     border-radius: 8px;
@@ -928,7 +968,7 @@ section.lp-family-eventdetail {
         }
       }
       .faq-content-question-right {
-        font-size: 15px;
+        font-size: $font-size-l;
         font-weight: bold;
         padding: 5px 0 0;
       }
@@ -947,7 +987,7 @@ section.lp-family-eventdetail {
         flex-shrink: 0;
       }
       .faq-content-answer-right {
-        font-size: 14px;
+        font-size: $font-size-m;
         padding: 0px 0 0;
       }
     }
@@ -980,7 +1020,8 @@ section.lp-family-eventdetail {
 // ワオ未来塾って？
 .about-wao {
   @include content-width;
-  margin: 50px auto;
+  padding: 75px 0;
+  margin: 0px auto;
   .about-wao-title {
     @extend %wao-title;
   }
