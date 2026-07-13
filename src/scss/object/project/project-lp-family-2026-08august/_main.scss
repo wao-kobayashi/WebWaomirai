@@ -348,7 +348,7 @@ $cl-waogreen: #1f8c69;
 //02 目次
 section.lp-family-eventtoc {
   @include section-maxwidth;
-  margin: 40px auto 40px;
+  margin: 50px auto 50px;
   @include responsive-style($breakpoint-sp) {
     margin: 0 auto 30px;
   }
@@ -551,6 +551,11 @@ section.lp-family-eventdetail {
     .lp-family-eventdetail-content-top-right-text {
       font-size: $font-size-m;
       line-height: $lineheight-relaxed;
+      .lp-family-eventdetail-content-top-right-text-title {
+        font-size: $font-size-l;
+        font-weight: bold;
+        margin: 0 0 12px;
+      }
       .lp-family-eventdetail-content-top-right-text-note {
         font-size: $font-size-s;
         color: $cl-graylight;
@@ -663,7 +668,7 @@ section.lp-family-eventdetail {
 
   // こんな子におすすめ
   .lp-family-eventdetail-content-recommend {
-    margin: 45px 0 0;
+    margin: 60px 0 0;
     .lp-family-eventdetail-content-recommend-title {
       font-size: $font-size-l;
       font-weight: bold;
@@ -691,7 +696,7 @@ section.lp-family-eventdetail {
 
   // 担当講師
   .lp-family-eventdetail-content-teacher {
-    margin: 45px 0 0;
+    margin: 60px 0 0;
     .lp-family-eventdetail-content-teacher-title {
       font-size: $font-size-l;
       font-weight: bold;
@@ -700,7 +705,7 @@ section.lp-family-eventdetail {
     .lp-family-eventdetail-content-teacher-body {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
       .lp-family-eventdetail-content-teacher-body-img {
         width: 80px;
         height: 80px;
@@ -716,12 +721,12 @@ section.lp-family-eventdetail {
       .lp-family-eventdetail-content-teacher-body-info {
         flex: 1;
         .lp-family-eventdetail-content-teacher-body-info-name {
-          font-size: $font-size-m;
+          font-size: $font-size-l;
           font-weight: bold;
           margin: 0 0 4px;
         }
         .lp-family-eventdetail-content-teacher-body-info-comment {
-          font-size: $font-size-s;
+          font-size: $font-size-m;
           line-height: $lineheight-relaxed;
           color: $cl-gray;
         }
@@ -734,11 +739,18 @@ section.lp-family-eventdetail {
     margin: 45px 0 0;
     display: flex;
     justify-content: center;
+    align-self: center;
+    flex-direction: column;
     padding: 0px 0 0;
     border-top: $cl-gray 1px dashed;
     .btn-cta {
-      margin: 60px 0 !important;
+      margin: 60px 0 20px !important;
       width: 90% !important;
+    }
+    .lp-family-eventdetail-content-cta-note {
+      color: $cl-graylight;
+      font-size: $font-size-s;
+      margin: 0 0 20px;
     }
   }
 }

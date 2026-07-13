@@ -154,8 +154,11 @@ html
 
               // イベント説明文
               .lp-family-eventdetail-content-top-right-text
+                p.lp-family-eventdetail-content-top-right-text-title
+                    |授業内容
                 = event.description
                 if event.note
+   
                   p.lp-family-eventdetail-content-top-right-text-note
                     = event.note
 
@@ -184,6 +187,9 @@ html
               // CTAボタン
               .lp-family-eventdetail-content-cta
                 +btn-cta
+                .lp-family-eventdetail-content-cta-note
+                  |※複数テーマの申し込みも可能です
+                
 
 
     .join-faq
