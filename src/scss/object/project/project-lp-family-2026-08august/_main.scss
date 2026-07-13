@@ -1,24 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700;800&display=swap");
 
 // ============================================================
-// 設定変数
+// 変数
 // ============================================================
-$fv-width: 1060px;
 
+// FV
+$fv-width: 1060px;
+$pc-left: 44%; // PC左カラム幅
+$pc-right: 42%; // PC右カラム幅（padding 20px × 2 分を引く）
+$fvinfo-sp: 60px; // SP版 日程・場所ブロックの見出し幅
+
+// バナースライダー
 $item-width: 220px; // バナー1枚の横幅
 $item-margin: 15px; // 左右マージン（片側）
 $item-count: 6; // 元のアイテム数
 $duration: 40s; // スクロール速度（大きいほど遅い）
 $padding-top: 30px;
 $padding-bottom: 15px;
+$item-outer: $item-width + ($item-margin * 2); // 1枚あたりの占有幅（変更不要）
+$track-width: $item-outer * $item-count; // 6枚分の合計幅 = 移動量（変更不要）
 
-// 計算（変更不要）
-$item-outer: $item-width + ($item-margin * 2); // 1枚あたりの占有幅
-$track-width: $item-outer * $item-count; // 6枚分の合計幅（= 移動量）
+// 28_lp-math-quest からの移植コード用
+$cl-waogreen: #1f8c69;
 
-// PCレイアウト用
-$pc-left: 44%;
-$pc-right: 42%; // padding 20px × 2 分を引く
+// ============================================================
+// mixin・プレースホルダー
+// ============================================================
+
+@mixin gradient-waogreen {
+  background: linear-gradient(283.05deg, #0d825d -0.33%, #1f8c69 89.33%);
+}
+
+@mixin box-shadow-small {
+  box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.06);
+}
+
+%blocks-margin {
+  width: calc(100% - 30px);
+}
+
+%underbar-title {
+  font-size: 32px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  font-weight: 300;
+  margin: 0 0 30px;
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: $cl-waogreen;
+    margin: 20px auto 0;
+  }
+}
+
+%wao-title {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin: 0 auto 30px;
+}
 
 // ============================================================
 // キーフレーム
@@ -48,7 +90,6 @@ $pc-right: 42%; // padding 20px × 2 分を引く
 // ヘッダー
 // ============================================================
 
-//00ヘッダー
 header {
   position: relative;
   height: 78px;
@@ -79,7 +120,7 @@ header {
 }
 
 // ============================================================
-// SP レイアウト
+// ファーストビュー（SP）
 // ============================================================
 
 .lp-family-fvsp-2608august {
@@ -128,8 +169,6 @@ header {
 }
 
 // 日程・場所 情報ブロック
-$fvinfo-sp: 60px;
-
 .lp-family-fvsp-2608august .fvinfo {
   margin: 20px auto 30px;
   width: calc(100% - 80px);
@@ -181,7 +220,7 @@ $fvinfo-sp: 60px;
 }
 
 // ============================================================
-// PC レイアウト
+// ファーストビュー（PC）
 // ============================================================
 
 .lp-family-fvpc-2608august {
@@ -258,13 +297,13 @@ $fvinfo-sp: 60px;
   font-size: $font-size-s;
 }
 
+.lp-family-fvpc-2608august .lp-family-fvpc-left .fvinfo .fvinfo-content.first {
+  border-bottom: 1px solid $cl-black;
+}
+
 .fvtext {
   font-size: $font-size-m;
   line-height: $lineheight-relaxed;
-}
-
-.lp-family-fvpc-2608august .lp-family-fvpc-left .fvinfo .fvinfo-content.first {
-  border-bottom: 1px solid $cl-black;
 }
 
 // 右カラム（縦スクロールエリア）
@@ -315,43 +354,11 @@ $fvinfo-sp: 60px;
   border-radius: $border-radius-big;
   border: 1px solid #000000;
 }
+
 // ============================================================
-// 28_lp-math-questより移植: join-faq / about / footer
+// 目次
 // ============================================================
 
-// --- 移植コードが依存する変数・mixin・プレースホルダー ---
-
-$cl-waogreen: #1f8c69;
-
-@mixin gradient-waogreen {
-  background: linear-gradient(283.05deg, #0d825d -0.33%, #1f8c69 89.33%);
-}
-
-@mixin box-shadow-small {
-  box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.06);
-}
-
-%blocks-margin {
-  width: calc(100% - 30px);
-}
-
-%underbar-title {
-  font-size: 32px;
-  letter-spacing: 2.5px;
-  text-align: center;
-  font-weight: 300;
-  margin: 0 0 30px;
-  &::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 2px;
-    background: $cl-waogreen;
-    margin: 20px auto 0;
-  }
-}
-
-//02 目次
 section.lp-family-eventtoc {
   @include section-maxwidth;
   margin: 50px auto 50px;
@@ -452,7 +459,10 @@ section.lp-family-eventtoc {
   }
 }
 
-//03 イベントの詳細
+// ============================================================
+// イベント詳細
+// ============================================================
+
 section.lp-family-eventdetail {
   margin: 0 0 0 !important;
   padding: 60px 0;
@@ -542,7 +552,6 @@ section.lp-family-eventdetail {
         margin: 26px 0 26px;
         display: grid;
         grid-template-columns: 30px 1fr;
-        // grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 6px;
       }
@@ -589,6 +598,18 @@ section.lp-family-eventdetail {
     }
   }
 
+  // サムネイル画像（SP表示）
+  .lp-family-eventdetail-content-top-right-img {
+    text-align: center;
+    margin: 20px 0 0;
+    img {
+      border-radius: $border-radius-middle;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // メリット
   .lp-family-eventdetail-content-merit {
     margin: 60px 0 0;
     border-radius: $border-radius-bigplus;
@@ -642,10 +663,8 @@ section.lp-family-eventdetail {
         gap: 27px;
 
         @include responsive-style($breakpoint-sp) {
-          // margin: 26px 0 26px;
           display: grid;
           grid-template-columns: 30px 1fr;
-          // grid-template-rows: repeat(2, 1fr);
           grid-column-gap: 20px;
           padding: 20px 0px;
         }
@@ -678,15 +697,6 @@ section.lp-family-eventdetail {
           }
         }
       }
-    }
-  }
-  .lp-family-eventdetail-content-top-right-img {
-    text-align: center;
-    margin: 20px 0 0;
-    img {
-      border-radius: $border-radius-middle;
-      max-width: 100%;
-      height: auto;
     }
   }
 
@@ -792,7 +802,7 @@ section.lp-family-eventdetail {
   }
 }
 
-//03 イベントの詳細　教科ごとの色付け
+// 教科ごとの色付け
 @each $category, $values in $categories {
   .#{$category} {
     .lp-family-eventdetail-content-top-right-category-child.subject {
@@ -814,9 +824,10 @@ section.lp-family-eventdetail {
   }
 }
 
-// -----------------------------------------------------------
+// ============================================================
+// 参加ステップ（5STEP）
+// ============================================================
 
-// かんたん5STEPで参加可能
 .join-5steps {
   padding: 60px 0;
   margin-top: 0px;
@@ -829,9 +840,6 @@ section.lp-family-eventdetail {
     margin: 0 auto 30px;
     padding: 35px 25px;
     border-radius: 8px;
-    // &:last-child {
-    //   margin: 0 auto 0px !important;
-    // }
     .join-5steps-box-head {
       display: flex;
       margin: 0 auto 20px;
@@ -918,15 +926,6 @@ section.lp-family-eventdetail {
       &:first-child {
         margin: 0px auto 0;
       }
-      // &:nth-child(2n) {
-      //   margin-right: 0;
-      // }
-      // &:nth-child(-n + 2) {
-      //   margin-top: 0;
-      // }
-      // &:last-child {
-      //   margin: 50px 0 0 0 !important;
-      // }
       .join-5steps-box-head {
         width: 100%;
       }
@@ -934,7 +933,10 @@ section.lp-family-eventdetail {
   }
 }
 
+// ============================================================
 // FAQ
+// ============================================================
+
 .faq {
   max-width: 900px;
   width: 100%;
@@ -1006,12 +1008,9 @@ section.lp-family-eventdetail {
   }
 }
 
-%wao-title {
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 2px;
-  margin: 0 auto 30px;
-}
+// ============================================================
+// ワオ未来塾紹介
+// ============================================================
 
 .wao-content {
   background: $cl-white;
@@ -1209,7 +1208,10 @@ section.lp-family-eventdetail {
   }
 }
 
+// ============================================================
 // フッター
+// ============================================================
+
 footer {
   width: 100%;
   padding: 50px 0px 0px;
