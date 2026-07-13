@@ -7,7 +7,6 @@ $cl-bg-creamyellow: #fff8e0;
 $cl-bg-creamyellow-dark: #fff2c4;
 $cl-border-brown: #d8d2bc;
 $cl-btn-cta: #f88c6a;
-$cl-title-underline: #febcad;
 $cl-merit-yellow: #f8d86a;
 $cl-feature-yellow: #fffb96;
 
@@ -25,6 +24,6 @@ $categories: (
   "economy": (
     main-color: $cl-economy,
     sp-main-color: $cl-economy,
-    pale-color: #eaf6ff // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    pale-color: #eaf6ff, // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );

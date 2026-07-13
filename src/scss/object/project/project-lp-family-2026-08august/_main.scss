@@ -345,14 +345,108 @@ $cl-waogreen: #1f8c69;
   }
 }
 
+//02 目次
+section.lp-family-eventtoc {
+  @include section-maxwidth;
+  margin: 40px auto 40px;
+  @include responsive-style($breakpoint-sp) {
+    margin: 0 auto 30px;
+  }
+  .lp-family-eventtoc-list {
+    display: flex;
+    gap: 24px;
+    @include responsive-style($breakpoint-sp) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  .lp-family-eventtoc-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: $cl-white;
+    box-shadow: inset 0 0 0 3px #f5f5f5; // 内側の薄グレー 1px
+    border-radius: $border-radius-big;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease;
+    &.economy {
+      border: 2px solid $cl-economy;
+    }
+    &.science {
+      border: 2px solid $cl-science;
+    }
+
+    .lp-family-eventtoc-item-img {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      border-radius: $border-radius-middle;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .lp-family-eventtoc-item-body {
+      flex: 1;
+      .lp-family-eventtoc-item-body-title {
+        font-size: $font-size-m;
+        font-weight: bold;
+        line-height: $lineheight-tight;
+        color: $cl-black;
+      }
+      .lp-family-eventtoc-item-body-date {
+        font-size: $font-size-s;
+        color: $cl-gray;
+        margin: 6px 0 0;
+      }
+    }
+    .lp-family-eventtoc-item-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: $border-radius-full;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid currentColor;
+      i {
+        font-size: 14px;
+      }
+    }
+    &.economy .lp-family-eventtoc-item-icon {
+      color: $cl-economy;
+      i {
+        color: $cl-economy;
+      }
+    }
+    &.science .lp-family-eventtoc-item-icon {
+      color: $cl-science-darken;
+      i {
+        color: $cl-science-darken;
+      }
+    }
+  }
+}
+
 //03 イベントの詳細
 section.lp-family-eventdetail {
-  @include section-maxwidth;
-  background: $cl-bg-creamyellow;
+  padding: 60px 0;
+  margin: 0 0 0 !important;
+  &.economy {
+    background: #e4f7ff;
+  }
+  &.science {
+    background: #f3fbcf;
+  }
+
   .lp-family-eventdetail-content {
-    width: 100%;
+    @include section-maxwidth;
     border-radius: $border-radius-bigplus;
-    margin: 0 auto 60px;
+    margin: 0 auto 0px;
     padding: 36px 36px 48px;
     background: $cl-white;
     @include responsive-style($breakpoint-sp) {
@@ -467,7 +561,7 @@ section.lp-family-eventdetail {
   }
 
   .lp-family-eventdetail-content-merit {
-    margin: 45px 0 0;
+    margin: 60px 0 0;
     border-radius: $border-radius-bigplus;
     display: flex;
     align-items: flex-start;
@@ -564,6 +658,87 @@ section.lp-family-eventdetail {
       border-radius: $border-radius-middle;
       max-width: 100%;
       height: auto;
+    }
+  }
+
+  // こんな子におすすめ
+  .lp-family-eventdetail-content-recommend {
+    margin: 45px 0 0;
+    .lp-family-eventdetail-content-recommend-title {
+      font-size: $font-size-l;
+      font-weight: bold;
+      margin: 0 0 12px;
+    }
+    .lp-family-eventdetail-content-recommend-list {
+      li {
+        position: relative;
+        font-size: $font-size-m;
+        line-height: $lineheight-relaxed;
+        padding: 0 0 0 20px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 2px;
+          top: 0.7em;
+          width: 8px;
+          height: 8px;
+          border-radius: $border-radius-full;
+          background: $cl-graylight;
+        }
+      }
+    }
+  }
+
+  // 担当講師
+  .lp-family-eventdetail-content-teacher {
+    margin: 45px 0 0;
+    .lp-family-eventdetail-content-teacher-title {
+      font-size: $font-size-l;
+      font-weight: bold;
+      margin: 0 0 12px;
+    }
+    .lp-family-eventdetail-content-teacher-body {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .lp-family-eventdetail-content-teacher-body-img {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+        border-radius: $border-radius-middle;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .lp-family-eventdetail-content-teacher-body-info {
+        flex: 1;
+        .lp-family-eventdetail-content-teacher-body-info-name {
+          font-size: $font-size-m;
+          font-weight: bold;
+          margin: 0 0 4px;
+        }
+        .lp-family-eventdetail-content-teacher-body-info-comment {
+          font-size: $font-size-s;
+          line-height: $lineheight-relaxed;
+          color: $cl-gray;
+        }
+      }
+    }
+  }
+
+  // CTAボタン
+  .lp-family-eventdetail-content-cta {
+    margin: 45px 0 0;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0 0;
+    border-top: $cl-gray 1px dashed;
+    .btn-cta {
+      margin: 60px 0 !important;
+      width: 90% !important;
     }
   }
 }
