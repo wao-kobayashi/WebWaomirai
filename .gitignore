@@ -1,4 +1,4 @@
 node_modules
-dist/*
-!dist/images/
-!dist/images/**
+dist/**
+!dist/**/
+!dist/**/images/**

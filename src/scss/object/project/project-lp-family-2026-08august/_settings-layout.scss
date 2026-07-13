@@ -6,6 +6,12 @@ $middlewidth: 800px;
 $smallwidth: 700px;
 $ctabuttonwidth: 500px;
 $breakpoint-sp: 768px;
+$maincontentWidth: 800px;
+$wrapper-sp: 89.334%;
+
+@mixin content-width {
+  width: $wrapper-sp;
+}
 
 @mixin section-maxwidth {
   max-width: 1200px;
