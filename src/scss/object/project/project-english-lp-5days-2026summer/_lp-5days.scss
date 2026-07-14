@@ -789,16 +789,22 @@ $fvTextSp: 41%;
       width: 100%;
       margin: 0 auto;
       padding-bottom: 56.25%;
-      height: 0px;
+      height: 0;
       overflow: hidden;
       border-radius: $border-radius-bigplus;
-      iframe {
+      transform: translateZ(0); // iOSの角丸クリップ×動画のグレー化対策
+      isolation: isolate; // 合成レイヤーを独立させる保険
+
+      iframe,
+      video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        border: 0;
         border-radius: $border-radius-bigplus;
+        object-fit: cover;
       }
     }
   }
