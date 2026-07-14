@@ -362,9 +362,11 @@ section.lp-family-eventtoc {
   margin: 0 auto !important;
   background: $cl-bg-creamyellow;
   .lp-family-eventtoc-content {
-    padding: 50px 36px !important;
     margin: 0 auto !important;
     @include section-maxwidth;
+    @include responsive-style($breakpoint-sp) {
+      padding: 20px 36px 40px !important;
+    }
   }
   .lp-family-eventtoc-list {
     display: flex;
@@ -620,7 +622,7 @@ section.lp-family-eventdetail {
 
   // メリット
   .lp-family-eventdetail-content-merit {
-    margin: 60px 0 0;
+    margin: 70px 0 0;
     border-radius: $border-radius-bigplus;
     display: flex;
     align-items: flex-start;
@@ -711,7 +713,7 @@ section.lp-family-eventdetail {
 
   // こんな子におすすめ
   .lp-family-eventdetail-content-recommend {
-    margin: 60px 0 0;
+    margin: 70px 0 0;
     .lp-family-eventdetail-content-recommend-title {
       font-size: $font-size-l;
       font-weight: bold;
@@ -977,22 +979,22 @@ section.lp-family-eventdetail {
       margin: 0 0 8px;
       .faq-content-question-left {
         width: 25px;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 500;
         line-height: 1.25;
         color: $cl-waogreen;
         padding-bottom: 3px;
-        margin-top: -2px;
+        margin-top: 3px;
         text-align: center;
         flex-shrink: 0;
-        @include min-responsive-style($breakpoint-sp) {
-          margin-top: -3px;
-        }
       }
       .faq-content-question-right {
-        font-size: $font-size-xl;
         font-weight: bold;
         padding: 5px 0 0;
+        font-size: $font-size-xl;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-l;
+        }
       }
     }
     .faq-content-answer {
@@ -1011,8 +1013,8 @@ section.lp-family-eventdetail {
       .faq-content-answer-right {
         font-size: $font-size-m;
         padding: 0px 0 0;
-        @include min-responsive-style($breakpoint-sp) {
-          font-size: $font-size-m;
+        @include responsive-style($breakpoint-sp) {
+          font-size: $font-size-s;
         }
       }
     }
@@ -1037,7 +1039,7 @@ section.lp-family-eventdetail {
 
 .wao-content {
   background: $cl-white;
-  padding: 0 0 60px;
+  padding: 0 0 75px;
 }
 
 // ワオ未来塾って？
@@ -1133,7 +1135,7 @@ section.lp-family-eventdetail {
 // ワオ未来塾
 .about-school {
   @include content-width;
-  margin: 0px auto 105px;
+  margin: 0px auto 0px;
   .about-school-catch {
     font-size: 15px;
     text-align: center;

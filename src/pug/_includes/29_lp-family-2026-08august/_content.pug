@@ -1,9 +1,7 @@
 //mixin
 include _mixin  
 //variable
-include _variables 
-//授業データ
-include _format
+include _variables
 
 doctype html
 html
@@ -19,10 +17,8 @@ html
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
-    - const cssBase = loycus ? '../../../css/' : '../../css/'
     - const cssLocal = loycus ? '../' : ''
 
-    link(href=`${cssBase}29_lp-family-2026-08august.css?v=${Date.now()}`, rel="stylesheet")
     link(href=`${cssLocal}29_lp-family-2026-08august.css?v=${Date.now()}`, rel="stylesheet")
 
     meta(property="og:image", content=ImgOgp)
