@@ -7,8 +7,8 @@
 - var lessondate = '2026/8/27(木)〜8/28(金)'
 
 
-//- 画像パス設定
-- var paths = 'images';
+//- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
+- var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
 
 //- 画像パス生成関数
 -
