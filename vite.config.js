@@ -44,7 +44,8 @@ export default defineConfig({
       'localhost',
       '.lhr.life',
       '.localhost.run',
-      '.ngrok-free.app'
+      '.ngrok-free.app',
+      '.ngrok-free.dev',
     ],
     open: true
   },

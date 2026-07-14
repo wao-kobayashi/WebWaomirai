@@ -66,13 +66,16 @@ $cl-waogreen: #1f8c69;
 // キーフレーム
 // ============================================================
 
+// スライダーは 4枚 × 3コピー = 12枚並び。
+// 1コピー分（= -100% / 3）だけ動かすと周期性で継ぎ目が一致し、シームレスにループする。
+
 // 横スクロール（SP用）
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-$track-width);
+    transform: translateX(calc(-100% / 3));
   }
 }
 
@@ -82,7 +85,7 @@ $cl-waogreen: #1f8c69;
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateY(calc(-100% / 3));
   }
 }
 
@@ -364,7 +367,7 @@ section.lp-family-eventtoc {
   margin: 0 auto !important;
   background: $cl-bg-creamyellow;
   .lp-family-eventtoc-content {
-    padding: 50px 0 !important;
+    padding: 50px 36px !important;
     margin: 0 auto !important;
     @include section-maxwidth;
   }
@@ -713,19 +716,16 @@ section.lp-family-eventdetail {
     }
     .lp-family-eventdetail-content-recommend-list {
       li {
-        position: relative;
+        display: flex; // 「・」とテキストを横並びに。テキストだけが折り返す＝2行目が字下げされて揃う
+        align-items: baseline;
+        list-style: none;
+        gap: 4px;
+        margin: 0 0 8px;
         font-size: $font-size-m;
         line-height: $lineheight-relaxed;
-        padding: 0 0 0 20px;
         &::before {
-          content: "";
-          position: absolute;
-          left: 2px;
-          top: 0.7em;
-          width: 8px;
-          height: 8px;
-          border-radius: $border-radius-full;
-          background: $cl-graylight;
+          content: "・";
+          flex-shrink: 0; // 「・」は縮まない・折り返さない
         }
       }
     }
@@ -846,6 +846,9 @@ section.lp-family-eventdetail {
     margin: 0 auto 30px;
     padding: 35px 25px;
     border-radius: 8px;
+    @include responsive-style($breakpoint-sp) {
+      padding: 35px 0px;
+    }
     .join-5steps-box-head {
       display: flex;
       margin: 0 auto 20px;
@@ -890,9 +893,13 @@ section.lp-family-eventdetail {
     }
     .join-5steps-box-title {
       font-weight: bold;
-      font-size: $font-size-xl;
+
       text-align: center;
       letter-spacing: 1.5px;
+      font-size: $font-size-xl;
+      @include responsive-style($breakpoint-sp) {
+        font-size: $font-size-l;
+      }
     }
     .join-5steps-box-text {
       text-align: left;
@@ -900,6 +907,9 @@ section.lp-family-eventdetail {
       width: calc(100% - 40px);
       margin: 20px auto 0;
       font-size: $font-size-l;
+      @include responsive-style($breakpoint-sp) {
+        font-size: $font-size-m;
+      }
       line-height: 1.75;
       a {
         text-decoration: underline;
@@ -952,6 +962,7 @@ section.lp-family-eventdetail {
     @extend %underbar-title;
   }
   .faq-content {
+    @extend %blocks-margin;
     background: $cl-white;
     max-width: 900px;
     padding: 20px 20px 25px;
@@ -1057,11 +1068,12 @@ section.lp-family-eventdetail {
 }
 @include min-responsive-style($breakpoint-sp) {
   .about-wao {
-    width: $maincontentWidth;
+    width: $smallwidth;
+
     .about-wao-img {
       margin-bottom: 40px;
       img {
-        width: 30%;
+        width: 400px;
       }
     }
     .about-wao-title {
@@ -1093,6 +1105,7 @@ section.lp-family-eventdetail {
       color: $cl-waogreen;
     }
     .about-feature-point-text {
+      width: 240px;
       font-weight: bold;
       font-size: 15px;
       letter-spacing: 0.5px;
@@ -1105,9 +1118,9 @@ section.lp-family-eventdetail {
 @include min-responsive-style($breakpoint-sp) {
   .about-feature {
     width: $maincontentWidth;
-    margin: 0 auto 50px;
+    margin: 0 auto 75px;
+    width: $smallwidth;
     .about-feature-point {
-      width: 75%;
       margin-inline: auto;
       justify-content: center;
     }
@@ -1192,7 +1205,7 @@ section.lp-family-eventdetail {
 }
 @include min-responsive-style($breakpoint-sp) {
   .about-school {
-    width: $maincontentWidth;
+    width: $smallwidth;
     margin: 0 auto 0px;
     .about-school-catch,
     .about-school-target {
