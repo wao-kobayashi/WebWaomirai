@@ -364,8 +364,9 @@ section.lp-family-eventtoc {
   .lp-family-eventtoc-content {
     margin: 0 auto !important;
     @include section-maxwidth;
+    padding: 50px 36px 40px !important;
     @include responsive-style($breakpoint-sp) {
-      padding: 20px 36px 40px !important;
+      padding: 30px 36px 40px !important;
     }
   }
   .lp-family-eventtoc-list {
