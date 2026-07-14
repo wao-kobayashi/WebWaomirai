@@ -9,7 +9,12 @@ script.
       }
     });
 
-
+    // ==============================
+    // 固定 CTA フェードイン / アウト
+    // ==============================
+    $(window).on('scroll', function () {
+    $('.fixed-btn')[$(window).scrollTop() > 300 ? 'fadeIn' : 'fadeOut'](300);
+    }).trigger('scroll');
     /**
     * モーダルウィンドウを開く関数
     * モーダルと背景を表示する
@@ -61,5 +66,6 @@ script.
     });
    new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
   });
+  
 
 

@@ -107,34 +107,46 @@
   }
 }
 
-.fixed-btn a {
+.fixed-btn {
   position: fixed;
+  z-index: 100;
   right: 20px;
   bottom: 20px;
-  z-index: 9;
   width: 380px;
-  height: 70px;
-  display: flex;
-  background: $cl-btn-cta;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 0 15px;
-  // overflow: hidden;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 5px 0 0 #da613b;
-  border-radius: $border-radius-big;
-  transition: 0.2s ease-in-out;
-  &:hover {
-    background: darken($cl-btn-cta, 10%);
+  @include responsive-style($breakpoint-sp) {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  a {
+    @include responsive-style($breakpoint-sp) {
+      width: 100%;
+    }
+    width: 380px;
+    height: 70px;
+    display: flex;
+    background: $cl-btn-cta;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 15px;
+    // overflow: hidden;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 5px 0 0 #da613b;
+    border-radius: $border-radius-big;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background: darken($cl-btn-cta, 10%);
 
-    .fixed-btn-icn {
-      transform: translateX(5px);
+      .fixed-btn-icn {
+        transform: translateX(5px);
 
-      &::before {
-        border-right: 2px solid darken($cl-btn-cta, 10%);
-        border-bottom: 2px solid darken($cl-btn-cta, 10%);
+        &::before {
+          border-right: 2px solid darken($cl-btn-cta, 10%);
+          border-bottom: 2px solid darken($cl-btn-cta, 10%);
+        }
       }
     }
   }
