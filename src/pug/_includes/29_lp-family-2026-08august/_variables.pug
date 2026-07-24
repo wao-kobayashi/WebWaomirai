@@ -1,0 +1,102 @@
+//- LINE URL
+- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHFIieWt6s&whc=173508808725235'
+- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=bcGREN'
+- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8PAehjAt'
+
+//- レッスン日程
+- var lessondate = '2026/8/27(木)〜8/28(金)'
+
+
+//- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
+- var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
+
+//- 画像パス生成関数
+-
+  function img(filename) {
+    return `${paths}/${filename}`;
+  }
+
+
+//- サムネイル画像パス
+- var ImgFvText = img('fvtext.png')
+- var ImgSlider01 = img('slider01.png')
+- var ImgSlider02 = img('slider02.png')
+- var ImgSlider03 = img('slider03.png')
+- var ImgSlider04 = img('slider04.png')
+- var ImgLogoWao = img('logo_wao.svg')
+- var ImgLogoWaoPc = img('logo_wao_pc.svg')
+- var Img4subject = img('img_4subjects.svg')
+- var ImgThumbMainEc = img('thumb-main-ec.png')
+- var ImgThumbMainSc = img('thumb-main-sc.png')
+- var ImgThumbSmallEc = img('thumb-small-ec.png')
+- var ImgThumbSmallSc = img('thumb-small-sc.png')
+- var ImgScTeacher = img('img_sc_teacher.png');
+- var ImgEcTeacher = img('img_ec_teacher.png');
+- var ImgIcnClock = img('icn-clock.svg');
+- var ImgIllustBtn = img('btn-illust.png');
+- var ImgIcnWaoLine = img('icn_waoline.svg');
+- var ImgModalEvent = img('img_modal_event.png');
+
+//-//////////////
+//- step
+//-//////////////
+
+- var ImgIcnStep01= img('icn_step01.svg');
+- var ImgIcnStep02= img('icn_step02.svg');
+- var ImgIcnStep03= img('icn_step03.svg');
+- var ImgIcnStep04= img('icn_step04.svg');
+- var ImgIcnStep05= img('icn_step05.svg');
+
+mixin BannerSlider2608-August
+  - for (let i = 0; i < 3; i++)
+    div
+      img(src=ImgSlider01)
+    div
+      img(src=ImgSlider02)
+    div
+      img(src=ImgSlider03)
+    div
+      img(src=ImgSlider04)
+
+//- イベントデータ（lp-family-eventdetail のループ元）
+-
+  var events = [
+    {
+      id: 'economy',
+      anchorId: 'economy',
+      thumbnail: ImgThumbMainEc,
+      subject: '💰 経済(お金)',
+      target: '小学生向け',
+      title: '「モノの値段はどう決まる?～セールに隠されたヒミツとは～」',
+      date: '2026年8月27日(木)',
+      time: '19:30～20:15',
+      description: '同じ商品でも、店やタイミングによって値段がちがうのはなぜ？この講座では、モノの値段がどう決まるのか、セールや割引に隠されたお店の工夫をわかりやすく学びます。お金の流れを知ることで、かしこく買い物する力を育てる、楽しい経済入門の授業です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        'お買いものやお金のしくみに興味がある子',
+        '将来かしこくお金とつきあう力をつけたい子'
+      ],
+      teacherImg: ImgEcTeacher,
+      teacherName: '河原 大和',
+      teacherComment: '「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！'
+    },
+    {
+      id: 'science',
+      anchorId: 'science',
+      thumbnail: ImgThumbMainSc,
+      subject: '🧪 科学リテラシー',
+      target: '小学生向け',
+      title: '「太陽はなくなるとどうなる？～太陽はなにからできているの？～」',
+      date: '2026年8月28日(金)',
+      time: '19:30～20:15',
+      description: '「太陽がなくなったらどうなる？」私たちの命に不可欠な太陽の正体を探る！「物は何からできているの？」という基本から、固体・液体・気体を超えた状態の秘密、さらに最新ロケットやオーロラの仕組みまで幅広く学べます。クイズで楽しく宇宙のナゾに挑戦！親子で驚きの科学を体感しませんか？',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        '科学探究が好きな子',
+        '太陽についてもっと知ってみたい子'
+      ],
+      teacherImg: ImgScTeacher,
+      teacherName: '犬飼 紀香',
+      teacherComment: '身の回りのふしぎから最新の科学まで、さまざまな疑問を解き明かしていきましょう。'
+    }
+  ]

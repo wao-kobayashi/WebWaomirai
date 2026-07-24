@@ -14,7 +14,7 @@ include _mixins
     .eng-phase-left-wrap-logo
         img(src=ImgFvLogoPc)
     .eng-phase-left-wrap-cv
-      a.c-btn-cv(href=UrlLine100Phases)
+      +conditionalLink('c-btn-cv')
         img(src=ImgBtnCv)
 .eng-phase-right
   .eng-phase-right-waologo
