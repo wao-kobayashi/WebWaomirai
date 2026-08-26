@@ -135,8 +135,9 @@
   @include responsive-style($breakpoint-sp) {
     display: block;
     width: 100%;
-    height: calc((307 / 375) * 100vw);
+    height: auto;
     padding-top: 29px;
+    padding-bottom: 29px;
   }
 }
 .p-condition__item-note {
@@ -203,7 +204,7 @@
   left: calc(50% - 50px);
   @include responsive-style($breakpoint-sp) {
     width: 75px;
-    top: calc(50% - 22px);
+    top: calc(56% - 22px);
     left: calc(50% - 37.5px);
     img {
       width: 100%;
