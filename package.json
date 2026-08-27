@@ -8,8 +8,8 @@
     "build:eleventy": "eleventy",
     "build:vite": "vite build",
     "build": "npm run build:eleventy && npm run build:vite && node delete-scss-js.js",
-    "sass": "sass src/scss:dist/css src/scss/29_lp-family-2026-08august.scss:dist/29_lp-family-2026-08august/29_lp-family-2026-08august.css src/scss/30_lp-family-2026-10october.scss:dist/30_lp-family-2026-10october/30_lp-family-2026-10october.css --no-source-map --style=compressed",
-    "sass:watch": "sass --watch src/scss:dist/css src/scss/29_lp-family-2026-08august.scss:dist/29_lp-family-2026-08august/29_lp-family-2026-08august.css src/scss/30_lp-family-2026-10october.scss:dist/30_lp-family-2026-10october/30_lp-family-2026-10october.css --no-source-map"
+    "sass": "node build-scss.js",
+    "sass:watch": "node build-scss.js --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
