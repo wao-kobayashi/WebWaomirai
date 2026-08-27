@@ -5,6 +5,7 @@
 const targets = [
   "15_lp-campaign-fr-ref",
   "29_lp-family-2026-08august",
+  "30_lp-family-2026-10october"
 ];
 
 // ------------------------------------------------------------
