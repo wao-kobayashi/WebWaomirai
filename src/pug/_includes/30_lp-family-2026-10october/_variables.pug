@@ -1,0 +1,102 @@
+//- LINE URL
+- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHF1i621j1&whc=173508808725235'
+- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=xpmTx '
+- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8UvRLnZx '
+
+//- レッスン日程
+- var lessondate = '2026/10/1(木)〜10/2(金)'
+
+
+//- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
+- var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
+
+//- 画像パス生成関数
+-
+  function img(filename) {
+    return `${paths}/${filename}`;
+  }
+
+
+//- サムネイル画像パス
+- var ImgFvText = img('fvtext.png')
+- var ImgSlider01 = img('slider01.png')
+- var ImgSlider02 = img('slider02.png')
+- var ImgSlider03 = img('slider03.png')
+- var ImgSlider04 = img('slider04.png')
+- var ImgLogoWao = img('logo_wao.svg')
+- var ImgLogoWaoPc = img('logo_wao_pc.svg')
+- var Img4subject = img('img_4subjects.svg')
+- var ImgThumbMainEc = img('thumb-main-ec.png')
+- var ImgThumbMainSc = img('thumb-main-sc.png')
+- var ImgThumbSmallEc = img('thumb-small-ec.png')
+- var ImgThumbSmallSc = img('thumb-small-sc.png')
+- var ImgScTeacher = img('img_sc_teacher.png');
+- var ImgEcTeacher = img('img_ec_teacher.png');
+- var ImgIcnClock = img('icn-clock.svg');
+- var ImgIllustBtn = img('btn-illust.png');
+- var ImgIcnWaoLine = img('icn_waoline.svg');
+- var ImgModalEvent = img('img_modal_event.png');
+
+//-//////////////
+//- step
+//-//////////////
+
+- var ImgIcnStep01= img('icn_step01.svg');
+- var ImgIcnStep02= img('icn_step02.svg');
+- var ImgIcnStep03= img('icn_step03.svg');
+- var ImgIcnStep04= img('icn_step04.svg');
+- var ImgIcnStep05= img('icn_step05.svg');
+
+mixin BannerSlider
+  - for (let i = 0; i < 3; i++)
+    div
+      img(src=ImgSlider01)
+    div
+      img(src=ImgSlider02)
+    div
+      img(src=ImgSlider03)
+    div
+      img(src=ImgSlider04)
+
+//- イベントデータ（lp-family-eventdetail のループ元）
+-
+  var events = [
+    {
+      id: 'economy',
+      anchorId: 'economy',
+      thumbnail: ImgThumbMainEc,
+      subject: '💰 経済(お金)',
+      target: '小学生向け',
+      title: '「売れない文房具屋さんを救え！お金のひみつ大作戦」～売れないのはなぜ？理由を見つけよう！～',
+      date: '2026年10月1日(木)',
+      time: '19:30～20:15',
+      description: '値段を安くすれば、なんでも売れる？そうとは限りません。この授業では、売れない文房具屋さんを助ける探偵になって、「どうして売れないのか」を考えます。値段、商品、場所、買う人の気持ちなどを手がかりに、お金が動く理由をやさしく学びます。考える力とアイデアでお店を変える、はじめてのお金の授業体験講座です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        'お買いものやお金のしくみに興味がある子',
+        '将来かしこくお金とつきあう力をつけたい子'
+      ],
+      teacherImg: ImgEcTeacher,
+      teacherName: '河原 大和',
+      teacherComment: '「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！'
+    },
+    {
+      id: 'science',
+      anchorId: 'science',
+      thumbnail: ImgThumbMainSc,
+      subject: '🧪 科学リテラシー',
+      target: '小学生向け',
+      title: '「宇宙実験は地球で役立つ？」～無重力のふしぎ～',
+      date: '2026年10月2日(金)',
+      time: '19:30～20:15',
+      description: '「今この瞬間に重力が消えたらどうなる？」そんなワクワクする疑問から出発！宇宙ステーションのふしぎな生活や、無重力での水の動きをクイズを交えて楽しく学びます。身近なものを使って、水が丸くなる「表面張力」のびっくり実験も体験！宇宙のひみつを通して、親子で楽しく科学の目を育てませんか？',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        '科学探究が好きな子',
+        '宇宙についてもっと知ってみたい子'
+      ],
+      teacherImg: ImgScTeacher,
+      teacherName: '犬飼 紀香',
+      teacherComment: '身の回りのふしぎから最新の科学まで、さまざまな疑問を解き明かしていきましょう。'
+    }
+  ]
