@@ -10,10 +10,11 @@
 //- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
 - var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
 
-//- 画像パス生成関数
+//- 画像パス生成関数（キャッシュ対策のタイムスタンプ付与）
+- var imgVersion = Date.now()
 -
   function img(filename) {
-    return `${paths}/${filename}`;
+    return `${paths}/${filename}?v=${imgVersion}`;
   }
 
 
