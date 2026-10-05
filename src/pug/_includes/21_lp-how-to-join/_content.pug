@@ -337,25 +337,18 @@ html
                     .p-join__number-icn
                       img(src=ImgIcnSubject)
                   .p-join__title
-                    | 会員登録しましょう
+                    | 無料アカウント作成
                 p.p-join__text
-                  | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。
-                .p-join__wrapper
-                  .p-join__wrapper-main
-                    p.p-join__text
-                      span.p-join__text-small
-                        span.p-join__text-small__inner 会員登録するだけでは費用は発生しませんので、ご安心ください。
-                      span.p-join__text-small
-                        span.p-join__text-small__inner 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
-                        span.p-join__text-small
-                      span.p-join__text-small_red
-                         span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
-                    p.p-join__note
-                      i.fa-solid.fa-triangle-exclamation
-                      span
-                        | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
-                        br
-                        | お手数ですが、再度お申し込みをお願いいたします。
+                  | 受講をご希望の方も、ご検討中の方も、まずは学習サイトでアカウントの作成をお願いいたします。
+                  br
+                  | 講座のお申し込みは、アカウント作成後に行えます。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0101 alt="新規アカウント登録画面")
+                p.p-join__text
+                  | アカウント作成のページは下記ボタンから移動できます。
+                  span.p-join__text-small.p-join__text-small--important
+                    span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
                 +cta-blank
               li.p-join__item.js-hidden.js-visible
                 .p-join__head
@@ -365,20 +358,24 @@ html
                     .p-join__number-icn
                       img(src=ImgIcnSubject)
                   .p-join__title
-                    | 受けたい授業を
-                    br.u-br-sp
-                    | 申し込みましょう
-                p.p-join__text
-                  | 会員専用の学習ページで、受講したい科目をお申し込みいただけます。
-                  br
-                  | 「今すぐ無料トライアル」ボタンを押すと、決済情報の入力画面に進みます。
-                  br
-                  span.p-join__text-small
-                    span.p-join__text-small__inner.
-                        登録初月は無料となるため、費用は発生しません。
+                    | 受講の申し込み
+                p.p-join__subtitle
+                  | ①会員専用の学習ページで、受講したい科目を選択
                 .p-join__image
                   .p-join__image-item
-                    img(src=Imgstep0201)
+                    img(src=Imgstep0201 alt="科目一覧画面")
+                p.p-join__subtitle
+                  | ②いますぐ無料トライアルをクリック
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0202 alt="科目詳細画面の「今すぐ無料トライアル」ボタン")
+                p.p-join__subtitle
+                  | ③クレジットカード情報を入力
+                p.p-join__text
+                  | キャンペーンなどで運営からもらったプロモーションコードがある場合こちらで入力します。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0203 alt="プロモーションコードの入力欄")
               li.p-join__item.js-hidden.js-visible
                 .p-join__head
                   .p-join__number
