@@ -6,7 +6,7 @@
 
 // FV
 $fv-width: 1060px;
-$pc-left: 44%; // PC左カラム幅
+$pc-left: 44.057%; // PC左カラム幅
 $pc-right: 42%; // PC右カラム幅（padding 20px × 2 分を引く）
 $fvinfo-sp: 60px; // SP版 日程・場所ブロックの見出し幅
 
@@ -140,7 +140,7 @@ header {
 }
 
 .lp-family-fvsp .fvlogo {
-  margin: -40px auto 20px;
+  margin: -40px auto 0;
   padding: 0 40px;
   position: relative;
   z-index: 10;
@@ -173,7 +173,7 @@ header {
 
 // 日程・場所 情報ブロック
 .lp-family-fvsp .fvinfo {
-  margin: 20px auto 30px;
+  margin: 0 auto 30px;
   width: calc(100% - 80px);
   position: relative;
   z-index: 10;
@@ -263,12 +263,12 @@ header {
 
 .lp-family-fvpc .lp-family-fvpc-left img {
   width: 100%;
-  margin: -30px 0 2cqb !important;
+  margin: -30px 0 0 !important;
 }
 
 // 日程・場所 情報ブロック
 .lp-family-fvpc .lp-family-fvpc-left .fvinfo {
-  margin: 10px auto 20px;
+  margin: 0 auto 30px;
   width: 100%;
   position: relative;
   z-index: 10;
