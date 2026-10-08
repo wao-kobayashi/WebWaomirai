@@ -59,7 +59,7 @@ html
           br
           |ありがとうございます。
           br
-          |このガイドではワオ未来塾の科目/特徴や
+          |このガイドではワオ未来塾の教科/特徴や
           br
           |入会手続きまでをご案内します。
       +cta
@@ -68,7 +68,7 @@ html
       +menu-links 
     section.bg-white
      .section-child#subjects
-      h2|学べる科目
+      h2|学べる教科
       .subjects-list 
         .subjects-list-head.philosophy
           .subjects-list-head-left 
@@ -101,7 +101,7 @@ html
         .subjects-list-content.science
           |科学とは、主観や個人の思い込みを許さず、事実から原理、法則を見いだす学問です。
           br
-          |日常的なふとした疑問を科学的視点から考え、議論を重ねることで科学リテラシーを身に着けます。
+          |日常的なふとした疑問を科学的視点から考え、議論を重ねることで科学リテラシーを身につけます。
           br
           br
           a(href="https://waomirai.com/subject/science/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
@@ -117,9 +117,9 @@ html
           .subjects-list-head-right
             img(src=ImgSubject03) 
         .subjects-list-content.economy
-          |私たちの生活とは切り離せないお金。でも、お金にまつわる経済の仕組みや制度を知らない人は、まだまだ少なくありません。
+          |毎日の買い物や貯金、将来の仕事など、私たちの生活にはいつも「お金」が関わっています。
           br
-          |生活に役立つ知識、起業・ビジネスに使う知識など、お金にまつわるさまざまなテーマについて、具体的な例を挙げながら広く深く学びます。
+          |「どうして値段は変わるの？」「税金は何に使われているの？」「会社はどうやって利益を出しているの？」など、身近な疑問をきっかけに、お金や経済の仕組み、社会の制度について楽しく学びます。
           br
           br
           a(href="https://waomirai.com/subject/money/", target='_blank')|カリキュラム詳細を見る(公式サイトへ)  
@@ -136,7 +136,7 @@ html
 
                   span.p-learning__title02 オンライン授業
               p.p-learning__text
-                  |ワオ未来塾のオンライン・ライブ授業は生配信形式で行われ、選択問題への回答やリアクションボタンで積極的に授業に参加できます。    
+                  |授業はライブ形式です。チャットを使って講師や全国の仲間と双方のやりとりができます。
             .p-learning__image
               img(src=ImgLearning02 )
       .p-learning__item
@@ -148,23 +148,23 @@ html
                   span.p-learning__title01 学年を超えた学びを実現する
                   span.p-learning__title02 飛び級制
               p.p-learning__text
-                  |授業は３レベルに分けられ、それぞれ推奨学年を設定していますが、学年に縛られず、理解度に応じて高いレベルの授業を選択することができます
+                  |授業は3レベル。推奨学年は目安なので、もっと難しいレベルにもチャレンジできます。
               table.p-table
                 tbody
                   tr
                     th レベル1
-                    td 小学3・4年生以上推奨
+                    td: span #[span.u-ib 小学3・4年生以上]#[span.u-ib 推奨]
                   tr
                     th レベル2
-                    td 小学5・6年生以上推奨
+                    td: span #[span.u-ib 小学5・6年生以上]#[span.u-ib 推奨]
                   tr
                     th レベル3
-                    td 中学生〜推奨
+                    td: span #[span.u-ib 中学生〜]#[span.u-ib 推奨]
               p.c-note|※レベルが合わない場合は途中で変更可能です。
     section.bg-white
      .section-child#sample
       h2|授業ダイジェスト動画
-      .c-text|実際の授業の雰囲気を、動画でご確認いただけます
+      .c-text|実際の授業の雰囲気を、動画でご確認いただけます。
       .subjects-list 
         .subjects-list-head.philosophy.youtube-header
           .subjects-list-head-left 
@@ -189,18 +189,19 @@ html
 
      .section-child#schedule 
         h2|ライブ配信スケジュール
-        .c-text|ライブ授業は、年間を通じて平日の夜を中心に配信されます。
+        .c-text
+         |ライブ授業は平日の夜を中心に配信されます。
+         br
+         |※アーカイブ視聴も可能です
         include _content_schedule.pug
      .section-child#price 
       h2|料金
       .section-child-flex
         .section-child-flex-content
           .c-text
-            |ワオ未来塾は、入会金・登録費などの余分な費用は一切かかりません。
+            |受講費用以外の入会金・登録費などはかかりません。
             br
-            |受講したい科目の月額受講費用のみで新しい学びをスタートできます。
-            br
-            |なお、受講する教科数や組み合わせによって費用は変わります。
+            |受講したい教科の月額受講費用のみで新しい学びをスタートできます。（教科数や組み合わせによって費用は変わります）
           table.p-table.js-hidden.js-visible
             tbody
               tr
@@ -213,9 +214,9 @@ html
               img(src=ImgTitleDecoration) 
             .c-section-title-text
               |受講費用について
-          .c-text| 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで受講費用が割引になります。
+          .c-text| 哲学（思考力）／科学リテラシー／経済（お金）の3教科は、まとめて受講することで割引が適用されます。
           .p-join__note
-           |初月は「無料」で受講いただけます
+           |初月は「無料」で受講いただけます。
           table.p-table.js-hidden.js-visible
             tbody
               tr
@@ -242,7 +243,11 @@ html
             img(src=ImgPayment04)
             img(src=ImgPayment05)
           .c-note
-            |受講登録した翌月の1日に受講料が決済されます。［例］4月に講座を購入した場合、5月1日に5月分が決済されます。※4月分は無料
+            |受講登録した翌月の1日に受講料が決済されます。
+            br
+            |［例］4月に講座を購入した場合、5月1日に5月分が決済されます。
+            br
+            |※4月分は無料
      .section-child#system 
         h2|推奨環境
         .c-text
@@ -283,30 +288,30 @@ html
           const voices = [{
               img: ImgIllust01,
               name: '小学５年生 / 男の子',
-              subject: '[受講科目] 哲学/科学',
+              subject: '[受講教科] 哲学/科学',
               title: '上の学年の受講者に刺激を受け、文章を書く意識も高まっています',
               text: '学校では扱わないような、普段あまり考えることのないテーマに惹かれて受講を決めました。学年の推奨レベルより高いクラスでも、難しい言葉を自分で調べたり質問したりと、知的好奇心が自然と育っています。'
             },
             {
               img: ImgIllust02,
               name: '中学１年生 / 女の子',
-              subject: '[受講科目] 哲学/科学',
+              subject: '[受講教科] 哲学/科学',
               title: '自分の考えを共有したり、他の受講者の意見を聞いたりできる点も魅力',
-              text: '以前から哲学に興味があり、「答えのない問い」を考えることが好きだったため受講を決めました。 科学の講座も学年の推奨レベルより高いクラスを受講していますが、基礎知識がなくても分かりやすく、安心して学べています。'
+              text: '以前から哲学に興味があり、「答えのない問い」を考えることが好きだったため受講を決めました。科学の講座も学年の推奨レベルより高いクラスを受講していますが、基礎知識がなくても分かりやすく、安心して学べています。'
             },
             {
               img: ImgIllust03,
               name: '小学６年生 / 女の子',
-              subject: '[受講科目] 経済',
+              subject: '[受講教科] 経済',
               title: '送り迎えが不要なオンラインであることに加え、教科書の学習だけでなく、その先につながる思考力の大切さ',
               text: '受験を意識し始める6年生の時期に受講を決めました。授業中に先生が自分の意見に反応してくれる点が良く、他の生徒の発言を通して、物事を「自分の視点」から考える大切さに気づかされました。'
             },
             {
               img: ImgIllust04,
               name: '小学３年生 / 男の子',
-              subject: '[受講科目] 哲学/科学',
+              subject: '[受講教科] 哲学/科学',
               title: '保護者として、テストの点だけでなく「自分の頭で考えられる人」になってほしい',
-              text: '5教科以外の探究的な学びとして哲学などに魅力を感じ、入会を決めました。 また、じっと座ることが得意ではない子どもにとって、多少動きながらでも参加できるオンライン形式が合っていると感じています。'
+              text: '5教科以外の探究的な学びとして哲学などに魅力を感じ、入会を決めました。また、じっと座ることが得意ではない子どもにとって、多少動きながらでも参加できるオンライン形式が合っていると感じています。'
             }
           ]
         .p-voice-item-wrapper
@@ -358,19 +363,19 @@ html
                   .p-join__title
                     | 受講の申し込み
                 p.p-join__subtitle
-                  | ①受講したい科目を選択
+                  | ①受講したい教科を選択
                 p.p-join__text
-                  | 学習サイトの「受講カレンダー」から、受講したい科目をクリックしてください。
+                  | 学習サイトの「受講カレンダー」から、受講したい教科をクリックしてください。
                   br
 
                 .p-join__image
                   .p-join__image-item
-                    img(src=Imgstep0201 alt="科目一覧画面")
+                    img(src=Imgstep0201 alt="教科一覧画面")
                 p.p-join__subtitle
-                  | ②科目ページで「今すぐ無料トライアル」をクリック
+                  | ②教科ページで「今すぐ無料トライアル」をクリック
                 .p-join__image
                   .p-join__image-item
-                    img(src=Imgstep0202 alt="科目詳細画面の「今すぐ無料トライアル」ボタン")
+                    img(src=Imgstep0202 alt="教科詳細画面の「今すぐ無料トライアル」ボタン")
                 p.p-join__subtitle
                   | ③お支払い情報を入力
                 p.p-join__text
@@ -431,7 +436,7 @@ html
               h3.c-faq-list__question 
                 |受講にあたりテストや条件はありますか？
               p.c-faq-list__answer
-                |受講にあたりテストはありません。どなた でも受講可能です。
+                |受講にあたりテストはありません。どなたでも受講可能です。
         .c-faq-list__item_end
           |こちらに記載のない内容については、
           br

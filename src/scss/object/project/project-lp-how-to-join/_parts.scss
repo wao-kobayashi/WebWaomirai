@@ -141,6 +141,11 @@
   justify-content: center;
 }
 
+/* 改行位置の制御（語の途中で折り返さない） */
+.u-ib {
+  display: inline-block;
+}
+
 .p-table tr:not(:last-child) th,
 .p-table tr:not(:last-child) td {
   border-bottom: none;
