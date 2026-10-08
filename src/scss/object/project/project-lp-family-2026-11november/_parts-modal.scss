@@ -1,0 +1,190 @@
+$z-indexes: (
+  "background": -1,
+  "overlay": 100,
+  "modal": 1000,
+  "modalclose": 1001,
+);
+@function z($layer) {
+  @return map-get($z-indexes, $layer);
+}
+
+.modal {
+  position: fixed;
+  z-index: z("modal");
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  max-width: 360px;
+  width: 90%;
+  display: inline-table;
+  height: auto;
+  margin: auto;
+  background: white;
+  padding: 0 0 0px;
+  border-radius: 20px;
+
+  .modal-wrapper {
+    position: relative;
+
+    .modal-wrapper-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: z("modalclose");
+      width: 20px;
+      height: 20px;
+
+      .modal-wrapper-close-icon {
+        width: 20px;
+        height: 20px;
+        transition: 0.2s ease-in-out;
+        position: relative;
+        cursor: pointer;
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 2px;
+          background: #fff;
+          transform-origin: center;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+    .modal-wrapper-content-title-alreadyfriend {
+      background: $cl-waogreen;
+      color: $cl-white;
+      text-align: center;
+      font-size: $font-size-m;
+      line-height: $lineheight-normal;
+      padding: 14px 0 12px;
+      border-radius: 20px 20px 0 0;
+      border: 2px solid $cl-waogreen;
+      .modal-wrapper-content-title-alreadyfriend-top {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        color: $cl-white;
+        margin: 0 0 0px;
+        div {
+          color: $cl-white;
+        }
+      }
+      .modal-wrapper-content-title-alreadyfriend-bottom {
+        color: $cl-white;
+      }
+    }
+    .modal-wrapper-content-main-text-alreadyfriend {
+      font-size: $font-size-m;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 20px 20px;
+      line-height: $lineheight-normal;
+      b {
+        font-weight: bold;
+      }
+    }
+    .modal-wrapper-content-main-image-alreadyfriend img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .modal-wrapper-content-main-btn-alreadyfriend a {
+      position: relative;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 55px;
+      margin: 30px auto 30px;
+      padding: 0;
+      border-radius: $border-radius-big;
+      background: $cl-btn-cta;
+      color: $cl-white;
+      font-size: $font-size-l;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 0 0 #da613b;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background: darken($cl-btn-cta, 10%);
+      }
+    }
+    .modal-wrapper-content-main {
+      position: relative;
+      border-radius: 20px 20px 0 0;
+      padding: 20px 0 0;
+
+      .modal-wrapper-content-main-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $cl-black;
+        font-size: $font-size-xl;
+        font-weight: 300;
+        margin: 0px auto 0;
+        text-align: center;
+        line-height: $lineheight-normal;
+        letter-spacing: 2px;
+        gap: 20px;
+
+        .modal-wrapper-content-main-head-img {
+          text-align: center;
+          img {
+            height: 60px;
+            object-fit: cover;
+            margin: 0 auto;
+          }
+        }
+
+        .modal-wrapper-content-main-head-text {
+          text-align: left;
+        }
+      }
+
+      .modal-wrapper-content-main-qr {
+        text-align: center;
+        max-width: 270px;
+        margin: 20px auto 25px;
+        @include box-shadow-lp();
+        img {
+          padding: 20px;
+          margin: 0 auto;
+        }
+      }
+
+      .modal-wrapper-content-main-text {
+        font-size: $font-size-m;
+        text-align: center;
+      }
+    }
+
+    .modal-wrapper-content-close {
+      text-align: center;
+      margin: 20px auto 25px;
+      color: $cl-graylight;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.bg-modal {
+  position: fixed;
+  z-index: z("overlay");
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}

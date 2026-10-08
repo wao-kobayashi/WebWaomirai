@@ -1,0 +1,71 @@
+script.
+  $(document).ready(function() { 
+    //loycusかどうか判定
+    var loycus = '#{loycus}'
+
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('inview');
+      }
+    });
+
+    // ==============================
+    // 固定 CTA フェードイン / アウト
+    // ==============================
+    $(window).on('scroll', function () {
+    $('.fixed-btn')[$(window).scrollTop() > 300 ? 'fadeIn' : 'fadeOut'](300);
+    }).trigger('scroll');
+    /**
+    * モーダルウィンドウを開く関数
+    * モーダルと背景を表示する
+    */
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+    function ModalAlreadyFriendOpen() {
+      $('#modal-alreadyfriend, .bg-modal').show();
+    }
+
+    /**
+    * ボタン動作の更新関数
+    * 画面幅に応じてボタンの動作を切り替える
+    * PC: モーダルを開く動作
+    * スマホ: 通常のリンク動作
+    */
+
+    function updateButtonBehavior() {
+      // 769px以上をPC表示とみなす
+      var isWideScreen = $(window).width() >= 769;
+      //loycusではない時に発火
+      if (!loycus) {
+        // locyus=false の時：js-line-trigger が有効
+        $('.js-line-trigger').off('click').on('click', function(e) {
+          if (isWideScreen) {
+            e.preventDefault(); // PC：リンク無効化してモーダルを開く
+            modalPcLiffOpen();
+          }
+          // スマホ：preventDefault() しないので href へそのまま遷移
+        });
+      }
+    }
+
+  /**
+  * 画面サイズ変更対応
+  * ページ読み込み時とリサイズ時にボタン動作を更新する
+  * これによりPC/スマホの表示切替時に適切な動作になる
+  */
+  $(window).on('load resize', updateButtonBehavior);
+
+    
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+    });
+   new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
+  });
+  
+
+
