@@ -337,25 +337,16 @@ html
                     .p-join__number-icn
                       img(src=ImgIcnSubject)
                   .p-join__title
-                    | 会員登録しましょう
+                    | アカウント作成
                 p.p-join__text
-                  | 「無料会員登録」ボタンを押すと、会員登録ページに移動します。受講される方の情報を入力してください。
-                .p-join__wrapper
-                  .p-join__wrapper-main
-                    p.p-join__text
-                      span.p-join__text-small
-                        span.p-join__text-small__inner 会員登録するだけでは費用は発生しませんので、ご安心ください。
-                      span.p-join__text-small
-                        span.p-join__text-small__inner 同一家庭内で複数人お申し込みの場合は、お子さまごとに異なるメールアドレスが必要になりますので、あらかじめご了承ください。
-                        span.p-join__text-small
-                      span.p-join__text-small_red
-                         span.p-join__text-small__inner ここからはPCでの閲覧をおすすめします。
-                    p.p-join__note
-                      i.fa-solid.fa-triangle-exclamation
-                      span
-                        | 入力後に確認メールが届きますが、10分ほど経っても届かない場合はメールアドレスが誤って入力されている可能性があります。
-                        br
-                        | お手数ですが、再度お申し込みをお願いいたします。
+                  | 受講のお申し込みには、学習サイトのアカウント作成が必要です。アカウントは無料で作成できます。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0101 alt="新規アカウント登録画面")
+                p.p-join__text
+                  | まずは下記ボタンから学習サイトに移動してアカウントを作成してください。
+                  span.p-join__text-small.p-join__text-small--important
+                    span.p-join__text-small__inner 授業はPC・タブレットでの受講を推奨しています。お申し込みも受講予定の端末から進めていただくとスムーズです。
                 +cta-blank
               li.p-join__item.js-hidden.js-visible
                 .p-join__head
@@ -365,20 +356,34 @@ html
                     .p-join__number-icn
                       img(src=ImgIcnSubject)
                   .p-join__title
-                    | 受けたい授業を
-                    br.u-br-sp
-                    | 申し込みましょう
+                    | 受講の申し込み
+                p.p-join__subtitle
+                  | ①受講したい科目を選択
                 p.p-join__text
-                  | 会員専用の学習ページで、受講したい科目をお申し込みいただけます。
+                  | 学習サイトの「受講カレンダー」から、受講したい科目をクリックしてください。
                   br
-                  | 「今すぐ無料トライアル」ボタンを押すと、決済情報の入力画面に進みます。
-                  br
-                  span.p-join__text-small
-                    span.p-join__text-small__inner.
-                        登録初月は無料となるため、費用は発生しません。
+
                 .p-join__image
                   .p-join__image-item
-                    img(src=Imgstep0201)
+                    img(src=Imgstep0201 alt="科目一覧画面")
+                p.p-join__subtitle
+                  | ②科目ページで「今すぐ無料トライアル」をクリック
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0202 alt="科目詳細画面の「今すぐ無料トライアル」ボタン")
+                p.p-join__subtitle
+                  | ③お支払い情報を入力
+                p.p-join__text
+                  | クレジットカード情報を入力してください。
+                  br
+                  |プロモーションコードをお持ちの方は、「プロモーションコードを追加」から入力できます。
+                  br
+                  span.p-join__text-small
+                    span.p-join__text-small__inner
+                     |初月は無料でご利用いただけます。初月20日までに退会申請をされた場合、翌月分の料金は発生しません。
+                .p-join__image
+                  .p-join__image-item
+                    img(src=Imgstep0203 alt="プロモーションコードの入力欄")
               li.p-join__item.js-hidden.js-visible
                 .p-join__head
                   .p-join__number
@@ -387,15 +392,13 @@ html
                     .p-join__number-icn
                       img(src=ImgIcnSubject)
                   .p-join__title
-                    | 受講レベル
-                    br.u-br-sp
-                    | を選択しましょう
+                    | 受講レベルを選択
                 p.p-join__text
-                  | 受講レベルを設定すると、授業を受けられるようになります。
+                  | クレジットカード登録を完了するとレベルを設定する案内が表示されます。レベル設定が完了すると、授業を受けられるようになります。
                   br
                   span.p-join__text-small
                     span.p-join__text-small__inner
-                       |自分には難しかった…と感じた場合は、あとから受講レベルを変更できます。
+                       |自分には難しかった…と感じた場合は、受講レベルの変更申請も可能です。変更後のレベルは翌月から適用されます。
                 .p-join__image
                   .p-join__image-item
                     img(src=Imgstep0301)
@@ -433,6 +436,7 @@ html
           |こちらに記載のない内容については、
           br
           |公式ラインよりお問い合わせください
+
     footer 
       .footer-logo 
         img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg')
