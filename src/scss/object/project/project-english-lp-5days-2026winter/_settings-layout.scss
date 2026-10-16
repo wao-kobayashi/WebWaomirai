@@ -4,7 +4,7 @@ $width-main-content: 93%; // メインの幅
 $width-cv-btn: 78%;
 $breakpoint-layout: 1100px; //レスポンシブの切り替え
 $breakpoint-sp: 768px;
-$eng-phase-main-width: 500px;
+$eng-phase-main-width: 450px;
 
 @mixin content-width {
   width: calc(100% - 50px);
