@@ -31,46 +31,31 @@ include _mixins
         +conditionalLink('c-btn-cv')
           img(src=ImgBtnCv)
 
-  //02 3秒以内に英語に訳してみてください
-  section.eng-phase-main-section-green-main.eng-phase-main-section-green-first.inview-triger.inview-hide
-      
+  // 3秒以内に英語に訳してみてください
+  section(style="margin:0 auto 60px;")
+    h2(style="margin:0 auto 20px;")
+     |次の日本語を3秒以内に
+     br
+     |英語に訳してみてください
+    div
+       img(src=ImgDummy)
 
-  //03 プログラムの流れ
+  // 2つのメソッドで 英語がしゃべれる！
+  section.eng-phase-main-section-green-main.inview-triger.inview-hide
+      h2(style="margin:0 auto 20px;")
+          |2つのメソッドで 英語がしゃべれる！
+      div
+       img(src=ImgDummy)
+
+  // プログラム詳細
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
     .eng-phase-main-flow
       .eng-phase-main-flow-title
         img(src=TitleFlow2026winter)
-      .eng-phase-main-flow-wrapper
-        if !a_finished
-          .eng-phase-main-flow-text
-            |A日程、B日程のいずれか、
-            br
-            |または両方お申込いただけます
-        .eng-phase-main-flow-tab(class=a_finished ? 'is-finished' : '')
-          .eng-phase-main-flow-tab-item(class=!a_finished ? 'is-active' : 'is-finished')
-            if !a_finished
-              img(src=ImgFlowBalloon01_2026winter).image-balloon
-            img(src=ImgFlowTab01_2026winter).image-tab.image-tab--default
-            img(src=ImgFlowTab01_2026winter_Active).image-tab.image-tab--active
-            if a_finished
-              img(src=ImgFlowTab01End).img-finished
-          .eng-phase-main-flow-tab-item(class=a_finished ? 'is-active is-finished' : '')
-            if !a_finished
-              img(src=ImgFlowBalloon02_2026winter).image-balloon
-            img(src=ImgFlowTab02_2026winter).image-tab.image-tab--default
-            img(src=ImgFlowTab02_2026winter_Active).image-tab.image-tab--active
-        .eng-phase-main-flow-contents
-          .eng-phase-main-flow-contents-item(class=!a_finished ? 'is-active' : '')
-            .eng-phase-main-flow-schedule
-              div
-                img(src=ImgFlowSchedule01_2026winter)
-          .eng-phase-main-flow-contents-item(class=a_finished ? 'is-active' : '')
-            .eng-phase-main-flow-about
-              img(src=ImgFlowAbout2026winter)
-            .eng-phase-main-flow-schedule
-              div
-                img(src=ImgFlowSchedule02_2026winter)
-          .eng-phase-main-flow-contents-item-note 
+      .eng-phase-main-section-green-3points
+          div
+              img(src=ImgDummy)
+          div
             |※ZOOMライブは当日のご参加が難しい場合、
             br
             |アーカイブでご視聴いただけます
