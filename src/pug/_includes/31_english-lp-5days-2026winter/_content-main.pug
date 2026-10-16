@@ -13,30 +13,28 @@ include _mixins
     //-   |ここワオのロゴ
     .eng-phase-main-fv-waologo.spimage 
        img(src=ImgLogoWaoMirai)
+    div
+      img(src=ImgFvText)
     .eng-phase-main-fv-illust
-      div 
-       img(src=ImgFvCharacter2026winter)
-    h2(style="margin:0 auto 20px;")
-      |ファーストビュー
+      div
+       img(src=ImgFvMain)
     .eng-phase-main-fv-button
         +conditionalLink('c-btn-cv')
           img(src=ImgBtnCv)
 
   // 3秒以内に英語に訳してみてください
   section(style="margin:0 auto 60px;")
-    h2(style="margin:0 auto 20px;")
-     |次の日本語を3秒以内に
-     br
-     |英語に訳してみてください
     div
-       img(src=ImgDummy)
+       img(src=ImgSectionIntro01)
+    div
+       img(src=ImgSectionIntro02)
+    div
+       img(src=ImgSectionIntro03)
 
   // 2つのメソッドで 英語がしゃべれる！
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
-      h2(style="margin:0 auto 20px;")
-          |2つのメソッドで 英語がしゃべれる！
       div
-       img(src=ImgDummy)
+       img(src=ImgSectionTwoMethod)
 
   // プログラム詳細
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
@@ -45,11 +43,9 @@ include _mixins
         img(src=TitleFlow2026winter)
       .eng-phase-main-section-content 
           div
-              img(src=ImgDummy)
+              img(src=ImgSectionProgram01)
           div
-            |※ZOOMライブは当日のご参加が難しい場合、
-            br
-            |アーカイブでご視聴いただけます
+              img(src=ImgSectionProgram02)
   //CTA
   section(style='margin:0 auto 75px; width:92%;')
       .eng-phase-main-fv-button.cta-fuwafuwa-button
@@ -62,10 +58,8 @@ include _mixins
         img(src=ImgSectionOpenchat)
   //参加者の声  
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
-      h2(style="margin:0 auto 20px;")
-          |参加者の声 
       div
-       img(src=ImgDummy)
+       img(src=ImgSectionVoice)
   //費用
   section.eng-phase-main-section-green-main.inview-triger.inview-hide
         img(src=ImgSectionPrice)
