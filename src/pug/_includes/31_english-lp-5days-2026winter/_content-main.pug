@@ -16,17 +16,8 @@ include _mixins
     .eng-phase-main-fv-illust
       div 
        img(src=ImgFvCharacter2026winter)
-    .eng-phase-main-fv-logo 
-      div 
-        img(src=ImgFvLogoFv)
-    .eng-phase-main-fv-text
-        if !a_finished
-         img(src=ImgFvText)
-        if a_finished
-         img(src=ImgFvText_A_Close)
-    .eng-phase-main-fv-overflow-hidden 
-      .eng-phase-main-fv-shine
-        img(src=ImgFvBgShine)
+    h2(style="margin:0 auto 20px;")
+      |ファーストビュー
     .eng-phase-main-fv-button
         +conditionalLink('c-btn-cv')
           img(src=ImgBtnCv)
@@ -52,7 +43,7 @@ include _mixins
     .eng-phase-main-flow
       .eng-phase-main-flow-title
         img(src=TitleFlow2026winter)
-      .eng-phase-main-section-green-3points
+      .eng-phase-main-section-content 
           div
               img(src=ImgDummy)
           div
@@ -303,6 +294,7 @@ include _mixins
                 div 
                   a(href='https://waomirai.com/lp/global-english', target='_blank')
                     img(src=ImgBannerGlobalEnglish style='width:100%;')
+
 
 //footer
 footer 
