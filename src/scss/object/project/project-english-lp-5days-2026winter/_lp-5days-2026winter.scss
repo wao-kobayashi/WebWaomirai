@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $shadow-height: 45px;
 $shadow-height-sp: 38px;
 
@@ -341,6 +343,84 @@ $fvTextSp: 41%;
   margin: 0 auto 30px;
   position: relative;
   z-index: 10;
+}
+
+// ============================================================
+// 3秒英語：イラスト切り替え（複数の画像を順番に表示してループ）
+// ------------------------------------------------------------
+// ▼ 調整はこの変数だけ触ればOK
+//   interval : 1枚あたりの表示時間
+//   fade     : 切り替わるときのフェード時間（0s にするとパッと切り替わる）
+// ============================================================
+$intro02-switch-interval: 3.2s; // 中段イラスト（A ⇄ B）
+$intro02-switch-fade: 0.15s;
+$intro03-switch-interval: 0.6s; // 下段の矢印（1本 → 2本 → 3本）
+$intro03-switch-fade: 0s;
+
+// ------------------------------------------------------------
+// 切り替えの仕組み（ここは基本さわらなくてOK）
+//   1枚目は常に表示しておき、2枚目以降を上に重ねて順番に表示する
+//   $name  : keyframes 名の頭につける名前（ブロックごとに別の名前にする）
+//   $count : 画像の枚数
+// ------------------------------------------------------------
+@mixin intro-frame-switch($name, $count, $interval, $fade) {
+  $cycle: $interval * $count;
+  // 0s のときもキーフレームが重ならないよう、ごくわずかな幅を最低限とる
+  $fade-pct: math.max(math.div($fade, $cycle) * 100%, 0.01%);
+
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  img:not(:first-child) {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  @for $i from 2 through $count {
+    $start: math.div($i - 1, $count) * 100%;
+    $end: math.div($i, $count) * 100%;
+
+    @at-root {
+      @keyframes #{$name}-#{$i} {
+        0%,
+        #{$start - $fade-pct} {
+          opacity: 0;
+        }
+        #{$start},
+        #{$end - $fade-pct} {
+          opacity: 1;
+        }
+        #{$end},
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+    img:nth-child(#{$i}) {
+      animation: #{$name}-#{$i} $cycle linear infinite;
+    }
+  }
+
+  // 動きを減らす設定の端末では1枚目のまま止める
+  @media (prefers-reduced-motion: reduce) {
+    img {
+      animation: none !important;
+    }
+  }
+}
+
+.eng-phase-main-section-intro-switch {
+  &.is-intro02 {
+    @include intro-frame-switch(intro02-switch, 2, $intro02-switch-interval, $intro02-switch-fade);
+  }
+  &.is-intro03 {
+    @include intro-frame-switch(intro03-switch, 3, $intro03-switch-interval, $intro03-switch-fade);
+  }
 }
 
 .eng-phase-main-section-green-main {
