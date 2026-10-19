@@ -83,11 +83,19 @@ $fvTextSp: 41%;
     overflow: hidden;
     z-index: -1;
   }
+  // ロゴ：タイトル・サブタイトルと同じ 90% グリッドの左端に揃える
   .eng-phase-main-fv-waologo {
-    width: 120px;
+    position: relative;
     z-index: 3;
+    width: 90%;
+    margin: 0 auto;
     padding-top: 15px;
-    margin-left: calc((100% - 93%) / 2);
+
+    img {
+      display: block;
+      width: 42%; // ロゴの大きさ（グリッド幅に対する割合）
+      height: auto;
+    }
   }
   .eng-phase-main-fv-target {
     position: absolute;
@@ -99,6 +107,89 @@ $fvTextSp: 41%;
     @include responsive-style(767px) {
       top: 40px;
       left: 10px;
+    }
+  }
+  // ============================================================
+  // FVタイトル（英語がたったの5日で口からポンッ！）
+  // ------------------------------------------------------------
+  // テキストは1枚画像。動くのは右上の A・B・C だけ
+  // ▼ タイミングの調整はここだけ触ればOK
+  //   動きそのもの（跳ね方など）は _settings-animation.scss の fv-title-abc
+  // ============================================================
+  $fv-title-abc-dur: 0.6s; // A・B・C それぞれが飛び出す時間
+  $fv-title-abc-delay: 0.5s; // A が出るまでの待ち時間
+  $fv-title-abc-step: 0.35s; // A → B → C の間隔
+
+  // 基準サイズ 360 × 238（fv_text.png と同じ比率）。ABC の位置は cqw（= タイトル幅の1%）なので幅を変えても比率は崩れない
+  .eng-phase-main-fv-title {
+    container-type: inline-size;
+    position: relative;
+    width: 90%;
+    aspect-ratio: 360 / 238;
+    margin: 12px auto 0;
+    z-index: 3;
+
+    img {
+      display: block;
+      max-width: none;
+      height: auto;
+    }
+  }
+  // テキスト（1枚画像）
+  .eng-phase-main-fv-title-main {
+    width: 100%;
+  }
+  // ABC（右上）
+  //   left / top : 最終的に止まる位置
+  //   --i        : 出る順番（0 = 最初）
+  //   --fx / --fy: 飛び出し始める位置（女性の口のほう＝左下から）
+  .eng-phase-main-fv-title-abc {
+    position: absolute;
+    width: calc(26 / 360 * 100cqw);
+    opacity: 0;
+    transform-origin: 50% 70%;
+    animation: fv-title-abc $fv-title-abc-dur
+      calc(#{$fv-title-abc-delay} + #{$fv-title-abc-step} * var(--i)) both;
+
+    &.is-a {
+      left: 82.2cqw;
+      top: 2.5cqw;
+      --i: 0;
+      --fx: -13cqw;
+      --fy: 4cqw;
+    }
+    &.is-b {
+      left: 84.7cqw;
+      top: 11.7cqw;
+      --i: 1;
+      --fx: -15cqw;
+      --fy: -2cqw;
+    }
+    &.is-c {
+      left: 90.8cqw;
+      top: 5.3cqw;
+      --i: 2;
+      --fx: -21cqw;
+      --fy: 4cqw;
+    }
+  }
+  // 動きを減らす設定の端末ではアニメーションなしで表示
+  @media (prefers-reduced-motion: reduce) {
+    .eng-phase-main-fv-title-abc {
+      animation: none;
+      opacity: 1;
+    }
+  }
+  // サブタイトル（冬の5daysチャレンジ）
+  .eng-phase-main-fv-subtitle {
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    margin: 0 auto 20px;
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
   .eng-phase-main-fv-illust {
@@ -152,7 +243,7 @@ $fvTextSp: 41%;
   }
   .eng-phase-main-fv-text {
     width: 92%;
-    margin: 10px auto 0;
+    margin: 10px auto 30px;
   }
   .eng-phase-main-fv-button {
     width: 92%;
@@ -1508,7 +1599,7 @@ footer {
       // box-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
       cursor: pointer;
       img {
-        height: 28px;
+        height: 35px;
       }
     }
     .btn-pagetop {

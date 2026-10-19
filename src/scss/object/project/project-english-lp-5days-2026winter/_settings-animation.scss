@@ -123,3 +123,12 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+// FVタイトル：ABC 口元のほうからぽこっと飛び出して順番に出る（出発位置は各要素の --fx / --fy）
+@keyframes fv-title-abc {
+  0% { opacity: 0; transform: translate(var(--fx), var(--fy)) scale(0.2) rotate(-20deg); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
+  10% { opacity: 1; }
+  55% { transform: translate(0, -1.2cqw) scale(1.25) rotate(6deg); animation-timing-function: ease-in-out; }
+  78% { transform: translate(0, 0) scale(0.94) rotate(-2deg); animation-timing-function: ease-out; }
+  100% { opacity: 1; transform: translate(0, 0) scale(1) rotate(0); }
+}

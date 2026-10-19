@@ -11,10 +11,17 @@ include _mixins
   .eng-phase-main-fv 
     //- .eng-phase-main-fv-logo 
     //-   |ここワオのロゴ
-    .eng-phase-main-fv-waologo.spimage 
+    .eng-phase-main-fv-waologo
        img(src=ImgLogoWaoMirai)
-    .eng-phase-main-fv-illust
-      img(src=ImgFvText)
+    //- タイトル（アニメーションの調整は _lp-5days-2026winter.scss の「FVタイトル」）
+    h1.eng-phase-main-fv-title
+      img.eng-phase-main-fv-title-main(src=ImgFvText, alt="英語がたったの5日で口からポンッ！")
+      img.eng-phase-main-fv-title-abc.is-a(src=ImgFvTitleA, alt="")
+      img.eng-phase-main-fv-title-abc.is-b(src=ImgFvTitleB, alt="")
+      img.eng-phase-main-fv-title-abc.is-c(src=ImgFvTitleC, alt="")
+    //- サブタイトル
+    .eng-phase-main-fv-subtitle
+      img(src=ImgFvSubtitle, alt="冬の5daysチャレンジ")
     .eng-phase-main-fv-illust
        img(src=ImgFvMain)
     .eng-phase-main-fv-button
