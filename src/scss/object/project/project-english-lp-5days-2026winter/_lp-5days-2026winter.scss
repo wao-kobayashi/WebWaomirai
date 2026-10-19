@@ -69,11 +69,11 @@ $fvTextSp: 41%;
   position: relative;
   z-index: 10;
   width: 100%;
-  margin: 0 auto 75px;
+  margin: 0 auto 90px;
   background: $cl-lp-5days-bg-green;
-  // @include responsive-style(767px) {
-  //   overflow: hidden;
-  // }
+  @include min-responsive-style(767px) {
+    margin: 0 auto 105px;
+  }
   .eng-phase-main-fv-overflow-hidden {
     position: absolute;
     top: 0;

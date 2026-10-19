@@ -92,7 +92,18 @@ include _mixins
           img(src=ImgSectionBlue07IconMovie)
       .eng-phase-main-section-movie-content-vimeo
         video(src=MovieDemo2026winter autoplay muted loop playsinline)
-
+  //CV
+  section.eng-phase-main-cv-humans.is-green.inview-triger.inview-hide
+    .eng-phase-main-cv-humans-img 
+        img(src=ImgBgCvGreen02)
+    .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
+      .eng-phase-main-cv-humans-area-top
+          .eng-phase-main-cv-humans-area-top-text 
+            |＼🕒 定員わずか！／
+            br
+            |5daysチャレンジ #{price.toLocaleString()}  
+          +conditionalLink('c-btn-cv cta-fuwafuwa-button')
+              img(src=ImgBtnCv)
 //////////////////////
 // グリーンエリア（ラポール〜FAQ)
 //////////////////////
