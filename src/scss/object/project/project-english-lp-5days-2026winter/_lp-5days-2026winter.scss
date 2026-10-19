@@ -416,10 +416,118 @@ $intro03-switch-fade: 0s;
 
 .eng-phase-main-section-intro-switch {
   &.is-intro02 {
-    @include intro-frame-switch(intro02-switch, 2, $intro02-switch-interval, $intro02-switch-fade);
+    @include intro-frame-switch(
+      intro02-switch,
+      2,
+      $intro02-switch-interval,
+      $intro02-switch-fade
+    );
   }
   &.is-intro03 {
-    @include intro-frame-switch(intro03-switch, 3, $intro03-switch-interval, $intro03-switch-fade);
+    @include intro-frame-switch(
+      intro03-switch,
+      3,
+      $intro03-switch-interval,
+      $intro03-switch-fade
+    );
+  }
+}
+
+// ============================================================
+// 2つのメソッド：×スタンプ（単語・文法・英作文に × がドンッと押される）
+// ------------------------------------------------------------
+// ▼ タイミングの調整はここだけ触ればOK
+//   動きそのもの（降ってくる・沈む・波紋）は _settings-animation.scss の
+//   two-method-stamp-x / two-method-stamp-hit / two-method-stamp-ring
+// ============================================================
+$two-method-stamp-start: 0.5s; // 画面に入ってから 1枚目の × が出るまでの待ち時間
+$two-method-stamp-step: 0.5s; // 1枚目 → 2枚目 → 3枚目 の間隔
+$two-method-stamp-dur: 0.5s; // × が降ってきて止まるまでの時間
+$two-method-stamp-impact: 0.24s; // × が出始めてから着地するまで（カードが沈む・波紋が出るタイミング）
+
+// 基準サイズ 1080 × 390（見本画像）。カードの位置・サイズはその比率
+.eng-phase-main-two-method-stamp {
+  position: relative;
+  aspect-ratio: 1080 / 390;
+  // 左右の濃い緑の線（上下の画像の枠線とつなげる）
+  background: linear-gradient(
+    90deg,
+    #15572e 0 0.833%,
+    #fff 0.833% 99.167%,
+    #15572e 99.167%
+  );
+  overflow: hidden;
+}
+.eng-phase-main-two-method-stamp-card {
+  // そのカードの開始時間（--i はpug側で 0 / 1 / 2）
+  --d: calc(#{$two-method-stamp-start} + var(--i) * #{$two-method-stamp-step});
+
+  position: absolute;
+  top: calc(59 / 390 * 100%);
+  width: calc(313 / 1080 * 100%);
+  height: calc(283 / 390 * 100%);
+
+  &:nth-child(1) {
+    left: calc(46 / 1080 * 100%);
+  }
+  &:nth-child(2) {
+    left: calc(383 / 1080 * 100%);
+  }
+  &:nth-child(3) {
+    left: calc(721 / 1080 * 100%);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  // 波紋
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 13% 11.8% 18%;
+    border-radius: 28%;
+    border: 5px solid rgba(120, 60, 130, 0.45);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+// ×（見本デザインの位置に合わせてある）
+.eng-phase-main-two-method-stamp-card .eng-phase-main-two-method-stamp-x {
+  position: absolute;
+  left: 11.8%;
+  top: 13.1%;
+  width: 77.3%;
+  height: 68.6%;
+  opacity: 0;
+  pointer-events: none;
+}
+// 画面に入ったら（.inview が付いたら）再生
+.eng-phase-main-two-method-stamp.inview {
+  .eng-phase-main-two-method-stamp-card {
+    animation: two-method-stamp-hit 0.5s
+      calc(var(--d) + #{$two-method-stamp-impact}) ease-out;
+
+    &::after {
+      animation: two-method-stamp-ring 0.6s
+        calc(var(--d) + #{$two-method-stamp-impact}) ease-out;
+    }
+  }
+  .eng-phase-main-two-method-stamp-x {
+    animation: two-method-stamp-x $two-method-stamp-dur var(--d) both;
+  }
+}
+// 動きを減らす設定の端末では最初から × を表示
+@media (prefers-reduced-motion: reduce) {
+  .eng-phase-main-two-method-stamp .eng-phase-main-two-method-stamp-x {
+    animation: none !important;
+    opacity: 1;
+  }
+  .eng-phase-main-two-method-stamp .eng-phase-main-two-method-stamp-card,
+  .eng-phase-main-two-method-stamp
+    .eng-phase-main-two-method-stamp-card::after {
+    animation: none !important;
   }
 }
 
@@ -554,7 +662,7 @@ $intro03-switch-fade: 0s;
     }
     &.eng-phase-main-cv-humans-area-green {
       position: relative;
-      margin: -35px auto 0;
+      margin: -50px auto 0;
     }
     .eng-phase-main-cv-humans-area-top {
       background: $cl-white;
@@ -586,20 +694,7 @@ $intro03-switch-fade: 0s;
         }
       }
     }
-    .eng-phase-main-cv-humans-area-bottom {
-      width: 100%;
-      height: $shadow-height;
-      z-index: 0;
-      border: 4px solid $cl-bg-leafgreen-darkendeep;
-      background: $cl-bg-leafgreen-darken;
-      margin: -20px 0 0;
-      border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
 
-      @include responsive-style(767px) {
-        border: 3px solid $cl-bg-leafgreen-darkendeep;
-        height: $shadow-height-sp;
-      }
-    }
     .eng-phase-main-cv-humans-area-button {
       margin: 0 auto 20px;
       img {
@@ -611,6 +706,20 @@ $intro03-switch-fade: 0s;
       width: 92%;
       margin: 0 auto;
     }
+  }
+}
+.eng-phase-main-cv-humans-area-bottom {
+  width: 93%;
+  height: $shadow-height;
+  z-index: 0;
+  border: 4px solid $cl-bg-leafgreen-darkendeep;
+  background: $cl-bg-leafgreen-darken;
+  margin: -20px auto 0;
+  border-radius: 0 0 $border-radius-bigplus $border-radius-bigplus;
+
+  @include responsive-style(767px) {
+    border: 3px solid $cl-bg-leafgreen-darkendeep;
+    height: $shadow-height-sp;
   }
 }
 
