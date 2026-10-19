@@ -36,9 +36,7 @@ include _mixins
     .eng-phase-main-section-intro-switch.is-intro02
        img(src=ImgSectionIntro02A, alt="")
        img(src=ImgSectionIntro02B, alt="")
-    .eng-phase-main-section-intro-switch.is-intro03
-       img(src=ImgSectionIntro03A, alt="ちゃんと英語で言えましたか？言えなかった…という人にも朗報です！")
-       img(src=ImgSectionIntro03B, alt="")
+    div
        img(src=ImgSectionIntro03C, alt="")
 
   // 2つのメソッドで 英語がしゃべれる！
@@ -119,14 +117,15 @@ include _mixins
   //CV
   section.eng-phase-main-cv-humans.is-green.inview-triger.inview-hide
     .eng-phase-main-cv-humans-img 
-        img(src=ImgBgCvGreen02)
-    p|test
+        img(src=ImgBgCvGreen)
     .eng-phase-main-cv-humans-area.eng-phase-main-cv-humans-area-green
       .eng-phase-main-cv-humans-area-top
+          .eng-phase-main-cv-humans-area-top-title 
+            |5daysチャレンジ 4,800円
           .eng-phase-main-cv-humans-area-top-text 
-            |＼🕒 定員わずか！／
+            |5日間英語漬けで
             br
-            |5daysチャレンジ #{price.toLocaleString()}  
+            |英語が話せる自分に！
           +conditionalLink('c-btn-cv cta-fuwafuwa-button')
               img(src=ImgBtnCv)
     .eng-phase-main-cv-humans-area-bottom
@@ -311,6 +310,7 @@ include _mixins
             |5daysチャレンジ #{price.toLocaleString()}  
           +conditionalLink('c-btn-cv cta-fuwafuwa-button')
               img(src=ImgBtnCv)
+    .eng-phase-main-cv-humans-area-bottom
 //////////////////////
 // waoエリア(ワオ未来塾って？〜footer)
 //////////////////////
