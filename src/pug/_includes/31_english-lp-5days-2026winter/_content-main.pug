@@ -30,8 +30,10 @@ include _mixins
 
   // 3秒以内に英語に訳してみてください
   section.eng-phase-main-section-intro.inview-triger.inview-hide
-    div
-       img(src=ImgSectionIntro01)
+    //- クイズ：答えの枠が下からバウンドして出る（画面に入ったら再生。調整は _lp-5days-2026winter.scss の「3秒英語：クイズ」）
+    .eng-phase-main-section-intro-quiz.inview-triger
+       img(src=ImgSectionIntro01Speech, alt="突然ですが次の日本語を3秒以内に英語に訳してみてください")
+       img.eng-phase-main-section-intro-quiz-answer(src=ImgSectionIntro01Answer, alt="今日の晩ご飯 何が食べたい？")
     //- 画像を順番に切り替え（秒数の調整は _lp-5days-2026winter.scss の「3秒英語：イラスト切り替え」）
     .eng-phase-main-section-intro-switch.is-intro02
        img(src=ImgSectionIntro02A, alt="")
