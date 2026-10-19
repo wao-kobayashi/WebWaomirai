@@ -123,3 +123,16 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+// 3秒英語：英単語がふわふわ漂うアニメーション
+// 動く量は要素ごとの CSS 変数（--float-x / --float-y / --float-rotate / --float-scale）で決まる
+// → 値の調整は _lp-5days-2026winter.scss の $intro-words で行う
+@keyframes intro-word-float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(var(--float-x), var(--float-y)) rotate(var(--float-rotate)) scale(var(--float-scale));
+  }
+}
