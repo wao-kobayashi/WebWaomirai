@@ -22,11 +22,15 @@ include _mixins
           img(src=ImgBtnCv)
 
   // 3秒以内に英語に訳してみてください
-  section(style="margin:0 auto 60px;")
+  section.eng-phase-main-section-intro.inview-triger.inview-hide
     div
        img(src=ImgSectionIntro01)
-    div
+    div.eng-phase-main-section-intro-animation
        img(src=ImgSectionIntro02)
+       img.eng-phase-main-section-intro-animation-text.is-what(src=ImgTextWhat, alt="What")
+       img.eng-phase-main-section-intro-animation-text.is-today(src=ImgTextToday, alt="Today")
+       img.eng-phase-main-section-intro-animation-text.is-dinner(src=ImgTextDinner, alt="dinner")
+       img.eng-phase-main-section-intro-animation-text.is-will(src=ImgTextWill, alt="will?")
     div
        img(src=ImgSectionIntro03)
 
