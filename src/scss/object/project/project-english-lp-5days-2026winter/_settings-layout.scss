@@ -14,29 +14,6 @@ body#eng-phase {
   background: $cl-lp-5days-bg-green;
 }
 
-.eng-phase-logo {
-  position: fixed;
-  left: 20px;
-  top: 20px;
-  z-index: 100;
-  img {
-    width: 200px;
-    @include responsive-style($breakpoint-layout) {
-      margin: 0 auto;
-    }
-  }
-  @include responsive-style($breakpoint-layout) {
-    margin: 30px auto 0 !important;
-    left: 0;
-    top: 0;
-    text-align: center;
-    position: relative;
-  }
-  @include responsive-style(767px) {
-    display: none;
-  }
-}
-
 .eng-phase-left {
   position: fixed;
   left: 0;
@@ -62,14 +39,6 @@ body#eng-phase {
     margin-top: 15px;
     .eng-phase-left-wrap-logo {
       margin: 0 auto 15px;
-    }
-    .eng-phase-left-wrap-btn {
-      width: 95%;
-      margin: 0 0 0 4px;
-      img {
-        padding: 0 10px;
-        background: #ec3f42;
-      }
     }
   }
 }
@@ -105,20 +74,6 @@ body#eng-phase {
     }
     width: 60%;
   }
-}
-
-.eng-phase-waomirai img {
-  position: fixed;
-  left: 20px;
-  top: 20px;
-  width: 200px;
-}
-
-.eng-phase-bg img {
-  position: fixed;
-  left: 20px;
-  top: 20px;
-  width: 300px;
 }
 
 .eng-phase-main {

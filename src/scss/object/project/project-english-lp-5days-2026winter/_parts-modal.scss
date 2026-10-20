@@ -126,12 +126,6 @@ $z-indexes: (
     text-align: left;
   }
 
-  .modal-wrapper-content-main-text-close {
-    @include font-size-l;
-    text-align: center;
-    padding: 60px 0 30px;
-  }
-
   .modal-wrapper-content-close {
     text-align: center;
     margin: 20px auto 25px;
