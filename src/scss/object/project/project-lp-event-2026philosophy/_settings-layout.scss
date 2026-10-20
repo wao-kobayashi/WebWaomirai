@@ -1,5 +1,21 @@
-/* width */
+// 幅
 $breakpoint-sp: 768px;
+$wrapper-sp: 89.334%;
+
+// デザイン上の1pxを、画面幅に応じてスケーリングした値として定義
+:root {
+    // PC用（基準の幅は1060px）
+    --px: min(1px, calc(100vw / 1060));
+}
+@media screen and (max-width: 767px){
+    :root {
+        // SP用（基準の幅は375px）
+        --px: min(1px, calc(100vw / 375));
+    }
+}
+@function px($val) {
+  @return calc(#{$val} * var(--px));
+}
 
 html {
   overflow-x: hidden;
@@ -8,4 +24,52 @@ html {
 body {
   background: $cl-white;
   overflow-x: hidden;
+}
+
+.u-img-w100{
+    width: 100%;
+    height: auto;
+}
+
+// ラッパー
+.l-wrapper{
+  width: px(1000);
+  margin: 0 auto;
+  max-width: calc(100% - px(40));
+}
+@include responsive-style($breakpoint-sp) {
+  .l-wrapper{
+      width: $wrapper-sp;
+      max-width: none;
+  }
+}
+
+// ヘッダー
+.l-header {
+  position: relative;
+  height: px(78);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 px(20);
+  top: 0;
+  margin: 0 auto;
+  justify-content: center;
+  background: $cl-white;
+  box-shadow: 0 0 px(5) rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  @include responsive-style($breakpoint-sp) {
+    height: px(48);
+    padding: 0 px(18);
+    z-index: 2;
+    position: relative;
+  }
+  img {
+    max-width: px(300);
+    margin: 0 !important;
+    @include responsive-style($breakpoint-sp) {
+      width: auto;
+      height: px(20);
+    }
+  }
 }

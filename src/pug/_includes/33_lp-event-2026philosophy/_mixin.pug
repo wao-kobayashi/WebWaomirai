@@ -10,13 +10,22 @@ mixin conditionalLink(baseClass)
 mixin fixed-btn
   .fixed-btn(style='display:none;')
     a(
-      
       class=loycus ? '' : 'js-line-trigger'
       href=loycus ? UrlLiffForm : UrlEndpointAddFriend
       target=loycus ? '_blank' : false
     )
       .fixed-btn-text LINEで無料申込
       .fixed-btn-icn
+
+mixin cta-btn
+  .cta-btn
+    a(
+      class=loycus ? '' : 'js-line-trigger'
+      href=loycus ? UrlLiffForm : UrlEndpointAddFriend
+      target=loycus ? '_blank' : false
+    )
+      .cta-btn-text LINEで無料申込
+      .cta-btn-icn
 
 mixin modal
   .modal#modal-alreadyfriend(style='display:none;')

@@ -62,7 +62,7 @@ $z-indexes: (
       background: $cl-waogreen;
       color: $cl-white;
       text-align: center;
-      font-size: $fs-m;
+      font-size: $fs-modal-m;
       line-height: $lh-m;
       padding: 14px 0 12px;
       border-radius: 20px 20px 0 0;
@@ -82,7 +82,7 @@ $z-indexes: (
       }
     }
     .modal-wrapper-content-main-text-alreadyfriend {
-      font-size: $fs-m;
+      font-size: $fs-modal-m;
       font-weight: $fw-bold;
       text-align: center;
       padding: 0 20px 20px;
@@ -108,7 +108,7 @@ $z-indexes: (
       border-radius: $border-radius-big;
       background: $cl-btn-cta;
       color: $cl-white;
-      font-size: $fs-l;
+      font-size: $fs-modal-l;
       font-weight: 500;
       text-align: center;
       text-decoration: none;
@@ -130,7 +130,7 @@ $z-indexes: (
         align-items: center;
         justify-content: center;
         color: $cl-black;
-        font-size: $fs-xl;
+        font-size: $fs-modal-xl;
         font-weight: 300;
         margin: 0px auto 0;
         text-align: center;
@@ -164,7 +164,7 @@ $z-indexes: (
       }
 
       .modal-wrapper-content-main-text {
-        font-size: $fs-m;
+        font-size: $fs-modal-m;
         text-align: center;
       }
     }

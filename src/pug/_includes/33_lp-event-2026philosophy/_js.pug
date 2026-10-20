@@ -3,6 +3,12 @@ script.
     //loycusかどうか判定
     var loycus = '#{loycus}'
 
+    $('.js-hidden').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('js-visible');
+      }
+    });
+
     // ==============================
     // 固定 CTA フェードイン / アウト
     // ==============================

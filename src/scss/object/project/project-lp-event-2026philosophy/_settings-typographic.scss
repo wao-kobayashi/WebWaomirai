@@ -7,15 +7,36 @@
   font-family: "Be Vietnam Pro", "Noto Sans JP", sans-serif;
 }
 
+.u-point{
+  color: $cl-main-base;
+  font-weight: bold;
+}
+.u-br-sp{
+    display: none;
+}
+@include responsive-style($breakpoint-sp) {
+  .u-br-pc{
+    display: none;
+  }
+  .u-br-sp{
+      display: inline;
+  }
+}
+
 // 太さ
 $fw-bold: 600;
 $fw-normal: 400;
 
 // 大きさ
-$fs-m: 16px;
-$fs-l: 18px;
-$fs-xl: 20px;
-$fs-xxl: 24px;
+$fs-s: px(14);
+$fs-m: px(16);
+$fs-l: px(18);
+$fs-xl: px(20);
+$fs-xxl: px(24);
+
+$fs-modal-m: 16px;
+$fs-modal-l: 18px;
+$fs-modal-xl: 20px;
 
 // 行間
 $lh-none: 1;

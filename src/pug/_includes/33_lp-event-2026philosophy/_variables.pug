@@ -7,6 +7,9 @@
 - var baseTitle = '【ワオ未来塾】小学生のための哲学～探究学習4weeks体験～「妖怪で考える「存在」のお話」';
 - var baseDescription = '身近で不思議な「妖怪」を手がかりに、「いる」「いない」とはどういうことかを考えます。ワオ未来塾の無料特別イベント授業で「考える力」を育てる学びの第一歩を体感してみませんか？'
 
+//- ブレイクポイント
+- var BreakpointSp = '(max-width: 768px)'
+
 //- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
 - var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
 
@@ -17,6 +20,10 @@
     return `${paths}/${filename}?v=${imgVersion}`;
   }
 
-
 //- 画像パス
-//- var ImgFvText = img('fvtext.png')
+- var ImgBgHeroTop = img('bg-hero-top.jpg');
+- var ImgBgHeroBottom = img('bg-hero-bottom.jpg');
+- var ImgHeroName = img('img-hero-name.png');
+- var ImgHeroTitle = img('tit-hero.png');
+- var ImgHero = img('img-hero.jpg');
+- var ImgHeroSp = img('img-hero-sp.jpg');

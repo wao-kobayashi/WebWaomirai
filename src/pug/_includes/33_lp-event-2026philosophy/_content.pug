@@ -31,7 +31,54 @@ html
   body
     header.l-header
       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
-    div(style="height:1000px;")
+    .p-hero
+      p.p-hero__name.js-hidden
+        img(src=ImgHeroName alt="小学生のための哲学 ー探究学習4weeks体験ー").u-img-w100
+      .p-hero__bg-top
+        img(src=ImgBgHeroTop).u-img-w100
+      .p-hero__bg-bottom
+        img(src=ImgBgHeroBottom).u-img-w100
+      .p-hero__wrapper.l-wrapper
+        .p-hero__image.js-hidden
+          picture
+            source(srcset=ImgHeroSp media=BreakpointSp)
+            img(src=ImgHero alt="").u-img-w100
+        h1.p-hero__title.js-hidden
+          img(src=ImgHeroTitle alt="妖怪で考える存在のお話").u-img-w100
+        p.p-hero__text.js-hidden
+          | 身近で不思議な#[span.u-point 「妖怪」]を手がかりに、
+          br.u-br-pc
+          | #[span.u-point 「いる」「いない」]とはどういうことかを考えます。
+          br
+          | ワオ未来塾の無料特別イベント授業で
+          br.u-br-pc
+          | #[span.u-point 「考える力」]を育てる学びの第一歩を体感してみませんか？
+        p.p-hero__time.p-hero__time--pc.js-hidden
+          | 11/10（火）・11/17（火）・11/24（火）・12/1（火） 18:30〜19:15（全4回）
+        p.p-hero__time.p-hero__time--sp.js-hidden
+          | 11/10（火）11/17（火）11/24（火）12/1（火）
+          br
+          | 18:30〜19:15（全4回）
+        table.p-hero__table.js-hidden
+          tr.p-hero__tr
+            th.p-hero__th
+              | 費用
+            td.p-hero__td
+              span.u-point 無料
+          tr.p-hero__tr
+            th.p-hero__th
+              | 対象
+            td.p-hero__td
+              | 小学3年生〜6年生
+              br.u-br-sp
+              | （保護者の方のご見学も大歓迎です）
+          tr.p-hero__tr
+            th.p-hero__th
+              | 場所
+            td.p-hero__td
+              | Zoomウェビナー(オンライン)
+      .p-hero__button.js-hidden
+        +cta-btn
     //JS読込
     include _js
     +modal
