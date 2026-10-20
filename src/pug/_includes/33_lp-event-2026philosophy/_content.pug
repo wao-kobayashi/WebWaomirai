@@ -21,13 +21,15 @@ html
 
     link(href=`${cssLocal}33_lp-event-2026philosophy.css?v=${Date.now()}`, rel="stylesheet")
 
+    meta(property="description", content=baseDescription)
     meta(property="og:image", content=ImgOgp)
-    title 【ワオ未来塾】親子で参加♪探究学習体験会sss
+    meta(property="og:description", content=baseDescription)
+    title #{baseTitle}
     script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
-    header
+    header.l-header
       img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
     div(style="height:1000px;")
     //JS読込

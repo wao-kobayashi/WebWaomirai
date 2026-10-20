@@ -49,6 +49,7 @@
 }
 
 @mixin cta-text{
+  display: block;
   color: white;
   font-size: $fs-l;
   letter-spacing: 0.5px;
