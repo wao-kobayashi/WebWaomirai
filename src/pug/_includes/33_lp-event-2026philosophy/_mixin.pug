@@ -15,22 +15,8 @@ mixin fixed-btn
       href=loycus ? UrlLiffForm : UrlEndpointAddFriend
       target=loycus ? '_blank' : false
     )
-      .fixed-btn-left
-        img(src=ImgIllustBtn, alt="")
       .fixed-btn-text LINEで無料申込
       .fixed-btn-icn
-mixin btn-cta 
-    a.btn-cta(
-      class=loycus ? '' : 'js-line-trigger'
-      href=loycus ? UrlLiffForm : UrlEndpointAddFriend
-      target=loycus ? '_blank' : false
-    )
-        .btn-cta-left
-          img(src=ImgIllustBtn, alt="")
-        .btn-cta-text|LINEで無料申込
-        .btn-cta-icn
-
-
 
 mixin modal
   .modal#modal-alreadyfriend(style='display:none;')

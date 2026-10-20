@@ -62,8 +62,8 @@ $z-indexes: (
       background: $cl-waogreen;
       color: $cl-white;
       text-align: center;
-      font-size: $font-size-m;
-      line-height: $lineheight-normal;
+      font-size: $fs-m;
+      line-height: $lh-m;
       padding: 14px 0 12px;
       border-radius: 20px 20px 0 0;
       border: 2px solid $cl-waogreen;
@@ -82,13 +82,13 @@ $z-indexes: (
       }
     }
     .modal-wrapper-content-main-text-alreadyfriend {
-      font-size: $font-size-m;
-      font-weight: bold;
+      font-size: $fs-m;
+      font-weight: $fw-bold;
       text-align: center;
       padding: 0 20px 20px;
-      line-height: $lineheight-normal;
+      line-height: $lh-m;
       b {
-        font-weight: bold;
+        font-weight: $fw-bold;
       }
     }
     .modal-wrapper-content-main-image-alreadyfriend img {
@@ -108,12 +108,12 @@ $z-indexes: (
       border-radius: $border-radius-big;
       background: $cl-btn-cta;
       color: $cl-white;
-      font-size: $font-size-l;
+      font-size: $fs-l;
       font-weight: 500;
       text-align: center;
       text-decoration: none;
       cursor: pointer;
-      box-shadow: 0 4px 0 0 #da613b;
+      @include box-shadow-button;
       transition: 0.2s ease-in-out;
 
       &:hover {
@@ -130,11 +130,11 @@ $z-indexes: (
         align-items: center;
         justify-content: center;
         color: $cl-black;
-        font-size: $font-size-xl;
+        font-size: $fs-xl;
         font-weight: 300;
         margin: 0px auto 0;
         text-align: center;
-        line-height: $lineheight-normal;
+        line-height: $lh-m;
         letter-spacing: 2px;
         gap: 20px;
 
@@ -164,7 +164,7 @@ $z-indexes: (
       }
 
       .modal-wrapper-content-main-text {
-        font-size: $font-size-m;
+        font-size: $fs-m;
         text-align: center;
       }
     }
