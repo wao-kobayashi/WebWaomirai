@@ -61,11 +61,3 @@
   78% { transform: translate(0, 0) scale(0.94) rotate(-2deg); animation-timing-function: ease-out; }
   100% { opacity: 1; transform: translate(0, 0) scale(1) rotate(0); }
 }
-
-// 3秒英語：答えの枠が下から飛び出して、少し揺れて止まる
-@keyframes intro-quiz-answer {
-  0% { opacity: 0; transform: translateY(70%) scale(0.8); }
-  55% { opacity: 1; transform: translateY(-7%) scale(1.05, 0.97); }
-  75% { transform: translateY(1.5%) scale(0.99, 1.02); }
-  100% { opacity: 1; transform: none; }
-}

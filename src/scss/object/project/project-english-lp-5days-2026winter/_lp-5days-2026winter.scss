@@ -164,47 +164,6 @@ $shadow-height-sp: 38px;
 }
 
 // ============================================================
-// 3秒英語：クイズ（答えの枠が下からバウンドして出る）
-// ------------------------------------------------------------
-// ▼ タイミングの調整はここだけ触ればOK
-//   動きそのもの（跳ね方）は _settings-animation.scss の intro-quiz-answer
-// ============================================================
-$intro-quiz-delay: 0.3s; // 画面に入ってから動き出すまでの時間
-$intro-quiz-dur: 0.9s; // 枠が飛び出して止まるまでの時間
-
-// 基準サイズ 400 × 304（吹き出し画像）。答えの枠の位置はその比率
-.eng-phase-main-section-intro-quiz {
-  position: relative;
-  overflow: hidden;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  // 答えの枠：見本デザインでの位置 x47 / y118 / 幅306 / 高さ118
-  .eng-phase-main-section-intro-quiz-answer {
-    position: absolute;
-    left: calc(47 / 400 * 100%);
-    top: calc(118 / 304 * 100%);
-    width: calc(306 / 400 * 100%);
-    height: calc(118 / 304 * 100%);
-    opacity: 0;
-  }
-  // 画面に入ったら（.inview が付いたら）再生
-  &.inview .eng-phase-main-section-intro-quiz-answer {
-    animation: intro-quiz-answer $intro-quiz-dur $intro-quiz-delay both;
-  }
-  // 動きを減らす設定の端末では最初から表示
-  @media (prefers-reduced-motion: reduce) {
-    .eng-phase-main-section-intro-quiz-answer {
-      animation: none !important;
-      opacity: 1;
-    }
-  }
-}
-
-// ============================================================
 // 3秒英語：イラスト切り替え（複数の画像を順番に表示してループ）
 // ------------------------------------------------------------
 // ▼ 調整はこの変数だけ触ればOK
