@@ -9,6 +9,7 @@ const targets = [
   "24_lp-parent-seminar-single",
   "29_lp-family-2026-08august",
   "30_lp-family-2026-10october",
+  "31_english-lp-5days-2026winter",
   "32_lp-family-2026-11november"
 ];
 // ------------------------------------------------------------
