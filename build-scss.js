@@ -9,7 +9,8 @@ const targets = [
   "24_lp-parent-seminar-single",
   "29_lp-family-2026-08august",
   "30_lp-family-2026-10october",
-  "32_lp-family-2026-11november"
+  "32_lp-family-2026-11november",
+  "33_lp-event-2026philosophy"
 ];
 // ------------------------------------------------------------
 // ここから下は基本さわらなくてOK

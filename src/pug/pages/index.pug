@@ -23,7 +23,13 @@ html(lang="jp")
         .page-list > li { margin-bottom:20px; }
   body
     //- wrapper
-    div.page-list-wrapper
+    .page-list-wrapper
+      ul.page-list
+        // ── 上位ページ ───────────────────────
+        li: |33_ 哲学4weeks体験(2026年)
+            ul
+              li: a(href="/33_lp-event-2026philosophy/index.html") 通常ver
+              li: a(href="/33_lp-event-2026philosophy/loycus/index.html") LOYCUSver
       ul.page-list
         // ── 上位ページ ───────────────────────
         li: |32_ 親子体験(2026年11月)

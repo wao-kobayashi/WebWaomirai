@@ -1,0 +1,103 @@
+//- LINE URL
+- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dHGasIzKao&whc=173508808725235'
+- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=yuu6w'
+- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=v8Yc5NB9X'
+
+//- レッスン日程
+- var lessondate = '2026/10/28(水)〜10/29(木)'
+
+
+//- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
+- var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
+
+//- 画像パス生成関数（キャッシュ対策のタイムスタンプ付与）
+- var imgVersion = Date.now()
+-
+  function img(filename) {
+    return `${paths}/${filename}?v=${imgVersion}`;
+  }
+
+
+//- サムネイル画像パス
+- var ImgFvText = img('fvtext.png')
+- var ImgSlider01 = img('slider01.png')
+- var ImgSlider02 = img('slider02.png')
+- var ImgSlider03 = img('slider03.png')
+- var ImgSlider04 = img('slider04.png')
+- var ImgLogoWao = img('logo_wao.svg')
+- var ImgLogoWaoPc = img('logo_wao_pc.svg')
+- var Img4subject = img('img_4subjects.svg')
+- var ImgThumbMainEc = img('thumb-main-eco.jpg')
+- var ImgThumbMainSc = img('thumb-main-sci.jpg')
+- var ImgThumbSmallEc = img('thumb-small-eco.jpg')
+- var ImgThumbSmallSc = img('thumb-small-sci.jpg')
+- var ImgScTeacher = img('img_sc_teacher.png');
+- var ImgEcTeacher = img('img_ec_teacher.png');
+- var ImgIcnClock = img('icn-clock.svg');
+- var ImgIllustBtn = img('btn-illust.png');
+- var ImgIcnWaoLine = img('icn_waoline.svg');
+- var ImgModalEvent = img('img_modal_event.png');
+
+//-//////////////
+//- step
+//-//////////////
+
+- var ImgIcnStep01= img('icn_step01.svg');
+- var ImgIcnStep02= img('icn_step02.svg');
+- var ImgIcnStep03= img('icn_step03.svg');
+- var ImgIcnStep04= img('icn_step04.svg');
+- var ImgIcnStep05= img('icn_step05.svg');
+
+mixin BannerSlider
+  - for (let i = 0; i < 3; i++)
+    div
+      img(src=ImgSlider01)
+    div
+      img(src=ImgSlider02)
+    div
+      img(src=ImgSlider03)
+    div
+      img(src=ImgSlider04)
+
+//- イベントデータ（lp-family-eventdetail のループ元）
+-
+  var events = [
+    {
+      id: 'science',
+      anchorId: 'science',
+      thumbnail: ImgThumbMainSc,
+      subject: '🧪 科学リテラシー',
+      target: '小学生向け',
+      title: '同じ誕生日の仲間を80億人から探せ！～フェルミ推定で考える力をのばそう～',
+      date: '2026年10月28日(水)',
+      time: '19:30～20:15',
+      description: '「世界に自分と同じ誕生日の人は何人いる？」一見、答えが出なさそうな謎も「フェルミ推定」を使えば答えにたどり着けます！クイズや議論を交えながら探偵さながらに世界の謎解きに挑戦！将来のビジネスや学びはもちろん、論理的思考力を養う未来のスキルをぜひ親子で体験してください。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        'すぐには答えが出ない謎解きに興味がある子',
+        '未来に役立つ考える力を楽しく学びたい子'
+      ],
+      teacherImg: ImgScTeacher,
+      teacherName: '犬飼 紀香',
+      teacherComment: '身の回りのふしぎから最新の科学まで、さまざまな疑問を解き明かしていきましょう。'
+    },
+    {
+      id: 'economy',
+      anchorId: 'economy',
+      thumbnail: ImgThumbMainEc,
+      subject: '💰 経済(お金)',
+      target: '小学生向け',
+      title: '「お金のはじまりをさぐれ！」～お金っていつからあるの？～',
+      date: '2026年10月29日(木)',
+      time: '19:30～20:15',
+      description: 'お金はいつ、どうして生まれたの？お金に関しての人類のくらしと交換の歴史をたどります。物々交換から現在のお金までの変化を身近な例で学び、お金の役割や必要とされた理由を考えます。お金の正体が見えてくる、はじめての経済入門講座です。',
+      note: '※授業終了後にワオ未来塾の保護者向け説明会を開催致します。',
+      recommend: [
+        'お金のしくみや歴史に興味がある子',
+        '社会のなりたちを楽しく学びたい子'
+      ],
+      teacherImg: ImgEcTeacher,
+      teacherName: '河原 大和',
+      teacherComment: '「お金」について知ることは、必ずみんなのためになります。楽しみつつ一緒に学びましょう！'
+    }
+  ]
