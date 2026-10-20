@@ -1183,15 +1183,15 @@ $two-method-stamp-impact: 0.24s; // × が出始めてから着地するまで�
 .eng-phase-bg-rapport img {
   position: absolute;
   right: 0;
-  top: -50px;
+  top: -20px;
   @include responsive-style(767px) {
-    top: -20px;
+    top: 0px;
   }
 }
 
 .eng-phase-main-section-green {
   &.eng-phase-main-section-green-rapport {
-    padding: 150px 0 0;
+    padding: 165px 0 0;
     margin: 0px auto 60px;
   }
 
@@ -1638,7 +1638,7 @@ $two-method-stamp-impact: 0.24s; // × が出始めてから着地するまで�
 }
 .bg-white {
   background: $cl-white;
-  padding: 60px 0 105px;
+  padding: 60px 0 1px;
 }
 .about-wao {
   background: $cl-white;
