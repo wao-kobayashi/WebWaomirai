@@ -79,6 +79,28 @@ html
               | Zoomウェビナー(オンライン)
       .p-hero__button.js-hidden
         +cta-btn
+    nav.p-navi 
+      .p-navi__wrapper.l-wrapper
+        ul.p-navi__list
+          li.p-navi__item
+            a(href="#").p-navi__link
+              | こんなお子さまに
+              br.u-br-sp
+              | オススメ
+              span.p-navi__link-arrow
+          li.p-navi__item
+            a(href="#").p-navi__link
+              | 目指す変化
+              span.p-navi__link-arrow
+          li.p-navi__item
+            a(href="#").p-navi__link
+              | 授業の進め方
+              span.p-navi__link-arrow
+          li.p-navi__item
+            a(href="#").p-navi__link
+              | 参加の流れ
+              span.p-navi__link-arrow
+    div(style="height:200px;")
     //JS読込
     include _js
     +modal

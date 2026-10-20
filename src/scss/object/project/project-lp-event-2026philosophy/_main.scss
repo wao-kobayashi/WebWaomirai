@@ -67,7 +67,7 @@
 .p-hero__time{
   background: $cl-main-soft;
   color: $cl-white;
-  font-size: $fs-s;
+  font-size: $fs-ss;
   text-align: center;
   border-radius: $border-radius-middle;
   margin-top: px(25);
@@ -94,7 +94,7 @@
 .p-hero__td{
   align-items: center;
   justify-content: center;
-  font-size: $fs-s;
+  font-size: $fs-ss;
   padding: px(7);
 }
 .p-hero__th{
@@ -147,5 +147,69 @@
   .p-hero__td{
     width: calc(100% - px(80));
     text-align: center;
+  }
+}
+
+// p-navi
+.p-navi{
+  background: $cl-blue;
+  padding-block: px(40);
+}
+.p-navi__list{
+  display: flex;
+  justify-content: space-between;
+}
+.p-navi__item{
+  width: calc(25% - px(8));
+}
+.p-navi__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $cl-main-base;
+  height: px(60);
+  color: $cl-white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: $fs-s;
+  border-radius: $border-radius-middle;
+  @include button-hover($cl-main-base);
+  @include box-shadow-button;
+}
+.p-navi__link-arrow{
+  width: px(20);
+  height: px(20);
+  border-radius: px(10);
+  background: $cl-white;
+  margin-left: px(10);
+  position: relative;
+  &::after{
+    content: "";
+    width: px(8);
+    height: px(8);
+    border-right: 2px solid $cl-main-base;
+    border-bottom: 2px solid $cl-main-base;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%) rotate(45deg);
+  }
+}
+@include responsive-style($breakpoint-sp) {
+  .p-navi{
+    padding-block: px(30);
+  }
+  .p-navi__list{
+    flex-wrap: wrap;
+  }
+  .p-navi__item{
+    width: calc(50% - px(4));
+  }
+  .p-navi__item:nth-child(n+3){
+    margin-top: px(8);
+  }
+  .p-navi__link{
+    font-size: $fs-ss;
   }
 }

@@ -16,10 +16,7 @@
     text-decoration: none;
     @include box-shadow-button;
     border-radius: $border-radius-big;
-    transition: 0.2s ease-in-out;
-    &:hover {
-      background: lighten($cl-btn-cta, 3%);
-    }
+    @include button-hover($cl-btn-cta);
 }
 
 @mixin cta-icn{
