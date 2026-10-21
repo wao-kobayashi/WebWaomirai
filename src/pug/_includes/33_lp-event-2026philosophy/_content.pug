@@ -89,7 +89,7 @@ html
               | オススメ
               span.p-navi__link-arrow
           li.p-navi__item
-            a(href="#").p-navi__link
+            a(href="#benefit").p-navi__link
               | 目指す変化
               span.p-navi__link-arrow
           li.p-navi__item
@@ -116,7 +116,7 @@ html
       .p-recommend__wrapper.l-wrapper
         h2.p-recommend__title.js-hidden
           | こんなお子さまにオススメ
-        .p-recommend__decoration
+        .p-recommend__decoration.js-hidden
           img(src=ImgRecommendDecoration).u-img-w100
         ul.p-recommend__list
           li.p-recommend__item.js-hidden
@@ -139,6 +139,36 @@ html
               img(src=ImgRecommend04).u-img-w100
             p.p-recommend__text
               |#[span.u-bold 「考えること自体が楽しい！」という好奇心]を、もっと伸ばしてあげたい…
+    .p-benefit#benefit
+      .p-benefit__wrapper.l-wrapper
+          h2.p-benefit__title.js-hidden
+            | こんな変化のきっかけに
+            br.u-br-sp
+            | なることを目指します。
+          .p-benefit__decoration.js-hidden
+            img(src=ImgBenefitDecoration).u-img-w100
+          ul.p-benefit__list
+            li.p-benefit__item.js-hidden
+              .p-benefit__item-image 
+                img(src=ImgBenefit01 alt="立ち止まって考える。").u-img-w100
+              h3.p-benefit__item-title
+                | 「それってどういうこと？」と、#[span.u-point 立ち止まって考える]
+              p.p-benefit__item-text
+                | 意見がぶつかりそうなときも、すぐに言い返さず「それって、どういう意味？」と相手の言葉の意図を確かめられるようになります。
+            li.p-benefit__item.js-hidden
+              .p-benefit__item-image 
+                img(src=ImgBenefit02 alt="いろんな見方ができる。").u-img-w100
+              h3.p-benefit__item-title
+                | 「正しい・まちがい」の二択ではなく、#[span.u-point いろんな見方ができる]
+              p.p-benefit__item-text
+                | 「どっちが正しいか」と白黒つけるだけでなく、考えを分けたり整理したりして「こういう見方もあるね」と柔軟に話せるようになります。
+            li.p-benefit__item.js-hidden
+              .p-benefit__item-image 
+                img(src=ImgBenefit03 alt="自分はどう考える？").u-img-w100
+              h3.p-benefit__item-title
+                | 情報をうのみにせず#[span.u-point 「自分はどう考える？」]と受け止める
+              p.p-benefit__item-text
+                | 友達や動画から聞いた話やウワサをすぐに信じたり否定したりせず、「ほんとうかな？」と一歩引いて、自分なりに考えられるようになります。
     div(style="height:200px;")
     //JS読込
     include _js

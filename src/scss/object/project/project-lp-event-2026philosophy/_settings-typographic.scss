@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,600");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css");
 
 * {
   color: $cl-black;
-  font-family: "Be Vietnam Pro", "Noto Sans JP", sans-serif;
+  font-family: YakuHanJP, "Be Vietnam Pro", "Noto Sans JP", sans-serif;
+  text-align: justify;
 }
 
 .u-point{
@@ -65,5 +67,5 @@ $fs-modal-xl: 20px;
 
 // 行間
 $lh-none: 1;
-$lh-m: 1.5;
+$lh-m: 1.6;
 $lh-l: 1.75;
