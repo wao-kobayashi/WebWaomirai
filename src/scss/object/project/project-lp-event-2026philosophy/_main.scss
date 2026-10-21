@@ -152,8 +152,8 @@
 
 // p-navi
 .p-navi{
-  background: $cl-beige;
-  padding-block: px(40);
+  background: $cl-yellow;
+  padding-top: px(60);
 }
 .p-navi__list{
   display: flex;
@@ -424,5 +424,34 @@
   }
   .p-benefit__item-text{
     margin-top: px(12);
+  }
+}
+
+// p-lesson
+.p-lesson{
+  padding-block: px(60);
+}
+.p-lesson__title{
+  @include fs-pc32;
+  font-weight: bold;
+  text-align: center;
+}
+@include responsive-style($breakpoint-sp) {
+  .p-lesson{
+    padding-block: px(30);
+  }
+}
+
+// p-lesson
+.p-lesson__text{
+  @include fs-pc16;
+  line-height: $lh-l;
+  text-align: center;
+  margin-top: px(20);
+}
+@include responsive-style($breakpoint-sp) {
+  .p-lesson__text{
+    text-align: left;
+    margin-top: px(15);
   }
 }
