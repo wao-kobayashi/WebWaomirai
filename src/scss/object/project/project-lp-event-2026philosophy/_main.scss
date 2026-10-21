@@ -429,20 +429,13 @@
 
 // p-lesson
 .p-lesson{
-  padding-block: px(60);
+  margin-top: px(60);
 }
 .p-lesson__title{
   @include fs-pc32;
   font-weight: bold;
   text-align: center;
 }
-@include responsive-style($breakpoint-sp) {
-  .p-lesson{
-    padding-block: px(30);
-  }
-}
-
-// p-lesson
 .p-lesson__text{
   @include fs-pc16;
   line-height: $lh-l;
@@ -541,6 +534,9 @@
   margin-top: px(5);
 }
 @include responsive-style($breakpoint-sp) {
+  .p-lesson{
+    margin-top: px(30);
+  }
   .p-lesson__item{
     padding: px(20);
   }
@@ -621,5 +617,83 @@
     @include fs-pc16;
     margin-top: px(6);
     text-align: center;
+  }
+}
+
+// p-teacher
+.p-teacher{
+  margin-top: px(80);
+}
+.p-teacher__title{
+  @include fs-pc32;
+  font-weight: bold;
+  text-align: center;
+}
+.p-teacher__main{
+  display: flex;
+  align-items: center;
+  margin-top: px(40);
+}
+.p-teacher__image{
+  width: px(308);
+  flex-shrink: 0;
+  margin-right: px(50);
+  border-radius: $border-radius-middle;
+  overflow: hidden;
+}
+.p-teacher__position{
+  @include fs-pc15;
+}
+.p-teacher__name,
+.p-teacher__background{
+  margin-top: px(10);
+}
+.p-teacher__name{
+  display: flex;
+  align-items: center;
+}
+.p-teacher__name-jpn{
+  @include fs-pc25;
+  font-weight: bold;
+}
+.p-teacher__name-eng{
+  @include fs-pc15;
+  margin-left: px(20);
+}
+.p-teacher__background{
+  @include fs-pc15;
+  line-height: $lh-l;
+}
+.p-teacher__text{
+  width: px(470);
+  @include fs-pc16;
+  line-height: $lh-l;
+  margin-top: px(20);
+}
+@include responsive-style($breakpoint-sp) {
+  .p-teacher{
+    margin-top: px(40);
+  }
+  .p-teacher__main{
+    display: block;
+    margin-top: px(20);
+  }
+  .p-teacher__image{
+    width: 59.702%;
+    margin: 0 auto;
+  }
+  .p-teacher__info{
+    margin-top: px(25);
+  }
+  .p-teacher__name,
+  .p-teacher__background{
+    margin-top: px(5);
+  }
+  .p-teacher__name-eng{
+    margin-left: px(15);
+  }
+  .p-teacher__text{
+    width: 100%;
+    margin-top: px(15);
   }
 }

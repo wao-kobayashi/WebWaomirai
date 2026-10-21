@@ -3,10 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css");
 
-* {
+body {
   color: $cl-black;
   font-family: YakuHanJP, "Be Vietnam Pro", "Noto Sans JP", sans-serif;
   text-align: justify;
+  word-break: break-all; 
+  text-justify: inter-ideograph;
+  text-justify: inter-character;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .u-point{
@@ -24,7 +29,8 @@
   margin-right: 0.3em;
 }
 @include responsive-style($breakpoint-sp) {
-  .u-br-pc{
+  .u-br-pc,
+  .u-text-pc{
     display: none;
   }
   .u-br-sp{
@@ -75,6 +81,12 @@ $fw-normal: 400;
   font-size: px(22);
   @include responsive-style($breakpoint-sp) {
       font-size: px(19);
+  }
+}
+@mixin fs-pc25 {
+  font-size: px(25);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(22);
   }
 }
 @mixin fs-pc32 {
