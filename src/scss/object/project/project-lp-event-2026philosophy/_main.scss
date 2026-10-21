@@ -449,9 +449,177 @@
   text-align: center;
   margin-top: px(20);
 }
+.p-lesson__list + .p-lesson__text{
+  margin-top: px(40);
+}
+.p-lesson__list{
+  display: flex;
+  justify-content: space-between;
+  margin-top: px(40) !important;
+  position: relative;
+}
+.p-lesson__item{
+  width: px(465);
+  background: $cl-main-pale;
+  padding: px(30);
+  border-radius: $border-radius-big;
+}
+.p-lesson__item:first-child:after{
+  @include text-arrow;
+  content: "\f105";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.p-lesson__head{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.p-lesson__head-patch{
+  width: px(80);
+  flex-shrink: 0;
+}
+.p-lesson__head-title01{
+  position: absolute;
+  width: px(80);
+  height: px(80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $cl-white;
+  @include fs-pc22;
+  font-weight: bold;
+}
+.p-lesson__head-title02{
+  @include fs-pc22;
+  font-weight: bold;
+  margin-left: px(15);
+}
+.p-lesson__details{
+  @include fs-pc16;
+  line-height: $lh-l;
+  margin-top: px(20);
+}
+.p-lesson__week-list{
+  margin-top: px(30) !important;
+}
+.p-lesson__week-item{
+  background: $cl-white;
+  border-radius: $border-radius-middle;
+  padding: px(15) px(20);
+  display: flex;
+  align-items: center;
+}
+.p-lesson__week-item:nth-child(n+2){
+  margin-top: px(15);
+}
+.p-lesson__week-wrapper{
+  width: px(60);
+  height: px(60);
+  position: relative;
+  margin-right: px(20);
+}
+.p-lesson__week-number{
+  @include fs-pc15;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.p-lesson__week-title{
+  @include fs-pc19;
+}
+.p-lesson__week-text{
+  @include fs-pc16;
+  margin-top: px(5);
+}
 @include responsive-style($breakpoint-sp) {
+  .p-lesson__item{
+    padding: px(20);
+  }
   .p-lesson__text{
     text-align: left;
     margin-top: px(15);
+  }
+  .p-lesson__list + .p-lesson__text{
+    margin-top: px(20);
+  }
+  .p-lesson__head-patch{
+    width: px(70);
+  }
+  .p-lesson__head-title01{
+    width: px(70);
+    height: px(70);
+  }
+  .p-lesson__details{
+    margin-top: px(15);
+  }
+  .p-lesson__list{
+    display: block;
+    margin-top: px(25) !important;
+  }
+  .p-lesson__item{
+    width: 100%;
+    padding: px(20);
+    position: relative;
+  }
+  .p-lesson__item:first-child:after{
+    content: "\f107";
+    top: calc(100% - px(5));
+    transform: translate(-50%, 0);
+  }
+  .p-lesson__item:nth-child(n+2){
+    margin-top: px(50);
+  }
+  .p-lesson__head-patch{
+    width: px(70);
+  }
+  .p-lesson__head-title01{
+    width: px(70);
+    height: px(70);
+  }
+  .p-lesson__details{
+    margin-top: px(15);
+  }
+  .p-lesson__week-list{
+    margin-top: px(20) !important;
+  }
+  .p-lesson__week-item{
+    display: block;
+    position: relative;
+    padding: px(15);
+  }
+  .p-lesson__week-wrapper{
+    width: auto;
+    height: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .p-lesson__week-patch{
+    display: none;
+  }
+  .p-lesson__week-number{
+      position: static;
+      background: $cl-gold;
+      padding: px(3) px(20);
+      width: auto;
+      border-radius: $border-radius-full;
+  }
+  .p-lesson__week-title{
+    text-align: center;
+    margin-top: px(10);
+  }
+  .p-lesson__week-text{
+    @include fs-pc16;
+    margin-top: px(6);
+    text-align: center;
   }
 }

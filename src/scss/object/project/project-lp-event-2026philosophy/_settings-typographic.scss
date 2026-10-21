@@ -32,6 +32,13 @@
   }
 }
 
+@mixin text-arrow {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: px(40);
+  color: $cl-main-base;
+}
+
 // 太さ
 $fw-bold: 600;
 $fw-normal: 400;
@@ -56,6 +63,18 @@ $fw-normal: 400;
   font-size: px(18);
   @include responsive-style($breakpoint-sp) {
       font-size: px(16);
+  }
+}
+@mixin fs-pc19 {
+  font-size: px(19);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(18);
+  }
+}
+@mixin fs-pc22 {
+  font-size: px(22);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(19);
   }
 }
 @mixin fs-pc32 {
