@@ -57,7 +57,7 @@
 .p-hero__text,
 .p-hero__time,
 .p-hero__table{
-  width: px(510);
+  width: px(500);
 }
 .p-hero__text{
   margin-top: px(25);
@@ -65,7 +65,7 @@
   line-height: $lh-l;
 }
 .p-hero__time{
-  background: $cl-main-soft;
+  background: $cl-main-base;
   color: $cl-white;
   @include fs-pc15;
   text-align: center;
@@ -134,6 +134,9 @@
   }
   .p-hero__text{
     margin-top: px(20);
+  }
+  .p-hero__time{
+    width: 100%;
   }
   .p-hero__time--pc{
     display: none;
@@ -245,9 +248,7 @@
   position: relative;
 }
 .p-recommend__title{
-  @include fs-pc32;
-  font-weight: bold;
-  text-align: center;
+  @include section-title;
 }
 .p-recommend__decoration{
   width: px(142);
@@ -344,9 +345,7 @@
   position: relative;
 }
 .p-benefit__title{
-  @include fs-pc32;
-  font-weight: bold;
-  text-align: center;
+  @include section-title;
 }
 .p-benefit__decoration{
   width: px(118);
@@ -432,9 +431,7 @@
   margin-top: px(60);
 }
 .p-lesson__title{
-  @include fs-pc32;
-  font-weight: bold;
-  text-align: center;
+  @include section-title;
 }
 .p-lesson__text{
   @include fs-pc16;
@@ -465,16 +462,16 @@
   left: 50%;
   transform: translate(-50%,-50%);
 }
-.p-lesson__head{
+.p-lesson__heading{
   display: flex;
   align-items: center;
   position: relative;
 }
-.p-lesson__head-patch{
+.p-lesson__heading-patch{
   width: px(80);
   flex-shrink: 0;
 }
-.p-lesson__head-title01{
+.p-lesson__heading-title01{
   position: absolute;
   width: px(80);
   height: px(80);
@@ -485,7 +482,7 @@
   @include fs-pc22;
   font-weight: bold;
 }
-.p-lesson__head-title02{
+.p-lesson__heading-title02{
   @include fs-pc22;
   font-weight: bold;
   margin-left: px(15);
@@ -547,10 +544,10 @@
   .p-lesson__list + .p-lesson__text{
     margin-top: px(20);
   }
-  .p-lesson__head-patch{
+  .p-lesson__heading-patch{
     width: px(70);
   }
-  .p-lesson__head-title01{
+  .p-lesson__heading-title01{
     width: px(70);
     height: px(70);
   }
@@ -574,10 +571,10 @@
   .p-lesson__item:nth-child(n+2){
     margin-top: px(50);
   }
-  .p-lesson__head-patch{
+  .p-lesson__heading-patch{
     width: px(70);
   }
-  .p-lesson__head-title01{
+  .p-lesson__heading-title01{
     width: px(70);
     height: px(70);
   }
@@ -625,9 +622,7 @@
   margin-top: px(80);
 }
 .p-teacher__title{
-  @include fs-pc32;
-  font-weight: bold;
-  text-align: center;
+  @include section-title;
 }
 .p-teacher__main{
   display: flex;
@@ -703,9 +698,7 @@
   margin-top: px(80);
 }
 .p-outline__title{
-  @include fs-pc32;
-  font-weight: bold;
-  text-align: center;
+  @include section-title;
 }
 .p-outline__table,
 .p-outline__table tbody{
@@ -802,5 +795,138 @@
   .p-outline__note{
     text-align: left;
     margin-top: px(20);
+  }
+}
+
+// p-entry
+.p-entry{
+  margin-top: px(60);
+  padding-top: px(60);
+  background: $cl-main-pale;
+}
+.p-entry__title{
+  @include section-title;
+}
+.p-entry__list{
+  margin-top: px(30) !important;
+}
+.p-entry__item{
+  background: $cl-white;
+  border-radius: $border-radius-big;
+  padding: px(40) px(80) px(40) px(40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.p-entry__item:nth-child(n+2){
+  margin-top: px(80);
+}
+.p-entry__item:not(:last-child):after{
+  @include text-arrow;
+  content: "\f107";
+  position: absolute;
+  top: calc(100% + px(40));
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.p-entry__heading{
+  display: flex;
+  align-items: center;
+}
+.p-entry__heading-step{
+  background: $cl-main-base;
+  color: $cl-white;
+  width: px(90);
+  height: px(35);
+  border-radius: $border-radius-middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  @include fs-pc18;
+}
+.p-entry__heading-title{
+  font-weight: bold;
+  margin-left: px(15);
+  @include fs-pc21;
+}
+.p-entry__text{
+  @include fs-pc16;
+  line-height: $lh-l;
+  margin-top: px(15);
+}
+.p-entry__text a,
+.p-entry__note a{
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.p-entry__note{
+  @include fs-pc14;
+  line-height: $lh-l;
+  color: $cl-gray;
+  margin-top: px(20);
+}
+.p-entry__image-pc{
+  width: px(170);
+}
+.p-entry__image-sp{
+  display: none;
+}
+@include responsive-style($breakpoint-sp) {
+  .p-entry{
+    margin-top: px(30);
+    padding-top: px(30);
+  }
+  .p-entry__list{
+    margin-top: px(20) !important;
+  }
+  .p-entry__item{
+    padding: px(30) px(20);
+    display: block;
+  }
+  .p-entry__item:nth-child(n+2){
+    margin-top: px(60);
+  }
+  .p-entry__item:not(:last-child):after{
+    top: calc(100% + px(30));
+  }
+  .p-entry__main{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .p-entry__heading{
+    width: calc(100% - px(90));
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .p-entry__heading-step{
+    width: px(80);
+    height: px(30);
+    margin: 0;
+  }
+  .p-entry__heading-title{
+    line-height: $lh-m;
+    margin: px(7) 0 0;
+  }
+  .p-entry__text,
+  .p-entry__note{
+    width: 100%;
+  }
+  .p-entry__text,
+  .p-entry__note{
+    margin-top: px(15);
+  }
+  .p-entry__image-pc{
+    display: none;
+  }
+  .p-entry__image-sp{
+    display: block;
+    width: px(90);
   }
 }

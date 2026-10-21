@@ -97,7 +97,7 @@ html
               | 授業の進め方
               span.p-navi__link-arrow
           li.p-navi__item
-            a(href="#").p-navi__link
+            a(href="#entry").p-navi__link
               | 参加の流れ
               span.p-navi__link-arrow
     .p-concept
@@ -177,12 +177,12 @@ html
             | #[span.u-point 「妖怪っているの？」]#[span.u-border ——]この素朴な問いの奥に潜んでいるのは、哲学者が長年探求し続けてきた#[span.u-point 「『ある』とは何か」]という大きな問題です。
           ul.p-lesson__list 
               li.p-lesson__item.js-hidden
-                .p-lesson__head
-                  .p-lesson__head-patch
+                .p-lesson__heading
+                  .p-lesson__heading-patch
                     img(src=ImgLessonHeadPatch).u-img-w100
-                  p.p-lesson__head-title01
+                  p.p-lesson__heading-title01
                     | 前半
-                  h3.p-lesson__head-title02
+                  h3.p-lesson__heading-title02
                     | 哲学の道具を手に入れる
                 p.p-lesson__details
                   | まずは考えるための道具を手にし、ふだん当たり前に使っている#[span.u-bold 「いる」「ある」という言葉の意味]を掘り下げます。
@@ -212,12 +212,12 @@ html
                       p.p-lesson__week-text
                         | 11/17（火）18:30〜19:15
               li.p-lesson__item.js-hidden
-                .p-lesson__head
-                  .p-lesson__head-patch
+                .p-lesson__heading
+                  .p-lesson__heading-patch
                     img(src=ImgLessonHeadPatch).u-img-w100
-                  p.p-lesson__head-title01
+                  p.p-lesson__heading-title01
                     | 後半
-                  h3.p-lesson__head-title02
+                  h3.p-lesson__heading-title02
                     | 道具を自分の毎日に
                     br.u-br-sp
                     | 使ってみる
@@ -318,6 +318,100 @@ html
               |（Zoomウェビナー／全国どこからでも参加OK）
         p.p-outline__note.js-hidden
           | ※アーカイブ配信もございますので、ご都合に合わせて無理なくご参加いただけます。
+    .p-entry#entry
+      .p-entry__wrapper.l-wrapper
+        h2.p-entry__title.js-hidden
+          | かんたん5STEPで参加可能
+        ol.p-entry__list
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP1 
+                h3.p-entry__heading-title
+                  | LINEで友だち追加＆
+                  br.u-br-sp
+                  | お申し込み
+              .p-entry__image-sp
+                img(src=ImgEntry01).u-img-w100
+              p.p-entry__text
+                | 二次元コードからスマートフォンで公式アカウントを友だちに追加し、
+                br
+                | トーク画面に送られる申し込みフォームからお申し込みください。
+                br
+                | 友だち追加は
+                a.js-line-trigger こちら
+                | から
+              p.p-entry__note
+                | ※LINEの友だち追加等でお困りの際は、
+                a(href="mailto:mirai-waoug@waomirai.com") mirai-waoug@waomirai.com
+                | までお問い合わせください。
+            .p-entry__image-pc
+              img(src=ImgEntry01).u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP2
+                h3.p-entry__heading-title
+                  | 学習サイトのログイン
+                  br.u-br-sp
+                  | 情報を受け取る
+              .p-entry__image-sp
+                img(src=ImgEntry02).u-img-w100
+              p.p-entry__text
+                | 実施の2日前に、ご登録いただいたメールアドレスへ、
+                br.u-br-pc
+                | 学習サイトの「ログインURL」「ID」「パスワード」をお送りします。 
+                br
+                | ※簡単な受講ガイドもあわせてお送りいたします。
+            .p-entry__image-pc
+              img(src=ImgEntry02).u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP3
+                h3.p-entry__heading-title
+                  | Zoomをインストール
+              .p-entry__image-sp
+                img(src=ImgEntry03).u-img-w100
+              p.p-entry__text
+                | お手持ちの端末にZoomのインストールをお願いします。
+                br
+                | パソコンまたはタブレットからのご参加を推奨しています。
+            .p-entry__image-pc
+              img(src=ImgEntry03).u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP4
+                h3.p-entry__heading-title
+                  | 学習サイトにログイン
+              .p-entry__image-sp
+                img(src=ImgEntry04).u-img-w100
+              p.p-entry__text
+                | STEP2で届いたログイン情報を使用し、学習サイトにログインしてください。
+            .p-entry__image-pc
+              img(src=ImgEntry04).u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP5
+                h3.p-entry__heading-title
+                  | 開催時間になったら
+                  br.u-br-sp
+                  | 授業に参加
+              .p-entry__image-sp
+                img(src=ImgEntry05).u-img-w100
+              p.p-entry__text
+                | 学習サイトの「受講カレンダー」から当日の授業を開き、
+                br.u-br-pc
+                | 「受講する」ボタンからZoomを起動してご参加ください。
+            .p-entry__image-pc
+              img(src=ImgEntry05).u-img-w100
     div(style="height:200px;")
     //JS読込
     include _js

@@ -83,12 +83,12 @@ $z-indexes: (
     }
     .modal-wrapper-content-main-text-alreadyfriend {
       font-size: $fs-modal-m;
-      font-weight: $fw-bold;
+      font-weight: bold;
       text-align: center;
       padding: 0 20px 20px;
       line-height: $lh-m;
       b {
-        font-weight: $fw-bold;
+        font-weight: bold;
       }
     }
     .modal-wrapper-content-main-image-alreadyfriend img {

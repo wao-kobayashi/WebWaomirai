@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,600");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css");
@@ -45,9 +45,11 @@ body {
   color: $cl-main-base;
 }
 
-// 太さ
-$fw-bold: 600;
-$fw-normal: 400;
+@mixin section-title {
+  @include fs-pc32;
+  font-weight: bold;
+  text-align: center;
+}
 
 // 大きさ
 @mixin fs-pc14 {
@@ -76,6 +78,12 @@ $fw-normal: 400;
 }
 @mixin fs-pc19 {
   font-size: px(19);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(18);
+  }
+}
+@mixin fs-pc21 {
+  font-size: px(21);
   @include responsive-style($breakpoint-sp) {
       font-size: px(18);
   }
