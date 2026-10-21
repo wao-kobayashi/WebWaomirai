@@ -81,9 +81,9 @@ html
         +cta-btn
     nav.p-navi 
       .p-navi__wrapper.l-wrapper
-        ul.p-navi__list
+        ul.p-navi__list.js-hidden
           li.p-navi__item
-            a(href="#").p-navi__link
+            a(href="#recommend").p-navi__link
               | こんなお子さまに
               br.u-br-sp
               | オススメ
@@ -101,7 +101,7 @@ html
               | 参加の流れ
               span.p-navi__link-arrow
     .p-concept
-      .p-conept__wrapper.l-wrapper
+      .p-conept__wrapper.l-wrapper.js-hidden
         p.p-concept__text
           | AIがすぐに答えを出す時代。
         p.p-concept__text
@@ -112,9 +112,33 @@ html
           | ワオ未来塾の哲学は、その土台になる#[span.u-point 「考える力」]を育てる学びです。
           br
           | 自分の頭で考えるための#[span.u-point 「道具」]を手にして、#[span.u-point 思考する楽しさを知る第一歩]となります。
-    .p-recommend
-      h2.p-recommend__title
-        | こんなお子さまにオススメ
+    .p-recommend#recommend
+      .p-recommend__wrapper.l-wrapper
+        h2.p-recommend__title.js-hidden
+          | こんなお子さまにオススメ
+        .p-recommend__decoration
+          img(src=ImgRecommendDecoration).u-img-w100
+        ul.p-recommend__list
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend01).u-img-w100
+            p.p-recommend__text
+              |『なんで？』『どうして？』が多くて、#[span.u-bold 答えをもらってもなかなか納得しない…]
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend02).u-img-w100
+            p.p-recommend__text
+              |『正解を書かなきゃ』と固まってしまって、#[span.u-bold 自分の意見を言うのが苦手]みたい…
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend03).u-img-w100
+            p.p-recommend__text
+              | #[span.u-bold 考える力をつけてほしい]けど、ドリル形式の勉強を嫌がってしまう…
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend04).u-img-w100
+            p.p-recommend__text
+              |#[span.u-bold 「考えること自体が楽しい！」という好奇心]を、もっと伸ばしてあげたい…
     div(style="height:200px;")
     //JS読込
     include _js
