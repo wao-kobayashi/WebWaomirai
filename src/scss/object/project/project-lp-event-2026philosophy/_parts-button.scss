@@ -48,13 +48,12 @@
 @mixin cta-text{
   display: block;
   color: white;
-  font-size: $fs-l;
+  @include fs-pc18;
   letter-spacing: 0.5px;
   line-height: $lh-m;
   padding: 0 px(5) 0 0px;
   margin: 0 auto;
   @include responsive-style($breakpoint-sp) {
-    font-size: $fs-m;
     padding: 0 0px 0 0px;
   }
 }

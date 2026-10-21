@@ -28,12 +28,27 @@ $fw-bold: 600;
 $fw-normal: 400;
 
 // 大きさ
-$fs-ss: px(14);
-$fs-s: px(15);
-$fs-m: px(16);
-$fs-l: px(18);
-$fs-xl: px(20);
-$fs-xxl: px(24);
+@mixin fs-pc14 {
+  font-size: px(14);
+}
+@mixin fs-pc15 {
+  font-size: px(15);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(14);
+  }
+}
+@mixin fs-pc16 {
+  font-size: px(16);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(15);
+  }
+}
+@mixin fs-pc18 {
+  font-size: px(18);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(16);
+  }
+}
 
 $fs-modal-m: 16px;
 $fs-modal-l: 18px;

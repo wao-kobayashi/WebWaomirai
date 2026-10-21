@@ -61,13 +61,13 @@
 }
 .p-hero__text{
   margin-top: px(25);
-  font-size: $fs-m;
+  @include fs-pc16;
   line-height: $lh-l;
 }
 .p-hero__time{
   background: $cl-main-soft;
   color: $cl-white;
-  font-size: $fs-ss;
+  @include fs-pc14;
   text-align: center;
   border-radius: $border-radius-middle;
   margin-top: px(25);
@@ -94,7 +94,7 @@
 .p-hero__td{
   align-items: center;
   justify-content: center;
-  font-size: $fs-ss;
+  @include fs-pc14;
   padding: px(7);
 }
 .p-hero__th{
@@ -171,7 +171,7 @@
   color: $cl-white;
   text-decoration: none;
   font-weight: bold;
-  font-size: $fs-s;
+  @include fs-pc15;
   border-radius: $border-radius-middle;
   @include button-hover($cl-main-base);
   @include box-shadow-button;
@@ -209,7 +209,29 @@
   .p-navi__item:nth-child(n+3){
     margin-top: px(8);
   }
-  .p-navi__link{
-    font-size: $fs-ss;
+}
+
+// p-concept
+.p-concept{
+  background: $cl-yellow;
+  padding-block: px(60);
+}
+.p-concept__text{
+  @include fs-pc18;
+  line-height: $lh-l;
+  text-align: center;
+}
+.p-concept__text:nth-child(n+2){
+  margin-top: px(20);
+}
+@include responsive-style($breakpoint-sp) {
+  .p-concept{
+    padding-block: px(30);
+  }
+  .p-concept__text{
+    text-align: left;
+  }
+  .p-concept__text:nth-child(n+2){
+    margin-top: 0;
   }
 }
