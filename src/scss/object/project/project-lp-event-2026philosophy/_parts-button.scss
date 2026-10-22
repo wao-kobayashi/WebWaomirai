@@ -9,7 +9,7 @@
     background: $cl-btn-cta;
     align-items: center;
     justify-content: space-between;
-    padding: 0 px(20) 0 px(15);
+    padding: 0 px(25);
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -17,16 +17,25 @@
     @include box-shadow-button;
     border-radius: $border-radius-big;
     @include button-hover($cl-btn-cta);
+    position: relative;
 }
 
 @mixin cta-icn{
   background: $cl-white;
   width: px(30);
   height: px(30);
-  position: relative;
+  position: absolute;
   border-radius: $border-radius-full;
   transform: translateX(0);
   transition: 0.2s ease-in-out;
+  top: calc(50% - px(15));
+  right: px(30);
+  @include responsive-style($breakpoint-sp) {
+    width: px(26);
+    height: px(26);
+    top: calc(50% - px(13));
+    right: px(25);
+  }
   &::before {
     content: "";
     transform: translateY(-50%) rotate(-45deg);

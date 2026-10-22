@@ -1029,3 +1029,77 @@
       top: px(-9);
   }
 }
+
+// p-about
+.p-about{
+  margin-top: px(60);
+}
+.p-about__title{
+  @include section-title;
+}
+.p-about__logo{
+  width: px(300);
+  margin: px(30) auto 0;
+}
+.p-about__text{
+  @include fs-pc15;
+  line-height: $lh-l;
+}
+.p-about__logo + .p-about__text{
+  margin-top: px(45);
+}
+.p-about__text + .p-about__text{
+  margin-top: px(30);
+}
+.p-about__button{
+  width: px(380);
+  height: px(60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $cl-wao-green;
+  font-weight: bold;
+  color: $cl-white;
+  cursor: pointer;
+  text-decoration: none;
+  @include box-shadow-button;
+  border-radius: $border-radius-big;
+  @include button-hover($cl-wao-green);
+  margin: px(50) auto 0;
+  position: relative;
+}
+.p-about__button:after{
+  content: '\f08e';
+  width: px(30);
+  text-align: center;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: $cl-white;
+  position: absolute;
+  top: 50%;
+  right: px(30);
+  transform: translateY(-50%);
+}
+@include responsive-style($breakpoint-sp) {
+  .p-about{
+    margin-top: px(30);
+  }
+  .p-about__logo{
+    width: 74.627%;
+    margin-top: px(15);
+  }
+  .p-about__logo + .p-about__text{
+    margin-top: px(25);
+  }
+  .p-about__text + .p-about__text{
+    margin-top: px(15);
+  }
+  .p-about__button{
+    width: 100%;
+    margin-top: px(30);
+  }
+  .p-about__button:after{
+    width: px(26);
+    right: px(25);
+  }
+}
