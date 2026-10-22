@@ -1,4 +1,3 @@
-
 mixin conditionalLink(baseClass)
   a(
     class=baseClass + (loycus ? '' : ' js-line-trigger')
@@ -37,7 +36,7 @@ mixin modal
             .modal-wrapper-content-title-alreadyfriend-top
                 div|すでに
                 div 
-                  img(src=ImgIcnWaoLine)
+                  img(src=ImgIcnWaoLine alt="")
                 div|ワオ未来塾公式LINEを
             .modal-wrapper-content-title-alreadyfriend-bottom
                 |友だち追加している方へ
@@ -50,7 +49,7 @@ mixin modal
               br
               |その場合は下記手順で申込ください。
             .modal-wrapper-content-main-image-alreadyfriend
-              img(src=ImgModalEvent)
+              img(src=ImgModalEvent alt="")
             .modal-wrapper-content-main-btn-alreadyfriend
                 a(href=UrlEndpointAddFriend, target='_blank')
                   |OKです(イベント申込へ)
@@ -60,7 +59,7 @@ mixin modal
          .modal-wrapper-content-main
             .modal-wrapper-content-main-head
               .modal-wrapper-content-main-head-img
-                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png')
+                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png' alt="")
               .modal-wrapper-content-main-head-text 
                  |スマホで
                  br

@@ -3,8 +3,7 @@ include _mixin
 //variable
 include _variables
 
-doctype html
-html
+html(lang="ja")
   head
     meta(charset="utf-8")
     script.
@@ -14,7 +13,6 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-W3X8CG9C');
     // End Google Tag Manager
-    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssLocal = loycus ? '../' : ''
@@ -30,14 +28,14 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
     header.l-header
-      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg' alt="ワオ未来塾")
     .p-hero
       p.p-hero__name.js-hidden
         img(src=ImgHeroName alt="小学生のための哲学 ー探究学習4weeks体験ー").u-img-w100
       .p-hero__bg-top
-        img(src=ImgBgHeroTop).u-img-w100
+        img(src=ImgBgHeroTop alt="").u-img-w100
       .p-hero__bg-bottom
-        img(src=ImgBgHeroBottom).u-img-w100
+        img(src=ImgBgHeroBottom alt="").u-img-w100
       .p-hero__wrapper.l-wrapper
         .p-hero__image.js-hidden
           picture
@@ -117,26 +115,26 @@ html
         h2.p-recommend__title.js-hidden
           | こんなお子さまにオススメ
         .p-recommend__decoration.js-hidden
-          img(src=ImgRecommendDecoration).u-img-w100
+          img(src=ImgRecommendDecoration alt="").u-img-w100
         ul.p-recommend__list
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend01).u-img-w100
+              img(src=ImgRecommend01 alt="").u-img-w100
             p.p-recommend__text
               |『なんで？』『どうして？』が多くて、#[span.u-bold 答えをもらってもなかなか納得しない…]
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend02).u-img-w100
+              img(src=ImgRecommend02 alt="").u-img-w100
             p.p-recommend__text
               |『正解を書かなきゃ』と固まってしまって、#[span.u-bold 自分の意見を言うのが苦手]みたい…
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend03).u-img-w100
+              img(src=ImgRecommend03 alt="").u-img-w100
             p.p-recommend__text
               | #[span.u-bold 考える力をつけてほしい]けど、ドリル形式の勉強を嫌がってしまう…
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend04).u-img-w100
+              img(src=ImgRecommend04 alt="").u-img-w100
             p.p-recommend__text
               |#[span.u-bold 「考えること自体が楽しい！」という好奇心]を、もっと伸ばしてあげたい…
     .p-benefit#benefit
@@ -146,7 +144,7 @@ html
             br.u-br-sp
             | なることを目指します。
           .p-benefit__decoration.js-hidden
-            img(src=ImgBenefitDecoration).u-img-w100
+            img(src=ImgBenefitDecoration alt="").u-img-w100
           ul.p-benefit__list
             li.p-benefit__item.js-hidden
               .p-benefit__item-image 
@@ -179,7 +177,7 @@ html
               li.p-lesson__item.js-hidden
                 .p-lesson__heading
                   .p-lesson__heading-patch
-                    img(src=ImgLessonHeadPatch).u-img-w100
+                    img(src=ImgLessonHeadPatch alt="").u-img-w100
                   p.p-lesson__heading-title01
                     | 前半
                   h3.p-lesson__heading-title02
@@ -192,7 +190,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 1週目
                     .lesson__week-details
@@ -203,7 +201,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 2週目
                     .lesson__week-details
@@ -214,7 +212,7 @@ html
               li.p-lesson__item.js-hidden
                 .p-lesson__heading
                   .p-lesson__heading-patch
-                    img(src=ImgLessonHeadPatch).u-img-w100
+                    img(src=ImgLessonHeadPatch alt="").u-img-w100
                   p.p-lesson__heading-title01
                     | 後半
                   h3.p-lesson__heading-title02
@@ -227,7 +225,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 3週目
                     .lesson__week-details
@@ -238,7 +236,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 4週目
                     .lesson__week-details
@@ -258,7 +256,7 @@ html
             | 講師紹介
           .p-teacher__main
             .p-teacher__image.js-hidden
-              img(src=ImgTeacher)
+              img(src=ImgTeacher alt="").u-img-w100
             .p-teacher__info.js-hidden
               p.p-teacher__position
                 | ワオ未来塾講師
@@ -333,7 +331,7 @@ html
                   br.u-br-sp
                   | お申し込み
               .p-entry__image-sp
-                img(src=ImgEntry01).u-img-w100
+                img(src=ImgEntry01 alt="").u-img-w100
               p.p-entry__text
                 | 二次元コードからスマートフォンで公式アカウントを友だちに追加し、
                 br
@@ -347,7 +345,7 @@ html
                 a(href="mailto:mirai-waoug@waomirai.com") mirai-waoug@waomirai.com
                 | までお問い合わせください。
             .p-entry__image-pc
-              img(src=ImgEntry01).u-img-w100
+              img(src=ImgEntry01 alt="").u-img-w100
           li.p-entry__item.js-hidden
             .p-entry__main
               .p-entry__heading
@@ -358,7 +356,7 @@ html
                   br.u-br-sp
                   | 情報を受け取る
               .p-entry__image-sp
-                img(src=ImgEntry02).u-img-w100
+                img(src=ImgEntry02 alt="").u-img-w100
               p.p-entry__text
                 | 実施の2日前に、ご登録いただいたメールアドレスへ、
                 br.u-br-pc
@@ -366,7 +364,7 @@ html
                 br
                 | ※簡単な受講ガイドもあわせてお送りいたします。
             .p-entry__image-pc
-              img(src=ImgEntry02).u-img-w100
+              img(src=ImgEntry02 alt="").u-img-w100
           li.p-entry__item.js-hidden
             .p-entry__main
               .p-entry__heading
@@ -375,13 +373,13 @@ html
                 h3.p-entry__heading-title
                   | Zoomをインストール
               .p-entry__image-sp
-                img(src=ImgEntry03).u-img-w100
+                img(src=ImgEntry03 alt="").u-img-w100
               p.p-entry__text
                 | お手持ちの端末にZoomのインストールをお願いします。
                 br
                 | パソコンまたはタブレットからのご参加を推奨しています。
             .p-entry__image-pc
-              img(src=ImgEntry03).u-img-w100
+              img(src=ImgEntry03 alt="").u-img-w100
           li.p-entry__item.js-hidden
             .p-entry__main
               .p-entry__heading
@@ -390,11 +388,11 @@ html
                 h3.p-entry__heading-title
                   | 学習サイトにログイン
               .p-entry__image-sp
-                img(src=ImgEntry04).u-img-w100
+                img(src=ImgEntry04 alt="").u-img-w100
               p.p-entry__text
                 | STEP2で届いたログイン情報を使用し、学習サイトにログインしてください。
             .p-entry__image-pc
-              img(src=ImgEntry04).u-img-w100
+              img(src=ImgEntry04 alt="").u-img-w100
           li.p-entry__item.js-hidden
             .p-entry__main
               .p-entry__heading
@@ -405,19 +403,19 @@ html
                   br.u-br-sp
                   | 授業に参加
               .p-entry__image-sp
-                img(src=ImgEntry05).u-img-w100
+                img(src=ImgEntry05 alt="").u-img-w100
               p.p-entry__text
                 | 学習サイトの「受講カレンダー」から当日の授業を開き、
                 br.u-br-pc
                 | 「受講する」ボタンからZoomを起動してご参加ください。
             .p-entry__image-pc
-              img(src=ImgEntry05).u-img-w100
+              img(src=ImgEntry05 alt="").u-img-w100
     .p-faq
       .p-faq__wrapper.l-wrapper
         h2.p-faq__title.js-hidden
           | よくある質問
         .p-faq__decoration
-          img(src=ImgFaqDecoration).u-img-w100
+          img(src=ImgFaqDecoration alt="").u-img-w100
         ul.p-faq__list
           li.p-faq__item.js-hidden
             .p-faq__q
@@ -454,7 +452,7 @@ html
         h2.p-about__title.js-hidden
           | ワオ未来塾について
         .p-about__logo.js-hidden
-          img(src=ImgLogoWao).u-img-w100
+          img(src=ImgLogoWao alt="").u-img-w100
         p.p-about__text.js-hidden
           | 全国で「能開センター」や「個別指導Axis」を展開する、株式会社ワオ・コーポレーションがお届けする新しいオンライン学習の場「ワオ未来塾」。
         p.p-about__text.js-hidden
@@ -469,7 +467,7 @@ html
     footer.l-footer
       .l-footer__wrapper.l-wrapper
         .l-footer__logo
-          img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg').u-img-w100
+          img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg' alt="").u-img-w100
         ul.l-footer__list
           li.l-footer__item
             a(href="https://www.wao-corp.com/" target="_blank").l-footer__link
