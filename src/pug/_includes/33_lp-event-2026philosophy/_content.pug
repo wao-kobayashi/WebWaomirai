@@ -463,9 +463,28 @@ html
           | 半世紀にわたり子どもたちの教育に携わってきた当社は、自分の頭で考える力を育む「哲学」をはじめ、「科学」「経済」など、これからの社会で活きる多様な学びを提供しています。  
         p.p-about__text.js-hidden
           | 今回は、リニューアルを予定している哲学レベル1・レベル2の開講に先駆けて、思考の「道具」を手にする全4回の特別授業を無料で開催いたします。
-        a(href="https://waomirai.com/" target="_blank").p-about__button.js-hidden 
-          | ワオ未来塾の公式サイトへ
-    div(style="height:200px;")
+        .p-about__link.js-hidden 
+          a(href="https://waomirai.com/" target="_blank").p-about__button
+            | ワオ未来塾の公式サイトへ
+    footer.l-footer
+      .l-footer__wrapper.l-wrapper
+        .l-footer__logo
+          img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg').u-img-w100
+        ul.l-footer__list
+          li.l-footer__item
+            a(href="https://www.wao-corp.com/" target="_blank").l-footer__link
+              | 運営会社
+          li.l-footer__item
+            a(href="https://www.wao-corp.com/privacy/" target="_blank").l-footer__link
+              | プライバシーポリシー
+          li.l-footer__item
+            a(href="https://waomirai.com/commerce_law/" target="_blank").l-footer__link
+              | 特定商取引法
+          li.l-footer__item
+            a(href="https://waomirai.com/terms/" target="_blank").l-footer__link
+              | 利用規約
+        p.l-footer__copy
+          | &copy; WAO CORPORATION
     //JS読込
     include _js
     +modal

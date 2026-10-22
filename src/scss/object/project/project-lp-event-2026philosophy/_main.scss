@@ -176,7 +176,6 @@
   font-weight: bold;
   @include fs-pc15;
   border-radius: $border-radius-middle;
-  @include button-hover($cl-main-base);
   @include box-shadow-button;
 }
 .p-navi__link-arrow{
@@ -1064,9 +1063,9 @@
   text-decoration: none;
   @include box-shadow-button;
   border-radius: $border-radius-big;
-  @include button-hover($cl-wao-green);
   margin: px(50) auto 0;
   position: relative;
+  @include fs-pc16;
 }
 .p-about__button:after{
   content: '\f08e';

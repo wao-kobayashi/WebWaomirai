@@ -52,6 +52,12 @@ body {
 }
 
 // 大きさ
+@mixin fs-pc13 {
+  font-size: px(13);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(12);
+  }
+}
 @mixin fs-pc14 {
   font-size: px(14);
   @include responsive-style($breakpoint-sp) {

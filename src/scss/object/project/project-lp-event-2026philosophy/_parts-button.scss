@@ -11,13 +11,16 @@
     justify-content: space-between;
     padding: 0 px(25);
     font-weight: bold;
-    color: white;
+    color: $cl-white;
     cursor: pointer;
     text-decoration: none;
     @include box-shadow-button;
     border-radius: $border-radius-big;
-    @include button-hover($cl-btn-cta);
     position: relative;
+    &:hover{
+        opacity: 1;
+        background: lighten($cl-btn-cta, 4%);
+    }
 }
 
 @mixin cta-icn{
@@ -74,7 +77,6 @@
   bottom: px(20);
   width: px(380);
   @include responsive-style($breakpoint-sp) {
-    border-radius: $border-radius-full;
     width: 90%;
     height: px(60);
     left: 0;
@@ -96,6 +98,8 @@
 .cta-btn {
   width: px(380);
   margin: px(60) auto 0;
+  position: relative;
+  z-index: 100;
   @include responsive-style($breakpoint-sp) {
     width: $wrapper-sp;
     height: px(60);
