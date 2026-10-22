@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,600");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css");
+
+* {
+  color: $cl-black;
+  font-family: YakuHanJP, "Be Vietnam Pro", "Noto Sans JP", sans-serif;
+  text-align: justify;
+}
+
+.u-point{
+  color: $cl-main-base;
+  font-weight: bold;
+}
+.u-bold{
+  font-weight: bold;
+}
+.u-br-sp{
+  display: none;
+}
+.u-border{
+  letter-spacing: -0.3em;
+  margin-right: 0.3em;
+}
+@include responsive-style($breakpoint-sp) {
+  .u-br-pc{
+    display: none;
+  }
+  .u-br-sp{
+    display: inline;
+  }
+}
+
+@mixin text-arrow {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: px(40);
+  color: $cl-main-base;
+}
+
+// 太さ
+$fw-bold: 600;
+$fw-normal: 400;
+
+// 大きさ
+@mixin fs-pc14 {
+  font-size: px(14);
+}
+@mixin fs-pc15 {
+  font-size: px(15);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(14);
+  }
+}
+@mixin fs-pc16 {
+  font-size: px(16);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(15);
+  }
+}
+@mixin fs-pc18 {
+  font-size: px(18);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(16);
+  }
+}
+@mixin fs-pc19 {
+  font-size: px(19);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(18);
+  }
+}
+@mixin fs-pc22 {
+  font-size: px(22);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(19);
+  }
+}
+@mixin fs-pc32 {
+  font-size: px(32);
+  @include responsive-style($breakpoint-sp) {
+      font-size: px(23);
+  }
+}
+
+$fs-modal-m: 16px;
+$fs-modal-l: 18px;
+$fs-modal-xl: 20px;
+
+// 行間
+$lh-none: 1;
+$lh-m: 1.6;
+$lh-l: 1.75;

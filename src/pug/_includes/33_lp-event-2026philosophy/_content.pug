@@ -1,0 +1,259 @@
+//mixin
+include _mixin  
+//variable
+include _variables
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    - const cssLocal = loycus ? '../' : ''
+
+    link(href=`${cssLocal}33_lp-event-2026philosophy.css?v=${Date.now()}`, rel="stylesheet")
+
+    meta(property="description", content=baseDescription)
+    meta(property="og:image", content=ImgOgp)
+    meta(property="og:description", content=baseDescription)
+    title #{baseTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  body
+    header.l-header
+      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+    .p-hero
+      p.p-hero__name.js-hidden
+        img(src=ImgHeroName alt="小学生のための哲学 ー探究学習4weeks体験ー").u-img-w100
+      .p-hero__bg-top
+        img(src=ImgBgHeroTop).u-img-w100
+      .p-hero__bg-bottom
+        img(src=ImgBgHeroBottom).u-img-w100
+      .p-hero__wrapper.l-wrapper
+        .p-hero__image.js-hidden
+          picture
+            source(srcset=ImgHeroSp media=BreakpointSp)
+            img(src=ImgHero alt="").u-img-w100
+        h1.p-hero__title.js-hidden
+          img(src=ImgHeroTitle alt="妖怪で考える存在のお話").u-img-w100
+        p.p-hero__text.js-hidden
+          | 身近で不思議な#[span.u-point 「妖怪」]を手がかりに、
+          br.u-br-pc
+          | #[span.u-point 「いる」「いない」]とはどういうことかを考えます。
+          br
+          | ワオ未来塾の無料特別イベント授業で
+          br.u-br-pc
+          | #[span.u-point 「考える力」]を育てる学びの第一歩を体感してみませんか？
+        p.p-hero__time.p-hero__time--pc.js-hidden
+          | 11/10（火）・11/17（火）・11/24（火）・12/1（火） 18:30〜19:15（全4回）
+        p.p-hero__time.p-hero__time--sp.js-hidden
+          | 11/10（火）11/17（火）11/24（火）12/1（火）
+          br
+          | 18:30〜19:15（全4回）
+        table.p-hero__table.js-hidden
+          tr.p-hero__tr
+            th.p-hero__th
+              | 費用
+            td.p-hero__td
+              span.u-point 無料
+          tr.p-hero__tr
+            th.p-hero__th
+              | 対象
+            td.p-hero__td
+              | 小学3年生〜6年生
+              br.u-br-sp
+              | （保護者の方のご見学も大歓迎です）
+          tr.p-hero__tr
+            th.p-hero__th
+              | 場所
+            td.p-hero__td
+              | Zoomウェビナー(オンライン)
+      .p-hero__button.js-hidden
+        +cta-btn
+    nav.p-navi 
+      .p-navi__wrapper.l-wrapper
+        ul.p-navi__list.js-hidden
+          li.p-navi__item
+            a(href="#recommend").p-navi__link
+              | こんなお子さまに
+              br.u-br-sp
+              | オススメ
+              span.p-navi__link-arrow
+          li.p-navi__item
+            a(href="#benefit").p-navi__link
+              | 目指す変化
+              span.p-navi__link-arrow
+          li.p-navi__item
+            a(href="#lesson").p-navi__link
+              | 授業の進め方
+              span.p-navi__link-arrow
+          li.p-navi__item
+            a(href="#").p-navi__link
+              | 参加の流れ
+              span.p-navi__link-arrow
+    .p-concept
+      .p-conept__wrapper.l-wrapper.js-hidden
+        p.p-concept__text
+          | AIがすぐに答えを出す時代。
+        p.p-concept__text
+          | だからこそ、これからの社会や大学入試（総合型選抜など）において求められるのは、
+          br
+          | #[span.u-point 「何を問うか」「自分はどう考えるか」]という力です。
+        p.p-concept__text
+          | ワオ未来塾の哲学は、その土台になる#[span.u-point 「考える力」]を育てる学びです。
+          br
+          | 自分の頭で考えるための#[span.u-point 「道具」]を手にして、#[span.u-point 思考する楽しさを知る第一歩]となります。
+    .p-recommend#recommend
+      .p-recommend__wrapper.l-wrapper
+        h2.p-recommend__title.js-hidden
+          | こんなお子さまにオススメ
+        .p-recommend__decoration.js-hidden
+          img(src=ImgRecommendDecoration).u-img-w100
+        ul.p-recommend__list
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend01).u-img-w100
+            p.p-recommend__text
+              |『なんで？』『どうして？』が多くて、#[span.u-bold 答えをもらってもなかなか納得しない…]
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend02).u-img-w100
+            p.p-recommend__text
+              |『正解を書かなきゃ』と固まってしまって、#[span.u-bold 自分の意見を言うのが苦手]みたい…
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend03).u-img-w100
+            p.p-recommend__text
+              | #[span.u-bold 考える力をつけてほしい]けど、ドリル形式の勉強を嫌がってしまう…
+          li.p-recommend__item.js-hidden
+            .p-recommend__image
+              img(src=ImgRecommend04).u-img-w100
+            p.p-recommend__text
+              |#[span.u-bold 「考えること自体が楽しい！」という好奇心]を、もっと伸ばしてあげたい…
+    .p-benefit#benefit
+      .p-benefit__wrapper.l-wrapper
+          h2.p-benefit__title.js-hidden
+            | こんな変化のきっかけに
+            br.u-br-sp
+            | なることを目指します。
+          .p-benefit__decoration.js-hidden
+            img(src=ImgBenefitDecoration).u-img-w100
+          ul.p-benefit__list
+            li.p-benefit__item.js-hidden
+              .p-benefit__item-image 
+                img(src=ImgBenefit01 alt="立ち止まって考える。").u-img-w100
+              h3.p-benefit__item-title
+                | 「それってどういうこと？」と、#[span.u-point 立ち止まって考える]
+              p.p-benefit__item-text
+                | 意見がぶつかりそうなときも、すぐに言い返さず「それって、どういう意味？」と相手の言葉の意図を確かめられるようになります。
+            li.p-benefit__item.js-hidden
+              .p-benefit__item-image 
+                img(src=ImgBenefit02 alt="いろんな見方ができる。").u-img-w100
+              h3.p-benefit__item-title
+                | 「正しい・まちがい」の二択ではなく、#[span.u-point いろんな見方ができる]
+              p.p-benefit__item-text
+                | 「どっちが正しいか」と白黒つけるだけでなく、考えを分けたり整理したりして「こういう見方もあるね」と柔軟に話せるようになります。
+            li.p-benefit__item.js-hidden
+              .p-benefit__item-image 
+                img(src=ImgBenefit03 alt="自分はどう考える？").u-img-w100
+              h3.p-benefit__item-title
+                | 情報をうのみにせず#[span.u-point 「自分はどう考える？」]と受け止める
+              p.p-benefit__item-text
+                | 友達や動画から聞いた話やウワサをすぐに信じたり否定したりせず、「ほんとうかな？」と一歩引いて、自分なりに考えられるようになります。
+    .p-lesson#lesson
+      .p-lesson__wrapper.l-wrapper
+          h2.p-lesson__title.js-hidden
+            | 授業の進め方
+          p.p-lesson__text.js-hidden
+            | #[span.u-point 「妖怪っているの？」]#[span.u-border ——]この素朴な問いの奥に潜んでいるのは、哲学者が長年探求し続けてきた#[span.u-point 「『ある』とは何か」]という大きな問題です。
+          ul.p-lesson__list 
+              li.p-lesson__item.js-hidden
+                .p-lesson__head
+                  .p-lesson__head-patch
+                    img(src=ImgLessonHeadPatch).u-img-w100
+                  p.p-lesson__head-title01
+                    | 前半
+                  h3.p-lesson__head-title02
+                    | 哲学の道具を手に入れる
+                p.p-lesson__details
+                  | まずは考えるための道具を手にし、ふだん当たり前に使っている#[span.u-bold 「いる」「ある」という言葉の意味]を掘り下げます。
+                  br.u-br-sp
+                  | そして、友だちの答えを出発点に、#[span.u-bold 人の意見を手がかりにして考える「対話の作法」]にふれていきます。
+                ul.p-lesson__week-list
+                  li.p-lesson__week-item
+                    .p-lesson__week-wrapper
+                      .p-lesson__week-patch
+                        img(src=ImgLessonWeekPatch).u-img-w100
+                      p.p-lesson__week-number 
+                        | 1週目
+                    .lesson__week-details
+                      h4.p-lesson__week-title
+                        | 「ある」って、どういうこと？
+                      p.p-lesson__week-text
+                        | 11/10（火）18:30〜19:15
+                  li.p-lesson__week-item
+                    .p-lesson__week-wrapper
+                      .p-lesson__week-patch
+                        img(src=ImgLessonWeekPatch).u-img-w100
+                      p.p-lesson__week-number 
+                        | 2週目
+                    .lesson__week-details
+                      h4.p-lesson__week-title
+                        | みんなの答えで、考える①
+                      p.p-lesson__week-text
+                        | 11/17（火）18:30〜19:15
+              li.p-lesson__item.js-hidden
+                .p-lesson__head
+                  .p-lesson__head-patch
+                    img(src=ImgLessonHeadPatch).u-img-w100
+                  p.p-lesson__head-title01
+                    | 後半
+                  h3.p-lesson__head-title02
+                    | 道具を自分の毎日に
+                    br.u-br-sp
+                    | 使ってみる
+                p.p-lesson__details
+                  | 手に入れた思考の道具を、#[span.u-bold ウワサ話や日常の「困ったこと」に応用]する時間です。学んだ道具を自分の身に引き寄せて使うことで思考を手になじませ、#[span.u-bold 日常的に哲学をするきっかけ]を作ります。
+                ul.p-lesson__week-list
+                  li.p-lesson__week-item
+                    .p-lesson__week-wrapper
+                      .p-lesson__week-patch
+                        img(src=ImgLessonWeekPatch).u-img-w100
+                      p.p-lesson__week-number 
+                        | 3週目
+                    .lesson__week-details
+                      h4.p-lesson__week-title
+                        | 見えないものと、どうつきあう？
+                      p.p-lesson__week-text
+                        | 11/24（火）18:30〜19:15
+                  li.p-lesson__week-item
+                    .p-lesson__week-wrapper
+                      .p-lesson__week-patch
+                        img(src=ImgLessonWeekPatch).u-img-w100
+                      p.p-lesson__week-number 
+                        | 4週目
+                    .lesson__week-details
+                      h4.p-lesson__week-title
+                        | みんなの答えで、考える②
+                      p.p-lesson__week-text
+                        | 12/1（火）18:30〜19:15
+          p.p-lesson__text.js-hidden
+            | わからないことに出会ったとき、#[span.u-point 立ち止まって考えられる。]
+            br
+            | 人の意見を、無批判に受け入れるのでも頭ごなしに否定するのでもなく、そこから#[span.u-point 自分の考えをふかめていける。]
+            br
+            | #[span.u-border ——]その#[span.u-point 最初の一歩]を目指します。
+    div(style="height:200px;")
+    //JS読込
+    include _js
+    +modal
+    +fixed-btn
