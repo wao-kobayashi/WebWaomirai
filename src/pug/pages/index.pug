@@ -21,194 +21,35 @@ html(lang="jp")
         .page-list ul { margin-left: 0.2em;  }
         .page-list li { line-height: 1.6; list-style:disc; }
         .page-list > li { margin-bottom:20px; }
+        .page-list-note { color:#999; font-size:80%; margin:0 0 12px !important; }
+        .page-list-unset { color:#c33; font-size:70%; margin-left:0.5em; }
+        .page-list-sub { margin-top:10px; }
   body
-    //- wrapper
+    //- ページ一覧は src/pug/pages 配下から自動生成（.eleventy.js → src/pug/pageList/pageGroups.js）
+    //- 見出し・メモなどの表示は src/pug/pageList/pageMeta.js で設定
     .page-list-wrapper
       ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |33_ 哲学4weeks体験(2026年)
-            ul
-              li: a(href="/33_lp-event-2026philosophy/index.html") 通常ver
-              li: a(href="/33_lp-event-2026philosophy/loycus/index.html") LOYCUSver
-      ul.page-list
-        li: |31_5daysチャレンジ 2026年冬
-          ul
-            li: a(href="/31_english-lp-5days-2026winter/") 31_5daysチャレンジ 2026年冬
-            li: a(href="/31_english-lp-5days-2026winter/loycus/index.html") 31_5daysチャレンジ 2026年冬：LOYCUS
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |32_ 親子体験(2026年11月)
-            ul
-              li: a(href="/32_lp-family-2026-11november/index.html") 通常ver
-              li: a(href="/32_lp-family-2026-11november/loycus/index.html") LOYCUSver
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |30_ 親子体験(2026年10月)
-            ul 
-              li: a(href="/30_lp-family-2026-10october/index.html") 通常ver
-              li: a(href="/30_lp-family-2026-10october/loycus/index.html") LOYCUSver  
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |29_ 親子体験(2026年8月)
-            ul 
-              li: a(href="/29_lp-family-2026-08august/index.html") 通常ver
-              li: a(href="/29_lp-family-2026-08august/loycus/index.html") LOYCUSver  
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |28_ 2026年夏の数学探究
-            ul 
-              li: a(href="/28_lp-math-quest-2026summer/index.html") 通常ver
-              li: a(href="/28_lp-math-quest-2026summer/loycus/index.html") LOYCUSver  
-      ul.page-list
-        li: |27_夏LP2026
-          ul
-            li: |★本番アップ用（server）
-            li: a(href="/27_lp-event-2026summer/index.html") 通常ver
-            li: a(href="/27_lp-event-2026summer/loycus/index.html") LOYCUSver
-            li(style="margin:20px 0 0;"): |ローカル確認用（local）
-            li: a(href="/27_lp-event-2026summer/local/index.html") 通常ver
-            li: a(href="/27_lp-event-2026summer/local/loycus/index.html") LOYCUSver
-      ul.page-list
-        li: |26_5daysチャレンジ
-          ul
-            li: a(href="/26_english-lp-5days-2026summer/") 26_5daysチャレンジ 2026年夏
-            li: a(href="/26_english-lp-5days-2026summer/loycus/index.html") 26_5daysチャレンジ 2026年夏：LOYCUS
-            li: a(href="/26_english-lp-5days-2026summer/a-finished/") 26_5daysチャレンジ 2026年夏（A日程終了後）
-            li: a(href="/26_english-lp-5days-2026summer/ab-finished/") 26_5daysフレーズチャレンジ 2026年夏（AB日程終了後）
-      ul.page-list
-        li: |25_英語LP（メイン）
-            ul
-              li: a(href="/25_english-lp-main-2026/index.html") 通常ver
-              li: a(href="/25_english-lp-main-2026/loycus/index.html") LOYCUSver
-        li: |24_保護者セミナー（１つのテーマ）
-            p(style='color:#999; font-size:80%; margin:0 0 12px !important;')|保護者セミナーが１つのテーマになったバージョン
-            ul
-              li: a(href="/24_lp-parent-seminar-single/index.html") 通常ver
-              li: a(href="/24_lp-parent-seminar-single/loycus/index.html") LOYCUSver
-
-      ul.page-list
-        li: |23_100フレーズチャレンジ
-          ul
-            li: |通常価格
-            li: a(href="/23_english-lp-100phases-2026spring/") 23_100フレーズチャレンジ 2026年春
-            li: a(href="/23_english-lp-100phases-2026spring/loycus/index.html") 23_100フレーズチャレンジ 2026年春：LOYCUS
-            li(style="margin:20px 0 0;"): |★特別価格
-            li: a(href="/23_english-lp-100phases-2026spring-waomember/") 23_100フレーズチャレンジ 2026年春（WAO会員向け）
-            li: a(href="/23_english-lp-100phases-2026spring-waomember/loycus/index.html") 23_100フレーズチャレンジ 2026年春（WAO会員向け）：LOYCUS
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: | 22_2026年春有料
-          ul 
-            li: |通常価格
-            li: a(href="/22_event-lp-2026march/") 22_2026年春有料LP3月
-            li: a(href="/22_event-lp-2026march/loycus/index.html") 22_2026年春有料LP3月）｜Loycus
-            li(style="margin:20px 0 0;"): |★特別価格
-            li: a(href="/22_event-lp-2026march-waomember/") 22_2026年春有料LP3月（WAO会員向け）
-            li: a(href="/22_event-lp-2026march-waomember/loycus/index.html") 22_2026年春有料LP3月（WAO会員向け）｜Loycus
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: a(href="21_lp-how-to-join/") 21_入会LP
-
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |20_保護者セミナー（複数テーマ）
-            ul 
-                li: a(href="/20_lp-parent-seminar-2026/index.html") 通常ver
-                li: a(href="/20_lp-parent-seminar-2026/loycus/index.html") LOYCUSver
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: |24_保護者セミナー（シングル）
-            ul 
-                li: a(href="/24_lp-parent-seminar-single/index.html") 通常ver
-                li: a(href="/24_lp-parent-seminar-single/loycus/index.html") LOYCUSver
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: a(href="19_lp-tankyu-week/") 19_探究WEEK
-      ul.page-list
-        li 18_親子オンラインセミナー
-          ul
-            //- each event in familyEvents
-            //-   li= event.label
-            //-     ul
-            //-       li: a(href=`${event.basePath}/index.html`) 通常ver
-            //-       if event.hasLoycus
-            //-         li: a(href=`${event.basePath}/loycus/index.html`) LOYCUSver
-            
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: a(href="17_lp-family-2025nov/") 17_親子オンラインセミナー
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li
-          |TECH SEEKER 2025 
-          br
-          |※画像のリンク先でローカルとサーバーを切り替えています。
-          ul
-            li phase 1(とりあえずプレオープン)
+        each group in pageGroups(collections.all)
+          li
+            - var single = group.subs.length === 1 && group.subs[0].pages.length === 1
+            if single
+              a(href=group.subs[0].pages[0].url)= group.label
+            else
+              = group.label
+            if !group.labeled
+              span.page-list-unset ラベル未設定（pageMeta.js）
+            if group.note || (!group.labeled && group.metaTitle)
+              p.page-list-note= group.note || group.metaTitle
+            if !single
               ul
-                li: a(href="/16_lp-event-2025techseeker/16_01_phase_one/server/index.html") ★16_TECH SEEKER 2025(サーバー)
-                li: a(href="/16_lp-event-2025techseeker/16_01_phase_one/local/index.html") 16_TECH SEEKER 2025(ローカル)
-            li phase 2(9/29後)
-              ul
-                li: a(href="/16_lp-event-2025techseeker/16_02_phase_two/server/index.html") ★16_TECH SEEKER 2025(サーバー)
-                li: a(href="/16_lp-event-2025techseeker/16_02_phase_two/local/index.html") 16_TECH SEEKER 2025(ローカル)
-      ul.page-list
-        // ── 上位ページ ───────────────────────
-        li: a(href="/15_lp-campaign-fr-ref/") 15_友だち紹介キャンペーン
-        li: a(href="/14_lp-event-2025summer/") 14_夏休み自由研究DAY2025
-        li: a(href="/12_lp-lesson-from-line/?key=2025_may_cheery") 12_イベントページの動画
-        li: a(href="/11_lp-about-waomirai/") 11_ワオ未来塾とは
-
-        // ── 1WEEKキャンペーン ──────────────────
-        li 1WEEK 授業無料キャンペーン
-          ul
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-26_03march/") 10_1WEEK 授業無料キャンペーン（2026年3月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-26_02february/") 10_1WEEK 授業無料キャンペーン（2026年2月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-26_01january/") 10_1WEEK 授業無料キャンペーン（2026年1月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_12december/") 10_1WEEK 授業無料キャンペーン（2025年12月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_11november/") 10_1WEEK 授業無料キャンペーン（2025年11月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_10october/") 10_1WEEK 授業無料キャンペーン（2025年10月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_09september/") 10_1WEEK 授業無料キャンペーン（2025年9月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_08august/") 10_1WEEK 授業無料キャンペーン（2025年8月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_07july/") 10_1WEEK 授業無料キャンペーン（2025年7月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_06june/") 10_1WEEK 授業無料キャンペーン（2025年6月）
-            li: a(href="/10_lp-firstweek-free/lp-firstweek-free-25_05may/") 10_1WEEK 授業無料キャンペーン（2025年5月）
-
-        // ── 英語LP ──────────────────────────────
-        li 英語LP
-          ul
-            li: a(href="/13_english-lp-100phases-2025summer/english-lp-a-not-finished/") 13_100フレーズチャレンジ 2025年夏（A日程終了前）
-            li: a(href="/13_english-lp-100phases-2025summer/english-lp-a-finished/") 13_100フレーズチャレンジ 2025年夏（A日程終了後）
-            li: a(href="/13_english-lp-100phases-2025summer/english-lp-ab-finished/") 13_100フレーズチャレンジ 2025年夏（AB日程終了後）
-            li: a(href="/09_english-lp-100phases/") 09_100フレーズチャレンジ
-            li: a(href="/06_english-lp-main/") 06_英語LP
-        // ── イベントLP ───────────────────────────
-        li イベントLP
-          ul
-            li: a(href="/08_event-lp-2025march/") 08_イベントLP3月
-            li: a(href="/07_event-lp-2025feb/") 07_イベントLP2月
-        // ── ハピタス ─────────────────────────────
-        li ハピタスLP
-          ul
-            li: a(href="/01_hapitas/hapitas-lp/") 01_ハピタスLP
-            li: a(href="/01_hapitas/hapitas-thanks-page/") 01_ハピタスLP サンクスページ
-        // ── 英語無料体験関連 ──────────────────────
-        li 英語無料体験関連
-          ul
-            // フォーム
-            li フォーム
-              ul
-                li: a(href="/03_english-portal-form/202411_marron/english-portal-form-marron/") 03_英語無料体験11月生募集
-
-            // ポータル
-            li 英語ポータル
-              ul
-                li: a(href="/02_english-portal/english-portal-login/") 02_ログイン
-                li チュートリアル
-                  ul
-                    li: a(href="/02_english-portal/202410_grape/english-portal-tutorial-2410grape/") 02_チュートリアル10月
-                    li: a(href="/02_english-portal/202411_marron/english-portal-tutorial-2411marron/") 02_チュートリアル11月
-                li 体験ページ
-                  ul
-                    li: a(href="/02_english-portal/202410_grape/english-learn-portal-2410grape/") 02_英語体験ページ10月
-                    li: a(href="/02_english-portal/202411_marron/english-learn-portal-2411marron/") 02_英語体験ページ11月
+                each sub in group.subs
+                  if !sub.label
+                    each p in sub.pages
+                      li: a(href=p.url)= p.label
+                  else if sub.pages.length === 1
+                    li: a(href=sub.pages[0].url)= sub.label
+                  else
+                    li.page-list-sub= sub.label
+                      ul
+                        each p in sub.pages
+                          li: a(href=p.url)= p.label
