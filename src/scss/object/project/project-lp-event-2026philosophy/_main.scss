@@ -216,7 +216,7 @@
 // p-concept
 .p-concept{
   background: $cl-yellow;
-  padding-block: px(60);
+  padding: px(55) 0 px(60);
 }
 .p-concept__text{
   @include fs-pc18;
@@ -228,7 +228,7 @@
 }
 @include responsive-style($breakpoint-sp) {
   .p-concept{
-    padding-block: px(30);
+    padding: px(25) 0 px(30);
   }
   .p-concept__text{
     text-align: left;
@@ -381,7 +381,7 @@
 }
 @include responsive-style($breakpoint-sp) {
   .p-benefit{
-    padding-block: px(30);
+    padding: px(30) 0 px(40);
   }
   .p-benefit__title{
     text-align: left;
@@ -997,7 +997,7 @@
 }
 @include responsive-style($breakpoint-sp) {
   .p-faq{
-    padding: px(40) 0 px(30);
+    padding: px(40) 0;
   }
   .p-faq__list{
     margin-top: px(20) !important;
