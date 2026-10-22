@@ -3,8 +3,7 @@ include _mixin
 //variable
 include _variables
 
-doctype html
-html
+html(lang="ja")
   head
     meta(charset="utf-8")
     script.
@@ -14,7 +13,6 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-W3X8CG9C');
     // End Google Tag Manager
-    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
     - const cssLocal = loycus ? '../' : ''
@@ -30,14 +28,14 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
     header.l-header
-      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg')
+      img(src='https://waomirai.com/lp/assets/commonimages/logo.svg' alt="ワオ未来塾")
     .p-hero
       p.p-hero__name.js-hidden
         img(src=ImgHeroName alt="小学生のための哲学 ー探究学習4weeks体験ー").u-img-w100
       .p-hero__bg-top
-        img(src=ImgBgHeroTop).u-img-w100
+        img(src=ImgBgHeroTop alt="").u-img-w100
       .p-hero__bg-bottom
-        img(src=ImgBgHeroBottom).u-img-w100
+        img(src=ImgBgHeroBottom alt="").u-img-w100
       .p-hero__wrapper.l-wrapper
         .p-hero__image.js-hidden
           picture
@@ -97,7 +95,7 @@ html
               | 授業の進め方
               span.p-navi__link-arrow
           li.p-navi__item
-            a(href="#").p-navi__link
+            a(href="#entry").p-navi__link
               | 参加の流れ
               span.p-navi__link-arrow
     .p-concept
@@ -117,26 +115,26 @@ html
         h2.p-recommend__title.js-hidden
           | こんなお子さまにオススメ
         .p-recommend__decoration.js-hidden
-          img(src=ImgRecommendDecoration).u-img-w100
+          img(src=ImgRecommendDecoration alt="").u-img-w100
         ul.p-recommend__list
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend01).u-img-w100
+              img(src=ImgRecommend01 alt="").u-img-w100
             p.p-recommend__text
               |『なんで？』『どうして？』が多くて、#[span.u-bold 答えをもらってもなかなか納得しない…]
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend02).u-img-w100
+              img(src=ImgRecommend02 alt="").u-img-w100
             p.p-recommend__text
               |『正解を書かなきゃ』と固まってしまって、#[span.u-bold 自分の意見を言うのが苦手]みたい…
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend03).u-img-w100
+              img(src=ImgRecommend03 alt="").u-img-w100
             p.p-recommend__text
               | #[span.u-bold 考える力をつけてほしい]けど、ドリル形式の勉強を嫌がってしまう…
           li.p-recommend__item.js-hidden
             .p-recommend__image
-              img(src=ImgRecommend04).u-img-w100
+              img(src=ImgRecommend04 alt="").u-img-w100
             p.p-recommend__text
               |#[span.u-bold 「考えること自体が楽しい！」という好奇心]を、もっと伸ばしてあげたい…
     .p-benefit#benefit
@@ -146,7 +144,7 @@ html
             br.u-br-sp
             | なることを目指します。
           .p-benefit__decoration.js-hidden
-            img(src=ImgBenefitDecoration).u-img-w100
+            img(src=ImgBenefitDecoration alt="").u-img-w100
           ul.p-benefit__list
             li.p-benefit__item.js-hidden
               .p-benefit__item-image 
@@ -177,12 +175,12 @@ html
             | #[span.u-point 「妖怪っているの？」]#[span.u-border ——]この素朴な問いの奥に潜んでいるのは、哲学者が長年探求し続けてきた#[span.u-point 「『ある』とは何か」]という大きな問題です。
           ul.p-lesson__list 
               li.p-lesson__item.js-hidden
-                .p-lesson__head
-                  .p-lesson__head-patch
-                    img(src=ImgLessonHeadPatch).u-img-w100
-                  p.p-lesson__head-title01
+                .p-lesson__heading
+                  .p-lesson__heading-patch
+                    img(src=ImgLessonHeadPatch alt="").u-img-w100
+                  p.p-lesson__heading-title01
                     | 前半
-                  h3.p-lesson__head-title02
+                  h3.p-lesson__heading-title02
                     | 哲学の道具を手に入れる
                 p.p-lesson__details
                   | まずは考えるための道具を手にし、ふだん当たり前に使っている#[span.u-bold 「いる」「ある」という言葉の意味]を掘り下げます。
@@ -192,7 +190,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 1週目
                     .lesson__week-details
@@ -203,7 +201,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 2週目
                     .lesson__week-details
@@ -212,12 +210,12 @@ html
                       p.p-lesson__week-text
                         | 11/17（火）18:30〜19:15
               li.p-lesson__item.js-hidden
-                .p-lesson__head
-                  .p-lesson__head-patch
-                    img(src=ImgLessonHeadPatch).u-img-w100
-                  p.p-lesson__head-title01
+                .p-lesson__heading
+                  .p-lesson__heading-patch
+                    img(src=ImgLessonHeadPatch alt="").u-img-w100
+                  p.p-lesson__heading-title01
                     | 後半
-                  h3.p-lesson__head-title02
+                  h3.p-lesson__heading-title02
                     | 道具を自分の毎日に
                     br.u-br-sp
                     | 使ってみる
@@ -227,7 +225,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 3週目
                     .lesson__week-details
@@ -238,7 +236,7 @@ html
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
-                        img(src=ImgLessonWeekPatch).u-img-w100
+                        img(src=ImgLessonWeekPatch alt="").u-img-w100
                       p.p-lesson__week-number 
                         | 4週目
                     .lesson__week-details
@@ -252,7 +250,239 @@ html
             | 人の意見を、無批判に受け入れるのでも頭ごなしに否定するのでもなく、そこから#[span.u-point 自分の考えをふかめていける。]
             br
             | #[span.u-border ——]その#[span.u-point 最初の一歩]を目指します。
-    div(style="height:200px;")
+    .p-teacher
+      .p-teacher__wrapper.l-wrapper
+          h2.p-teacher__title.js-hidden
+            | 講師紹介
+          .p-teacher__main
+            .p-teacher__image.js-hidden
+              img(src=ImgTeacher alt="").u-img-w100
+            .p-teacher__info.js-hidden
+              p.p-teacher__position
+                | ワオ未来塾講師
+              .p-teacher__name
+                p.p-teacher__name-jpn
+                  | 林 鉄平
+                p.p-teacher__name-eng
+                  | Teppei Hayashi
+              p.p-teacher__background
+                | カルガリー大学大学院哲学科博士課程修了
+                br.u-br-sp
+                | #[span.u-text-pc &nbsp;/&nbsp;]博士（哲学）
+              p.p-teacher__text
+                | 哲学というと難しそうに聞こえますが、やることはシンプルで、「ふしぎだな」と思ったことを、ゆっくり考えてみるだけです。
+                br.u-br-pc
+                | 妖怪はいるのか、いないのか。いっしょに頭をひねりましょう。
+    .p-outline
+      .p-outline__wrapper.l-wrapper
+        h2.p-outline__title.js-hidden
+          | 授業の概要
+        table.p-outline__table.js-hidden
+          tr.p-outline__tr
+            th.p-outline__th
+              | 授業テーマ
+            td.p-outline__td
+              | 妖怪で考える「存在」のお話
+          tr.p-outline__tr
+            th.p-outline__th
+              | 開催日時
+            td.p-outline__td
+              | 11/10（火）・11/17（火）・11/24（火）・12/1（火）#[span.u-text-pc &nbsp;]
+              br.u-br-sp
+              | 18:30〜19:15
+          tr.p-outline__tr
+            th.p-outline__th
+              | 対象
+            td.p-outline__td
+              | 小学3年生〜6年生
+              br.u-br-sp
+              | （保護者の方のご見学も大歓迎です）
+          tr.p-outline__tr
+            th.p-outline__th
+              | 費用
+            td.p-outline__td
+              | 無料
+          tr.p-outline__tr
+            th.p-outline__th
+              | 授業形式
+            td.p-outline__td
+              | 週1回45分 × 全4回
+          tr.p-outline__tr
+            th.p-outline__th
+              | 受講方法
+            td.p-outline__td
+              | オンライン
+              br.u-br-sp
+              |（Zoomウェビナー／全国どこからでも参加OK）
+        p.p-outline__note.js-hidden
+          | ※アーカイブ配信もございますので、ご都合に合わせて無理なくご参加いただけます。
+    .p-entry#entry
+      .p-entry__wrapper.l-wrapper
+        h2.p-entry__title.js-hidden
+          | かんたん5STEPで参加可能
+        ol.p-entry__list
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP1 
+                h3.p-entry__heading-title
+                  | LINEで友だち追加＆
+                  br.u-br-sp
+                  | お申し込み
+              .p-entry__image-sp
+                img(src=ImgEntry01 alt="").u-img-w100
+              p.p-entry__text
+                | 二次元コードからスマートフォンで公式アカウントを友だちに追加し、
+                br
+                | トーク画面に送られる申し込みフォームからお申し込みください。
+                br
+                | 友だち追加は
+                a.js-line-trigger こちら
+                | から
+              p.p-entry__note
+                | ※LINEの友だち追加等でお困りの際は、
+                a(href="mailto:mirai-waoug@waomirai.com") mirai-waoug@waomirai.com
+                | までお問い合わせください。
+            .p-entry__image-pc
+              img(src=ImgEntry01 alt="").u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP2
+                h3.p-entry__heading-title
+                  | 学習サイトのログイン
+                  br.u-br-sp
+                  | 情報を受け取る
+              .p-entry__image-sp
+                img(src=ImgEntry02 alt="").u-img-w100
+              p.p-entry__text
+                | 実施の2日前に、ご登録いただいたメールアドレスへ、
+                br.u-br-pc
+                | 学習サイトの「ログインURL」「ID」「パスワード」をお送りします。 
+                br
+                | ※簡単な受講ガイドもあわせてお送りいたします。
+            .p-entry__image-pc
+              img(src=ImgEntry02 alt="").u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP3
+                h3.p-entry__heading-title
+                  | Zoomをインストール
+              .p-entry__image-sp
+                img(src=ImgEntry03 alt="").u-img-w100
+              p.p-entry__text
+                | お手持ちの端末にZoomのインストールをお願いします。
+                br
+                | パソコンまたはタブレットからのご参加を推奨しています。
+            .p-entry__image-pc
+              img(src=ImgEntry03 alt="").u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP4
+                h3.p-entry__heading-title
+                  | 学習サイトにログイン
+              .p-entry__image-sp
+                img(src=ImgEntry04 alt="").u-img-w100
+              p.p-entry__text
+                | STEP2で届いたログイン情報を使用し、学習サイトにログインしてください。
+            .p-entry__image-pc
+              img(src=ImgEntry04 alt="").u-img-w100
+          li.p-entry__item.js-hidden
+            .p-entry__main
+              .p-entry__heading
+                p.p-entry__heading-step
+                  | STEP5
+                h3.p-entry__heading-title
+                  | 開催時間になったら
+                  br.u-br-sp
+                  | 授業に参加
+              .p-entry__image-sp
+                img(src=ImgEntry05 alt="").u-img-w100
+              p.p-entry__text
+                | 学習サイトの「受講カレンダー」から当日の授業を開き、
+                br.u-br-pc
+                | 「受講する」ボタンからZoomを起動してご参加ください。
+            .p-entry__image-pc
+              img(src=ImgEntry05 alt="").u-img-w100
+    .p-faq
+      .p-faq__wrapper.l-wrapper
+        h2.p-faq__title.js-hidden
+          | よくある質問
+        .p-faq__decoration.js-hidden
+          img(src=ImgFaqDecoration alt="").u-img-w100
+        ul.p-faq__list
+          li.p-faq__item.js-hidden
+            .p-faq__q
+              p.p-faq__q-icon
+                | Q
+              h3.p-faq__q-title
+                | カメラオンで参加は必要ですか？
+            .p-faq__a
+              p.p-faq__a-icon
+                | A
+              p.p-faq__a-text
+                | 授業の双方向性を高めるため、原則としてカメラはオンにしてご参加をお願いしています。
+                br
+                | 難しい場合はオフでも構いません。
+                br
+                | ※受講者の映像は講師のみに表示され、他の受講者には表示されません。
+          li.p-faq__item.js-hidden
+            .p-faq__q
+              p.p-faq__q-icon
+                | Q
+              h3.p-faq__q-title
+                | 当日参加できなかった場合、
+                br.u-br-pc
+                | 後日アーカイブ視聴はできますか？
+            .p-faq__a
+              p.p-faq__a-icon
+                | A
+              p.p-faq__a-text
+                | ご視聴いただけます。
+                br
+                | 数日間は視聴可能とする予定です。
+    .p-about
+     .p-about__wrapper.l-wrapper
+        h2.p-about__title.js-hidden
+          | ワオ未来塾について
+        .p-about__logo.js-hidden
+          img(src=ImgLogoWao alt="ワオ・コーポレーション").u-img-w100
+        p.p-about__text.js-hidden
+          | 全国で「能開センター」や「個別指導Axis」を展開する、株式会社ワオ・コーポレーションがお届けする新しいオンライン学習の場「ワオ未来塾」。
+        p.p-about__text.js-hidden
+          | 21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない"自分の軸"が求められていきます。
+        p.p-about__text.js-hidden
+          | 半世紀にわたり子どもたちの教育に携わってきた当社は、自分の頭で考える力を育む「哲学」をはじめ、「科学」「経済」など、これからの社会で活きる多様な学びを提供しています。  
+        p.p-about__text.js-hidden
+          | 今回は、リニューアルを予定している哲学レベル1・レベル2の開講に先駆けて、思考の「道具」を手にする全4回の特別授業を無料で開催いたします。
+        .p-about__link.js-hidden 
+          a(href="https://waomirai.com/" target="_blank").p-about__button
+            | ワオ未来塾の公式サイトへ
+    footer.l-footer
+      .l-footer__wrapper.l-wrapper
+        .l-footer__logo
+          img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg' alt="").u-img-w100
+        ul.l-footer__list
+          li.l-footer__item
+            a(href="https://www.wao-corp.com/" target="_blank").l-footer__link
+              | 運営会社
+          li.l-footer__item
+            a(href="https://www.wao-corp.com/privacy/" target="_blank").l-footer__link
+              | プライバシーポリシー
+          li.l-footer__item
+            a(href="https://waomirai.com/commerce_law/" target="_blank").l-footer__link
+              | 特定商取引法
+          li.l-footer__item
+            a(href="https://waomirai.com/terms/" target="_blank").l-footer__link
+              | 利用規約
+        p.l-footer__copy
+          | &copy; WAO CORPORATION
     //JS読込
     include _js
     +modal
