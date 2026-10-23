@@ -12,100 +12,44 @@ html(lang="jp")
       meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js")
       style.
-        :root {
-          --bg: #f5f6f8; --card: #fff; --line: #e6e8ec; --text: #1a1d23; --muted: #6b7280;
-          --chip: #f1f3f5; --chip-hover: #e7ecff; --accent: #2b59ff; --warn: #d14343;
+        .page-list-wrapper {
+          width: 70%;
+          margin: 30px auto;
+          padding: 40px 20px 60px;
+          box-shadow: 0 5px 10px #ccc;
         }
-        @media (prefers-color-scheme: dark) {
-          :root {
-            --bg: #121417; --card: #1b1e23; --line: #2a2e35; --text: #e8eaed; --muted: #9aa0a8;
-            --chip: #262a31; --chip-hover: #26304d; --accent: #8aa6ff; --warn: #ff8a8a;
-          }
-        }
-        * { box-sizing: border-box; }
-        body {
-          margin: 0; background: var(--bg); color: var(--text);
-          font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-          font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased;
-        }
-        .pl { max-width: 880px; margin: 0 auto; padding: 48px 16px 80px; }
-        .pl-header { margin-bottom: 24px; }
-        .pl-header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: .02em; }
-        .pl-header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
-        .pl-list { display: grid; gap: 12px; }
-        .pl-card {
-          background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
-        }
-        .pl-head { display: flex; align-items: baseline; gap: 12px; }
-        .pl-num {
-          flex: none; width: 28px; color: var(--muted); font-size: 12px; font-weight: 600;
-          font-variant-numeric: tabular-nums;
-        }
-        .pl-title { margin: 0; min-width: 0; font-size: 16px; font-weight: 600; }
-        .pl-title a { color: inherit; text-decoration: none; }
-        .pl-title a:hover { color: var(--accent); }
-        .pl-title a::after { content: "→"; margin-left: 8px; color: var(--muted); font-weight: 400; }
-        .pl-title a:hover::after { color: var(--accent); }
-        .pl-unset {
-          flex: none; margin-left: auto; color: var(--warn); font-size: 11px;
-          border: 1px solid currentColor; border-radius: 999px; padding: 0 8px;
-        }
-        .pl-note { margin: 4px 0 0 40px; color: var(--muted); font-size: 13px; }
-        .pl-body { margin: 12px 0 0 40px; display: grid; gap: 10px; }
-        .pl-sub { margin: 0 0 6px; color: var(--muted); font-size: 12px; }
-        .pl-links { display: flex; flex-wrap: wrap; gap: 6px; }
-        .pl-link {
-          display: inline-block; padding: 5px 12px; border-radius: 8px; background: var(--chip);
-          color: var(--text); font-size: 13px; text-decoration: none; transition: background .15s, color .15s;
-        }
-        .pl-link:hover { background: var(--chip-hover); color: var(--accent); }
-        @media (max-width: 600px) {
-          .pl { padding-top: 32px; }
-          .pl-card { padding: 16px; }
-          .pl-note, .pl-body { margin-left: 0; }
-        }
+        .page-list ul { margin-left: 0.2em;  }
+        .page-list li { line-height: 1.6; list-style:disc; }
+        .page-list > li { margin-bottom:20px; }
+        .page-list-note { color:#999; font-size:80%; margin:0 0 12px !important; }
+        .page-list-unset { color:#c33; font-size:70%; margin-left:0.5em; }
+        .page-list-sub { margin-top:10px; }
   body
     //- ページ一覧は src/pug/pages 配下から自動生成（.eleventy.js → src/pug/pageList/pageGroups.js）
     //- 見出し・メモなどの表示は src/pug/pageList/pageMeta.js で設定
-    - var groups = pageGroups(collections.all)
-    .pl
-      header.pl-header
-        h1 WAO未来塾 ページ一覧
-        p #{groups.length} グループ
-      .pl-list
-        each group in groups
-          -
-            var single = group.subs.length === 1 && group.subs[0].pages.length === 1
-            // 1ページだけのサブフォルダはまとめて1行に、複数ページのものは小見出し付きの行にする
-            var rows = []
-            group.subs.forEach(function (sub) {
-              if (sub.label && sub.pages.length === 1) {
-                var last = rows[rows.length - 1]
-                var link = { url: sub.pages[0].url, label: sub.label }
-                if (last && last.merged) last.links.push(link)
-                else rows.push({ merged: true, label: '', links: [link] })
-              } else {
-                rows.push({ label: sub.label, links: sub.pages })
-              }
-            })
-          section.pl-card
-            .pl-head
-              span.pl-num= group.number >= 0 ? String(group.number).padStart(2, '0') : ''
-              h2.pl-title
-                if single
-                  a(href=group.subs[0].pages[0].url)= group.label.replace(/^\d+_\s*/, '')
-                else
-                  = group.label.replace(/^\d+_\s*/, '')
-              if !group.labeled
-                span.pl-unset ラベル未設定
+    .page-list-wrapper
+      ul.page-list
+        each group in pageGroups(collections.all)
+          li
+            - var single = group.subs.length === 1 && group.subs[0].pages.length === 1
+            if single
+              a(href=group.subs[0].pages[0].url)= group.label
+            else
+              = group.label
+            if !group.labeled
+              span.page-list-unset ラベル未設定（pageMeta.js）
             if group.note || (!group.labeled && group.metaTitle)
-              p.pl-note= group.note || group.metaTitle
+              p.page-list-note= group.note || group.metaTitle
             if !single
-              .pl-body
-                each row in rows
-                  div
-                    if row.label
-                      p.pl-sub= row.label
-                    .pl-links
-                      each link in row.links
-                        a.pl-link(href=link.url)= link.label
+              ul
+                each sub in group.subs
+                  if !sub.label
+                    each p in sub.pages
+                      li: a(href=p.url)= p.label
+                  else if sub.pages.length === 1
+                    li: a(href=sub.pages[0].url)= sub.label
+                  else
+                    li.page-list-sub= sub.label
+                      ul
+                        each p in sub.pages
+                          li: a(href=p.url)= p.label

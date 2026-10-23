@@ -21,7 +21,7 @@ src/pug/pages/index.pug          … pageGroups(collections.all) をループし
 ## 新しいページを作ったとき
 
 1. いつもどおり `src/pug/pages/34_xxx/index.pug`（必要なら `loycus.pug`）を作る
-2. **それだけで一覧に出ます。**（見出しはフォルダ名のまま、右上に「ラベル未設定」の印が付きます）
+2. **それだけで一覧に出ます。**（見出しはフォルダ名のまま、横に赤字で「ラベル未設定」と付きます）
 3. 見出しを付けるなら `pageMeta.js` に1行足す
 
 ```js
@@ -34,12 +34,12 @@ src/pug/pages/index.pug          … pageGroups(collections.all) をループし
 
 | 対象 | ルール |
 | --- | --- |
-| グループ | `src/pug/pages` 直下のフォルダ1つ = 1グループ（カード1枚） |
+| グループ | `src/pug/pages` 直下のフォルダ1つ = 1グループ（見出し1つ） |
 | 並び順 | フォルダ先頭の番号の大きい順（新しい順）。同じ番号はフォルダ名順 |
-| 見出しの番号 | フォルダ先頭の番号を左に表示。`label` 先頭の `33_` は表示時に外す |
 | ページ名 | ファイル名で決まる：`index.pug` → 通常ver、`loycus.pug` → LOYCUSver、それ以外はファイル名そのまま |
 | サブフォルダ | `local/` → ローカル確認用（local）、`server/` → ★本番アップ用（server）、それ以外はフォルダ名そのまま |
-| 1ページだけのグループ | カードの見出し自体がリンクになる（右に「→」） |
+| 1ページだけのグループ | 見出し自体がリンクになる |
+| 1ページだけのサブフォルダ | サブフォルダの表示名がそのままリンクになる |
 
 > **注意：** LOYCUS 版の判定はファイル名だけを見ています。`loycus.pug` 以外の名前（例 `loycus-v2.pug`）で作った場合は、`variantLabels` で名前を付けてください。
 
@@ -68,5 +68,5 @@ src/pug/pages/index.pug          … pageGroups(collections.all) をループし
 
 - [`pageGroups.js`](./pageGroups.js) — 自動でまとめる処理（通常は触らなくて OK）
 - [`pageMeta.js`](./pageMeta.js) — 手で書く設定
-- [`../pages/index.pug`](../pages/index.pug) — 一覧の表示とデザイン
+- [`../pages/index.pug`](../pages/index.pug) — 一覧の表示
 - [`../../../.eleventy.js`](../../../.eleventy.js) — `pageGroups` の登録
