@@ -28,8 +28,9 @@ function yearMonthLabel(dir) {
 }
 
 module.exports = {
+  '34_lp-family-2026-11november': { label: '34_親子体験(2026年11月)' },
   '33_lp-event-2026philosophy': { label: '33_哲学4weeks体験(2026年)' },
-  '32_lp-family-2026-11november': { label: '32_親子体験(2026年11月)' },
+  '32_lp-family-2026-11november': { label: '32_親子体験(2026年10月末)' },
   '31_english-lp-5days-2026winter': { label: '31_5daysチャレンジ 2026年冬' },
   '30_lp-family-2026-10october': { label: '30_親子体験(2026年10月)' },
   '29_lp-family-2026-08august': { label: '29_親子体験(2026年8月)' },

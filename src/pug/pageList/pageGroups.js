@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const pageMeta = require('./pageMeta.js');
 
 const INCLUDES_DIR = path.resolve(__dirname, '../_includes');
 
@@ -41,6 +40,9 @@ function variantOrder(file) {
  * 手動：pageMeta.js（表示名・メモ・非表示など）
  */
 module.exports = function pageGroups(pages) {
+  // npm run dev 中の pageMeta.js 編集を反映させるため毎回読み直す
+  delete require.cache[require.resolve('./pageMeta.js')];
+  const pageMeta = require('./pageMeta.js');
   const groups = {};
 
   pages.forEach((page) => {
