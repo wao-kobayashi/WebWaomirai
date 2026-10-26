@@ -52,9 +52,9 @@ html(lang="ja")
           br.u-br-pc
           | #[span.u-point 「考える力」]を育てる学びの第一歩を体感してみませんか？
         p.p-hero__time.p-hero__time--pc.js-hidden
-          | 11/10（火）・11/17（火）・11/24（火）・12/1（火） 18:30〜19:15（全4回）
+          | 11/17（火）・11/24（火）・12/1（火）・12/8（火） 18:30〜19:15（全4回）
         p.p-hero__time.p-hero__time--sp.js-hidden
-          | 11/10（火）11/17（火）11/24（火）12/1（火）
+          | 11/17（火） 11/24（火） 12/1（火） 12/8（火）
           br
           | 18:30〜19:15（全4回）
         table.p-hero__table.js-hidden
@@ -197,7 +197,7 @@ html(lang="ja")
                       h4.p-lesson__week-title
                         | 「ある」って、どういうこと？
                       p.p-lesson__week-text
-                        | 11/10（火）18:30〜19:15
+                        | 11/17（火）18:30〜19:15
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
@@ -208,7 +208,7 @@ html(lang="ja")
                       h4.p-lesson__week-title
                         | みんなの答えで、考える①
                       p.p-lesson__week-text
-                        | 11/17（火）18:30〜19:15
+                        | 11/24（火）18:30〜19:15
               li.p-lesson__item.js-hidden
                 .p-lesson__heading
                   .p-lesson__heading-patch
@@ -232,7 +232,7 @@ html(lang="ja")
                       h4.p-lesson__week-title
                         | 見えないものと、どうつきあう？
                       p.p-lesson__week-text
-                        | 11/24（火）18:30〜19:15
+                        | 12/1（火）18:30〜19:15
                   li.p-lesson__week-item
                     .p-lesson__week-wrapper
                       .p-lesson__week-patch
@@ -243,7 +243,7 @@ html(lang="ja")
                       h4.p-lesson__week-title
                         | みんなの答えで、考える②
                       p.p-lesson__week-text
-                        | 12/1（火）18:30〜19:15
+                        | 12/8（火）18:30〜19:15
           p.p-lesson__text.js-hidden
             | わからないことに出会ったとき、#[span.u-point 立ち止まって考えられる。]
             br
@@ -287,7 +287,7 @@ html(lang="ja")
             th.p-outline__th
               | 開催日時
             td.p-outline__td
-              | 11/10（火）・11/17（火）・11/24（火）・12/1（火）#[span.u-text-pc &nbsp;]
+              | 11/17（火）・11/24（火）・12/1（火）・12/8（火）#[span.u-text-pc &nbsp;]
               br.u-br-sp
               | 18:30〜19:15
           tr.p-outline__tr
@@ -338,7 +338,12 @@ html(lang="ja")
                 | トーク画面に送られる申し込みフォームからお申し込みください。
                 br
                 | 友だち追加は
-                a.js-line-trigger こちら
+                a(
+                  class=loycus ? '' : 'js-line-trigger'
+                  href=loycus ? UrlLiffForm : UrlEndpointAddFriend
+                  target=loycus ? '_blank' : false
+                )
+                  | こちら
                 | から
               p.p-entry__note
                 | ※LINEの友だち追加等でお困りの際は、
