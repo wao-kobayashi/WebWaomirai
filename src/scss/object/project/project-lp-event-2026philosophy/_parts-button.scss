@@ -1,0 +1,117 @@
+@mixin cta-a {
+    width: px(380);
+    height: px(70);
+    @include responsive-style($breakpoint-sp) {
+      width: 100%;
+      height: px(60);
+    }
+    display: flex;
+    background: $cl-btn-cta;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 px(25);
+    font-weight: bold;
+    color: $cl-white;
+    cursor: pointer;
+    text-decoration: none;
+    @include box-shadow-button;
+    border-radius: $border-radius-big;
+    position: relative;
+    &:hover{
+        opacity: 1;
+        background: lighten($cl-btn-cta, 4%);
+    }
+}
+
+@mixin cta-icn{
+  background: $cl-white;
+  width: px(30);
+  height: px(30);
+  position: absolute;
+  border-radius: $border-radius-full;
+  transform: translateX(0);
+  transition: 0.2s ease-in-out;
+  top: calc(50% - px(15));
+  right: px(30);
+  @include responsive-style($breakpoint-sp) {
+    width: px(26);
+    height: px(26);
+    top: calc(50% - px(13));
+    right: px(25);
+  }
+  &::before {
+    content: "";
+    transform: translateY(-50%) rotate(-45deg);
+    width: px(9);
+    height: px(9);
+    border-right: 2px solid $cl-btn-cta;
+    border-bottom: 2px solid $cl-btn-cta;
+    background: transparent;
+    display: inline-block;
+    left: px(-3);
+    right: 0;
+    top: px(10);
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+  }
+}
+
+@mixin cta-text{
+  display: block;
+  color: white;
+  @include fs-pc18;
+  letter-spacing: 0.5px;
+  line-height: $lh-m;
+  padding: 0 px(5) 0 0px;
+  margin: 0 auto;
+  @include responsive-style($breakpoint-sp) {
+    padding: 0 0px 0 0px;
+  }
+}
+
+.fixed-btn {
+  position: fixed;
+  z-index: 100;
+  right: px(20);
+  bottom: px(20);
+  width: px(380);
+  @include responsive-style($breakpoint-sp) {
+    width: 90%;
+    height: px(60);
+    left: 0;
+    right: 0;
+    bottom: px(20);
+    margin: auto;
+  }
+  a {
+    @include cta-a;
+  }
+  .fixed-btn-icn {
+    @include cta-icn;
+  }
+  .fixed-btn-text {
+    @include cta-text;
+  }
+}
+
+.cta-btn {
+  width: px(380);
+  margin: px(60) auto 0;
+  position: relative;
+  z-index: 100;
+  @include responsive-style($breakpoint-sp) {
+    width: $wrapper-sp;
+    height: px(60);
+    margin-top: px(30);
+  }
+  a {
+    @include cta-a;
+  }
+  .cta-btn-icn {
+    @include cta-icn;
+  }
+  .cta-btn-text {
+    @include cta-text;
+  }
+}

@@ -1,0 +1,56 @@
+//- LINE URL
+- var UrlEndpointAddFriend = 'https://endpoint.loycus.jp/landing-qr/2006716288-lL7QzGA3?ic=dH8JK2xnhw&whc=173508808725235';
+- var UrlLiffAddFriend = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_urlc=hal8c';
+- var UrlLiffForm = 'https://liff.line.me/2006716288-lL7QzGA3?loycus_fc=wbQUg56wT';
+
+//- タイトル・ディスクリプション
+- var baseTitle = '【ワオ未来塾】小学生のための哲学～探究学習4weeks体験～「妖怪で考える「存在」のお話」';
+- var baseDescription = '身近で不思議な「妖怪」を手がかりに、「いる」「いない」とはどういうことかを考えます。ワオ未来塾の無料特別イベント授業で「考える力」を育てる学びの第一歩を体感してみませんか？'
+
+//- OGPの画像
+- var ImgOgp = 'https://waomirai.com/lp/event-2026philosophy/images/ogp.jpg?20261026'
+
+//- ブレイクポイント
+- var BreakpointSp = '(max-width: 768px)'
+
+//- 画像パス設定（loycus.pug は 1 階層深いので相対パスを調整）
+- var paths = (typeof loycus !== 'undefined' && loycus) ? '../images' : 'images';
+
+//- 画像パス生成関数（キャッシュ対策のタイムスタンプ付与）
+- var imgVersion = Date.now()
+-
+  function img(filename) {
+    return `${paths}/${filename}?v=${imgVersion}`;
+  }
+
+// 共通の画像パス
+- var ImgModalEvent = img('img_modal_event.png');
+- var ImgIcnClock = img('icn-clock.svg');
+- var ImgIcnWaoLine = img('icn_waoline.svg');
+
+//- 画像パス
+- var ImgBgHeroTop = img('bg-hero-top.jpg');
+- var ImgBgHeroBottom = img('bg-hero-bottom.jpg');
+- var ImgHeroName = img('img-hero-name.png');
+- var ImgHeroTitle = img('tit-hero.png');
+- var ImgHero = img('img-hero.jpg');
+- var ImgHeroSp = img('img-hero-sp.jpg');
+- var ImgRecommend01 = img('img-recommend01.png');
+- var ImgRecommend02 = img('img-recommend02.png');
+- var ImgRecommend03 = img('img-recommend03.png');
+- var ImgRecommend04 = img('img-recommend04.png');
+- var ImgRecommendDecoration = img('img-recommend-decoration.png');
+- var ImgBenefit01 = img('img-benefit01.jpg');
+- var ImgBenefit02 = img('img-benefit02.jpg');
+- var ImgBenefit03 = img('img-benefit03.jpg');
+- var ImgBenefitDecoration = img('img-benefit-decoration.png');
+- var ImgLessonHeadPatch = img('img-lesson-head-patch.png');
+- var ImgLessonWeekPatch = img('img-lesson-week-patch.png');
+- var ImgTeacher = img('img-teacher.jpg');
+- var ImgEntry01 = img('img-entry01.png');
+- var ImgEntry02 = img('img-entry02.png');
+- var ImgEntry03 = img('img-entry03.png');
+- var ImgEntry04 = img('img-entry04.png');
+- var ImgEntry05 = img('img-entry05.png');
+- var ImgFaqDecoration = img('img-faq-decoration.png');
+- var ImgLogoWao = img('logo_wao.svg');
