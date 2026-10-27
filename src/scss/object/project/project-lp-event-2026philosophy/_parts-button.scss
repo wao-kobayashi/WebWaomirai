@@ -97,13 +97,13 @@
 
 .cta-btn {
   width: px(380);
-  margin: px(60) auto 0;
+  margin: px(30) auto 0;
   position: relative;
   z-index: 100;
   @include responsive-style($breakpoint-sp) {
     width: $wrapper-sp;
     height: px(60);
-    margin-top: px(30);
+    margin-top: px(15);
   }
   a {
     @include cta-a;

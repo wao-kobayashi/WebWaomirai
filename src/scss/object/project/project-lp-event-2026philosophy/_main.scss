@@ -108,6 +108,21 @@
   background: $cl-white;
   border-radius: 0 $border-radius-middle $border-radius-middle 0;
 }
+.p-hero__note{
+  width: px(600);
+  border: 1px solid $cl-main-light;
+  margin: 0 auto;
+  background: $cl-white;
+  @include fs-pc15;
+  line-height: $lh-l;
+  margin: px(30) auto 0;
+  text-align: center;
+  padding: px(15) 0;
+  border-radius: $border-radius-big;
+}
+.p-hero__note-small{
+  @include fs-pc13;
+}
 @include responsive-style($breakpoint-sp) {
   .p-hero{
     padding-bottom: px(30);
@@ -150,6 +165,17 @@
   .p-hero__td{
     width: calc(100% - px(80));
     text-align: center;
+  }
+  .p-hero__note{
+    width: $wrapper-sp;
+    margin-top: px(15);
+    text-align: left;
+    padding: px(15);
+  }
+  .p-hero__note-small{
+    display: block;
+    line-height: $lh-m;
+    margin-top: px(5);
   }
 }
 
