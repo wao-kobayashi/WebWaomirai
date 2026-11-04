@@ -1,0 +1,33 @@
+// 幅
+$breakpoint: 769px;
+$breakpoint-sp: 768px;
+$wrapper-sp: 89.334%;
+
+// デザイン上の1pxを、画面幅に応じてスケーリングした値として定義
+:root {
+    // PC用（基準の幅は1060px）
+    --px: min(1px, calc(100vw / 1060));
+}
+@media screen and (max-width: 767px){
+    :root {
+        // SP用（基準の幅は375px）
+        --px: min(1px, calc(100vw / 375));
+    }
+}
+@function px($val) {
+  @return calc(#{$val} * var(--px));
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: $cl-white;
+  overflow-x: hidden;
+}
+
+.u-img-w100{
+    width: 100%;
+    height: auto;
+}

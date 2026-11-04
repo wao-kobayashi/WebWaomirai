@@ -1,0 +1,7 @@
+.js-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.js-hidden.js-visible {
+  opacity: 1;
+}
