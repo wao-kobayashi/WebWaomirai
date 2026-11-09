@@ -1,0 +1,119 @@
+
+
+
+
+mixin faqBox(question, answer)
+  .eng-phase-main-section-green-wrap-faq-box
+    .eng-phase-main-section-green-wrap-faq-box-title 
+      .eng-phase-main-section-green-wrap-faq-box-title-text
+        |#{question}
+      .eng-phase-main-section-green-wrap-faq-box-title-icon
+    .eng-phase-main-section-green-wrap-faq-box-content 
+      != answer
+
+//- ▼ 2026春イベントLPから移植したCTA・モーダル用mixin
+//- 条件付きリンクを生成するmixin
+//- loycus変数の値によって、通常のリンク or LIFFフォームへのリンクを切り替える
+//- @param {string} baseClass - リンクに適用する基本CSSクラス名
+mixin conditionalLink(baseClass)
+  a(
+    class=baseClass + (loycus ? '' : ' js-line-trigger')
+    href=loycus ? UrlLiffForm : false
+    target=loycus ? '_blank' : false
+  )
+    block
+
+//- 固定フッターボタンのmixin
+//- ページ下部に固定表示される申込ボタンとページトップへ戻るボタン
+mixin fixed-btn
+  .fixed-btn-wrapper
+    .fixed-btn-container(style='display:none;')
+      +conditionalLink('fixed-cta')
+        .fixed-cta-btn
+          img(src=ImgTextCta)
+      .btn-modalmenu
+          img(src=ImgMenu)
+
+
+//- モーダルウィンドウのmixin
+//- 2種類のモーダルとオーバーレイ背景を含む
+mixin entry-modal
+  .modal#modal-alreadyfriend(style='display:none;')
+    .modal-wrapper 
+      .modal-wrapper-close
+          .modal-wrapper-close-icon.modal-close
+      .modal-wrapper-content   
+         .modal-wrapper-content-title-alreadyfriend
+            .modal-wrapper-content-title-alreadyfriend-top
+                div|すでに
+                div|ワオ未来塾公式LINEを
+            .modal-wrapper-content-title-alreadyfriend-bottom
+                |友だち追加している方へ
+         .modal-wrapper-content-main
+
+            .modal-wrapper-content-main-text-alreadyfriend
+              |イベントの申し込み案内が
+              br
+              |自動で届かない場合がございます。
+              br
+              |その場合は下記手順で申込ください。
+            .modal-wrapper-content-main-image-alreadyfriend
+              img(src=ImgModalEvent)
+            .modal-wrapper-content-main-btn-alreadyfriend
+                a(href=UrlEndpointAddFriend, target='_blank')
+                  |OKです(イベント申込へ)
+  .modal#modal-pc-liff(style='display:none;')
+    .modal-wrapper 
+      .modal-wrapper-content
+         .modal-wrapper-content-main
+            .modal-wrapper-content-main-head
+              .modal-wrapper-content-main-head-img
+                img(src='https://waomirai.com/lp/assets/lpimages/07_event-lp-2025feb/icon_howto_join01.png')
+              .modal-wrapper-content-main-head-text 
+                 |スマホで
+                 br
+                 |LINEの友だち追加
+            .modal-wrapper-content-main-qr#liffqr
+              
+            .modal-wrapper-content-main-text(style="text-align: center;")
+                        |追加後に申込フォームが
+                        br
+                        |送信されます
+         .modal-wrapper-content-close.modal-close 
+                |閉じる
+
+
+mixin bg-modal
+  .bg-modal(style='display:none;')
+
+mixin modal-vimeo
+    .modal-vimeo(style='display:none;')
+        .modal-vimeo-content.
+            <iframe id="vimeoPlayer" src="https://player.vimeo.com/video/1123798516?h=0cea059661&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    id="vimeoPlayer"
+                    title="3分でわかる！新感覚英会話レッスン ワオ未来塾 グローバル英語">
+            </iframe>
+        .modal-vimeo-close.modal-close 
+             |閉じる
+
+mixin modal-present
+    .modal#modal-present(style='display:none;')
+        .modal-wrapper 
+            .modal-wrapper-close 
+                .modal-wrapper-close-icon.modal-close
+            .modal-wrapper-content
+                .modal-wrapper-content-main-title(style="text-align: center;")
+                  |ワオ未来塾 グローバル英語
+                  br
+                  |通年レッスンに入会で、
+                  br
+                  |3/31(火)・4/2(木)の
+                  br
+                  |ライブレッスンに参加できます
+                .modal-wrapper-content-main-text
+                      |本プログラムと同時に通年レッスンへお申し込みいただくと対象となります。
+                      br
+            .modal-wrapper-content-close.modal-close 
+                |閉じる
