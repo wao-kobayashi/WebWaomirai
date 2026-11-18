@@ -1,0 +1,61 @@
+//mixin
+include _mixin  
+//variable
+include _variables 
+//data
+include _data
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W3X8CG9C');
+    // End Google Tag Manager
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined", rel="stylesheet")
+    - const cssBase = loycus ? '../../../css/' : '../../css/'
+    - const cssLocal = loycus ? '../' : ''
+
+    link(href=`${cssBase}35_lp-event-2026winter.css?v=${Date.now()}`, rel="stylesheet")
+    link(href=`${cssLocal}35_lp-event-2026winter.css?v=${Date.now()}`, rel="stylesheet")
+
+    meta(property="og:image", content=ImgOgp)
+    title #{MetaTitle}
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery_3.7.1.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
+    script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
+  body
+    //- PC左カラム（ロゴ）
+    .pc-left
+      .pc-left-logo
+        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg', alt='ワオ未来塾')
+
+    //- メインコンテンツ（スマホファースト）
+    .main-content
+      //- 仮の枠：中身は後で実装
+      .main-placeholder
+        |main
+
+    //- PC右カラム（INDEX）
+    .pc-right
+      .pc-index
+        .pc-index-title
+          p.pc-index-title-eng INDEX
+          p.pc-index-title-jpn オンライン授業一覧
+        ol.pc-index-list
+          each item in program
+            li.pc-index-item
+              a.pc-index-link(href=`#${item.link}`)
+                span.pc-index-link-number #{item.item_number}
+                span.pc-index-link-title #{item.menu_title}
+
+//js
+include _js
++modal
++fixed-btn

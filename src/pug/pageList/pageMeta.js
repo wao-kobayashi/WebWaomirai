@@ -28,6 +28,7 @@ function yearMonthLabel(dir) {
 }
 
 module.exports = {
+  '35_lp-event-2026winter': { label: '35_冬LP2026' },
   '34_lp-family-2026-11november': { label: '34_親子体験(2026年11月)' },
   '33_lp-event-2026philosophy': { label: '33_哲学4weeks体験(2026年)' },
   '32_lp-family-2026-11november': { label: '32_親子体験(2026年10月末)' },

@@ -1,0 +1,241 @@
+/* width */
+
+$max-width: 1200px;
+$widewidth: 1000px;
+$middlewidth: 800px;
+$smallwidth: 700px;
+$ctabuttonwidth: 450px;
+$breakpoint-sp: 768px;
+$maincontentWidth: 450px;
+$breakpoint-tablet: 980px;
+
+@mixin square-size($vw-percentage) {
+  width: #{$vw-percentage}vw;
+  height: #{$vw-percentage}vw;
+}
+@mixin square-size-px($vw-percentage) {
+  width: #{$vw-percentage}px;
+  height: #{$vw-percentage}px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: $cl-winter-bg !important;
+}
+
+.c-bg-section-white {
+  background: white;
+}
+
+// ------------------------------------------------------------
+// PC左右カラム（共通）
+//   スマホファースト：$breakpoint-tablet 以下では非表示
+// ------------------------------------------------------------
+.pc-left,
+.pc-right {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - $maincontentWidth) / 2);
+  height: 100vh;
+  @include responsive-style($breakpoint-tablet) {
+    display: none;
+  }
+}
+
+// 左：ロゴ
+.pc-left {
+  left: 0;
+}
+.pc-left-logo {
+  width: calc(100% - 60px);
+  max-width: 300px;
+  img {
+    width: 100%;
+  }
+}
+
+// 右：INDEX
+.pc-right {
+  right: 0;
+}
+.pc-index {
+  width: calc(100% - 48px);
+  max-width: 420px;
+  color: $cl-winter-blue;
+  // ベースの p / span 色指定を上書き
+  p,
+  span {
+    color: $cl-winter-blue;
+  }
+}
+.pc-index-title {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.pc-index-title-eng {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.pc-index-title-jpn {
+  font-size: 14px;
+  margin-left: 12px;
+}
+.pc-index-list {
+  margin: 20px 0 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+.pc-index-item + .pc-index-item {
+  margin-top: 20px;
+}
+.pc-index-link {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 8px 10px;
+  border: 1px solid $cl-winter-blue;
+  border-radius: 4px;
+  background: $cl-white;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: translateX(-10px);
+  }
+}
+.pc-index-link-number {
+  flex-shrink: 0;
+  margin-right: 16px;
+  font-size: 16px;
+  font-style: italic;
+}
+.pc-index-link-title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@include responsive-style(1200px) {
+  .pc-index-link-number {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .pc-index-link-title {
+    font-size: 13px;
+  }
+}
+
+// ------------------------------------------------------------
+// メイン
+// ------------------------------------------------------------
+.main-content {
+  width: $maincontentWidth;
+  margin: 0 auto;
+  background: $cl-white;
+  @include box-shadow-small;
+  @include responsive-style($breakpoint-sp) {
+    width: 100%;
+  }
+}
+
+// main 仮枠（中身実装時に削除）
+.main-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: $cl-winter-placeholder;
+  color: $cl-white;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+// .pc-bg.lighten {
+//   .bg-blur {
+//     opacity: 0.1 !important;
+//   }
+// }
+
+.pc-bg {
+  z-index: -1;
+
+  .bg-blur {
+    z-index: -1;
+    position: absolute;
+    // position: fixed;
+    opacity: 0.4;
+  }
+  .pc-bg-blur-01 {
+    top: -15%;
+    left: -10%;
+    @include square-size(12);
+    filter: blur(30px);
+    @include responsive-style(1000px) {
+      top: -5%;
+      left: -10%;
+    }
+  }
+
+  .pc-bg-blur-02 {
+    top: 50%;
+    left: -12%;
+    @include square-size(17);
+    filter: blur(30px);
+    animation: float2 25s ease-in-out infinite;
+  }
+  .pc-bg-blur-03 {
+    top: 0%;
+    left: 15%;
+    @include square-size(12);
+    filter: blur(30px);
+    animation: float3 22s ease-in-out infinite;
+    @include responsive-style(1000px) {
+      top: 20%;
+      left: 3%;
+    }
+  }
+  .pc-bg-blur-04 {
+    top: 48%;
+    right: -8%;
+
+    @include square-size(12);
+    filter: blur(30px);
+    animation: float4 28s ease-in-out infinite;
+    @include responsive-style(1000px) {
+      top: 38%;
+    }
+  }
+  .pc-bg-blur-05 {
+    top: 20%;
+    right: 28%;
+    @include square-size(14);
+    filter: blur(30px);
+    @include responsive-style(1000px) {
+      right: 18%;
+    }
+  }
+
+  .pc-bg-blur-06 {
+    top: -25%;
+    right: 26%;
+    @include responsive-style(1000px) {
+      top: -5%;
+      right: -8%;
+    }
+    @include square-size(12);
+    filter: blur(36px);
+  }
+}
+
+@mixin content-width {
+  width: calc(100% - 50px);
+}

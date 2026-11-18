@@ -1,0 +1,113 @@
+script.
+  $(document).ready(function() { 
+    //loycusかどうか判定
+    var loycus = '#{loycus}'
+
+    $('.inview-triger').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('inview');
+      }
+    });
+
+
+    /**
+    * モーダルウィンドウを開く関数
+    * モーダルと背景を表示する
+    */
+    function modalPcLiffOpen() {
+      $('#modal-pc-liff, .bg-modal').show();
+    }
+    function ModalAlreadyFriendOpen() {
+      $('#modal-alreadyfriend, .bg-modal').show();
+    }
+
+    /**
+    * ボタン動作の更新関数
+    * 画面幅に応じてボタンの動作を切り替える
+    * PC: モーダルを開く動作
+    * スマホ: 通常のリンク動作
+    */
+
+    function updateButtonBehavior() {
+      // 769px以上をPC表示とみなす
+      var isWideScreen = $(window).width() >= 769;
+      //loycusではない時に発火
+      if (!loycus) {
+        // locyus=false の時：js-line-trigger が有効
+        $('.js-line-trigger').off('click').on('click', function(e) {
+          if (isWideScreen) {
+            e.preventDefault(); // PC：リンク無効化してモーダルを開く
+            modalPcLiffOpen();
+          }
+          // スマホ：preventDefault() しないので href へそのまま遷移
+        });
+      }
+    }
+
+  /**
+  * 画面サイズ変更対応
+  * ページ読み込み時とリサイズ時にボタン動作を更新する
+  * これによりPC/スマホの表示切替時に適切な動作になる
+  */
+  $(window).on('load resize', updateButtonBehavior);
+
+    
+    /**
+    * モーダルを閉じる処理
+    * 閉じるボタンまたは背景クリック時にモーダルを非表示にする
+    */
+    $('.modal-close, .bg-modal').click(function() {
+      $('.modal-vimeo, .modal, .bg-modal').hide();
+    });
+   new QRCode(document.getElementById("liffqr"), "#{UrlLiffAddFriend}");
+  });
+
+
+
+script.
+  $(document).ready(function () {
+    // -----------------------------
+    // sticky nav のアクティブ状態をスクロールに連動して切り替える
+    // -----------------------------
+
+    // アクティブ判定ライン(px)。画面上端からこの位置にセクション先頭が来たら切り替わる。
+    // sticky nav の高さぶん下げておく。大きくするほど早めに切り替わる（ここを微調整）
+    const navOffset = 100;
+
+    function updateSummerNavigation() {
+      const scrollTop = $(window).scrollTop();
+      const navItems = $('nav a');
+
+      let activeId = null;
+      $('.summer-event[id]').each(function () {
+        const $section = $(this);
+        const sectionTop = $section.offset().top;
+        const sectionBottom = sectionTop + $section.outerHeight();
+
+        if (scrollTop >= sectionTop - navOffset && scrollTop < sectionBottom - navOffset) {
+          activeId = $section.attr('id');
+          return false; // 最初に該当したセクションで中断
+        }
+      });
+
+      navItems.removeClass('active');
+      if (activeId) {
+        navItems.filter('[href="#' + activeId + '"]').addClass('active');
+      }
+    }
+
+    // requestAnimationFrameでスクロール処理を最適化
+    let ticking = false;
+    $(window).on('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          updateSummerNavigation();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // 初回実行
+    updateSummerNavigation();
+  });
