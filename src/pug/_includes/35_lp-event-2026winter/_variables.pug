@@ -9,16 +9,15 @@
 
 
 
-//- 画像パス設定（basePathで local / server を切り替え）
-//- ページ側で `- var basePath = "local"` or `"server"` を指定する。未指定時は server。
-- if (typeof basePath === 'undefined') var basePath = 'server';
-- var paths = { local: '../../../images/35_lp-event-2026winter', server: 'https://waomirai.com/lp/assets/lpimages/35_lp-event-2026winter' };
-
+//- 画像パス（LP直下の images/ を参照。loycus は1階層下なので ../images）
+-
+  var __imgSegs = (typeof page !== 'undefined' && page && page.url ? page.url : '/').split('/').filter(Boolean);
+  var paths = __imgSegs.length > 1 ? '../images' : 'images';
 
 //- 画像パス生成関数
 -
   function img(filename) {
-    return `${paths[basePath]}/${filename}`;
+    return `${paths}/${filename}`;
   }
 
 
@@ -30,15 +29,37 @@
 
 
 //-//////////////
-//- 実在画像（dist/images/35_lp-event-2026winter）
+//- FV・授業一覧
 //-//////////////
 
-- var ImgHeader = img('header.jpg');
-- var ImgIntro = img('intro.png');
-- var ImgHeadSc = img('head-sc.png');
-- var ImgHeadEc = img('head-ec.png');
-- var ImgScTeacher = img('img_sc_teacher.png');
-- var ImgEcTeacher = img('img_ec_teacher.png');
+- var ImgFv = img('fv.png');
+- var ImgEventList = img('eventList.svg');
+
+
+//-//////////////
+//- 授業サムネイル（番号は _data.pug の item_number に対応）
+//-   ImgThumbXX  : 870×579
+//-   ImgThumbSXX : 420×252
+//-//////////////
+
+//- #01 90年続く謎を追え！（数学・中学生・12月）
+- var ImgThumb01 = img('thumb-math-middle-dec.png');
+- var ImgThumbS01 = img('s-thumb-math-middle-dec.png');
+//- #02 ロウソクは、どこへ消えた？（科学・小学生・12月）
+- var ImgThumb02 = img('thumb-sc-elementary-dec.png');
+- var ImgThumbS02 = img('s-thumb-sc-elementary-dec.png');
+//- #03 サンタからの依頼！（経済・小学生・12月）
+- var ImgThumb03 = img('thumb-ec-elementary-dec.png');
+- var ImgThumbS03 = img('s-thumb-ec-elementary-dec.png');
+//- #04 株主になってみよう！（経済・中学生・12月）
+- var ImgThumb04 = img('thumb-ec-middle-dec.png');
+- var ImgThumbS04 = img('s-thumb-ec-middle-dec.png');
+//- #05 お正月の町から仕事が消えた！？（経済・小学生・1月）
+- var ImgThumb05 = img('thumb-ec-elementary-jan-1.png');
+- var ImgThumbS05 = img('s-thumb-ec-elementary-jan-1.png');
+//- #06 お年玉の平均額は？（経済・小学生・1月）
+- var ImgThumb06 = img('thumb-ec-elementary-jan.png');
+- var ImgThumbS06 = img('s-thumb-ec-elementary-jan.png');
 
 
 //-//////////////
@@ -57,11 +78,3 @@
 
 - var ImgIcnWaoLine = img('icn_line.png');
 - var ImgModalEvent= img('img_modal_event.png');
-
-
-//-//////////////
-//- ワオ未来塾とは？のセクション
-//-/////////////
-
-- var ImgLogoWao = img('logo_wao.svg');
-- var Img4subject = img('img_4subjects.svg');
