@@ -4,7 +4,6 @@
 //   04 かんたん5STEP / 05 よくある質問 / 06 ワオ未来塾について / 07 フッター
 // ============================================================
 
-
 // ############################################################
 // 01 ヘッダー・FV
 // ############################################################
@@ -67,7 +66,7 @@
   border-radius: 10px 0 0 10px;
   background: $cl-winter-navy;
   color: $cl-white;
-  font-size: 14px;
+  font-size: $font-size-s;
   font-weight: 500;
   line-height: 1;
 }
@@ -82,13 +81,13 @@
   border-radius: 0 10px 10px 0;
   background: $cl-white;
   color: $cl-winter-text;
-  font-size: 13px;
+  font-size: $font-size-ss-plus;
   letter-spacing: 0.1em;
   line-height: 1.5;
   &.is-price {
     align-items: center;
     color: $cl-winter-price;
-    font-size: 14px;
+    font-size: $font-size-s;
     font-weight: 700;
     letter-spacing: 0;
   }
@@ -107,7 +106,9 @@
   height: 60px;
   border-radius: 10px;
   background: $cl-winter-line;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 1px 3px 1px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   transition: opacity 0.2s;
   &:hover {
@@ -116,7 +117,7 @@
 }
 .lp-btn-line-text {
   color: $cl-white !important;
-  font-size: 18px;
+  font-size: $font-size-l;
   font-weight: 700;
   line-height: 1;
 }
@@ -134,7 +135,7 @@
   transform: translateY(-50%);
   i {
     color: $cl-winter-line;
-    font-size: 13px;
+    font-size: $font-size-ss-plus;
   }
 }
 
@@ -144,7 +145,7 @@
   margin: 54px auto 0;
   p {
     color: $cl-winter-text;
-    font-size: 18px;
+    font-size: $font-size-l;
     font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 2;
@@ -153,7 +154,6 @@
     margin-top: 2em;
   }
 }
-
 
 // ############################################################
 // 02 イベント一覧
@@ -164,7 +164,7 @@
 //   余白は 19_lp-tankyu-week の SP（.lp-tkw-eventlist）を基準
 // ============================================================
 .lp-eventlist {
-  padding: 0 0 30px;
+  padding: 0 0 60px;
   background: $cl-winter-navy; // 上部の空色〜ドームは eventList.svg 側に含まれる
 }
 .lp-eventlist-title {
@@ -217,7 +217,7 @@
 .lp-eventlist-item-tag {
   padding: 3px 6px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: $font-size-ss;
   line-height: 1.5;
   &.is-subject {
     color: $cl-white;
@@ -225,7 +225,7 @@
   &.is-target {
     background: #f5f5f5;
     color: #4d4d4d;
-    font-size: 11px;
+    font-size: $font-size-sss-plus;
   }
 }
 @each $key, $c in $winter-subjects {
@@ -238,13 +238,13 @@
   flex: 1;
   margin: 10px 0 8px;
   color: $cl-winter-text;
-  font-size: 15px;
+  font-size: $font-size-m;
   font-weight: 700;
   line-height: 1.5;
 }
 .lp-eventlist-item-date {
   color: #333;
-  font-size: 12px;
+  font-size: $font-size-ss;
   white-space: pre;
   line-height: 1.6;
 }
@@ -254,7 +254,7 @@
   gap: 6px;
   margin: 10px 0 0;
   color: #333 !important;
-  font-size: 11px;
+  font-size: $font-size-sss-plus;
   text-decoration: none;
   span {
     color: #333;
@@ -262,10 +262,9 @@
   }
   i {
     color: $cl-winter-navy;
-    font-size: 10px;
+    font-size: $font-size-sss;
   }
 }
-
 
 // ############################################################
 // 03 イベント詳細
@@ -276,7 +275,7 @@
 //   余白は 19_lp-tankyu-week の SP（.lp-tkw-eventdetail）を基準
 // ============================================================
 .lp-eventdetail {
-  padding: 30px 0 70px;
+  padding: 60px 0 70px;
 }
 .lp-eventdetail-item {
   scroll-margin-top: 20px;
@@ -294,7 +293,7 @@
   border-bottom: none;
   border-radius: 11px 11px 0 0;
   color: $cl-white;
-  font-size: 13px;
+  font-size: $font-size-ss-plus;
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.7;
@@ -312,7 +311,7 @@
 .lp-eventdetail-item-title {
   margin: 0 0 20px;
   color: $cl-winter-text;
-  font-size: 23px;
+  font-size: $font-size-xl-plus;
   font-weight: 700;
   line-height: 1.42;
 }
@@ -346,7 +345,7 @@
     padding: 1px 0;
     border: 1px solid;
     border-radius: 5px;
-    font-size: 12.5px;
+    font-size: $font-size-ss-plus;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -356,22 +355,22 @@
     flex-direction: column;
     margin: 0;
     color: $cl-winter-text;
-    font-size: 14.5px;
+    font-size: $font-size-s;
     line-height: 1.7;
   }
 }
 .lp-eventdetail-item-info-date {
-  font-size: 18px;
+  font-size: $font-size-l;
   font-weight: 700;
   line-height: 1.4;
 }
 .lp-eventdetail-item-info-time {
-  font-size: 14.5px;
+  font-size: $font-size-s;
 }
 
 .lp-eventdetail-item-text p {
   color: $cl-winter-text;
-  font-size: 15px;
+  font-size: $font-size-m;
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.75;
@@ -392,7 +391,6 @@
     }
   }
 }
-
 
 // ############################################################
 // 04 かんたん5STEP・05 よくある質問
@@ -459,7 +457,7 @@
   justify-content: center;
   align-items: center;
   color: $cl-winter-text;
-  font-size: 20px;
+  font-size: $font-size-xl;
   letter-spacing: 2px;
   line-height: $lineheight-tight;
   // 中央の縦線
@@ -477,7 +475,7 @@
   span {
     display: block;
     color: $cl-winter-text;
-    font-size: 40px;
+    font-size: $font-size-xxxl;
   }
 }
 .lp-steps-box-head-img {
@@ -491,7 +489,7 @@
 .lp-steps-box-title {
   margin: 0;
   color: $cl-winter-text;
-  font-size: 20px;
+  font-size: $font-size-xl;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -502,7 +500,7 @@
   margin: 20px auto 0;
   p {
     color: $cl-gray;
-    font-size: 16px;
+    font-size: $font-size-m-plus;
     letter-spacing: 0.8px;
     line-height: 1.7;
   }
@@ -539,12 +537,12 @@
   margin: 0 0 4px;
   .lp-faq-mark {
     color: $cl-waogreen;
-    font-size: 40px;
+    font-size: $font-size-xxxl;
   }
   .lp-faq-body {
     padding: 5px 0 0;
     color: $cl-winter-text;
-    font-size: 18px;
+    font-size: $font-size-l;
     font-weight: 700;
     letter-spacing: 0.9px;
     line-height: 1.45;
@@ -554,12 +552,12 @@
   .lp-faq-mark {
     padding: 0 0 0 3px;
     color: $cl-gray;
-    font-size: 30px;
+    font-size: $font-size-xxl;
   }
   .lp-faq-body {
     padding: 4px 0 0;
     color: $cl-gray;
-    font-size: 16px;
+    font-size: $font-size-m-plus;
     letter-spacing: 0.8px;
     line-height: 1.32;
   }
@@ -571,7 +569,6 @@
   font-weight: 500;
   line-height: $lineheight-tight;
 }
-
 
 // ############################################################
 // 06 ワオ未来塾について・07 フッター
@@ -599,7 +596,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
 .lp-about-title {
   margin: 0;
   color: #333;
-  font-size: 23px;
+  font-size: $font-size-xl-plus;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -614,7 +611,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
 }
 .lp-about-text {
   color: #333;
-  font-size: 15px;
+  font-size: $font-size-m;
   line-height: 1.75;
 }
 .lp-about-logo + .lp-about-text {
@@ -641,7 +638,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
   }
   span {
     color: $cl-white;
-    font-size: 17px;
+    font-size: $font-size-l;
     font-weight: 700;
   }
   i {
@@ -650,7 +647,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
     right: 25px;
     width: 26px;
     color: $cl-white;
-    font-size: 18px;
+    font-size: $font-size-l;
     text-align: center;
     transform: translateY(-50%);
   }
@@ -696,16 +693,16 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
   text-decoration: none;
   span {
     color: $cl-white;
-    font-size: 14px;
+    font-size: $font-size-s;
   }
   i {
     color: $cl-white;
-    font-size: 12px;
+    font-size: $font-size-ss;
   }
 }
 .lp-footer-copy {
   margin-top: 40px;
   color: $cl-white;
-  font-size: 12px;
+  font-size: $font-size-ss;
   text-align: center;
 }

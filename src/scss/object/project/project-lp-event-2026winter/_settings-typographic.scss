@@ -7,12 +7,17 @@
   font-family: "Noto Sans JP", sans-serif; // Figmaに合わせる（旧: LINE Seed JP）
 }
 // Font size variables
+//   ※ 2026summer の段階名を踏襲。間のサイズは「-plus」で追加（冬LPで使用）
 $font-size-sss: 10px;
+$font-size-sss-plus: 11px;
 $font-size-ss: 12px;
+$font-size-ss-plus: 13px;
 $font-size-s: 14px;
 $font-size-m: 15px;
+$font-size-m-plus: 16px;
 $font-size-l: 18px;
 $font-size-xl: 20px;
+$font-size-xl-plus: 23px;
 $font-size-xxl: 30px;
 $font-size-xxxl: 40px;
 $font-size-huge: 56px;

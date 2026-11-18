@@ -4,9 +4,9 @@ $max-width: 1200px;
 $widewidth: 1000px;
 $middlewidth: 800px;
 $smallwidth: 700px;
-$ctabuttonwidth: 450px;
+$ctabuttonwidth: 400px;
 $breakpoint-sp: 768px;
-$maincontentWidth: 450px;
+$maincontentWidth: 400px;
 $breakpoint-tablet: 980px;
 
 @mixin square-size($vw-percentage) {
@@ -111,12 +111,12 @@ body {
   line-height: 1;
 }
 .pc-index-title-eng {
-  font-size: 40px;
+  font-size: $font-size-xxxl;
   font-weight: 900;
   letter-spacing: 2px;
 }
 .pc-index-title-jpn {
-  font-size: 14px;
+  font-size: $font-size-s;
   margin-left: 12px;
 }
 .pc-index-list {
@@ -146,21 +146,21 @@ body {
 .pc-index-link-number {
   flex-shrink: 0;
   margin-right: 16px;
-  font-size: 16px;
+  font-size: $font-size-m-plus;
   font-style: italic;
 }
 .pc-index-link-title {
-  font-size: 15px;
+  font-size: $font-size-s;
   font-weight: 700;
   line-height: 1.5;
 }
 @include responsive-style(1200px) {
   .pc-index-link-number {
     margin-right: 10px;
-    font-size: 14px;
+    font-size: $font-size-s;
   }
   .pc-index-link-title {
-    font-size: 13px;
+    font-size: $font-size-ss-plus;
   }
 }
 
@@ -173,13 +173,14 @@ body {
   width: $maincontentWidth;
   margin: 0 auto;
   background: $cl-winter-sky;
+  border-right: 3px solid $cl-white;
+  border-left: 3px solid $cl-white;
   overflow: hidden;
   @include box-shadow-small;
   @include responsive-style($breakpoint-sp) {
     width: 100%;
   }
 }
-
 
 // .pc-bg.lighten {
 //   .bg-blur {
