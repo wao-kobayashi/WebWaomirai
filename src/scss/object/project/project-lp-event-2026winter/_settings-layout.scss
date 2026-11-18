@@ -48,6 +48,34 @@ body {
   }
 }
 
+// 重なり順（下から）：雪 .pc-snow → 左右カラム → main
+//   main は背景色があるので、雪は左右の背景にだけ見える
+.pc-left,
+.pc-right {
+  z-index: 1;
+}
+
+// PC背景の雪（_snowjs.pug で生成）
+.pc-snow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  @include responsive-style($breakpoint-tablet) {
+    display: none;
+  }
+  .snowflake {
+    position: absolute;
+    top: 0;
+    will-change: transform, opacity;
+  }
+  .snowflake svg {
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  }
+}
+
 // 左：ロゴ + LINEボタン
 .pc-left {
   left: 0;
@@ -140,6 +168,8 @@ body {
 // メイン
 // ------------------------------------------------------------
 .main-content {
+  position: relative;
+  z-index: 2;
   width: $maincontentWidth;
   margin: 0 auto;
   background: $cl-winter-sky;

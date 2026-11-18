@@ -28,6 +28,9 @@ html
     script(src="https://waomirai.com/lp/assets/commonjs/qrcode.min.js")
     script(src="https://waomirai.com/lp/assets/commonjs/jquery.inview.min.js")
   body
+    //- PC背景の雪（main の背面。_snowjs.pug で降らせる）
+    .pc-snow#pcsnow(aria-hidden='true')
+
     //- PC左カラム（ロゴ）
     .pc-left
       .pc-left-logo
@@ -281,5 +284,6 @@ html
 
 //js
 include _js
+include _snowjs
 +modal
 +fixed-btn
