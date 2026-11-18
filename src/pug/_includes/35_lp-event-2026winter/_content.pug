@@ -35,9 +35,89 @@ html
 
     //- メインコンテンツ（スマホファースト）
     .main-content
-      //- 仮の枠：中身は後で実装
-      .main-placeholder
-        |main
+      //- ヘッダー（PC左カラム非表示時のみ表示）
+      header.lp-header
+        img(src='https://waomirai.com/lp/assets/commonimages/logo.svg', alt='ワオ未来塾')
+
+      //- 01 FV
+      section.lp-fv
+        h1.lp-fv-img
+          img(src=ImgFv, alt='身近な「なんで？」を考えることが楽しくなる！冬の探究学習イベント 2026-2027')
+        .lp-fv-info
+          dl.lp-fv-info-row
+            dt.lp-fv-info-head 日時
+            dd.lp-fv-info-cell
+              |12/21(月)・12/22(火)・12/23(水)
+              br
+              |1/7(木)・1/8(金)
+          dl.lp-fv-info-row
+            dt.lp-fv-info-head 費用
+            dd.lp-fv-info-cell.is-price 無料
+          dl.lp-fv-info-row
+            dt.lp-fv-info-head 対象
+            dd.lp-fv-info-cell
+              |小学3〜6年生、中学1〜3年生
+              br
+              |(保護者の方のご見学も大歓迎です)
+          dl.lp-fv-info-row
+            dt.lp-fv-info-head 場所
+            dd.lp-fv-info-cell Zoomウェビナー(オンライン)
+        .lp-fv-cta
+          +conditionalLink('lp-btn-line')
+            span.lp-btn-line-text LINEで無料申込
+            span.lp-btn-line-icon
+              i.fa-solid.fa-chevron-right
+        .lp-fv-intro
+          p 「ロウソクの火の謎」や「1000円で選ぶ最高のプレゼント」など、子どもたちの「なんで？」をきっかけに考える力を育てるオンラインイベントです。
+          p 親子で楽しみながら、探究学習の第一歩を体験できます
+
+      //- 02 イベント一覧
+      section.lp-eventlist
+        h2.lp-eventlist-title
+          img(src=ImgEventList, alt='イベント一覧 ※複数イベント申し込み可能です')
+        ul.lp-eventlist-grid
+          each item in program
+            li.lp-eventlist-item(class=`is-${item.category}`)
+              .lp-eventlist-item-img
+                img(src=item.thumb_s, alt='')
+              .lp-eventlist-item-tags
+                span.lp-eventlist-item-tag.is-subject= subjectLabels[item.category]
+                span.lp-eventlist-item-tag.is-target= item.list_target
+              p.lp-eventlist-item-title
+                each line, i in item.list_title
+                  if i > 0
+                    br
+                  | #{line}
+              p.lp-eventlist-item-date= item.list_date
+              a.lp-eventlist-item-link(href=`#${item.link}`)
+                i.fa-solid.fa-chevron-down
+                span 詳細を見る
+
+      //- 03 イベント詳細
+      section.lp-eventdetail
+        each item in program
+          article.lp-eventdetail-item(class=`is-${item.category}`, id=item.link)
+            p.lp-eventdetail-item-tab= item.head_tag
+            .lp-eventdetail-item-box
+              h3.lp-eventdetail-item-title
+                each line, i in item.title
+                  if i > 0
+                    br
+                  | #{line}
+              .lp-eventdetail-item-img
+                img(src=item.thumb, alt='')
+              dl.lp-eventdetail-item-info
+                .lp-eventdetail-item-info-row
+                  dt 日時
+                  dd
+                    span.lp-eventdetail-item-info-date= item.date
+                    span.lp-eventdetail-item-info-time= item.time
+                .lp-eventdetail-item-info-row
+                  dt 対象
+                  dd= item.target
+              .lp-eventdetail-item-text
+                each para in item.description
+                  p= para
 
     //- PC右カラム（INDEX）
     .pc-right

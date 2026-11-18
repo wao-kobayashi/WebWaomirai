@@ -3,7 +3,20 @@
 // 冬LP 2026
 $cl-winter-bg: #ddeeff; // PC左右カラムの背景（薄い水色）
 $cl-winter-blue: #1a8cff; // INDEX等のメインブルー
-$cl-winter-placeholder: #7f7f7f; // main仮枠
+$cl-winter-sky: #c0e3fe; // mainの背景（空色）
+$cl-winter-navy: #2e3da1; // イベント一覧背景・FV表の見出し
+$cl-winter-navy-dark: #0d267a; // FV表の枠線
+$cl-winter-text: #262626; // 本文
+$cl-winter-line: #06c755; // LINEボタン
+$cl-winter-price: #ff762b; // 「無料」
+$cl-winter-dash: #a19773; // イベント一覧の区切り点線
+
+// 科目カラー（一覧タグ / 詳細タブ・ラベル）
+$winter-subjects: (
+  "math": (list: #f67d82, detail: #f67d82),
+  "science": (list: #b6d43e, detail: #9dc03a),
+  "economy": (list: #28afe7, detail: #28afe7),
+);
 
 $cl-philosophy-pale: #f4c66d;
 $cl-science-pale: #66cb88;

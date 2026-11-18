@@ -139,25 +139,14 @@ body {
 .main-content {
   width: $maincontentWidth;
   margin: 0 auto;
-  background: $cl-white;
+  background: $cl-winter-sky;
+  overflow: hidden;
   @include box-shadow-small;
   @include responsive-style($breakpoint-sp) {
     width: 100%;
   }
 }
 
-// main 仮枠（中身実装時に削除）
-.main-placeholder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: $cl-winter-placeholder;
-  color: $cl-white;
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
 
 // .pc-bg.lighten {
 //   .bg-blur {

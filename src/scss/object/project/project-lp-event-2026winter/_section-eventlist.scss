@@ -1,0 +1,106 @@
+// ============================================================
+// イベント一覧
+//   余白は 19_lp-tankyu-week の SP（.lp-tkw-eventlist）を基準
+// ============================================================
+.lp-eventlist {
+  padding: 0 0 30px;
+  background: $cl-winter-navy; // 上部の空色〜ドームは eventList.svg 側に含まれる
+}
+.lp-eventlist-title {
+  margin: 0;
+  line-height: 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// カードのグリッド（2列、点線区切り）
+.lp-eventlist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: calc(100% - 40px);
+  margin: -5px auto 0 !important;
+  padding: 0 !important;
+  border-radius: 10px;
+  background: $cl-white;
+  list-style: none;
+  overflow: hidden;
+}
+.lp-eventlist-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 16px;
+  &:nth-child(odd) {
+    border-right: 1.5px dashed $cl-winter-dash;
+  }
+  &:nth-child(n + 3) {
+    border-top: 1.5px dashed $cl-winter-dash;
+  }
+}
+.lp-eventlist-item-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+// タグ（科目・対象）
+.lp-eventlist-item-tags {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0 0;
+}
+.lp-eventlist-item-tag {
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  &.is-subject {
+    color: $cl-white;
+  }
+  &.is-target {
+    background: #f5f5f5;
+    color: #4d4d4d;
+    font-size: 11px;
+  }
+}
+@each $key, $c in $winter-subjects {
+  .lp-eventlist-item.is-#{$key} .lp-eventlist-item-tag.is-subject {
+    background: map-get($c, list);
+  }
+}
+
+.lp-eventlist-item-title {
+  flex: 1;
+  margin: 10px 0 8px;
+  color: $cl-winter-text;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.lp-eventlist-item-date {
+  color: #333;
+  font-size: 12px;
+  white-space: pre;
+  line-height: 1.6;
+}
+.lp-eventlist-item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+  color: #333 !important;
+  font-size: 11px;
+  text-decoration: none;
+  span {
+    color: #333;
+    text-decoration: underline;
+  }
+  i {
+    color: $cl-winter-navy;
+    font-size: 10px;
+  }
+}
