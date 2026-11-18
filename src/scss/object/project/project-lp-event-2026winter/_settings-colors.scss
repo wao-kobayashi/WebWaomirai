@@ -13,9 +13,18 @@ $cl-winter-dash: #a19773; // イベント一覧の区切り点線
 
 // 科目カラー（一覧タグ / 詳細タブ・ラベル）
 $winter-subjects: (
-  "math": (list: #f67d82, detail: #f67d82),
-  "science": (list: #b6d43e, detail: #9dc03a),
-  "economy": (list: #28afe7, detail: #28afe7),
+  "math": (
+    list: #f67d82,
+    detail: #f67d82,
+  ),
+  "science": (
+    list: #b6d43e,
+    detail: #9dc03a,
+  ),
+  "economy": (
+    list: #28afe7,
+    detail: #28afe7,
+  ),
 );
 
 $cl-philosophy-pale: #f4c66d;
@@ -53,7 +62,6 @@ $categories: (
   "economy": (
     main-color: $cl-economy,
     sp-main-color: $cl-economy,
-    pale-color: #eaf6ff
-      // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    pale-color: #eaf6ff, // 例: テキストカラー,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );

@@ -90,7 +90,12 @@ html
                   if i > 0
                     br
                   | #{line}
-              p.lp-eventlist-item-date= item.list_date
+              //- 日付と時刻を「(曜日)」の直後で分けて、狭い画面では日付の後ろで折り返せるようにする
+              //- （データ側の日付と時刻の間はスペースあり・なしどちらでもOK）
+              - const listDate = item.list_date.trim().match(/^(.*?\))\s*(.*)$/) || [null, item.list_date, '']
+              p.lp-eventlist-item-date
+                span.lp-eventlist-item-date-day= listDate[1]
+                span.lp-eventlist-item-date-time= listDate[2]
               a.lp-eventlist-item-link(href=`#${item.link}`)
                 i.fa-solid.fa-chevron-down
                 span 詳細を見る

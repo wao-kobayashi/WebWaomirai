@@ -76,7 +76,7 @@
   justify-content: center;
   flex: 1;
   min-height: 36px;
-  padding: 7px 10px;
+  padding: 9px 12px;
   border-left: none;
   border-radius: 0 10px 10px 0;
   background: $cl-white;
@@ -179,7 +179,8 @@
 // カードのグリッド（2列、点線区切り）
 .lp-eventlist-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // minmax(0, 1fr)：中身の幅に関係なく必ず2等分（1fr だと中身に押し広げられる）
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
   width: calc(100% - 40px);
   margin: -5px auto 0 !important;
@@ -193,6 +194,10 @@
   display: flex;
   flex-direction: column;
   padding: 20px 20px 16px;
+  // iPhone SE（第1世代）など 374px 以下はカードの余白を詰める
+  @media screen and (max-width: 374px) {
+    padding: 16px 12px 14px;
+  }
   &:nth-child(odd) {
     border-right: 2px dashed $cl-winter-dash;
   }
@@ -245,8 +250,15 @@
 .lp-eventlist-item-date {
   color: #333;
   font-size: $font-size-ss;
-  white-space: pre;
   line-height: $lineheight-comfortable;
+  // 日付・時刻はそれぞれ途中で改行させず、幅が足りないときだけ日付の後ろで折り返す
+  span {
+    display: inline-block;
+    color: inherit;
+  }
+}
+.lp-eventlist-item-date-day {
+  // margin-right: 0.5em;
 }
 .lp-eventlist-item-link {
   display: inline-flex;
@@ -304,7 +316,7 @@
   position: relative;
   width: calc(100% - 40px);
   margin: 0 auto;
-  padding: 30px 25px 30px;
+  padding: 30px 25px 50px;
   border-radius: 18px;
   background: $cl-white;
 }
@@ -342,7 +354,7 @@
   dt {
     flex-shrink: 0;
     width: 46px;
-    padding: 1px 0 3px;
+    padding: 2px 0 2px;
     border: 1px solid;
     border-radius: 5px;
     font-size: $font-size-ss-plus;
@@ -355,17 +367,17 @@
     flex-direction: column;
     margin: 0;
     color: $cl-winter-text;
-    font-size: $font-size-s;
+    font-size: $font-size-m;
     line-height: $lineheight-comfortable;
   }
 }
 .lp-eventdetail-item-info-date {
-  font-size: $font-size-l;
+  font-size: $font-size-xl;
   font-weight: 700;
   line-height: $lineheight-snug;
 }
 .lp-eventdetail-item-info-time {
-  font-size: $font-size-s;
+  font-size: calc($font-size-m + 1px);
 }
 
 .lp-eventdetail-item-text p {
@@ -530,11 +542,11 @@
 .lp-faq-q,
 .lp-faq-a {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
 }
 .lp-faq-q {
-  margin: 0 0 4px;
+  margin: 0 0 8px;
   .lp-faq-mark {
     color: $cl-waogreen;
     font-size: $font-size-xxxl;
@@ -559,7 +571,7 @@
     color: $cl-gray;
     font-size: $font-size-m-plus;
     letter-spacing: 0.8px;
-    line-height: $lineheight-snug;
+    line-height: $lineheight-relaxed;
   }
 }
 .lp-faq-mark {
@@ -586,7 +598,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
 // ワオ未来塾について
 // ------------------------------------------------------------
 .lp-about {
-  padding: 30px 0 50px; // 33: .p-about margin-top 30 / .l-footer margin-top 50
+  padding: 60px 0 60px; // 33: .p-about margin-top 30 / .l-footer margin-top 50
   background: $cl-white;
 }
 .lp-about-wrapper {
@@ -596,10 +608,11 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
 .lp-about-title {
   margin: 0;
   color: #333;
-  font-size: $font-size-xl-plus;
+  font-size: $font-size-xxl;
   font-weight: 700;
   line-height: $lineheight-normal;
   text-align: center;
+  letter-spacing: 2px;
 }
 .lp-about-logo {
   width: 74.627%;
