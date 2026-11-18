@@ -9,6 +9,13 @@ script.
       }
     });
 
+    // ==============================
+    // 固定 CTA フェードイン / アウト（34_lp-family-2026-11november と同じ）
+    // ==============================
+    $(window).on('scroll', function () {
+      $('.fixed-btn')[$(window).scrollTop() > 300 ? 'fadeIn' : 'fadeOut'](300);
+    }).trigger('scroll');
+
 
     /**
     * モーダルウィンドウを開く関数

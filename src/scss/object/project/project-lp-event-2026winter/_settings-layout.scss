@@ -108,7 +108,7 @@ body {
 .pc-index-title {
   display: flex;
   align-items: center;
-  line-height: 1;
+  line-height: $lineheight-none;
 }
 .pc-index-title-eng {
   font-size: $font-size-xxxl;
@@ -152,7 +152,7 @@ body {
 .pc-index-link-title {
   font-size: $font-size-s;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
 }
 @include responsive-style(1200px) {
   .pc-index-link-number {
@@ -173,12 +173,15 @@ body {
   width: $maincontentWidth;
   margin: 0 auto;
   background: $cl-winter-sky;
-  border-right: 3px solid $cl-white;
-  border-left: 3px solid $cl-white;
+
   overflow: hidden;
   @include box-shadow-small;
   @include responsive-style($breakpoint-sp) {
     width: 100%;
+  }
+  @include min-responsive-style($breakpoint-sp) {
+    border-right: 3px solid $cl-white;
+    border-left: 3px solid $cl-white;
   }
 }
 

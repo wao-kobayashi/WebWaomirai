@@ -17,11 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 53px;
+    height: 47px;
     background: $cl-white;
   }
   img {
-    width: 189px;
+    width: 45%;
   }
 }
 
@@ -33,7 +33,7 @@
 }
 .lp-fv-img {
   margin: 0;
-  line-height: 0;
+  line-height: $lineheight-zero;
   img {
     display: block;
     width: 100%;
@@ -68,7 +68,7 @@
   color: $cl-white;
   font-size: $font-size-s;
   font-weight: 500;
-  line-height: 1;
+  line-height: $lineheight-none;
 }
 .lp-fv-info-cell {
   display: flex;
@@ -83,7 +83,7 @@
   color: $cl-winter-text;
   font-size: $font-size-ss-plus;
   letter-spacing: 0.1em;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
   &.is-price {
     align-items: center;
     color: $cl-winter-price;
@@ -119,7 +119,7 @@
   color: $cl-white !important;
   font-size: $font-size-l;
   font-weight: 700;
-  line-height: 1;
+  line-height: $lineheight-none;
 }
 .lp-btn-line-icon {
   position: absolute;
@@ -148,7 +148,7 @@
     font-size: $font-size-l;
     font-weight: 500;
     letter-spacing: 0.1em;
-    line-height: 2;
+    line-height: $lineheight-very-relaxed;
   }
   p + p {
     margin-top: 2em;
@@ -168,8 +168,8 @@
   background: $cl-winter-navy; // 上部の空色〜ドームは eventList.svg 側に含まれる
 }
 .lp-eventlist-title {
-  margin: 0;
-  line-height: 0;
+  margin: 0 0 4px;
+  line-height: $lineheight-zero;
   img {
     display: block;
     width: 100%;
@@ -194,10 +194,10 @@
   flex-direction: column;
   padding: 20px 20px 16px;
   &:nth-child(odd) {
-    border-right: 1.5px dashed $cl-winter-dash;
+    border-right: 2px dashed $cl-winter-dash;
   }
   &:nth-child(n + 3) {
-    border-top: 1.5px dashed $cl-winter-dash;
+    border-top: 2px dashed $cl-winter-dash;
   }
 }
 .lp-eventlist-item-img img {
@@ -218,7 +218,7 @@
   padding: 3px 6px;
   border-radius: 4px;
   font-size: $font-size-ss;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
   &.is-subject {
     color: $cl-white;
   }
@@ -240,13 +240,13 @@
   color: $cl-winter-text;
   font-size: $font-size-m;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
 }
 .lp-eventlist-item-date {
   color: #333;
   font-size: $font-size-ss;
   white-space: pre;
-  line-height: 1.6;
+  line-height: $lineheight-comfortable;
 }
 .lp-eventlist-item-link {
   display: inline-flex;
@@ -296,7 +296,7 @@
   font-size: $font-size-ss-plus;
   font-weight: 700;
   letter-spacing: 0.04em;
-  line-height: 1.7;
+  line-height: $lineheight-comfortable;
   text-align: center;
 }
 
@@ -313,7 +313,7 @@
   color: $cl-winter-text;
   font-size: $font-size-xl-plus;
   font-weight: 700;
-  line-height: 1.42;
+  line-height: $lineheight-snug;
 }
 .lp-eventdetail-item-img {
   margin: 0 0 25px;
@@ -342,12 +342,12 @@
   dt {
     flex-shrink: 0;
     width: 46px;
-    padding: 1px 0;
+    padding: 1px 0 3px;
     border: 1px solid;
     border-radius: 5px;
     font-size: $font-size-ss-plus;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: $lineheight-comfortable;
     text-align: center;
   }
   dd {
@@ -356,13 +356,13 @@
     margin: 0;
     color: $cl-winter-text;
     font-size: $font-size-s;
-    line-height: 1.7;
+    line-height: $lineheight-comfortable;
   }
 }
 .lp-eventdetail-item-info-date {
   font-size: $font-size-l;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: $lineheight-snug;
 }
 .lp-eventdetail-item-info-time {
   font-size: $font-size-s;
@@ -373,7 +373,7 @@
   font-size: $font-size-m;
   font-weight: 500;
   letter-spacing: 0.1em;
-  line-height: 1.75;
+  line-height: $lineheight-relaxed;
   & + p {
     margin-top: 1.75em;
   }
@@ -409,7 +409,7 @@
   font-size: $font-size-xxl;
   font-weight: 300;
   letter-spacing: 2.5px;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
   text-align: center;
   &::after {
     content: "";
@@ -492,7 +492,7 @@
   font-size: $font-size-xl;
   font-weight: 700;
   letter-spacing: 1px;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
   text-align: center;
 }
 .lp-steps-box-text {
@@ -502,7 +502,7 @@
     color: $cl-gray;
     font-size: $font-size-m-plus;
     letter-spacing: 0.8px;
-    line-height: 1.7;
+    line-height: $lineheight-comfortable;
   }
   a {
     color: $cl-gray;
@@ -545,7 +545,7 @@
     font-size: $font-size-l;
     font-weight: 700;
     letter-spacing: 0.9px;
-    line-height: 1.45;
+    line-height: $lineheight-snug;
   }
 }
 .lp-faq-a {
@@ -559,7 +559,7 @@
     color: $cl-gray;
     font-size: $font-size-m-plus;
     letter-spacing: 0.8px;
-    line-height: 1.32;
+    line-height: $lineheight-snug;
   }
 }
 .lp-faq-mark {
@@ -598,7 +598,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
   color: #333;
   font-size: $font-size-xl-plus;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: $lineheight-normal;
   text-align: center;
 }
 .lp-about-logo {
@@ -612,7 +612,7 @@ $about-wrapper: 89.334%; // 33 の $wrapper-sp
 .lp-about-text {
   color: #333;
   font-size: $font-size-m;
-  line-height: 1.75;
+  line-height: $lineheight-relaxed;
 }
 .lp-about-logo + .lp-about-text {
   margin-top: 25px;

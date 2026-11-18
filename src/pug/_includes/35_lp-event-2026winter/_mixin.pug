@@ -26,9 +26,12 @@ mixin btn-line
       i.fa-solid.fa-chevron-right
 
 //- 固定フッターボタン（SPのみ表示。PCは左カラムにボタンを表示）
+//- .fixed-btn-container : 画面幅での出し分け（CSS）
+//- .fixed-btn           : スクロール量でのフェード（_js.pug、34_lp-family と同じ仕組み）
 mixin fixed-btn
   .fixed-btn-container
-    +btn-line
+    .fixed-btn(style='display:none;')
+      +btn-line
 
 
 

@@ -24,9 +24,13 @@ $font-size-huge: 56px;
 
 /* line-height */
 
+//   ※ 2026summer の段階名を踏襲。冬LPで snug / comfortable / zero を追加
+$lineheight-zero: 0; // 画像だけを包む要素の下余白を消す用
 $lineheight-none: 1;
 $lineheight-tight: 1.25;
+$lineheight-snug: 1.4;
 $lineheight-normal: 1.5;
+$lineheight-comfortable: 1.7;
 $lineheight-relaxed: 1.75;
 $lineheight-very-relaxed: 2;
 
