@@ -32,6 +32,8 @@ html
     .pc-left
       .pc-left-logo
         img(src='https://waomirai.com/lp/assets/commonimages/logo.svg', alt='ワオ未来塾')
+      .pc-left-cta
+        +btn-line
 
     //- メインコンテンツ（スマホファースト）
     .main-content
@@ -63,10 +65,7 @@ html
             dt.lp-fv-info-head 場所
             dd.lp-fv-info-cell Zoomウェビナー(オンライン)
         .lp-fv-cta
-          +conditionalLink('lp-btn-line')
-            span.lp-btn-line-text LINEで無料申込
-            span.lp-btn-line-icon
-              i.fa-solid.fa-chevron-right
+          +btn-line
         .lp-fv-intro
           p 「ロウソクの火の謎」や「1000円で選ぶ最高のプレゼント」など、子どもたちの「なんで？」をきっかけに考える力を育てるオンラインイベントです。
           p 親子で楽しみながら、探究学習の第一歩を体験できます
@@ -118,6 +117,154 @@ html
               .lp-eventdetail-item-text
                 each para in item.description
                   p= para
+
+      //- 04 かんたん5STEPで参加可能（余白は 20_lp-parent-seminar-2026 基準）
+      section.lp-steps
+        h2.lp-section-title
+          |かんたん5STEPで
+          br
+          |参加可能
+        ol.lp-steps-list
+          li.lp-steps-box
+            .lp-steps-box-head
+              .lp-steps-box-head-step
+                |STEP
+                span 1
+              .lp-steps-box-head-img
+                img(src=ImgIcnStep01, alt='')
+            h3.lp-steps-box-title
+              |LINEで公式アカウントを
+              br
+              |友だち追加
+            .lp-steps-box-text
+              p まず、スマートフォンで公式アカウントを友だちに追加してください。
+              p
+                |・友だち追加は
+                +conditionalLink
+                  |こちら
+                |から
+          li.lp-steps-box
+            .lp-steps-box-head
+              .lp-steps-box-head-step
+                |STEP
+                span 2
+              .lp-steps-box-head-img
+                img(src=ImgIcnStep02, alt='')
+            h3.lp-steps-box-title
+              |LINEのトーク画面に送られる
+              br
+              |申し込みフォームを
+              br
+              |タップして申込
+          li.lp-steps-box
+            .lp-steps-box-head
+              .lp-steps-box-head-step
+                |STEP
+                span 3
+              .lp-steps-box-head-img
+                img(src=ImgIcnStep03, alt='')
+            h3.lp-steps-box-title Zoomをインストール
+            .lp-steps-box-text
+              p お手持ちの端末にzoomのインストールをお願いします。パソコンまたはタブレットが推奨です
+          li.lp-steps-box
+            .lp-steps-box-head
+              .lp-steps-box-head-step
+                |STEP
+                span 4
+              .lp-steps-box-head-img
+                img(src=ImgIcnStep04, alt='')
+            h3.lp-steps-box-title
+              |イベント当日に
+              br
+              |LINEメッセージで
+              br
+              |イベントURLをお送りします
+          li.lp-steps-box
+            .lp-steps-box-head
+              .lp-steps-box-head-step
+                |STEP
+                span 5
+              .lp-steps-box-head-img
+                img(src=ImgIcnStep05, alt='')
+            h3.lp-steps-box-title
+              |開催時間になったら
+              br
+              |届いたイベントURLから
+              br
+              |参加しましょう！
+
+      //- 05 よくある質問（余白は 20_lp-parent-seminar-2026 基準）
+      section.lp-faq
+        h2.lp-section-title よくある質問
+        dl.lp-faq-item
+          dt.lp-faq-q
+            span.lp-faq-mark Q
+            span.lp-faq-body 複数のテーマは申し込むことはできますか？
+          dd.lp-faq-a
+            span.lp-faq-mark A
+            span.lp-faq-body 可能です。
+        dl.lp-faq-item
+          dt.lp-faq-q
+            span.lp-faq-mark Q
+            span.lp-faq-body カメラオンで参加は必要ですか？
+          dd.lp-faq-a
+            span.lp-faq-mark A
+            span.lp-faq-body
+              |授業の双方向性を高めるため、原則としてカメラはオンにしてご参加をお願いしています。
+              br
+              |難しい場合はオフでも構いません。
+              br
+              |※受講者の映像は講師のみに表示され、他の受講者には表示されません。
+        dl.lp-faq-item
+          dt.lp-faq-q
+            span.lp-faq-mark Q
+            span.lp-faq-body
+              |当日参加できなかった場合、
+              br
+              |後日アーカイブ視聴はできますか？
+          dd.lp-faq-a
+            span.lp-faq-mark A
+            span.lp-faq-body
+              |ご視聴いただけます。
+              br
+              |数日間は視聴可能とする予定です。
+
+      //- 06 ワオ未来塾について（余白は 33_lp-event-2026philosophy の SP 基準）
+      section.lp-about
+        .lp-about-wrapper
+          h2.lp-about-title ワオ未来塾について
+          .lp-about-logo
+            img(src=ImgLogoWao, alt='教育を変える ワオ・コーポレーション')
+          p.lp-about-text 全国で「能開センター」や「個別指導Axis」を展開する、株式会社ワオ・コーポレーションがお届けする新しいオンライン学習の場「ワオ未来塾」。
+          p.lp-about-text 21世紀に入ってから、テクノロジーやAIの進化により世界・社会は大きな変化を遂げようとしています。この変化の時代を生きる子どもたちには、柔軟な思考力と判断力、どんな状況にも揺るがない"自分の軸"が求められていきます。
+          p.lp-about-text 半世紀にわたり子どもたちの教育に携わってきた当社は、自分の頭で考える力を育む「哲学」をはじめ、「科学」「経済」など、これからの社会で活きる多様な学びを提供しています。
+          a.lp-about-button(href='https://waomirai.com/', target='_blank', rel='noopener')
+            span ワオ未来塾の公式サイトへ
+            i.fa-solid.fa-arrow-up-right-from-square
+
+      //- 07 フッター（余白は 33_lp-event-2026philosophy の SP 基準）
+      footer.lp-footer
+        .lp-footer-wrapper
+          .lp-footer-logo
+            img(src='https://waomirai.com/lp/assets/commonimages/logo_white.svg', alt='ワオ未来塾')
+          ul.lp-footer-list
+            li.lp-footer-item
+              a.lp-footer-link(href='https://www.wao-corp.com/', target='_blank', rel='noopener')
+                span 運営会社
+                i.fa-solid.fa-arrow-up-right-from-square
+            li.lp-footer-item
+              a.lp-footer-link(href='https://www.wao-corp.com/privacy/', target='_blank', rel='noopener')
+                span プライバシーポリシー
+                i.fa-solid.fa-arrow-up-right-from-square
+            li.lp-footer-item
+              a.lp-footer-link(href='https://waomirai.com/commerce_law/', target='_blank', rel='noopener')
+                span 特定商取引法
+                i.fa-solid.fa-arrow-up-right-from-square
+            li.lp-footer-item
+              a.lp-footer-link(href='https://waomirai.com/terms/', target='_blank', rel='noopener')
+                span 利用規約
+                i.fa-solid.fa-arrow-up-right-from-square
+          p.lp-footer-copy &copy; WAO CORPORATION
 
     //- PC右カラム（INDEX）
     .pc-right

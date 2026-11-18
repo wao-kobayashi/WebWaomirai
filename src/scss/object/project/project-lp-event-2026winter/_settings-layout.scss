@@ -48,16 +48,19 @@ body {
   }
 }
 
-// 左：ロゴ
+// 左：ロゴ + LINEボタン
 .pc-left {
   left: 0;
+  flex-direction: column;
+  gap: 40px;
 }
-.pc-left-logo {
+.pc-left-logo,
+.pc-left-cta {
   width: calc(100% - 60px);
   max-width: 300px;
-  img {
-    width: 100%;
-  }
+}
+.pc-left-logo img {
+  width: 100%;
 }
 
 // 右：INDEX

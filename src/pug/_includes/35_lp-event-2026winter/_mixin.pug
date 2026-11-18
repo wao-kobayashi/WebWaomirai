@@ -17,10 +17,18 @@ mixin micon(name)
 
 //- 固定フッターボタンのmixin
 //- ページ下部に固定表示される申込ボタンとページトップへ戻るボタン
+//- LINEで無料申込ボタン（緑）
+//- FV・SP追従・PC左カラムで共通利用
+mixin btn-line
+  +conditionalLink('lp-btn-line')
+    span.lp-btn-line-text LINEで無料申込
+    span.lp-btn-line-icon
+      i.fa-solid.fa-chevron-right
+
+//- 固定フッターボタン（SPのみ表示。PCは左カラムにボタンを表示）
 mixin fixed-btn
   .fixed-btn-container
-    +conditionalLink('fixed-cta')
-      |LINEで簡単申込(無料)
+    +btn-line
 
 
 
